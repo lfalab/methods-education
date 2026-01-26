@@ -1,0 +1,115 @@
+---
+pagetitle: "Normative and Empirical Questions"
+class: video
+---
+
+# Normative and Empirical Questions {.title-left}
+
+## You'll learn to
+
+::: presenter-space
+-   Distinguish **normative** and **empirical** questions.
+-   Explain why we'll focus on empirical questions.
+:::
+
+------------------------------------------------------------------------
+
+## Why care about this distinction?
+
+::: presenter-space
+-   Some questions ask **what should be** happening in the world.
+-   Others ask **what is** happening.
+-   Quantitative social science is concerned with the second type.
+:::
+
+------------------------------------------------------------------------
+
+## Normative questions
+
+:::: presenter-space
+-   Normative questions involve **value judgements**.
+
+    -   Should income inequality be reduced?
+    -   Is compulsory voting desirable?
+    -   What is a fair tax system?
+
+::: fragment
+These questions matter, but they cannot be answered by data alone.
+:::
+::::
+
+------------------------------------------------------------------------
+
+## Empirical questions
+
+:::: presenter-space
+-   Empirical questions ask about **observable patterns and relationships**.
+
+    -   How unequal is income across regions?
+    -   Does compulsory voting increase turnout?
+    -   How do tax changes affect employment?
+
+::: fragment
+These are the questions statistics helps us answer.
+:::
+::::
+
+------------------------------------------------------------------------
+
+## Good empirical questions
+
+::: presenter-space
+-   Besides avoiding normative inquiries, a **good** empirical question must meet additional criteria.
+
+    -   Avoid factual questions with a simple answer.
+    -   Avoid questions that we can't answer with data (e.g., hypothetical questions about imagined scenarios.)
+:::
+
+------------------------------------------------------------------------
+
+## Avoiding factual questions
+
+:::: presenter-space
+-   Some questions may be important, but **too easy** to answer.
+
+    -   Which UK regions voted most heavily for Brexit?
+    -   Which party governed the US from 1981 to 1992?
+
+::: fragment
+If you can find the answer with a quick Google search, think of a different question.
+:::
+::::
+
+------------------------------------------------------------------------
+
+## Focusing on observables
+
+:::: presenter-space
+-   Other questions are **impossible** to answer.
+
+    -   If Bernie Sanders had beaten Hillary Clinton in the 2016 Democratic primary, would he have beaten Trump in the general election?
+    -   Did ancient Chinese explorers visit the Americas without leaving any trace of their presence?
+
+::: fragment
+We must save our efforts for the realm of possibility.
+:::
+::::
+
+------------------------------------------------------------------------
+
+## Recap
+
+::: presenter-space
+-   **Normative** questions ask what should be happening in the world.
+-   **Empirical** questions ask what is happening.
+-   Our exclusion of normative questions is **methodological**, not evaluative.
+:::
+
+------------------------------------------------------------------------
+
+::: presenter-space
+**Why this matters:**
+
+-   A research method is never an end in itself.
+-   Choosing an appropriate method for a research question is a core analytical skill.
+:::

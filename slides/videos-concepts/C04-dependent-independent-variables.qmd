@@ -1,0 +1,124 @@
+---
+pagetitle: "Dependent and Independent Variables"
+class: video
+---
+
+# Dependent and Independent Variables {.title-left}
+
+------------------------------------------------------------------------
+
+## You'll learn to
+
+::: presenter-space
+-   Distinguish the **dependent** and **independent** variables in causal hypothesis.
+:::
+
+------------------------------------------------------------------------
+
+## Example 1: Health care systems and policy responses
+
+::: presenter-space
+-   **Research question:**
+
+    -   How did countries' health care systems affect their abilities to mitigate the impact of the Covid-19 pandemic?
+
+-   **Theory:**
+
+    -   Countries with public health care systems took advantage of their centralised bureaucracies to implement more effective policy responses.
+:::
+
+------------------------------------------------------------------------
+
+## Example 1: Health care systems and policy responses
+
+::: presenter-space
+-   **Hypothesis:**
+
+    -   Countries with public health care systems had lower Covid death rates than countries with private health care systems.
+:::
+
+------------------------------------------------------------------------
+
+## Example 1: Health care systems and policy responses
+
+::: presenter-space
+-   The unit of analysis is the **country**.
+
+-   Countries differ in a lot **characteristics**: population, GDP per capita, land mass...
+
+    -   These characteristics are what we call *variables*.
+
+-   In this study, **two variables** take center place:
+
+    -   Health care system type (public v. private).
+    -   Covid death rate (a numeric quantity).
+:::
+
+------------------------------------------------------------------------
+
+## Example 1: Health care systems and policy responses
+
+::: presenter-space
+-   The Covid death rate is the **dependent** variable.
+
+    -   The *outcome* of our study.
+
+-   The health care system type is the **independent** variable.
+
+    -   The variable *driving* the change.
+:::
+
+------------------------------------------------------------------------
+
+## Example 2: Economic conditions and electoral outcomes
+
+::: presenter-space
+-   **Research question:**
+
+    -   Do economic recessions increase support for populist parties?
+
+-   **Theory:**
+
+    -   Economic recessions increase resentment against democratic institutions and therefore make the rhetoric of populist parties more appealing.
+:::
+
+------------------------------------------------------------------------
+
+## Example 2: Economic conditions and electoral outcomes
+
+::: presenter-space
+-   **Hypothesis:**
+
+    -   Elections held in recession years display higher vote shares for populist parties than elections in non-recession years.
+:::
+
+------------------------------------------------------------------------
+
+## Example 2: Economic conditions and electoral outcomes
+
+::: presenter-space
+-   The unit of analysis is the **election.**
+
+-   The dependent variable is the **vote share for populist parties**.
+
+-   The independent variable is **economic growth rate** in the election year.
+:::
+
+------------------------------------------------------------------------
+
+## Recap
+
+::: presenter-space
+-   **Variables** are characteristics of the units in our study.
+-   The **dependent** variable is the outcome of our study. It is affected by the independent variable.
+-   The **independent** variable is what's driving the change. It affects the dependent variable.
+:::
+
+------------------------------------------------------------------------
+
+::: presenter-space
+**Why this matters:**
+
+-   Dependent and independent variables are the building blocks of causal research.
+-   Causal research designs and statistical tests hinge on properly identifying them.
+:::

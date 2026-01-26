@@ -1,0 +1,223 @@
+---
+title: "Thinking With Data"
+subtitle: "Statistics for Political Science I"
+author: "Week 1"
+class: lecture
+---
+
+## Welcome
+
+-   Please call me **Leo**
+
+-   Today’s goals:
+
+    -   Clarify what this module **is** and **is not**
+    -   Explain how lectures, seminars, and assessments fit together
+    -   Set expectations for Problem Sets
+    -   Work through a group activity on **quantitative vs qualitative research**
+
+------------------------------------------------------------------------
+
+## What This Module Is About
+
+This module **is** about:
+
+-   Thinking clearly with data\
+-   Understanding what statistical claims **can** and **cannot** show\
+-   Evaluating evidence in political science research\
+-   Learning how to ask and test empirical questions
+
+It is **not** about memorising formulas or becoming a statistician
+
+------------------------------------------------------------------------
+
+## Why the Module Is Structured This Way
+
+The module uses a **flipped format**:
+
+-   Short videos and quizzes **before** lectures
+
+-   Lectures and seminars focus on **active learning**
+
+-   Problem Sets reinforce concepts gradually over time
+
+-   This structure is based on evidence from education research
+
+    -   Eg, Ambrose et al 2007, Nilson 2010
+
+------------------------------------------------------------------------
+
+## Assessments at a Glance
+
+-   **Problem Set 1 (PS1):** 25%
+-   **Problem Set 2 (PS2):** 25%
+-   **Exam:** 50%
+
+------------------------------------------------------------------------
+
+## Assessments at a Glance
+
+-   Today, we'll focus on **PS1**
+-   PS1 structures your weekly work
+
+------------------------------------------------------------------------
+
+## Problem Set 1 (PS1): The Big Picture
+
+PS1 is completed through **weekly preparatory activities** on KEATS:
+
+-   Interactive videos (with attention-check questions)
+-   Short quizzes
+-   These run from **Week 2** to **Week 10** (excluding Reading Week)
+-   The first PS1 work is due **next week** (28 Jan) **before lecture**
+
+------------------------------------------------------------------------
+
+## How PS1 Works (Core Rules)
+
+Each week:
+
+-   **Videos** introduce key concepts
+-   **Quizzes** test understanding of those concepts
+-   **Lecture** and seminar activities assume this preparation
+
+PS1 is designed to support learning over time, not last-minute revision
+
+------------------------------------------------------------------------
+
+## Quizzes vs Videos (Important Distinction)
+
+-   **Quizzes**
+
+    -   5–10 multiple-choice questions
+    -   Unlimited attempts
+    -   Highest score counts
+    -   Deadlines are enforced
+
+------------------------------------------------------------------------
+
+## Quizzes vs Videos (Important Distinction)
+
+-   **Videos**
+
+    -   Include attention-check questions
+    -   One attempt per question
+    -   Videos remain accessible throughout the term
+
+-   If you miss a quiz, you can still earn **partial credit** for that week via the videos.
+
+------------------------------------------------------------------------
+
+## Flexibility Built In
+
+-   There are **eight** weeks with PS1 activities
+-   Your **best six weekly scores** count
+-   The two lowest scores are dropped
+-   This is designed as **insurance**, not a target
+
+------------------------------------------------------------------------
+
+## Why We Focus on Quantitative Research
+
+This module focuses on **quantitative methods**, but:
+
+-   That does **not** mean qualitative research is inferior
+-   Different methods answer different kinds of questions
+-   Understanding the distinction helps you evaluate evidence critically
+
+------------------------------------------------------------------------
+
+## Group Activity: Quantitative vs Qualitative Research
+
+-   You will work in **small groups**
+
+-   The goals are to:
+
+    -   Understand how quantitative and qualitative research differ
+    -   Reflect on what each approach does well
+    -   Discuss what each approach may miss
+
+------------------------------------------------------------------------
+
+## Two Research Traditions (Mahoney & Goertz)
+
+**Quantitative research**
+
+-   Average effects across cases
+-   General, law-like claims
+-   Example: *What is the effect of economic development on democracy?*
+
+------------------------------------------------------------------------
+
+## Two Research Traditions (Mahoney & Goertz)
+
+**Qualitative research**
+
+-   Specific outcomes in particular cases
+-   Less emphasis on generalisation
+-   Example: *Did economic development contribute to Spain’s transition to democracy?*
+
+------------------------------------------------------------------------
+
+## Example: Studying Democratisation
+
+**Quantitative approach**
+
+-   Large dataset of countries
+-   GDP per capita, democracy scores, controls
+-   Statistical analysis of average relationships
+
+------------------------------------------------------------------------
+
+## Example: Studying Democratisation
+
+**Qualitative approach**
+
+-   One or more case studies
+-   Archives, interviews, historical evidence
+-   Tracing causal processes within cases
+
+------------------------------------------------------------------------
+
+## Your Task
+
+-   Discuss **advantages** and **disadvantages** of each approach
+
+-   Think about:
+
+    -   What does this approach allow us to see?
+    -   What does it obscure or miss?
+
+Fill in this table:
+
+|              | Pros | Cons |
+|--------------|------|------|
+| Quantitative |      |      |
+| Qualitative  |      |      |
+
+------------------------------------------------------------------------
+
+## Reconvening
+
+We will reconvene and:
+
+-   Collect examples from different groups
+-   Compare perspectives
+-   Discuss why **mixed-method** approaches are increasingly common
+
+------------------------------------------------------------------------
+
+## Why This Matters for the Module
+
+Although this course focuses on quantitative methods:
+
+-   You should always ask what a method **can** and **cannot** show
+-   Statistical results are **not** self-interpreting
+-   Good political science depends on **methodological awareness**
+
+------------------------------------------------------------------------
+
+## Looking Ahead
+
+-   The first PS1 work is due **next week** (28 Jan) **before lecture**
+-   Please check KEATS regularly.

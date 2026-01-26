@@ -1,0 +1,115 @@
+---
+pagetitle: "Doing Reproducible Research"
+class: video
+---
+
+# Doing Reproducible Research {.title-left}
+
+------------------------------------------------------------------------
+
+## You'll learn to
+
+::: presenter-space
+-   Explain what **reproducible research** means and why it matters.
+-   Set up a project **folder structure** that supports reproducible work.
+:::
+
+------------------------------------------------------------------------
+
+## What is reproducible research?
+
+::: presenter-space
+-   Being able to obtain the **same results** using the same data and code.
+-   Anyone should be able to follow the steps of your analysis.
+-   This includes **you** in a few weeks’ time.
+:::
+
+------------------------------------------------------------------------
+
+## Why care about reproducibility?
+
+::: presenter-space
+-   Small changes accumulate quickly, and we often forget what we do.
+-   Clear structures make mistakes easier for you (and others) to **detect and fix**.
+-   Important for **transparency** and **credibility**.
+:::
+
+------------------------------------------------------------------------
+
+## Data and Code
+
+::: presenter-space
+-   **Data:** the information you gather to begin your analysis.
+
+    -   Examples: Public opinion surveys; Election results; National census statistics.
+
+-   **Code:** the instructions that transform and analyse the data.
+
+    -   Examples: Merge data on economic growth rates with election results; Create a table that shows how many elections were held in recession years.
+
+-   Reproducible research **separates** data from code.
+:::
+
+------------------------------------------------------------------------
+
+## What this looks like in Stata
+
+::: presenter-space
+-   The dataset is treated as **read-only**.
+-   All changes happen in a **do-file**.
+-   The do-file records every step in your analysis.
+:::
+
+------------------------------------------------------------------------
+
+## A simple project folder structure
+
+::: presenter-space
+-   `my-research-project/`
+
+    -   `data-raw`
+    -   `data-clean`
+    -   `do`
+    -   `output`
+:::
+
+------------------------------------------------------------------------
+
+## A simple project folder structure
+
+::: presenter-space
+-   `data-raw`
+
+    -   Original data files, never edited.
+
+-   `data-clean`
+
+    -   Cleaned or transformed datasets.
+
+-   `do`
+
+    -   All Stata do-files.
+
+-   `output`
+
+    -   Tables and figures.
+:::
+
+------------------------------------------------------------------------
+
+## Recap
+
+::: presenter-space
+-   **Reproducibility** means others can retrace your analysis.
+-   **Separating** data and code is key.
+-   A clear folder structure is **essential** for good analysis.
+:::
+
+------------------------------------------------------------------------
+
+::: presenter-space
+**Why this matters:**
+
+-   Reproducible workflows make your analysis clearer and more reliable.
+-   Knowing how to set up a folder structure now will save you from headaches in the future!
+:::

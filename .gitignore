@@ -3,5 +3,9 @@
 .RData
 .Ruserdata
 _site/
+_freeze/
 .quarto/
 .quarto-cache/
+
+/.quarto/
+**/*.quarto_ipynb

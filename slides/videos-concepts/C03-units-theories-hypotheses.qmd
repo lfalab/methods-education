@@ -1,0 +1,137 @@
+---
+pagetitle: "Units of Analysis, Theories, and Hypotheses "
+class: video
+---
+
+# Units of Analysis, Theories, and Hypotheses {.title-left}
+
+------------------------------------------------------------------------
+
+## You'll learn to
+
+::: presenter-space
+-   Identify the **unit of analysis** of a research question.
+-   Elaborate **theories and hypotheses** for research questions.
+:::
+
+------------------------------------------------------------------------
+
+## Why care about these concepts?
+
+::: presenter-space
+-   Knowing our unit of analysis gives us a **foundation** by establishing the objects of our study.
+-   Elaborating theories and hypotheses gives us **direction** by establishing what claims we're testing.
+:::
+
+------------------------------------------------------------------------
+
+## The unit of analysis
+
+::: presenter-space
+1.  Are countries with higher literacy rates less likely to experience democratic backsliding?
+2.  Are cities with more universities less likely to vote for authoritarian candidates?
+3.  Are people with college degrees more likely to support democratic norms?
+:::
+
+------------------------------------------------------------------------
+
+## The unit of analysis
+
+<!-- {incremental=false} -->
+
+:::: presenter-space
+::: nonincremental
+1.  Are **countries** with higher literacy rates less likely to experience democratic backsliding?
+2.  Are **cities** with more universities less likely to vote for authoritarian candidates?
+3.  Are **people** with college degrees more likely to support democratic norms?
+:::
+::::
+
+------------------------------------------------------------------------
+
+## The unit of analysis
+
+<!-- {incremental=false} -->
+
+:::: presenter-space
+::: nonincremental
+1.  Are **countries** with higher literacy rates less likely to experience democratic backsliding?
+2.  Are **cities** with more universities less likely to vote for authoritarian candidates?
+3.  Are **people** with college degrees more likely to support democratic norms?
+:::
+
+*Country, city,* and *person* are the **units of analysis** of these research questions.
+::::
+
+------------------------------------------------------------------------
+
+## Theories
+
+::: presenter-space
+-   A **theory** is "a reasoned and precise speculation about the answer to a research question" (King, Keohane, and Verba 1994:3).
+-   Based on our knowledge and reasoning, what's a plausible answer to a research question?
+:::
+
+------------------------------------------------------------------------
+
+## Example: Health care systems and policy responses
+
+:::: presenter-space
+-   **Research question:** How did countries' health care systems affect their abilities to mitigate the impact of the Covid-19 pandemic?
+
+-   **Theory:** Countries with public health care systems took advantage of their centralised bureaucracies to implement more effective policy responses.
+
+::: fragment
+Theories must be reasoned and precise, but they won't always be correct.
+:::
+::::
+
+------------------------------------------------------------------------
+
+## Hypotheses
+
+::: presenter-space
+-   A **hypothesis** is an empirically testable implication of a theory.
+-   Given your theory, what should we observe in the world?
+:::
+
+------------------------------------------------------------------------
+
+## Example: Health care systems and policy responses
+
+::: presenter-space
+-   **Research question:** How did countries' health care systems affect their abilities to mitigate the impact of the Covid-19 pandemic?
+
+-   **Theory:** Countries with public health care systems took advantage of their centralised bureaucracies to implement more effective policy responses.
+
+-   **Hypothesis:** Countries with public health care systems had lower Covid death rates than countries with private health care systems.
+:::
+
+------------------------------------------------------------------------
+
+## Clarification
+
+::: presenter-space
+-   Our goal as researchers is **not** to prove that our hypotheses are correct!
+-   Our goal is to answer research questions **as accurately as we can**, whether or not our hypotheses are correct.
+-   Trying to "prove our point" is a **common mistake** at the root of bad social science.
+:::
+
+------------------------------------------------------------------------
+
+## Recap
+
+::: presenter-space
+-   The **unit of analysis** is the "who" or "what" of your study.
+-   A **theory** is a plausible speculation about the answer to a research question.
+-   A **hypothesis** states what we expect to observe given our theory.
+:::
+
+------------------------------------------------------------------------
+
+::: presenter-space
+**Why this matters:**
+
+-   The unit of analysis grounds our understanding by establishing who or what we are studying.
+-   Theories and hypotheses help us make sense of our research question and determine the next steps in our analysis.
+:::

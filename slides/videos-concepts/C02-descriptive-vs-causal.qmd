@@ -1,0 +1,113 @@
+---
+pagetitle: "Descriptive and Causal Questions"
+class: video
+---
+
+# Descriptive and Causal Questions {.title-left}
+
+## You'll learn to
+
+::: presenter-space
+-   Distinguish **descriptive** and **causal** questions.
+-   Explain what kind of claim each type of question supports.
+:::
+
+------------------------------------------------------------------------
+
+## Why care about this distinction?
+
+::: presenter-space
+-   Empirical questions can be descriptive or causal.
+-   **Descriptive** questions ask what the world looks like.
+-   **Causal** questions ask what would happen if we intervened.
+:::
+
+------------------------------------------------------------------------
+
+## Descriptive questions
+
+:::: presenter-space
+-   Descriptive questions can be about **distributions**, **trends**, or **correlations**.
+
+    -   What percentage of countries are democratic?
+    -   Is there a global trend towards democratic backsliding?
+    -   Is democratic backsliding more prevalent in countries with higher political polarisation?
+
+::: fragment
+These questions are foundational for scientific research.
+:::
+::::
+
+------------------------------------------------------------------------
+
+## Causal questions
+
+:::: presenter-space
+-   Causal questions ask if some variables **drive change** in others.
+
+    -   Does exposure to divisive content on social media make people more tolerant of political violence?
+    -   Does declining trust in political elites weaken commitment to democratic norms?
+    -   Do compulsory voting laws increase political participation?
+
+::: fragment
+These questions tell us what would happen under an intervention.
+:::
+::::
+
+------------------------------------------------------------------------
+
+## Distinction, not hierarchy
+
+::: presenter-space
+-   Causal questions are more directly concerned with what can be done to bring about social change.
+-   But a prerequisite for changing the world is understanding **what it looks like**.
+-   Causal and descriptive questions are **equally important**.
+:::
+
+------------------------------------------------------------------------
+
+## Complementarities between questions
+
+::: presenter-space
+-   **Describing a distribution:**
+
+    -   What percentage of the world's wealth is held by the 50 richest people?
+
+-   **Describing a trend:**
+
+    -   Is economic inequality increasing across the world?
+:::
+
+------------------------------------------------------------------------
+
+## Complementarities between questions
+
+::: presenter-space
+-   **Describing a correlation:**
+
+    -   Are autocracies more unequal than democracies?
+
+-   **Probing causation:**
+
+    -   Do increases in income inequality make democratic backsliding more likely?
+:::
+
+------------------------------------------------------------------------
+
+## Recap
+
+::: presenter-space
+-   Empirical questions can be descriptive or causal.
+-   **Descriptive** questions ask about distributions, trends, and correlations.
+-   **Causal** questions ask about how some variables affect others.
+-   Causal and descriptive questions complement each other to advance our scientific knowledge.
+:::
+
+------------------------------------------------------------------------
+
+::: presenter-space
+**Why this matters:**
+
+-   Descriptive and causal questions call for different research designs.
+-   Knowing what type of question we're asking is the first step towards conducting research.
+:::

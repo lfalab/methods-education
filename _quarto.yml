@@ -2,20 +2,17 @@ project:
   type: website
 
 website:
-  title: "methods-education"
+  title: "Methods Education"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: slides/index.qmd
+        text: Slides
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
-    css: styles.css
-    toc: true
+    theme: cosmo
 
-editor: visual
-
+execute:
+  freeze: auto
