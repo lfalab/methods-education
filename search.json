@@ -1,10 +1,220 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "methods-education",
+    "objectID": "slides/videos-stata/S01-doing-reproducible-research.html#youll-learn-to",
+    "href": "slides/videos-stata/S01-doing-reproducible-research.html#youll-learn-to",
+    "title": "Methods Education",
+    "section": "You’ll learn to",
+    "text": "You’ll learn to\n\n\nExplain what reproducible research means and why it matters.\nSet up a project folder structure that supports reproducible work."
+  },
+  {
+    "objectID": "slides/videos-stata/S01-doing-reproducible-research.html#what-is-reproducible-research",
+    "href": "slides/videos-stata/S01-doing-reproducible-research.html#what-is-reproducible-research",
+    "title": "Methods Education",
+    "section": "What is reproducible research?",
+    "text": "What is reproducible research?\n\n\nBeing able to obtain the same results using the same data and code.\nAnyone should be able to follow the steps of your analysis.\nThis includes you in a few weeks’ time."
+  },
+  {
+    "objectID": "slides/videos-stata/S01-doing-reproducible-research.html#why-care-about-reproducibility",
+    "href": "slides/videos-stata/S01-doing-reproducible-research.html#why-care-about-reproducibility",
+    "title": "Methods Education",
+    "section": "Why care about reproducibility?",
+    "text": "Why care about reproducibility?\n\n\nSmall changes accumulate quickly, and we often forget what we do.\nClear structures make mistakes easier for you (and others) to detect and fix.\nImportant for transparency and credibility."
+  },
+  {
+    "objectID": "slides/videos-stata/S01-doing-reproducible-research.html#data-and-code",
+    "href": "slides/videos-stata/S01-doing-reproducible-research.html#data-and-code",
+    "title": "Methods Education",
+    "section": "Data and Code",
+    "text": "Data and Code\n\n\nData: the information you gather to begin your analysis.\n\nExamples: Public opinion surveys; Election results; National census statistics.\n\nCode: the instructions that transform and analyse the data.\n\nExamples: Merge data on economic growth rates with election results; Create a table that shows how many elections were held in recession years.\n\nReproducible research separates data from code."
+  },
+  {
+    "objectID": "slides/videos-stata/S01-doing-reproducible-research.html#what-this-looks-like-in-stata",
+    "href": "slides/videos-stata/S01-doing-reproducible-research.html#what-this-looks-like-in-stata",
+    "title": "Methods Education",
+    "section": "What this looks like in Stata",
+    "text": "What this looks like in Stata\n\n\nThe dataset is treated as read-only.\nAll changes happen in a do-file.\nThe do-file records every step in your analysis."
+  },
+  {
+    "objectID": "slides/videos-stata/S01-doing-reproducible-research.html#a-simple-project-folder-structure",
+    "href": "slides/videos-stata/S01-doing-reproducible-research.html#a-simple-project-folder-structure",
+    "title": "Methods Education",
+    "section": "A simple project folder structure",
+    "text": "A simple project folder structure\n\n\nmy-research-project/\n\ndata-raw\ndata-clean\ndo\noutput"
+  },
+  {
+    "objectID": "slides/videos-stata/S01-doing-reproducible-research.html#a-simple-project-folder-structure-1",
+    "href": "slides/videos-stata/S01-doing-reproducible-research.html#a-simple-project-folder-structure-1",
+    "title": "Methods Education",
+    "section": "A simple project folder structure",
+    "text": "A simple project folder structure\n\n\ndata-raw\n\nOriginal data files, never edited.\n\ndata-clean\n\nCleaned or transformed datasets.\n\ndo\n\nAll Stata do-files.\n\noutput\n\nTables and figures."
+  },
+  {
+    "objectID": "slides/videos-stata/S01-doing-reproducible-research.html#recap",
+    "href": "slides/videos-stata/S01-doing-reproducible-research.html#recap",
+    "title": "Methods Education",
+    "section": "Recap",
+    "text": "Recap\n\n\nReproducibility means others can retrace your analysis.\nSeparating data and code is key.\nA clear folder structure is essential for good analysis."
+  },
+  {
+    "objectID": "slides/videos-concepts/C03-units-theories-hypotheses.html#youll-learn-to",
+    "href": "slides/videos-concepts/C03-units-theories-hypotheses.html#youll-learn-to",
+    "title": "Methods Education",
+    "section": "You’ll learn to",
+    "text": "You’ll learn to\n\n\nIdentify the unit of analysis of a research question.\nElaborate theories and hypotheses for research questions."
+  },
+  {
+    "objectID": "slides/videos-concepts/C03-units-theories-hypotheses.html#why-care-about-these-concepts",
+    "href": "slides/videos-concepts/C03-units-theories-hypotheses.html#why-care-about-these-concepts",
+    "title": "Methods Education",
+    "section": "Why care about these concepts?",
+    "text": "Why care about these concepts?\n\n\nKnowing our unit of analysis gives us a foundation by establishing the objects of our study.\nElaborating theories and hypotheses gives us direction by establishing what claims we’re testing."
+  },
+  {
+    "objectID": "slides/videos-concepts/C03-units-theories-hypotheses.html#the-unit-of-analysis",
+    "href": "slides/videos-concepts/C03-units-theories-hypotheses.html#the-unit-of-analysis",
+    "title": "Methods Education",
+    "section": "The unit of analysis",
+    "text": "The unit of analysis\n\n\nAre countries with higher literacy rates less likely to experience democratic backsliding?\nAre cities with more universities less likely to vote for authoritarian candidates?\nAre people with college degrees more likely to support democratic norms?"
+  },
+  {
+    "objectID": "slides/videos-concepts/C03-units-theories-hypotheses.html#the-unit-of-analysis-1",
+    "href": "slides/videos-concepts/C03-units-theories-hypotheses.html#the-unit-of-analysis-1",
+    "title": "Methods Education",
+    "section": "The unit of analysis",
+    "text": "The unit of analysis\n\n\n\nAre countries with higher literacy rates less likely to experience democratic backsliding?\nAre cities with more universities less likely to vote for authoritarian candidates?\nAre people with college degrees more likely to support democratic norms?"
+  },
+  {
+    "objectID": "slides/videos-concepts/C03-units-theories-hypotheses.html#the-unit-of-analysis-2",
+    "href": "slides/videos-concepts/C03-units-theories-hypotheses.html#the-unit-of-analysis-2",
+    "title": "Methods Education",
+    "section": "The unit of analysis",
+    "text": "The unit of analysis\n\n\n\nAre countries with higher literacy rates less likely to experience democratic backsliding?\nAre cities with more universities less likely to vote for authoritarian candidates?\nAre people with college degrees more likely to support democratic norms?\n\nCountry, city, and person are the units of analysis of these research questions."
+  },
+  {
+    "objectID": "slides/videos-concepts/C03-units-theories-hypotheses.html#theories",
+    "href": "slides/videos-concepts/C03-units-theories-hypotheses.html#theories",
+    "title": "Methods Education",
+    "section": "Theories",
+    "text": "Theories\n\n\nA theory is “a reasoned and precise speculation about the answer to a research question” (King, Keohane, and Verba 1994:3).\nBased on our knowledge and reasoning, what’s a plausible answer to a research question?"
+  },
+  {
+    "objectID": "slides/videos-concepts/C03-units-theories-hypotheses.html#example-health-care-systems-and-policy-responses",
+    "href": "slides/videos-concepts/C03-units-theories-hypotheses.html#example-health-care-systems-and-policy-responses",
+    "title": "Methods Education",
+    "section": "Example: Health care systems and policy responses",
+    "text": "Example: Health care systems and policy responses\n\n\nResearch question: How did countries’ health care systems affect their abilities to mitigate the impact of the Covid-19 pandemic?\nTheory: Countries with public health care systems took advantage of their centralised bureaucracies to implement more effective policy responses.\n\n\nTheories must be reasoned and precise, but they won’t always be correct."
+  },
+  {
+    "objectID": "slides/videos-concepts/C03-units-theories-hypotheses.html#hypotheses",
+    "href": "slides/videos-concepts/C03-units-theories-hypotheses.html#hypotheses",
+    "title": "Methods Education",
+    "section": "Hypotheses",
+    "text": "Hypotheses\n\n\nA hypothesis is an empirically testable implication of a theory.\nGiven your theory, what should we observe in the world?"
+  },
+  {
+    "objectID": "slides/videos-concepts/C03-units-theories-hypotheses.html#example-health-care-systems-and-policy-responses-1",
+    "href": "slides/videos-concepts/C03-units-theories-hypotheses.html#example-health-care-systems-and-policy-responses-1",
+    "title": "Methods Education",
+    "section": "Example: Health care systems and policy responses",
+    "text": "Example: Health care systems and policy responses\n\n\nResearch question: How did countries’ health care systems affect their abilities to mitigate the impact of the Covid-19 pandemic?\nTheory: Countries with public health care systems took advantage of their centralised bureaucracies to implement more effective policy responses.\nHypothesis: Countries with public health care systems had lower Covid death rates than countries with private health care systems."
+  },
+  {
+    "objectID": "slides/videos-concepts/C03-units-theories-hypotheses.html#clarification",
+    "href": "slides/videos-concepts/C03-units-theories-hypotheses.html#clarification",
+    "title": "Methods Education",
+    "section": "Clarification",
+    "text": "Clarification\n\n\nOur goal as researchers is not to prove that our hypotheses are correct!\nOur goal is to answer research questions as accurately as we can, whether or not our hypotheses are correct.\nTrying to “prove our point” is a common mistake at the root of bad social science."
+  },
+  {
+    "objectID": "slides/videos-concepts/C03-units-theories-hypotheses.html#recap",
+    "href": "slides/videos-concepts/C03-units-theories-hypotheses.html#recap",
+    "title": "Methods Education",
+    "section": "Recap",
+    "text": "Recap\n\n\nThe unit of analysis is the “who” or “what” of your study.\nA theory is a plausible speculation about the answer to a research question.\nA hypothesis states what we expect to observe given our theory."
+  },
+  {
+    "objectID": "slides/videos-concepts/C01-empirical-vs-normative.html#youll-learn-to",
+    "href": "slides/videos-concepts/C01-empirical-vs-normative.html#youll-learn-to",
+    "title": "Methods Education",
+    "section": "You’ll learn to",
+    "text": "You’ll learn to\n\n\nDistinguish normative and empirical questions.\nExplain why we’ll focus on empirical questions."
+  },
+  {
+    "objectID": "slides/videos-concepts/C01-empirical-vs-normative.html#why-care-about-this-distinction",
+    "href": "slides/videos-concepts/C01-empirical-vs-normative.html#why-care-about-this-distinction",
+    "title": "Methods Education",
+    "section": "Why care about this distinction?",
+    "text": "Why care about this distinction?\n\n\nSome questions ask what should be happening in the world.\nOthers ask what is happening.\nQuantitative social science is concerned with the second type."
+  },
+  {
+    "objectID": "slides/videos-concepts/C01-empirical-vs-normative.html#normative-questions",
+    "href": "slides/videos-concepts/C01-empirical-vs-normative.html#normative-questions",
+    "title": "Methods Education",
+    "section": "Normative questions",
+    "text": "Normative questions\n\n\nNormative questions involve value judgements.\n\nShould income inequality be reduced?\nIs compulsory voting desirable?\nWhat is a fair tax system?\n\n\n\nThese questions matter, but they cannot be answered by data alone."
+  },
+  {
+    "objectID": "slides/videos-concepts/C01-empirical-vs-normative.html#empirical-questions",
+    "href": "slides/videos-concepts/C01-empirical-vs-normative.html#empirical-questions",
+    "title": "Methods Education",
+    "section": "Empirical questions",
+    "text": "Empirical questions\n\n\nEmpirical questions ask about observable patterns and relationships.\n\nHow unequal is income across regions?\nDoes compulsory voting increase turnout?\nHow do tax changes affect employment?\n\n\n\nThese are the questions statistics helps us answer."
+  },
+  {
+    "objectID": "slides/videos-concepts/C01-empirical-vs-normative.html#good-empirical-questions",
+    "href": "slides/videos-concepts/C01-empirical-vs-normative.html#good-empirical-questions",
+    "title": "Methods Education",
+    "section": "Good empirical questions",
+    "text": "Good empirical questions\n\n\nBesides avoiding normative inquiries, a good empirical question must meet additional criteria.\n\nAvoid factual questions with a simple answer.\nAvoid questions that we can’t answer with data (e.g., hypothetical questions about imagined scenarios.)"
+  },
+  {
+    "objectID": "slides/videos-concepts/C01-empirical-vs-normative.html#avoiding-factual-questions",
+    "href": "slides/videos-concepts/C01-empirical-vs-normative.html#avoiding-factual-questions",
+    "title": "Methods Education",
+    "section": "Avoiding factual questions",
+    "text": "Avoiding factual questions\n\n\nSome questions may be important, but too easy to answer.\n\nWhich UK regions voted most heavily for Brexit?\nWhich party governed the US from 1981 to 1992?\n\n\n\nIf you can find the answer with a quick Google search, think of a different question."
+  },
+  {
+    "objectID": "slides/videos-concepts/C01-empirical-vs-normative.html#focusing-on-observables",
+    "href": "slides/videos-concepts/C01-empirical-vs-normative.html#focusing-on-observables",
+    "title": "Methods Education",
+    "section": "Focusing on observables",
+    "text": "Focusing on observables\n\n\nOther questions are impossible to answer.\n\nIf Bernie Sanders had beaten Hillary Clinton in the 2016 Democratic primary, would he have beaten Trump in the general election?\nDid ancient Chinese explorers visit the Americas without leaving any trace of their presence?\n\n\n\nWe must save our efforts for the realm of possibility."
+  },
+  {
+    "objectID": "slides/videos-concepts/C01-empirical-vs-normative.html#recap",
+    "href": "slides/videos-concepts/C01-empirical-vs-normative.html#recap",
+    "title": "Methods Education",
+    "section": "Recap",
+    "text": "Recap\n\n\nNormative questions ask what should be happening in the world.\nEmpirical questions ask what is happening.\nOur exclusion of normative questions is methodological, not evaluative."
+  },
+  {
+    "objectID": "slides/index.html",
+    "href": "slides/index.html",
+    "title": "Slides",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "Empirical and Normative Questions\nDescriptive and Causal Questions\nUnits of Analysis, Theories, and Hypotheses\nDependent and Independent Variables"
+  },
+  {
+    "objectID": "slides/index.html#video-slides-concepts",
+    "href": "slides/index.html#video-slides-concepts",
+    "title": "Slides",
+    "section": "",
+    "text": "Empirical and Normative Questions\nDescriptive and Causal Questions\nUnits of Analysis, Theories, and Hypotheses\nDependent and Independent Variables"
+  },
+  {
+    "objectID": "slides/index.html#video-slides-stata",
+    "href": "slides/index.html#video-slides-stata",
+    "title": "Slides",
+    "section": "Video slides (Stata)",
+    "text": "Video slides (Stata)\n\nDoing Reproducible Research"
+  },
+  {
+    "objectID": "slides/index.html#lecture-slides",
+    "href": "slides/index.html#lecture-slides",
+    "title": "Slides",
+    "section": "Lecture slides",
+    "text": "Lecture slides\n\nWeek 1: Thinking with Data"
   },
   {
     "objectID": "about.html",
@@ -12,5 +222,271 @@
     "title": "About",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Methods Education",
+    "section": "",
+    "text": "Lecture and video slides for 4SSPP111 Statistics for Political Science (King’s College London)"
+  },
+  {
+    "objectID": "slides/lectures/W01-thinking-with-data.html#welcome",
+    "href": "slides/lectures/W01-thinking-with-data.html#welcome",
+    "title": "Thinking With Data",
+    "section": "Welcome",
+    "text": "Welcome\n\nPlease call me Leo\nToday’s goals:\n\nClarify what this module is and is not\nExplain how lectures, seminars, and assessments fit together\nSet expectations for Problem Sets\nWork through a group activity on quantitative vs qualitative research"
+  },
+  {
+    "objectID": "slides/lectures/W01-thinking-with-data.html#what-this-module-is-about",
+    "href": "slides/lectures/W01-thinking-with-data.html#what-this-module-is-about",
+    "title": "Thinking With Data",
+    "section": "What This Module Is About",
+    "text": "What This Module Is About\nThis module is about:\n\nThinking clearly with data\n\nUnderstanding what statistical claims can and cannot show\n\nEvaluating evidence in political science research\n\nLearning how to ask and test empirical questions\n\nIt is not about memorising formulas or becoming a statistician"
+  },
+  {
+    "objectID": "slides/lectures/W01-thinking-with-data.html#why-the-module-is-structured-this-way",
+    "href": "slides/lectures/W01-thinking-with-data.html#why-the-module-is-structured-this-way",
+    "title": "Thinking With Data",
+    "section": "Why the Module Is Structured This Way",
+    "text": "Why the Module Is Structured This Way\nThe module uses a flipped format:\n\nShort videos and quizzes before lectures\nLectures and seminars focus on active learning\nProblem Sets reinforce concepts gradually over time\nThis structure is based on evidence from education research\n\nEg, Ambrose et al 2007, Nilson 2010"
+  },
+  {
+    "objectID": "slides/lectures/W01-thinking-with-data.html#assessments-at-a-glance",
+    "href": "slides/lectures/W01-thinking-with-data.html#assessments-at-a-glance",
+    "title": "Thinking With Data",
+    "section": "Assessments at a Glance",
+    "text": "Assessments at a Glance\n\nProblem Set 1 (PS1): 25%\nProblem Set 2 (PS2): 25%\nExam: 50%"
+  },
+  {
+    "objectID": "slides/lectures/W01-thinking-with-data.html#assessments-at-a-glance-1",
+    "href": "slides/lectures/W01-thinking-with-data.html#assessments-at-a-glance-1",
+    "title": "Thinking With Data",
+    "section": "Assessments at a Glance",
+    "text": "Assessments at a Glance\n\nToday, we’ll focus on PS1\nPS1 structures your weekly work"
+  },
+  {
+    "objectID": "slides/lectures/W01-thinking-with-data.html#problem-set-1-ps1-the-big-picture",
+    "href": "slides/lectures/W01-thinking-with-data.html#problem-set-1-ps1-the-big-picture",
+    "title": "Thinking With Data",
+    "section": "Problem Set 1 (PS1): The Big Picture",
+    "text": "Problem Set 1 (PS1): The Big Picture\nPS1 is completed through weekly preparatory activities on KEATS:\n\nInteractive videos (with attention-check questions)\nShort quizzes\nThese run from Week 2 to Week 10 (excluding Reading Week)\nThe first PS1 work is due next week (28 Jan) before lecture"
+  },
+  {
+    "objectID": "slides/lectures/W01-thinking-with-data.html#how-ps1-works-core-rules",
+    "href": "slides/lectures/W01-thinking-with-data.html#how-ps1-works-core-rules",
+    "title": "Thinking With Data",
+    "section": "How PS1 Works (Core Rules)",
+    "text": "How PS1 Works (Core Rules)\nEach week:\n\nVideos introduce key concepts\nQuizzes test understanding of those concepts\nLecture and seminar activities assume this preparation\n\nPS1 is designed to support learning over time, not last-minute revision"
+  },
+  {
+    "objectID": "slides/lectures/W01-thinking-with-data.html#quizzes-vs-videos-important-distinction",
+    "href": "slides/lectures/W01-thinking-with-data.html#quizzes-vs-videos-important-distinction",
+    "title": "Thinking With Data",
+    "section": "Quizzes vs Videos (Important Distinction)",
+    "text": "Quizzes vs Videos (Important Distinction)\n\nQuizzes\n\n5–10 multiple-choice questions\nUnlimited attempts\nHighest score counts\nDeadlines are enforced"
+  },
+  {
+    "objectID": "slides/lectures/W01-thinking-with-data.html#quizzes-vs-videos-important-distinction-1",
+    "href": "slides/lectures/W01-thinking-with-data.html#quizzes-vs-videos-important-distinction-1",
+    "title": "Thinking With Data",
+    "section": "Quizzes vs Videos (Important Distinction)",
+    "text": "Quizzes vs Videos (Important Distinction)\n\nVideos\n\nInclude attention-check questions\nOne attempt per question\nVideos remain accessible throughout the term\n\nIf you miss a quiz, you can still earn partial credit for that week via the videos."
+  },
+  {
+    "objectID": "slides/lectures/W01-thinking-with-data.html#flexibility-built-in",
+    "href": "slides/lectures/W01-thinking-with-data.html#flexibility-built-in",
+    "title": "Thinking With Data",
+    "section": "Flexibility Built In",
+    "text": "Flexibility Built In\n\nThere are eight weeks with PS1 activities\nYour best six weekly scores count\nThe two lowest scores are dropped\nThis is designed as insurance, not a target"
+  },
+  {
+    "objectID": "slides/lectures/W01-thinking-with-data.html#why-we-focus-on-quantitative-research",
+    "href": "slides/lectures/W01-thinking-with-data.html#why-we-focus-on-quantitative-research",
+    "title": "Thinking With Data",
+    "section": "Why We Focus on Quantitative Research",
+    "text": "Why We Focus on Quantitative Research\nThis module focuses on quantitative methods, but:\n\nThat does not mean qualitative research is inferior\nDifferent methods answer different kinds of questions\nUnderstanding the distinction helps you evaluate evidence critically"
+  },
+  {
+    "objectID": "slides/lectures/W01-thinking-with-data.html#group-activity-quantitative-vs-qualitative-research",
+    "href": "slides/lectures/W01-thinking-with-data.html#group-activity-quantitative-vs-qualitative-research",
+    "title": "Thinking With Data",
+    "section": "Group Activity: Quantitative vs Qualitative Research",
+    "text": "Group Activity: Quantitative vs Qualitative Research\n\nYou will work in small groups\nThe goals are to:\n\nUnderstand how quantitative and qualitative research differ\nReflect on what each approach does well\nDiscuss what each approach may miss"
+  },
+  {
+    "objectID": "slides/lectures/W01-thinking-with-data.html#two-research-traditions-mahoney-goertz",
+    "href": "slides/lectures/W01-thinking-with-data.html#two-research-traditions-mahoney-goertz",
+    "title": "Thinking With Data",
+    "section": "Two Research Traditions (Mahoney & Goertz)",
+    "text": "Two Research Traditions (Mahoney & Goertz)\nQuantitative research\n\nAverage effects across cases\nGeneral, law-like claims\nExample: What is the effect of economic development on democracy?"
+  },
+  {
+    "objectID": "slides/lectures/W01-thinking-with-data.html#two-research-traditions-mahoney-goertz-1",
+    "href": "slides/lectures/W01-thinking-with-data.html#two-research-traditions-mahoney-goertz-1",
+    "title": "Thinking With Data",
+    "section": "Two Research Traditions (Mahoney & Goertz)",
+    "text": "Two Research Traditions (Mahoney & Goertz)\nQualitative research\n\nSpecific outcomes in particular cases\nLess emphasis on generalisation\nExample: Did economic development contribute to Spain’s transition to democracy?"
+  },
+  {
+    "objectID": "slides/lectures/W01-thinking-with-data.html#example-studying-democratisation",
+    "href": "slides/lectures/W01-thinking-with-data.html#example-studying-democratisation",
+    "title": "Thinking With Data",
+    "section": "Example: Studying Democratisation",
+    "text": "Example: Studying Democratisation\nQuantitative approach\n\nLarge dataset of countries\nGDP per capita, democracy scores, controls\nStatistical analysis of average relationships"
+  },
+  {
+    "objectID": "slides/lectures/W01-thinking-with-data.html#example-studying-democratisation-1",
+    "href": "slides/lectures/W01-thinking-with-data.html#example-studying-democratisation-1",
+    "title": "Thinking With Data",
+    "section": "Example: Studying Democratisation",
+    "text": "Example: Studying Democratisation\nQualitative approach\n\nOne or more case studies\nArchives, interviews, historical evidence\nTracing causal processes within cases"
+  },
+  {
+    "objectID": "slides/lectures/W01-thinking-with-data.html#your-task",
+    "href": "slides/lectures/W01-thinking-with-data.html#your-task",
+    "title": "Thinking With Data",
+    "section": "Your Task",
+    "text": "Your Task\n\nDiscuss advantages and disadvantages of each approach\nThink about:\n\nWhat does this approach allow us to see?\nWhat does it obscure or miss?\n\n\nFill in this table:\n\n\n\n\nPros\nCons\n\n\n\n\nQuantitative\n\n\n\n\nQualitative"
+  },
+  {
+    "objectID": "slides/lectures/W01-thinking-with-data.html#reconvening",
+    "href": "slides/lectures/W01-thinking-with-data.html#reconvening",
+    "title": "Thinking With Data",
+    "section": "Reconvening",
+    "text": "Reconvening\nWe will reconvene and:\n\nCollect examples from different groups\nCompare perspectives\nDiscuss why mixed-method approaches are increasingly common"
+  },
+  {
+    "objectID": "slides/lectures/W01-thinking-with-data.html#why-this-matters-for-the-module",
+    "href": "slides/lectures/W01-thinking-with-data.html#why-this-matters-for-the-module",
+    "title": "Thinking With Data",
+    "section": "Why This Matters for the Module",
+    "text": "Why This Matters for the Module\nAlthough this course focuses on quantitative methods:\n\nYou should always ask what a method can and cannot show\nStatistical results are not self-interpreting\nGood political science depends on methodological awareness"
+  },
+  {
+    "objectID": "slides/lectures/W01-thinking-with-data.html#looking-ahead",
+    "href": "slides/lectures/W01-thinking-with-data.html#looking-ahead",
+    "title": "Thinking With Data",
+    "section": "Looking Ahead",
+    "text": "Looking Ahead\n\nThe first PS1 work is due next week (28 Jan) before lecture\nPlease check KEATS regularly."
+  },
+  {
+    "objectID": "slides/videos-concepts/C02-descriptive-vs-causal.html#youll-learn-to",
+    "href": "slides/videos-concepts/C02-descriptive-vs-causal.html#youll-learn-to",
+    "title": "Methods Education",
+    "section": "You’ll learn to",
+    "text": "You’ll learn to\n\n\nDistinguish descriptive and causal questions.\nExplain what kind of claim each type of question supports."
+  },
+  {
+    "objectID": "slides/videos-concepts/C02-descriptive-vs-causal.html#why-care-about-this-distinction",
+    "href": "slides/videos-concepts/C02-descriptive-vs-causal.html#why-care-about-this-distinction",
+    "title": "Methods Education",
+    "section": "Why care about this distinction?",
+    "text": "Why care about this distinction?\n\n\nEmpirical questions can be descriptive or causal.\nDescriptive questions ask what the world looks like.\nCausal questions ask what would happen if we intervened."
+  },
+  {
+    "objectID": "slides/videos-concepts/C02-descriptive-vs-causal.html#descriptive-questions",
+    "href": "slides/videos-concepts/C02-descriptive-vs-causal.html#descriptive-questions",
+    "title": "Methods Education",
+    "section": "Descriptive questions",
+    "text": "Descriptive questions\n\n\nDescriptive questions can be about distributions, trends, or correlations.\n\nWhat percentage of countries are democratic?\nIs there a global trend towards democratic backsliding?\nIs democratic backsliding more prevalent in countries with higher political polarisation?\n\n\n\nThese questions are foundational for scientific research."
+  },
+  {
+    "objectID": "slides/videos-concepts/C02-descriptive-vs-causal.html#causal-questions",
+    "href": "slides/videos-concepts/C02-descriptive-vs-causal.html#causal-questions",
+    "title": "Methods Education",
+    "section": "Causal questions",
+    "text": "Causal questions\n\n\nCausal questions ask if some variables drive change in others.\n\nDoes exposure to divisive content on social media make people more tolerant of political violence?\nDoes declining trust in political elites weaken commitment to democratic norms?\nDo compulsory voting laws increase political participation?\n\n\n\nThese questions tell us what would happen under an intervention."
+  },
+  {
+    "objectID": "slides/videos-concepts/C02-descriptive-vs-causal.html#distinction-not-hierarchy",
+    "href": "slides/videos-concepts/C02-descriptive-vs-causal.html#distinction-not-hierarchy",
+    "title": "Methods Education",
+    "section": "Distinction, not hierarchy",
+    "text": "Distinction, not hierarchy\n\n\nCausal questions are more directly concerned with what can be done to bring about social change.\nBut a prerequisite for changing the world is understanding what it looks like.\nCausal and descriptive questions are equally important."
+  },
+  {
+    "objectID": "slides/videos-concepts/C02-descriptive-vs-causal.html#complementarities-between-questions",
+    "href": "slides/videos-concepts/C02-descriptive-vs-causal.html#complementarities-between-questions",
+    "title": "Methods Education",
+    "section": "Complementarities between questions",
+    "text": "Complementarities between questions\n\n\nDescribing a distribution:\n\nWhat percentage of the world’s wealth is held by the 50 richest people?\n\nDescribing a trend:\n\nIs economic inequality increasing across the world?"
+  },
+  {
+    "objectID": "slides/videos-concepts/C02-descriptive-vs-causal.html#complementarities-between-questions-1",
+    "href": "slides/videos-concepts/C02-descriptive-vs-causal.html#complementarities-between-questions-1",
+    "title": "Methods Education",
+    "section": "Complementarities between questions",
+    "text": "Complementarities between questions\n\n\nDescribing a correlation:\n\nAre autocracies more unequal than democracies?\n\nProbing causation:\n\nDo increases in income inequality make democratic backsliding more likely?"
+  },
+  {
+    "objectID": "slides/videos-concepts/C02-descriptive-vs-causal.html#recap",
+    "href": "slides/videos-concepts/C02-descriptive-vs-causal.html#recap",
+    "title": "Methods Education",
+    "section": "Recap",
+    "text": "Recap\n\n\nEmpirical questions can be descriptive or causal.\nDescriptive questions ask about distributions, trends, and correlations.\nCausal questions ask about how some variables affect others.\nCausal and descriptive questions complement each other to advance our scientific knowledge."
+  },
+  {
+    "objectID": "slides/videos-concepts/C04-dependent-independent-variables.html#youll-learn-to",
+    "href": "slides/videos-concepts/C04-dependent-independent-variables.html#youll-learn-to",
+    "title": "Methods Education",
+    "section": "You’ll learn to",
+    "text": "You’ll learn to\n\n\nDistinguish the dependent and independent variables in causal hypothesis."
+  },
+  {
+    "objectID": "slides/videos-concepts/C04-dependent-independent-variables.html#example-1-health-care-systems-and-policy-responses",
+    "href": "slides/videos-concepts/C04-dependent-independent-variables.html#example-1-health-care-systems-and-policy-responses",
+    "title": "Methods Education",
+    "section": "Example 1: Health care systems and policy responses",
+    "text": "Example 1: Health care systems and policy responses\n\n\nResearch question:\n\nHow did countries’ health care systems affect their abilities to mitigate the impact of the Covid-19 pandemic?\n\nTheory:\n\nCountries with public health care systems took advantage of their centralised bureaucracies to implement more effective policy responses."
+  },
+  {
+    "objectID": "slides/videos-concepts/C04-dependent-independent-variables.html#example-1-health-care-systems-and-policy-responses-1",
+    "href": "slides/videos-concepts/C04-dependent-independent-variables.html#example-1-health-care-systems-and-policy-responses-1",
+    "title": "Methods Education",
+    "section": "Example 1: Health care systems and policy responses",
+    "text": "Example 1: Health care systems and policy responses\n\n\nHypothesis:\n\nCountries with public health care systems had lower Covid death rates than countries with private health care systems."
+  },
+  {
+    "objectID": "slides/videos-concepts/C04-dependent-independent-variables.html#example-1-health-care-systems-and-policy-responses-2",
+    "href": "slides/videos-concepts/C04-dependent-independent-variables.html#example-1-health-care-systems-and-policy-responses-2",
+    "title": "Methods Education",
+    "section": "Example 1: Health care systems and policy responses",
+    "text": "Example 1: Health care systems and policy responses\n\n\nThe unit of analysis is the country.\nCountries differ in a lot characteristics: population, GDP per capita, land mass…\n\nThese characteristics are what we call variables.\n\nIn this study, two variables take center place:\n\nHealth care system type (public v. private).\nCovid death rate (a numeric quantity)."
+  },
+  {
+    "objectID": "slides/videos-concepts/C04-dependent-independent-variables.html#example-1-health-care-systems-and-policy-responses-3",
+    "href": "slides/videos-concepts/C04-dependent-independent-variables.html#example-1-health-care-systems-and-policy-responses-3",
+    "title": "Methods Education",
+    "section": "Example 1: Health care systems and policy responses",
+    "text": "Example 1: Health care systems and policy responses\n\n\nThe Covid death rate is the dependent variable.\n\nThe outcome of our study.\n\nThe health care system type is the independent variable.\n\nThe variable driving the change."
+  },
+  {
+    "objectID": "slides/videos-concepts/C04-dependent-independent-variables.html#example-2-economic-conditions-and-electoral-outcomes",
+    "href": "slides/videos-concepts/C04-dependent-independent-variables.html#example-2-economic-conditions-and-electoral-outcomes",
+    "title": "Methods Education",
+    "section": "Example 2: Economic conditions and electoral outcomes",
+    "text": "Example 2: Economic conditions and electoral outcomes\n\n\nResearch question:\n\nDo economic recessions increase support for populist parties?\n\nTheory:\n\nEconomic recessions increase resentment against democratic institutions and therefore make the rhetoric of populist parties more appealing."
+  },
+  {
+    "objectID": "slides/videos-concepts/C04-dependent-independent-variables.html#example-2-economic-conditions-and-electoral-outcomes-1",
+    "href": "slides/videos-concepts/C04-dependent-independent-variables.html#example-2-economic-conditions-and-electoral-outcomes-1",
+    "title": "Methods Education",
+    "section": "Example 2: Economic conditions and electoral outcomes",
+    "text": "Example 2: Economic conditions and electoral outcomes\n\n\nHypothesis:\n\nElections held in recession years display higher vote shares for populist parties than elections in non-recession years."
+  },
+  {
+    "objectID": "slides/videos-concepts/C04-dependent-independent-variables.html#example-2-economic-conditions-and-electoral-outcomes-2",
+    "href": "slides/videos-concepts/C04-dependent-independent-variables.html#example-2-economic-conditions-and-electoral-outcomes-2",
+    "title": "Methods Education",
+    "section": "Example 2: Economic conditions and electoral outcomes",
+    "text": "Example 2: Economic conditions and electoral outcomes\n\n\nThe unit of analysis is the election.\nThe dependent variable is the vote share for populist parties.\nThe independent variable is economic growth rate in the election year."
+  },
+  {
+    "objectID": "slides/videos-concepts/C04-dependent-independent-variables.html#recap",
+    "href": "slides/videos-concepts/C04-dependent-independent-variables.html#recap",
+    "title": "Methods Education",
+    "section": "Recap",
+    "text": "Recap\n\n\nVariables are characteristics of the units in our study.\nThe dependent variable is the outcome of our study. It is affected by the independent variable.\nThe independent variable is what’s driving the change. It affects the dependent variable."
   }
 ]

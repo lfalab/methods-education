@@ -1,11 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://lfalab.github.io/methods-education/index.html</loc>
-    <lastmod>2026-01-26T10:08:58.375Z</lastmod>
+    <loc>https://lfalab.github.io/methods-education/slides/videos-stata/S01-doing-reproducible-research.html</loc>
+    <lastmod>2026-01-26T11:03:26.034Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/slides/videos-concepts/C03-units-theories-hypotheses.html</loc>
+    <lastmod>2026-01-26T11:03:00.749Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/slides/videos-concepts/C01-empirical-vs-normative.html</loc>
+    <lastmod>2026-01-26T11:03:05.349Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/slides/index.html</loc>
+    <lastmod>2026-01-26T11:34:50.382Z</lastmod>
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/about.html</loc>
     <lastmod>2026-01-26T10:08:58.374Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/index.html</loc>
+    <lastmod>2026-01-26T11:34:16.569Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/slides/lectures/W01-thinking-with-data.html</loc>
+    <lastmod>2026-01-26T11:01:19.125Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/slides/videos-concepts/C02-descriptive-vs-causal.html</loc>
+    <lastmod>2026-01-26T11:03:02.979Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/slides/videos-concepts/C04-dependent-independent-variables.html</loc>
+    <lastmod>2026-01-26T11:03:15.239Z</lastmod>
   </url>
 </urlset>
