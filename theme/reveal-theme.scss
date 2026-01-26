@@ -1,0 +1,121 @@
+/*-- scss:defaults --*/
+
+/* Color palette */
+$body-bg: #f0f0f0;
+$presentation-bg: #f0f0f0;
+$primary-color: #2F56C6;   // royal blue
+$accent-color: #FF9022;    // tangy orange
+$text-color: #1a1a1a;
+$muted-text: #6b7280;
+
+/* Fonts */
+$font-family-sans-serif: 'Inter', 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+
+/*-- scss:rules --*/
+
+/* Title slide: left-aligned and presenter-aware */
+.reveal .slides section.title-slide {
+  text-align: left !important;
+}
+
+.reveal .slides section.title-slide h1,
+.reveal .slides section.title-slide p {
+  max-width: 100%;      /* reserve presenter space */
+}
+
+/* Title */
+.reveal .slides section.title-slide h1 {
+  margin-bottom: 0.6em;
+  font-size: 2,5em;
+}
+
+/* Subtitle (Quarto renders it as a <p>) */
+.reveal .slides section.title-slide p {
+  color: #555555;
+  font-size: 1.1em;
+  margin-top: 0;
+}
+
+
+.reveal {
+  font-family: $font-family-sans-serif;
+  color: $text-color;
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+  color: $primary-color;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+
+/* Title slide only */
+.reveal .title-slide h1 {
+  text-transform: none;
+  text-align: left;
+  font-size: 2em;
+  letter-spacing: normal;
+}
+
+/* default */
+.reveal {
+  --slide-title-width: 80%;
+}
+
+/* Slide titles (h2 in reveal.js slides) */
+.reveal h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.10em;   /* slightly smaller than default */
+  letter-spacing: 0.04em;
+  margin-bottom: 1.5em;
+  width: var(--slide-title-width);
+}
+
+/* Lecture decks */
+body.lecture .reveal {
+  --slide-title-width: 100%;
+}
+
+/* Video decks (explicit, optional) */
+body.video .reveal {
+  --slide-title-width: 80%;
+}
+
+.vcenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.reveal strong {
+  color: $accent-color;
+  font-weight: 600;
+}
+
+.reveal ul ul {
+  font-size: 0.9em;
+  color: #555555;
+  list-style: none;
+  margin-left: 1.2em;
+}
+
+.reveal ul ul li::marker {
+  content: "–  ";
+  color: #555555;
+}
+
+.muted {
+  color: $muted-text;
+  font-size: 0.9em;
+}
+
+/* Presenter-safe layout */
+.presenter-space {
+  width: 80%;
+}

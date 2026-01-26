@@ -1,0 +1,5 @@
+/*-- scss:rules --*/
+@import "reveal-base.scss";
+
+/* video: constrain slide-title line length */
+.reveal h2 { width: 80%; }
