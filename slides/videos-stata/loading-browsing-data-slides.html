@@ -9,8 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <meta name="author" content="Leonardo Falabella">
-  <title>Methods Education – Thinking With Data</title>
+  <title>Methods Education – Loading and Browsing Data</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -29,7 +28,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-f88d935cd01326925f73dc62b106448c.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-7433acd2865db5fa81269247cd6920be.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -126,241 +125,98 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Thinking With Data</h1>
-  <p class="subtitle">Statistics for Political Science - Week 1</p>
 
-<div class="quarto-title-authors">
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-Leonardo Falabella 
-</div>
-</div>
-</div>
+<section>
+<section id="loading-and-browsing-data" class="title-slide slide level1 title-left center">
+<h1>Loading and Browsing Data</h1>
 
 </section>
-<section id="welcome" class="slide level2">
-<h2>Welcome</h2>
+<section id="youll-learn-to" class="slide level2">
+<h2>You’ll learn to</h2>
 <ul>
-<li><p>Please call me <strong>Leo</strong></p></li>
-<li><p>Today’s goals:</p>
+<li class="fragment"><strong>Load</strong> a dataset in Stata.</li>
+<li class="fragment"><strong>Browse</strong> a dataset by switching between Stata and the codebook.</li>
+</ul>
+</section>
+<section id="step-1-download-the-brexit-dataset-from-our-shared-folder" class="slide level2">
+<h2>Step 1: Download the Brexit dataset from our shared folder</h2>
 <ul>
-<li>Clarify what this module <strong>is</strong> and <strong>is not</strong></li>
-<li>Explain how lectures, seminars, and assessments fit together</li>
-<li>Set expectations for Problem Sets</li>
-<li>Work through a group activity on <strong>quantitative vs qualitative research</strong></li>
+<li class="fragment">Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a></li>
+<li class="fragment">Click on <code>data-raw</code></li>
+<li class="fragment">Download <code>Brexit_Regional.dta</code></li>
+<li class="fragment">Save it into the <code>data-raw</code> folder on your computer</li>
+</ul>
+</section>
+<section id="step-2-set-the-working-directory" class="slide level2">
+<h2>Step 2: Set the working directory</h2>
+<ul>
+<li class="fragment">We’ve been through this in <a href="../../slides/videos-stata/stata-interface.html">The Stata Interface</a></li>
+<li class="fragment">This can be done either by clicking File &gt; Change working directory, or…</li>
+<li class="fragment">…if you have saved a do-file (<code>set-wd.do</code>) as instructed in <a href="../../slides/videos-stata/stata-interface.html">The Stata Interface</a>, you can copy the command from there.</li>
+</ul>
+</section>
+<section id="step-3-open-a-new-do-file" class="slide level2">
+<h2>Step 3: Open a new do-file</h2>
+<ul>
+<li>Click on the “New Do-file Editor” icon (a sheet of paper and a pencil)</li>
+</ul>
+
+<img data-src="../../assets/stata-dofile-editor.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="step-4-set-up-your-do-file-to-load-the-dataset" class="slide level2">
+<h2>Step 4: Set up your do-file to load the dataset</h2>
+<ul>
+<li><p>The first line should be the command that sets the working directory. It should look like:</p>
+<ul>
+<li><code>cd "[Path\To\Your\Folder]"</code></li>
+<li>If you use a Mac, there will be forward slashes instead of back slashes</li>
+</ul></li>
+<li><p>Below that, enter</p>
+<ul>
+<li><code>use "data-raw/Brexit_Regional.dta", clear</code></li>
 </ul></li>
 </ul>
 </section>
-<section id="what-this-module-is-about" class="slide level2">
-<h2>What This Module Is About</h2>
-<p>This module <strong>is</strong> about:</p>
+<section id="step-5-run-the-do-file" class="slide level2">
+<h2>Step 5: Run the do-file</h2>
 <ul>
-<li>Thinking clearly with data</li>
-<li>Understanding what statistical claims <strong>can</strong> and <strong>cannot</strong> show</li>
-<li>Evaluating evidence in political science research</li>
-<li>Learning how to ask and test empirical questions</li>
+<li>Click on the sheet of paper with a “Play” button. This will <strong>execute</strong> all commands in the do-file</li>
+<li>In the screenshot, the lines of green text after the asterisks are <strong>comments</strong>. Stata won’t run them.</li>
 </ul>
-<p>It is <strong>not</strong> about memorising formulas or becoming a statistician</p>
-</section>
-<section id="why-the-module-is-structured-this-way" class="slide level2">
-<h2>Why the Module Is Structured This Way</h2>
-<p>The module uses a <strong>flipped format</strong>:</p>
+
+<img data-src="../../assets/stata-run-dofile.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="step-6-check-if-it-has-worked-and-save-your-do-file" class="slide level2">
+<h2>Step 6: Check if it has worked and save your do-file</h2>
 <ul>
-<li><p>Short videos and quizzes <strong>before</strong> lectures</p></li>
-<li><p>Lectures and seminars focus on <strong>active learning</strong></p></li>
-<li><p>Problem Sets reinforce concepts gradually over time</p></li>
-<li><p>This structure is based on evidence from education research</p>
-<ul>
-<li>Eg, Ambrose et al 2007, Nilson 2010</li>
-</ul></li>
+<li>If you see this on the top-right pane of your Stata screen, it has worked!</li>
+<li>Be sure to <strong>save your do-file</strong> in your <code>do</code> folder.</li>
 </ul>
-</section>
-<section id="assessments-at-a-glance" class="slide level2">
-<h2>Assessments at a Glance</h2>
+
+<img data-src="../../assets/stata-variables.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="step-7-browse-the-data" class="slide level2">
+<h2>Step 7: Browse the data</h2>
 <ul>
-<li><strong>Problem Set 1 (PS1):</strong> 25%</li>
-<li><strong>Problem Set 2 (PS2):</strong> 25%</li>
-<li><strong>Exam:</strong> 50%</li>
+<li>Click on this icon with magnifying glass. It will allow you to browse the data.</li>
+<li>Explore it while swithing between your Stata screen and the <a href="https://emckclac-my.sharepoint.com/:w:/r/personal/k2588471_kcl_ac_uk/_layouts/15/Doc.aspx?sourcedoc=%7BEA160DB5-B57C-4CAC-A10F-5C2B3FC18FB2%7D&amp;file=Brexit_Regional_Codebook.docx&amp;action=default&amp;mobileredirect=true">Codebook</a></li>
 </ul>
-</section>
-<section id="assessments-at-a-glance-1" class="slide level2">
-<h2>Assessments at a Glance</h2>
+
+<img data-src="../../assets/stata-browse.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="recap" class="slide level2">
+<h2>Recap</h2>
 <ul>
-<li>Today, we’ll focus on <strong>PS1</strong></li>
-<li>PS1 structures your weekly work</li>
+<li class="fragment">By setting the <strong>working directory</strong>, we tell Stata where our project lives.</li>
+<li class="fragment">Once that is done, we can <strong>load datasets</strong> by showing Stata where to find them in the subfolders inside our working directory.</li>
+<li class="fragment">Once a dataset is loaded, we can browse them using Stata.</li>
 </ul>
 </section>
-<section id="problem-set-1-ps1-the-big-picture" class="slide level2">
-<h2>Problem Set 1 (PS1): The Big Picture</h2>
-<p>PS1 is completed through <strong>weekly preparatory activities</strong> on KEATS:</p>
+<section class="slide level2">
+
+<p><strong>Why this matters:</strong></p>
 <ul>
-<li>Interactive videos (with attention-check questions)</li>
-<li>Short quizzes</li>
-<li>These run from <strong>Week 2</strong> to <strong>Week 10</strong> (excluding Reading Week)</li>
-<li>The first PS1 work is due <strong>next week</strong> (28 Jan) <strong>before lecture</strong></li>
-</ul>
-</section>
-<section id="how-ps1-works-core-rules" class="slide level2">
-<h2>How PS1 Works (Core Rules)</h2>
-<p>Each week:</p>
-<ul>
-<li><strong>Videos</strong> introduce key concepts</li>
-<li><strong>Quizzes</strong> test understanding of those concepts</li>
-<li><strong>Lecture</strong> and seminar activities assume this preparation</li>
-</ul>
-<p>PS1 is designed to support learning over time, not last-minute revision</p>
-</section>
-<section id="quizzes-vs-videos-important-distinction" class="slide level2">
-<h2>Quizzes vs Videos (Important Distinction)</h2>
-<ul>
-<li><p><strong>Quizzes</strong></p>
-<ul>
-<li>5–10 multiple-choice questions</li>
-<li>Unlimited attempts</li>
-<li>Highest score counts</li>
-<li>Deadlines are enforced</li>
-</ul></li>
-</ul>
-</section>
-<section id="quizzes-vs-videos-important-distinction-1" class="slide level2">
-<h2>Quizzes vs Videos (Important Distinction)</h2>
-<ul>
-<li><p><strong>Videos</strong></p>
-<ul>
-<li>Include attention-check questions</li>
-<li>One attempt per question</li>
-<li>Videos remain accessible throughout the term</li>
-</ul></li>
-<li><p>If you miss a quiz, you can still earn <strong>partial credit</strong> for that week via the videos.</p></li>
-</ul>
-</section>
-<section id="flexibility-built-in" class="slide level2">
-<h2>Flexibility Built In</h2>
-<ul>
-<li>There are <strong>eight</strong> weeks with PS1 activities</li>
-<li>Your <strong>best six weekly scores</strong> count</li>
-<li>The two lowest scores are dropped</li>
-<li>This is designed as <strong>insurance</strong>, not a target</li>
-</ul>
-</section>
-<section id="why-we-focus-on-quantitative-research" class="slide level2">
-<h2>Why We Focus on Quantitative Research</h2>
-<p>This module focuses on <strong>quantitative methods</strong>, but:</p>
-<ul>
-<li>That does <strong>not</strong> mean qualitative research is inferior</li>
-<li>Different methods answer different kinds of questions</li>
-<li>Understanding the distinction helps you evaluate evidence critically</li>
-</ul>
-</section>
-<section id="group-activity-quantitative-vs-qualitative-research" class="slide level2">
-<h2>Group Activity: Quantitative vs Qualitative Research</h2>
-<ul>
-<li><p>You will work in <strong>small groups</strong></p></li>
-<li><p>The goals are to:</p>
-<ul>
-<li>Understand how quantitative and qualitative research differ</li>
-<li>Reflect on what each approach does well</li>
-<li>Discuss what each approach may miss</li>
-</ul></li>
-</ul>
-</section>
-<section id="two-research-traditions-mahoney-goertz" class="slide level2">
-<h2>Two Research Traditions (Mahoney &amp; Goertz)</h2>
-<p><strong>Quantitative research</strong></p>
-<ul>
-<li>Average effects across cases</li>
-<li>General, law-like claims</li>
-<li>Example: <em>What is the effect of economic development on democracy?</em></li>
-</ul>
-</section>
-<section id="two-research-traditions-mahoney-goertz-1" class="slide level2">
-<h2>Two Research Traditions (Mahoney &amp; Goertz)</h2>
-<p><strong>Qualitative research</strong></p>
-<ul>
-<li>Specific outcomes in particular cases</li>
-<li>Less emphasis on generalisation</li>
-<li>Example: <em>Did economic development contribute to Spain’s transition to democracy?</em></li>
-</ul>
-</section>
-<section id="example-studying-democratisation" class="slide level2">
-<h2>Example: Studying Democratisation</h2>
-<p><strong>Quantitative approach</strong></p>
-<ul>
-<li>Large dataset of countries</li>
-<li>GDP per capita, democracy scores, controls</li>
-<li>Statistical analysis of average relationships</li>
-</ul>
-</section>
-<section id="example-studying-democratisation-1" class="slide level2">
-<h2>Example: Studying Democratisation</h2>
-<p><strong>Qualitative approach</strong></p>
-<ul>
-<li>One or more case studies</li>
-<li>Archives, interviews, historical evidence</li>
-<li>Tracing causal processes within cases</li>
-</ul>
-</section>
-<section id="your-task" class="slide level2">
-<h2>Your Task</h2>
-<ul>
-<li><p>Discuss <strong>advantages</strong> and <strong>disadvantages</strong> of each approach</p></li>
-<li><p>Think about:</p>
-<ul>
-<li>What does this approach allow us to see?</li>
-<li>What does it obscure or miss?</li>
-</ul></li>
-</ul>
-<p>Fill in this table:</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th></th>
-<th>Pros</th>
-<th>Cons</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Quantitative</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Qualitative</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="reconvening" class="slide level2">
-<h2>Reconvening</h2>
-<p>We will reconvene and:</p>
-<ul>
-<li>Collect examples from different groups</li>
-<li>Compare perspectives</li>
-<li>Discuss why <strong>mixed-method</strong> approaches are increasingly common</li>
-</ul>
-</section>
-<section id="why-this-matters-for-the-module" class="slide level2">
-<h2>Why This Matters for the Module</h2>
-<p>Although this course focuses on quantitative methods:</p>
-<ul>
-<li>You should always ask what a method <strong>can</strong> and <strong>cannot</strong> show</li>
-<li>Statistical results are <strong>not</strong> self-interpreting</li>
-<li>Good political science depends on <strong>methodological awareness</strong></li>
-</ul>
-</section>
-<section id="looking-ahead" class="slide level2">
-<h2>Looking Ahead</h2>
-<ul>
-<li>The first PS1 work is due <strong>next week</strong> (28 Jan) <strong>before lecture</strong></li>
-<li>Please check KEATS regularly.</li>
+<li class="fragment">This exercise allows you to familiarise yourself with how a dataset looks like in Stata.</li>
 </ul>
 
 
-</section>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

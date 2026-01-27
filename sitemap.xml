@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://lfalab.github.io/methods-education/slides/videos-stata/loading-browsing-data.html</loc>
+    <lastmod>2026-01-27T16:25:18.929Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/slides/videos-stata/loading-browsing-data-slides.html</loc>
+    <lastmod>2026-01-27T16:25:18.929Z</lastmod>
+  </url>
+  <url>
     <loc>https://lfalab.github.io/methods-education/slides/videos-stata/datasets-codebooks.html</loc>
     <lastmod>2026-01-27T13:05:45.363Z</lastmod>
   </url>
@@ -33,24 +41,32 @@
     <lastmod>2026-01-27T08:00:41.509Z</lastmod>
   </url>
   <url>
-    <loc>https://lfalab.github.io/methods-education/slides/lectures/thinking-with-data.html</loc>
-    <lastmod>2026-01-27T08:02:37.560Z</lastmod>
+    <loc>https://lfalab.github.io/methods-education/slides/lectures/questions-theories-hypotheses.html</loc>
+    <lastmod>2026-01-27T21:50:33.120Z</lastmod>
   </url>
   <url>
-    <loc>https://lfalab.github.io/methods-education/slides/lectures/thinking-with-data-slides.html</loc>
-    <lastmod>2026-01-27T08:02:37.560Z</lastmod>
+    <loc>https://lfalab.github.io/methods-education/slides/lectures/questions-theories-hypotheses-slides.html</loc>
+    <lastmod>2026-01-27T21:50:33.120Z</lastmod>
   </url>
   <url>
-    <loc>https://lfalab.github.io/methods-education/index.html</loc>
-    <lastmod>2026-01-26T11:34:16.569Z</lastmod>
+    <loc>https://lfalab.github.io/methods-education/slides/index.html</loc>
+    <lastmod>2026-01-27T21:47:53.298Z</lastmod>
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/about.html</loc>
     <lastmod>2026-01-26T10:08:58.374Z</lastmod>
   </url>
   <url>
-    <loc>https://lfalab.github.io/methods-education/slides/index.html</loc>
-    <lastmod>2026-01-27T12:59:48.138Z</lastmod>
+    <loc>https://lfalab.github.io/methods-education/index.html</loc>
+    <lastmod>2026-01-26T11:34:16.569Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/slides/lectures/thinking-with-data-slides.html</loc>
+    <lastmod>2026-01-27T21:49:02.398Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/slides/lectures/thinking-with-data.html</loc>
+    <lastmod>2026-01-27T21:49:02.398Z</lastmod>
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/videos-concepts/empirical-vs-normative-slides.html</loc>
@@ -78,10 +94,18 @@
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/videos-stata/doing-reproducible-research-slides.html</loc>
-    <lastmod>2026-01-27T08:02:02.654Z</lastmod>
+    <lastmod>2026-01-27T21:46:05.708Z</lastmod>
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/videos-stata/doing-reproducible-research.html</loc>
-    <lastmod>2026-01-27T08:02:02.654Z</lastmod>
+    <lastmod>2026-01-27T21:46:05.708Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/slides/videos-stata/stata-interface-slides.html</loc>
+    <lastmod>2026-01-27T16:25:36.056Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/slides/videos-stata/stata-interface.html</loc>
+    <lastmod>2026-01-27T16:25:36.056Z</lastmod>
   </url>
 </urlset>

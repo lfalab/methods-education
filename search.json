@@ -1,5 +1,138 @@
 [
   {
+    "objectID": "slides/videos-stata/loading-browsing-data.html",
+    "href": "slides/videos-stata/loading-browsing-data.html",
+    "title": "Loading and Browsing Data",
+    "section": "",
+    "text": "Load a dataset in Stata.\nBrowse a dataset by switching between Stata and the codebook.\n\n\n\n\n\n\nAccess our Shared Project Folder\nClick on data-raw\nDownload Brexit_Regional.dta\nSave it into the data-raw folder on your computer\n\n\n\n\n\n\nWe’ve been through this in The Stata Interface\nThis can be done either by clicking File &gt; Change working directory, or…\n…if you have saved a do-file (set-wd.do) as instructed in The Stata Interface, you can copy the command from there.\n\n\n\n\n\n\n\nClick on the “New Do-file Editor” icon (a sheet of paper and a pencil)\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe first line should be the command that sets the working directory. It should look like:\n\ncd \"[Path\\To\\Your\\Folder]\"\nIf you use a Mac, there will be forward slashes instead of back slashes\n\nBelow that, enter\n\nuse \"data-raw/Brexit_Regional.dta\", clear\n\n\n\n\n\n\n\n\n\nClick on the sheet of paper with a “Play” button. This will execute all commands in the do-file\nIn the screenshot, the lines of green text after the asterisks are comments. Stata won’t run them.\n\n\n\n\n\n\n\n\n\n\n\n\n\nIf you see this on the top-right pane of your Stata screen, it has worked!\nBe sure to save your do-file in your do folder.\n\n\n\n\n\n\n\n\n\n\n\n\n\nClick on this icon with magnifying glass. It will allow you to browse the data.\nExplore it while swithing between your Stata screen and the Codebook\n\n\n\n\n\n\n\n\n\n\n\n\nBy setting the working directory, we tell Stata where our project lives.\nOnce that is done, we can load datasets by showing Stata where to find them in the subfolders inside our working directory.\nOnce a dataset is loaded, we can browse them using Stata.\n\n\nWhy this matters:\n\nThis exercise allows you to familiarise yourself with how a dataset looks like in Stata."
+  },
+  {
+    "objectID": "slides/videos-stata/loading-browsing-data.html#youll-learn-to",
+    "href": "slides/videos-stata/loading-browsing-data.html#youll-learn-to",
+    "title": "Loading and Browsing Data",
+    "section": "",
+    "text": "Load a dataset in Stata.\nBrowse a dataset by switching between Stata and the codebook."
+  },
+  {
+    "objectID": "slides/videos-stata/loading-browsing-data.html#step-1-download-the-brexit-dataset-from-our-shared-folder",
+    "href": "slides/videos-stata/loading-browsing-data.html#step-1-download-the-brexit-dataset-from-our-shared-folder",
+    "title": "Loading and Browsing Data",
+    "section": "",
+    "text": "Access our Shared Project Folder\nClick on data-raw\nDownload Brexit_Regional.dta\nSave it into the data-raw folder on your computer"
+  },
+  {
+    "objectID": "slides/videos-stata/loading-browsing-data.html#step-2-set-the-working-directory",
+    "href": "slides/videos-stata/loading-browsing-data.html#step-2-set-the-working-directory",
+    "title": "Loading and Browsing Data",
+    "section": "",
+    "text": "We’ve been through this in The Stata Interface\nThis can be done either by clicking File &gt; Change working directory, or…\n…if you have saved a do-file (set-wd.do) as instructed in The Stata Interface, you can copy the command from there."
+  },
+  {
+    "objectID": "slides/videos-stata/loading-browsing-data.html#step-3-open-a-new-do-file",
+    "href": "slides/videos-stata/loading-browsing-data.html#step-3-open-a-new-do-file",
+    "title": "Loading and Browsing Data",
+    "section": "",
+    "text": "Click on the “New Do-file Editor” icon (a sheet of paper and a pencil)"
+  },
+  {
+    "objectID": "slides/videos-stata/loading-browsing-data.html#step-4-set-up-your-do-file-to-load-the-dataset",
+    "href": "slides/videos-stata/loading-browsing-data.html#step-4-set-up-your-do-file-to-load-the-dataset",
+    "title": "Loading and Browsing Data",
+    "section": "",
+    "text": "The first line should be the command that sets the working directory. It should look like:\n\ncd \"[Path\\To\\Your\\Folder]\"\nIf you use a Mac, there will be forward slashes instead of back slashes\n\nBelow that, enter\n\nuse \"data-raw/Brexit_Regional.dta\", clear"
+  },
+  {
+    "objectID": "slides/videos-stata/loading-browsing-data.html#step-5-run-the-do-file",
+    "href": "slides/videos-stata/loading-browsing-data.html#step-5-run-the-do-file",
+    "title": "Loading and Browsing Data",
+    "section": "",
+    "text": "Click on the sheet of paper with a “Play” button. This will execute all commands in the do-file\nIn the screenshot, the lines of green text after the asterisks are comments. Stata won’t run them."
+  },
+  {
+    "objectID": "slides/videos-stata/loading-browsing-data.html#step-6-check-if-it-has-worked-and-save-your-do-file",
+    "href": "slides/videos-stata/loading-browsing-data.html#step-6-check-if-it-has-worked-and-save-your-do-file",
+    "title": "Loading and Browsing Data",
+    "section": "",
+    "text": "If you see this on the top-right pane of your Stata screen, it has worked!\nBe sure to save your do-file in your do folder."
+  },
+  {
+    "objectID": "slides/videos-stata/loading-browsing-data.html#step-7-browse-the-data",
+    "href": "slides/videos-stata/loading-browsing-data.html#step-7-browse-the-data",
+    "title": "Loading and Browsing Data",
+    "section": "",
+    "text": "Click on this icon with magnifying glass. It will allow you to browse the data.\nExplore it while swithing between your Stata screen and the Codebook"
+  },
+  {
+    "objectID": "slides/videos-stata/loading-browsing-data.html#recap",
+    "href": "slides/videos-stata/loading-browsing-data.html#recap",
+    "title": "Loading and Browsing Data",
+    "section": "",
+    "text": "By setting the working directory, we tell Stata where our project lives.\nOnce that is done, we can load datasets by showing Stata where to find them in the subfolders inside our working directory.\nOnce a dataset is loaded, we can browse them using Stata.\n\n\nWhy this matters:\n\nThis exercise allows you to familiarise yourself with how a dataset looks like in Stata."
+  },
+  {
+    "objectID": "slides/videos-stata/loading-browsing-data-slides.html#youll-learn-to",
+    "href": "slides/videos-stata/loading-browsing-data-slides.html#youll-learn-to",
+    "title": "Methods Education",
+    "section": "You’ll learn to",
+    "text": "You’ll learn to\n\nLoad a dataset in Stata.\nBrowse a dataset by switching between Stata and the codebook."
+  },
+  {
+    "objectID": "slides/videos-stata/loading-browsing-data-slides.html#step-1-download-the-brexit-dataset-from-our-shared-folder",
+    "href": "slides/videos-stata/loading-browsing-data-slides.html#step-1-download-the-brexit-dataset-from-our-shared-folder",
+    "title": "Methods Education",
+    "section": "Step 1: Download the Brexit dataset from our shared folder",
+    "text": "Step 1: Download the Brexit dataset from our shared folder\n\nAccess our Shared Project Folder\nClick on data-raw\nDownload Brexit_Regional.dta\nSave it into the data-raw folder on your computer"
+  },
+  {
+    "objectID": "slides/videos-stata/loading-browsing-data-slides.html#step-2-set-the-working-directory",
+    "href": "slides/videos-stata/loading-browsing-data-slides.html#step-2-set-the-working-directory",
+    "title": "Methods Education",
+    "section": "Step 2: Set the working directory",
+    "text": "Step 2: Set the working directory\n\nWe’ve been through this in The Stata Interface\nThis can be done either by clicking File &gt; Change working directory, or…\n…if you have saved a do-file (set-wd.do) as instructed in The Stata Interface, you can copy the command from there."
+  },
+  {
+    "objectID": "slides/videos-stata/loading-browsing-data-slides.html#step-3-open-a-new-do-file",
+    "href": "slides/videos-stata/loading-browsing-data-slides.html#step-3-open-a-new-do-file",
+    "title": "Methods Education",
+    "section": "Step 3: Open a new do-file",
+    "text": "Step 3: Open a new do-file\n\nClick on the “New Do-file Editor” icon (a sheet of paper and a pencil)"
+  },
+  {
+    "objectID": "slides/videos-stata/loading-browsing-data-slides.html#step-4-set-up-your-do-file-to-load-the-dataset",
+    "href": "slides/videos-stata/loading-browsing-data-slides.html#step-4-set-up-your-do-file-to-load-the-dataset",
+    "title": "Methods Education",
+    "section": "Step 4: Set up your do-file to load the dataset",
+    "text": "Step 4: Set up your do-file to load the dataset\n\nThe first line should be the command that sets the working directory. It should look like:\n\ncd \"[Path\\To\\Your\\Folder]\"\nIf you use a Mac, there will be forward slashes instead of back slashes\n\nBelow that, enter\n\nuse \"data-raw/Brexit_Regional.dta\", clear"
+  },
+  {
+    "objectID": "slides/videos-stata/loading-browsing-data-slides.html#step-5-run-the-do-file",
+    "href": "slides/videos-stata/loading-browsing-data-slides.html#step-5-run-the-do-file",
+    "title": "Methods Education",
+    "section": "Step 5: Run the do-file",
+    "text": "Step 5: Run the do-file\n\nClick on the sheet of paper with a “Play” button. This will execute all commands in the do-file\nIn the screenshot, the lines of green text after the asterisks are comments. Stata won’t run them."
+  },
+  {
+    "objectID": "slides/videos-stata/loading-browsing-data-slides.html#step-6-check-if-it-has-worked-and-save-your-do-file",
+    "href": "slides/videos-stata/loading-browsing-data-slides.html#step-6-check-if-it-has-worked-and-save-your-do-file",
+    "title": "Methods Education",
+    "section": "Step 6: Check if it has worked and save your do-file",
+    "text": "Step 6: Check if it has worked and save your do-file\n\nIf you see this on the top-right pane of your Stata screen, it has worked!\nBe sure to save your do-file in your do folder."
+  },
+  {
+    "objectID": "slides/videos-stata/loading-browsing-data-slides.html#step-7-browse-the-data",
+    "href": "slides/videos-stata/loading-browsing-data-slides.html#step-7-browse-the-data",
+    "title": "Methods Education",
+    "section": "Step 7: Browse the data",
+    "text": "Step 7: Browse the data\n\nClick on this icon with magnifying glass. It will allow you to browse the data.\nExplore it while swithing between your Stata screen and the Codebook"
+  },
+  {
+    "objectID": "slides/videos-stata/loading-browsing-data-slides.html#recap",
+    "href": "slides/videos-stata/loading-browsing-data-slides.html#recap",
+    "title": "Methods Education",
+    "section": "Recap",
+    "text": "Recap\n\nBy setting the working directory, we tell Stata where our project lives.\nOnce that is done, we can load datasets by showing Stata where to find them in the subfolders inside our working directory.\nOnce a dataset is loaded, we can browse them using Stata."
+  },
+  {
     "objectID": "slides/videos-stata/datasets-codebooks.html",
     "href": "slides/videos-stata/datasets-codebooks.html",
     "title": "Datasets and Codebooks",
@@ -574,151 +707,326 @@
     "text": "Recap\n\n\nEmpirical questions can be descriptive or causal.\nDescriptive questions ask about distributions, trends, and correlations.\nCausal questions ask about how some variables affect others.\nCausal and descriptive questions complement each other to advance our scientific knowledge."
   },
   {
-    "objectID": "slides/lectures/thinking-with-data.html",
-    "href": "slides/lectures/thinking-with-data.html",
-    "title": "Thinking With Data",
-    "section": "",
-    "text": "Please call me Leo\nToday’s goals:\n\nClarify what this module is and is not\nExplain how lectures, seminars, and assessments fit together\nSet expectations for Problem Sets\nWork through a group activity on quantitative vs qualitative research"
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#welcome",
+    "href": "slides/lectures/questions-theories-hypotheses.html#welcome",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Welcome",
+    "text": "Welcome\nToday’s goals:\n\nReiterate how Problem Set 1 (PS1) works\nRecap the core points from this week’s videos\nWork through a group activity on research questions, theories, and hypotheses"
   },
   {
-    "objectID": "slides/lectures/thinking-with-data.html#welcome",
-    "href": "slides/lectures/thinking-with-data.html#welcome",
-    "title": "Thinking With Data",
-    "section": "",
-    "text": "Please call me Leo\nToday’s goals:\n\nClarify what this module is and is not\nExplain how lectures, seminars, and assessments fit together\nSet expectations for Problem Sets\nWork through a group activity on quantitative vs qualitative research"
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#announcements",
+    "href": "slides/lectures/questions-theories-hypotheses.html#announcements",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Announcements",
+    "text": "Announcements\n\nWebsite hosting all video and lecture slides\nShared Project Folder for the datasets and do-files we’ll be using throughout the module\nHave a question about module content? Ask it on the KEATS Discussion Forum!"
   },
   {
-    "objectID": "slides/lectures/thinking-with-data.html#what-this-module-is-about",
-    "href": "slides/lectures/thinking-with-data.html#what-this-module-is-about",
-    "title": "Thinking With Data",
-    "section": "What This Module Is About",
-    "text": "What This Module Is About\nThis module is about:\n\nThinking clearly with data\n\nUnderstanding what statistical claims can and cannot show\n\nEvaluating evidence in political science research\n\nLearning how to ask and test empirical questions\n\nIt is not about memorising formulas or becoming a statistician"
-  },
-  {
-    "objectID": "slides/lectures/thinking-with-data.html#why-the-module-is-structured-this-way",
-    "href": "slides/lectures/thinking-with-data.html#why-the-module-is-structured-this-way",
-    "title": "Thinking With Data",
-    "section": "Why the Module Is Structured This Way",
-    "text": "Why the Module Is Structured This Way\nThe module uses a flipped format:\n\nShort videos and quizzes before lectures\nLectures and seminars focus on active learning\nProblem Sets reinforce concepts gradually over time\nThis structure is based on evidence from education research\n\nEg, Ambrose et al 2007, Nilson 2010"
-  },
-  {
-    "objectID": "slides/lectures/thinking-with-data.html#assessments-at-a-glance",
-    "href": "slides/lectures/thinking-with-data.html#assessments-at-a-glance",
-    "title": "Thinking With Data",
-    "section": "Assessments at a Glance",
-    "text": "Assessments at a Glance\n\nProblem Set 1 (PS1): 25%\nProblem Set 2 (PS2): 25%\nExam: 50%"
-  },
-  {
-    "objectID": "slides/lectures/thinking-with-data.html#assessments-at-a-glance-1",
-    "href": "slides/lectures/thinking-with-data.html#assessments-at-a-glance-1",
-    "title": "Thinking With Data",
-    "section": "Assessments at a Glance",
-    "text": "Assessments at a Glance\n\nToday, we’ll focus on PS1\nPS1 structures your weekly work"
-  },
-  {
-    "objectID": "slides/lectures/thinking-with-data.html#problem-set-1-ps1-the-big-picture",
-    "href": "slides/lectures/thinking-with-data.html#problem-set-1-ps1-the-big-picture",
-    "title": "Thinking With Data",
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#problem-set-1-ps1-the-big-picture",
+    "href": "slides/lectures/questions-theories-hypotheses.html#problem-set-1-ps1-the-big-picture",
+    "title": "Research Questions, Theories, and Hypotheses",
     "section": "Problem Set 1 (PS1): The Big Picture",
-    "text": "Problem Set 1 (PS1): The Big Picture\nPS1 is completed through weekly preparatory activities on KEATS:\n\nInteractive videos (with attention-check questions)\nShort quizzes\nThese run from Week 2 to Week 10 (excluding Reading Week)\nThe first PS1 work is due next week (28 Jan) before lecture"
+    "text": "Problem Set 1 (PS1): The Big Picture\nPS1 is completed through weekly preparatory activities on KEATS:\n\nInteractive videos (with attention-check questions)\nShort quizzes\nThese run from Week 2 to Week 10 (excluding Reading Week)\nThe first PS1 work was due today (28 Jan) before lecture"
   },
   {
-    "objectID": "slides/lectures/thinking-with-data.html#how-ps1-works-core-rules",
-    "href": "slides/lectures/thinking-with-data.html#how-ps1-works-core-rules",
-    "title": "Thinking With Data",
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#how-ps1-works-core-rules",
+    "href": "slides/lectures/questions-theories-hypotheses.html#how-ps1-works-core-rules",
+    "title": "Research Questions, Theories, and Hypotheses",
     "section": "How PS1 Works (Core Rules)",
     "text": "How PS1 Works (Core Rules)\nEach week:\n\nVideos introduce key concepts\nQuizzes test understanding of those concepts\nLecture and seminar activities assume this preparation\n\nPS1 is designed to support learning over time, not last-minute revision"
   },
   {
-    "objectID": "slides/lectures/thinking-with-data.html#quizzes-vs-videos-important-distinction",
-    "href": "slides/lectures/thinking-with-data.html#quizzes-vs-videos-important-distinction",
-    "title": "Thinking With Data",
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#quizzes-vs-videos-important-distinction",
+    "href": "slides/lectures/questions-theories-hypotheses.html#quizzes-vs-videos-important-distinction",
+    "title": "Research Questions, Theories, and Hypotheses",
     "section": "Quizzes vs Videos (Important Distinction)",
     "text": "Quizzes vs Videos (Important Distinction)\n\nQuizzes\n\n5–10 multiple-choice questions\nUnlimited attempts\nHighest score counts\nDeadlines are enforced"
   },
   {
-    "objectID": "slides/lectures/thinking-with-data.html#quizzes-vs-videos-important-distinction-1",
-    "href": "slides/lectures/thinking-with-data.html#quizzes-vs-videos-important-distinction-1",
-    "title": "Thinking With Data",
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#quizzes-vs-videos-important-distinction-1",
+    "href": "slides/lectures/questions-theories-hypotheses.html#quizzes-vs-videos-important-distinction-1",
+    "title": "Research Questions, Theories, and Hypotheses",
     "section": "Quizzes vs Videos (Important Distinction)",
     "text": "Quizzes vs Videos (Important Distinction)\n\nVideos\n\nInclude attention-check questions\nOne attempt per question\nVideos remain accessible throughout the term\n\nIf you miss a quiz, you can still earn partial credit for that week via the videos."
   },
   {
-    "objectID": "slides/lectures/thinking-with-data.html#flexibility-built-in",
-    "href": "slides/lectures/thinking-with-data.html#flexibility-built-in",
-    "title": "Thinking With Data",
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#flexibility-built-in",
+    "href": "slides/lectures/questions-theories-hypotheses.html#flexibility-built-in",
+    "title": "Research Questions, Theories, and Hypotheses",
     "section": "Flexibility Built In",
     "text": "Flexibility Built In\n\nThere are eight weeks with PS1 activities\nYour best six weekly scores count\nThe two lowest scores are dropped\nThis is designed as insurance, not a target"
   },
   {
-    "objectID": "slides/lectures/thinking-with-data.html#why-we-focus-on-quantitative-research",
-    "href": "slides/lectures/thinking-with-data.html#why-we-focus-on-quantitative-research",
-    "title": "Thinking With Data",
-    "section": "Why We Focus on Quantitative Research",
-    "text": "Why We Focus on Quantitative Research\nThis module focuses on quantitative methods, but:\n\nThat does not mean qualitative research is inferior\nDifferent methods answer different kinds of questions\nUnderstanding the distinction helps you evaluate evidence critically"
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#research-questions-descriptive-vs-causal",
+    "href": "slides/lectures/questions-theories-hypotheses.html#research-questions-descriptive-vs-causal",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Research Questions: Descriptive vs Causal",
+    "text": "Research Questions: Descriptive vs Causal\n\nEmpirical questions can be descriptive or causal.\nDescriptive questions ask what the world looks like.\nCausal questions ask what would happen if we intervened."
   },
   {
-    "objectID": "slides/lectures/thinking-with-data.html#group-activity-quantitative-vs-qualitative-research",
-    "href": "slides/lectures/thinking-with-data.html#group-activity-quantitative-vs-qualitative-research",
-    "title": "Thinking With Data",
-    "section": "Group Activity: Quantitative vs Qualitative Research",
-    "text": "Group Activity: Quantitative vs Qualitative Research\n\nYou will work in small groups\nThe goals are to:\n\nUnderstand how quantitative and qualitative research differ\nReflect on what each approach does well\nDiscuss what each approach may miss"
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#descriptive-questions",
+    "href": "slides/lectures/questions-theories-hypotheses.html#descriptive-questions",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Descriptive questions",
+    "text": "Descriptive questions\n\nDescriptive questions can be about distributions, trends, or correlations.\n\nWhat percentage of countries are democratic?\nIs there a global trend towards democratic backsliding?\nIs democratic backsliding more prevalent in countries with higher political polarisation?"
   },
   {
-    "objectID": "slides/lectures/thinking-with-data.html#two-research-traditions-mahoney-goertz",
-    "href": "slides/lectures/thinking-with-data.html#two-research-traditions-mahoney-goertz",
-    "title": "Thinking With Data",
-    "section": "Two Research Traditions (Mahoney & Goertz)",
-    "text": "Two Research Traditions (Mahoney & Goertz)\nQuantitative research\n\nAverage effects across cases\nGeneral, law-like claims\nExample: What is the effect of economic development on democracy?"
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#causal-questions",
+    "href": "slides/lectures/questions-theories-hypotheses.html#causal-questions",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Causal questions",
+    "text": "Causal questions\n\nCausal questions ask if some variables drive change in others.\n\nDoes exposure to divisive content on social media make people more tolerant of political violence?\nDoes declining trust in political elites weaken commitment to democratic norms?\nDo compulsory voting laws increase political participation?"
   },
   {
-    "objectID": "slides/lectures/thinking-with-data.html#two-research-traditions-mahoney-goertz-1",
-    "href": "slides/lectures/thinking-with-data.html#two-research-traditions-mahoney-goertz-1",
-    "title": "Thinking With Data",
-    "section": "Two Research Traditions (Mahoney & Goertz)",
-    "text": "Two Research Traditions (Mahoney & Goertz)\nQualitative research\n\nSpecific outcomes in particular cases\nLess emphasis on generalisation\nExample: Did economic development contribute to Spain’s transition to democracy?"
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#complementarities-between-questions",
+    "href": "slides/lectures/questions-theories-hypotheses.html#complementarities-between-questions",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Complementarities between questions",
+    "text": "Complementarities between questions\n\nDescribing a distribution:\n\nWhat percentage of the world’s wealth is held by the 50 richest people?\n\nDescribing a trend:\n\nIs economic inequality increasing across the world?"
   },
   {
-    "objectID": "slides/lectures/thinking-with-data.html#example-studying-democratisation",
-    "href": "slides/lectures/thinking-with-data.html#example-studying-democratisation",
-    "title": "Thinking With Data",
-    "section": "Example: Studying Democratisation",
-    "text": "Example: Studying Democratisation\nQuantitative approach\n\nLarge dataset of countries\nGDP per capita, democracy scores, controls\nStatistical analysis of average relationships"
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#complementarities-between-questions-1",
+    "href": "slides/lectures/questions-theories-hypotheses.html#complementarities-between-questions-1",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Complementarities between questions",
+    "text": "Complementarities between questions\n\nDescribing a correlation:\n\nAre autocracies more unequal than democracies?\n\nProbing causation:\n\nDo increases in income inequality make democratic backsliding more likely?"
   },
   {
-    "objectID": "slides/lectures/thinking-with-data.html#example-studying-democratisation-1",
-    "href": "slides/lectures/thinking-with-data.html#example-studying-democratisation-1",
-    "title": "Thinking With Data",
-    "section": "Example: Studying Democratisation",
-    "text": "Example: Studying Democratisation\nQualitative approach\n\nOne or more case studies\nArchives, interviews, historical evidence\nTracing causal processes within cases"
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#theories",
+    "href": "slides/lectures/questions-theories-hypotheses.html#theories",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Theories",
+    "text": "Theories\n\nA theory is “a reasoned and precise speculation about the answer to a research question” (King, Keohane, and Verba 1994:3).\nBased on our knowledge and reasoning, what’s a plausible answer to a research question?"
   },
   {
-    "objectID": "slides/lectures/thinking-with-data.html#your-task",
-    "href": "slides/lectures/thinking-with-data.html#your-task",
-    "title": "Thinking With Data",
-    "section": "Your Task",
-    "text": "Your Task\n\nDiscuss advantages and disadvantages of each approach\nThink about:\n\nWhat does this approach allow us to see?\nWhat does it obscure or miss?\n\n\nFill in this table:\n\n\n\n\nPros\nCons\n\n\n\n\nQuantitative\n\n\n\n\nQualitative"
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#example-health-care-systems-and-policy-responses",
+    "href": "slides/lectures/questions-theories-hypotheses.html#example-health-care-systems-and-policy-responses",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Example: Health care systems and policy responses",
+    "text": "Example: Health care systems and policy responses\n\nResearch question: How did countries’ health care systems affect their abilities to mitigate the impact of the Covid-19 pandemic?\nTheory: Countries with public health care systems took advantage of their centralised bureaucracies to implement more effective policy responses."
   },
   {
-    "objectID": "slides/lectures/thinking-with-data.html#reconvening",
-    "href": "slides/lectures/thinking-with-data.html#reconvening",
-    "title": "Thinking With Data",
-    "section": "Reconvening",
-    "text": "Reconvening\nWe will reconvene and:\n\nCollect examples from different groups\nCompare perspectives\nDiscuss why mixed-method approaches are increasingly common"
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#hypotheses",
+    "href": "slides/lectures/questions-theories-hypotheses.html#hypotheses",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Hypotheses",
+    "text": "Hypotheses\n\nA hypothesis is an empirically testable implication of a theory.\nGiven your theory, what should we observe in the world?"
   },
   {
-    "objectID": "slides/lectures/thinking-with-data.html#why-this-matters-for-the-module",
-    "href": "slides/lectures/thinking-with-data.html#why-this-matters-for-the-module",
-    "title": "Thinking With Data",
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#example-health-care-systems-and-policy-responses-1",
+    "href": "slides/lectures/questions-theories-hypotheses.html#example-health-care-systems-and-policy-responses-1",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Example: Health care systems and policy responses",
+    "text": "Example: Health care systems and policy responses\n\nTheory: Countries with public health care systems took advantage of their centralised bureaucracies to implement more effective policy responses.\nHypothesis: Countries with public health care systems had lower Covid death rates than countries with private health care systems."
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#group-activity-research-questions-theories-and-hypotheses",
+    "href": "slides/lectures/questions-theories-hypotheses.html#group-activity-research-questions-theories-and-hypotheses",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Group Activity: Research Questions, Theories, and Hypotheses",
+    "text": "Group Activity: Research Questions, Theories, and Hypotheses\nWorking in groups of about three. By the end of the activity, each group should have:\n\nOne clearly stated research question\nA decision about whether the question is descriptive or causal\nOne theory that offers a a reasoned and precise speculation about the answer to your question\nOne hypothesis that follows logically from the theory"
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#group-activity-research-questions-theories-and-hypotheses-1",
+    "href": "slides/lectures/questions-theories-hypotheses.html#group-activity-research-questions-theories-and-hypotheses-1",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Group Activity: Research Questions, Theories, and Hypotheses",
+    "text": "Group Activity: Research Questions, Theories, and Hypotheses\nGeneral guidance:\n\nThe research question should come first and guide everything else\nThe theory should explain why, not just what\nThe hypothesis should be empirically testable\nDescriptive questions can still have theories and hypotheses"
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#why-this-matters-for-the-module",
+    "href": "slides/lectures/questions-theories-hypotheses.html#why-this-matters-for-the-module",
+    "title": "Research Questions, Theories, and Hypotheses",
     "section": "Why This Matters for the Module",
-    "text": "Why This Matters for the Module\nAlthough this course focuses on quantitative methods:\n\nYou should always ask what a method can and cannot show\nStatistical results are not self-interpreting\nGood political science depends on methodological awareness"
+    "text": "Why This Matters for the Module\n\nThis structure, question → theory → hypothesis, will reappear throughout the module and your future research projects.\nThese are foundational concepts where misunderstandings are very common."
   },
   {
-    "objectID": "slides/lectures/thinking-with-data.html#looking-ahead",
-    "href": "slides/lectures/thinking-with-data.html#looking-ahead",
-    "title": "Thinking With Data",
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#looking-ahead",
+    "href": "slides/lectures/questions-theories-hypotheses.html#looking-ahead",
+    "title": "Research Questions, Theories, and Hypotheses",
     "section": "Looking Ahead",
-    "text": "Looking Ahead\n\nThe first PS1 work is due next week (28 Jan) before lecture\nPlease check KEATS regularly."
+    "text": "Looking Ahead\n\nThe next PS1 work is due next week (4 Feb) before lecture\nPlease check KEATS regularly."
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#welcome",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#welcome",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Welcome",
+    "text": "Welcome\nToday’s goals:\n\nReiterate how Problem Set 1 (PS1) works\nRecap the core points from this week’s videos\nWork through a group activity on research questions, theories, and hypotheses"
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#announcements",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#announcements",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Announcements",
+    "text": "Announcements\n\nWebsite hosting all video and lecture slides\nShared Project Folder for the datasets and do-files we’ll be using throughout the module\nHave a question about module content? Ask it on the KEATS Discussion Forum!"
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#problem-set-1-ps1-the-big-picture",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#problem-set-1-ps1-the-big-picture",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Problem Set 1 (PS1): The Big Picture",
+    "text": "Problem Set 1 (PS1): The Big Picture\nPS1 is completed through weekly preparatory activities on KEATS:\n\nInteractive videos (with attention-check questions)\nShort quizzes\nThese run from Week 2 to Week 10 (excluding Reading Week)\nThe first PS1 work was due today (28 Jan) before lecture"
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#how-ps1-works-core-rules",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#how-ps1-works-core-rules",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "How PS1 Works (Core Rules)",
+    "text": "How PS1 Works (Core Rules)\nEach week:\n\nVideos introduce key concepts\nQuizzes test understanding of those concepts\nLecture and seminar activities assume this preparation\n\nPS1 is designed to support learning over time, not last-minute revision"
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#quizzes-vs-videos-important-distinction",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#quizzes-vs-videos-important-distinction",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Quizzes vs Videos (Important Distinction)",
+    "text": "Quizzes vs Videos (Important Distinction)\n\nQuizzes\n\n5–10 multiple-choice questions\nUnlimited attempts\nHighest score counts\nDeadlines are enforced"
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#quizzes-vs-videos-important-distinction-1",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#quizzes-vs-videos-important-distinction-1",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Quizzes vs Videos (Important Distinction)",
+    "text": "Quizzes vs Videos (Important Distinction)\n\nVideos\n\nInclude attention-check questions\nOne attempt per question\nVideos remain accessible throughout the term\n\nIf you miss a quiz, you can still earn partial credit for that week via the videos."
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#flexibility-built-in",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#flexibility-built-in",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Flexibility Built In",
+    "text": "Flexibility Built In\n\nThere are eight weeks with PS1 activities\nYour best six weekly scores count\nThe two lowest scores are dropped\nThis is designed as insurance, not a target"
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#research-questions-descriptive-vs-causal",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#research-questions-descriptive-vs-causal",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Research Questions: Descriptive vs Causal",
+    "text": "Research Questions: Descriptive vs Causal\n\nEmpirical questions can be descriptive or causal.\nDescriptive questions ask what the world looks like.\nCausal questions ask what would happen if we intervened."
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#descriptive-questions",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#descriptive-questions",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Descriptive questions",
+    "text": "Descriptive questions\n\nDescriptive questions can be about distributions, trends, or correlations.\n\nWhat percentage of countries are democratic?\nIs there a global trend towards democratic backsliding?\nIs democratic backsliding more prevalent in countries with higher political polarisation?"
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#causal-questions",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#causal-questions",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Causal questions",
+    "text": "Causal questions\n\nCausal questions ask if some variables drive change in others.\n\nDoes exposure to divisive content on social media make people more tolerant of political violence?\nDoes declining trust in political elites weaken commitment to democratic norms?\nDo compulsory voting laws increase political participation?"
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#complementarities-between-questions",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#complementarities-between-questions",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Complementarities between questions",
+    "text": "Complementarities between questions\n\nDescribing a distribution:\n\nWhat percentage of the world’s wealth is held by the 50 richest people?\n\nDescribing a trend:\n\nIs economic inequality increasing across the world?"
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#complementarities-between-questions-1",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#complementarities-between-questions-1",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Complementarities between questions",
+    "text": "Complementarities between questions\n\nDescribing a correlation:\n\nAre autocracies more unequal than democracies?\n\nProbing causation:\n\nDo increases in income inequality make democratic backsliding more likely?"
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#theories",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#theories",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Theories",
+    "text": "Theories\n\nA theory is “a reasoned and precise speculation about the answer to a research question” (King, Keohane, and Verba 1994:3).\nBased on our knowledge and reasoning, what’s a plausible answer to a research question?"
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#example-health-care-systems-and-policy-responses",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#example-health-care-systems-and-policy-responses",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Example: Health care systems and policy responses",
+    "text": "Example: Health care systems and policy responses\n\nResearch question: How did countries’ health care systems affect their abilities to mitigate the impact of the Covid-19 pandemic?\nTheory: Countries with public health care systems took advantage of their centralised bureaucracies to implement more effective policy responses."
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#hypotheses",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#hypotheses",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Hypotheses",
+    "text": "Hypotheses\n\nA hypothesis is an empirically testable implication of a theory.\nGiven your theory, what should we observe in the world?"
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#example-health-care-systems-and-policy-responses-1",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#example-health-care-systems-and-policy-responses-1",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Example: Health care systems and policy responses",
+    "text": "Example: Health care systems and policy responses\n\nTheory: Countries with public health care systems took advantage of their centralised bureaucracies to implement more effective policy responses.\nHypothesis: Countries with public health care systems had lower Covid death rates than countries with private health care systems."
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#group-activity-research-questions-theories-and-hypotheses",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#group-activity-research-questions-theories-and-hypotheses",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Group Activity: Research Questions, Theories, and Hypotheses",
+    "text": "Group Activity: Research Questions, Theories, and Hypotheses\nWorking in groups of about three. By the end of the activity, each group should have:\n\nOne clearly stated research question\nA decision about whether the question is descriptive or causal\nOne theory that offers a a reasoned and precise speculation about the answer to your question\nOne hypothesis that follows logically from the theory"
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#group-activity-research-questions-theories-and-hypotheses-1",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#group-activity-research-questions-theories-and-hypotheses-1",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Group Activity: Research Questions, Theories, and Hypotheses",
+    "text": "Group Activity: Research Questions, Theories, and Hypotheses\nGeneral guidance:\n\nThe research question should come first and guide everything else\nThe theory should explain why, not just what\nThe hypothesis should be empirically testable\nDescriptive questions can still have theories and hypotheses"
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#why-this-matters-for-the-module",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#why-this-matters-for-the-module",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Why This Matters for the Module",
+    "text": "Why This Matters for the Module\n\nThis structure, question → theory → hypothesis, will reappear throughout the module and your future research projects.\nThese are foundational concepts where misunderstandings are very common."
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#looking-ahead",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#looking-ahead",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Looking Ahead",
+    "text": "Looking Ahead\n\nThe next PS1 work is due next week (4 Feb) before lecture\nPlease check KEATS regularly."
+  },
+  {
+    "objectID": "slides/index.html",
+    "href": "slides/index.html",
+    "title": "Slides",
+    "section": "",
+    "text": "Week 1: Thinking with Data"
+  },
+  {
+    "objectID": "slides/index.html#week-1-thinking-with-data",
+    "href": "slides/index.html#week-1-thinking-with-data",
+    "title": "Slides",
+    "section": "",
+    "text": "Week 1: Thinking with Data"
+  },
+  {
+    "objectID": "slides/index.html#week-2-research-questions-theories-and-hypotheses",
+    "href": "slides/index.html#week-2-research-questions-theories-and-hypotheses",
+    "title": "Slides",
+    "section": "Week 2: Research Questions, Theories, and Hypotheses",
+    "text": "Week 2: Research Questions, Theories, and Hypotheses\n\nVideos\n\nEmpirical and Normative Questions\nDescriptive and Causal Questions\nUnits of Analysis, Theories, and Hypotheses\nDependent and Independent Variables\nDoing Reproducible Research\n\n\n\nLecture\n\nWeek 2: Research Questions, Theories, and Hypotheses"
+  },
+  {
+    "objectID": "slides/index.html#week-3-measurement-and-variable-types",
+    "href": "slides/index.html#week-3-measurement-and-variable-types",
+    "title": "Slides",
+    "section": "Week 3: Measurement and Variable Types",
+    "text": "Week 3: Measurement and Variable Types\n\nVideos\n\nMeasuring Variables\nTypes of Variables\nDatasets and Codebooks\nThe Stata Interface\nLoading and Browsing Data"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Methods Education",
+    "section": "",
+    "text": "Lecture and video slides for 4SSPP111 Statistics for Political Science (King’s College London)"
   },
   {
     "objectID": "slides/lectures/thinking-with-data-slides.html#welcome",
@@ -732,7 +1040,7 @@
     "href": "slides/lectures/thinking-with-data-slides.html#what-this-module-is-about",
     "title": "Thinking With Data",
     "section": "What This Module Is About",
-    "text": "What This Module Is About\nThis module is about:\n\nThinking clearly with data\n\nUnderstanding what statistical claims can and cannot show\n\nEvaluating evidence in political science research\n\nLearning how to ask and test empirical questions\n\nIt is not about memorising formulas or becoming a statistician"
+    "text": "What This Module Is About\nThis module is about:\n\nThinking clearly with data\nUnderstanding what statistical claims can and cannot show\nEvaluating evidence in political science research\nLearning how to ask and test empirical questions\n\nIt is not about memorising formulas or becoming a statistician"
   },
   {
     "objectID": "slides/lectures/thinking-with-data-slides.html#why-the-module-is-structured-this-way",
@@ -861,46 +1169,151 @@
     "text": "Looking Ahead\n\nThe first PS1 work is due next week (28 Jan) before lecture\nPlease check KEATS regularly."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Methods Education",
+    "objectID": "slides/lectures/thinking-with-data.html",
+    "href": "slides/lectures/thinking-with-data.html",
+    "title": "Thinking With Data",
     "section": "",
-    "text": "Lecture and video slides for 4SSPP111 Statistics for Political Science (King’s College London)"
+    "text": "Please call me Leo\nToday’s goals:\n\nClarify what this module is and is not\nExplain how lectures, seminars, and assessments fit together\nSet expectations for Problem Sets\nWork through a group activity on quantitative vs qualitative research"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "slides/lectures/thinking-with-data.html#welcome",
+    "href": "slides/lectures/thinking-with-data.html#welcome",
+    "title": "Thinking With Data",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "Please call me Leo\nToday’s goals:\n\nClarify what this module is and is not\nExplain how lectures, seminars, and assessments fit together\nSet expectations for Problem Sets\nWork through a group activity on quantitative vs qualitative research"
   },
   {
-    "objectID": "slides/index.html",
-    "href": "slides/index.html",
-    "title": "Slides",
-    "section": "",
-    "text": "Week 1: Thinking with Data"
+    "objectID": "slides/lectures/thinking-with-data.html#what-this-module-is-about",
+    "href": "slides/lectures/thinking-with-data.html#what-this-module-is-about",
+    "title": "Thinking With Data",
+    "section": "What This Module Is About",
+    "text": "What This Module Is About\nThis module is about:\n\nThinking clearly with data\nUnderstanding what statistical claims can and cannot show\nEvaluating evidence in political science research\nLearning how to ask and test empirical questions\n\nIt is not about memorising formulas or becoming a statistician"
   },
   {
-    "objectID": "slides/index.html#week-1",
-    "href": "slides/index.html#week-1",
-    "title": "Slides",
-    "section": "",
-    "text": "Week 1: Thinking with Data"
+    "objectID": "slides/lectures/thinking-with-data.html#why-the-module-is-structured-this-way",
+    "href": "slides/lectures/thinking-with-data.html#why-the-module-is-structured-this-way",
+    "title": "Thinking With Data",
+    "section": "Why the Module Is Structured This Way",
+    "text": "Why the Module Is Structured This Way\nThe module uses a flipped format:\n\nShort videos and quizzes before lectures\nLectures and seminars focus on active learning\nProblem Sets reinforce concepts gradually over time\nThis structure is based on evidence from education research\n\nEg, Ambrose et al 2007, Nilson 2010"
   },
   {
-    "objectID": "slides/index.html#week-2",
-    "href": "slides/index.html#week-2",
-    "title": "Slides",
-    "section": "Week 2",
-    "text": "Week 2\n\nVideo slides\n\nEmpirical and Normative Questions\nDescriptive and Causal Questions\nUnits of Analysis, Theories, and Hypotheses\nDependent and Independent Variables\nDoing Reproducible Research"
+    "objectID": "slides/lectures/thinking-with-data.html#assessments-at-a-glance",
+    "href": "slides/lectures/thinking-with-data.html#assessments-at-a-glance",
+    "title": "Thinking With Data",
+    "section": "Assessments at a Glance",
+    "text": "Assessments at a Glance\n\nProblem Set 1 (PS1): 25%\nProblem Set 2 (PS2): 25%\nExam: 50%"
   },
   {
-    "objectID": "slides/index.html#week-3",
-    "href": "slides/index.html#week-3",
-    "title": "Slides",
-    "section": "Week 3",
-    "text": "Week 3\n\nVideo slides\n\nMeasuring Variables\nTypes of Variables\nDatasets and codebooks"
+    "objectID": "slides/lectures/thinking-with-data.html#assessments-at-a-glance-1",
+    "href": "slides/lectures/thinking-with-data.html#assessments-at-a-glance-1",
+    "title": "Thinking With Data",
+    "section": "Assessments at a Glance",
+    "text": "Assessments at a Glance\n\nToday, we’ll focus on PS1\nPS1 structures your weekly work"
+  },
+  {
+    "objectID": "slides/lectures/thinking-with-data.html#problem-set-1-ps1-the-big-picture",
+    "href": "slides/lectures/thinking-with-data.html#problem-set-1-ps1-the-big-picture",
+    "title": "Thinking With Data",
+    "section": "Problem Set 1 (PS1): The Big Picture",
+    "text": "Problem Set 1 (PS1): The Big Picture\nPS1 is completed through weekly preparatory activities on KEATS:\n\nInteractive videos (with attention-check questions)\nShort quizzes\nThese run from Week 2 to Week 10 (excluding Reading Week)\nThe first PS1 work is due next week (28 Jan) before lecture"
+  },
+  {
+    "objectID": "slides/lectures/thinking-with-data.html#how-ps1-works-core-rules",
+    "href": "slides/lectures/thinking-with-data.html#how-ps1-works-core-rules",
+    "title": "Thinking With Data",
+    "section": "How PS1 Works (Core Rules)",
+    "text": "How PS1 Works (Core Rules)\nEach week:\n\nVideos introduce key concepts\nQuizzes test understanding of those concepts\nLecture and seminar activities assume this preparation\n\nPS1 is designed to support learning over time, not last-minute revision"
+  },
+  {
+    "objectID": "slides/lectures/thinking-with-data.html#quizzes-vs-videos-important-distinction",
+    "href": "slides/lectures/thinking-with-data.html#quizzes-vs-videos-important-distinction",
+    "title": "Thinking With Data",
+    "section": "Quizzes vs Videos (Important Distinction)",
+    "text": "Quizzes vs Videos (Important Distinction)\n\nQuizzes\n\n5–10 multiple-choice questions\nUnlimited attempts\nHighest score counts\nDeadlines are enforced"
+  },
+  {
+    "objectID": "slides/lectures/thinking-with-data.html#quizzes-vs-videos-important-distinction-1",
+    "href": "slides/lectures/thinking-with-data.html#quizzes-vs-videos-important-distinction-1",
+    "title": "Thinking With Data",
+    "section": "Quizzes vs Videos (Important Distinction)",
+    "text": "Quizzes vs Videos (Important Distinction)\n\nVideos\n\nInclude attention-check questions\nOne attempt per question\nVideos remain accessible throughout the term\n\nIf you miss a quiz, you can still earn partial credit for that week via the videos."
+  },
+  {
+    "objectID": "slides/lectures/thinking-with-data.html#flexibility-built-in",
+    "href": "slides/lectures/thinking-with-data.html#flexibility-built-in",
+    "title": "Thinking With Data",
+    "section": "Flexibility Built In",
+    "text": "Flexibility Built In\n\nThere are eight weeks with PS1 activities\nYour best six weekly scores count\nThe two lowest scores are dropped\nThis is designed as insurance, not a target"
+  },
+  {
+    "objectID": "slides/lectures/thinking-with-data.html#why-we-focus-on-quantitative-research",
+    "href": "slides/lectures/thinking-with-data.html#why-we-focus-on-quantitative-research",
+    "title": "Thinking With Data",
+    "section": "Why We Focus on Quantitative Research",
+    "text": "Why We Focus on Quantitative Research\nThis module focuses on quantitative methods, but:\n\nThat does not mean qualitative research is inferior\nDifferent methods answer different kinds of questions\nUnderstanding the distinction helps you evaluate evidence critically"
+  },
+  {
+    "objectID": "slides/lectures/thinking-with-data.html#group-activity-quantitative-vs-qualitative-research",
+    "href": "slides/lectures/thinking-with-data.html#group-activity-quantitative-vs-qualitative-research",
+    "title": "Thinking With Data",
+    "section": "Group Activity: Quantitative vs Qualitative Research",
+    "text": "Group Activity: Quantitative vs Qualitative Research\n\nYou will work in small groups\nThe goals are to:\n\nUnderstand how quantitative and qualitative research differ\nReflect on what each approach does well\nDiscuss what each approach may miss"
+  },
+  {
+    "objectID": "slides/lectures/thinking-with-data.html#two-research-traditions-mahoney-goertz",
+    "href": "slides/lectures/thinking-with-data.html#two-research-traditions-mahoney-goertz",
+    "title": "Thinking With Data",
+    "section": "Two Research Traditions (Mahoney & Goertz)",
+    "text": "Two Research Traditions (Mahoney & Goertz)\nQuantitative research\n\nAverage effects across cases\nGeneral, law-like claims\nExample: What is the effect of economic development on democracy?"
+  },
+  {
+    "objectID": "slides/lectures/thinking-with-data.html#two-research-traditions-mahoney-goertz-1",
+    "href": "slides/lectures/thinking-with-data.html#two-research-traditions-mahoney-goertz-1",
+    "title": "Thinking With Data",
+    "section": "Two Research Traditions (Mahoney & Goertz)",
+    "text": "Two Research Traditions (Mahoney & Goertz)\nQualitative research\n\nSpecific outcomes in particular cases\nLess emphasis on generalisation\nExample: Did economic development contribute to Spain’s transition to democracy?"
+  },
+  {
+    "objectID": "slides/lectures/thinking-with-data.html#example-studying-democratisation",
+    "href": "slides/lectures/thinking-with-data.html#example-studying-democratisation",
+    "title": "Thinking With Data",
+    "section": "Example: Studying Democratisation",
+    "text": "Example: Studying Democratisation\nQuantitative approach\n\nLarge dataset of countries\nGDP per capita, democracy scores, controls\nStatistical analysis of average relationships"
+  },
+  {
+    "objectID": "slides/lectures/thinking-with-data.html#example-studying-democratisation-1",
+    "href": "slides/lectures/thinking-with-data.html#example-studying-democratisation-1",
+    "title": "Thinking With Data",
+    "section": "Example: Studying Democratisation",
+    "text": "Example: Studying Democratisation\nQualitative approach\n\nOne or more case studies\nArchives, interviews, historical evidence\nTracing causal processes within cases"
+  },
+  {
+    "objectID": "slides/lectures/thinking-with-data.html#your-task",
+    "href": "slides/lectures/thinking-with-data.html#your-task",
+    "title": "Thinking With Data",
+    "section": "Your Task",
+    "text": "Your Task\n\nDiscuss advantages and disadvantages of each approach\nThink about:\n\nWhat does this approach allow us to see?\nWhat does it obscure or miss?\n\n\nFill in this table:\n\n\n\n\nPros\nCons\n\n\n\n\nQuantitative\n\n\n\n\nQualitative"
+  },
+  {
+    "objectID": "slides/lectures/thinking-with-data.html#reconvening",
+    "href": "slides/lectures/thinking-with-data.html#reconvening",
+    "title": "Thinking With Data",
+    "section": "Reconvening",
+    "text": "Reconvening\nWe will reconvene and:\n\nCollect examples from different groups\nCompare perspectives\nDiscuss why mixed-method approaches are increasingly common"
+  },
+  {
+    "objectID": "slides/lectures/thinking-with-data.html#why-this-matters-for-the-module",
+    "href": "slides/lectures/thinking-with-data.html#why-this-matters-for-the-module",
+    "title": "Thinking With Data",
+    "section": "Why This Matters for the Module",
+    "text": "Why This Matters for the Module\nAlthough this course focuses on quantitative methods:\n\nYou should always ask what a method can and cannot show\nStatistical results are not self-interpreting\nGood political science depends on methodological awareness"
+  },
+  {
+    "objectID": "slides/lectures/thinking-with-data.html#looking-ahead",
+    "href": "slides/lectures/thinking-with-data.html#looking-ahead",
+    "title": "Thinking With Data",
+    "section": "Looking Ahead",
+    "text": "Looking Ahead\n\nThe first PS1 work is due next week (28 Jan) before lecture\nPlease check KEATS regularly."
   },
   {
     "objectID": "slides/videos-concepts/empirical-vs-normative-slides.html#youll-learn-to",
@@ -1348,7 +1761,7 @@
     "href": "slides/videos-stata/doing-reproducible-research-slides.html#data-and-code",
     "title": "Methods Education",
     "section": "Data and Code",
-    "text": "Data and Code\n\n\nData: the information you gather to begin your analysis.\n\nExamples: Public opinion surveys; Election results; National census statistics.\n\nCode: the instructions that transform and analyse the data.\n\nExamples: Merge data on economic growth rates with election results; Create a table that shows how many elections were held in recession years.\n\nReproducible research separates data from code."
+    "text": "Data and Code\n\n\nData: the information you gather to begin your analysis.\nCode: the instructions that transform and analyse the data.\nReproducible research separates data from code."
   },
   {
     "objectID": "slides/videos-stata/doing-reproducible-research-slides.html#what-this-looks-like-in-stata",
@@ -1383,7 +1796,7 @@
     "href": "slides/videos-stata/doing-reproducible-research.html",
     "title": "Doing Reproducible Research",
     "section": "",
-    "text": "Explain what reproducible research means and why it matters.\nSet up a project folder structure that supports reproducible work.\n\n\n\n\n\n\n\n\nBeing able to obtain the same results using the same data and code.\nAnyone should be able to follow the steps of your analysis.\nThis includes you in a few weeks’ time.\n\n\n\n\n\n\n\n\nSmall changes accumulate quickly, and we often forget what we do.\nClear structures make mistakes easier for you (and others) to detect and fix.\nImportant for transparency and credibility.\n\n\n\n\n\n\n\n\nData: the information you gather to begin your analysis.\n\nExamples: Public opinion surveys; Election results; National census statistics.\n\nCode: the instructions that transform and analyse the data.\n\nExamples: Merge data on economic growth rates with election results; Create a table that shows how many elections were held in recession years.\n\nReproducible research separates data from code.\n\n\n\n\n\n\n\n\nThe dataset is treated as read-only.\nAll changes happen in a do-file.\nThe do-file records every step in your analysis.\n\n\n\n\n\n\n\n\nmy-research-project/\n\ndata-raw\ndata-clean\ndo\noutput\n\n\n\n\n\n\n\n\n\ndata-raw\n\nOriginal data files, never edited.\n\ndata-clean\n\nCleaned or transformed datasets.\n\ndo\n\nAll Stata do-files.\n\noutput\n\nTables and figures.\n\n\n\n\n\n\n\n\n\nReproducibility means others can retrace your analysis.\nSeparating data and code is key.\nA clear folder structure is essential for good analysis.\n\n\n\n\nWhy this matters:\n\nReproducible workflows make your analysis clearer and more reliable.\nKnowing how to set up a folder structure now will save you from headaches in the future!"
+    "text": "Explain what reproducible research means and why it matters.\nSet up a project folder structure that supports reproducible work.\n\n\n\n\n\n\n\n\nBeing able to obtain the same results using the same data and code.\nAnyone should be able to follow the steps of your analysis.\nThis includes you in a few weeks’ time.\n\n\n\n\n\n\n\n\nSmall changes accumulate quickly, and we often forget what we do.\nClear structures make mistakes easier for you (and others) to detect and fix.\nImportant for transparency and credibility.\n\n\n\n\n\n\n\n\nData: the information you gather to begin your analysis.\nCode: the instructions that transform and analyse the data.\nReproducible research separates data from code.\n\n\n\n\n\n\n\n\nThe dataset is treated as read-only.\nAll changes happen in a do-file.\nThe do-file records every step in your analysis.\n\n\n\n\n\n\n\n\nmy-research-project/\n\ndata-raw\ndata-clean\ndo\noutput\n\n\n\n\n\n\n\n\n\ndata-raw\n\nOriginal data files, never edited.\n\ndata-clean\n\nCleaned or transformed datasets.\n\ndo\n\nAll Stata do-files.\n\noutput\n\nTables and figures.\n\n\n\n\n\n\n\n\n\nReproducibility means others can retrace your analysis.\nSeparating data and code is key.\nA clear folder structure is essential for good analysis.\n\n\n\n\nWhy this matters:\n\nReproducible workflows make your analysis clearer and more reliable.\nKnowing how to set up a folder structure now will save you from headaches in the future!"
   },
   {
     "objectID": "slides/videos-stata/doing-reproducible-research.html#youll-learn-to",
@@ -1411,7 +1824,7 @@
     "href": "slides/videos-stata/doing-reproducible-research.html#data-and-code",
     "title": "Doing Reproducible Research",
     "section": "",
-    "text": "Data: the information you gather to begin your analysis.\n\nExamples: Public opinion surveys; Election results; National census statistics.\n\nCode: the instructions that transform and analyse the data.\n\nExamples: Merge data on economic growth rates with election results; Create a table that shows how many elections were held in recession years.\n\nReproducible research separates data from code."
+    "text": "Data: the information you gather to begin your analysis.\nCode: the instructions that transform and analyse the data.\nReproducible research separates data from code."
   },
   {
     "objectID": "slides/videos-stata/doing-reproducible-research.html#what-this-looks-like-in-stata",
@@ -1440,5 +1853,138 @@
     "title": "Doing Reproducible Research",
     "section": "",
     "text": "Reproducibility means others can retrace your analysis.\nSeparating data and code is key.\nA clear folder structure is essential for good analysis.\n\n\n\n\nWhy this matters:\n\nReproducible workflows make your analysis clearer and more reliable.\nKnowing how to set up a folder structure now will save you from headaches in the future!"
+  },
+  {
+    "objectID": "slides/videos-stata/stata-interface-slides.html#youll-learn-to",
+    "href": "slides/videos-stata/stata-interface-slides.html#youll-learn-to",
+    "title": "Methods Education",
+    "section": "You’ll learn to",
+    "text": "You’ll learn to\n\nIdentify the different panes in Stata.\nSet the working directory in Stata.\nCreate and save a do-file."
+  },
+  {
+    "objectID": "slides/videos-stata/stata-interface-slides.html#step-1-set-up-the-folder-structure",
+    "href": "slides/videos-stata/stata-interface-slides.html#step-1-set-up-the-folder-structure",
+    "title": "Methods Education",
+    "section": "Step 1: Set up the folder structure",
+    "text": "Step 1: Set up the folder structure\n\nmy-research-project/\n\ndata-raw\ndata-clean\ndo\noutput"
+  },
+  {
+    "objectID": "slides/videos-stata/stata-interface-slides.html#step-1-set-up-the-folder-structure-1",
+    "href": "slides/videos-stata/stata-interface-slides.html#step-1-set-up-the-folder-structure-1",
+    "title": "Methods Education",
+    "section": "Step 1: Set up the folder structure",
+    "text": "Step 1: Set up the folder structure\n\ndata-raw\n\nOriginal data files, never edited.\n\ndata-clean\n\nCleaned or transformed datasets.\n\ndo\n\nAll Stata do-files.\n\noutput\n\nTables and figures."
+  },
+  {
+    "objectID": "slides/videos-stata/stata-interface-slides.html#step-2-open-stata-and-set-the-working-directory",
+    "href": "slides/videos-stata/stata-interface-slides.html#step-2-open-stata-and-set-the-working-directory",
+    "title": "Methods Education",
+    "section": "Step 2: Open Stata and set the working directory",
+    "text": "Step 2: Open Stata and set the working directory\n\nThe working directory is where your project lives.\nBy setting the working directory, you’re directing Stata to the folder where your files are stored.\nGo to File &gt; Change working directory"
+  },
+  {
+    "objectID": "slides/videos-stata/stata-interface-slides.html#step-3-open-a-new-do-file",
+    "href": "slides/videos-stata/stata-interface-slides.html#step-3-open-a-new-do-file",
+    "title": "Methods Education",
+    "section": "Step 3: Open a new do-file",
+    "text": "Step 3: Open a new do-file\n\nClick on the New Do-file Editor icon (a sheet of paper and a pencil)"
+  },
+  {
+    "objectID": "slides/videos-stata/stata-interface-slides.html#step-4-copy-from-the-command-history-pane",
+    "href": "slides/videos-stata/stata-interface-slides.html#step-4-copy-from-the-command-history-pane",
+    "title": "Methods Education",
+    "section": "Step 4: Copy from the Command History pane",
+    "text": "Step 4: Copy from the Command History pane\n\nRight-click the first command on the Command History pane and click “Copy”"
+  },
+  {
+    "objectID": "slides/videos-stata/stata-interface-slides.html#step-5-paste-the-command-into-your-do-file",
+    "href": "slides/videos-stata/stata-interface-slides.html#step-5-paste-the-command-into-your-do-file",
+    "title": "Methods Education",
+    "section": "Step 5: Paste the command into your do-file",
+    "text": "Step 5: Paste the command into your do-file\n\nOpen the do-file editor and paste the command."
+  },
+  {
+    "objectID": "slides/videos-stata/stata-interface-slides.html#step-6-save-your-do-file",
+    "href": "slides/videos-stata/stata-interface-slides.html#step-6-save-your-do-file",
+    "title": "Methods Education",
+    "section": "Step 6: Save your do-file",
+    "text": "Step 6: Save your do-file\n\nFrom the do-file editor, save your do-file in your do folder.\nName it set-wd.do\nThis do file will be helpful for future work. Keep it."
+  },
+  {
+    "objectID": "slides/videos-stata/stata-interface-slides.html#recap",
+    "href": "slides/videos-stata/stata-interface-slides.html#recap",
+    "title": "Methods Education",
+    "section": "Recap",
+    "text": "Recap\n\nThe working directory is the folder on your computer where your project lives.\nKeeping a do-file with a command that sets the working directory will be helpful for future tasks."
+  },
+  {
+    "objectID": "slides/videos-stata/stata-interface.html",
+    "href": "slides/videos-stata/stata-interface.html",
+    "title": "The Stata Interface",
+    "section": "",
+    "text": "Identify the different panes in Stata.\nSet the working directory in Stata.\nCreate and save a do-file.\n\n\n\n\n\n\n\nmy-research-project/\n\ndata-raw\ndata-clean\ndo\noutput\n\n\n\n\n\n\n\n\n\ndata-raw\n\nOriginal data files, never edited.\n\ndata-clean\n\nCleaned or transformed datasets.\n\ndo\n\nAll Stata do-files.\n\noutput\n\nTables and figures.\n\n\n\n\n\n\n\n\nThe working directory is where your project lives.\nBy setting the working directory, you’re directing Stata to the folder where your files are stored.\nGo to File &gt; Change working directory\n\n\n\n\n\n\n\nClick on the New Do-file Editor icon (a sheet of paper and a pencil)\n\n\n\n\n\n\n\n\n\n\n\n\n\nRight-click the first command on the Command History pane and click “Copy”\n\n\n\n\n\n\n\n\n\n\n\n\n\nOpen the do-file editor and paste the command.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrom the do-file editor, save your do-file in your do folder.\nName it set-wd.do\nThis do file will be helpful for future work. Keep it.\n\n\n\n\n\n\n\nThe working directory is the folder on your computer where your project lives.\nKeeping a do-file with a command that sets the working directory will be helpful for future tasks.\n\n\nWhy this matters:\n\nTo open a dataset, we must point data to the folder where it is located.\nSetting the working directory makes replicability easier."
+  },
+  {
+    "objectID": "slides/videos-stata/stata-interface.html#youll-learn-to",
+    "href": "slides/videos-stata/stata-interface.html#youll-learn-to",
+    "title": "The Stata Interface",
+    "section": "",
+    "text": "Identify the different panes in Stata.\nSet the working directory in Stata.\nCreate and save a do-file."
+  },
+  {
+    "objectID": "slides/videos-stata/stata-interface.html#step-1-set-up-the-folder-structure",
+    "href": "slides/videos-stata/stata-interface.html#step-1-set-up-the-folder-structure",
+    "title": "The Stata Interface",
+    "section": "",
+    "text": "my-research-project/\n\ndata-raw\ndata-clean\ndo\noutput"
+  },
+  {
+    "objectID": "slides/videos-stata/stata-interface.html#step-1-set-up-the-folder-structure-1",
+    "href": "slides/videos-stata/stata-interface.html#step-1-set-up-the-folder-structure-1",
+    "title": "The Stata Interface",
+    "section": "",
+    "text": "data-raw\n\nOriginal data files, never edited.\n\ndata-clean\n\nCleaned or transformed datasets.\n\ndo\n\nAll Stata do-files.\n\noutput\n\nTables and figures."
+  },
+  {
+    "objectID": "slides/videos-stata/stata-interface.html#step-2-open-stata-and-set-the-working-directory",
+    "href": "slides/videos-stata/stata-interface.html#step-2-open-stata-and-set-the-working-directory",
+    "title": "The Stata Interface",
+    "section": "",
+    "text": "The working directory is where your project lives.\nBy setting the working directory, you’re directing Stata to the folder where your files are stored.\nGo to File &gt; Change working directory"
+  },
+  {
+    "objectID": "slides/videos-stata/stata-interface.html#step-3-open-a-new-do-file",
+    "href": "slides/videos-stata/stata-interface.html#step-3-open-a-new-do-file",
+    "title": "The Stata Interface",
+    "section": "",
+    "text": "Click on the New Do-file Editor icon (a sheet of paper and a pencil)"
+  },
+  {
+    "objectID": "slides/videos-stata/stata-interface.html#step-4-copy-from-the-command-history-pane",
+    "href": "slides/videos-stata/stata-interface.html#step-4-copy-from-the-command-history-pane",
+    "title": "The Stata Interface",
+    "section": "",
+    "text": "Right-click the first command on the Command History pane and click “Copy”"
+  },
+  {
+    "objectID": "slides/videos-stata/stata-interface.html#step-5-paste-the-command-into-your-do-file",
+    "href": "slides/videos-stata/stata-interface.html#step-5-paste-the-command-into-your-do-file",
+    "title": "The Stata Interface",
+    "section": "",
+    "text": "Open the do-file editor and paste the command."
+  },
+  {
+    "objectID": "slides/videos-stata/stata-interface.html#step-6-save-your-do-file",
+    "href": "slides/videos-stata/stata-interface.html#step-6-save-your-do-file",
+    "title": "The Stata Interface",
+    "section": "",
+    "text": "From the do-file editor, save your do-file in your do folder.\nName it set-wd.do\nThis do file will be helpful for future work. Keep it."
+  },
+  {
+    "objectID": "slides/videos-stata/stata-interface.html#recap",
+    "href": "slides/videos-stata/stata-interface.html#recap",
+    "title": "The Stata Interface",
+    "section": "",
+    "text": "The working directory is the folder on your computer where your project lives.\nKeeping a do-file with a command that sets the working directory will be helpful for future tasks.\n\n\nWhy this matters:\n\nTo open a dataset, we must point data to the folder where it is located.\nSetting the working directory makes replicability easier."
   }
 ]
