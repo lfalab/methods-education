@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Slides – Methods Education</title>
+<title>Doing Reproducible Research – Methods Education</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,16 +72,16 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Methods Education</span>
     </a>
   </div>
@@ -92,11 +92,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../slides/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../slides/index.html"> 
 <span class="menu-text">Slides</span></a>
   </li>  
 </ul>
@@ -110,60 +110,150 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#doing-reproducible-research" id="toc-doing-reproducible-research" class="nav-link active" data-scroll-target="#doing-reproducible-research">Doing Reproducible Research</a>
+  <ul class="collapse">
+  <li><a href="#youll-learn-to" id="toc-youll-learn-to" class="nav-link" data-scroll-target="#youll-learn-to">You’ll learn to</a></li>
+  <li><a href="#what-is-reproducible-research" id="toc-what-is-reproducible-research" class="nav-link" data-scroll-target="#what-is-reproducible-research">What is reproducible research?</a></li>
+  <li><a href="#why-care-about-reproducibility" id="toc-why-care-about-reproducibility" class="nav-link" data-scroll-target="#why-care-about-reproducibility">Why care about reproducibility?</a></li>
+  <li><a href="#data-and-code" id="toc-data-and-code" class="nav-link" data-scroll-target="#data-and-code">Data and Code</a></li>
+  <li><a href="#what-this-looks-like-in-stata" id="toc-what-this-looks-like-in-stata" class="nav-link" data-scroll-target="#what-this-looks-like-in-stata">What this looks like in Stata</a></li>
+  <li><a href="#a-simple-project-folder-structure" id="toc-a-simple-project-folder-structure" class="nav-link" data-scroll-target="#a-simple-project-folder-structure">A simple project folder structure</a></li>
+  <li><a href="#a-simple-project-folder-structure-1" id="toc-a-simple-project-folder-structure-1" class="nav-link" data-scroll-target="#a-simple-project-folder-structure-1">A simple project folder structure</a></li>
+  <li><a href="#recap" id="toc-recap" class="nav-link" data-scroll-target="#recap">Recap</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="doing-reproducible-research-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Slides</h1>
+
+
+
+<section id="doing-reproducible-research" class="level1 title-left">
+<h1 class="title-left">Doing Reproducible Research</h1>
+<hr>
+<section id="youll-learn-to" class="level2">
+<h2 class="anchored" data-anchor-id="youll-learn-to">You’ll learn to</h2>
+<div class="presenter-space">
+<ul>
+<li>Explain what <strong>reproducible research</strong> means and why it matters.</li>
+<li>Set up a project <strong>folder structure</strong> that supports reproducible work.</li>
+</ul>
 </div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="week-1" class="level2">
-<h2 class="anchored" data-anchor-id="week-1">Week 1</h2>
-<section id="lecture-slides" class="level3">
-<h3 class="anchored" data-anchor-id="lecture-slides">Lecture slides</h3>
+<hr>
+</section>
+<section id="what-is-reproducible-research" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-reproducible-research">What is reproducible research?</h2>
+<div class="presenter-space">
 <ul>
-<li><a href="../slides/lectures/thinking-with-data.html">Week 1: Thinking with Data</a></li>
+<li>Being able to obtain the <strong>same results</strong> using the same data and code.</li>
+<li>Anyone should be able to follow the steps of your analysis.</li>
+<li>This includes <strong>you</strong> in a few weeks’ time.</li>
 </ul>
+</div>
+<hr>
 </section>
-</section>
-<section id="week-2" class="level2">
-<h2 class="anchored" data-anchor-id="week-2">Week 2</h2>
-<section id="video-slides" class="level3">
-<h3 class="anchored" data-anchor-id="video-slides">Video slides</h3>
+<section id="why-care-about-reproducibility" class="level2">
+<h2 class="anchored" data-anchor-id="why-care-about-reproducibility">Why care about reproducibility?</h2>
+<div class="presenter-space">
 <ul>
-<li><a href="../slides/videos-concepts/empirical-vs-normative.html">Empirical and Normative Questions</a></li>
-<li><a href="../slides/videos-concepts/descriptive-vs-causal.html">Descriptive and Causal Questions</a></li>
-<li><a href="../slides/videos-concepts/units-theories-hypotheses.html">Units of Analysis, Theories, and Hypotheses</a></li>
-<li><a href="../slides/videos-concepts/dependent-independent-variables.html">Dependent and Independent Variables</a></li>
-<li><a href="../slides/videos-stata/doing-reproducible-research.html">Doing Reproducible Research</a></li>
+<li>Small changes accumulate quickly, and we often forget what we do.</li>
+<li>Clear structures make mistakes easier for you (and others) to <strong>detect and fix</strong>.</li>
+<li>Important for <strong>transparency</strong> and <strong>credibility</strong>.</li>
 </ul>
+</div>
+<hr>
 </section>
-</section>
-<section id="week-3" class="level2">
-<h2 class="anchored" data-anchor-id="week-3">Week 3</h2>
-<section id="video-slides-1" class="level3">
-<h3 class="anchored" data-anchor-id="video-slides-1">Video slides</h3>
+<section id="data-and-code" class="level2">
+<h2 class="anchored" data-anchor-id="data-and-code">Data and Code</h2>
+<div class="presenter-space">
 <ul>
-<li><a href="../slides/videos-concepts/measuring-variables.html">Measuring Variables</a></li>
-<li><a href="../slides/videos-concepts/types-of-variables.html">Types of Variables</a></li>
-<li><a href="../slides/videos-stata/datasets-codebooks.html">Datasets and codebooks</a></li>
+<li><p><strong>Data:</strong> the information you gather to begin your analysis.</p>
+<ul>
+<li>Examples: Public opinion surveys; Election results; National census statistics.</li>
+</ul></li>
+<li><p><strong>Code:</strong> the instructions that transform and analyse the data.</p>
+<ul>
+<li>Examples: Merge data on economic growth rates with election results; Create a table that shows how many elections were held in recession years.</li>
+</ul></li>
+<li><p>Reproducible research <strong>separates</strong> data from code.</p></li>
 </ul>
+</div>
+<hr>
+</section>
+<section id="what-this-looks-like-in-stata" class="level2">
+<h2 class="anchored" data-anchor-id="what-this-looks-like-in-stata">What this looks like in Stata</h2>
+<div class="presenter-space">
+<ul>
+<li>The dataset is treated as <strong>read-only</strong>.</li>
+<li>All changes happen in a <strong>do-file</strong>.</li>
+<li>The do-file records every step in your analysis.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="a-simple-project-folder-structure" class="level2">
+<h2 class="anchored" data-anchor-id="a-simple-project-folder-structure">A simple project folder structure</h2>
+<div class="presenter-space">
+<ul>
+<li><p><code>my-research-project/</code></p>
+<ul>
+<li><code>data-raw</code></li>
+<li><code>data-clean</code></li>
+<li><code>do</code></li>
+<li><code>output</code></li>
+</ul></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="a-simple-project-folder-structure-1" class="level2">
+<h2 class="anchored" data-anchor-id="a-simple-project-folder-structure-1">A simple project folder structure</h2>
+<div class="presenter-space">
+<ul>
+<li><p><code>data-raw</code></p>
+<ul>
+<li>Original data files, never edited.</li>
+</ul></li>
+<li><p><code>data-clean</code></p>
+<ul>
+<li>Cleaned or transformed datasets.</li>
+</ul></li>
+<li><p><code>do</code></p>
+<ul>
+<li>All Stata do-files.</li>
+</ul></li>
+<li><p><code>output</code></p>
+<ul>
+<li>Tables and figures.</li>
+</ul></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="recap" class="level2">
+<h2 class="anchored" data-anchor-id="recap">Recap</h2>
+<div class="presenter-space">
+<ul>
+<li><strong>Reproducibility</strong> means others can retrace your analysis.</li>
+<li><strong>Separating</strong> data and code is key.</li>
+<li>A clear folder structure is <strong>essential</strong> for good analysis.</li>
+</ul>
+</div>
+<hr>
+<div class="presenter-space">
+<p><strong>Why this matters:</strong></p>
+<ul>
+<li>Reproducible workflows make your analysis clearer and more reliable.</li>
+<li>Knowing how to set up a folder structure now will save you from headaches in the future!</li>
+</ul>
+</div>
 
 
 </section>
