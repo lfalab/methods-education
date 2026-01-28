@@ -121,8 +121,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#step-1-set-up-the-folder-structure" id="toc-step-1-set-up-the-folder-structure" class="nav-link" data-scroll-target="#step-1-set-up-the-folder-structure">Step 1: Set up the folder structure</a></li>
   <li><a href="#step-1-set-up-the-folder-structure-1" id="toc-step-1-set-up-the-folder-structure-1" class="nav-link" data-scroll-target="#step-1-set-up-the-folder-structure-1">Step 1: Set up the folder structure</a></li>
   <li><a href="#step-2-open-stata-and-set-the-working-directory" id="toc-step-2-open-stata-and-set-the-working-directory" class="nav-link" data-scroll-target="#step-2-open-stata-and-set-the-working-directory">Step 2: Open Stata and set the working directory</a></li>
-  <li><a href="#step-3-open-a-new-do-file" id="toc-step-3-open-a-new-do-file" class="nav-link" data-scroll-target="#step-3-open-a-new-do-file">Step 3: Open a new do-file</a></li>
-  <li><a href="#step-4-copy-from-the-command-history-pane" id="toc-step-4-copy-from-the-command-history-pane" class="nav-link" data-scroll-target="#step-4-copy-from-the-command-history-pane">Step 4: Copy from the Command History pane</a></li>
+  <li><a href="#step-3-copy-from-the-command-history-pane" id="toc-step-3-copy-from-the-command-history-pane" class="nav-link" data-scroll-target="#step-3-copy-from-the-command-history-pane">Step 3: Copy from the Command History pane</a></li>
+  <li><a href="#step-4-open-a-new-do-file" id="toc-step-4-open-a-new-do-file" class="nav-link" data-scroll-target="#step-4-open-a-new-do-file">Step 4: Open a new do-file</a></li>
   <li><a href="#step-5-paste-the-command-into-your-do-file" id="toc-step-5-paste-the-command-into-your-do-file" class="nav-link" data-scroll-target="#step-5-paste-the-command-into-your-do-file">Step 5: Paste the command into your do-file</a></li>
   <li><a href="#step-6-save-your-do-file" id="toc-step-6-save-your-do-file" class="nav-link" data-scroll-target="#step-6-save-your-do-file">Step 6: Save your do-file</a></li>
   <li><a href="#recap" id="toc-recap" class="nav-link" data-scroll-target="#recap">Recap</a></li>
@@ -190,30 +190,19 @@ ul.task-list li input[type="checkbox"] {
 <section id="step-2-open-stata-and-set-the-working-directory" class="level2">
 <h2 class="anchored" data-anchor-id="step-2-open-stata-and-set-the-working-directory">Step 2: Open Stata and set the working directory</h2>
 <ul>
-<li>The <strong>working directory</strong> is where your project lives.</li>
+<li><p>The <strong>working directory</strong> is where your project lives.</p>
+<ul>
 <li>By setting the working directory, you’re directing Stata to the folder where your files are stored.</li>
-<li>Go to <strong>File &gt; Change working directory</strong></li>
+</ul></li>
+<li><p>Go to <strong>File &gt; Change working directory</strong> and select the top-level folder you created for this module.</p></li>
 </ul>
 <hr>
 </section>
-<section id="step-3-open-a-new-do-file" class="level2">
-<h2 class="anchored" data-anchor-id="step-3-open-a-new-do-file">Step 3: Open a new do-file</h2>
+<section id="step-3-copy-from-the-command-history-pane" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-copy-from-the-command-history-pane">Step 3: Copy from the Command History pane</h2>
 <div class="nonincremental">
 <ul>
-<li>Click on the <strong>New Do-file</strong> Editor icon (a sheet of paper and a pencil)</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/stata-dofile-editor.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-</div>
-<hr>
-</section>
-<section id="step-4-copy-from-the-command-history-pane" class="level2">
-<h2 class="anchored" data-anchor-id="step-4-copy-from-the-command-history-pane">Step 4: Copy from the Command History pane</h2>
-<div class="nonincremental">
-<ul>
+<li>After you set the <strong>working directory</strong>, Stata registers this action as command in the Command History pane (left-hand side).</li>
 <li>Right-click the first command on the <strong>Command History</strong> pane and click “Copy”</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
@@ -224,11 +213,27 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <hr>
 </section>
+<section id="step-4-open-a-new-do-file" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-open-a-new-do-file">Step 4: Open a new do-file</h2>
+<div class="nonincremental">
+<ul>
+<li>Click on the <strong>New Do-file</strong> Editor icon (a sheet of paper and a pencil)</li>
+<li>The do-file keeps a <strong>record</strong> of everything you do in Stata.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/stata-dofile-editor.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</div>
+<hr>
+</section>
 <section id="step-5-paste-the-command-into-your-do-file" class="level2">
 <h2 class="anchored" data-anchor-id="step-5-paste-the-command-into-your-do-file">Step 5: Paste the command into your do-file</h2>
 <div class="nonincremental">
 <ul>
-<li>Open the do-file editor and <strong>paste</strong> the command.</li>
+<li>In the do-file editor, <strong>paste</strong> the command you copied from the Command History pane.</li>
+<li>Later on, you will be able to set the working directory using the command in this do-file.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">

@@ -1880,28 +1880,28 @@
     "href": "slides/videos-stata/stata-interface-slides.html#step-2-open-stata-and-set-the-working-directory",
     "title": "Methods Education",
     "section": "Step 2: Open Stata and set the working directory",
-    "text": "Step 2: Open Stata and set the working directory\n\nThe working directory is where your project lives.\nBy setting the working directory, you’re directing Stata to the folder where your files are stored.\nGo to File &gt; Change working directory"
+    "text": "Step 2: Open Stata and set the working directory\n\nThe working directory is where your project lives.\n\nBy setting the working directory, you’re directing Stata to the folder where your files are stored.\n\nGo to File &gt; Change working directory and select the top-level folder you created for this module."
   },
   {
-    "objectID": "slides/videos-stata/stata-interface-slides.html#step-3-open-a-new-do-file",
-    "href": "slides/videos-stata/stata-interface-slides.html#step-3-open-a-new-do-file",
+    "objectID": "slides/videos-stata/stata-interface-slides.html#step-3-copy-from-the-command-history-pane",
+    "href": "slides/videos-stata/stata-interface-slides.html#step-3-copy-from-the-command-history-pane",
     "title": "Methods Education",
-    "section": "Step 3: Open a new do-file",
-    "text": "Step 3: Open a new do-file\n\nClick on the New Do-file Editor icon (a sheet of paper and a pencil)"
+    "section": "Step 3: Copy from the Command History pane",
+    "text": "Step 3: Copy from the Command History pane\n\nAfter you set the working directory, Stata registers this action as command in the Command History pane (left-hand side).\nRight-click the first command on the Command History pane and click “Copy”"
   },
   {
-    "objectID": "slides/videos-stata/stata-interface-slides.html#step-4-copy-from-the-command-history-pane",
-    "href": "slides/videos-stata/stata-interface-slides.html#step-4-copy-from-the-command-history-pane",
+    "objectID": "slides/videos-stata/stata-interface-slides.html#step-4-open-a-new-do-file",
+    "href": "slides/videos-stata/stata-interface-slides.html#step-4-open-a-new-do-file",
     "title": "Methods Education",
-    "section": "Step 4: Copy from the Command History pane",
-    "text": "Step 4: Copy from the Command History pane\n\nRight-click the first command on the Command History pane and click “Copy”"
+    "section": "Step 4: Open a new do-file",
+    "text": "Step 4: Open a new do-file\n\nClick on the New Do-file Editor icon (a sheet of paper and a pencil)\nThe do-file keeps a record of everything you do in Stata."
   },
   {
     "objectID": "slides/videos-stata/stata-interface-slides.html#step-5-paste-the-command-into-your-do-file",
     "href": "slides/videos-stata/stata-interface-slides.html#step-5-paste-the-command-into-your-do-file",
     "title": "Methods Education",
     "section": "Step 5: Paste the command into your do-file",
-    "text": "Step 5: Paste the command into your do-file\n\nOpen the do-file editor and paste the command."
+    "text": "Step 5: Paste the command into your do-file\n\nIn the do-file editor, paste the command you copied from the Command History pane.\nLater on, you will be able to set the working directory using the command in this do-file."
   },
   {
     "objectID": "slides/videos-stata/stata-interface-slides.html#step-6-save-your-do-file",
@@ -1922,7 +1922,7 @@
     "href": "slides/videos-stata/stata-interface.html",
     "title": "The Stata Interface",
     "section": "",
-    "text": "Identify the different panes in Stata.\nSet the working directory in Stata.\nCreate and save a do-file.\n\n\n\n\n\n\n\nmy-research-project/\n\ndata-raw\ndata-clean\ndo\noutput\n\n\n\n\n\n\n\n\n\ndata-raw\n\nOriginal data files, never edited.\n\ndata-clean\n\nCleaned or transformed datasets.\n\ndo\n\nAll Stata do-files.\n\noutput\n\nTables and figures.\n\n\n\n\n\n\n\n\nThe working directory is where your project lives.\nBy setting the working directory, you’re directing Stata to the folder where your files are stored.\nGo to File &gt; Change working directory\n\n\n\n\n\n\n\nClick on the New Do-file Editor icon (a sheet of paper and a pencil)\n\n\n\n\n\n\n\n\n\n\n\n\n\nRight-click the first command on the Command History pane and click “Copy”\n\n\n\n\n\n\n\n\n\n\n\n\n\nOpen the do-file editor and paste the command.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrom the do-file editor, save your do-file in your do folder.\nName it set-wd.do\nThis do file will be helpful for future work. Keep it.\n\n\n\n\n\n\n\nThe working directory is the folder on your computer where your project lives.\nKeeping a do-file with a command that sets the working directory will be helpful for future tasks.\n\n\nWhy this matters:\n\nTo open a dataset, we must point data to the folder where it is located.\nSetting the working directory makes replicability easier."
+    "text": "Identify the different panes in Stata.\nSet the working directory in Stata.\nCreate and save a do-file.\n\n\n\n\n\n\n\nmy-research-project/\n\ndata-raw\ndata-clean\ndo\noutput\n\n\n\n\n\n\n\n\n\ndata-raw\n\nOriginal data files, never edited.\n\ndata-clean\n\nCleaned or transformed datasets.\n\ndo\n\nAll Stata do-files.\n\noutput\n\nTables and figures.\n\n\n\n\n\n\n\n\nThe working directory is where your project lives.\n\nBy setting the working directory, you’re directing Stata to the folder where your files are stored.\n\nGo to File &gt; Change working directory and select the top-level folder you created for this module.\n\n\n\n\n\n\n\nAfter you set the working directory, Stata registers this action as command in the Command History pane (left-hand side).\nRight-click the first command on the Command History pane and click “Copy”\n\n\n\n\n\n\n\n\n\n\n\n\n\nClick on the New Do-file Editor icon (a sheet of paper and a pencil)\nThe do-file keeps a record of everything you do in Stata.\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn the do-file editor, paste the command you copied from the Command History pane.\nLater on, you will be able to set the working directory using the command in this do-file.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrom the do-file editor, save your do-file in your do folder.\nName it set-wd.do\nThis do file will be helpful for future work. Keep it.\n\n\n\n\n\n\n\nThe working directory is the folder on your computer where your project lives.\nKeeping a do-file with a command that sets the working directory will be helpful for future tasks.\n\n\nWhy this matters:\n\nTo open a dataset, we must point data to the folder where it is located.\nSetting the working directory makes replicability easier."
   },
   {
     "objectID": "slides/videos-stata/stata-interface.html#youll-learn-to",
@@ -1950,28 +1950,28 @@
     "href": "slides/videos-stata/stata-interface.html#step-2-open-stata-and-set-the-working-directory",
     "title": "The Stata Interface",
     "section": "",
-    "text": "The working directory is where your project lives.\nBy setting the working directory, you’re directing Stata to the folder where your files are stored.\nGo to File &gt; Change working directory"
+    "text": "The working directory is where your project lives.\n\nBy setting the working directory, you’re directing Stata to the folder where your files are stored.\n\nGo to File &gt; Change working directory and select the top-level folder you created for this module."
   },
   {
-    "objectID": "slides/videos-stata/stata-interface.html#step-3-open-a-new-do-file",
-    "href": "slides/videos-stata/stata-interface.html#step-3-open-a-new-do-file",
+    "objectID": "slides/videos-stata/stata-interface.html#step-3-copy-from-the-command-history-pane",
+    "href": "slides/videos-stata/stata-interface.html#step-3-copy-from-the-command-history-pane",
     "title": "The Stata Interface",
     "section": "",
-    "text": "Click on the New Do-file Editor icon (a sheet of paper and a pencil)"
+    "text": "After you set the working directory, Stata registers this action as command in the Command History pane (left-hand side).\nRight-click the first command on the Command History pane and click “Copy”"
   },
   {
-    "objectID": "slides/videos-stata/stata-interface.html#step-4-copy-from-the-command-history-pane",
-    "href": "slides/videos-stata/stata-interface.html#step-4-copy-from-the-command-history-pane",
+    "objectID": "slides/videos-stata/stata-interface.html#step-4-open-a-new-do-file",
+    "href": "slides/videos-stata/stata-interface.html#step-4-open-a-new-do-file",
     "title": "The Stata Interface",
     "section": "",
-    "text": "Right-click the first command on the Command History pane and click “Copy”"
+    "text": "Click on the New Do-file Editor icon (a sheet of paper and a pencil)\nThe do-file keeps a record of everything you do in Stata."
   },
   {
     "objectID": "slides/videos-stata/stata-interface.html#step-5-paste-the-command-into-your-do-file",
     "href": "slides/videos-stata/stata-interface.html#step-5-paste-the-command-into-your-do-file",
     "title": "The Stata Interface",
     "section": "",
-    "text": "Open the do-file editor and paste the command."
+    "text": "In the do-file editor, paste the command you copied from the Command History pane.\nLater on, you will be able to set the working directory using the command in this do-file."
   },
   {
     "objectID": "slides/videos-stata/stata-interface.html#step-6-save-your-do-file",

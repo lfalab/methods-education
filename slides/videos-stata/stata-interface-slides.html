@@ -28,7 +28,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-7433acd2865db5fa81269247cd6920be.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-f88d935cd01326925f73dc62b106448c.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -175,29 +175,34 @@
 <section id="step-2-open-stata-and-set-the-working-directory" class="slide level2">
 <h2>Step 2: Open Stata and set the working directory</h2>
 <ul>
-<li class="fragment">The <strong>working directory</strong> is where your project lives.</li>
+<li class="fragment"><p>The <strong>working directory</strong> is where your project lives.</p>
+<ul>
 <li class="fragment">By setting the working directory, you’re directing Stata to the folder where your files are stored.</li>
-<li class="fragment">Go to <strong>File &gt; Change working directory</strong></li>
+</ul></li>
+<li class="fragment"><p>Go to <strong>File &gt; Change working directory</strong> and select the top-level folder you created for this module.</p></li>
 </ul>
 </section>
-<section id="step-3-open-a-new-do-file" class="slide level2">
-<h2>Step 3: Open a new do-file</h2>
+<section id="step-3-copy-from-the-command-history-pane" class="slide level2">
+<h2>Step 3: Copy from the Command History pane</h2>
 <ul>
-<li>Click on the <strong>New Do-file</strong> Editor icon (a sheet of paper and a pencil)</li>
-</ul>
-
-<img data-src="../../assets/stata-dofile-editor.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-4-copy-from-the-command-history-pane" class="slide level2">
-<h2>Step 4: Copy from the Command History pane</h2>
-<ul>
+<li>After you set the <strong>working directory</strong>, Stata registers this action as command in the Command History pane (left-hand side).</li>
 <li>Right-click the first command on the <strong>Command History</strong> pane and click “Copy”</li>
 </ul>
 
 <img data-src="../../assets/stata-copy-cmd.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="step-4-open-a-new-do-file" class="slide level2">
+<h2>Step 4: Open a new do-file</h2>
+<ul>
+<li>Click on the <strong>New Do-file</strong> Editor icon (a sheet of paper and a pencil)</li>
+<li>The do-file keeps a <strong>record</strong> of everything you do in Stata.</li>
+</ul>
+
+<img data-src="../../assets/stata-dofile-editor.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="step-5-paste-the-command-into-your-do-file" class="slide level2">
 <h2>Step 5: Paste the command into your do-file</h2>
 <ul>
-<li>Open the do-file editor and <strong>paste</strong> the command.</li>
+<li>In the do-file editor, <strong>paste</strong> the command you copied from the Command History pane.</li>
+<li>Later on, you will be able to set the working directory using the command in this do-file.</li>
 </ul>
 
 <img data-src="../../assets/stata-paste-dofile.png" class="quarto-figure quarto-figure-center r-stretch"></section>
