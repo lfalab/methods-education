@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <title>Methods Education – The Stata Interface</title>
+  <title>Methods Education – Summarising a Distribution</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -28,7 +28,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-f88d935cd01326925f73dc62b106448c.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-7433acd2865db5fa81269247cd6920be.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -127,107 +127,116 @@
 
 
 <section>
-<section id="the-stata-interface" class="title-slide slide level1 title-left center">
-<h1>The Stata Interface</h1>
+<section id="summarising-a-distribution" class="title-slide slide level1 title-left center">
+<h1>Summarising a Distribution</h1>
 
 </section>
 <section id="youll-learn-to" class="slide level2">
 <h2>You’ll learn to</h2>
+<div class="presenter-space">
 <ul>
-<li class="fragment"><strong>Identify</strong> the different panes in Stata.</li>
-<li class="fragment">Set the <strong>working directory</strong> in Stata.</li>
-<li class="fragment">Create and save a <strong>do-file</strong>.</li>
+<li class="fragment">Interpret the <strong>mean</strong>, <strong>median</strong>, and <strong>mode</strong> as summaries of a distribution’s central tendency.</li>
 </ul>
+</div>
 </section>
-<section id="step-1-set-up-the-folder-structure" class="slide level2">
-<h2>Step 1: Set up the folder structure</h2>
+<section id="how-good-is-80" class="slide level2">
+<h2>How good is 80%?</h2>
+<div class="presenter-space">
 <ul>
-<li><p><code>my-research-project/</code></p>
-<ul>
-<li><code>data-raw</code></li>
-<li><code>data-clean</code></li>
-<li><code>do</code></li>
-<li><code>output</code></li>
-</ul></li>
+<li class="fragment">Imagine you are choosing a course to apply for.</li>
+<li class="fragment">A university advertises that <strong>80% of students are satisfied</strong> with the course.</li>
+<li class="fragment">At first glance, this sounds positive.</li>
 </ul>
+</div>
 </section>
-<section id="step-1-set-up-the-folder-structure-1" class="slide level2">
-<h2>Step 1: Set up the folder structure</h2>
+<section id="data-in-context" class="slide level2">
+<h2>Data in context</h2>
+<div class="presenter-space">
 <ul>
-<li><p><code>data-raw</code></p>
-<ul>
-<li>Original data files, never edited.</li>
-</ul></li>
-<li><p><code>data-clean</code></p>
-<ul>
-<li>Cleaned or transformed datasets.</li>
-</ul></li>
-<li><p><code>do</code></p>
-<ul>
-<li>All Stata do-files.</li>
-</ul></li>
-<li><p><code>output</code></p>
-<ul>
-<li>Tables and figures.</li>
-</ul></li>
+<li class="fragment">A number on its own is hard to evaluate.</li>
+<li class="fragment">To judge whether 80% is impressive, we need to know what is <strong>typical</strong> for similar courses.</li>
+<li class="fragment">This is where <strong>summaries of central tendency</strong> become useful.</li>
 </ul>
+</div>
 </section>
-<section id="step-2-open-stata-and-set-the-working-directory" class="slide level2">
-<h2>Step 2: Open Stata and set the working directory</h2>
+<section id="the-mean" class="slide level2">
+<h2>The mean</h2>
+<div class="presenter-space">
 <ul>
-<li class="fragment"><p>The <strong>working directory</strong> is where your project lives.</p>
-<ul>
-<li class="fragment">By setting the working directory, you’re directing Stata to the folder where your files are stored.</li>
-</ul></li>
-<li class="fragment"><p>Go to <strong>File &gt; Change working directory</strong> and select the top-level folder you created for this module.</p></li>
+<li class="fragment">The <strong>mean</strong> is the average value. We find it by summing the values of observations and dividing by the number of observations.</li>
+<li class="fragment">It informs what is <strong>typical</strong> in a distribution of numerical values.</li>
+<li class="fragment">For course satisfaction, the national mean is about <strong>82%</strong>.</li>
 </ul>
+</div>
 </section>
-<section id="step-3-copy-from-the-command-history-pane" class="slide level2">
-<h2>Step 3: Copy from the Command History pane</h2>
+<section id="interpreting-the-mean" class="slide level2">
+<h2>Interpreting the mean</h2>
+<div class="presenter-space">
 <ul>
-<li>After you set the <strong>working directory</strong>, Stata registers this action as command in the Command History pane (left-hand side).</li>
-<li>Right-click the first command on the <strong>Command History</strong> pane and click “Copy”</li>
+<li class="fragment">An 80% satisfaction rate is slightly <strong>below</strong> the national average.</li>
+<li class="fragment">The value itself did not change, but its <strong>interpretation</strong> did once we introduced a reference point.</li>
+<li class="fragment">With this new information, <strong>80%</strong> is not as impressive as it seems.</li>
 </ul>
-
-<img data-src="../../assets/stata-copy-cmd.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-4-open-a-new-do-file" class="slide level2">
-<h2>Step 4: Open a new do-file</h2>
+</div>
+</section>
+<section id="the-median" class="slide level2">
+<h2>The median</h2>
+<div class="presenter-space">
 <ul>
-<li>Click on the <strong>New Do-file</strong> Editor icon (a sheet of paper and a pencil)</li>
-<li>The do-file keeps a <strong>record</strong> of everything you do in Stata.</li>
+<li class="fragment"><p>The <strong>median</strong> is the value that divides the distribution in half</p></li>
+<li class="fragment"><p>Half of the observations lie above it, and half lie below it.</p></li>
+<li class="fragment"><p>For course satisfaction, the national median is about <strong>84%</strong>.</p></li>
 </ul>
-
-<img data-src="../../assets/stata-dofile-editor.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-5-paste-the-command-into-your-do-file" class="slide level2">
-<h2>Step 5: Paste the command into your do-file</h2>
+</div>
+</section>
+<section id="interpreting-the-median" class="slide level2">
+<h2>Interpreting the median</h2>
+<div class="presenter-space">
 <ul>
-<li>In the do-file editor, <strong>paste</strong> the command you copied from the Command History pane.</li>
-<li>Later on, you will be able to set the working directory using the command in this do-file.</li>
+<li class="fragment"><p>The <strong>median</strong> is useful when we want a summary that is less sensitive to extreme values.</p></li>
+<li class="fragment"><p>The <em>mean</em> annual salary in London (2025) is <strong>£70.3k.</strong></p></li>
+<li class="fragment"><p>The <em>median</em> salary is <strong>£49.7k.</strong></p></li>
 </ul>
-
-<img data-src="../../assets/stata-paste-dofile.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-6-save-your-do-file" class="slide level2">
-<h2>Step 6: Save your do-file</h2>
+</div>
+</section>
+<section id="the-mode" class="slide level2">
+<h2>The mode</h2>
+<div class="presenter-space">
 <ul>
-<li>From the do-file editor, <strong>save</strong> your do-file in your <code>do</code> folder.</li>
-<li>Name it <code>set-wd.do</code></li>
-<li>This do file will be helpful for future work. Keep it.</li>
+<li class="fragment">The <strong>mode</strong> is the most frequently occurring value or category.</li>
+<li class="fragment">It is especially useful for <strong>nominal variables</strong>, where averages are not meaningful.</li>
 </ul>
+</div>
+</section>
+<section id="example-general-election-vote" class="slide level2">
+<h2>Example: General Election vote</h2>
+<div class="presenter-space">
+<p>Which party did you vote for in the general election?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../assets/vote-frequency.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
 </section>
 <section id="recap" class="slide level2">
 <h2>Recap</h2>
+<div class="presenter-space">
 <ul>
-<li class="fragment">The <strong>working directory</strong> is the folder on your computer where your project lives.</li>
-<li class="fragment">Keeping a <strong>do-file</strong> with a command that sets the working directory will be helpful for future tasks.</li>
+<li class="fragment">Mean, median, and mode <strong>summarize</strong> what is typical in a distribution.</li>
+<li class="fragment">They answer related but distinct questions about <strong>central tendency</strong>.</li>
 </ul>
+</div>
 </section>
 <section class="slide level2">
 
+<div class="presenter-space">
 <p><strong>Why this matters:</strong></p>
 <ul>
-<li class="fragment">To open a dataset, we must point Stata to the folder where it is located.</li>
-<li class="fragment">Setting the working directory makes replicability easier.</li>
+<li class="fragment">Summaries of central tendency help us interpret numbers in context rather than in isolation.</li>
+<li class="fragment">They allow meaningful comparison across cases, such as courses, voters, or income levels.</li>
 </ul>
+</div>
 
 
 </section></section>

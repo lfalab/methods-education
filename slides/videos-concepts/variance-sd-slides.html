@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <title>Methods Education – The Stata Interface</title>
+  <title>Methods Education – Variance and Standard Deviation</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -28,7 +28,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-f88d935cd01326925f73dc62b106448c.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-7433acd2865db5fa81269247cd6920be.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -127,107 +127,117 @@
 
 
 <section>
-<section id="the-stata-interface" class="title-slide slide level1 title-left center">
-<h1>The Stata Interface</h1>
+<section id="variance-and-standard-deviation" class="title-slide slide level1 title-left center">
+<h1>Variance and Standard Deviation</h1>
 
 </section>
 <section id="youll-learn-to" class="slide level2">
 <h2>You’ll learn to</h2>
+<div class="presenter-space">
 <ul>
-<li class="fragment"><strong>Identify</strong> the different panes in Stata.</li>
-<li class="fragment">Set the <strong>working directory</strong> in Stata.</li>
-<li class="fragment">Create and save a <strong>do-file</strong>.</li>
+<li class="fragment">Interpret the <strong>variance</strong> and <strong>standard deviation</strong> as summaries of dispersion.</li>
 </ul>
+</div>
 </section>
-<section id="step-1-set-up-the-folder-structure" class="slide level2">
-<h2>Step 1: Set up the folder structure</h2>
+<section id="how-good-is-80" class="slide level2">
+<h2>How good is 80%?</h2>
+<div class="presenter-space">
 <ul>
-<li><p><code>my-research-project/</code></p>
-<ul>
-<li><code>data-raw</code></li>
-<li><code>data-clean</code></li>
-<li><code>do</code></li>
-<li><code>output</code></li>
-</ul></li>
+<li class="fragment">A university advertises that <strong>80% of students are satisfied</strong> with the course.</li>
+<li class="fragment">But the national mean is about <strong>82%</strong>.</li>
+<li class="fragment">With this new information, 80% is not as impressive as it seems.</li>
 </ul>
+</div>
 </section>
-<section id="step-1-set-up-the-folder-structure-1" class="slide level2">
-<h2>Step 1: Set up the folder structure</h2>
+<section id="variance-and-standard-deviation-1" class="slide level2">
+<h2>Variance and standard deviation</h2>
+<div class="presenter-space">
 <ul>
-<li><p><code>data-raw</code></p>
-<ul>
-<li>Original data files, never edited.</li>
-</ul></li>
-<li><p><code>data-clean</code></p>
-<ul>
-<li>Cleaned or transformed datasets.</li>
-</ul></li>
-<li><p><code>do</code></p>
-<ul>
-<li>All Stata do-files.</li>
-</ul></li>
-<li><p><code>output</code></p>
-<ul>
-<li>Tables and figures.</li>
-</ul></li>
+<li class="fragment">The <strong>variance</strong> and <strong>standard deviation</strong> add context by informing us how spread out the distribution is.</li>
+<li class="fragment">This adds insight into how much an observation <strong>stands out</strong> from the rest.</li>
 </ul>
+</div>
 </section>
-<section id="step-2-open-stata-and-set-the-working-directory" class="slide level2">
-<h2>Step 2: Open Stata and set the working directory</h2>
+<section id="variance" class="slide level2">
+<h2>Variance</h2>
+<div class="presenter-space">
 <ul>
-<li class="fragment"><p>The <strong>working directory</strong> is where your project lives.</p>
-<ul>
-<li class="fragment">By setting the working directory, you’re directing Stata to the folder where your files are stored.</li>
-</ul></li>
-<li class="fragment"><p>Go to <strong>File &gt; Change working directory</strong> and select the top-level folder you created for this module.</p></li>
+<li class="fragment">The variance measures how <strong>far from the mean</strong> the observations tend to be.</li>
+<li class="fragment">The course with 80% approval rates is not too far from the mean.</li>
+<li class="fragment">But how about the others?</li>
 </ul>
+</div>
 </section>
-<section id="step-3-copy-from-the-command-history-pane" class="slide level2">
-<h2>Step 3: Copy from the Command History pane</h2>
+<section id="calculating-the-variance" class="slide level2">
+<h2>Calculating the variance</h2>
+<div class="presenter-space">
 <ul>
-<li>After you set the <strong>working directory</strong>, Stata registers this action as command in the Command History pane (left-hand side).</li>
-<li>Right-click the first command on the <strong>Command History</strong> pane and click “Copy”</li>
+<li class="fragment">To get the <strong>variance</strong>, we start by subtracting the mean from each observation and squaring the difference.</li>
+<li class="fragment">Linguistics at the University of Glasgow has a <strong>90%</strong> approval rate.</li>
+<li class="fragment">By subtracting the mean from this rate and squaring the difference, we get <span class="math inline">\((90-82)^2=8^2=64\)</span></li>
 </ul>
-
-<img data-src="../../assets/stata-copy-cmd.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-4-open-a-new-do-file" class="slide level2">
-<h2>Step 4: Open a new do-file</h2>
+</div>
+</section>
+<section id="calculating-the-variance-1" class="slide level2">
+<h2>Calculating the variance</h2>
+<div class="presenter-space">
 <ul>
-<li>Click on the <strong>New Do-file</strong> Editor icon (a sheet of paper and a pencil)</li>
-<li>The do-file keeps a <strong>record</strong> of everything you do in Stata.</li>
+<li class="fragment">We do this for every course and take the <strong>sum of the squared deviations</strong> for all courses.</li>
+<li class="fragment">By dividing this sum by the number of courses, we get the <strong>variance</strong>.</li>
+<li class="fragment">Courses that are further from the mean <strong>increase</strong> the variance of the distribution.</li>
 </ul>
-
-<img data-src="../../assets/stata-dofile-editor.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-5-paste-the-command-into-your-do-file" class="slide level2">
-<h2>Step 5: Paste the command into your do-file</h2>
+</div>
+</section>
+<section id="the-variance-formula" class="slide level2">
+<h2>The variance formula</h2>
+<div class="presenter-space">
+<p><span class="math display">\[\sigma^2 = \frac{\sum_{i=1}^{N} (x_i - \mu)^2}{N}\]</span></p>
 <ul>
-<li>In the do-file editor, <strong>paste</strong> the command you copied from the Command History pane.</li>
-<li>Later on, you will be able to set the working directory using the command in this do-file.</li>
+<li class="fragment"><span class="math inline">\(\mu\)</span> is the <strong>mean</strong>.</li>
+<li class="fragment"><span class="math inline">\((x_i - \mu)^2\)</span> is what we did earlier: <span class="math inline">\((90-82)^2\)</span></li>
+<li class="fragment"><span class="math inline">\(\sum_{i=1}^{N}\)</span> means, “do this for every observation (<span class="math inline">\(x_i\)</span>) and take the sum.”</li>
+<li class="fragment">We divide it by N to get the <strong>variance</strong> (<span class="math inline">\(\sigma^2\)</span>).</li>
 </ul>
-
-<img data-src="../../assets/stata-paste-dofile.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-6-save-your-do-file" class="slide level2">
-<h2>Step 6: Save your do-file</h2>
+</div>
+</section>
+<section id="the-standard-deviation" class="slide level2">
+<h2>The standard deviation</h2>
+<div class="presenter-space">
 <ul>
-<li>From the do-file editor, <strong>save</strong> your do-file in your <code>do</code> folder.</li>
-<li>Name it <code>set-wd.do</code></li>
-<li>This do file will be helpful for future work. Keep it.</li>
+<li class="fragment">The standard deviation is the <strong>square root</strong> of the variance.</li>
+<li class="fragment">More commonly used than the variance and useful to judge how <strong>unusual</strong> an observation is.</li>
+<li class="fragment">The <strong>variance</strong> for satisfaction with courses is about 145, and the <strong>standard deviation</strong> is about <span class="math inline">\(\sqrt{145}\approx12\)</span>.</li>
 </ul>
+</div>
+</section>
+<section id="interpreting-the-standard-deviation" class="slide level2">
+<h2>Interpreting the standard deviation</h2>
+<div class="presenter-space">
+<ul>
+<li class="fragment">Linguistics at Glasgow (90%) is <strong>two-thirds</strong> of a standard deviation above the mean: <span class="math inline">\(8/12=2/3\textrm{ s.d.}\)</span></li>
+<li class="fragment">Accounting at Strathclyde (94%) can be more boastful at <strong>one standard deviation</strong> above the mean: <span class="math inline">\(12/12=1\textrm{ s.d.}\)</span></li>
+</ul>
+</div>
 </section>
 <section id="recap" class="slide level2">
 <h2>Recap</h2>
+<div class="presenter-space">
 <ul>
-<li class="fragment">The <strong>working directory</strong> is the folder on your computer where your project lives.</li>
-<li class="fragment">Keeping a <strong>do-file</strong> with a command that sets the working directory will be helpful for future tasks.</li>
+<li class="fragment"><strong>Variance</strong> and <strong>standard deviation</strong> summarise how spread out a distribution is.</li>
+<li class="fragment">They are built by measuring how far observations are from the <strong>mean</strong>.</li>
 </ul>
+</div>
 </section>
 <section class="slide level2">
 
+<div class="presenter-space">
 <p><strong>Why this matters:</strong></p>
 <ul>
-<li class="fragment">To open a dataset, we must point Stata to the folder where it is located.</li>
-<li class="fragment">Setting the working directory makes replicability easier.</li>
+<li class="fragment">Knowing the mean tells us what is typical.</li>
+<li class="fragment">The standard deviation tells us whether differences from the mean are small or substantial.</li>
+<li class="fragment">Together, they allow us to judge how unusual an observation is.</li>
 </ul>
+</div>
 
 
 </section></section>

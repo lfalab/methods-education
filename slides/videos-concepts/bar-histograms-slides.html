@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <title>Methods Education – The Stata Interface</title>
+  <title>Methods Education – Bar Charts and Histograms</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -28,7 +28,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-f88d935cd01326925f73dc62b106448c.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-7433acd2865db5fa81269247cd6920be.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -127,107 +127,178 @@
 
 
 <section>
-<section id="the-stata-interface" class="title-slide slide level1 title-left center">
-<h1>The Stata Interface</h1>
+<section id="bar-charts-and-histograms" class="title-slide slide level1 title-left center">
+<h1>Bar Charts and Histograms</h1>
 
 </section>
 <section id="youll-learn-to" class="slide level2">
 <h2>You’ll learn to</h2>
+<div class="presenter-space">
 <ul>
-<li class="fragment"><strong>Identify</strong> the different panes in Stata.</li>
-<li class="fragment">Set the <strong>working directory</strong> in Stata.</li>
-<li class="fragment">Create and save a <strong>do-file</strong>.</li>
+<li class="fragment">Choose and interpret <strong>bar charts</strong> and <strong>histograms</strong> for univariate data.</li>
 </ul>
+</div>
 </section>
-<section id="step-1-set-up-the-folder-structure" class="slide level2">
-<h2>Step 1: Set up the folder structure</h2>
-<ul>
-<li><p><code>my-research-project/</code></p>
-<ul>
-<li><code>data-raw</code></li>
-<li><code>data-clean</code></li>
-<li><code>do</code></li>
-<li><code>output</code></li>
-</ul></li>
-</ul>
+<section id="general-election-vote-frequency-table" class="slide level2">
+<h2>General Election vote: Frequency table</h2>
+<div class="presenter-space">
+<p>Which party did you vote for in the general election?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../assets/vote-frequency.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
 </section>
-<section id="step-1-set-up-the-folder-structure-1" class="slide level2">
-<h2>Step 1: Set up the folder structure</h2>
-<ul>
-<li><p><code>data-raw</code></p>
-<ul>
-<li>Original data files, never edited.</li>
-</ul></li>
-<li><p><code>data-clean</code></p>
-<ul>
-<li>Cleaned or transformed datasets.</li>
-</ul></li>
-<li><p><code>do</code></p>
-<ul>
-<li>All Stata do-files.</li>
-</ul></li>
-<li><p><code>output</code></p>
-<ul>
-<li>Tables and figures.</li>
-</ul></li>
-</ul>
+<section id="general-election-vote-frequency-bar-chart" class="slide level2">
+<h2>General Election vote: Frequency bar chart</h2>
+<div class="presenter-space">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../assets/bes_vote_bar.jpg" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
 </section>
-<section id="step-2-open-stata-and-set-the-working-directory" class="slide level2">
-<h2>Step 2: Open Stata and set the working directory</h2>
+<section id="frequency-bar-charts" class="slide level2">
+<h2>Frequency bar charts</h2>
+<div class="presenter-space">
 <ul>
-<li class="fragment"><p>The <strong>working directory</strong> is where your project lives.</p>
-<ul>
-<li class="fragment">By setting the working directory, you’re directing Stata to the folder where your files are stored.</li>
-</ul></li>
-<li class="fragment"><p>Go to <strong>File &gt; Change working directory</strong> and select the top-level folder you created for this module.</p></li>
+<li class="fragment">Good for visualising distributions of <strong>nominal</strong> variables.</li>
+<li class="fragment">Shows how many observations are in each <strong>category</strong>.</li>
+<li class="fragment">The order of the bars does <strong>not</strong> make a difference.</li>
 </ul>
+</div>
 </section>
-<section id="step-3-copy-from-the-command-history-pane" class="slide level2">
-<h2>Step 3: Copy from the Command History pane</h2>
+<section id="nss-data-summary" class="slide level2">
+<h2>NSS Data: Summary</h2>
+<div class="presenter-space">
+<p>Q28: Overall, I am satisfied with the quality of the course</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../assets/summarize-nss.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="nss-data-histogram" class="slide level2">
+<h2>NSS Data: Histogram</h2>
+<div class="presenter-space">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../assets/nss_hist.jpg" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="nss-data-histogram-1" class="slide level2">
+<h2>NSS Data: Histogram</h2>
+<div class="presenter-space">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../assets/nss_hist_shaded.jpg" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="histograms" class="slide level2">
+<h2>Histograms</h2>
+<div class="presenter-space">
 <ul>
-<li>After you set the <strong>working directory</strong>, Stata registers this action as command in the Command History pane (left-hand side).</li>
-<li>Right-click the first command on the <strong>Command History</strong> pane and click “Copy”</li>
+<li class="fragment">Good for visualising distributions of <strong>ordinal</strong>, <strong>interval</strong>, and <strong>ratio</strong> variables.</li>
+<li class="fragment">Shows how many observations are in each <strong>range</strong> of values.</li>
+<li class="fragment">The order of the bars <strong>does</strong> make a difference.</li>
 </ul>
-
-<img data-src="../../assets/stata-copy-cmd.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-4-open-a-new-do-file" class="slide level2">
-<h2>Step 4: Open a new do-file</h2>
-<ul>
-<li>Click on the <strong>New Do-file</strong> Editor icon (a sheet of paper and a pencil)</li>
-<li>The do-file keeps a <strong>record</strong> of everything you do in Stata.</li>
-</ul>
-
-<img data-src="../../assets/stata-dofile-editor.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-5-paste-the-command-into-your-do-file" class="slide level2">
-<h2>Step 5: Paste the command into your do-file</h2>
-<ul>
-<li>In the do-file editor, <strong>paste</strong> the command you copied from the Command History pane.</li>
-<li>Later on, you will be able to set the working directory using the command in this do-file.</li>
-</ul>
-
-<img data-src="../../assets/stata-paste-dofile.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-6-save-your-do-file" class="slide level2">
-<h2>Step 6: Save your do-file</h2>
-<ul>
-<li>From the do-file editor, <strong>save</strong> your do-file in your <code>do</code> folder.</li>
-<li>Name it <code>set-wd.do</code></li>
-<li>This do file will be helpful for future work. Keep it.</li>
-</ul>
+</div>
+</section>
+<section id="another-variable-gdp-per-capita" class="slide level2">
+<h2>Another variable: GDP per capita</h2>
+<div class="presenter-space">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Country</th>
+<th>GDP per capita</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>USA</td>
+<td><strong>$58.4k</strong></td>
+</tr>
+<tr class="even">
+<td>UK</td>
+<td><strong>$38.4k</strong></td>
+</tr>
+<tr class="odd">
+<td>China</td>
+<td><strong>$19.2k</strong></td>
+</tr>
+<tr class="even">
+<td>Brazil</td>
+<td><strong>$14.6k</strong></td>
+</tr>
+<tr class="odd">
+<td>India</td>
+<td><strong>$7.7k</strong></td>
+</tr>
+<tr class="even">
+<td>Ethiopia</td>
+<td><strong>$2.3k</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="gdp-per-capita-summary" class="slide level2">
+<h2>GDP per capita: summary</h2>
+<div class="presenter-space">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../assets/summarize-gdp.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="gdp-per-capita-histogram" class="slide level2">
+<h2>GDP per capita: Histogram</h2>
+<div class="presenter-space">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../assets/gdp_hist.jpg" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="gdp-per-capita-histogram-1" class="slide level2">
+<h2>GDP per capita: Histogram</h2>
+<div class="presenter-space">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../assets/gdp_hist_shaded.jpg" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
 </section>
 <section id="recap" class="slide level2">
 <h2>Recap</h2>
+<div class="presenter-space">
 <ul>
-<li class="fragment">The <strong>working directory</strong> is the folder on your computer where your project lives.</li>
-<li class="fragment">Keeping a <strong>do-file</strong> with a command that sets the working directory will be helpful for future tasks.</li>
+<li class="fragment"><strong>Bar charts</strong> and <strong>histograms</strong> both visualise distributions.</li>
+<li class="fragment">Bar charts are used for <strong>nominal</strong> variables and show counts by category.</li>
+<li class="fragment">Histograms are used for <strong>ordinal</strong>, <strong>interval</strong>, and <strong>ratio</strong> variables and show counts within ranges of values.</li>
 </ul>
+</div>
 </section>
 <section class="slide level2">
 
+<div class="presenter-space">
 <p><strong>Why this matters:</strong></p>
 <ul>
-<li class="fragment">To open a dataset, we must point Stata to the folder where it is located.</li>
-<li class="fragment">Setting the working directory makes replicability easier.</li>
+<li class="fragment">Using the wrong type of graph can obscure patterns or suggest structure that is not there.</li>
+<li class="fragment">Choosing the right visualization helps us see what is typical, what is rare, and how values are distributed.</li>
 </ul>
+</div>
 
 
 </section></section>
