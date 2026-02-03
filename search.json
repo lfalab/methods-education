@@ -1,5 +1,131 @@
 [
   {
+    "objectID": "slides/videos-stata/bar-hist-stata.html",
+    "href": "slides/videos-stata/bar-hist-stata.html",
+    "title": "Bar Charts and Histograms in Stata",
+    "section": "",
+    "text": "Create bar charts and histograms in Stata and use them to describe distributions.\n\n\n\n\n\n\nAccess our Shared Project Folder\nClick on data-raw\nDownload British_Election_Study_2024.dta\nSave it into the data-raw folder on your computer\n\n\n\n\n\n\nAccess our Shared Project Folder\nClick on do\nDownload visualise-bes.do\nSave it into the do folder on your computer\n\n\n\n\n\n\n\nThis line of visualise-bes.do has an “address” that only works on my computer.\nReplace it with the “address” to your project folder on your computer.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIf you see this on the top-right pane of your Stata screen, it has worked!\nBe sure to save your do-file in your do folder.\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis do-file will serve as your companion for learning how to produce histograms and frequency bar charts.\n\n\n\n\n\n\n\n\n\n\n\n\n\nhist gives us histograms.\ngraph hbar (count), over() gives us the frequency bar charts.\nExplore the BES data and codebook to look for additional variables to visualise.\n\n\n\n\n\n\n\nFrequency bar charts are used for nominal variables and show counts by category.\nHistograms are used for ordinal, interval, and ratio variables and show counts within ranges of values.\n\n\nWhy this matters:\n\nGraphs help us see patterns that are hard to spot in tables alone.\nChoosing the wrong type of graph can hide important features or suggest structure that is not there.\nThese skills are essential for interpreting data in research papers, reports, and public debate."
+  },
+  {
+    "objectID": "slides/videos-stata/bar-hist-stata.html#youll-learn-to",
+    "href": "slides/videos-stata/bar-hist-stata.html#youll-learn-to",
+    "title": "Bar Charts and Histograms in Stata",
+    "section": "",
+    "text": "Create bar charts and histograms in Stata and use them to describe distributions."
+  },
+  {
+    "objectID": "slides/videos-stata/bar-hist-stata.html#step-1-download-the-british-election-study-dataset-from-our-shared-folder",
+    "href": "slides/videos-stata/bar-hist-stata.html#step-1-download-the-british-election-study-dataset-from-our-shared-folder",
+    "title": "Bar Charts and Histograms in Stata",
+    "section": "",
+    "text": "Access our Shared Project Folder\nClick on data-raw\nDownload British_Election_Study_2024.dta\nSave it into the data-raw folder on your computer"
+  },
+  {
+    "objectID": "slides/videos-stata/bar-hist-stata.html#step-2-download-the-companion-do-file-for-this-activity",
+    "href": "slides/videos-stata/bar-hist-stata.html#step-2-download-the-companion-do-file-for-this-activity",
+    "title": "Bar Charts and Histograms in Stata",
+    "section": "",
+    "text": "Access our Shared Project Folder\nClick on do\nDownload visualise-bes.do\nSave it into the do folder on your computer"
+  },
+  {
+    "objectID": "slides/videos-stata/bar-hist-stata.html#step-3-insert-the-path-to-your-folder-on-your-computer",
+    "href": "slides/videos-stata/bar-hist-stata.html#step-3-insert-the-path-to-your-folder-on-your-computer",
+    "title": "Bar Charts and Histograms in Stata",
+    "section": "",
+    "text": "This line of visualise-bes.do has an “address” that only works on my computer.\nReplace it with the “address” to your project folder on your computer."
+  },
+  {
+    "objectID": "slides/videos-stata/bar-hist-stata.html#step-5-check-if-it-has-worked-and-save-your-do-file",
+    "href": "slides/videos-stata/bar-hist-stata.html#step-5-check-if-it-has-worked-and-save-your-do-file",
+    "title": "Bar Charts and Histograms in Stata",
+    "section": "",
+    "text": "If you see this on the top-right pane of your Stata screen, it has worked!\nBe sure to save your do-file in your do folder."
+  },
+  {
+    "objectID": "slides/videos-stata/bar-hist-stata.html#step-6-read-through-the-do-file-comments-and-execute-the-commands",
+    "href": "slides/videos-stata/bar-hist-stata.html#step-6-read-through-the-do-file-comments-and-execute-the-commands",
+    "title": "Bar Charts and Histograms in Stata",
+    "section": "",
+    "text": "This do-file will serve as your companion for learning how to produce histograms and frequency bar charts."
+  },
+  {
+    "objectID": "slides/videos-stata/bar-hist-stata.html#your-turn-find-additional-variables-to-summarise",
+    "href": "slides/videos-stata/bar-hist-stata.html#your-turn-find-additional-variables-to-summarise",
+    "title": "Bar Charts and Histograms in Stata",
+    "section": "",
+    "text": "hist gives us histograms.\ngraph hbar (count), over() gives us the frequency bar charts.\nExplore the BES data and codebook to look for additional variables to visualise."
+  },
+  {
+    "objectID": "slides/videos-stata/bar-hist-stata.html#recap",
+    "href": "slides/videos-stata/bar-hist-stata.html#recap",
+    "title": "Bar Charts and Histograms in Stata",
+    "section": "",
+    "text": "Frequency bar charts are used for nominal variables and show counts by category.\nHistograms are used for ordinal, interval, and ratio variables and show counts within ranges of values.\n\n\nWhy this matters:\n\nGraphs help us see patterns that are hard to spot in tables alone.\nChoosing the wrong type of graph can hide important features or suggest structure that is not there.\nThese skills are essential for interpreting data in research papers, reports, and public debate."
+  },
+  {
+    "objectID": "slides/videos-stata/bar-hist-stata-slides.html#youll-learn-to",
+    "href": "slides/videos-stata/bar-hist-stata-slides.html#youll-learn-to",
+    "title": "Methods Education",
+    "section": "You’ll learn to",
+    "text": "You’ll learn to\n\nCreate bar charts and histograms in Stata and use them to describe distributions."
+  },
+  {
+    "objectID": "slides/videos-stata/bar-hist-stata-slides.html#step-1-download-the-british-election-study-dataset-from-our-shared-folder",
+    "href": "slides/videos-stata/bar-hist-stata-slides.html#step-1-download-the-british-election-study-dataset-from-our-shared-folder",
+    "title": "Methods Education",
+    "section": "Step 1: Download the British Election Study dataset from our shared folder",
+    "text": "Step 1: Download the British Election Study dataset from our shared folder\n\nAccess our Shared Project Folder\nClick on data-raw\nDownload British_Election_Study_2024.dta\nSave it into the data-raw folder on your computer"
+  },
+  {
+    "objectID": "slides/videos-stata/bar-hist-stata-slides.html#step-2-download-the-companion-do-file-for-this-activity",
+    "href": "slides/videos-stata/bar-hist-stata-slides.html#step-2-download-the-companion-do-file-for-this-activity",
+    "title": "Methods Education",
+    "section": "Step 2: Download the companion do-file for this activity",
+    "text": "Step 2: Download the companion do-file for this activity\n\nAccess our Shared Project Folder\nClick on do\nDownload visualise-bes.do\nSave it into the do folder on your computer"
+  },
+  {
+    "objectID": "slides/videos-stata/bar-hist-stata-slides.html#step-3-insert-the-path-to-your-folder-on-your-computer",
+    "href": "slides/videos-stata/bar-hist-stata-slides.html#step-3-insert-the-path-to-your-folder-on-your-computer",
+    "title": "Methods Education",
+    "section": "Step 3: Insert the path to your folder on your computer",
+    "text": "Step 3: Insert the path to your folder on your computer\n\nThis line of visualise-bes.do has an “address” that only works on my computer.\nReplace it with the “address” to your project folder on your computer."
+  },
+  {
+    "objectID": "slides/videos-stata/bar-hist-stata-slides.html#step-4-select-the-top-portion-of-the-do-file-and-click-execute-do",
+    "href": "slides/videos-stata/bar-hist-stata-slides.html#step-4-select-the-top-portion-of-the-do-file-and-click-execute-do",
+    "title": "Methods Education",
+    "section": "Step 4: Select the top portion of the do file and click “execute (do)”",
+    "text": "Step 4: Select the top portion of the do file and click “execute (do)”"
+  },
+  {
+    "objectID": "slides/videos-stata/bar-hist-stata-slides.html#step-5-check-if-it-has-worked-and-save-your-do-file",
+    "href": "slides/videos-stata/bar-hist-stata-slides.html#step-5-check-if-it-has-worked-and-save-your-do-file",
+    "title": "Methods Education",
+    "section": "Step 5: Check if it has worked and save your do-file",
+    "text": "Step 5: Check if it has worked and save your do-file\n\nIf you see this on the top-right pane of your Stata screen, it has worked!\nBe sure to save your do-file in your do folder."
+  },
+  {
+    "objectID": "slides/videos-stata/bar-hist-stata-slides.html#step-6-read-through-the-do-file-comments-and-execute-the-commands",
+    "href": "slides/videos-stata/bar-hist-stata-slides.html#step-6-read-through-the-do-file-comments-and-execute-the-commands",
+    "title": "Methods Education",
+    "section": "Step 6: Read through the do-file comments and execute the commands",
+    "text": "Step 6: Read through the do-file comments and execute the commands\n\nThis do-file will serve as your companion for learning how to produce histograms and frequency bar charts."
+  },
+  {
+    "objectID": "slides/videos-stata/bar-hist-stata-slides.html#your-turn-find-additional-variables-to-summarise",
+    "href": "slides/videos-stata/bar-hist-stata-slides.html#your-turn-find-additional-variables-to-summarise",
+    "title": "Methods Education",
+    "section": "Your turn: Find additional variables to summarise",
+    "text": "Your turn: Find additional variables to summarise\n\nhist gives us histograms.\ngraph hbar (count), over() gives us the frequency bar charts.\nExplore the BES data and codebook to look for additional variables to visualise."
+  },
+  {
+    "objectID": "slides/videos-stata/bar-hist-stata-slides.html#recap",
+    "href": "slides/videos-stata/bar-hist-stata-slides.html#recap",
+    "title": "Methods Education",
+    "section": "Recap",
+    "text": "Recap\n\nFrequency bar charts are used for nominal variables and show counts by category.\nHistograms are used for ordinal, interval, and ratio variables and show counts within ranges of values."
+  },
+  {
     "objectID": "slides/videos-stata/loading-browsing-data.html",
     "href": "slides/videos-stata/loading-browsing-data.html",
     "title": "Loading and Browsing Data",
@@ -242,7 +368,7 @@
     "href": "slides/videos-concepts/bar-histograms.html",
     "title": "Bar Charts and Histograms",
     "section": "",
-    "text": "Choose and interpret bar charts and histograms for univariate data.\n\n\n\n\n\n\n\n\nWhich party did you vote for in the general election?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGood for visualising distributions of nominal variables.\nShows how many observations are in each category.\nThe order of the bars does not make a difference.\n\n\n\n\n\n\n\n\nQ28: Overall, I am satisfied with the quality of the course\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGood for visualising distributions of ordinal, interval, and ratio variables.\nShows how many observations are in each range of values.\nThe order of the bars does make a difference.\n\n\n\n\n\n\n\n\n\n\nCountry\nGDP per capita\n\n\n\n\nUSA\n$58.4k\n\n\nUK\n$38.4k\n\n\nChina\n$19.2k\n\n\nBrazil\n$14.6k\n\n\nIndia\n$7.7k\n\n\nEthiopia\n$2.3k\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBar charts and histograms both visualise distributions.\nBar charts are used for nominal variables and show counts by category.\nHistograms are used for ordinal, interval, and ratio variables and show counts within ranges of values.\n\n\n\n\nWhy this matters:\n\nUsing the wrong type of graph can obscure patterns or suggest structure that is not there.\nChoosing the right visualization helps us see what is typical, what is rare, and how values are distributed."
+    "text": "Choose and interpret bar charts and histograms for univariate data.\n\n\n\n\n\n\n\n\nWhich party did you vote for in the general election?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGood for visualising distributions of nominal variables.\nShows how many observations are in each category.\nThe order of the bars does not make a difference.\n\n\n\n\n\n\n\n\nQ28: Overall, I am satisfied with the quality of the course\n\n\n\n\nQ28\n\n\n\n\n\nObs\n1,051\n\n\nMean\n82.3\n\n\nStd. dev.\n12\n\n\nMin\n11.8\n\n\nMax\n100\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAbout 200 courses between 90% and 95% satisfaction rates.\n\n\n\n\n\n\n\n\nGood for visualising distributions of ordinal, interval, and ratio variables.\nShows how many observations are in each range of values.\nThe order of the bars does make a difference.\n\n\n\n\n\n\n\n\n\n\nCountry\nGDP per capita\n\n\n\n\nUSA\n$58.4k\n\n\nUK\n$38.4k\n\n\nChina\n$19.2k\n\n\nBrazil\n$14.6k\n\n\nIndia\n$7.7k\n\n\nEthiopia\n$2.3k\n\n\n\n\n\n\n\n\n\n\n\n\n\nGDPpc\n\n\n\n\n\nObs\n162\n\n\nMean\n19,619\n\n\nStd. dev.\n20,986\n\n\nMin\n596\n\n\nMax\n149,171\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n35 countries between $10k and $20k.\n\n\n\n\n\n\n\n\nBar charts and histograms visualise distributions.\nBar charts are used for nominal variables and show counts by category.\nHistograms are used for ordinal, interval, and ratio variables and show counts within ranges of values.\n\n\n\n\nWhy this matters:\n\nThe wrong type of graph can obscure patterns or suggest structure that is not there.\nThe right visualisation helps us see what is typical, what is rare, and how values are distributed."
   },
   {
     "objectID": "slides/videos-concepts/bar-histograms.html#youll-learn-to",
@@ -270,7 +396,14 @@
     "href": "slides/videos-concepts/bar-histograms.html#nss-data-summary",
     "title": "Bar Charts and Histograms",
     "section": "",
-    "text": "Q28: Overall, I am satisfied with the quality of the course"
+    "text": "Q28: Overall, I am satisfied with the quality of the course\n\n\n\n\nQ28\n\n\n\n\n\nObs\n1,051\n\n\nMean\n82.3\n\n\nStd. dev.\n12\n\n\nMin\n11.8\n\n\nMax\n100"
+  },
+  {
+    "objectID": "slides/videos-concepts/bar-histograms.html#nss-data-histogram-1",
+    "href": "slides/videos-concepts/bar-histograms.html#nss-data-histogram-1",
+    "title": "Bar Charts and Histograms",
+    "section": "",
+    "text": "About 200 courses between 90% and 95% satisfaction rates."
   },
   {
     "objectID": "slides/videos-concepts/bar-histograms.html#histograms",
@@ -287,11 +420,25 @@
     "text": "Country\nGDP per capita\n\n\n\n\nUSA\n$58.4k\n\n\nUK\n$38.4k\n\n\nChina\n$19.2k\n\n\nBrazil\n$14.6k\n\n\nIndia\n$7.7k\n\n\nEthiopia\n$2.3k"
   },
   {
+    "objectID": "slides/videos-concepts/bar-histograms.html#gdp-per-capita-summary",
+    "href": "slides/videos-concepts/bar-histograms.html#gdp-per-capita-summary",
+    "title": "Bar Charts and Histograms",
+    "section": "",
+    "text": "GDPpc\n\n\n\n\n\nObs\n162\n\n\nMean\n19,619\n\n\nStd. dev.\n20,986\n\n\nMin\n596\n\n\nMax\n149,171"
+  },
+  {
+    "objectID": "slides/videos-concepts/bar-histograms.html#gdp-per-capita-histogram-1",
+    "href": "slides/videos-concepts/bar-histograms.html#gdp-per-capita-histogram-1",
+    "title": "Bar Charts and Histograms",
+    "section": "",
+    "text": "35 countries between $10k and $20k."
+  },
+  {
     "objectID": "slides/videos-concepts/bar-histograms.html#recap",
     "href": "slides/videos-concepts/bar-histograms.html#recap",
     "title": "Bar Charts and Histograms",
     "section": "",
-    "text": "Bar charts and histograms both visualise distributions.\nBar charts are used for nominal variables and show counts by category.\nHistograms are used for ordinal, interval, and ratio variables and show counts within ranges of values.\n\n\n\n\nWhy this matters:\n\nUsing the wrong type of graph can obscure patterns or suggest structure that is not there.\nChoosing the right visualization helps us see what is typical, what is rare, and how values are distributed."
+    "text": "Bar charts and histograms visualise distributions.\nBar charts are used for nominal variables and show counts by category.\nHistograms are used for ordinal, interval, and ratio variables and show counts within ranges of values.\n\n\n\n\nWhy this matters:\n\nThe wrong type of graph can obscure patterns or suggest structure that is not there.\nThe right visualisation helps us see what is typical, what is rare, and how values are distributed."
   },
   {
     "objectID": "slides/videos-concepts/bar-histograms-slides.html#youll-learn-to",
@@ -326,7 +473,7 @@
     "href": "slides/videos-concepts/bar-histograms-slides.html#nss-data-summary",
     "title": "Methods Education",
     "section": "NSS Data: Summary",
-    "text": "NSS Data: Summary\n\nQ28: Overall, I am satisfied with the quality of the course"
+    "text": "NSS Data: Summary\n\nQ28: Overall, I am satisfied with the quality of the course\n\n\n\n\nQ28\n\n\n\n\n\nObs\n1,051\n\n\nMean\n82.3\n\n\nStd. dev.\n12\n\n\nMin\n11.8\n\n\nMax\n100"
   },
   {
     "objectID": "slides/videos-concepts/bar-histograms-slides.html#nss-data-histogram",
@@ -340,7 +487,7 @@
     "href": "slides/videos-concepts/bar-histograms-slides.html#nss-data-histogram-1",
     "title": "Methods Education",
     "section": "NSS Data: Histogram",
-    "text": "NSS Data: Histogram"
+    "text": "NSS Data: Histogram\n\n\n\n\n\n\nAbout 200 courses between 90% and 95% satisfaction rates."
   },
   {
     "objectID": "slides/videos-concepts/bar-histograms-slides.html#histograms",
@@ -361,7 +508,7 @@
     "href": "slides/videos-concepts/bar-histograms-slides.html#gdp-per-capita-summary",
     "title": "Methods Education",
     "section": "GDP per capita: summary",
-    "text": "GDP per capita: summary"
+    "text": "GDP per capita: summary\n\n\n\n\nGDPpc\n\n\n\n\n\nObs\n162\n\n\nMean\n19,619\n\n\nStd. dev.\n20,986\n\n\nMin\n596\n\n\nMax\n149,171"
   },
   {
     "objectID": "slides/videos-concepts/bar-histograms-slides.html#gdp-per-capita-histogram",
@@ -375,14 +522,14 @@
     "href": "slides/videos-concepts/bar-histograms-slides.html#gdp-per-capita-histogram-1",
     "title": "Methods Education",
     "section": "GDP per capita: Histogram",
-    "text": "GDP per capita: Histogram"
+    "text": "GDP per capita: Histogram\n\n\n\n\n\n\n35 countries between $10k and $20k."
   },
   {
     "objectID": "slides/videos-concepts/bar-histograms-slides.html#recap",
     "href": "slides/videos-concepts/bar-histograms-slides.html#recap",
     "title": "Methods Education",
     "section": "Recap",
-    "text": "Recap\n\n\nBar charts and histograms both visualise distributions.\nBar charts are used for nominal variables and show counts by category.\nHistograms are used for ordinal, interval, and ratio variables and show counts within ranges of values."
+    "text": "Recap\n\n\nBar charts and histograms visualise distributions.\nBar charts are used for nominal variables and show counts by category.\nHistograms are used for ordinal, interval, and ratio variables and show counts within ranges of values."
   },
   {
     "objectID": "slides/videos-concepts/summarising-distribution.html",
@@ -1285,7 +1432,7 @@
     "href": "slides/index.html#week-4-describing-distributions-univariate-description",
     "title": "Slides",
     "section": "Week 4: Describing Distributions (Univariate Description)",
-    "text": "Week 4: Describing Distributions (Univariate Description)\n\nVideos\n\nSummarising a Distribution\nVariance and Standard Deviation\nBar Charts and Histograms"
+    "text": "Week 4: Describing Distributions (Univariate Description)\n\nVideos\n\nSummarising a Distribution\nVariance and Standard Deviation\nBar Charts and Histograms\nSummarising Distributions in Stata\nBar Charts and Histograms in Stata"
   },
   {
     "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#welcome",
@@ -2434,5 +2581,131 @@
     "title": "The Stata Interface",
     "section": "",
     "text": "The working directory is the folder on your computer where your project lives.\nKeeping a do-file with a command that sets the working directory will be helpful for future tasks.\n\n\nWhy this matters:\n\nTo open a dataset, we must point Stata to the folder where it is located.\nSetting the working directory makes replicability easier."
+  },
+  {
+    "objectID": "slides/videos-stata/summary-stata-slides.html#youll-learn-to",
+    "href": "slides/videos-stata/summary-stata-slides.html#youll-learn-to",
+    "title": "Methods Education",
+    "section": "You’ll learn to",
+    "text": "You’ll learn to\n\nProduce summary statistics and frequency tables in Stata and interpret what they show."
+  },
+  {
+    "objectID": "slides/videos-stata/summary-stata-slides.html#step-1-download-the-british-election-study-dataset-from-our-shared-folder",
+    "href": "slides/videos-stata/summary-stata-slides.html#step-1-download-the-british-election-study-dataset-from-our-shared-folder",
+    "title": "Methods Education",
+    "section": "Step 1: Download the British Election Study dataset from our shared folder",
+    "text": "Step 1: Download the British Election Study dataset from our shared folder\n\nAccess our Shared Project Folder\nClick on data-raw\nDownload British_Election_Study_2024.dta\nSave it into the data-raw folder on your computer"
+  },
+  {
+    "objectID": "slides/videos-stata/summary-stata-slides.html#step-2-download-the-companion-do-file-for-this-activity",
+    "href": "slides/videos-stata/summary-stata-slides.html#step-2-download-the-companion-do-file-for-this-activity",
+    "title": "Methods Education",
+    "section": "Step 2: Download the companion do-file for this activity",
+    "text": "Step 2: Download the companion do-file for this activity\n\nAccess our Shared Project Folder\nClick on do\nDownload summarise-bes.do\nSave it into the do folder on your computer"
+  },
+  {
+    "objectID": "slides/videos-stata/summary-stata-slides.html#step-3-insert-the-path-to-your-folder-on-your-computer",
+    "href": "slides/videos-stata/summary-stata-slides.html#step-3-insert-the-path-to-your-folder-on-your-computer",
+    "title": "Methods Education",
+    "section": "Step 3: Insert the path to your folder on your computer",
+    "text": "Step 3: Insert the path to your folder on your computer\n\nThis line of summarise-bes.do has an “address” that only works on my computer.\nReplace it with the “address” to your project folder on your computer."
+  },
+  {
+    "objectID": "slides/videos-stata/summary-stata-slides.html#step-4-select-the-top-portion-of-the-do-file-and-click-execute-do",
+    "href": "slides/videos-stata/summary-stata-slides.html#step-4-select-the-top-portion-of-the-do-file-and-click-execute-do",
+    "title": "Methods Education",
+    "section": "Step 4: Select the top portion of the do file and click “execute (do)”",
+    "text": "Step 4: Select the top portion of the do file and click “execute (do)”"
+  },
+  {
+    "objectID": "slides/videos-stata/summary-stata-slides.html#step-5-check-if-it-has-worked-and-save-your-do-file",
+    "href": "slides/videos-stata/summary-stata-slides.html#step-5-check-if-it-has-worked-and-save-your-do-file",
+    "title": "Methods Education",
+    "section": "Step 5: Check if it has worked and save your do-file",
+    "text": "Step 5: Check if it has worked and save your do-file\n\nIf you see this on the top-right pane of your Stata screen, it has worked!\nBe sure to save your do-file in your do folder."
+  },
+  {
+    "objectID": "slides/videos-stata/summary-stata-slides.html#step-6-read-through-the-do-file-comments-and-execute-the-commands",
+    "href": "slides/videos-stata/summary-stata-slides.html#step-6-read-through-the-do-file-comments-and-execute-the-commands",
+    "title": "Methods Education",
+    "section": "Step 6: Read through the do-file comments and execute the commands",
+    "text": "Step 6: Read through the do-file comments and execute the commands\n\nThis do-file will serve as your companion for learning how to produce summary statistics and frequency tables."
+  },
+  {
+    "objectID": "slides/videos-stata/summary-stata-slides.html#your-turn-find-additional-variables-to-summarise",
+    "href": "slides/videos-stata/summary-stata-slides.html#your-turn-find-additional-variables-to-summarise",
+    "title": "Methods Education",
+    "section": "Your turn: Find additional variables to summarise",
+    "text": "Your turn: Find additional variables to summarise\n\nsummarize gives us the mean and standard deviation (summary statistics).\ntabulate gives us frequency tables.\nExplore the BES data and codebook to look for additional variables to summarise."
+  },
+  {
+    "objectID": "slides/videos-stata/summary-stata-slides.html#recap",
+    "href": "slides/videos-stata/summary-stata-slides.html#recap",
+    "title": "Methods Education",
+    "section": "Recap",
+    "text": "Recap\n\nIn this video, you learned how to summarise distributions in Stata.\nInterpreting output requires checking for non-substantive values and understanding what each statistic represents."
+  },
+  {
+    "objectID": "slides/videos-stata/summary-stata.html",
+    "href": "slides/videos-stata/summary-stata.html",
+    "title": "Summarising Distributions in Stata",
+    "section": "",
+    "text": "Produce summary statistics and frequency tables in Stata and interpret what they show.\n\n\n\n\n\n\nAccess our Shared Project Folder\nClick on data-raw\nDownload British_Election_Study_2024.dta\nSave it into the data-raw folder on your computer\n\n\n\n\n\n\nAccess our Shared Project Folder\nClick on do\nDownload summarise-bes.do\nSave it into the do folder on your computer\n\n\n\n\n\n\n\nThis line of summarise-bes.do has an “address” that only works on my computer.\nReplace it with the “address” to your project folder on your computer.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIf you see this on the top-right pane of your Stata screen, it has worked!\nBe sure to save your do-file in your do folder.\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis do-file will serve as your companion for learning how to produce summary statistics and frequency tables.\n\n\n\n\n\n\n\n\n\n\n\n\n\nsummarize gives us the mean and standard deviation (summary statistics).\ntabulate gives us frequency tables.\nExplore the BES data and codebook to look for additional variables to summarise.\n\n\n\n\n\n\n\nIn this video, you learned how to summarise distributions in Stata.\nInterpreting output requires checking for non-substantive values and understanding what each statistic represents.\n\n\nWhy this matters:\n\nSummary statistics and frequency tables help you understand what is typical, what is rare, and whether values make sense.\nThey allow you to detect problems in the data before moving on to graphs or statistical models."
+  },
+  {
+    "objectID": "slides/videos-stata/summary-stata.html#youll-learn-to",
+    "href": "slides/videos-stata/summary-stata.html#youll-learn-to",
+    "title": "Summarising Distributions in Stata",
+    "section": "",
+    "text": "Produce summary statistics and frequency tables in Stata and interpret what they show."
+  },
+  {
+    "objectID": "slides/videos-stata/summary-stata.html#step-1-download-the-british-election-study-dataset-from-our-shared-folder",
+    "href": "slides/videos-stata/summary-stata.html#step-1-download-the-british-election-study-dataset-from-our-shared-folder",
+    "title": "Summarising Distributions in Stata",
+    "section": "",
+    "text": "Access our Shared Project Folder\nClick on data-raw\nDownload British_Election_Study_2024.dta\nSave it into the data-raw folder on your computer"
+  },
+  {
+    "objectID": "slides/videos-stata/summary-stata.html#step-2-download-the-companion-do-file-for-this-activity",
+    "href": "slides/videos-stata/summary-stata.html#step-2-download-the-companion-do-file-for-this-activity",
+    "title": "Summarising Distributions in Stata",
+    "section": "",
+    "text": "Access our Shared Project Folder\nClick on do\nDownload summarise-bes.do\nSave it into the do folder on your computer"
+  },
+  {
+    "objectID": "slides/videos-stata/summary-stata.html#step-3-insert-the-path-to-your-folder-on-your-computer",
+    "href": "slides/videos-stata/summary-stata.html#step-3-insert-the-path-to-your-folder-on-your-computer",
+    "title": "Summarising Distributions in Stata",
+    "section": "",
+    "text": "This line of summarise-bes.do has an “address” that only works on my computer.\nReplace it with the “address” to your project folder on your computer."
+  },
+  {
+    "objectID": "slides/videos-stata/summary-stata.html#step-5-check-if-it-has-worked-and-save-your-do-file",
+    "href": "slides/videos-stata/summary-stata.html#step-5-check-if-it-has-worked-and-save-your-do-file",
+    "title": "Summarising Distributions in Stata",
+    "section": "",
+    "text": "If you see this on the top-right pane of your Stata screen, it has worked!\nBe sure to save your do-file in your do folder."
+  },
+  {
+    "objectID": "slides/videos-stata/summary-stata.html#step-6-read-through-the-do-file-comments-and-execute-the-commands",
+    "href": "slides/videos-stata/summary-stata.html#step-6-read-through-the-do-file-comments-and-execute-the-commands",
+    "title": "Summarising Distributions in Stata",
+    "section": "",
+    "text": "This do-file will serve as your companion for learning how to produce summary statistics and frequency tables."
+  },
+  {
+    "objectID": "slides/videos-stata/summary-stata.html#your-turn-find-additional-variables-to-summarise",
+    "href": "slides/videos-stata/summary-stata.html#your-turn-find-additional-variables-to-summarise",
+    "title": "Summarising Distributions in Stata",
+    "section": "",
+    "text": "summarize gives us the mean and standard deviation (summary statistics).\ntabulate gives us frequency tables.\nExplore the BES data and codebook to look for additional variables to summarise."
+  },
+  {
+    "objectID": "slides/videos-stata/summary-stata.html#recap",
+    "href": "slides/videos-stata/summary-stata.html#recap",
+    "title": "Summarising Distributions in Stata",
+    "section": "",
+    "text": "In this video, you learned how to summarise distributions in Stata.\nInterpreting output requires checking for non-substantive values and understanding what each statistic represents.\n\n\nWhy this matters:\n\nSummary statistics and frequency tables help you understand what is typical, what is rare, and whether values make sense.\nThey allow you to detect problems in the data before moving on to graphs or statistical models."
   }
 ]
