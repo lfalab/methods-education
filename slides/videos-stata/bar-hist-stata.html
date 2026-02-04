@@ -124,7 +124,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#step-4-select-the-top-portion-of-the-do-file-and-click-execute-do" id="toc-step-4-select-the-top-portion-of-the-do-file-and-click-execute-do" class="nav-link" data-scroll-target="#step-4-select-the-top-portion-of-the-do-file-and-click-execute-do">Step 4: Select the top portion of the do file and click “execute (do)”</a></li>
   <li><a href="#step-5-check-if-it-has-worked-and-save-your-do-file" id="toc-step-5-check-if-it-has-worked-and-save-your-do-file" class="nav-link" data-scroll-target="#step-5-check-if-it-has-worked-and-save-your-do-file">Step 5: Check if it has worked and save your do-file</a></li>
   <li><a href="#step-6-read-through-the-do-file-comments-and-execute-the-commands" id="toc-step-6-read-through-the-do-file-comments-and-execute-the-commands" class="nav-link" data-scroll-target="#step-6-read-through-the-do-file-comments-and-execute-the-commands">Step 6: Read through the do-file comments and execute the commands</a></li>
-  <li><a href="#your-turn-find-additional-variables-to-summarise" id="toc-your-turn-find-additional-variables-to-summarise" class="nav-link" data-scroll-target="#your-turn-find-additional-variables-to-summarise">Your turn: Find additional variables to summarise</a></li>
+  <li><a href="#your-turn-find-additional-variables-to-visualise" id="toc-your-turn-find-additional-variables-to-visualise" class="nav-link" data-scroll-target="#your-turn-find-additional-variables-to-visualise">Your turn: Find additional variables to visualise</a></li>
+  <li><a href="#got-tired-of-the-bes-theres-more" id="toc-got-tired-of-the-bes-theres-more" class="nav-link" data-scroll-target="#got-tired-of-the-bes-theres-more">Got tired of the BES? There’s more!</a></li>
+  <li><a href="#still-bored-theres-even-more" id="toc-still-bored-theres-even-more" class="nav-link" data-scroll-target="#still-bored-theres-even-more">Still bored? There’s even more!</a></li>
+  <li><a href="#fancy-a-challenge" id="toc-fancy-a-challenge" class="nav-link" data-scroll-target="#fancy-a-challenge">Fancy a challenge?</a></li>
   <li><a href="#recap" id="toc-recap" class="nav-link" data-scroll-target="#recap">Recap</a></li>
   </ul></li>
   </ul>
@@ -141,29 +144,35 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 <section id="youll-learn-to" class="level2">
 <h2 class="anchored" data-anchor-id="youll-learn-to">You’ll learn to</h2>
+<div class="nonincremental">
 <ul>
 <li>Create <strong>bar charts</strong> and <strong>histograms</strong> in Stata and use them to describe distributions.</li>
 </ul>
+</div>
 <hr>
 </section>
 <section id="step-1-download-the-british-election-study-dataset-from-our-shared-folder" class="level2">
 <h2 class="anchored" data-anchor-id="step-1-download-the-british-election-study-dataset-from-our-shared-folder">Step 1: Download the British Election Study dataset from our shared folder</h2>
+<div class="nonincremental">
 <ul>
 <li>Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a></li>
 <li>Click on <code>data-raw</code></li>
 <li>Download <code>British_Election_Study_2024.dta</code></li>
 <li>Save it into the <code>data-raw</code> folder on your computer</li>
 </ul>
+</div>
 <hr>
 </section>
 <section id="step-2-download-the-companion-do-file-for-this-activity" class="level2">
 <h2 class="anchored" data-anchor-id="step-2-download-the-companion-do-file-for-this-activity">Step 2: Download the companion do-file for this activity</h2>
+<div class="nonincremental">
 <ul>
 <li>Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a></li>
 <li>Click on <code>do</code></li>
 <li>Download <code>visualise-bes.do</code></li>
 <li>Save it into the <code>do</code> folder on your computer</li>
 </ul>
+</div>
 <hr>
 </section>
 <section id="step-3-insert-the-path-to-your-folder-on-your-computer" class="level2">
@@ -221,14 +230,61 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <hr>
 </section>
-<section id="your-turn-find-additional-variables-to-summarise" class="level2">
-<h2 class="anchored" data-anchor-id="your-turn-find-additional-variables-to-summarise">Your turn: Find additional variables to summarise</h2>
+<section id="your-turn-find-additional-variables-to-visualise" class="level2">
+<h2 class="anchored" data-anchor-id="your-turn-find-additional-variables-to-visualise">Your turn: Find additional variables to visualise</h2>
 <div class="nonincremental">
 <ul>
 <li><code>hist</code> gives us histograms.</li>
 <li><code>graph hbar (count), over()</code> gives us the frequency bar charts.</li>
 <li>Explore the BES data and codebook to look for additional variables to visualise.</li>
 </ul>
+</div>
+<hr>
+</section>
+<section id="got-tired-of-the-bes-theres-more" class="level2">
+<h2 class="anchored" data-anchor-id="got-tired-of-the-bes-theres-more">Got tired of the BES? There’s more!</h2>
+<div class="nonincremental">
+<ul>
+<li><code>histogram-gdp.do</code> has the code for this histogram.</li>
+<li>Be sure to download <code>Quality_of_Government_2026.dta</code> first.</li>
+<li>Explore the <strong>Quality of Government</strong> dataset using the codebook.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/gdp_hist.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:67.0%" data-fig-cap=""></p>
+</figure>
+</div>
+</div>
+<hr>
+</section>
+<section id="still-bored-theres-even-more" class="level2">
+<h2 class="anchored" data-anchor-id="still-bored-theres-even-more">Still bored? There’s even more!</h2>
+<div class="nonincremental">
+<ul>
+<li><code>histogram-nss.do</code> has the code for this histogram.</li>
+<li>Be sure to download <code>National_Student_Survey_2025.dta</code> first.</li>
+<li>Explore the <strong>National Student Survey</strong> dataset using the codebook.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/nss_hist.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:67.0%" data-fig-cap=""></p>
+</figure>
+</div>
+</div>
+<hr>
+</section>
+<section id="fancy-a-challenge" class="level2">
+<h2 class="anchored" data-anchor-id="fancy-a-challenge">Fancy a challenge?</h2>
+<div class="nonincremental">
+<ul>
+<li>This histogram was made using the <strong>Brexit</strong> dataset.</li>
+<li>Can you reproduce it?</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/brexit_hist.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:67.0%" data-fig-cap=""></p>
+</figure>
+</div>
 </div>
 <hr>
 </section>

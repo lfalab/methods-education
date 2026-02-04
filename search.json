@@ -4,7 +4,7 @@
     "href": "slides/videos-stata/bar-hist-stata.html",
     "title": "Bar Charts and Histograms in Stata",
     "section": "",
-    "text": "Create bar charts and histograms in Stata and use them to describe distributions.\n\n\n\n\n\n\nAccess our Shared Project Folder\nClick on data-raw\nDownload British_Election_Study_2024.dta\nSave it into the data-raw folder on your computer\n\n\n\n\n\n\nAccess our Shared Project Folder\nClick on do\nDownload visualise-bes.do\nSave it into the do folder on your computer\n\n\n\n\n\n\n\nThis line of visualise-bes.do has an “address” that only works on my computer.\nReplace it with the “address” to your project folder on your computer.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIf you see this on the top-right pane of your Stata screen, it has worked!\nBe sure to save your do-file in your do folder.\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis do-file will serve as your companion for learning how to produce histograms and frequency bar charts.\n\n\n\n\n\n\n\n\n\n\n\n\n\nhist gives us histograms.\ngraph hbar (count), over() gives us the frequency bar charts.\nExplore the BES data and codebook to look for additional variables to visualise.\n\n\n\n\n\n\n\nFrequency bar charts are used for nominal variables and show counts by category.\nHistograms are used for ordinal, interval, and ratio variables and show counts within ranges of values.\n\n\nWhy this matters:\n\nGraphs help us see patterns that are hard to spot in tables alone.\nChoosing the wrong type of graph can hide important features or suggest structure that is not there.\nThese skills are essential for interpreting data in research papers, reports, and public debate."
+    "text": "Create bar charts and histograms in Stata and use them to describe distributions.\n\n\n\n\n\n\n\n\nAccess our Shared Project Folder\nClick on data-raw\nDownload British_Election_Study_2024.dta\nSave it into the data-raw folder on your computer\n\n\n\n\n\n\n\n\nAccess our Shared Project Folder\nClick on do\nDownload visualise-bes.do\nSave it into the do folder on your computer\n\n\n\n\n\n\n\n\nThis line of visualise-bes.do has an “address” that only works on my computer.\nReplace it with the “address” to your project folder on your computer.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIf you see this on the top-right pane of your Stata screen, it has worked!\nBe sure to save your do-file in your do folder.\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis do-file will serve as your companion for learning how to produce histograms and frequency bar charts.\n\n\n\n\n\n\n\n\n\n\n\n\n\nhist gives us histograms.\ngraph hbar (count), over() gives us the frequency bar charts.\nExplore the BES data and codebook to look for additional variables to visualise.\n\n\n\n\n\n\n\n\nhistogram-gdp.do has the code for this histogram.\nBe sure to download Quality_of_Government_2026.dta first.\nExplore the Quality of Government dataset using the codebook.\n\n\n\n\n\n\n\n\n\n\n\n\n\nhistogram-nss.do has the code for this histogram.\nBe sure to download National_Student_Survey_2025.dta first.\nExplore the National Student Survey dataset using the codebook.\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis histogram was made using the Brexit dataset.\nCan you reproduce it?\n\n\n\n\n\n\n\n\n\n\n\n\nFrequency bar charts are used for nominal variables and show counts by category.\nHistograms are used for ordinal, interval, and ratio variables and show counts within ranges of values.\n\n\nWhy this matters:\n\nGraphs help us see patterns that are hard to spot in tables alone.\nChoosing the wrong type of graph can hide important features or suggest structure that is not there.\nThese skills are essential for interpreting data in research papers, reports, and public debate."
   },
   {
     "objectID": "slides/videos-stata/bar-hist-stata.html#youll-learn-to",
@@ -49,11 +49,32 @@
     "text": "This do-file will serve as your companion for learning how to produce histograms and frequency bar charts."
   },
   {
-    "objectID": "slides/videos-stata/bar-hist-stata.html#your-turn-find-additional-variables-to-summarise",
-    "href": "slides/videos-stata/bar-hist-stata.html#your-turn-find-additional-variables-to-summarise",
+    "objectID": "slides/videos-stata/bar-hist-stata.html#your-turn-find-additional-variables-to-visualise",
+    "href": "slides/videos-stata/bar-hist-stata.html#your-turn-find-additional-variables-to-visualise",
     "title": "Bar Charts and Histograms in Stata",
     "section": "",
     "text": "hist gives us histograms.\ngraph hbar (count), over() gives us the frequency bar charts.\nExplore the BES data and codebook to look for additional variables to visualise."
+  },
+  {
+    "objectID": "slides/videos-stata/bar-hist-stata.html#got-tired-of-the-bes-theres-more",
+    "href": "slides/videos-stata/bar-hist-stata.html#got-tired-of-the-bes-theres-more",
+    "title": "Bar Charts and Histograms in Stata",
+    "section": "",
+    "text": "histogram-gdp.do has the code for this histogram.\nBe sure to download Quality_of_Government_2026.dta first.\nExplore the Quality of Government dataset using the codebook."
+  },
+  {
+    "objectID": "slides/videos-stata/bar-hist-stata.html#still-bored-theres-even-more",
+    "href": "slides/videos-stata/bar-hist-stata.html#still-bored-theres-even-more",
+    "title": "Bar Charts and Histograms in Stata",
+    "section": "",
+    "text": "histogram-nss.do has the code for this histogram.\nBe sure to download National_Student_Survey_2025.dta first.\nExplore the National Student Survey dataset using the codebook."
+  },
+  {
+    "objectID": "slides/videos-stata/bar-hist-stata.html#fancy-a-challenge",
+    "href": "slides/videos-stata/bar-hist-stata.html#fancy-a-challenge",
+    "title": "Bar Charts and Histograms in Stata",
+    "section": "",
+    "text": "This histogram was made using the Brexit dataset.\nCan you reproduce it?"
   },
   {
     "objectID": "slides/videos-stata/bar-hist-stata.html#recap",
@@ -112,11 +133,32 @@
     "text": "Step 6: Read through the do-file comments and execute the commands\n\nThis do-file will serve as your companion for learning how to produce histograms and frequency bar charts."
   },
   {
-    "objectID": "slides/videos-stata/bar-hist-stata-slides.html#your-turn-find-additional-variables-to-summarise",
-    "href": "slides/videos-stata/bar-hist-stata-slides.html#your-turn-find-additional-variables-to-summarise",
+    "objectID": "slides/videos-stata/bar-hist-stata-slides.html#your-turn-find-additional-variables-to-visualise",
+    "href": "slides/videos-stata/bar-hist-stata-slides.html#your-turn-find-additional-variables-to-visualise",
     "title": "Methods Education",
-    "section": "Your turn: Find additional variables to summarise",
-    "text": "Your turn: Find additional variables to summarise\n\nhist gives us histograms.\ngraph hbar (count), over() gives us the frequency bar charts.\nExplore the BES data and codebook to look for additional variables to visualise."
+    "section": "Your turn: Find additional variables to visualise",
+    "text": "Your turn: Find additional variables to visualise\n\nhist gives us histograms.\ngraph hbar (count), over() gives us the frequency bar charts.\nExplore the BES data and codebook to look for additional variables to visualise."
+  },
+  {
+    "objectID": "slides/videos-stata/bar-hist-stata-slides.html#got-tired-of-the-bes-theres-more",
+    "href": "slides/videos-stata/bar-hist-stata-slides.html#got-tired-of-the-bes-theres-more",
+    "title": "Methods Education",
+    "section": "Got tired of the BES? There’s more!",
+    "text": "Got tired of the BES? There’s more!\n\nhistogram-gdp.do has the code for this histogram.\nBe sure to download Quality_of_Government_2026.dta first.\nExplore the Quality of Government dataset using the codebook."
+  },
+  {
+    "objectID": "slides/videos-stata/bar-hist-stata-slides.html#still-bored-theres-even-more",
+    "href": "slides/videos-stata/bar-hist-stata-slides.html#still-bored-theres-even-more",
+    "title": "Methods Education",
+    "section": "Still bored? There’s even more!",
+    "text": "Still bored? There’s even more!\n\nhistogram-nss.do has the code for this histogram.\nBe sure to download National_Student_Survey_2025.dta first.\nExplore the National Student Survey dataset using the codebook."
+  },
+  {
+    "objectID": "slides/videos-stata/bar-hist-stata-slides.html#fancy-a-challenge",
+    "href": "slides/videos-stata/bar-hist-stata-slides.html#fancy-a-challenge",
+    "title": "Methods Education",
+    "section": "Fancy a challenge?",
+    "text": "Fancy a challenge?\n\nThis histogram was made using the Brexit dataset.\nCan you reproduce it?"
   },
   {
     "objectID": "slides/videos-stata/bar-hist-stata-slides.html#recap",
@@ -1792,11 +1834,11 @@
     "text": "Is democracy backsliding? According to V-DEM, yes!\n\nSource"
   },
   {
-    "objectID": "slides/lectures/measurement-lecture-slides.html#is-democracy-backsliding-according-to-other-measurements-no",
-    "href": "slides/lectures/measurement-lecture-slides.html#is-democracy-backsliding-according-to-other-measurements-no",
+    "objectID": "slides/lectures/measurement-lecture-slides.html#is-democracy-backsliding-according-to-other-indicators-no",
+    "href": "slides/lectures/measurement-lecture-slides.html#is-democracy-backsliding-according-to-other-indicators-no",
     "title": "Measurement and Types of Variables",
-    "section": "Is democracy backsliding? According to other measurements, no!",
-    "text": "Is democracy backsliding? According to other measurements, no!\n\nSource"
+    "section": "Is democracy backsliding? According to other indicators, no!",
+    "text": "Is democracy backsliding? According to other indicators, no!\n\nSource"
   },
   {
     "objectID": "slides/lectures/measurement-lecture-slides.html#the-critique-little-meng-2024-on-v-dem",
@@ -1839,6 +1881,13 @@
     "title": "Measurement and Types of Variables",
     "section": "Share your thoughts",
     "text": "Share your thoughts\n\nClick here, scan the QR code, or join at menti.com using the code 2173 3787"
+  },
+  {
+    "objectID": "slides/lectures/measurement-lecture-slides.html#dig-deeper",
+    "href": "slides/lectures/measurement-lecture-slides.html#dig-deeper",
+    "title": "Measurement and Types of Variables",
+    "section": "Dig Deeper",
+    "text": "Dig Deeper\n\nHow steep is Trump’s democratic backsliding?\n\nFinancial Times, 31 Jan 2026 (Access with your King’s email account).\n\nMethodology reviewed by Anne Meng."
   },
   {
     "objectID": "slides/lectures/measurement-lecture-slides.html#why-this-matters",
@@ -1925,11 +1974,11 @@
     "text": "Is democracy backsliding? According to V-DEM, yes!\n\n\n\n\n\nSource"
   },
   {
-    "objectID": "slides/lectures/measurement-lecture.html#is-democracy-backsliding-according-to-other-measurements-no",
-    "href": "slides/lectures/measurement-lecture.html#is-democracy-backsliding-according-to-other-measurements-no",
+    "objectID": "slides/lectures/measurement-lecture.html#is-democracy-backsliding-according-to-other-indicators-no",
+    "href": "slides/lectures/measurement-lecture.html#is-democracy-backsliding-according-to-other-indicators-no",
     "title": "Measurement and Types of Variables",
-    "section": "Is democracy backsliding? According to other measurements, no!",
-    "text": "Is democracy backsliding? According to other measurements, no!\n\n\n\n\n\nSource"
+    "section": "Is democracy backsliding? According to other indicators, no!",
+    "text": "Is democracy backsliding? According to other indicators, no!\n\n\n\n\n\nSource"
   },
   {
     "objectID": "slides/lectures/measurement-lecture.html#the-critique-little-meng-2024-on-v-dem",
@@ -1972,6 +2021,13 @@
     "title": "Measurement and Types of Variables",
     "section": "Share your thoughts",
     "text": "Share your thoughts\n\nClick here, scan the QR code, or join at menti.com using the code 2173 3787"
+  },
+  {
+    "objectID": "slides/lectures/measurement-lecture.html#dig-deeper",
+    "href": "slides/lectures/measurement-lecture.html#dig-deeper",
+    "title": "Measurement and Types of Variables",
+    "section": "Dig Deeper",
+    "text": "Dig Deeper\n\nHow steep is Trump’s democratic backsliding?\n\nFinancial Times, 31 Jan 2026 (Access with your King’s email account).\n\nMethodology reviewed by Anne Meng."
   },
   {
     "objectID": "slides/lectures/measurement-lecture.html#why-this-matters",
@@ -2916,7 +2972,7 @@
     "href": "slides/videos-stata/summary-stata.html",
     "title": "Summarising Distributions in Stata",
     "section": "",
-    "text": "Produce summary statistics and frequency tables in Stata and interpret what they show.\n\n\n\n\n\n\nAccess our Shared Project Folder\nClick on data-raw\nDownload British_Election_Study_2024.dta\nSave it into the data-raw folder on your computer\n\n\n\n\n\n\nAccess our Shared Project Folder\nClick on do\nDownload summarise-bes.do\nSave it into the do folder on your computer\n\n\n\n\n\n\n\nThis line of summarise-bes.do has an “address” that only works on my computer.\nReplace it with the “address” to your project folder on your computer.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIf you see this on the top-right pane of your Stata screen, it has worked!\nBe sure to save your do-file in your do folder.\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis do-file will serve as your companion for learning how to produce summary statistics and frequency tables.\n\n\n\n\n\n\n\n\n\n\n\n\n\nsummarize gives us the mean and standard deviation (summary statistics).\ntabulate gives us frequency tables.\nExplore the BES data and codebook to look for additional variables to summarise.\n\n\n\n\n\n\n\nIn this video, you learned how to summarise distributions in Stata.\nInterpreting output requires checking for non-substantive values and understanding what each statistic represents.\n\n\nWhy this matters:\n\nSummary statistics and frequency tables help you understand what is typical, what is rare, and whether values make sense.\nThey allow you to detect problems in the data before moving on to graphs or statistical models."
+    "text": "Produce summary statistics and frequency tables in Stata and interpret what they show.\n\n\n\n\n\n\n\n\nAccess our Shared Project Folder\nClick on data-raw\nDownload British_Election_Study_2024.dta\nSave it into the data-raw folder on your computer\n\n\n\n\n\n\n\n\nAccess our Shared Project Folder\nClick on do\nDownload summarise-bes.do\nSave it into the do folder on your computer\n\n\n\n\n\n\n\n\nThis line of summarise-bes.do has an “address” that only works on my computer.\nReplace it with the “address” to your project folder on your computer.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIf you see this on the top-right pane of your Stata screen, it has worked!\nBe sure to save your do-file in your do folder.\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis do-file will serve as your companion for learning how to produce summary statistics and frequency tables.\n\n\n\n\n\n\n\n\n\n\n\n\n\nsummarize gives us the mean and standard deviation (summary statistics).\ntabulate gives us frequency tables.\nExplore the BES data and codebook to look for additional variables to summarise.\n\n\n\n\n\n\n\nIn this video, you learned how to summarise distributions in Stata.\nInterpreting output requires checking for non-substantive values and understanding what each statistic represents.\n\n\nWhy this matters:\n\nSummary statistics and frequency tables help you understand what is typical, what is rare, and whether values make sense.\nThey allow you to detect problems in the data before moving on to graphs or statistical models."
   },
   {
     "objectID": "slides/videos-stata/summary-stata.html#youll-learn-to",
