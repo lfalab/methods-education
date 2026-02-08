@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Summarising Distributions in Stata</title>
+<title>Correlations Between Nominal Variables</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/summarising-distribution.html">Week 4: Describing Distributions (Univariate Description)</a></li><li class="breadcrumb-item"><a href="../../slides/videos-stata/summary-stata.html">Summarising Distributions in Stata</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -251,7 +251,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/summary-stata.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../slides/videos-stata/summary-stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Summarising Distributions in Stata</span></a>
   </div>
 </li>
@@ -273,141 +273,104 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#summarising-distributions-in-stata" id="toc-summarising-distributions-in-stata" class="nav-link active" data-scroll-target="#summarising-distributions-in-stata">Summarising Distributions in Stata</a>
+  <li><a href="#correlations-between-nominal-variables" id="toc-correlations-between-nominal-variables" class="nav-link active" data-scroll-target="#correlations-between-nominal-variables">Correlations Between Nominal Variables</a>
   <ul class="collapse">
   <li><a href="#youll-learn-to" id="toc-youll-learn-to" class="nav-link" data-scroll-target="#youll-learn-to">You’ll learn to</a></li>
-  <li><a href="#step-1-download-the-british-election-study-dataset-from-our-shared-folder" id="toc-step-1-download-the-british-election-study-dataset-from-our-shared-folder" class="nav-link" data-scroll-target="#step-1-download-the-british-election-study-dataset-from-our-shared-folder">Step 1: Download the British Election Study dataset from our shared folder</a></li>
-  <li><a href="#step-2-download-the-companion-do-file-for-this-activity" id="toc-step-2-download-the-companion-do-file-for-this-activity" class="nav-link" data-scroll-target="#step-2-download-the-companion-do-file-for-this-activity">Step 2: Download the companion do-file for this activity</a></li>
-  <li><a href="#step-3-insert-the-path-to-your-folder-on-your-computer" id="toc-step-3-insert-the-path-to-your-folder-on-your-computer" class="nav-link" data-scroll-target="#step-3-insert-the-path-to-your-folder-on-your-computer">Step 3: Insert the path to your folder on your computer</a></li>
-  <li><a href="#step-4-select-the-top-portion-of-the-do-file-and-click-execute-do" id="toc-step-4-select-the-top-portion-of-the-do-file-and-click-execute-do" class="nav-link" data-scroll-target="#step-4-select-the-top-portion-of-the-do-file-and-click-execute-do">Step 4: Select the top portion of the do file and click “execute (do)”</a></li>
-  <li><a href="#step-5-check-if-it-has-worked-and-save-your-do-file" id="toc-step-5-check-if-it-has-worked-and-save-your-do-file" class="nav-link" data-scroll-target="#step-5-check-if-it-has-worked-and-save-your-do-file">Step 5: Check if it has worked and save your do-file</a></li>
-  <li><a href="#step-6-read-through-the-do-file-comments-and-execute-the-commands" id="toc-step-6-read-through-the-do-file-comments-and-execute-the-commands" class="nav-link" data-scroll-target="#step-6-read-through-the-do-file-comments-and-execute-the-commands">Step 6: Read through the do-file comments and execute the commands</a></li>
-  <li><a href="#your-turn-find-additional-variables-to-summarise" id="toc-your-turn-find-additional-variables-to-summarise" class="nav-link" data-scroll-target="#your-turn-find-additional-variables-to-summarise">Your turn: Find additional variables to summarise</a></li>
+  <li><a href="#general-election-vote-frequency-table" id="toc-general-election-vote-frequency-table" class="nav-link" data-scroll-target="#general-election-vote-frequency-table">General Election vote: Frequency table</a></li>
+  <li><a href="#general-election-vote-frequency-bar-chart" id="toc-general-election-vote-frequency-bar-chart" class="nav-link" data-scroll-target="#general-election-vote-frequency-bar-chart">General Election vote: Frequency bar chart</a></li>
+  <li><a href="#frequency-bar-charts" id="toc-frequency-bar-charts" class="nav-link" data-scroll-target="#frequency-bar-charts">Frequency bar charts</a></li>
   <li><a href="#recap" id="toc-recap" class="nav-link" data-scroll-target="#recap">Recap</a></li>
   </ul></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="summary-stata-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="correlations-nominal-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/summarising-distribution.html">Week 4: Describing Distributions (Univariate Description)</a></li><li class="breadcrumb-item"><a href="../../slides/videos-stata/summary-stata.html">Summarising Distributions in Stata</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
-<section id="summarising-distributions-in-stata" class="level1 title-left">
-<h1 class="title-left">Summarising Distributions in Stata</h1>
+<section id="correlations-between-nominal-variables" class="level1 title-left">
+<h1 class="title-left">Correlations Between Nominal Variables</h1>
 <hr>
 <section id="youll-learn-to" class="level2">
 <h2 class="anchored" data-anchor-id="youll-learn-to">You’ll learn to</h2>
-<div class="nonincremental">
+<div class="presenter-space">
 <ul>
-<li>Produce <strong>summary statistics</strong> and <strong>frequency tables</strong> in Stata and interpret what they show.</li>
+<li>Describe associations between two categorical variables using <strong>cross-tabulations</strong> and <strong>bivariate frequency charts</strong>.</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="step-1-download-the-british-election-study-dataset-from-our-shared-folder" class="level2">
-<h2 class="anchored" data-anchor-id="step-1-download-the-british-election-study-dataset-from-our-shared-folder">Step 1: Download the British Election Study dataset from our shared folder</h2>
+<section id="general-election-vote-frequency-table" class="level2">
+<h2 class="anchored" data-anchor-id="general-election-vote-frequency-table">General Election vote: Frequency table</h2>
+<div class="presenter-space">
 <div class="nonincremental">
-<ul>
-<li>Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a></li>
-<li>Click on <code>data-raw</code></li>
-<li>Download <code>British_Election_Study_2024.dta</code></li>
-<li>Save it into the <code>data-raw</code> folder on your computer</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="step-2-download-the-companion-do-file-for-this-activity" class="level2">
-<h2 class="anchored" data-anchor-id="step-2-download-the-companion-do-file-for-this-activity">Step 2: Download the companion do-file for this activity</h2>
-<div class="nonincremental">
-<ul>
-<li>Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a></li>
-<li>Click on <code>do</code></li>
-<li>Download <code>summarise-bes.do</code></li>
-<li>Save it into the <code>do</code> folder on your computer</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="step-3-insert-the-path-to-your-folder-on-your-computer" class="level2">
-<h2 class="anchored" data-anchor-id="step-3-insert-the-path-to-your-folder-on-your-computer">Step 3: Insert the path to your folder on your computer</h2>
-<div class="nonincremental">
-<ul>
-<li>This line of <code>summarise-bes.do</code> has an “address” that only works on my computer.</li>
-<li>Replace it with the “address” to your project folder on your computer.</li>
-</ul>
+<p>Which party did you vote for in the general election?</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../../assets/stata-replace-cd.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="../../assets/vote-frequency.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
+</div>
+<!-- | 2024 General Election vote    | Frequency | Percent    | -->
+<!-- | ----------------------------- | --------- | ---------- | -->
+<!-- | Refused                       | 143       | 6.48       | -->
+<!-- | Don’t know                    | 18        | 0.82       | -->
+<!-- | Labour                        | 895       | 40.55      | -->
+<!-- | Conservatives                 | 408       | 18.49      | -->
+<!-- | Liberal Democrats             | 224       | 10.15      | -->
+<!-- | Scottish National Party (SNP) | 75        | 3.40       | -->
+<!-- | Plaid Cymru                   | 22        | 1.00       | -->
+<!-- | Green Party                   | 148       | 6.71       | -->
+<!-- | Reform UK                     | 221       | 10.01      | -->
+<!-- | Other (WRITE IN)              | 20        | 0.91       | -->
+<!-- | An independent candidate      | 33        | 1.50       | -->
+<!-- | **Total**                     | **2,207** | **100.00** | -->
 </div>
 </div>
 <hr>
 </section>
-<section id="step-4-select-the-top-portion-of-the-do-file-and-click-execute-do" class="level2">
-<h2 class="anchored" data-anchor-id="step-4-select-the-top-portion-of-the-do-file-and-click-execute-do">Step 4: Select the top portion of the do file and click “execute (do)”</h2>
+<section id="general-election-vote-frequency-bar-chart" class="level2">
+<h2 class="anchored" data-anchor-id="general-election-vote-frequency-bar-chart">General Election vote: Frequency bar chart</h2>
+<div class="presenter-space">
 <div class="nonincremental">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../../assets/stata-select-execute.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="../../assets/bes_vote_bar.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
+</div>
 </div>
 </div>
 <hr>
 </section>
-<section id="step-5-check-if-it-has-worked-and-save-your-do-file" class="level2">
-<h2 class="anchored" data-anchor-id="step-5-check-if-it-has-worked-and-save-your-do-file">Step 5: Check if it has worked and save your do-file</h2>
-<div class="nonincremental">
+<section id="frequency-bar-charts" class="level2">
+<h2 class="anchored" data-anchor-id="frequency-bar-charts">Frequency bar charts</h2>
+<div class="presenter-space">
 <ul>
-<li>If you see this on the top-right pane of your Stata screen, it has worked!</li>
-<li>Be sure to <strong>save your do-file</strong> in your <code>do</code> folder.</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/stata-bes-variables.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-</div>
-<hr>
-</section>
-<section id="step-6-read-through-the-do-file-comments-and-execute-the-commands" class="level2">
-<h2 class="anchored" data-anchor-id="step-6-read-through-the-do-file-comments-and-execute-the-commands">Step 6: Read through the do-file comments and execute the commands</h2>
-<div class="nonincremental">
-<ul>
-<li>This do-file will serve as your companion for learning how to produce <strong>summary statistics</strong> and <strong>frequency tables</strong>.</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/stata-do-age.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-</div>
-<hr>
-</section>
-<section id="your-turn-find-additional-variables-to-summarise" class="level2">
-<h2 class="anchored" data-anchor-id="your-turn-find-additional-variables-to-summarise">Your turn: Find additional variables to summarise</h2>
-<div class="nonincremental">
-<ul>
-<li><code>summarize</code> gives us the <strong>mean</strong> and <strong>standard deviation</strong> (summary statistics).</li>
-<li><code>tabulate</code> gives us <strong>frequency tables</strong>.</li>
-<li>Explore the BES data and codebook to look for additional variables to summarise.</li>
+<li>Good for visualising distributions of <strong>nominal</strong> variables.</li>
+<li>Shows how many observations are in each <strong>category</strong>.</li>
+<li>The order of the bars does <strong>not</strong> make a difference.</li>
 </ul>
 </div>
 <hr>
 </section>
 <section id="recap" class="level2">
 <h2 class="anchored" data-anchor-id="recap">Recap</h2>
+<div class="presenter-space">
 <ul>
-<li>In this video, you learned how to <strong>summarise distributions</strong> in Stata.</li>
-<li>Interpreting output requires checking for non-substantive values and understanding what each statistic represents.</li>
+<li><strong>Bar charts</strong> and <strong>histograms</strong> visualise distributions.</li>
+<li>Bar charts are used for <strong>nominal</strong> variables and show counts by category.</li>
+<li>Histograms are used for <strong>ordinal</strong>, <strong>interval</strong>, and <strong>ratio</strong> variables and show counts within ranges of values.</li>
 </ul>
+</div>
 <hr>
+<div class="presenter-space">
 <p><strong>Why this matters:</strong></p>
 <ul>
-<li>Summary statistics and frequency tables help you understand what is typical, what is rare, and whether values make sense.</li>
-<li>They allow you to detect problems in the data before moving on to graphs or statistical models.</li>
+<li>The wrong type of graph can obscure patterns or suggest structure that is not there.</li>
+<li>The right visualisation helps us see what is typical, what is rare, and how values are distributed.</li>
 </ul>
+</div>
 
 
 </section>

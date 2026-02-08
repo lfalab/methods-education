@@ -9,8 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <meta name="author" content="Leonardo Falabella">
-  <title>Lecture 2: Research Questions, Theories, and Hypotheses</title>
+  <title>Correlations Between Nominal Variables</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -29,7 +28,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-f88d935cd01326925f73dc62b106448c.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-7433acd2865db5fa81269247cd6920be.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -126,209 +125,87 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Lecture 2: Research Questions, Theories, and Hypotheses</h1>
-  <p class="subtitle">Statistics for Political Science - Week 2</p>
 
-<div class="quarto-title-authors">
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-Leonardo Falabella 
+<section>
+<section id="correlations-between-nominal-variables" class="title-slide slide level1 title-left center">
+<h1>Correlations Between Nominal Variables</h1>
+
+</section>
+<section id="youll-learn-to" class="slide level2">
+<h2>You’ll learn to</h2>
+<div class="presenter-space">
+<ul>
+<li class="fragment">Describe associations between two categorical variables using <strong>cross-tabulations</strong> and <strong>bivariate frequency charts</strong>.</li>
+</ul>
+</div>
+</section>
+<section id="general-election-vote-frequency-table" class="slide level2">
+<h2>General Election vote: Frequency table</h2>
+<div class="presenter-space">
+<p>Which party did you vote for in the general election?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../assets/vote-frequency.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+<!-- | 2024 General Election vote    | Frequency | Percent    | -->
+<!-- | ----------------------------- | --------- | ---------- | -->
+<!-- | Refused                       | 143       | 6.48       | -->
+<!-- | Don’t know                    | 18        | 0.82       | -->
+<!-- | Labour                        | 895       | 40.55      | -->
+<!-- | Conservatives                 | 408       | 18.49      | -->
+<!-- | Liberal Democrats             | 224       | 10.15      | -->
+<!-- | Scottish National Party (SNP) | 75        | 3.40       | -->
+<!-- | Plaid Cymru                   | 22        | 1.00       | -->
+<!-- | Green Party                   | 148       | 6.71       | -->
+<!-- | Reform UK                     | 221       | 10.01      | -->
+<!-- | Other (WRITE IN)              | 20        | 0.91       | -->
+<!-- | An independent candidate      | 33        | 1.50       | -->
+<!-- | **Total**                     | **2,207** | **100.00** | -->
+</div>
+</section>
+<section id="general-election-vote-frequency-bar-chart" class="slide level2">
+<h2>General Election vote: Frequency bar chart</h2>
+<div class="presenter-space">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../assets/bes_vote_bar.jpg" class="quarto-figure quarto-figure-center"></p>
+</figure>
 </div>
 </div>
+</section>
+<section id="frequency-bar-charts" class="slide level2">
+<h2>Frequency bar charts</h2>
+<div class="presenter-space">
+<ul>
+<li class="fragment">Good for visualising distributions of <strong>nominal</strong> variables.</li>
+<li class="fragment">Shows how many observations are in each <strong>category</strong>.</li>
+<li class="fragment">The order of the bars does <strong>not</strong> make a difference.</li>
+</ul>
+</div>
+</section>
+<section id="recap" class="slide level2">
+<h2>Recap</h2>
+<div class="presenter-space">
+<ul>
+<li class="fragment"><strong>Bar charts</strong> and <strong>histograms</strong> visualise distributions.</li>
+<li class="fragment">Bar charts are used for <strong>nominal</strong> variables and show counts by category.</li>
+<li class="fragment">Histograms are used for <strong>ordinal</strong>, <strong>interval</strong>, and <strong>ratio</strong> variables and show counts within ranges of values.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="presenter-space">
+<p><strong>Why this matters:</strong></p>
+<ul>
+<li class="fragment">The wrong type of graph can obscure patterns or suggest structure that is not there.</li>
+<li class="fragment">The right visualisation helps us see what is typical, what is rare, and how values are distributed.</li>
+</ul>
 </div>
 
-</section>
-<section id="welcome" class="slide level2">
-<h2>Welcome</h2>
-<p>Today’s goals:</p>
-<ul>
-<li>Reiterate how Problem Set 1 (PS1) works</li>
-<li>Recap the core points from this week’s videos</li>
-<li>Work through a group activity on <strong>research questions, theories, and hypotheses</strong></li>
-</ul>
-</section>
-<section id="announcements" class="slide level2">
-<h2>Announcements</h2>
-<ul>
-<li><a href="https://lfalab.github.io/methods-education/">Website</a> hosting all video and lecture slides</li>
-<li><a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a> for the datasets and do-files we’ll be using throughout the module</li>
-<li>Have a question about module content? Ask it on the KEATS <a href="https://keats.kcl.ac.uk/mod/forum/view.php?id=8967500">Discussion Forum</a>!</li>
-</ul>
-</section>
-<section id="problem-set-1-ps1-the-big-picture" class="slide level2">
-<h2>Problem Set 1 (PS1): The Big Picture</h2>
-<p>PS1 is completed through <strong>weekly preparatory activities</strong> on KEATS:</p>
-<ul>
-<li>Interactive videos (with attention-check questions)</li>
-<li>Short quizzes</li>
-<li>These run from <strong>Week 2</strong> to <strong>Week 10</strong> (excluding Reading Week)</li>
-<li>The first PS1 work was due <strong>today</strong> (28 Jan) <strong>before lecture</strong></li>
-</ul>
-</section>
-<section id="how-ps1-works-core-rules" class="slide level2">
-<h2>How PS1 Works (Core Rules)</h2>
-<p>Each week:</p>
-<ul>
-<li><strong>Videos</strong> introduce key concepts</li>
-<li><strong>Quizzes</strong> test understanding of those concepts</li>
-<li><strong>Lecture</strong> and seminar activities assume this preparation</li>
-</ul>
-<p>PS1 is designed to support learning over time, not last-minute revision</p>
-</section>
-<section id="quizzes-vs-videos-important-distinction" class="slide level2">
-<h2>Quizzes vs Videos (Important Distinction)</h2>
-<ul>
-<li><p><strong>Quizzes</strong></p>
-<ul>
-<li>5–10 multiple-choice questions</li>
-<li>Unlimited attempts</li>
-<li>Highest score counts</li>
-<li>Deadlines are enforced</li>
-</ul></li>
-</ul>
-</section>
-<section id="quizzes-vs-videos-important-distinction-1" class="slide level2">
-<h2>Quizzes vs Videos (Important Distinction)</h2>
-<ul>
-<li><p><strong>Videos</strong></p>
-<ul>
-<li>Include attention-check questions</li>
-<li>One attempt per question</li>
-<li>Videos remain accessible throughout the term</li>
-</ul></li>
-<li><p>If you miss a quiz, you can still earn <strong>partial credit</strong> for that week via the videos.</p></li>
-</ul>
-</section>
-<section id="flexibility-built-in" class="slide level2">
-<h2>Flexibility Built In</h2>
-<ul>
-<li>There are <strong>eight</strong> weeks with PS1 activities</li>
-<li>Your <strong>best six weekly scores</strong> count</li>
-<li>The two lowest scores are dropped</li>
-<li>This is designed as <strong>insurance</strong>, not a target</li>
-</ul>
-</section>
-<section id="research-questions-descriptive-vs-causal" class="slide level2">
-<h2>Research Questions: Descriptive vs Causal</h2>
-<ul>
-<li>Empirical questions can be descriptive or causal.</li>
-<li><strong>Descriptive</strong> questions ask what the world looks like.</li>
-<li><strong>Causal</strong> questions ask what would happen if we intervened.</li>
-</ul>
-</section>
-<section id="descriptive-questions" class="slide level2">
-<h2>Descriptive questions</h2>
-<ul>
-<li><p>Descriptive questions can be about <strong>distributions</strong>, <strong>trends</strong>, or <strong>correlations</strong>.</p>
-<ul>
-<li>What percentage of countries are democratic?</li>
-<li>Is there a global trend towards democratic backsliding?</li>
-<li>Is democratic backsliding more prevalent in countries with higher political polarisation?</li>
-</ul></li>
-</ul>
-</section>
-<section id="causal-questions" class="slide level2">
-<h2>Causal questions</h2>
-<ul>
-<li><p>Causal questions ask if some variables <strong>drive change</strong> in others.</p>
-<ul>
-<li>Does exposure to divisive content on social media make people more tolerant of political violence?</li>
-<li>Does declining trust in political elites weaken commitment to democratic norms?</li>
-<li>Do compulsory voting laws increase political participation?</li>
-</ul></li>
-</ul>
-</section>
-<section id="complementarities-between-questions" class="slide level2">
-<h2>Complementarities between questions</h2>
-<ul>
-<li><p><strong>Describing a distribution:</strong></p>
-<ul>
-<li>What percentage of the world’s wealth is held by the 50 richest people?</li>
-</ul></li>
-<li><p><strong>Describing a trend:</strong></p>
-<ul>
-<li>Is economic inequality increasing across the world?</li>
-</ul></li>
-</ul>
-</section>
-<section id="complementarities-between-questions-1" class="slide level2">
-<h2>Complementarities between questions</h2>
-<ul>
-<li><p><strong>Describing a correlation:</strong></p>
-<ul>
-<li>Are autocracies more unequal than democracies?</li>
-</ul></li>
-<li><p><strong>Probing causation:</strong></p>
-<ul>
-<li>Do increases in income inequality make democratic backsliding more likely?</li>
-</ul></li>
-</ul>
-</section>
-<section id="theories" class="slide level2">
-<h2>Theories</h2>
-<ul>
-<li>A <strong>theory</strong> is “a reasoned and precise speculation about the answer to a research question” (King, Keohane, and Verba 1994:3).</li>
-<li>Based on our knowledge and reasoning, what’s a plausible answer to a research question?</li>
-</ul>
-</section>
-<section id="example-health-care-systems-and-policy-responses" class="slide level2">
-<h2>Example: Health care systems and policy responses</h2>
-<ul>
-<li><p><strong>Research question:</strong> How did countries’ health care systems affect their abilities to mitigate the impact of the Covid-19 pandemic?</p></li>
-<li><p><strong>Theory:</strong> Countries with public health care systems took advantage of their centralised bureaucracies to implement more effective policy responses.</p></li>
-</ul>
-</section>
-<section id="hypotheses" class="slide level2">
-<h2>Hypotheses</h2>
-<ul>
-<li>A <strong>hypothesis</strong> is an empirically testable implication of a theory.</li>
-<li>Given your theory, what should we observe in the world?</li>
-</ul>
-</section>
-<section id="example-health-care-systems-and-policy-responses-1" class="slide level2">
-<h2>Example: Health care systems and policy responses</h2>
-<ul>
-<li><p><strong>Theory:</strong> Countries with public health care systems took advantage of their centralised bureaucracies to implement more effective policy responses.</p></li>
-<li><p><strong>Hypothesis:</strong> Countries with public health care systems had lower Covid death rates than countries with private health care systems.</p></li>
-</ul>
-</section>
-<section id="group-activity-research-questions-theories-and-hypotheses" class="slide level2">
-<h2>Group Activity: Research Questions, Theories, and Hypotheses</h2>
-<p>Working in groups of about three. By the end of the activity, each group should have:</p>
-<ul>
-<li>One clearly stated <strong>research question</strong></li>
-<li>A decision about whether the question is <strong>descriptive</strong> or <strong>causal</strong></li>
-<li>One <strong>theory</strong> that offers a a reasoned and precise speculation about the answer to your question</li>
-<li>One <strong>hypothesis</strong> that follows logically from the theory</li>
-</ul>
-</section>
-<section id="group-activity-research-questions-theories-and-hypotheses-1" class="slide level2">
-<h2>Group Activity: Research Questions, Theories, and Hypotheses</h2>
-<p>General guidance:</p>
-<ul>
-<li>The <strong>research question</strong> should come first and guide everything else</li>
-<li>The <strong>theory</strong> should explain why, not just what</li>
-<li>The <strong>hypothesis</strong> should be empirically testable</li>
-<li>Descriptive questions can still have theories and hypotheses</li>
-</ul>
-</section>
-<section id="why-this-matters-for-the-module" class="slide level2">
-<h2>Why This Matters for the Module</h2>
-<ul>
-<li>This structure, <strong>question → theory → hypothesis</strong>, will reappear throughout the module and your future research projects.</li>
-<li>These are <strong>foundational concepts</strong> where misunderstandings are very common.</li>
-</ul>
-</section>
-<section id="looking-ahead" class="slide level2">
-<h2>Looking Ahead</h2>
-<ul>
-<li>The next PS1 work is due <strong>next week</strong> (4 Feb) <strong>before lecture</strong></li>
-<li>Please check KEATS regularly.</li>
-</ul>
 
-
-</section>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
