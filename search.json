@@ -1159,7 +1159,7 @@
     "href": "slides/videos-concepts/summarising-distribution.html",
     "title": "Summarising a Distribution",
     "section": "",
-    "text": "Interpret the mean, median, and mode as summaries of a distribution’s central tendency.\n\n\n\n\n\n\n\n\nImagine you are choosing a course to apply for.\nA university advertises that 80% of students are satisfied with the course.\nAt first glance, this sounds positive.\n\n\n\n\n\n\n\n\nA number on its own is hard to evaluate.\nTo judge whether 80% is impressive, we need to know what is typical for similar courses.\nThis is where summaries of central tendency become useful.\n\n\n\n\n\n\n\n\nThe mean is the average value. We find it by summing the values of observations and dividing by the number of observations.\nIt informs what is typical in a distribution of numerical values.\nFor course satisfaction, the national mean is about 82%.\n\n\n\n\n\n\n\n\nAn 80% satisfaction rate is slightly below the national average.\nThe value itself did not change, but its interpretation did once we introduced a reference point.\nWith this new information, 80% is not as impressive as it seems.\n\n\n\n\n\n\n\n\nThe median is the value that divides the distribution in half\nHalf of the observations lie above it, and half lie below it.\nFor course satisfaction, the national median is about 84%.\n\n\n\n\n\n\n\n\nThe median is useful when we want a summary that is less sensitive to extreme values.\nThe mean annual salary in London (2025) is £70.3k.\nThe median salary is £49.7k.\n\n\n\n\n\n\n\n\nThe mode is the most frequently occurring value or category.\nIt is especially useful for nominal variables, where averages are not meaningful.\n\n\n\n\n\n\n\n\nWhich party did you vote for in the general election?\n\n\n\n\n\n\n\n\n\n\n\n\n\nMean, median, and mode summarize what is typical in a distribution.\nThey answer related but distinct questions about central tendency.\n\n\n\n\nWhy this matters:\n\nSummaries of central tendency help us interpret numbers in context rather than in isolation.\nThey allow meaningful comparison across cases, such as courses, voters, or income levels.",
+    "text": "Interpret the mean, median, and mode as summaries of a distribution’s central tendency.\n\n\n\n\n\n\n\n\nImagine you are choosing a course to apply for.\nA university advertises that 80% of students are satisfied with the course.\nAt first glance, this sounds positive.\n\n\n\n\n\n\n\n\nA number on its own is hard to evaluate.\nTo judge whether 80% is impressive, we need to know what is typical for similar courses.\nThis is where summaries of central tendency become useful.\n\n\n\n\n\n\n\n\nThe mean is the average value. We find it by summing the values of observations and dividing by the number of observations.\nIt informs what is typical in a distribution of numerical values.\nFor course satisfaction, the national mean is about 82%.\n\n\n\n\n\n\n\n\nAn 80% satisfaction rate is slightly below the national average.\nThe value itself did not change, but its interpretation did once we introduced a reference point.\nWith this new information, 80% is not as impressive as it seems.\n\n\n\n\n\n\n\n\nThe median is the value that divides the distribution in half.\nHalf of the observations lie above it, and half lie below it.\nFor course satisfaction, the national median is about 84%.\n\n\n\n\n\n\n\n\nThe median is useful when we want a summary that is less sensitive to extreme values.\nThe mean annual salary in London (2025) is £70.3k.\nThe median salary is £49.7k.\n\n\n\n\n\n\n\n\nThe mode is the most frequently occurring value or category.\nIt is especially useful for nominal variables, where averages are not meaningful.\n\n\n\n\n\n\n\n\nWhich party did you vote for in the general election?\n\n\n\n\n\n\n\n\n\n\n\n\n\nMean, median, and mode summarize what is typical in a distribution.\nThey answer related but distinct questions about central tendency.\n\n\n\n\nWhy this matters:\n\nSummaries of central tendency help us interpret numbers in context rather than in isolation.\nThey allow meaningful comparison across cases, such as courses, voters, or income levels.",
     "crumbs": [
       "Week 4: Describing Distributions (Univariate Description)",
       "Summarising a Distribution"
@@ -1225,7 +1225,7 @@
     "href": "slides/videos-concepts/summarising-distribution.html#the-median",
     "title": "Summarising a Distribution",
     "section": "",
-    "text": "The median is the value that divides the distribution in half\nHalf of the observations lie above it, and half lie below it.\nFor course satisfaction, the national median is about 84%.",
+    "text": "The median is the value that divides the distribution in half.\nHalf of the observations lie above it, and half lie below it.\nFor course satisfaction, the national median is about 84%.",
     "crumbs": [
       "Week 4: Describing Distributions (Univariate Description)",
       "Summarising a Distribution"
@@ -1315,7 +1315,7 @@
     "href": "slides/videos-concepts/summarising-distribution-slides.html#the-median",
     "title": "",
     "section": "The median",
-    "text": "The median\n\n\nThe median is the value that divides the distribution in half\nHalf of the observations lie above it, and half lie below it.\nFor course satisfaction, the national median is about 84%."
+    "text": "The median\n\n\nThe median is the value that divides the distribution in half.\nHalf of the observations lie above it, and half lie below it.\nFor course satisfaction, the national median is about 84%."
   },
   {
     "objectID": "slides/videos-concepts/summarising-distribution-slides.html#interpreting-the-median",
@@ -1901,566 +1901,364 @@
     "text": "Recap\n\n\nNormative questions ask what should be happening in the world.\nEmpirical questions ask what is happening.\nOur exclusion of normative questions is methodological, not evaluative."
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses.html#welcome",
-    "href": "slides/lectures/questions-theories-hypotheses.html#welcome",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "objectID": "slides/lectures/measurement-lecture.html#welcome",
+    "href": "slides/lectures/measurement-lecture.html#welcome",
+    "title": "Lecture 3: Measurement and Types of Variables",
     "section": "Welcome",
-    "text": "Welcome\nToday’s goals:\n\nReiterate how Problem Set 1 (PS1) works\nRecap the core points from this week’s videos\nWork through a group activity on research questions, theories, and hypotheses",
+    "text": "Welcome\nToday’s goals:\n\nRecap the core points from this week’s videos\nWork through a group discussion on measuring democracy",
     "crumbs": [
-      "Week 2: Research Questions, Theories, and Hypotheses",
-      "Lecture 2: Research Questions, Theories, and Hypotheses"
+      "Week 3: Measurement and Variable Types",
+      "Lecture 3: Measurement and Types of Variables"
     ]
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses.html#announcements",
-    "href": "slides/lectures/questions-theories-hypotheses.html#announcements",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Announcements",
-    "text": "Announcements\n\nWebsite hosting all video and lecture slides\nShared Project Folder for the datasets and do-files we’ll be using throughout the module\nHave a question about module content? Ask it on the KEATS Discussion Forum!",
+    "objectID": "slides/lectures/measurement-lecture.html#example-education-levels-and-democratisation",
+    "href": "slides/lectures/measurement-lecture.html#example-education-levels-and-democratisation",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "Example: Education levels and democratisation",
+    "text": "Example: Education levels and democratisation\n\nResearch question: Do higher levels of education make countries more likely to democratise?",
     "crumbs": [
-      "Week 2: Research Questions, Theories, and Hypotheses",
-      "Lecture 2: Research Questions, Theories, and Hypotheses"
+      "Week 3: Measurement and Variable Types",
+      "Lecture 3: Measurement and Types of Variables"
     ]
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses.html#problem-set-1-ps1-the-big-picture",
-    "href": "slides/lectures/questions-theories-hypotheses.html#problem-set-1-ps1-the-big-picture",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Problem Set 1 (PS1): The Big Picture",
-    "text": "Problem Set 1 (PS1): The Big Picture\nPS1 is completed through weekly preparatory activities on KEATS:\n\nInteractive videos (with attention-check questions)\nShort quizzes\nThese run from Week 2 to Week 10 (excluding Reading Week)\nThe first PS1 work was due today (28 Jan) before lecture",
+    "objectID": "slides/lectures/measurement-lecture.html#level-of-education",
+    "href": "slides/lectures/measurement-lecture.html#level-of-education",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "Level of education",
+    "text": "Level of education\n\nHow do we know if a country’s level of education is high or low?\nWhat information do we collect?\nWe should start by figuring out a definition for the level of education.",
     "crumbs": [
-      "Week 2: Research Questions, Theories, and Hypotheses",
-      "Lecture 2: Research Questions, Theories, and Hypotheses"
+      "Week 3: Measurement and Variable Types",
+      "Lecture 3: Measurement and Types of Variables"
     ]
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses.html#how-ps1-works-core-rules",
-    "href": "slides/lectures/questions-theories-hypotheses.html#how-ps1-works-core-rules",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "How PS1 Works (Core Rules)",
-    "text": "How PS1 Works (Core Rules)\nEach week:\n\nVideos introduce key concepts\nQuizzes test understanding of those concepts\nLecture and seminar activities assume this preparation\n\nPS1 is designed to support learning over time, not last-minute revision",
+    "objectID": "slides/lectures/measurement-lecture.html#defining-the-level-of-education",
+    "href": "slides/lectures/measurement-lecture.html#defining-the-level-of-education",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "Defining the level of education",
+    "text": "Defining the level of education\n\nAccessibility of basic education to all citizens?\nProficiency of students in reading, math, and science?\nThe implications for research are not trivial!",
     "crumbs": [
-      "Week 2: Research Questions, Theories, and Hypotheses",
-      "Lecture 2: Research Questions, Theories, and Hypotheses"
+      "Week 3: Measurement and Variable Types",
+      "Lecture 3: Measurement and Types of Variables"
     ]
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses.html#quizzes-vs-videos-important-distinction",
-    "href": "slides/lectures/questions-theories-hypotheses.html#quizzes-vs-videos-important-distinction",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Quizzes vs Videos (Important Distinction)",
-    "text": "Quizzes vs Videos (Important Distinction)\n\nQuizzes\n\n5–10 multiple-choice questions\nUnlimited attempts\nHighest score counts\nDeadlines are enforced",
+    "objectID": "slides/lectures/measurement-lecture.html#from-definition-to-measurement",
+    "href": "slides/lectures/measurement-lecture.html#from-definition-to-measurement",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "From definition to measurement",
+    "text": "From definition to measurement\n\nA measurement for accessibility: Literacy rates.\n\nA good (but not perfect) approximation.\n\nA measurement for proficiency: Students’ standardised exam scores.\n\nPISA (Programme for International Student Assessment).",
     "crumbs": [
-      "Week 2: Research Questions, Theories, and Hypotheses",
-      "Lecture 2: Research Questions, Theories, and Hypotheses"
+      "Week 3: Measurement and Variable Types",
+      "Lecture 3: Measurement and Types of Variables"
     ]
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses.html#quizzes-vs-videos-important-distinction-1",
-    "href": "slides/lectures/questions-theories-hypotheses.html#quizzes-vs-videos-important-distinction-1",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Quizzes vs Videos (Important Distinction)",
-    "text": "Quizzes vs Videos (Important Distinction)\n\nVideos\n\nInclude attention-check questions\nOne attempt per question\nVideos remain accessible throughout the term\n\nIf you miss a quiz, you can still earn partial credit for that week via the videos.",
+    "objectID": "slides/lectures/measurement-lecture.html#literacy-rates",
+    "href": "slides/lectures/measurement-lecture.html#literacy-rates",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "Literacy rates",
+    "text": "Literacy rates",
     "crumbs": [
-      "Week 2: Research Questions, Theories, and Hypotheses",
-      "Lecture 2: Research Questions, Theories, and Hypotheses"
+      "Week 3: Measurement and Variable Types",
+      "Lecture 3: Measurement and Types of Variables"
     ]
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses.html#flexibility-built-in",
-    "href": "slides/lectures/questions-theories-hypotheses.html#flexibility-built-in",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Flexibility Built In",
-    "text": "Flexibility Built In\n\nThere are eight weeks with PS1 activities\nYour best six weekly scores count\nThe two lowest scores are dropped\nThis is designed as insurance, not a target",
+    "objectID": "slides/lectures/measurement-lecture.html#pisa-scores",
+    "href": "slides/lectures/measurement-lecture.html#pisa-scores",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "PISA scores",
+    "text": "PISA scores",
     "crumbs": [
-      "Week 2: Research Questions, Theories, and Hypotheses",
-      "Lecture 2: Research Questions, Theories, and Hypotheses"
+      "Week 3: Measurement and Variable Types",
+      "Lecture 3: Measurement and Types of Variables"
     ]
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses.html#research-questions-descriptive-vs-causal",
-    "href": "slides/lectures/questions-theories-hypotheses.html#research-questions-descriptive-vs-causal",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Research Questions: Descriptive vs Causal",
-    "text": "Research Questions: Descriptive vs Causal\n\nEmpirical questions can be descriptive or causal.\nDescriptive questions ask what the world looks like.\nCausal questions ask what would happen if we intervened.",
+    "objectID": "slides/lectures/measurement-lecture.html#from-education-to-democracy",
+    "href": "slides/lectures/measurement-lecture.html#from-education-to-democracy",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "From education to democracy",
+    "text": "From education to democracy\n\nResearch question: Is there a global trend towards democratic backsliding?\nA pressing contemporary debate that highlights the importance of measurement choices.\nRecent debates focus on a particular measurement: Varieties of Democracy (V-DEM).",
     "crumbs": [
-      "Week 2: Research Questions, Theories, and Hypotheses",
-      "Lecture 2: Research Questions, Theories, and Hypotheses"
+      "Week 3: Measurement and Variable Types",
+      "Lecture 3: Measurement and Types of Variables"
     ]
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses.html#descriptive-questions",
-    "href": "slides/lectures/questions-theories-hypotheses.html#descriptive-questions",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Descriptive questions",
-    "text": "Descriptive questions\n\nDescriptive questions can be about distributions, trends, or correlations.\n\nWhat percentage of countries are democratic?\nIs there a global trend towards democratic backsliding?\nIs democratic backsliding more prevalent in countries with higher political polarisation?",
+    "objectID": "slides/lectures/measurement-lecture.html#varieties-of-democracy-v-dem",
+    "href": "slides/lectures/measurement-lecture.html#varieties-of-democracy-v-dem",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "Varieties of Democracy (V-DEM)",
+    "text": "Varieties of Democracy (V-DEM)\n\nDemocracy measured as an interval variable (countries are given scores between 0 and 1)\nSends questionnaires to over 3,700 country experts.\nQuestions about several indicators deemed necessary to determine if a country is democratic.",
     "crumbs": [
-      "Week 2: Research Questions, Theories, and Hypotheses",
-      "Lecture 2: Research Questions, Theories, and Hypotheses"
+      "Week 3: Measurement and Variable Types",
+      "Lecture 3: Measurement and Types of Variables"
     ]
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses.html#causal-questions",
-    "href": "slides/lectures/questions-theories-hypotheses.html#causal-questions",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Causal questions",
-    "text": "Causal questions\n\nCausal questions ask if some variables drive change in others.\n\nDoes exposure to divisive content on social media make people more tolerant of political violence?\nDoes declining trust in political elites weaken commitment to democratic norms?\nDo compulsory voting laws increase political participation?",
+    "objectID": "slides/lectures/measurement-lecture.html#the-v-dem-world-map",
+    "href": "slides/lectures/measurement-lecture.html#the-v-dem-world-map",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "The V-DEM world map",
+    "text": "The V-DEM world map\n\n\n\n\n\nSource",
     "crumbs": [
-      "Week 2: Research Questions, Theories, and Hypotheses",
-      "Lecture 2: Research Questions, Theories, and Hypotheses"
+      "Week 3: Measurement and Variable Types",
+      "Lecture 3: Measurement and Types of Variables"
     ]
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses.html#complementarities-between-questions",
-    "href": "slides/lectures/questions-theories-hypotheses.html#complementarities-between-questions",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Complementarities between questions",
-    "text": "Complementarities between questions\n\nDescribing a distribution:\n\nWhat percentage of the world’s wealth is held by the 50 richest people?\n\nDescribing a trend:\n\nIs economic inequality increasing across the world?",
+    "objectID": "slides/lectures/measurement-lecture.html#is-democracy-backsliding-according-to-v-dem-yes",
+    "href": "slides/lectures/measurement-lecture.html#is-democracy-backsliding-according-to-v-dem-yes",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "Is democracy backsliding? According to V-DEM, yes!",
+    "text": "Is democracy backsliding? According to V-DEM, yes!\n\n\n\n\n\nSource",
     "crumbs": [
-      "Week 2: Research Questions, Theories, and Hypotheses",
-      "Lecture 2: Research Questions, Theories, and Hypotheses"
+      "Week 3: Measurement and Variable Types",
+      "Lecture 3: Measurement and Types of Variables"
     ]
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses.html#complementarities-between-questions-1",
-    "href": "slides/lectures/questions-theories-hypotheses.html#complementarities-between-questions-1",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Complementarities between questions",
-    "text": "Complementarities between questions\n\nDescribing a correlation:\n\nAre autocracies more unequal than democracies?\n\nProbing causation:\n\nDo increases in income inequality make democratic backsliding more likely?",
+    "objectID": "slides/lectures/measurement-lecture.html#is-democracy-backsliding-according-to-other-indicators-no",
+    "href": "slides/lectures/measurement-lecture.html#is-democracy-backsliding-according-to-other-indicators-no",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "Is democracy backsliding? According to other indicators, no!",
+    "text": "Is democracy backsliding? According to other indicators, no!\n\n\n\n\n\nSource",
     "crumbs": [
-      "Week 2: Research Questions, Theories, and Hypotheses",
-      "Lecture 2: Research Questions, Theories, and Hypotheses"
+      "Week 3: Measurement and Variable Types",
+      "Lecture 3: Measurement and Types of Variables"
     ]
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses.html#theories",
-    "href": "slides/lectures/questions-theories-hypotheses.html#theories",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Theories",
-    "text": "Theories\n\nA theory is “a reasoned and precise speculation about the answer to a research question” (King, Keohane, and Verba 1994:3).\nBased on our knowledge and reasoning, what’s a plausible answer to a research question?",
+    "objectID": "slides/lectures/measurement-lecture.html#the-critique-little-meng-2024-on-v-dem",
+    "href": "slides/lectures/measurement-lecture.html#the-critique-little-meng-2024-on-v-dem",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "The critique: Little & Meng (2024) on V-Dem",
+    "text": "The critique: Little & Meng (2024) on V-Dem\n\nV-Dem relies heavily on expert judgments, which may shift over time even if underlying political institutions do not.\nChanges in expert expectations or standards can look like changes in democracy.\nAs an alternative, Little and Meng argue for focusing on indicators of democracy that are less sensitive to subjective interpretation.",
     "crumbs": [
-      "Week 2: Research Questions, Theories, and Hypotheses",
-      "Lecture 2: Research Questions, Theories, and Hypotheses"
+      "Week 3: Measurement and Variable Types",
+      "Lecture 3: Measurement and Types of Variables"
     ]
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses.html#example-health-care-systems-and-policy-responses",
-    "href": "slides/lectures/questions-theories-hypotheses.html#example-health-care-systems-and-policy-responses",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Example: Health care systems and policy responses",
-    "text": "Example: Health care systems and policy responses\n\nResearch question: How did countries’ health care systems affect their abilities to mitigate the impact of the Covid-19 pandemic?\nTheory: Countries with public health care systems took advantage of their centralised bureaucracies to implement more effective policy responses.",
+    "objectID": "slides/lectures/measurement-lecture.html#what-does-their-alternative-look-like",
+    "href": "slides/lectures/measurement-lecture.html#what-does-their-alternative-look-like",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "What does their alternative look like?",
+    "text": "What does their alternative look like?\nLittle and Meng (2024) propose measuring democracy using indicators as:\n\nWhether incumbents and ruling parties lose elections and accept defeat.\nThe degree of electoral competition, including vote shares and seat shares of winning parties.\nThe presence and enforcement of formal institutional constraints, such as term limits and succession rules.",
     "crumbs": [
-      "Week 2: Research Questions, Theories, and Hypotheses",
-      "Lecture 2: Research Questions, Theories, and Hypotheses"
+      "Week 3: Measurement and Variable Types",
+      "Lecture 3: Measurement and Types of Variables"
     ]
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses.html#hypotheses",
-    "href": "slides/lectures/questions-theories-hypotheses.html#hypotheses",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Hypotheses",
-    "text": "Hypotheses\n\nA hypothesis is an empirically testable implication of a theory.\nGiven your theory, what should we observe in the world?",
+    "objectID": "slides/lectures/measurement-lecture.html#the-counter-critique-v-dems-side",
+    "href": "slides/lectures/measurement-lecture.html#the-counter-critique-v-dems-side",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "The counter-critique: V-DEM’s side",
+    "text": "The counter-critique: V-DEM’s side\nScholars associated with V-Dem respond that:\n\nDemocracy is inherently multidimensional and cannot be adequately captured by a narrow set of observable outcomes.\nIndicators presented as “objective” by Little and Meng still involve coding decisions and theoretical assumptions; they are not free from subjectivity.\nExpert-based measures are not a feature, not a bug for measuring complex political concepts.",
     "crumbs": [
-      "Week 2: Research Questions, Theories, and Hypotheses",
-      "Lecture 2: Research Questions, Theories, and Hypotheses"
+      "Week 3: Measurement and Variable Types",
+      "Lecture 3: Measurement and Types of Variables"
     ]
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses.html#example-health-care-systems-and-policy-responses-1",
-    "href": "slides/lectures/questions-theories-hypotheses.html#example-health-care-systems-and-policy-responses-1",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Example: Health care systems and policy responses",
-    "text": "Example: Health care systems and policy responses\n\nTheory: Countries with public health care systems took advantage of their centralised bureaucracies to implement more effective policy responses.\nHypothesis: Countries with public health care systems had lower Covid death rates than countries with private health care systems.",
+    "objectID": "slides/lectures/measurement-lecture.html#group-activity-how-to-measure-democracy",
+    "href": "slides/lectures/measurement-lecture.html#group-activity-how-to-measure-democracy",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "Group activity: How to measure democracy?",
+    "text": "Group activity: How to measure democracy?\n\nIn small groups, discuss the debate you have just seen.\nYour task is not to decide whether democracy is declining, but to decide which approach to measurement you find more convincing.\nFocus on the trade-offs between expert judgment and more “objective” indicators, and on what each approach can and cannot capture.",
     "crumbs": [
-      "Week 2: Research Questions, Theories, and Hypotheses",
-      "Lecture 2: Research Questions, Theories, and Hypotheses"
+      "Week 3: Measurement and Variable Types",
+      "Lecture 3: Measurement and Types of Variables"
     ]
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses.html#group-activity-research-questions-theories-and-hypotheses",
-    "href": "slides/lectures/questions-theories-hypotheses.html#group-activity-research-questions-theories-and-hypotheses",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Group Activity: Research Questions, Theories, and Hypotheses",
-    "text": "Group Activity: Research Questions, Theories, and Hypotheses\nWorking in groups of about three. By the end of the activity, each group should have:\n\nOne clearly stated research question\nA decision about whether the question is descriptive or causal\nOne theory that offers a a reasoned and precise speculation about the answer to your question\nOne hypothesis that follows logically from the theory",
+    "objectID": "slides/lectures/measurement-lecture.html#guiding-questions-for-discussion",
+    "href": "slides/lectures/measurement-lecture.html#guiding-questions-for-discussion",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "Guiding questions for discussion",
+    "text": "Guiding questions for discussion\n\nWhich critique or defense do you find more persuasive, and why?\nWhat do you think is lost when we move away from expert judgments?\nWhat do you think is lost when we rely heavily on subjective assessments?\nIf you had to choose one approach to answer the question of democratic backsliding, which would you choose?",
     "crumbs": [
-      "Week 2: Research Questions, Theories, and Hypotheses",
-      "Lecture 2: Research Questions, Theories, and Hypotheses"
+      "Week 3: Measurement and Variable Types",
+      "Lecture 3: Measurement and Types of Variables"
     ]
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses.html#group-activity-research-questions-theories-and-hypotheses-1",
-    "href": "slides/lectures/questions-theories-hypotheses.html#group-activity-research-questions-theories-and-hypotheses-1",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Group Activity: Research Questions, Theories, and Hypotheses",
-    "text": "Group Activity: Research Questions, Theories, and Hypotheses\nGeneral guidance:\n\nThe research question should come first and guide everything else\nThe theory should explain why, not just what\nThe hypothesis should be empirically testable\nDescriptive questions can still have theories and hypotheses",
+    "objectID": "slides/lectures/measurement-lecture.html#share-your-thoughts",
+    "href": "slides/lectures/measurement-lecture.html#share-your-thoughts",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "Share your thoughts",
+    "text": "Share your thoughts\n\nClick here, scan the QR code, or join at menti.com using the code 2173 3787",
     "crumbs": [
-      "Week 2: Research Questions, Theories, and Hypotheses",
-      "Lecture 2: Research Questions, Theories, and Hypotheses"
+      "Week 3: Measurement and Variable Types",
+      "Lecture 3: Measurement and Types of Variables"
     ]
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses.html#why-this-matters-for-the-module",
-    "href": "slides/lectures/questions-theories-hypotheses.html#why-this-matters-for-the-module",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Why This Matters for the Module",
-    "text": "Why This Matters for the Module\n\nThis structure, question → theory → hypothesis, will reappear throughout the module and your future research projects.\nThese are foundational concepts where misunderstandings are very common.",
+    "objectID": "slides/lectures/measurement-lecture.html#dig-deeper",
+    "href": "slides/lectures/measurement-lecture.html#dig-deeper",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "Dig Deeper",
+    "text": "Dig Deeper\n\nHow steep is Trump’s democratic backsliding?\n\nFinancial Times, 31 Jan 2026 (Access with your King’s email account).\n\nMethodology reviewed by Anne Meng.",
     "crumbs": [
-      "Week 2: Research Questions, Theories, and Hypotheses",
-      "Lecture 2: Research Questions, Theories, and Hypotheses"
+      "Week 3: Measurement and Variable Types",
+      "Lecture 3: Measurement and Types of Variables"
     ]
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses.html#looking-ahead",
-    "href": "slides/lectures/questions-theories-hypotheses.html#looking-ahead",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Looking Ahead",
-    "text": "Looking Ahead\n\nThe next PS1 work is due next week (4 Feb) before lecture\nPlease check KEATS regularly.",
+    "objectID": "slides/lectures/measurement-lecture.html#why-this-matters",
+    "href": "slides/lectures/measurement-lecture.html#why-this-matters",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "Why this matters",
+    "text": "Why this matters\n\nMeasurement choices are not neutral. They shape what we see in the data and the conclusions we draw from it.\nDifferent definitions and measurements of the same concept can lead to very different answers to the same research question.",
     "crumbs": [
-      "Week 2: Research Questions, Theories, and Hypotheses",
-      "Lecture 2: Research Questions, Theories, and Hypotheses"
+      "Week 3: Measurement and Variable Types",
+      "Lecture 3: Measurement and Types of Variables"
     ]
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#welcome",
-    "href": "slides/lectures/questions-theories-hypotheses-slides.html#welcome",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "objectID": "slides/lectures/measurement-lecture-slides.html#welcome",
+    "href": "slides/lectures/measurement-lecture-slides.html#welcome",
+    "title": "Lecture 3: Measurement and Types of Variables",
     "section": "Welcome",
-    "text": "Welcome\nToday’s goals:\n\nReiterate how Problem Set 1 (PS1) works\nRecap the core points from this week’s videos\nWork through a group activity on research questions, theories, and hypotheses"
+    "text": "Welcome\nToday’s goals:\n\nRecap the core points from this week’s videos\nWork through a group discussion on measuring democracy"
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#announcements",
-    "href": "slides/lectures/questions-theories-hypotheses-slides.html#announcements",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Announcements",
-    "text": "Announcements\n\nWebsite hosting all video and lecture slides\nShared Project Folder for the datasets and do-files we’ll be using throughout the module\nHave a question about module content? Ask it on the KEATS Discussion Forum!"
+    "objectID": "slides/lectures/measurement-lecture-slides.html#example-education-levels-and-democratisation",
+    "href": "slides/lectures/measurement-lecture-slides.html#example-education-levels-and-democratisation",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "Example: Education levels and democratisation",
+    "text": "Example: Education levels and democratisation\n\nResearch question: Do higher levels of education make countries more likely to democratise?"
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#problem-set-1-ps1-the-big-picture",
-    "href": "slides/lectures/questions-theories-hypotheses-slides.html#problem-set-1-ps1-the-big-picture",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Problem Set 1 (PS1): The Big Picture",
-    "text": "Problem Set 1 (PS1): The Big Picture\nPS1 is completed through weekly preparatory activities on KEATS:\n\nInteractive videos (with attention-check questions)\nShort quizzes\nThese run from Week 2 to Week 10 (excluding Reading Week)\nThe first PS1 work was due today (28 Jan) before lecture"
+    "objectID": "slides/lectures/measurement-lecture-slides.html#level-of-education",
+    "href": "slides/lectures/measurement-lecture-slides.html#level-of-education",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "Level of education",
+    "text": "Level of education\n\nHow do we know if a country’s level of education is high or low?\nWhat information do we collect?\nWe should start by figuring out a definition for the level of education."
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#how-ps1-works-core-rules",
-    "href": "slides/lectures/questions-theories-hypotheses-slides.html#how-ps1-works-core-rules",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "How PS1 Works (Core Rules)",
-    "text": "How PS1 Works (Core Rules)\nEach week:\n\nVideos introduce key concepts\nQuizzes test understanding of those concepts\nLecture and seminar activities assume this preparation\n\nPS1 is designed to support learning over time, not last-minute revision"
+    "objectID": "slides/lectures/measurement-lecture-slides.html#defining-the-level-of-education",
+    "href": "slides/lectures/measurement-lecture-slides.html#defining-the-level-of-education",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "Defining the level of education",
+    "text": "Defining the level of education\n\nAccessibility of basic education to all citizens?\nProficiency of students in reading, math, and science?\nThe implications for research are not trivial!"
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#quizzes-vs-videos-important-distinction",
-    "href": "slides/lectures/questions-theories-hypotheses-slides.html#quizzes-vs-videos-important-distinction",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Quizzes vs Videos (Important Distinction)",
-    "text": "Quizzes vs Videos (Important Distinction)\n\nQuizzes\n\n5–10 multiple-choice questions\nUnlimited attempts\nHighest score counts\nDeadlines are enforced"
+    "objectID": "slides/lectures/measurement-lecture-slides.html#from-definition-to-measurement",
+    "href": "slides/lectures/measurement-lecture-slides.html#from-definition-to-measurement",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "From definition to measurement",
+    "text": "From definition to measurement\n\nA measurement for accessibility: Literacy rates.\n\nA good (but not perfect) approximation.\n\nA measurement for proficiency: Students’ standardised exam scores.\n\nPISA (Programme for International Student Assessment)."
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#quizzes-vs-videos-important-distinction-1",
-    "href": "slides/lectures/questions-theories-hypotheses-slides.html#quizzes-vs-videos-important-distinction-1",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Quizzes vs Videos (Important Distinction)",
-    "text": "Quizzes vs Videos (Important Distinction)\n\nVideos\n\nInclude attention-check questions\nOne attempt per question\nVideos remain accessible throughout the term\n\nIf you miss a quiz, you can still earn partial credit for that week via the videos."
+    "objectID": "slides/lectures/measurement-lecture-slides.html#literacy-rates",
+    "href": "slides/lectures/measurement-lecture-slides.html#literacy-rates",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "Literacy rates",
+    "text": "Literacy rates"
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#flexibility-built-in",
-    "href": "slides/lectures/questions-theories-hypotheses-slides.html#flexibility-built-in",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Flexibility Built In",
-    "text": "Flexibility Built In\n\nThere are eight weeks with PS1 activities\nYour best six weekly scores count\nThe two lowest scores are dropped\nThis is designed as insurance, not a target"
+    "objectID": "slides/lectures/measurement-lecture-slides.html#pisa-scores",
+    "href": "slides/lectures/measurement-lecture-slides.html#pisa-scores",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "PISA scores",
+    "text": "PISA scores"
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#research-questions-descriptive-vs-causal",
-    "href": "slides/lectures/questions-theories-hypotheses-slides.html#research-questions-descriptive-vs-causal",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Research Questions: Descriptive vs Causal",
-    "text": "Research Questions: Descriptive vs Causal\n\nEmpirical questions can be descriptive or causal.\nDescriptive questions ask what the world looks like.\nCausal questions ask what would happen if we intervened."
+    "objectID": "slides/lectures/measurement-lecture-slides.html#from-education-to-democracy",
+    "href": "slides/lectures/measurement-lecture-slides.html#from-education-to-democracy",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "From education to democracy",
+    "text": "From education to democracy\n\nResearch question: Is there a global trend towards democratic backsliding?\nA pressing contemporary debate that highlights the importance of measurement choices.\nRecent debates focus on a particular measurement: Varieties of Democracy (V-DEM)."
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#descriptive-questions",
-    "href": "slides/lectures/questions-theories-hypotheses-slides.html#descriptive-questions",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Descriptive questions",
-    "text": "Descriptive questions\n\nDescriptive questions can be about distributions, trends, or correlations.\n\nWhat percentage of countries are democratic?\nIs there a global trend towards democratic backsliding?\nIs democratic backsliding more prevalent in countries with higher political polarisation?"
+    "objectID": "slides/lectures/measurement-lecture-slides.html#varieties-of-democracy-v-dem",
+    "href": "slides/lectures/measurement-lecture-slides.html#varieties-of-democracy-v-dem",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "Varieties of Democracy (V-DEM)",
+    "text": "Varieties of Democracy (V-DEM)\n\nDemocracy measured as an interval variable (countries are given scores between 0 and 1)\nSends questionnaires to over 3,700 country experts.\nQuestions about several indicators deemed necessary to determine if a country is democratic."
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#causal-questions",
-    "href": "slides/lectures/questions-theories-hypotheses-slides.html#causal-questions",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Causal questions",
-    "text": "Causal questions\n\nCausal questions ask if some variables drive change in others.\n\nDoes exposure to divisive content on social media make people more tolerant of political violence?\nDoes declining trust in political elites weaken commitment to democratic norms?\nDo compulsory voting laws increase political participation?"
+    "objectID": "slides/lectures/measurement-lecture-slides.html#the-v-dem-world-map",
+    "href": "slides/lectures/measurement-lecture-slides.html#the-v-dem-world-map",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "The V-DEM world map",
+    "text": "The V-DEM world map\n\nSource"
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#complementarities-between-questions",
-    "href": "slides/lectures/questions-theories-hypotheses-slides.html#complementarities-between-questions",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Complementarities between questions",
-    "text": "Complementarities between questions\n\nDescribing a distribution:\n\nWhat percentage of the world’s wealth is held by the 50 richest people?\n\nDescribing a trend:\n\nIs economic inequality increasing across the world?"
+    "objectID": "slides/lectures/measurement-lecture-slides.html#is-democracy-backsliding-according-to-v-dem-yes",
+    "href": "slides/lectures/measurement-lecture-slides.html#is-democracy-backsliding-according-to-v-dem-yes",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "Is democracy backsliding? According to V-DEM, yes!",
+    "text": "Is democracy backsliding? According to V-DEM, yes!\n\nSource"
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#complementarities-between-questions-1",
-    "href": "slides/lectures/questions-theories-hypotheses-slides.html#complementarities-between-questions-1",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Complementarities between questions",
-    "text": "Complementarities between questions\n\nDescribing a correlation:\n\nAre autocracies more unequal than democracies?\n\nProbing causation:\n\nDo increases in income inequality make democratic backsliding more likely?"
+    "objectID": "slides/lectures/measurement-lecture-slides.html#is-democracy-backsliding-according-to-other-indicators-no",
+    "href": "slides/lectures/measurement-lecture-slides.html#is-democracy-backsliding-according-to-other-indicators-no",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "Is democracy backsliding? According to other indicators, no!",
+    "text": "Is democracy backsliding? According to other indicators, no!\n\nSource"
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#theories",
-    "href": "slides/lectures/questions-theories-hypotheses-slides.html#theories",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Theories",
-    "text": "Theories\n\nA theory is “a reasoned and precise speculation about the answer to a research question” (King, Keohane, and Verba 1994:3).\nBased on our knowledge and reasoning, what’s a plausible answer to a research question?"
+    "objectID": "slides/lectures/measurement-lecture-slides.html#the-critique-little-meng-2024-on-v-dem",
+    "href": "slides/lectures/measurement-lecture-slides.html#the-critique-little-meng-2024-on-v-dem",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "The critique: Little & Meng (2024) on V-Dem",
+    "text": "The critique: Little & Meng (2024) on V-Dem\n\nV-Dem relies heavily on expert judgments, which may shift over time even if underlying political institutions do not.\nChanges in expert expectations or standards can look like changes in democracy.\nAs an alternative, Little and Meng argue for focusing on indicators of democracy that are less sensitive to subjective interpretation."
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#example-health-care-systems-and-policy-responses",
-    "href": "slides/lectures/questions-theories-hypotheses-slides.html#example-health-care-systems-and-policy-responses",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Example: Health care systems and policy responses",
-    "text": "Example: Health care systems and policy responses\n\nResearch question: How did countries’ health care systems affect their abilities to mitigate the impact of the Covid-19 pandemic?\nTheory: Countries with public health care systems took advantage of their centralised bureaucracies to implement more effective policy responses."
+    "objectID": "slides/lectures/measurement-lecture-slides.html#what-does-their-alternative-look-like",
+    "href": "slides/lectures/measurement-lecture-slides.html#what-does-their-alternative-look-like",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "What does their alternative look like?",
+    "text": "What does their alternative look like?\nLittle and Meng (2024) propose measuring democracy using indicators as:\n\nWhether incumbents and ruling parties lose elections and accept defeat.\nThe degree of electoral competition, including vote shares and seat shares of winning parties.\nThe presence and enforcement of formal institutional constraints, such as term limits and succession rules."
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#hypotheses",
-    "href": "slides/lectures/questions-theories-hypotheses-slides.html#hypotheses",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Hypotheses",
-    "text": "Hypotheses\n\nA hypothesis is an empirically testable implication of a theory.\nGiven your theory, what should we observe in the world?"
+    "objectID": "slides/lectures/measurement-lecture-slides.html#the-counter-critique-v-dems-side",
+    "href": "slides/lectures/measurement-lecture-slides.html#the-counter-critique-v-dems-side",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "The counter-critique: V-DEM’s side",
+    "text": "The counter-critique: V-DEM’s side\nScholars associated with V-Dem respond that:\n\nDemocracy is inherently multidimensional and cannot be adequately captured by a narrow set of observable outcomes.\nIndicators presented as “objective” by Little and Meng still involve coding decisions and theoretical assumptions; they are not free from subjectivity.\nExpert-based measures are not a feature, not a bug for measuring complex political concepts."
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#example-health-care-systems-and-policy-responses-1",
-    "href": "slides/lectures/questions-theories-hypotheses-slides.html#example-health-care-systems-and-policy-responses-1",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Example: Health care systems and policy responses",
-    "text": "Example: Health care systems and policy responses\n\nTheory: Countries with public health care systems took advantage of their centralised bureaucracies to implement more effective policy responses.\nHypothesis: Countries with public health care systems had lower Covid death rates than countries with private health care systems."
+    "objectID": "slides/lectures/measurement-lecture-slides.html#group-activity-how-to-measure-democracy",
+    "href": "slides/lectures/measurement-lecture-slides.html#group-activity-how-to-measure-democracy",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "Group activity: How to measure democracy?",
+    "text": "Group activity: How to measure democracy?\n\nIn small groups, discuss the debate you have just seen.\nYour task is not to decide whether democracy is declining, but to decide which approach to measurement you find more convincing.\nFocus on the trade-offs between expert judgment and more “objective” indicators, and on what each approach can and cannot capture."
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#group-activity-research-questions-theories-and-hypotheses",
-    "href": "slides/lectures/questions-theories-hypotheses-slides.html#group-activity-research-questions-theories-and-hypotheses",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Group Activity: Research Questions, Theories, and Hypotheses",
-    "text": "Group Activity: Research Questions, Theories, and Hypotheses\nWorking in groups of about three. By the end of the activity, each group should have:\n\nOne clearly stated research question\nA decision about whether the question is descriptive or causal\nOne theory that offers a a reasoned and precise speculation about the answer to your question\nOne hypothesis that follows logically from the theory"
+    "objectID": "slides/lectures/measurement-lecture-slides.html#guiding-questions-for-discussion",
+    "href": "slides/lectures/measurement-lecture-slides.html#guiding-questions-for-discussion",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "Guiding questions for discussion",
+    "text": "Guiding questions for discussion\n\nWhich critique or defense do you find more persuasive, and why?\nWhat do you think is lost when we move away from expert judgments?\nWhat do you think is lost when we rely heavily on subjective assessments?\nIf you had to choose one approach to answer the question of democratic backsliding, which would you choose?"
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#group-activity-research-questions-theories-and-hypotheses-1",
-    "href": "slides/lectures/questions-theories-hypotheses-slides.html#group-activity-research-questions-theories-and-hypotheses-1",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Group Activity: Research Questions, Theories, and Hypotheses",
-    "text": "Group Activity: Research Questions, Theories, and Hypotheses\nGeneral guidance:\n\nThe research question should come first and guide everything else\nThe theory should explain why, not just what\nThe hypothesis should be empirically testable\nDescriptive questions can still have theories and hypotheses"
+    "objectID": "slides/lectures/measurement-lecture-slides.html#share-your-thoughts",
+    "href": "slides/lectures/measurement-lecture-slides.html#share-your-thoughts",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "Share your thoughts",
+    "text": "Share your thoughts\n\nClick here, scan the QR code, or join at menti.com using the code 2173 3787"
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#why-this-matters-for-the-module",
-    "href": "slides/lectures/questions-theories-hypotheses-slides.html#why-this-matters-for-the-module",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Why This Matters for the Module",
-    "text": "Why This Matters for the Module\n\nThis structure, question → theory → hypothesis, will reappear throughout the module and your future research projects.\nThese are foundational concepts where misunderstandings are very common."
+    "objectID": "slides/lectures/measurement-lecture-slides.html#dig-deeper",
+    "href": "slides/lectures/measurement-lecture-slides.html#dig-deeper",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "Dig Deeper",
+    "text": "Dig Deeper\n\nHow steep is Trump’s democratic backsliding?\n\nFinancial Times, 31 Jan 2026 (Access with your King’s email account).\n\nMethodology reviewed by Anne Meng."
   },
   {
-    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#looking-ahead",
-    "href": "slides/lectures/questions-theories-hypotheses-slides.html#looking-ahead",
-    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
-    "section": "Looking Ahead",
-    "text": "Looking Ahead\n\nThe next PS1 work is due next week (4 Feb) before lecture\nPlease check KEATS regularly."
-  },
-  {
-    "objectID": "slides/index.html",
-    "href": "slides/index.html",
-    "title": "Slides",
-    "section": "",
-    "text": "Week 1: Thinking with Data"
-  },
-  {
-    "objectID": "slides/index.html#week-1-thinking-with-data",
-    "href": "slides/index.html#week-1-thinking-with-data",
-    "title": "Slides",
-    "section": "",
-    "text": "Week 1: Thinking with Data"
-  },
-  {
-    "objectID": "slides/index.html#week-2-research-questions-theories-and-hypotheses",
-    "href": "slides/index.html#week-2-research-questions-theories-and-hypotheses",
-    "title": "Slides",
-    "section": "Week 2: Research Questions, Theories, and Hypotheses",
-    "text": "Week 2: Research Questions, Theories, and Hypotheses\n\nVideos\n\nEmpirical and Normative Questions\nDescriptive and Causal Questions\nUnits of Analysis, Theories, and Hypotheses\nDependent and Independent Variables\nDoing Reproducible Research\n\n\n\nLecture\n\nWeek 2: Research Questions, Theories, and Hypotheses"
-  },
-  {
-    "objectID": "slides/index.html#week-3-measurement-and-variable-types",
-    "href": "slides/index.html#week-3-measurement-and-variable-types",
-    "title": "Slides",
-    "section": "Week 3: Measurement and Variable Types",
-    "text": "Week 3: Measurement and Variable Types\n\nVideos\n\nMeasuring Variables\nTypes of Variables\nDatasets and Codebooks\nThe Stata Interface\nLoading and Browsing Data\n\n\n\nLecture\n\nWeek 3: Measurement and Types of Variables"
-  },
-  {
-    "objectID": "slides/index.html#week-4-describing-distributions-univariate-description",
-    "href": "slides/index.html#week-4-describing-distributions-univariate-description",
-    "title": "Slides",
-    "section": "Week 4: Describing Distributions (Univariate Description)",
-    "text": "Week 4: Describing Distributions (Univariate Description)\n\nVideos\n\nSummarising a Distribution\nVariance and Standard Deviation\nBar Charts and Histograms\nSummarising Distributions in Stata\nBar Charts and Histograms in Stata"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Statistics for Political Science",
-    "section": "",
-    "text": "This module provides students with analytical tools to analyse political phenomena, with a focus on research design, statistical reasoning, and the logic of regression analysis. The module is organised around weekly preparatory activities (short videos and quizzes) that enable lectures and seminars to focus on active learning, including mock exam questions and hands-on work in Stata. By the end of the module, students should be able to formulate and evaluate hypotheses, interpret descriptive and inferential statistics, and implement basic statistical analyses in Stata to answer political science research questions.\nModule convener: Leonardo Falabella (leonardo.falabella@kcl.ac.uk)\nSeminar leader: Mechelle Viernes (mechelle.viernes@kcl.ac.uk)",
-    "crumbs": [
-      "Statistics for Political Science"
-    ]
-  },
-  {
-    "objectID": "index.html#module-outcomes",
-    "href": "index.html#module-outcomes",
-    "title": "Statistics for Political Science",
-    "section": "Module Outcomes",
-    "text": "Module Outcomes\nBy the end of this module, students will be able to:\n\nKnow how to describe data\nUnderstand how data is produced and managed\nUse different statistical inference techniques\nLearn how to test the relationship between two different variables\nConduct basic statistical analyses with Stata",
-    "crumbs": [
-      "Statistics for Political Science"
-    ]
-  },
-  {
-    "objectID": "slides/lectures/thinking-with-data-slides.html#welcome",
-    "href": "slides/lectures/thinking-with-data-slides.html#welcome",
-    "title": "Lecture 1: Thinking With Data",
-    "section": "Welcome",
-    "text": "Welcome\n\nPlease call me Leo\nToday’s goals:\n\nClarify what this module is and is not\nExplain how lectures, seminars, and assessments fit together\nSet expectations for Problem Sets\nWork through a group activity on quantitative vs qualitative research"
-  },
-  {
-    "objectID": "slides/lectures/thinking-with-data-slides.html#what-this-module-is-about",
-    "href": "slides/lectures/thinking-with-data-slides.html#what-this-module-is-about",
-    "title": "Lecture 1: Thinking With Data",
-    "section": "What This Module Is About",
-    "text": "What This Module Is About\nThis module is about:\n\nThinking clearly with data\nUnderstanding what statistical claims can and cannot show\nEvaluating evidence in political science research\nLearning how to ask and test empirical questions\n\nIt is not about memorising formulas or becoming a statistician"
-  },
-  {
-    "objectID": "slides/lectures/thinking-with-data-slides.html#why-the-module-is-structured-this-way",
-    "href": "slides/lectures/thinking-with-data-slides.html#why-the-module-is-structured-this-way",
-    "title": "Lecture 1: Thinking With Data",
-    "section": "Why the Module Is Structured This Way",
-    "text": "Why the Module Is Structured This Way\nThe module uses a flipped format:\n\nShort videos and quizzes before lectures\nLectures and seminars focus on active learning\nProblem Sets reinforce concepts gradually over time\nThis structure is based on evidence from education research\n\nEg, Ambrose et al 2007, Nilson 2010"
-  },
-  {
-    "objectID": "slides/lectures/thinking-with-data-slides.html#assessments-at-a-glance",
-    "href": "slides/lectures/thinking-with-data-slides.html#assessments-at-a-glance",
-    "title": "Lecture 1: Thinking With Data",
-    "section": "Assessments at a Glance",
-    "text": "Assessments at a Glance\n\nProblem Set 1 (PS1): 25%\nProblem Set 2 (PS2): 25%\nExam: 50%"
-  },
-  {
-    "objectID": "slides/lectures/thinking-with-data-slides.html#assessments-at-a-glance-1",
-    "href": "slides/lectures/thinking-with-data-slides.html#assessments-at-a-glance-1",
-    "title": "Lecture 1: Thinking With Data",
-    "section": "Assessments at a Glance",
-    "text": "Assessments at a Glance\n\nToday, we’ll focus on PS1\nPS1 structures your weekly work"
-  },
-  {
-    "objectID": "slides/lectures/thinking-with-data-slides.html#problem-set-1-ps1-the-big-picture",
-    "href": "slides/lectures/thinking-with-data-slides.html#problem-set-1-ps1-the-big-picture",
-    "title": "Lecture 1: Thinking With Data",
-    "section": "Problem Set 1 (PS1): The Big Picture",
-    "text": "Problem Set 1 (PS1): The Big Picture\nPS1 is completed through weekly preparatory activities on KEATS:\n\nInteractive videos (with attention-check questions)\nShort quizzes\nThese run from Week 2 to Week 10 (excluding Reading Week)\nThe first PS1 work is due next week (28 Jan) before lecture"
-  },
-  {
-    "objectID": "slides/lectures/thinking-with-data-slides.html#how-ps1-works-core-rules",
-    "href": "slides/lectures/thinking-with-data-slides.html#how-ps1-works-core-rules",
-    "title": "Lecture 1: Thinking With Data",
-    "section": "How PS1 Works (Core Rules)",
-    "text": "How PS1 Works (Core Rules)\nEach week:\n\nVideos introduce key concepts\nQuizzes test understanding of those concepts\nLecture and seminar activities assume this preparation\n\nPS1 is designed to support learning over time, not last-minute revision"
-  },
-  {
-    "objectID": "slides/lectures/thinking-with-data-slides.html#quizzes-vs-videos-important-distinction",
-    "href": "slides/lectures/thinking-with-data-slides.html#quizzes-vs-videos-important-distinction",
-    "title": "Lecture 1: Thinking With Data",
-    "section": "Quizzes vs Videos (Important Distinction)",
-    "text": "Quizzes vs Videos (Important Distinction)\n\nQuizzes\n\n5–10 multiple-choice questions\nUnlimited attempts\nHighest score counts\nDeadlines are enforced"
-  },
-  {
-    "objectID": "slides/lectures/thinking-with-data-slides.html#quizzes-vs-videos-important-distinction-1",
-    "href": "slides/lectures/thinking-with-data-slides.html#quizzes-vs-videos-important-distinction-1",
-    "title": "Lecture 1: Thinking With Data",
-    "section": "Quizzes vs Videos (Important Distinction)",
-    "text": "Quizzes vs Videos (Important Distinction)\n\nVideos\n\nInclude attention-check questions\nOne attempt per question\nVideos remain accessible throughout the term\n\nIf you miss a quiz, you can still earn partial credit for that week via the videos."
-  },
-  {
-    "objectID": "slides/lectures/thinking-with-data-slides.html#flexibility-built-in",
-    "href": "slides/lectures/thinking-with-data-slides.html#flexibility-built-in",
-    "title": "Lecture 1: Thinking With Data",
-    "section": "Flexibility Built In",
-    "text": "Flexibility Built In\n\nThere are eight weeks with PS1 activities\nYour best six weekly scores count\nThe two lowest scores are dropped\nThis is designed as insurance, not a target"
-  },
-  {
-    "objectID": "slides/lectures/thinking-with-data-slides.html#why-we-focus-on-quantitative-research",
-    "href": "slides/lectures/thinking-with-data-slides.html#why-we-focus-on-quantitative-research",
-    "title": "Lecture 1: Thinking With Data",
-    "section": "Why We Focus on Quantitative Research",
-    "text": "Why We Focus on Quantitative Research\nThis module focuses on quantitative methods, but:\n\nThat does not mean qualitative research is inferior\nDifferent methods answer different kinds of questions\nUnderstanding the distinction helps you evaluate evidence critically"
-  },
-  {
-    "objectID": "slides/lectures/thinking-with-data-slides.html#group-activity-quantitative-vs-qualitative-research",
-    "href": "slides/lectures/thinking-with-data-slides.html#group-activity-quantitative-vs-qualitative-research",
-    "title": "Lecture 1: Thinking With Data",
-    "section": "Group Activity: Quantitative vs Qualitative Research",
-    "text": "Group Activity: Quantitative vs Qualitative Research\n\nYou will work in small groups\nThe goals are to:\n\nUnderstand how quantitative and qualitative research differ\nReflect on what each approach does well\nDiscuss what each approach may miss"
-  },
-  {
-    "objectID": "slides/lectures/thinking-with-data-slides.html#two-research-traditions-mahoney-goertz",
-    "href": "slides/lectures/thinking-with-data-slides.html#two-research-traditions-mahoney-goertz",
-    "title": "Lecture 1: Thinking With Data",
-    "section": "Two Research Traditions (Mahoney & Goertz)",
-    "text": "Two Research Traditions (Mahoney & Goertz)\nQuantitative research\n\nAverage effects across cases\nGeneral, law-like claims\nExample: What is the effect of economic development on democracy?"
-  },
-  {
-    "objectID": "slides/lectures/thinking-with-data-slides.html#two-research-traditions-mahoney-goertz-1",
-    "href": "slides/lectures/thinking-with-data-slides.html#two-research-traditions-mahoney-goertz-1",
-    "title": "Lecture 1: Thinking With Data",
-    "section": "Two Research Traditions (Mahoney & Goertz)",
-    "text": "Two Research Traditions (Mahoney & Goertz)\nQualitative research\n\nSpecific outcomes in particular cases\nLess emphasis on generalisation\nExample: Did economic development contribute to Spain’s transition to democracy?"
-  },
-  {
-    "objectID": "slides/lectures/thinking-with-data-slides.html#example-studying-democratisation",
-    "href": "slides/lectures/thinking-with-data-slides.html#example-studying-democratisation",
-    "title": "Lecture 1: Thinking With Data",
-    "section": "Example: Studying Democratisation",
-    "text": "Example: Studying Democratisation\nQuantitative approach\n\nLarge dataset of countries\nGDP per capita, democracy scores, controls\nStatistical analysis of average relationships"
-  },
-  {
-    "objectID": "slides/lectures/thinking-with-data-slides.html#example-studying-democratisation-1",
-    "href": "slides/lectures/thinking-with-data-slides.html#example-studying-democratisation-1",
-    "title": "Lecture 1: Thinking With Data",
-    "section": "Example: Studying Democratisation",
-    "text": "Example: Studying Democratisation\nQualitative approach\n\nOne or more case studies\nArchives, interviews, historical evidence\nTracing causal processes within cases"
-  },
-  {
-    "objectID": "slides/lectures/thinking-with-data-slides.html#your-task",
-    "href": "slides/lectures/thinking-with-data-slides.html#your-task",
-    "title": "Lecture 1: Thinking With Data",
-    "section": "Your Task",
-    "text": "Your Task\n\nDiscuss advantages and disadvantages of each approach\nThink about:\n\nWhat does this approach allow us to see?\nWhat does it obscure or miss?\n\n\nFill in this table:\n\n\n\n\nPros\nCons\n\n\n\n\nQuantitative\n\n\n\n\nQualitative"
-  },
-  {
-    "objectID": "slides/lectures/thinking-with-data-slides.html#reconvening",
-    "href": "slides/lectures/thinking-with-data-slides.html#reconvening",
-    "title": "Lecture 1: Thinking With Data",
-    "section": "Reconvening",
-    "text": "Reconvening\nWe will reconvene and:\n\nCollect examples from different groups\nCompare perspectives\nDiscuss why mixed-method approaches are increasingly common"
-  },
-  {
-    "objectID": "slides/lectures/thinking-with-data-slides.html#why-this-matters-for-the-module",
-    "href": "slides/lectures/thinking-with-data-slides.html#why-this-matters-for-the-module",
-    "title": "Lecture 1: Thinking With Data",
-    "section": "Why This Matters for the Module",
-    "text": "Why This Matters for the Module\nAlthough this course focuses on quantitative methods:\n\nYou should always ask what a method can and cannot show\nStatistical results are not self-interpreting\nGood political science depends on methodological awareness"
-  },
-  {
-    "objectID": "slides/lectures/thinking-with-data-slides.html#looking-ahead",
-    "href": "slides/lectures/thinking-with-data-slides.html#looking-ahead",
-    "title": "Lecture 1: Thinking With Data",
-    "section": "Looking Ahead",
-    "text": "Looking Ahead\n\nThe first PS1 work is due next week (28 Jan) before lecture\nPlease check KEATS regularly."
+    "objectID": "slides/lectures/measurement-lecture-slides.html#why-this-matters",
+    "href": "slides/lectures/measurement-lecture-slides.html#why-this-matters",
+    "title": "Lecture 3: Measurement and Types of Variables",
+    "section": "Why this matters",
+    "text": "Why this matters\n\nMeasurement choices are not neutral. They shape what we see in the data and the conclusions we draw from it.\nDifferent definitions and measurements of the same concept can lead to very different answers to the same research question."
   },
   {
     "objectID": "slides/lectures/thinking-with-data.html",
@@ -2694,363 +2492,943 @@
     ]
   },
   {
-    "objectID": "slides/lectures/measurement-lecture-slides.html#welcome",
-    "href": "slides/lectures/measurement-lecture-slides.html#welcome",
-    "title": "Lecture 3: Measurement and Types of Variables",
+    "objectID": "slides/lectures/thinking-with-data-slides.html#welcome",
+    "href": "slides/lectures/thinking-with-data-slides.html#welcome",
+    "title": "Lecture 1: Thinking With Data",
     "section": "Welcome",
-    "text": "Welcome\nToday’s goals:\n\nRecap the core points from this week’s videos\nWork through a group discussion on measuring democracy"
+    "text": "Welcome\n\nPlease call me Leo\nToday’s goals:\n\nClarify what this module is and is not\nExplain how lectures, seminars, and assessments fit together\nSet expectations for Problem Sets\nWork through a group activity on quantitative vs qualitative research"
   },
   {
-    "objectID": "slides/lectures/measurement-lecture-slides.html#example-education-levels-and-democratisation",
-    "href": "slides/lectures/measurement-lecture-slides.html#example-education-levels-and-democratisation",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "Example: Education levels and democratisation",
-    "text": "Example: Education levels and democratisation\n\nResearch question: Do higher levels of education make countries more likely to democratise?"
+    "objectID": "slides/lectures/thinking-with-data-slides.html#what-this-module-is-about",
+    "href": "slides/lectures/thinking-with-data-slides.html#what-this-module-is-about",
+    "title": "Lecture 1: Thinking With Data",
+    "section": "What This Module Is About",
+    "text": "What This Module Is About\nThis module is about:\n\nThinking clearly with data\nUnderstanding what statistical claims can and cannot show\nEvaluating evidence in political science research\nLearning how to ask and test empirical questions\n\nIt is not about memorising formulas or becoming a statistician"
   },
   {
-    "objectID": "slides/lectures/measurement-lecture-slides.html#level-of-education",
-    "href": "slides/lectures/measurement-lecture-slides.html#level-of-education",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "Level of education",
-    "text": "Level of education\n\nHow do we know if a country’s level of education is high or low?\nWhat information do we collect?\nWe should start by figuring out a definition for the level of education."
+    "objectID": "slides/lectures/thinking-with-data-slides.html#why-the-module-is-structured-this-way",
+    "href": "slides/lectures/thinking-with-data-slides.html#why-the-module-is-structured-this-way",
+    "title": "Lecture 1: Thinking With Data",
+    "section": "Why the Module Is Structured This Way",
+    "text": "Why the Module Is Structured This Way\nThe module uses a flipped format:\n\nShort videos and quizzes before lectures\nLectures and seminars focus on active learning\nProblem Sets reinforce concepts gradually over time\nThis structure is based on evidence from education research\n\nEg, Ambrose et al 2007, Nilson 2010"
   },
   {
-    "objectID": "slides/lectures/measurement-lecture-slides.html#defining-the-level-of-education",
-    "href": "slides/lectures/measurement-lecture-slides.html#defining-the-level-of-education",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "Defining the level of education",
-    "text": "Defining the level of education\n\nAccessibility of basic education to all citizens?\nProficiency of students in reading, math, and science?\nThe implications for research are not trivial!"
+    "objectID": "slides/lectures/thinking-with-data-slides.html#assessments-at-a-glance",
+    "href": "slides/lectures/thinking-with-data-slides.html#assessments-at-a-glance",
+    "title": "Lecture 1: Thinking With Data",
+    "section": "Assessments at a Glance",
+    "text": "Assessments at a Glance\n\nProblem Set 1 (PS1): 25%\nProblem Set 2 (PS2): 25%\nExam: 50%"
   },
   {
-    "objectID": "slides/lectures/measurement-lecture-slides.html#from-definition-to-measurement",
-    "href": "slides/lectures/measurement-lecture-slides.html#from-definition-to-measurement",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "From definition to measurement",
-    "text": "From definition to measurement\n\nA measurement for accessibility: Literacy rates.\n\nA good (but not perfect) approximation.\n\nA measurement for proficiency: Students’ standardised exam scores.\n\nPISA (Programme for International Student Assessment)."
+    "objectID": "slides/lectures/thinking-with-data-slides.html#assessments-at-a-glance-1",
+    "href": "slides/lectures/thinking-with-data-slides.html#assessments-at-a-glance-1",
+    "title": "Lecture 1: Thinking With Data",
+    "section": "Assessments at a Glance",
+    "text": "Assessments at a Glance\n\nToday, we’ll focus on PS1\nPS1 structures your weekly work"
   },
   {
-    "objectID": "slides/lectures/measurement-lecture-slides.html#literacy-rates",
-    "href": "slides/lectures/measurement-lecture-slides.html#literacy-rates",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "Literacy rates",
-    "text": "Literacy rates"
+    "objectID": "slides/lectures/thinking-with-data-slides.html#problem-set-1-ps1-the-big-picture",
+    "href": "slides/lectures/thinking-with-data-slides.html#problem-set-1-ps1-the-big-picture",
+    "title": "Lecture 1: Thinking With Data",
+    "section": "Problem Set 1 (PS1): The Big Picture",
+    "text": "Problem Set 1 (PS1): The Big Picture\nPS1 is completed through weekly preparatory activities on KEATS:\n\nInteractive videos (with attention-check questions)\nShort quizzes\nThese run from Week 2 to Week 10 (excluding Reading Week)\nThe first PS1 work is due next week (28 Jan) before lecture"
   },
   {
-    "objectID": "slides/lectures/measurement-lecture-slides.html#pisa-scores",
-    "href": "slides/lectures/measurement-lecture-slides.html#pisa-scores",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "PISA scores",
-    "text": "PISA scores"
+    "objectID": "slides/lectures/thinking-with-data-slides.html#how-ps1-works-core-rules",
+    "href": "slides/lectures/thinking-with-data-slides.html#how-ps1-works-core-rules",
+    "title": "Lecture 1: Thinking With Data",
+    "section": "How PS1 Works (Core Rules)",
+    "text": "How PS1 Works (Core Rules)\nEach week:\n\nVideos introduce key concepts\nQuizzes test understanding of those concepts\nLecture and seminar activities assume this preparation\n\nPS1 is designed to support learning over time, not last-minute revision"
   },
   {
-    "objectID": "slides/lectures/measurement-lecture-slides.html#from-education-to-democracy",
-    "href": "slides/lectures/measurement-lecture-slides.html#from-education-to-democracy",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "From education to democracy",
-    "text": "From education to democracy\n\nResearch question: Is there a global trend towards democratic backsliding?\nA pressing contemporary debate that highlights the importance of measurement choices.\nRecent debates focus on a particular measurement: Varieties of Democracy (V-DEM)."
+    "objectID": "slides/lectures/thinking-with-data-slides.html#quizzes-vs-videos-important-distinction",
+    "href": "slides/lectures/thinking-with-data-slides.html#quizzes-vs-videos-important-distinction",
+    "title": "Lecture 1: Thinking With Data",
+    "section": "Quizzes vs Videos (Important Distinction)",
+    "text": "Quizzes vs Videos (Important Distinction)\n\nQuizzes\n\n5–10 multiple-choice questions\nUnlimited attempts\nHighest score counts\nDeadlines are enforced"
   },
   {
-    "objectID": "slides/lectures/measurement-lecture-slides.html#varieties-of-democracy-v-dem",
-    "href": "slides/lectures/measurement-lecture-slides.html#varieties-of-democracy-v-dem",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "Varieties of Democracy (V-DEM)",
-    "text": "Varieties of Democracy (V-DEM)\n\nDemocracy measured as an interval variable (countries are given scores between 0 and 1)\nSends questionnaires to over 3,700 country experts.\nQuestions about several indicators deemed necessary to determine if a country is democratic."
+    "objectID": "slides/lectures/thinking-with-data-slides.html#quizzes-vs-videos-important-distinction-1",
+    "href": "slides/lectures/thinking-with-data-slides.html#quizzes-vs-videos-important-distinction-1",
+    "title": "Lecture 1: Thinking With Data",
+    "section": "Quizzes vs Videos (Important Distinction)",
+    "text": "Quizzes vs Videos (Important Distinction)\n\nVideos\n\nInclude attention-check questions\nOne attempt per question\nVideos remain accessible throughout the term\n\nIf you miss a quiz, you can still earn partial credit for that week via the videos."
   },
   {
-    "objectID": "slides/lectures/measurement-lecture-slides.html#the-v-dem-world-map",
-    "href": "slides/lectures/measurement-lecture-slides.html#the-v-dem-world-map",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "The V-DEM world map",
-    "text": "The V-DEM world map\n\nSource"
+    "objectID": "slides/lectures/thinking-with-data-slides.html#flexibility-built-in",
+    "href": "slides/lectures/thinking-with-data-slides.html#flexibility-built-in",
+    "title": "Lecture 1: Thinking With Data",
+    "section": "Flexibility Built In",
+    "text": "Flexibility Built In\n\nThere are eight weeks with PS1 activities\nYour best six weekly scores count\nThe two lowest scores are dropped\nThis is designed as insurance, not a target"
   },
   {
-    "objectID": "slides/lectures/measurement-lecture-slides.html#is-democracy-backsliding-according-to-v-dem-yes",
-    "href": "slides/lectures/measurement-lecture-slides.html#is-democracy-backsliding-according-to-v-dem-yes",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "Is democracy backsliding? According to V-DEM, yes!",
-    "text": "Is democracy backsliding? According to V-DEM, yes!\n\nSource"
+    "objectID": "slides/lectures/thinking-with-data-slides.html#why-we-focus-on-quantitative-research",
+    "href": "slides/lectures/thinking-with-data-slides.html#why-we-focus-on-quantitative-research",
+    "title": "Lecture 1: Thinking With Data",
+    "section": "Why We Focus on Quantitative Research",
+    "text": "Why We Focus on Quantitative Research\nThis module focuses on quantitative methods, but:\n\nThat does not mean qualitative research is inferior\nDifferent methods answer different kinds of questions\nUnderstanding the distinction helps you evaluate evidence critically"
   },
   {
-    "objectID": "slides/lectures/measurement-lecture-slides.html#is-democracy-backsliding-according-to-other-indicators-no",
-    "href": "slides/lectures/measurement-lecture-slides.html#is-democracy-backsliding-according-to-other-indicators-no",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "Is democracy backsliding? According to other indicators, no!",
-    "text": "Is democracy backsliding? According to other indicators, no!\n\nSource"
+    "objectID": "slides/lectures/thinking-with-data-slides.html#group-activity-quantitative-vs-qualitative-research",
+    "href": "slides/lectures/thinking-with-data-slides.html#group-activity-quantitative-vs-qualitative-research",
+    "title": "Lecture 1: Thinking With Data",
+    "section": "Group Activity: Quantitative vs Qualitative Research",
+    "text": "Group Activity: Quantitative vs Qualitative Research\n\nYou will work in small groups\nThe goals are to:\n\nUnderstand how quantitative and qualitative research differ\nReflect on what each approach does well\nDiscuss what each approach may miss"
   },
   {
-    "objectID": "slides/lectures/measurement-lecture-slides.html#the-critique-little-meng-2024-on-v-dem",
-    "href": "slides/lectures/measurement-lecture-slides.html#the-critique-little-meng-2024-on-v-dem",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "The critique: Little & Meng (2024) on V-Dem",
-    "text": "The critique: Little & Meng (2024) on V-Dem\n\nV-Dem relies heavily on expert judgments, which may shift over time even if underlying political institutions do not.\nChanges in expert expectations or standards can look like changes in democracy.\nAs an alternative, Little and Meng argue for focusing on indicators of democracy that are less sensitive to subjective interpretation."
+    "objectID": "slides/lectures/thinking-with-data-slides.html#two-research-traditions-mahoney-goertz",
+    "href": "slides/lectures/thinking-with-data-slides.html#two-research-traditions-mahoney-goertz",
+    "title": "Lecture 1: Thinking With Data",
+    "section": "Two Research Traditions (Mahoney & Goertz)",
+    "text": "Two Research Traditions (Mahoney & Goertz)\nQuantitative research\n\nAverage effects across cases\nGeneral, law-like claims\nExample: What is the effect of economic development on democracy?"
   },
   {
-    "objectID": "slides/lectures/measurement-lecture-slides.html#what-does-their-alternative-look-like",
-    "href": "slides/lectures/measurement-lecture-slides.html#what-does-their-alternative-look-like",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "What does their alternative look like?",
-    "text": "What does their alternative look like?\nLittle and Meng (2024) propose measuring democracy using indicators as:\n\nWhether incumbents and ruling parties lose elections and accept defeat.\nThe degree of electoral competition, including vote shares and seat shares of winning parties.\nThe presence and enforcement of formal institutional constraints, such as term limits and succession rules."
+    "objectID": "slides/lectures/thinking-with-data-slides.html#two-research-traditions-mahoney-goertz-1",
+    "href": "slides/lectures/thinking-with-data-slides.html#two-research-traditions-mahoney-goertz-1",
+    "title": "Lecture 1: Thinking With Data",
+    "section": "Two Research Traditions (Mahoney & Goertz)",
+    "text": "Two Research Traditions (Mahoney & Goertz)\nQualitative research\n\nSpecific outcomes in particular cases\nLess emphasis on generalisation\nExample: Did economic development contribute to Spain’s transition to democracy?"
   },
   {
-    "objectID": "slides/lectures/measurement-lecture-slides.html#the-counter-critique-v-dems-side",
-    "href": "slides/lectures/measurement-lecture-slides.html#the-counter-critique-v-dems-side",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "The counter-critique: V-DEM’s side",
-    "text": "The counter-critique: V-DEM’s side\nScholars associated with V-Dem respond that:\n\nDemocracy is inherently multidimensional and cannot be adequately captured by a narrow set of observable outcomes.\nIndicators presented as “objective” by Little and Meng still involve coding decisions and theoretical assumptions; they are not free from subjectivity.\nExpert-based measures are not a feature, not a bug for measuring complex political concepts."
+    "objectID": "slides/lectures/thinking-with-data-slides.html#example-studying-democratisation",
+    "href": "slides/lectures/thinking-with-data-slides.html#example-studying-democratisation",
+    "title": "Lecture 1: Thinking With Data",
+    "section": "Example: Studying Democratisation",
+    "text": "Example: Studying Democratisation\nQuantitative approach\n\nLarge dataset of countries\nGDP per capita, democracy scores, controls\nStatistical analysis of average relationships"
   },
   {
-    "objectID": "slides/lectures/measurement-lecture-slides.html#group-activity-how-to-measure-democracy",
-    "href": "slides/lectures/measurement-lecture-slides.html#group-activity-how-to-measure-democracy",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "Group activity: How to measure democracy?",
-    "text": "Group activity: How to measure democracy?\n\nIn small groups, discuss the debate you have just seen.\nYour task is not to decide whether democracy is declining, but to decide which approach to measurement you find more convincing.\nFocus on the trade-offs between expert judgment and more “objective” indicators, and on what each approach can and cannot capture."
+    "objectID": "slides/lectures/thinking-with-data-slides.html#example-studying-democratisation-1",
+    "href": "slides/lectures/thinking-with-data-slides.html#example-studying-democratisation-1",
+    "title": "Lecture 1: Thinking With Data",
+    "section": "Example: Studying Democratisation",
+    "text": "Example: Studying Democratisation\nQualitative approach\n\nOne or more case studies\nArchives, interviews, historical evidence\nTracing causal processes within cases"
   },
   {
-    "objectID": "slides/lectures/measurement-lecture-slides.html#guiding-questions-for-discussion",
-    "href": "slides/lectures/measurement-lecture-slides.html#guiding-questions-for-discussion",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "Guiding questions for discussion",
-    "text": "Guiding questions for discussion\n\nWhich critique or defense do you find more persuasive, and why?\nWhat do you think is lost when we move away from expert judgments?\nWhat do you think is lost when we rely heavily on subjective assessments?\nIf you had to choose one approach to answer the question of democratic backsliding, which would you choose?"
+    "objectID": "slides/lectures/thinking-with-data-slides.html#your-task",
+    "href": "slides/lectures/thinking-with-data-slides.html#your-task",
+    "title": "Lecture 1: Thinking With Data",
+    "section": "Your Task",
+    "text": "Your Task\n\nDiscuss advantages and disadvantages of each approach\nThink about:\n\nWhat does this approach allow us to see?\nWhat does it obscure or miss?\n\n\nFill in this table:\n\n\n\n\nPros\nCons\n\n\n\n\nQuantitative\n\n\n\n\nQualitative"
   },
   {
-    "objectID": "slides/lectures/measurement-lecture-slides.html#share-your-thoughts",
-    "href": "slides/lectures/measurement-lecture-slides.html#share-your-thoughts",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "Share your thoughts",
-    "text": "Share your thoughts\n\nClick here, scan the QR code, or join at menti.com using the code 2173 3787"
+    "objectID": "slides/lectures/thinking-with-data-slides.html#reconvening",
+    "href": "slides/lectures/thinking-with-data-slides.html#reconvening",
+    "title": "Lecture 1: Thinking With Data",
+    "section": "Reconvening",
+    "text": "Reconvening\nWe will reconvene and:\n\nCollect examples from different groups\nCompare perspectives\nDiscuss why mixed-method approaches are increasingly common"
   },
   {
-    "objectID": "slides/lectures/measurement-lecture-slides.html#dig-deeper",
-    "href": "slides/lectures/measurement-lecture-slides.html#dig-deeper",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "Dig Deeper",
-    "text": "Dig Deeper\n\nHow steep is Trump’s democratic backsliding?\n\nFinancial Times, 31 Jan 2026 (Access with your King’s email account).\n\nMethodology reviewed by Anne Meng."
+    "objectID": "slides/lectures/thinking-with-data-slides.html#why-this-matters-for-the-module",
+    "href": "slides/lectures/thinking-with-data-slides.html#why-this-matters-for-the-module",
+    "title": "Lecture 1: Thinking With Data",
+    "section": "Why This Matters for the Module",
+    "text": "Why This Matters for the Module\nAlthough this course focuses on quantitative methods:\n\nYou should always ask what a method can and cannot show\nStatistical results are not self-interpreting\nGood political science depends on methodological awareness"
   },
   {
-    "objectID": "slides/lectures/measurement-lecture-slides.html#why-this-matters",
-    "href": "slides/lectures/measurement-lecture-slides.html#why-this-matters",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "Why this matters",
-    "text": "Why this matters\n\nMeasurement choices are not neutral. They shape what we see in the data and the conclusions we draw from it.\nDifferent definitions and measurements of the same concept can lead to very different answers to the same research question."
+    "objectID": "slides/lectures/thinking-with-data-slides.html#looking-ahead",
+    "href": "slides/lectures/thinking-with-data-slides.html#looking-ahead",
+    "title": "Lecture 1: Thinking With Data",
+    "section": "Looking Ahead",
+    "text": "Looking Ahead\n\nThe first PS1 work is due next week (28 Jan) before lecture\nPlease check KEATS regularly."
   },
   {
-    "objectID": "slides/lectures/measurement-lecture.html#welcome",
-    "href": "slides/lectures/measurement-lecture.html#welcome",
-    "title": "Lecture 3: Measurement and Types of Variables",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Statistics for Political Science",
+    "section": "",
+    "text": "This module provides students with analytical tools to analyse political phenomena, with a focus on research design, statistical reasoning, and the logic of regression analysis. The module is organised around weekly preparatory activities (short videos and quizzes) that enable lectures and seminars to focus on active learning, including mock exam questions and hands-on work in Stata. By the end of the module, students should be able to formulate and evaluate hypotheses, interpret descriptive and inferential statistics, and implement basic statistical analyses in Stata to answer political science research questions.\nModule convener: Leonardo Falabella (leonardo.falabella@kcl.ac.uk)\nSeminar leader: Mechelle Viernes (mechelle.viernes@kcl.ac.uk)",
+    "crumbs": [
+      "Statistics for Political Science"
+    ]
+  },
+  {
+    "objectID": "index.html#module-outcomes",
+    "href": "index.html#module-outcomes",
+    "title": "Statistics for Political Science",
+    "section": "Module Outcomes",
+    "text": "Module Outcomes\nBy the end of this module, students will be able to:\n\nKnow how to describe data\nUnderstand how data is produced and managed\nUse different statistical inference techniques\nLearn how to test the relationship between two different variables\nConduct basic statistical analyses with Stata",
+    "crumbs": [
+      "Statistics for Political Science"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "slides/index.html",
+    "href": "slides/index.html",
+    "title": "Slides",
+    "section": "",
+    "text": "Week 1: Thinking with Data"
+  },
+  {
+    "objectID": "slides/index.html#week-1-thinking-with-data",
+    "href": "slides/index.html#week-1-thinking-with-data",
+    "title": "Slides",
+    "section": "",
+    "text": "Week 1: Thinking with Data"
+  },
+  {
+    "objectID": "slides/index.html#week-2-research-questions-theories-and-hypotheses",
+    "href": "slides/index.html#week-2-research-questions-theories-and-hypotheses",
+    "title": "Slides",
+    "section": "Week 2: Research Questions, Theories, and Hypotheses",
+    "text": "Week 2: Research Questions, Theories, and Hypotheses\n\nVideos\n\nEmpirical and Normative Questions\nDescriptive and Causal Questions\nUnits of Analysis, Theories, and Hypotheses\nDependent and Independent Variables\nDoing Reproducible Research\n\n\n\nLecture\n\nWeek 2: Research Questions, Theories, and Hypotheses"
+  },
+  {
+    "objectID": "slides/index.html#week-3-measurement-and-variable-types",
+    "href": "slides/index.html#week-3-measurement-and-variable-types",
+    "title": "Slides",
+    "section": "Week 3: Measurement and Variable Types",
+    "text": "Week 3: Measurement and Variable Types\n\nVideos\n\nMeasuring Variables\nTypes of Variables\nDatasets and Codebooks\nThe Stata Interface\nLoading and Browsing Data\n\n\n\nLecture\n\nWeek 3: Measurement and Types of Variables"
+  },
+  {
+    "objectID": "slides/index.html#week-4-describing-distributions-univariate-description",
+    "href": "slides/index.html#week-4-describing-distributions-univariate-description",
+    "title": "Slides",
+    "section": "Week 4: Describing Distributions (Univariate Description)",
+    "text": "Week 4: Describing Distributions (Univariate Description)\n\nVideos\n\nSummarising a Distribution\nVariance and Standard Deviation\nBar Charts and Histograms\nSummarising Distributions in Stata\nBar Charts and Histograms in Stata"
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#welcome",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#welcome",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
     "section": "Welcome",
-    "text": "Welcome\nToday’s goals:\n\nRecap the core points from this week’s videos\nWork through a group discussion on measuring democracy",
+    "text": "Welcome\nToday’s goals:\n\nReiterate how Problem Set 1 (PS1) works\nRecap the core points from this week’s videos\nWork through a group activity on research questions, theories, and hypotheses"
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#announcements",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#announcements",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Announcements",
+    "text": "Announcements\n\nWebsite hosting all video and lecture slides\nShared Project Folder for the datasets and do-files we’ll be using throughout the module\nHave a question about module content? Ask it on the KEATS Discussion Forum!"
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#problem-set-1-ps1-the-big-picture",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#problem-set-1-ps1-the-big-picture",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Problem Set 1 (PS1): The Big Picture",
+    "text": "Problem Set 1 (PS1): The Big Picture\nPS1 is completed through weekly preparatory activities on KEATS:\n\nInteractive videos (with attention-check questions)\nShort quizzes\nThese run from Week 2 to Week 10 (excluding Reading Week)\nThe first PS1 work was due today (28 Jan) before lecture"
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#how-ps1-works-core-rules",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#how-ps1-works-core-rules",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "How PS1 Works (Core Rules)",
+    "text": "How PS1 Works (Core Rules)\nEach week:\n\nVideos introduce key concepts\nQuizzes test understanding of those concepts\nLecture and seminar activities assume this preparation\n\nPS1 is designed to support learning over time, not last-minute revision"
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#quizzes-vs-videos-important-distinction",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#quizzes-vs-videos-important-distinction",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Quizzes vs Videos (Important Distinction)",
+    "text": "Quizzes vs Videos (Important Distinction)\n\nQuizzes\n\n5–10 multiple-choice questions\nUnlimited attempts\nHighest score counts\nDeadlines are enforced"
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#quizzes-vs-videos-important-distinction-1",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#quizzes-vs-videos-important-distinction-1",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Quizzes vs Videos (Important Distinction)",
+    "text": "Quizzes vs Videos (Important Distinction)\n\nVideos\n\nInclude attention-check questions\nOne attempt per question\nVideos remain accessible throughout the term\n\nIf you miss a quiz, you can still earn partial credit for that week via the videos."
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#flexibility-built-in",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#flexibility-built-in",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Flexibility Built In",
+    "text": "Flexibility Built In\n\nThere are eight weeks with PS1 activities\nYour best six weekly scores count\nThe two lowest scores are dropped\nThis is designed as insurance, not a target"
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#research-questions-descriptive-vs-causal",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#research-questions-descriptive-vs-causal",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Research Questions: Descriptive vs Causal",
+    "text": "Research Questions: Descriptive vs Causal\n\nEmpirical questions can be descriptive or causal.\nDescriptive questions ask what the world looks like.\nCausal questions ask what would happen if we intervened."
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#descriptive-questions",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#descriptive-questions",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Descriptive questions",
+    "text": "Descriptive questions\n\nDescriptive questions can be about distributions, trends, or correlations.\n\nWhat percentage of countries are democratic?\nIs there a global trend towards democratic backsliding?\nIs democratic backsliding more prevalent in countries with higher political polarisation?"
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#causal-questions",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#causal-questions",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Causal questions",
+    "text": "Causal questions\n\nCausal questions ask if some variables drive change in others.\n\nDoes exposure to divisive content on social media make people more tolerant of political violence?\nDoes declining trust in political elites weaken commitment to democratic norms?\nDo compulsory voting laws increase political participation?"
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#complementarities-between-questions",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#complementarities-between-questions",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Complementarities between questions",
+    "text": "Complementarities between questions\n\nDescribing a distribution:\n\nWhat percentage of the world’s wealth is held by the 50 richest people?\n\nDescribing a trend:\n\nIs economic inequality increasing across the world?"
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#complementarities-between-questions-1",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#complementarities-between-questions-1",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Complementarities between questions",
+    "text": "Complementarities between questions\n\nDescribing a correlation:\n\nAre autocracies more unequal than democracies?\n\nProbing causation:\n\nDo increases in income inequality make democratic backsliding more likely?"
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#theories",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#theories",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Theories",
+    "text": "Theories\n\nA theory is “a reasoned and precise speculation about the answer to a research question” (King, Keohane, and Verba 1994:3).\nBased on our knowledge and reasoning, what’s a plausible answer to a research question?"
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#example-health-care-systems-and-policy-responses",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#example-health-care-systems-and-policy-responses",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Example: Health care systems and policy responses",
+    "text": "Example: Health care systems and policy responses\n\nResearch question: How did countries’ health care systems affect their abilities to mitigate the impact of the Covid-19 pandemic?\nTheory: Countries with public health care systems took advantage of their centralised bureaucracies to implement more effective policy responses."
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#hypotheses",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#hypotheses",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Hypotheses",
+    "text": "Hypotheses\n\nA hypothesis is an empirically testable implication of a theory.\nGiven your theory, what should we observe in the world?"
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#example-health-care-systems-and-policy-responses-1",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#example-health-care-systems-and-policy-responses-1",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Example: Health care systems and policy responses",
+    "text": "Example: Health care systems and policy responses\n\nTheory: Countries with public health care systems took advantage of their centralised bureaucracies to implement more effective policy responses.\nHypothesis: Countries with public health care systems had lower Covid death rates than countries with private health care systems."
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#group-activity-research-questions-theories-and-hypotheses",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#group-activity-research-questions-theories-and-hypotheses",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Group Activity: Research Questions, Theories, and Hypotheses",
+    "text": "Group Activity: Research Questions, Theories, and Hypotheses\nWorking in groups of about three. By the end of the activity, each group should have:\n\nOne clearly stated research question\nA decision about whether the question is descriptive or causal\nOne theory that offers a a reasoned and precise speculation about the answer to your question\nOne hypothesis that follows logically from the theory"
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#group-activity-research-questions-theories-and-hypotheses-1",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#group-activity-research-questions-theories-and-hypotheses-1",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Group Activity: Research Questions, Theories, and Hypotheses",
+    "text": "Group Activity: Research Questions, Theories, and Hypotheses\nGeneral guidance:\n\nThe research question should come first and guide everything else\nThe theory should explain why, not just what\nThe hypothesis should be empirically testable\nDescriptive questions can still have theories and hypotheses"
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#why-this-matters-for-the-module",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#why-this-matters-for-the-module",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Why This Matters for the Module",
+    "text": "Why This Matters for the Module\n\nThis structure, question → theory → hypothesis, will reappear throughout the module and your future research projects.\nThese are foundational concepts where misunderstandings are very common."
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses-slides.html#looking-ahead",
+    "href": "slides/lectures/questions-theories-hypotheses-slides.html#looking-ahead",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Looking Ahead",
+    "text": "Looking Ahead\n\nThe next PS1 work is due next week (4 Feb) before lecture\nPlease check KEATS regularly."
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#welcome",
+    "href": "slides/lectures/questions-theories-hypotheses.html#welcome",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Welcome",
+    "text": "Welcome\nToday’s goals:\n\nReiterate how Problem Set 1 (PS1) works\nRecap the core points from this week’s videos\nWork through a group activity on research questions, theories, and hypotheses",
     "crumbs": [
-      "Week 3: Measurement and Variable Types",
-      "Lecture 3: Measurement and Types of Variables"
+      "Week 2: Research Questions, Theories, and Hypotheses",
+      "Lecture 2: Research Questions, Theories, and Hypotheses"
     ]
   },
   {
-    "objectID": "slides/lectures/measurement-lecture.html#example-education-levels-and-democratisation",
-    "href": "slides/lectures/measurement-lecture.html#example-education-levels-and-democratisation",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "Example: Education levels and democratisation",
-    "text": "Example: Education levels and democratisation\n\nResearch question: Do higher levels of education make countries more likely to democratise?",
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#announcements",
+    "href": "slides/lectures/questions-theories-hypotheses.html#announcements",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Announcements",
+    "text": "Announcements\n\nWebsite hosting all video and lecture slides\nShared Project Folder for the datasets and do-files we’ll be using throughout the module\nHave a question about module content? Ask it on the KEATS Discussion Forum!",
     "crumbs": [
-      "Week 3: Measurement and Variable Types",
-      "Lecture 3: Measurement and Types of Variables"
+      "Week 2: Research Questions, Theories, and Hypotheses",
+      "Lecture 2: Research Questions, Theories, and Hypotheses"
     ]
   },
   {
-    "objectID": "slides/lectures/measurement-lecture.html#level-of-education",
-    "href": "slides/lectures/measurement-lecture.html#level-of-education",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "Level of education",
-    "text": "Level of education\n\nHow do we know if a country’s level of education is high or low?\nWhat information do we collect?\nWe should start by figuring out a definition for the level of education.",
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#problem-set-1-ps1-the-big-picture",
+    "href": "slides/lectures/questions-theories-hypotheses.html#problem-set-1-ps1-the-big-picture",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Problem Set 1 (PS1): The Big Picture",
+    "text": "Problem Set 1 (PS1): The Big Picture\nPS1 is completed through weekly preparatory activities on KEATS:\n\nInteractive videos (with attention-check questions)\nShort quizzes\nThese run from Week 2 to Week 10 (excluding Reading Week)\nThe first PS1 work was due today (28 Jan) before lecture",
     "crumbs": [
-      "Week 3: Measurement and Variable Types",
-      "Lecture 3: Measurement and Types of Variables"
+      "Week 2: Research Questions, Theories, and Hypotheses",
+      "Lecture 2: Research Questions, Theories, and Hypotheses"
     ]
   },
   {
-    "objectID": "slides/lectures/measurement-lecture.html#defining-the-level-of-education",
-    "href": "slides/lectures/measurement-lecture.html#defining-the-level-of-education",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "Defining the level of education",
-    "text": "Defining the level of education\n\nAccessibility of basic education to all citizens?\nProficiency of students in reading, math, and science?\nThe implications for research are not trivial!",
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#how-ps1-works-core-rules",
+    "href": "slides/lectures/questions-theories-hypotheses.html#how-ps1-works-core-rules",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "How PS1 Works (Core Rules)",
+    "text": "How PS1 Works (Core Rules)\nEach week:\n\nVideos introduce key concepts\nQuizzes test understanding of those concepts\nLecture and seminar activities assume this preparation\n\nPS1 is designed to support learning over time, not last-minute revision",
     "crumbs": [
-      "Week 3: Measurement and Variable Types",
-      "Lecture 3: Measurement and Types of Variables"
+      "Week 2: Research Questions, Theories, and Hypotheses",
+      "Lecture 2: Research Questions, Theories, and Hypotheses"
     ]
   },
   {
-    "objectID": "slides/lectures/measurement-lecture.html#from-definition-to-measurement",
-    "href": "slides/lectures/measurement-lecture.html#from-definition-to-measurement",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "From definition to measurement",
-    "text": "From definition to measurement\n\nA measurement for accessibility: Literacy rates.\n\nA good (but not perfect) approximation.\n\nA measurement for proficiency: Students’ standardised exam scores.\n\nPISA (Programme for International Student Assessment).",
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#quizzes-vs-videos-important-distinction",
+    "href": "slides/lectures/questions-theories-hypotheses.html#quizzes-vs-videos-important-distinction",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Quizzes vs Videos (Important Distinction)",
+    "text": "Quizzes vs Videos (Important Distinction)\n\nQuizzes\n\n5–10 multiple-choice questions\nUnlimited attempts\nHighest score counts\nDeadlines are enforced",
     "crumbs": [
-      "Week 3: Measurement and Variable Types",
-      "Lecture 3: Measurement and Types of Variables"
+      "Week 2: Research Questions, Theories, and Hypotheses",
+      "Lecture 2: Research Questions, Theories, and Hypotheses"
     ]
   },
   {
-    "objectID": "slides/lectures/measurement-lecture.html#literacy-rates",
-    "href": "slides/lectures/measurement-lecture.html#literacy-rates",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "Literacy rates",
-    "text": "Literacy rates",
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#quizzes-vs-videos-important-distinction-1",
+    "href": "slides/lectures/questions-theories-hypotheses.html#quizzes-vs-videos-important-distinction-1",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Quizzes vs Videos (Important Distinction)",
+    "text": "Quizzes vs Videos (Important Distinction)\n\nVideos\n\nInclude attention-check questions\nOne attempt per question\nVideos remain accessible throughout the term\n\nIf you miss a quiz, you can still earn partial credit for that week via the videos.",
     "crumbs": [
-      "Week 3: Measurement and Variable Types",
-      "Lecture 3: Measurement and Types of Variables"
+      "Week 2: Research Questions, Theories, and Hypotheses",
+      "Lecture 2: Research Questions, Theories, and Hypotheses"
     ]
   },
   {
-    "objectID": "slides/lectures/measurement-lecture.html#pisa-scores",
-    "href": "slides/lectures/measurement-lecture.html#pisa-scores",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "PISA scores",
-    "text": "PISA scores",
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#flexibility-built-in",
+    "href": "slides/lectures/questions-theories-hypotheses.html#flexibility-built-in",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Flexibility Built In",
+    "text": "Flexibility Built In\n\nThere are eight weeks with PS1 activities\nYour best six weekly scores count\nThe two lowest scores are dropped\nThis is designed as insurance, not a target",
     "crumbs": [
-      "Week 3: Measurement and Variable Types",
-      "Lecture 3: Measurement and Types of Variables"
+      "Week 2: Research Questions, Theories, and Hypotheses",
+      "Lecture 2: Research Questions, Theories, and Hypotheses"
     ]
   },
   {
-    "objectID": "slides/lectures/measurement-lecture.html#from-education-to-democracy",
-    "href": "slides/lectures/measurement-lecture.html#from-education-to-democracy",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "From education to democracy",
-    "text": "From education to democracy\n\nResearch question: Is there a global trend towards democratic backsliding?\nA pressing contemporary debate that highlights the importance of measurement choices.\nRecent debates focus on a particular measurement: Varieties of Democracy (V-DEM).",
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#research-questions-descriptive-vs-causal",
+    "href": "slides/lectures/questions-theories-hypotheses.html#research-questions-descriptive-vs-causal",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Research Questions: Descriptive vs Causal",
+    "text": "Research Questions: Descriptive vs Causal\n\nEmpirical questions can be descriptive or causal.\nDescriptive questions ask what the world looks like.\nCausal questions ask what would happen if we intervened.",
     "crumbs": [
-      "Week 3: Measurement and Variable Types",
-      "Lecture 3: Measurement and Types of Variables"
+      "Week 2: Research Questions, Theories, and Hypotheses",
+      "Lecture 2: Research Questions, Theories, and Hypotheses"
     ]
   },
   {
-    "objectID": "slides/lectures/measurement-lecture.html#varieties-of-democracy-v-dem",
-    "href": "slides/lectures/measurement-lecture.html#varieties-of-democracy-v-dem",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "Varieties of Democracy (V-DEM)",
-    "text": "Varieties of Democracy (V-DEM)\n\nDemocracy measured as an interval variable (countries are given scores between 0 and 1)\nSends questionnaires to over 3,700 country experts.\nQuestions about several indicators deemed necessary to determine if a country is democratic.",
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#descriptive-questions",
+    "href": "slides/lectures/questions-theories-hypotheses.html#descriptive-questions",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Descriptive questions",
+    "text": "Descriptive questions\n\nDescriptive questions can be about distributions, trends, or correlations.\n\nWhat percentage of countries are democratic?\nIs there a global trend towards democratic backsliding?\nIs democratic backsliding more prevalent in countries with higher political polarisation?",
     "crumbs": [
-      "Week 3: Measurement and Variable Types",
-      "Lecture 3: Measurement and Types of Variables"
+      "Week 2: Research Questions, Theories, and Hypotheses",
+      "Lecture 2: Research Questions, Theories, and Hypotheses"
     ]
   },
   {
-    "objectID": "slides/lectures/measurement-lecture.html#the-v-dem-world-map",
-    "href": "slides/lectures/measurement-lecture.html#the-v-dem-world-map",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "The V-DEM world map",
-    "text": "The V-DEM world map\n\n\n\n\n\nSource",
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#causal-questions",
+    "href": "slides/lectures/questions-theories-hypotheses.html#causal-questions",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Causal questions",
+    "text": "Causal questions\n\nCausal questions ask if some variables drive change in others.\n\nDoes exposure to divisive content on social media make people more tolerant of political violence?\nDoes declining trust in political elites weaken commitment to democratic norms?\nDo compulsory voting laws increase political participation?",
     "crumbs": [
-      "Week 3: Measurement and Variable Types",
-      "Lecture 3: Measurement and Types of Variables"
+      "Week 2: Research Questions, Theories, and Hypotheses",
+      "Lecture 2: Research Questions, Theories, and Hypotheses"
     ]
   },
   {
-    "objectID": "slides/lectures/measurement-lecture.html#is-democracy-backsliding-according-to-v-dem-yes",
-    "href": "slides/lectures/measurement-lecture.html#is-democracy-backsliding-according-to-v-dem-yes",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "Is democracy backsliding? According to V-DEM, yes!",
-    "text": "Is democracy backsliding? According to V-DEM, yes!\n\n\n\n\n\nSource",
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#complementarities-between-questions",
+    "href": "slides/lectures/questions-theories-hypotheses.html#complementarities-between-questions",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Complementarities between questions",
+    "text": "Complementarities between questions\n\nDescribing a distribution:\n\nWhat percentage of the world’s wealth is held by the 50 richest people?\n\nDescribing a trend:\n\nIs economic inequality increasing across the world?",
     "crumbs": [
-      "Week 3: Measurement and Variable Types",
-      "Lecture 3: Measurement and Types of Variables"
+      "Week 2: Research Questions, Theories, and Hypotheses",
+      "Lecture 2: Research Questions, Theories, and Hypotheses"
     ]
   },
   {
-    "objectID": "slides/lectures/measurement-lecture.html#is-democracy-backsliding-according-to-other-indicators-no",
-    "href": "slides/lectures/measurement-lecture.html#is-democracy-backsliding-according-to-other-indicators-no",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "Is democracy backsliding? According to other indicators, no!",
-    "text": "Is democracy backsliding? According to other indicators, no!\n\n\n\n\n\nSource",
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#complementarities-between-questions-1",
+    "href": "slides/lectures/questions-theories-hypotheses.html#complementarities-between-questions-1",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Complementarities between questions",
+    "text": "Complementarities between questions\n\nDescribing a correlation:\n\nAre autocracies more unequal than democracies?\n\nProbing causation:\n\nDo increases in income inequality make democratic backsliding more likely?",
     "crumbs": [
-      "Week 3: Measurement and Variable Types",
-      "Lecture 3: Measurement and Types of Variables"
+      "Week 2: Research Questions, Theories, and Hypotheses",
+      "Lecture 2: Research Questions, Theories, and Hypotheses"
     ]
   },
   {
-    "objectID": "slides/lectures/measurement-lecture.html#the-critique-little-meng-2024-on-v-dem",
-    "href": "slides/lectures/measurement-lecture.html#the-critique-little-meng-2024-on-v-dem",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "The critique: Little & Meng (2024) on V-Dem",
-    "text": "The critique: Little & Meng (2024) on V-Dem\n\nV-Dem relies heavily on expert judgments, which may shift over time even if underlying political institutions do not.\nChanges in expert expectations or standards can look like changes in democracy.\nAs an alternative, Little and Meng argue for focusing on indicators of democracy that are less sensitive to subjective interpretation.",
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#theories",
+    "href": "slides/lectures/questions-theories-hypotheses.html#theories",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Theories",
+    "text": "Theories\n\nA theory is “a reasoned and precise speculation about the answer to a research question” (King, Keohane, and Verba 1994:3).\nBased on our knowledge and reasoning, what’s a plausible answer to a research question?",
     "crumbs": [
-      "Week 3: Measurement and Variable Types",
-      "Lecture 3: Measurement and Types of Variables"
+      "Week 2: Research Questions, Theories, and Hypotheses",
+      "Lecture 2: Research Questions, Theories, and Hypotheses"
     ]
   },
   {
-    "objectID": "slides/lectures/measurement-lecture.html#what-does-their-alternative-look-like",
-    "href": "slides/lectures/measurement-lecture.html#what-does-their-alternative-look-like",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "What does their alternative look like?",
-    "text": "What does their alternative look like?\nLittle and Meng (2024) propose measuring democracy using indicators as:\n\nWhether incumbents and ruling parties lose elections and accept defeat.\nThe degree of electoral competition, including vote shares and seat shares of winning parties.\nThe presence and enforcement of formal institutional constraints, such as term limits and succession rules.",
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#example-health-care-systems-and-policy-responses",
+    "href": "slides/lectures/questions-theories-hypotheses.html#example-health-care-systems-and-policy-responses",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Example: Health care systems and policy responses",
+    "text": "Example: Health care systems and policy responses\n\nResearch question: How did countries’ health care systems affect their abilities to mitigate the impact of the Covid-19 pandemic?\nTheory: Countries with public health care systems took advantage of their centralised bureaucracies to implement more effective policy responses.",
     "crumbs": [
-      "Week 3: Measurement and Variable Types",
-      "Lecture 3: Measurement and Types of Variables"
+      "Week 2: Research Questions, Theories, and Hypotheses",
+      "Lecture 2: Research Questions, Theories, and Hypotheses"
     ]
   },
   {
-    "objectID": "slides/lectures/measurement-lecture.html#the-counter-critique-v-dems-side",
-    "href": "slides/lectures/measurement-lecture.html#the-counter-critique-v-dems-side",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "The counter-critique: V-DEM’s side",
-    "text": "The counter-critique: V-DEM’s side\nScholars associated with V-Dem respond that:\n\nDemocracy is inherently multidimensional and cannot be adequately captured by a narrow set of observable outcomes.\nIndicators presented as “objective” by Little and Meng still involve coding decisions and theoretical assumptions; they are not free from subjectivity.\nExpert-based measures are not a feature, not a bug for measuring complex political concepts.",
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#hypotheses",
+    "href": "slides/lectures/questions-theories-hypotheses.html#hypotheses",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Hypotheses",
+    "text": "Hypotheses\n\nA hypothesis is an empirically testable implication of a theory.\nGiven your theory, what should we observe in the world?",
     "crumbs": [
-      "Week 3: Measurement and Variable Types",
-      "Lecture 3: Measurement and Types of Variables"
+      "Week 2: Research Questions, Theories, and Hypotheses",
+      "Lecture 2: Research Questions, Theories, and Hypotheses"
     ]
   },
   {
-    "objectID": "slides/lectures/measurement-lecture.html#group-activity-how-to-measure-democracy",
-    "href": "slides/lectures/measurement-lecture.html#group-activity-how-to-measure-democracy",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "Group activity: How to measure democracy?",
-    "text": "Group activity: How to measure democracy?\n\nIn small groups, discuss the debate you have just seen.\nYour task is not to decide whether democracy is declining, but to decide which approach to measurement you find more convincing.\nFocus on the trade-offs between expert judgment and more “objective” indicators, and on what each approach can and cannot capture.",
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#example-health-care-systems-and-policy-responses-1",
+    "href": "slides/lectures/questions-theories-hypotheses.html#example-health-care-systems-and-policy-responses-1",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Example: Health care systems and policy responses",
+    "text": "Example: Health care systems and policy responses\n\nTheory: Countries with public health care systems took advantage of their centralised bureaucracies to implement more effective policy responses.\nHypothesis: Countries with public health care systems had lower Covid death rates than countries with private health care systems.",
     "crumbs": [
-      "Week 3: Measurement and Variable Types",
-      "Lecture 3: Measurement and Types of Variables"
+      "Week 2: Research Questions, Theories, and Hypotheses",
+      "Lecture 2: Research Questions, Theories, and Hypotheses"
     ]
   },
   {
-    "objectID": "slides/lectures/measurement-lecture.html#guiding-questions-for-discussion",
-    "href": "slides/lectures/measurement-lecture.html#guiding-questions-for-discussion",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "Guiding questions for discussion",
-    "text": "Guiding questions for discussion\n\nWhich critique or defense do you find more persuasive, and why?\nWhat do you think is lost when we move away from expert judgments?\nWhat do you think is lost when we rely heavily on subjective assessments?\nIf you had to choose one approach to answer the question of democratic backsliding, which would you choose?",
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#group-activity-research-questions-theories-and-hypotheses",
+    "href": "slides/lectures/questions-theories-hypotheses.html#group-activity-research-questions-theories-and-hypotheses",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Group Activity: Research Questions, Theories, and Hypotheses",
+    "text": "Group Activity: Research Questions, Theories, and Hypotheses\nWorking in groups of about three. By the end of the activity, each group should have:\n\nOne clearly stated research question\nA decision about whether the question is descriptive or causal\nOne theory that offers a a reasoned and precise speculation about the answer to your question\nOne hypothesis that follows logically from the theory",
     "crumbs": [
-      "Week 3: Measurement and Variable Types",
-      "Lecture 3: Measurement and Types of Variables"
+      "Week 2: Research Questions, Theories, and Hypotheses",
+      "Lecture 2: Research Questions, Theories, and Hypotheses"
     ]
   },
   {
-    "objectID": "slides/lectures/measurement-lecture.html#share-your-thoughts",
-    "href": "slides/lectures/measurement-lecture.html#share-your-thoughts",
-    "title": "Lecture 3: Measurement and Types of Variables",
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#group-activity-research-questions-theories-and-hypotheses-1",
+    "href": "slides/lectures/questions-theories-hypotheses.html#group-activity-research-questions-theories-and-hypotheses-1",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Group Activity: Research Questions, Theories, and Hypotheses",
+    "text": "Group Activity: Research Questions, Theories, and Hypotheses\nGeneral guidance:\n\nThe research question should come first and guide everything else\nThe theory should explain why, not just what\nThe hypothesis should be empirically testable\nDescriptive questions can still have theories and hypotheses",
+    "crumbs": [
+      "Week 2: Research Questions, Theories, and Hypotheses",
+      "Lecture 2: Research Questions, Theories, and Hypotheses"
+    ]
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#why-this-matters-for-the-module",
+    "href": "slides/lectures/questions-theories-hypotheses.html#why-this-matters-for-the-module",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Why This Matters for the Module",
+    "text": "Why This Matters for the Module\n\nThis structure, question → theory → hypothesis, will reappear throughout the module and your future research projects.\nThese are foundational concepts where misunderstandings are very common.",
+    "crumbs": [
+      "Week 2: Research Questions, Theories, and Hypotheses",
+      "Lecture 2: Research Questions, Theories, and Hypotheses"
+    ]
+  },
+  {
+    "objectID": "slides/lectures/questions-theories-hypotheses.html#looking-ahead",
+    "href": "slides/lectures/questions-theories-hypotheses.html#looking-ahead",
+    "title": "Lecture 2: Research Questions, Theories, and Hypotheses",
+    "section": "Looking Ahead",
+    "text": "Looking Ahead\n\nThe next PS1 work is due next week (4 Feb) before lecture\nPlease check KEATS regularly.",
+    "crumbs": [
+      "Week 2: Research Questions, Theories, and Hypotheses",
+      "Lecture 2: Research Questions, Theories, and Hypotheses"
+    ]
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture-slides.html#welcome",
+    "href": "slides/lectures/distributions-lecture-slides.html#welcome",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "Welcome",
+    "text": "Welcome\nToday’s goals:\n\nReview what you learned about describing distributions.\nHave a group discussion about the module and collect feedback."
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture-slides.html#how-good-is-80",
+    "href": "slides/lectures/distributions-lecture-slides.html#how-good-is-80",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "How good is 80%?",
+    "text": "How good is 80%?\n\nImagine you are choosing a course to apply for.\nA university advertises that 80% of students are satisfied with the course.\nAt first glance, this sounds positive."
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture-slides.html#data-in-context",
+    "href": "slides/lectures/distributions-lecture-slides.html#data-in-context",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "Data in context",
+    "text": "Data in context\n\nA number on its own is hard to evaluate.\nTo judge whether 80% is impressive, we need to know what is typical for similar courses.\nThis is where summaries of central tendency become useful."
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture-slides.html#the-mean",
+    "href": "slides/lectures/distributions-lecture-slides.html#the-mean",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "The mean",
+    "text": "The mean\n\nThe mean is the average value. We find it by summing the values of observations and dividing by the number of observations.\nIt informs what is typical in a distribution of numerical values.\nFor course satisfaction, the national mean is about 82%."
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture-slides.html#the-median",
+    "href": "slides/lectures/distributions-lecture-slides.html#the-median",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "The median",
+    "text": "The median\n\nThe median is the value that divides the distribution in half\nHalf of the observations lie above it, and half lie below it.\nFor course satisfaction, the national median is about 84%."
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture-slides.html#nss-data-histogram",
+    "href": "slides/lectures/distributions-lecture-slides.html#nss-data-histogram",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "NSS Data: Histogram",
+    "text": "NSS Data: Histogram"
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture-slides.html#nss-data-histogram-1",
+    "href": "slides/lectures/distributions-lecture-slides.html#nss-data-histogram-1",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "NSS Data: Histogram",
+    "text": "NSS Data: Histogram\n\nAbout 200 courses between 90% and 95% satisfaction rates."
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture-slides.html#interpreting-the-median",
+    "href": "slides/lectures/distributions-lecture-slides.html#interpreting-the-median",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "Interpreting the median",
+    "text": "Interpreting the median\n\nThe median is useful when we want a summary that is less sensitive to extreme values.\nThe mean annual salary in London (2025) is £70.3k.\nThe median salary is £49.7k."
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture-slides.html#another-distribution-with-extreme-values-gdp-per-capita",
+    "href": "slides/lectures/distributions-lecture-slides.html#another-distribution-with-extreme-values-gdp-per-capita",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "Another distribution with extreme values: GDP per capita",
+    "text": "Another distribution with extreme values: GDP per capita"
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture-slides.html#gdp-per-capita-summary-statistics",
+    "href": "slides/lectures/distributions-lecture-slides.html#gdp-per-capita-summary-statistics",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "GDP per capita: summary statistics",
+    "text": "GDP per capita: summary statistics\n\n\n\nGDPpc\n\n\n\n\n\nObs\n162\n\n\nMean\n19,619\n\n\nMedian\n12,890\n\n\nStd. dev.\n20,986\n\n\nMin\n596\n\n\nMax\n149,171"
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture-slides.html#right-skewed-distributions",
+    "href": "slides/lectures/distributions-lecture-slides.html#right-skewed-distributions",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "Right-skewed distributions",
+    "text": "Right-skewed distributions\n\nWhen a histogram looks like your right foot, the distribution is right-skewed.\nA few extremely high values make the mean (19.6k) larger than the median (12.9k)."
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture-slides.html#left-skewed-distributions",
+    "href": "slides/lectures/distributions-lecture-slides.html#left-skewed-distributions",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "Left-skewed distributions",
+    "text": "Left-skewed distributions\n\nWhen a histogram looks like your left foot, the distribution is left-skewed.\nA few extremely low values make the mean (82) smaller than the median (84)."
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture-slides.html#variance-and-standard-deviation",
+    "href": "slides/lectures/distributions-lecture-slides.html#variance-and-standard-deviation",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "Variance and standard deviation",
+    "text": "Variance and standard deviation\n\nThe variance and standard deviation add context by informing us how spread out the distribution is.\nThis adds insight into how much an observation stands out from the rest."
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture-slides.html#the-variance-formula",
+    "href": "slides/lectures/distributions-lecture-slides.html#the-variance-formula",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "The variance formula",
+    "text": "The variance formula\n\\[\\sigma^2 = \\frac{\\sum_{i=1}^{N} (x_i - \\mu)^2}{N}\\]\n\n\\(\\mu\\) is the mean.\n\\((x_i - \\mu)^2\\) means, “take the value of an observation, subtract the mean, and square the result.”\n\\(\\sum_{i=1}^{N}\\) means, “do this for every observation (\\(x_i\\)) and take the sum.”\nWe divide it by N to get the variance (\\(\\sigma^2\\))."
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture-slides.html#the-standard-deviation",
+    "href": "slides/lectures/distributions-lecture-slides.html#the-standard-deviation",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "The standard deviation",
+    "text": "The standard deviation\n\nThe standard deviation (\\(\\sigma\\)) is the square root of the variance.\nMore commonly used than the variance and useful to judge how unusual an observation is.\nThe variance for satisfaction with courses is about 145, and the standard deviation is about \\(\\sqrt{145}\\approx12\\)."
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture-slides.html#interpreting-the-standard-deviation",
+    "href": "slides/lectures/distributions-lecture-slides.html#interpreting-the-standard-deviation",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "Interpreting the standard deviation",
+    "text": "Interpreting the standard deviation\n\nLinguistics at Glasgow (90%) is two-thirds of a standard deviation above the mean: \\(8/12=2/3\\textrm{ s.d.}\\)\n\nAccounting at Strathclyde (94%) sits at one standard deviation above the mean: \\(12/12=1\\textrm{ s.d.}\\)"
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture-slides.html#four-weeks-in-a-check-in",
+    "href": "slides/lectures/distributions-lecture-slides.html#four-weeks-in-a-check-in",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "Four Weeks In: A Check-In",
+    "text": "Four Weeks In: A Check-In\nWe’re at a good moment to pause and reflect:\n\nYou’ve completed three cycles of videos, quizzes, and in-class work.\nYou’ve started working with Stata in seminars.\nThe module structure is now familiar but not yet routine.\n\nThis is the ideal time to gather feedback on what’s working and what isn’t."
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture-slides.html#why-this-feedback-matters",
+    "href": "slides/lectures/distributions-lecture-slides.html#why-this-feedback-matters",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "Why This Feedback Matters",
+    "text": "Why This Feedback Matters\nThe module design (videos before lectures, active learning in class) is grounded in education research. But implementation matters as much as design.\n\nAre the videos helping you prepare?\nAre the seminars giving you enough hands-on practice?\nAre the activities reinforcing the concepts you need?"
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture-slides.html#group-discussion-three-questions",
+    "href": "slides/lectures/distributions-lecture-slides.html#group-discussion-three-questions",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "Group Discussion: Three Questions",
+    "text": "Group Discussion: Three Questions\n\nVideos and quizzes: What’s working? What could be clearer or more useful?\nStata labs: Are the seminar activities helping you build confidence? What’s still confusing?\nLectures: Are the in-class activities helping you connect concepts to practice?\n\nThink about concrete examples of what helps or what could be improved."
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture-slides.html#share-your-thoughts",
+    "href": "slides/lectures/distributions-lecture-slides.html#share-your-thoughts",
+    "title": "Lecture 4: Describing Distributions",
     "section": "Share your thoughts",
-    "text": "Share your thoughts\n\nClick here, scan the QR code, or join at menti.com using the code 2173 3787",
-    "crumbs": [
-      "Week 3: Measurement and Variable Types",
-      "Lecture 3: Measurement and Types of Variables"
-    ]
+    "text": "Share your thoughts\n\nClick here, scan the QR code, or join at menti.com using the code 4396 2288\nYour feedback is anonymous!"
   },
   {
-    "objectID": "slides/lectures/measurement-lecture.html#dig-deeper",
-    "href": "slides/lectures/measurement-lecture.html#dig-deeper",
-    "title": "Lecture 3: Measurement and Types of Variables",
-    "section": "Dig Deeper",
-    "text": "Dig Deeper\n\nHow steep is Trump’s democratic backsliding?\n\nFinancial Times, 31 Jan 2026 (Access with your King’s email account).\n\nMethodology reviewed by Anne Meng.",
-    "crumbs": [
-      "Week 3: Measurement and Variable Types",
-      "Lecture 3: Measurement and Types of Variables"
-    ]
-  },
-  {
-    "objectID": "slides/lectures/measurement-lecture.html#why-this-matters",
-    "href": "slides/lectures/measurement-lecture.html#why-this-matters",
-    "title": "Lecture 3: Measurement and Types of Variables",
+    "objectID": "slides/lectures/distributions-lecture-slides.html#why-this-matters",
+    "href": "slides/lectures/distributions-lecture-slides.html#why-this-matters",
+    "title": "Lecture 4: Describing Distributions",
     "section": "Why this matters",
-    "text": "Why this matters\n\nMeasurement choices are not neutral. They shape what we see in the data and the conclusions we draw from it.\nDifferent definitions and measurements of the same concept can lead to very different answers to the same research question.",
+    "text": "Why this matters\n\nThe mean and median tell us what is typical.\nThe standard deviation tells us whether differences from the mean are small or substantial.\nThese indicators enable meaningful comparison across cases, such as courses, voters, or income levels."
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture.html#welcome",
+    "href": "slides/lectures/distributions-lecture.html#welcome",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "Welcome",
+    "text": "Welcome\nToday’s goals:\n\nReview what you learned about describing distributions.\nHave a group discussion about the module and collect feedback.",
     "crumbs": [
-      "Week 3: Measurement and Variable Types",
-      "Lecture 3: Measurement and Types of Variables"
+      "Week 4: Describing Distributions (Univariate Description)",
+      "Lecture 4: Describing Distributions"
+    ]
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture.html#how-good-is-80",
+    "href": "slides/lectures/distributions-lecture.html#how-good-is-80",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "How good is 80%?",
+    "text": "How good is 80%?\n\nImagine you are choosing a course to apply for.\nA university advertises that 80% of students are satisfied with the course.\nAt first glance, this sounds positive.",
+    "crumbs": [
+      "Week 4: Describing Distributions (Univariate Description)",
+      "Lecture 4: Describing Distributions"
+    ]
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture.html#data-in-context",
+    "href": "slides/lectures/distributions-lecture.html#data-in-context",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "Data in context",
+    "text": "Data in context\n\nA number on its own is hard to evaluate.\nTo judge whether 80% is impressive, we need to know what is typical for similar courses.\nThis is where summaries of central tendency become useful.",
+    "crumbs": [
+      "Week 4: Describing Distributions (Univariate Description)",
+      "Lecture 4: Describing Distributions"
+    ]
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture.html#the-mean",
+    "href": "slides/lectures/distributions-lecture.html#the-mean",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "The mean",
+    "text": "The mean\n\nThe mean is the average value. We find it by summing the values of observations and dividing by the number of observations.\nIt informs what is typical in a distribution of numerical values.\nFor course satisfaction, the national mean is about 82%.",
+    "crumbs": [
+      "Week 4: Describing Distributions (Univariate Description)",
+      "Lecture 4: Describing Distributions"
+    ]
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture.html#the-median",
+    "href": "slides/lectures/distributions-lecture.html#the-median",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "The median",
+    "text": "The median\n\nThe median is the value that divides the distribution in half\nHalf of the observations lie above it, and half lie below it.\nFor course satisfaction, the national median is about 84%.",
+    "crumbs": [
+      "Week 4: Describing Distributions (Univariate Description)",
+      "Lecture 4: Describing Distributions"
+    ]
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture.html#nss-data-histogram",
+    "href": "slides/lectures/distributions-lecture.html#nss-data-histogram",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "NSS Data: Histogram",
+    "text": "NSS Data: Histogram",
+    "crumbs": [
+      "Week 4: Describing Distributions (Univariate Description)",
+      "Lecture 4: Describing Distributions"
+    ]
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture.html#nss-data-histogram-1",
+    "href": "slides/lectures/distributions-lecture.html#nss-data-histogram-1",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "NSS Data: Histogram",
+    "text": "NSS Data: Histogram\n\n\n\n\n\nAbout 200 courses between 90% and 95% satisfaction rates.",
+    "crumbs": [
+      "Week 4: Describing Distributions (Univariate Description)",
+      "Lecture 4: Describing Distributions"
+    ]
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture.html#interpreting-the-median",
+    "href": "slides/lectures/distributions-lecture.html#interpreting-the-median",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "Interpreting the median",
+    "text": "Interpreting the median\n\nThe median is useful when we want a summary that is less sensitive to extreme values.\nThe mean annual salary in London (2025) is £70.3k.\nThe median salary is £49.7k.",
+    "crumbs": [
+      "Week 4: Describing Distributions (Univariate Description)",
+      "Lecture 4: Describing Distributions"
+    ]
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture.html#another-distribution-with-extreme-values-gdp-per-capita",
+    "href": "slides/lectures/distributions-lecture.html#another-distribution-with-extreme-values-gdp-per-capita",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "Another distribution with extreme values: GDP per capita",
+    "text": "Another distribution with extreme values: GDP per capita",
+    "crumbs": [
+      "Week 4: Describing Distributions (Univariate Description)",
+      "Lecture 4: Describing Distributions"
+    ]
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture.html#gdp-per-capita-summary-statistics",
+    "href": "slides/lectures/distributions-lecture.html#gdp-per-capita-summary-statistics",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "GDP per capita: summary statistics",
+    "text": "GDP per capita: summary statistics\n\n\n\nGDPpc\n\n\n\n\n\nObs\n162\n\n\nMean\n19,619\n\n\nMedian\n12,890\n\n\nStd. dev.\n20,986\n\n\nMin\n596\n\n\nMax\n149,171",
+    "crumbs": [
+      "Week 4: Describing Distributions (Univariate Description)",
+      "Lecture 4: Describing Distributions"
+    ]
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture.html#right-skewed-distributions",
+    "href": "slides/lectures/distributions-lecture.html#right-skewed-distributions",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "Right-skewed distributions",
+    "text": "Right-skewed distributions\n\nWhen a histogram looks like your right foot, the distribution is right-skewed.\nA few extremely high values make the mean (19.6k) larger than the median (12.9k).",
+    "crumbs": [
+      "Week 4: Describing Distributions (Univariate Description)",
+      "Lecture 4: Describing Distributions"
+    ]
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture.html#left-skewed-distributions",
+    "href": "slides/lectures/distributions-lecture.html#left-skewed-distributions",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "Left-skewed distributions",
+    "text": "Left-skewed distributions\n\nWhen a histogram looks like your left foot, the distribution is left-skewed.\nA few extremely low values make the mean (82) smaller than the median (84).",
+    "crumbs": [
+      "Week 4: Describing Distributions (Univariate Description)",
+      "Lecture 4: Describing Distributions"
+    ]
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture.html#variance-and-standard-deviation",
+    "href": "slides/lectures/distributions-lecture.html#variance-and-standard-deviation",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "Variance and standard deviation",
+    "text": "Variance and standard deviation\n\nThe variance and standard deviation add context by informing us how spread out the distribution is.\nThis adds insight into how much an observation stands out from the rest.",
+    "crumbs": [
+      "Week 4: Describing Distributions (Univariate Description)",
+      "Lecture 4: Describing Distributions"
+    ]
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture.html#the-variance-formula",
+    "href": "slides/lectures/distributions-lecture.html#the-variance-formula",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "The variance formula",
+    "text": "The variance formula\n\\[\\sigma^2 = \\frac{\\sum_{i=1}^{N} (x_i - \\mu)^2}{N}\\]\n\n\\(\\mu\\) is the mean.\n\\((x_i - \\mu)^2\\) means, “take the value of an observation, subtract the mean, and square the result.”\n\\(\\sum_{i=1}^{N}\\) means, “do this for every observation (\\(x_i\\)) and take the sum.”\nWe divide it by N to get the variance (\\(\\sigma^2\\)).",
+    "crumbs": [
+      "Week 4: Describing Distributions (Univariate Description)",
+      "Lecture 4: Describing Distributions"
+    ]
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture.html#the-standard-deviation",
+    "href": "slides/lectures/distributions-lecture.html#the-standard-deviation",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "The standard deviation",
+    "text": "The standard deviation\n\nThe standard deviation (\\(\\sigma\\)) is the square root of the variance.\nMore commonly used than the variance and useful to judge how unusual an observation is.\nThe variance for satisfaction with courses is about 145, and the standard deviation is about \\(\\sqrt{145}\\approx12\\).",
+    "crumbs": [
+      "Week 4: Describing Distributions (Univariate Description)",
+      "Lecture 4: Describing Distributions"
+    ]
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture.html#interpreting-the-standard-deviation",
+    "href": "slides/lectures/distributions-lecture.html#interpreting-the-standard-deviation",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "Interpreting the standard deviation",
+    "text": "Interpreting the standard deviation\n\nLinguistics at Glasgow (90%) is two-thirds of a standard deviation above the mean: \\(8/12=2/3\\textrm{ s.d.}\\)\n\nAccounting at Strathclyde (94%) sits at one standard deviation above the mean: \\(12/12=1\\textrm{ s.d.}\\)",
+    "crumbs": [
+      "Week 4: Describing Distributions (Univariate Description)",
+      "Lecture 4: Describing Distributions"
+    ]
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture.html#four-weeks-in-a-check-in",
+    "href": "slides/lectures/distributions-lecture.html#four-weeks-in-a-check-in",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "Four Weeks In: A Check-In",
+    "text": "Four Weeks In: A Check-In\nWe’re at a good moment to pause and reflect:\n\nYou’ve completed three cycles of videos, quizzes, and in-class work.\nYou’ve started working with Stata in seminars.\nThe module structure is now familiar but not yet routine.\n\nThis is the ideal time to gather feedback on what’s working and what isn’t.",
+    "crumbs": [
+      "Week 4: Describing Distributions (Univariate Description)",
+      "Lecture 4: Describing Distributions"
+    ]
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture.html#why-this-feedback-matters",
+    "href": "slides/lectures/distributions-lecture.html#why-this-feedback-matters",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "Why This Feedback Matters",
+    "text": "Why This Feedback Matters\nThe module design (videos before lectures, active learning in class) is grounded in education research. But implementation matters as much as design.\n\nAre the videos helping you prepare?\nAre the seminars giving you enough hands-on practice?\nAre the activities reinforcing the concepts you need?",
+    "crumbs": [
+      "Week 4: Describing Distributions (Univariate Description)",
+      "Lecture 4: Describing Distributions"
+    ]
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture.html#group-discussion-three-questions",
+    "href": "slides/lectures/distributions-lecture.html#group-discussion-three-questions",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "Group Discussion: Three Questions",
+    "text": "Group Discussion: Three Questions\n\nVideos and quizzes: What’s working? What could be clearer or more useful?\nStata labs: Are the seminar activities helping you build confidence? What’s still confusing?\nLectures: Are the in-class activities helping you connect concepts to practice?\n\nThink about concrete examples of what helps or what could be improved.",
+    "crumbs": [
+      "Week 4: Describing Distributions (Univariate Description)",
+      "Lecture 4: Describing Distributions"
+    ]
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture.html#share-your-thoughts",
+    "href": "slides/lectures/distributions-lecture.html#share-your-thoughts",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "Share your thoughts",
+    "text": "Share your thoughts\n\nClick here, scan the QR code, or join at menti.com using the code 4396 2288\nYour feedback is anonymous!",
+    "crumbs": [
+      "Week 4: Describing Distributions (Univariate Description)",
+      "Lecture 4: Describing Distributions"
+    ]
+  },
+  {
+    "objectID": "slides/lectures/distributions-lecture.html#why-this-matters",
+    "href": "slides/lectures/distributions-lecture.html#why-this-matters",
+    "title": "Lecture 4: Describing Distributions",
+    "section": "Why this matters",
+    "text": "Why this matters\n\nThe mean and median tell us what is typical.\nThe standard deviation tells us whether differences from the mean are small or substantial.\nThese indicators enable meaningful comparison across cases, such as courses, voters, or income levels.",
+    "crumbs": [
+      "Week 4: Describing Distributions (Univariate Description)",
+      "Lecture 4: Describing Distributions"
     ]
   },
   {
