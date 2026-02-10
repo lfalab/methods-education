@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Variance and Standard Deviation</title>
+<title>Comparing Means by Category</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,35 +69,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -110,7 +81,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/summarising-distribution.html">Week 4: Describing Distributions (Univariate Description)</a></li><li class="breadcrumb-item"><a href="../../slides/videos-concepts/variance-sd.html">Variance and Standard Deviation</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/correlations-nominal.html">Week 5: Describing Correlations (Bivariate Description)</a></li><li class="breadcrumb-item"><a href="../../slides/videos-concepts/comparing-means.html">Comparing Means by Category</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -268,7 +239,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/variance-sd.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../slides/videos-concepts/variance-sd.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Variance and Standard Deviation</span></a>
   </div>
 </li>
@@ -309,7 +280,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/comparing-means.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/comparing-means.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Comparing Means by Category</span></a>
   </div>
 </li>
@@ -337,125 +308,138 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#variance-and-standard-deviation" id="toc-variance-and-standard-deviation" class="nav-link active" data-scroll-target="#variance-and-standard-deviation">Variance and Standard Deviation</a>
+  <li><a href="#comparing-means-by-category" id="toc-comparing-means-by-category" class="nav-link active" data-scroll-target="#comparing-means-by-category">Comparing Means by Category</a>
   <ul class="collapse">
   <li><a href="#youll-learn-to" id="toc-youll-learn-to" class="nav-link" data-scroll-target="#youll-learn-to">You’ll learn to</a></li>
-  <li><a href="#how-good-is-80" id="toc-how-good-is-80" class="nav-link" data-scroll-target="#how-good-is-80">How good is 80%?</a></li>
-  <li><a href="#variance-and-standard-deviation-1" id="toc-variance-and-standard-deviation-1" class="nav-link" data-scroll-target="#variance-and-standard-deviation-1">Variance and standard deviation</a></li>
-  <li><a href="#variance" id="toc-variance" class="nav-link" data-scroll-target="#variance">Variance</a></li>
-  <li><a href="#calculating-the-variance" id="toc-calculating-the-variance" class="nav-link" data-scroll-target="#calculating-the-variance">Calculating the variance</a></li>
-  <li><a href="#calculating-the-variance-1" id="toc-calculating-the-variance-1" class="nav-link" data-scroll-target="#calculating-the-variance-1">Calculating the variance</a></li>
-  <li><a href="#the-variance-formula" id="toc-the-variance-formula" class="nav-link" data-scroll-target="#the-variance-formula">The variance formula</a></li>
-  <li><a href="#the-standard-deviation" id="toc-the-standard-deviation" class="nav-link" data-scroll-target="#the-standard-deviation">The standard deviation</a></li>
-  <li><a href="#interpreting-the-standard-deviation" id="toc-interpreting-the-standard-deviation" class="nav-link" data-scroll-target="#interpreting-the-standard-deviation">Interpreting the standard deviation</a></li>
+  <li><a href="#political-preferences-left-right-self-placement" id="toc-political-preferences-left-right-self-placement" class="nav-link" data-scroll-target="#political-preferences-left-right-self-placement">Political preferences (Left-right self-placement)</a></li>
+  <li><a href="#newspaper-readership" id="toc-newspaper-readership" class="nav-link" data-scroll-target="#newspaper-readership">Newspaper readership</a></li>
+  <li><a href="#political-preferences-and-choice-of-newspaper" id="toc-political-preferences-and-choice-of-newspaper" class="nav-link" data-scroll-target="#political-preferences-and-choice-of-newspaper">Political preferences and choice of newspaper</a></li>
+  <li><a href="#correlations-between-variables" id="toc-correlations-between-variables" class="nav-link" data-scroll-target="#correlations-between-variables">Correlations between variables</a></li>
+  <li><a href="#newspaper-and-preferences-bar-chart" id="toc-newspaper-and-preferences-bar-chart" class="nav-link" data-scroll-target="#newspaper-and-preferences-bar-chart">Newspaper and preferences: bar chart</a></li>
+  <li><a href="#newspaper-and-preferences-comparing-means" id="toc-newspaper-and-preferences-comparing-means" class="nav-link" data-scroll-target="#newspaper-and-preferences-comparing-means">Newspaper and preferences: comparing means</a></li>
   <li><a href="#recap" id="toc-recap" class="nav-link" data-scroll-target="#recap">Recap</a></li>
   </ul></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="variance-sd-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="comparing-means-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/summarising-distribution.html">Week 4: Describing Distributions (Univariate Description)</a></li><li class="breadcrumb-item"><a href="../../slides/videos-concepts/variance-sd.html">Variance and Standard Deviation</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/correlations-nominal.html">Week 5: Describing Correlations (Bivariate Description)</a></li><li class="breadcrumb-item"><a href="../../slides/videos-concepts/comparing-means.html">Comparing Means by Category</a></li></ol></nav></header>
 
 
 
 
-<section id="variance-and-standard-deviation" class="level1 title-left">
-<h1 class="title-left">Variance and Standard Deviation</h1>
+<section id="comparing-means-by-category" class="level1 title-left">
+<h1 class="title-left">Comparing Means by Category</h1>
 <hr>
 <section id="youll-learn-to" class="level2">
 <h2 class="anchored" data-anchor-id="youll-learn-to">You’ll learn to</h2>
 <div class="presenter-space">
 <ul>
-<li>Interpret the <strong>variance</strong> and <strong>standard deviation</strong> as summaries of dispersion.</li>
+<li>Summarise differences between groups by <strong>comparing group means</strong>.</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="how-good-is-80" class="level2">
-<h2 class="anchored" data-anchor-id="how-good-is-80">How good is 80%?</h2>
+<section id="political-preferences-left-right-self-placement" class="level2">
+<h2 class="anchored" data-anchor-id="political-preferences-left-right-self-placement">Political preferences (Left-right self-placement)</h2>
+<div class="presenter-space">
+<div class="nonincremental">
+<ul>
+<li>Mean: <strong>4.75</strong></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/bes_ideol_hist.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" data-fig-cap=""></p>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="newspaper-readership" class="level2">
+<h2 class="anchored" data-anchor-id="newspaper-readership">Newspaper readership</h2>
+<div class="presenter-space">
+<div class="nonincremental">
+<ul>
+<li>Mode: <strong>Guardian/Observer</strong> - 281 readers (22.8%)</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/bes_news_bar.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" data-fig-cap=""></p>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="political-preferences-and-choice-of-newspaper" class="level2">
+<h2 class="anchored" data-anchor-id="political-preferences-and-choice-of-newspaper">Political preferences and choice of newspaper</h2>
 <div class="presenter-space">
 <ul>
-<li>A university advertises that <strong>80% of students are satisfied</strong> with the course.</li>
-<li>But the national mean is about <strong>82%</strong>.</li>
-<li>With this new information, 80% is not as impressive as it seems.</li>
+<li>Different <strong>media outlets</strong> report the news with different perspectives.</li>
+<li>Do these differences reflect the <strong>political preferences</strong> of their readers?</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="variance-and-standard-deviation-1" class="level2">
-<h2 class="anchored" data-anchor-id="variance-and-standard-deviation-1">Variance and standard deviation</h2>
+<section id="correlations-between-variables" class="level2">
+<h2 class="anchored" data-anchor-id="correlations-between-variables">Correlations between variables</h2>
 <div class="presenter-space">
 <ul>
-<li>The <strong>variance</strong> and <strong>standard deviation</strong> add context by informing us how spread out the distribution is.</li>
-<li>This adds insight into how much an observation <strong>stands out</strong> from the rest.</li>
+<li>Two variables are <strong>correlated</strong> if knowing the value of one variable tells you something about the likely value of the other.</li>
+<li>If readers of different newspapers have similar preferences, there’s no correlation. If their preferences differ, there is a correlation.</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="variance" class="level2">
-<h2 class="anchored" data-anchor-id="variance">Variance</h2>
+<section id="newspaper-and-preferences-bar-chart" class="level2">
+<h2 class="anchored" data-anchor-id="newspaper-and-preferences-bar-chart">Newspaper and preferences: bar chart</h2>
 <div class="presenter-space">
-<ul>
-<li>The variance measures how <strong>far from the mean</strong> the observations tend to be.</li>
-<li>The course with 80% approval rates is not too far from the mean.</li>
-<li>But how about the others?</li>
-</ul>
+<div class="nonincremental">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/bes_news_ideol.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</div>
 </div>
 <hr>
 </section>
-<section id="calculating-the-variance" class="level2">
-<h2 class="anchored" data-anchor-id="calculating-the-variance">Calculating the variance</h2>
+<section id="newspaper-and-preferences-comparing-means" class="level2">
+<h2 class="anchored" data-anchor-id="newspaper-and-preferences-comparing-means">Newspaper and preferences: comparing means</h2>
 <div class="presenter-space">
-<ul>
-<li>To get the <strong>variance</strong>, we start by subtracting the mean from each observation and squaring the difference.</li>
-<li>Linguistics at the University of Glasgow has a <strong>90%</strong> approval rate.</li>
-<li>By subtracting the mean from this rate and squaring the difference, we get <span class="math inline">\((90-82)^2=8^2=64\)</span></li>
-</ul>
+<div class="nonincremental">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Newspaper</th>
+<th>Mean left-right self-placement</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Guardian/Observer</td>
+<td><strong>3.29</strong></td>
+</tr>
+<tr class="even">
+<td>Independent</td>
+<td><strong>4.47</strong></td>
+</tr>
+<tr class="odd">
+<td>Times</td>
+<td><strong>5.29</strong></td>
+</tr>
+<tr class="even">
+<td>Daily Mail</td>
+<td><strong>6.1</strong></td>
+</tr>
+<tr class="odd">
+<td>Telegraph</td>
+<td><strong>6.4</strong></td>
+</tr>
+</tbody>
+</table>
 </div>
-<hr>
-</section>
-<section id="calculating-the-variance-1" class="level2">
-<h2 class="anchored" data-anchor-id="calculating-the-variance-1">Calculating the variance</h2>
-<div class="presenter-space">
-<ul>
-<li>We do this for every course and take the <strong>sum of the squared deviations</strong> for all courses.</li>
-<li>By dividing this sum by the number of courses, we get the <strong>variance</strong>.</li>
-<li>Courses that are further from the mean <strong>increase</strong> the variance of the distribution.</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="the-variance-formula" class="level2">
-<h2 class="anchored" data-anchor-id="the-variance-formula">The variance formula</h2>
-<div class="presenter-space">
-<p><span class="math display">\[\sigma^2 = \frac{\sum_{i=1}^{N} (x_i - \mu)^2}{N}\]</span></p>
-<ul>
-<li><span class="math inline">\(\mu\)</span> is the <strong>mean</strong>.</li>
-<li><span class="math inline">\((x_i - \mu)^2\)</span> is what we did earlier: <span class="math inline">\((90-82)^2\)</span></li>
-<li><span class="math inline">\(\sum_{i=1}^{N}\)</span> means, “do this for every observation (<span class="math inline">\(x_i\)</span>) and take the sum.”</li>
-<li>We divide it by N to get the <strong>variance</strong> (<span class="math inline">\(\sigma^2\)</span>).</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="the-standard-deviation" class="level2">
-<h2 class="anchored" data-anchor-id="the-standard-deviation">The standard deviation</h2>
-<div class="presenter-space">
-<ul>
-<li>The standard deviation is the <strong>square root</strong> of the variance.</li>
-<li>More commonly used than the variance and useful to judge how <strong>unusual</strong> an observation is.</li>
-<li>The <strong>variance</strong> for satisfaction with courses is about 145, and the <strong>standard deviation</strong> is about <span class="math inline">\(\sqrt{145}\approx12\)</span>.</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="interpreting-the-standard-deviation" class="level2">
-<h2 class="anchored" data-anchor-id="interpreting-the-standard-deviation">Interpreting the standard deviation</h2>
-<div class="presenter-space">
-<ul>
-<li>Linguistics at Glasgow (90%) is <strong>two-thirds</strong> of a standard deviation above the mean: <span class="math inline">\(8/12=2/3\textrm{ s.d.}\)</span></li>
-<li>Accounting at Strathclyde (94%) can be more boastful at <strong>one standard deviation</strong> above the mean: <span class="math inline">\(12/12=1\textrm{ s.d.}\)</span></li>
-</ul>
 </div>
 <hr>
 </section>
@@ -463,17 +447,16 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="recap">Recap</h2>
 <div class="presenter-space">
 <ul>
-<li><strong>Variance</strong> and <strong>standard deviation</strong> summarise how spread out a distribution is.</li>
-<li>They are built by measuring how far observations are from the <strong>mean</strong>.</li>
+<li>When one variable is <strong>nominal</strong> and the other is <strong>numeric</strong> (interval or ratio), compare the mean of the numeric variable across categories.</li>
+<li>A <strong>bar chart with means</strong> shows how the average value differs between groups.</li>
+<li>Larger differences between group means suggest a stronger association between the variables.</li>
 </ul>
 </div>
 <hr>
 <div class="presenter-space">
 <p><strong>Why this matters:</strong></p>
 <ul>
-<li>Knowing the mean tells us what is typical.</li>
-<li>The standard deviation tells us whether differences from the mean are small or substantial.</li>
-<li>Together, they allow us to judge how unusual an observation is.</li>
+<li>Describing group differences is the foundation for asking why those differences exist.</li>
 </ul>
 </div>
 

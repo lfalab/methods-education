@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Variance and Standard Deviation</title>
+<title>From Variable Types to Plots and Tables</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,35 +69,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -110,7 +81,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/summarising-distribution.html">Week 4: Describing Distributions (Univariate Description)</a></li><li class="breadcrumb-item"><a href="../../slides/videos-concepts/variance-sd.html">Variance and Standard Deviation</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/correlations-nominal.html">Week 5: Describing Correlations (Bivariate Description)</a></li><li class="breadcrumb-item"><a href="../../slides/videos-concepts/types-plots-tables.html">From Variable Types to Plots and Tables</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -268,7 +239,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/variance-sd.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../slides/videos-concepts/variance-sd.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Variance and Standard Deviation</span></a>
   </div>
 </li>
@@ -321,7 +292,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/types-plots-tables.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/types-plots-tables.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">From Variable Types to Plots and Tables</span></a>
   </div>
 </li>
@@ -337,125 +308,330 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#variance-and-standard-deviation" id="toc-variance-and-standard-deviation" class="nav-link active" data-scroll-target="#variance-and-standard-deviation">Variance and Standard Deviation</a>
+  <li><a href="#from-variable-types-to-plots-and-tables" id="toc-from-variable-types-to-plots-and-tables" class="nav-link active" data-scroll-target="#from-variable-types-to-plots-and-tables">From Variable Types to Plots and Tables</a>
   <ul class="collapse">
   <li><a href="#youll-learn-to" id="toc-youll-learn-to" class="nav-link" data-scroll-target="#youll-learn-to">You’ll learn to</a></li>
-  <li><a href="#how-good-is-80" id="toc-how-good-is-80" class="nav-link" data-scroll-target="#how-good-is-80">How good is 80%?</a></li>
-  <li><a href="#variance-and-standard-deviation-1" id="toc-variance-and-standard-deviation-1" class="nav-link" data-scroll-target="#variance-and-standard-deviation-1">Variance and standard deviation</a></li>
-  <li><a href="#variance" id="toc-variance" class="nav-link" data-scroll-target="#variance">Variance</a></li>
-  <li><a href="#calculating-the-variance" id="toc-calculating-the-variance" class="nav-link" data-scroll-target="#calculating-the-variance">Calculating the variance</a></li>
-  <li><a href="#calculating-the-variance-1" id="toc-calculating-the-variance-1" class="nav-link" data-scroll-target="#calculating-the-variance-1">Calculating the variance</a></li>
-  <li><a href="#the-variance-formula" id="toc-the-variance-formula" class="nav-link" data-scroll-target="#the-variance-formula">The variance formula</a></li>
-  <li><a href="#the-standard-deviation" id="toc-the-standard-deviation" class="nav-link" data-scroll-target="#the-standard-deviation">The standard deviation</a></li>
-  <li><a href="#interpreting-the-standard-deviation" id="toc-interpreting-the-standard-deviation" class="nav-link" data-scroll-target="#interpreting-the-standard-deviation">Interpreting the standard deviation</a></li>
+  <li><a href="#the-decision-rule" id="toc-the-decision-rule" class="nav-link" data-scroll-target="#the-decision-rule">The decision rule</a></li>
+  <li><a href="#variable-types-a-quick-reminder" id="toc-variable-types-a-quick-reminder" class="nav-link" data-scroll-target="#variable-types-a-quick-reminder">Variable types: A quick reminder</a></li>
+  <li><a href="#three-cases-to-memorise" id="toc-three-cases-to-memorise" class="nav-link" data-scroll-target="#three-cases-to-memorise">Three cases to memorise</a></li>
+  <li><a href="#case-1-nominal-nominal" id="toc-case-1-nominal-nominal" class="nav-link" data-scroll-target="#case-1-nominal-nominal">Case 1: Nominal + Nominal</a></li>
+  <li><a href="#case-1-nominal-nominal-example" id="toc-case-1-nominal-nominal-example" class="nav-link" data-scroll-target="#case-1-nominal-nominal-example">Case 1: Nominal + Nominal (example)</a></li>
+  <li><a href="#case-2-nominal-numeric" id="toc-case-2-nominal-numeric" class="nav-link" data-scroll-target="#case-2-nominal-numeric">Case 2: Nominal + Numeric</a></li>
+  <li><a href="#case-2-nominal-numeric-example" id="toc-case-2-nominal-numeric-example" class="nav-link" data-scroll-target="#case-2-nominal-numeric-example">Case 2: Nominal + Numeric (example)</a></li>
+  <li><a href="#case-3-numeric-numeric" id="toc-case-3-numeric-numeric" class="nav-link" data-scroll-target="#case-3-numeric-numeric">Case 3: Numeric + Numeric</a></li>
+  <li><a href="#case-3-numeric-numeric-example" id="toc-case-3-numeric-numeric-example" class="nav-link" data-scroll-target="#case-3-numeric-numeric-example">Case 3: Numeric + Numeric (example)</a></li>
+  <li><a href="#a-common-mistake-wrong-tool-for-variable-types" id="toc-a-common-mistake-wrong-tool-for-variable-types" class="nav-link" data-scroll-target="#a-common-mistake-wrong-tool-for-variable-types">A common mistake: Wrong tool for variable types</a></li>
+  <li><a href="#why-this-is-a-problem" id="toc-why-this-is-a-problem" class="nav-link" data-scroll-target="#why-this-is-a-problem">Why this is a problem</a></li>
+  <li><a href="#another-common-mistake-treating-numeric-as-nominal" id="toc-another-common-mistake-treating-numeric-as-nominal" class="nav-link" data-scroll-target="#another-common-mistake-treating-numeric-as-nominal">Another common mistake: Treating numeric as nominal</a></li>
+  <li><a href="#summary-table-quick-reference" id="toc-summary-table-quick-reference" class="nav-link" data-scroll-target="#summary-table-quick-reference">Summary table: Quick reference</a></li>
   <li><a href="#recap" id="toc-recap" class="nav-link" data-scroll-target="#recap">Recap</a></li>
   </ul></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="variance-sd-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="types-plots-tables-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/summarising-distribution.html">Week 4: Describing Distributions (Univariate Description)</a></li><li class="breadcrumb-item"><a href="../../slides/videos-concepts/variance-sd.html">Variance and Standard Deviation</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/correlations-nominal.html">Week 5: Describing Correlations (Bivariate Description)</a></li><li class="breadcrumb-item"><a href="../../slides/videos-concepts/types-plots-tables.html">From Variable Types to Plots and Tables</a></li></ol></nav></header>
 
 
 
 
-<section id="variance-and-standard-deviation" class="level1 title-left">
-<h1 class="title-left">Variance and Standard Deviation</h1>
+<section id="from-variable-types-to-plots-and-tables" class="level1 title-left">
+<h1 class="title-left">From Variable Types to Plots and Tables</h1>
 <hr>
 <section id="youll-learn-to" class="level2">
 <h2 class="anchored" data-anchor-id="youll-learn-to">You’ll learn to</h2>
 <div class="presenter-space">
 <ul>
-<li>Interpret the <strong>variance</strong> and <strong>standard deviation</strong> as summaries of dispersion.</li>
+<li>Choose appropriate tables, plots, and summary statistics based on the <strong>types of variables</strong> being analysed.</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="how-good-is-80" class="level2">
-<h2 class="anchored" data-anchor-id="how-good-is-80">How good is 80%?</h2>
+<section id="the-decision-rule" class="level2">
+<h2 class="anchored" data-anchor-id="the-decision-rule">The decision rule</h2>
 <div class="presenter-space">
-<ul>
-<li>A university advertises that <strong>80% of students are satisfied</strong> with the course.</li>
-<li>But the national mean is about <strong>82%</strong>.</li>
-<li>With this new information, 80% is not as impressive as it seems.</li>
-</ul>
+<ol type="1">
+<li><strong>Identify</strong> the types of variables you’re working with.</li>
+<li><strong>Choose</strong> the appropriate descriptive tool based on those types.</li>
+</ol>
+</div>
+<div class="notes">
+<!-- This is the central principle of the video. Students should always start with variable types, then select tools. This prevents the common mistake of asking software for inappropriate plots or tables. -->
 </div>
 <hr>
 </section>
-<section id="variance-and-standard-deviation-1" class="level2">
-<h2 class="anchored" data-anchor-id="variance-and-standard-deviation-1">Variance and standard deviation</h2>
+<section id="variable-types-a-quick-reminder" class="level2">
+<h2 class="anchored" data-anchor-id="variable-types-a-quick-reminder">Variable types: A quick reminder</h2>
 <div class="presenter-space">
 <ul>
-<li>The <strong>variance</strong> and <strong>standard deviation</strong> add context by informing us how spread out the distribution is.</li>
-<li>This adds insight into how much an observation <strong>stands out</strong> from the rest.</li>
+<li><strong>Nominal</strong>: Categories with no inherent order (e.g., party voted for, gender, region).</li>
+<li><strong>Numeric</strong>: Variables measured on a scale with meaningful intervals or ratios.
+<ul>
+<li>Includes <strong>interval</strong> variables.</li>
+<li>Includes <strong>ratio</strong> variables.</li>
+</ul></li>
 </ul>
+</div>
+<div class="notes">
+<!-- Students should already know these from Week 3. The key clarification here is making "numeric" explicit: interval + ratio = numeric for the purposes of choosing descriptive tools. We're not re-teaching measurement theory—just making the operational definition clear. -->
 </div>
 <hr>
 </section>
-<section id="variance" class="level2">
-<h2 class="anchored" data-anchor-id="variance">Variance</h2>
+<section id="three-cases-to-memorise" class="level2">
+<h2 class="anchored" data-anchor-id="three-cases-to-memorise">Three cases to memorise</h2>
 <div class="presenter-space">
-<ul>
-<li>The variance measures how <strong>far from the mean</strong> the observations tend to be.</li>
-<li>The course with 80% approval rates is not too far from the mean.</li>
-<li>But how about the others?</li>
-</ul>
+<p>When describing correlations between <strong>two variables</strong>, you need to know:</p>
+<ol type="1">
+<li><strong>Nominal + Nominal</strong></li>
+<li><strong>Nominal + Numeric</strong></li>
+<li><strong>Numeric + Numeric</strong></li>
+</ol>
+</div>
+<div class="notes">
+<!-- This slide sets up the structure. The next three slides will present each case in turn. Students should think of this as a decision tree: look at your variables, identify which case applies, then use the appropriate tool. -->
 </div>
 <hr>
 </section>
-<section id="calculating-the-variance" class="level2">
-<h2 class="anchored" data-anchor-id="calculating-the-variance">Calculating the variance</h2>
+<section id="case-1-nominal-nominal" class="level2">
+<h2 class="anchored" data-anchor-id="case-1-nominal-nominal">Case 1: Nominal + Nominal</h2>
 <div class="presenter-space">
 <ul>
-<li>To get the <strong>variance</strong>, we start by subtracting the mean from each observation and squaring the difference.</li>
-<li>Linguistics at the University of Glasgow has a <strong>90%</strong> approval rate.</li>
-<li>By subtracting the mean from this rate and squaring the difference, we get <span class="math inline">\((90-82)^2=8^2=64\)</span></li>
+<li><p><strong>Example:</strong> Gender and vote choice.</p></li>
+<li><p>Tools:</p>
+<ul>
+<li><strong>Cross-tabulation</strong> (with row or column percentages)</li>
+<li><strong>Bivariate bar chart</strong></li>
+</ul></li>
 </ul>
+</div>
+<div class="notes">
+<!-- Remind students they saw this in C10. The key is comparing proportions across categories. Cross-tabs show the numbers; bivariate bar charts visualise the pattern. Emphasise that percentages (not counts) are essential for interpretation. -->
 </div>
 <hr>
 </section>
-<section id="calculating-the-variance-1" class="level2">
-<h2 class="anchored" data-anchor-id="calculating-the-variance-1">Calculating the variance</h2>
+<section id="case-1-nominal-nominal-example" class="level2">
+<h2 class="anchored" data-anchor-id="case-1-nominal-nominal-example">Case 1: Nominal + Nominal (example)</h2>
 <div class="presenter-space">
-<ul>
-<li>We do this for every course and take the <strong>sum of the squared deviations</strong> for all courses.</li>
-<li>By dividing this sum by the number of courses, we get the <strong>variance</strong>.</li>
-<li>Courses that are further from the mean <strong>increase</strong> the variance of the distribution.</li>
-</ul>
+<div class="nonincremental">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Women</th>
+<th>Men</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Labour</td>
+<td><strong>44%</strong></td>
+<td><strong>43%</strong></td>
+</tr>
+<tr class="even">
+<td>Cons</td>
+<td><strong>19%</strong></td>
+<td><strong>22%</strong></td>
+</tr>
+<tr class="odd">
+<td>Lib Dem</td>
+<td><strong>12%</strong></td>
+<td><strong>10%</strong></td>
+</tr>
+<tr class="even">
+<td>Green</td>
+<td><strong>9%</strong></td>
+<td><strong>5%</strong></td>
+</tr>
+<tr class="odd">
+<td>Reform</td>
+<td><strong>9%</strong></td>
+<td><strong>13%</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="notes">
+<!-- This is a simplified version of the gender-vote cross-tab from C10. The point is to show students what the output looks like and how to read it. The interpretation focuses on percentage differences. -->
 </div>
 <hr>
 </section>
-<section id="the-variance-formula" class="level2">
-<h2 class="anchored" data-anchor-id="the-variance-formula">The variance formula</h2>
+<section id="case-2-nominal-numeric" class="level2">
+<h2 class="anchored" data-anchor-id="case-2-nominal-numeric">Case 2: Nominal + Numeric</h2>
 <div class="presenter-space">
-<p><span class="math display">\[\sigma^2 = \frac{\sum_{i=1}^{N} (x_i - \mu)^2}{N}\]</span></p>
 <ul>
-<li><span class="math inline">\(\mu\)</span> is the <strong>mean</strong>.</li>
-<li><span class="math inline">\((x_i - \mu)^2\)</span> is what we did earlier: <span class="math inline">\((90-82)^2\)</span></li>
-<li><span class="math inline">\(\sum_{i=1}^{N}\)</span> means, “do this for every observation (<span class="math inline">\(x_i\)</span>) and take the sum.”</li>
-<li>We divide it by N to get the <strong>variance</strong> (<span class="math inline">\(\sigma^2\)</span>).</li>
+<li><p><strong>Example:</strong> Favourite newspaper and political preferences.</p></li>
+<li><p>Tools:</p>
+<ul>
+<li><strong>Compare means</strong> by category</li>
+<li><strong>Bar chart of means</strong></li>
+</ul></li>
 </ul>
+</div>
+<div class="notes">
+<!-- Remind students they saw this in C11. When one variable is categorical and the other is on a numeric scale, compare the average value of the numeric variable across categories. This is different from Case 1 because we're not counting frequencies—we're summarising a numeric variable within groups. -->
 </div>
 <hr>
 </section>
-<section id="the-standard-deviation" class="level2">
-<h2 class="anchored" data-anchor-id="the-standard-deviation">The standard deviation</h2>
+<section id="case-2-nominal-numeric-example" class="level2">
+<h2 class="anchored" data-anchor-id="case-2-nominal-numeric-example">Case 2: Nominal + Numeric (example)</h2>
 <div class="presenter-space">
-<ul>
-<li>The standard deviation is the <strong>square root</strong> of the variance.</li>
-<li>More commonly used than the variance and useful to judge how <strong>unusual</strong> an observation is.</li>
-<li>The <strong>variance</strong> for satisfaction with courses is about 145, and the <strong>standard deviation</strong> is about <span class="math inline">\(\sqrt{145}\approx12\)</span>.</li>
-</ul>
+<div class="nonincremental">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Newspaper</th>
+<th>Mean left-right self-placement</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Guardian/Observer</td>
+<td><strong>3.29</strong></td>
+</tr>
+<tr class="even">
+<td>Independent</td>
+<td><strong>4.47</strong></td>
+</tr>
+<tr class="odd">
+<td>Times</td>
+<td><strong>5.29</strong></td>
+</tr>
+<tr class="even">
+<td>Daily Mail</td>
+<td><strong>6.1</strong></td>
+</tr>
+<tr class="odd">
+<td>Telegraph</td>
+<td><strong>6.4</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="notes">
+<!-- Generic example to illustrate the principle. Students should see that we're comparing a single number (the mean) across categories, not frequencies or percentages. The bar chart would show these three means as bar heights. -->
 </div>
 <hr>
 </section>
-<section id="interpreting-the-standard-deviation" class="level2">
-<h2 class="anchored" data-anchor-id="interpreting-the-standard-deviation">Interpreting the standard deviation</h2>
+<section id="case-3-numeric-numeric" class="level2">
+<h2 class="anchored" data-anchor-id="case-3-numeric-numeric">Case 3: Numeric + Numeric</h2>
 <div class="presenter-space">
 <ul>
-<li>Linguistics at Glasgow (90%) is <strong>two-thirds</strong> of a standard deviation above the mean: <span class="math inline">\(8/12=2/3\textrm{ s.d.}\)</span></li>
-<li>Accounting at Strathclyde (94%) can be more boastful at <strong>one standard deviation</strong> above the mean: <span class="math inline">\(12/12=1\textrm{ s.d.}\)</span></li>
+<li><p><strong>Example:</strong> Import shock and Brexit</p></li>
+<li><p><strong>Tools:</strong></p>
+<ul>
+<li><strong>Scatterplot</strong></li>
+<li><strong>Regression line</strong></li>
+</ul></li>
 </ul>
+</div>
+<div class="notes">
+<!-- Remind students they saw this in C12. When both variables are numeric, we can plot each observation as a point and summarise the relationship with a line. The slope tells us direction (positive/negative correlation); the scatter tells us strength. -->
+</div>
+<hr>
+</section>
+<section id="case-3-numeric-numeric-example" class="level2">
+<h2 class="anchored" data-anchor-id="case-3-numeric-numeric-example">Case 3: Numeric + Numeric (example)</h2>
+<div class="presenter-space">
+<div class="nonincremental">
+<ul>
+<li>Import shock and share of leave votes: <strong>positive correlation</strong>.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/brexit_shock_scatter_line.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" data-fig-cap=""></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="notes">
+<!-- This slide would show a generic scatterplot with a positive slope. The point is visual recognition: students should see two numeric axes, dots representing observations, and a line summarising the trend. If the scatter_example.jpg asset doesn't exist, you can use a placeholder or create one—the key is showing the visual structure. -->
+</div>
+<hr>
+</section>
+<section id="a-common-mistake-wrong-tool-for-variable-types" class="level2">
+<h2 class="anchored" data-anchor-id="a-common-mistake-wrong-tool-for-variable-types">A common mistake: Wrong tool for variable types</h2>
+<div class="presenter-space">
+<ul>
+<li><strong>Problem:</strong> Using a scatterplot for nominal + nominal variables.</li>
+<li><strong>Example:</strong> Plotting “gender” (coded 1 = male, 2 = female) against “party voted for” (coded 1 = Labour, 2 = Conservative, etc.).</li>
+</ul>
+</div>
+<div class="notes">
+<!-- This is the "bad match" example. Students often treat numeric codes as if they were actual numbers. Gender coded as 1/2 is still nominal—the numbers are arbitrary labels. A scatterplot would be meaningless because the axes don't represent quantities. -->
+</div>
+<hr>
+</section>
+<section id="why-this-is-a-problem" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-is-a-problem">Why this is a problem</h2>
+<div class="presenter-space">
+<ul>
+<li><p>The <strong>numeric codes</strong> are arbitrary; they don’t represent quantities.</p></li>
+<li><p>A scatterplot implies a continuous relationship, but there’s <strong>no meaningful distance</strong> between “male” and “female” or between “Labour” and “Conservative.”</p>
+<ul>
+<li><strong>Correct tool:</strong> Cross-tabulation or bivariate bar chart (Case 1: Nominal + Nominal).</li>
+</ul></li>
+</ul>
+</div>
+<div class="notes">
+<!-- Emphasise that software will happily produce a scatterplot if you ask for one, even if it makes no sense. Students must understand variable types first, then choose tools. The codes 1, 2, 3 in a dataset don't automatically mean the variable is numeric—check what those numbers represent. -->
+</div>
+<hr>
+</section>
+<section id="another-common-mistake-treating-numeric-as-nominal" class="level2">
+<h2 class="anchored" data-anchor-id="another-common-mistake-treating-numeric-as-nominal">Another common mistake: Treating numeric as nominal</h2>
+<div class="presenter-space">
+<ul>
+<li><p><strong>Problem:</strong> Using a cross-tabulation for numeric + numeric variables.</p>
+<ul>
+<li><strong>Example:</strong> Creating a frequency table of “age” by “income” with every unique value as a category.</li>
+</ul></li>
+<li><p><strong>Why it’s bad:</strong> You lose the <strong>quantitative information</strong>: the fact that 25 is closer to 26 than to 65.</p>
+<ul>
+<li><strong>Correct tool:</strong> Scatterplot + regression line (Case 3: Numeric + Numeric).</li>
+</ul></li>
+</ul>
+</div>
+<div class="notes">
+<!-- The opposite mistake: treating quantitative variables as if they were categories. A frequency table of age by income would have hundreds of cells and no interpretable pattern. Students need to recognise when variables are measured on a scale, not just coded into groups. -->
+</div>
+<hr>
+</section>
+<section id="summary-table-quick-reference" class="level2">
+<h2 class="anchored" data-anchor-id="summary-table-quick-reference">Summary table: Quick reference</h2>
+<div class="presenter-space">
+<div class="nonincremental">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Var 1</th>
+<th>Var 2</th>
+<th>Tools</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Nominal</td>
+<td>Nominal</td>
+<td>Cross-tabulation, bivariate bar chart</td>
+</tr>
+<tr class="even">
+<td>Nominal</td>
+<td>Numeric</td>
+<td>Compare means, bar chart of means</td>
+</tr>
+<tr class="odd">
+<td>Numeric</td>
+<td>Numeric</td>
+<td>Scatterplot, regression line</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="notes">
+<!-- This is the decision rule in table form. Students should memorise this. It's the foundation for Weeks 5-8 and beyond. When they sit down with data, they should ask: "What types are my variables?" Then consult this table (mentally or literally) to decide what to do. -->
 </div>
 <hr>
 </section>
@@ -463,17 +639,18 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="recap">Recap</h2>
 <div class="presenter-space">
 <ul>
-<li><strong>Variance</strong> and <strong>standard deviation</strong> summarise how spread out a distribution is.</li>
-<li>They are built by measuring how far observations are from the <strong>mean</strong>.</li>
+<li>Start with <strong>variable types</strong>, then choose the appropriate descriptive tool.</li>
+<li><strong>Nominal + Nominal</strong> → cross-tabulation and bivariate bar chart.</li>
+<li><strong>Nominal + Numeric</strong> → compare means by category and bar chart of means.</li>
+<li><strong>Numeric + Numeric</strong> → scatterplot and regression line.</li>
 </ul>
 </div>
 <hr>
 <div class="presenter-space">
 <p><strong>Why this matters:</strong></p>
 <ul>
-<li>Knowing the mean tells us what is typical.</li>
-<li>The standard deviation tells us whether differences from the mean are small or substantial.</li>
-<li>Together, they allow us to judge how unusual an observation is.</li>
+<li>The wrong tool for the wrong variable types produces meaningless or misleading output.</li>
+<li>Software won’t stop you from making that mistake.</li>
 </ul>
 </div>
 

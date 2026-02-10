@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <title>Correlations Between Nominal Variables</title>
+  <title>Comparing Means by Category</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -127,79 +127,50 @@
 
 
 <section>
-<section id="correlations-between-nominal-variables" class="title-slide slide level1 title-left center">
-<h1>Correlations Between Nominal Variables</h1>
+<section id="comparing-means-by-category" class="title-slide slide level1 title-left center">
+<h1>Comparing Means by Category</h1>
 
 </section>
 <section id="youll-learn-to" class="slide level2">
 <h2>You’ll learn to</h2>
 <div class="presenter-space">
 <ul>
-<li class="fragment">Describe associations between two categorical variables using <strong>cross-tabulations</strong> and <strong>bivariate frequency charts</strong>.</li>
+<li class="fragment">Summarise differences between groups by <strong>comparing group means</strong>.</li>
 </ul>
 </div>
 </section>
-<section id="general-election-vote-frequency-table" class="slide level2">
-<h2>General Election vote: Frequency table</h2>
-<div class="presenter-space">
-<p>Which <strong>party</strong> did you vote for in the general election?</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../../assets/vote-frequency.png" class="quarto-figure quarto-figure-center" style="width:80.0%" data-fig-cap=""></p>
-</figure>
-</div>
-<!-- | 2024 General Election vote    | Frequency | Percent    | -->
-<!-- | ----------------------------- | --------- | ---------- | -->
-<!-- | Refused                       | 143       | 6.48       | -->
-<!-- | Don’t know                    | 18        | 0.82       | -->
-<!-- | Labour                        | 895       | 40.55      | -->
-<!-- | Conservatives                 | 408       | 18.49      | -->
-<!-- | Liberal Democrats             | 224       | 10.15      | -->
-<!-- | Scottish National Party (SNP) | 75        | 3.40       | -->
-<!-- | Plaid Cymru                   | 22        | 1.00       | -->
-<!-- | Green Party                   | 148       | 6.71       | -->
-<!-- | Reform UK                     | 221       | 10.01      | -->
-<!-- | Other (WRITE IN)              | 20        | 0.91       | -->
-<!-- | An independent candidate      | 33        | 1.50       | -->
-<!-- | **Total**                     | **2,207** | **100.00** | -->
-</div>
-</section>
-<section id="general-election-vote-frequency-bar-chart" class="slide level2">
-<h2>General Election vote: Frequency bar chart</h2>
-<div class="presenter-space">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../../assets/bes_vote_bar.jpg" class="quarto-figure quarto-figure-center" style="width:80.0%" data-fig-cap=""></p>
-</figure>
-</div>
-</div>
-</section>
-<section id="another-nominal-variable-gender" class="slide level2">
-<h2>Another nominal variable: Gender</h2>
-<div class="presenter-space">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../../assets/gender-frequency.png" class="quarto-figure quarto-figure-center" style="width:80.0%" data-fig-cap=""></p>
-</figure>
-</div>
-</div>
-</section>
-<section id="another-nominal-variable-gender-1" class="slide level2">
-<h2>Another nominal variable: Gender</h2>
-<div class="presenter-space">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../../assets/bes_gender_bar.jpg" class="quarto-figure quarto-figure-center" style="width:80.0%" data-fig-cap=""></p>
-</figure>
-</div>
-</div>
-</section>
-<section id="gender-and-vote-how-do-they-correlate" class="slide level2">
-<h2>Gender and vote: How do they correlate?</h2>
+<section id="political-preferences-left-right-self-placement" class="slide level2">
+<h2>Political preferences (Left-right self-placement)</h2>
 <div class="presenter-space">
 <ul>
-<li class="fragment">Do men and women <strong>vote</strong> differently?</li>
-<li class="fragment">If so, for which <strong>parties</strong> do we see the biggest gaps?</li>
+<li>Mean: <strong>4.75</strong></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../assets/bes_ideol_hist.jpg" class="quarto-figure quarto-figure-center" style="width:80.0%" data-fig-cap=""></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="newspaper-readership" class="slide level2">
+<h2>Newspaper readership</h2>
+<div class="presenter-space">
+<ul>
+<li>Mode: <strong>Guardian/Observer</strong> - 281 readers (22.8%)</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../assets/bes_news_bar.jpg" class="quarto-figure quarto-figure-center" style="width:80.0%" data-fig-cap=""></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="political-preferences-and-choice-of-newspaper" class="slide level2">
+<h2>Political preferences and choice of newspaper</h2>
+<div class="presenter-space">
+<ul>
+<li class="fragment">Different <strong>media outlets</strong> report the news with different perspectives.</li>
+<li class="fragment">Do these differences reflect the <strong>political preferences</strong> of their readers?</li>
 </ul>
 </div>
 </section>
@@ -208,56 +179,62 @@
 <div class="presenter-space">
 <ul>
 <li class="fragment">Two variables are <strong>correlated</strong> if knowing the value of one variable tells you something about the likely value of the other.</li>
-<li class="fragment">For <strong>gender</strong> and <strong>vote</strong>: if men and women vote similarly, there’s no correlation. If they vote differently, there is a correlation.</li>
+<li class="fragment">If readers of different newspapers have similar preferences, there’s no correlation. If their preferences differ, there is a correlation.</li>
 </ul>
 </div>
 </section>
-<section id="gender-and-vote-cross-table" class="slide level2">
-<h2>Gender and vote: cross table</h2>
+<section id="newspaper-and-preferences-bar-chart" class="slide level2">
+<h2>Newspaper and preferences: bar chart</h2>
 <div class="presenter-space">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../../assets/gender-vote-cross-v2.png" class="quarto-figure quarto-figure-center" style="width:80.0%" data-fig-cap=""></p>
+<p><img data-src="../../assets/bes_news_ideol.jpg" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
 </section>
-<section id="gender-and-vote-cross-table-1" class="slide level2">
-<h2>Gender and vote: cross table</h2>
+<section id="newspaper-and-preferences-comparing-means" class="slide level2">
+<h2>Newspaper and preferences: comparing means</h2>
 <div class="presenter-space">
-<ul>
-<li class="fragment">For <strong>Labour</strong>: 479 women (44%) vs 406 men (43.2%) — similar.</li>
-<li class="fragment">For <strong>Green</strong>: 98 women (9%) vs 46 men (4.9% ) — women more likely.</li>
-<li class="fragment">For <strong>Reform</strong>: 96 women (8.8%) vs 124 men (13.2%) — men more likely.</li>
-</ul>
-</div>
-</section>
-<section id="gender-and-vote-bivariate-frequency-chart" class="slide level2">
-<h2>Gender and vote: bivariate frequency chart</h2>
-<div class="presenter-space">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../../assets/bes_gender_vote.jpg" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div>
-</section>
-<section id="interpreting-the-gender-gap" class="slide level2">
-<h2>Interpreting the gender gap</h2>
-<div class="presenter-space">
-<ul>
-<li class="fragment">In the bar chart, the <strong>count difference</strong> for Labour (73 more women) looks larger than for Green (52 more women).</li>
-<li class="fragment">But the <strong>percentage difference</strong> is actually smaller for Labour (0.8 points) than for Green (4.1 points).</li>
-<li class="fragment">Use <strong>percentages</strong>, not counts, to compare group likelihoods.</li>
-</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Newspaper</th>
+<th>Mean left-right self-placement</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Guardian/Observer</td>
+<td><strong>3.29</strong></td>
+</tr>
+<tr class="even">
+<td>Independent</td>
+<td><strong>4.47</strong></td>
+</tr>
+<tr class="odd">
+<td>Times</td>
+<td><strong>5.29</strong></td>
+</tr>
+<tr class="even">
+<td>Daily Mail</td>
+<td><strong>6.1</strong></td>
+</tr>
+<tr class="odd">
+<td>Telegraph</td>
+<td><strong>6.4</strong></td>
+</tr>
+</tbody>
+</table>
 </div>
 </section>
 <section id="recap" class="slide level2">
 <h2>Recap</h2>
 <div class="presenter-space">
 <ul>
-<li class="fragment">When both variables are <strong>nominal</strong>, use bivariate frequency charts and cross-tabulation to analyse if they are correlated.</li>
-<li class="fragment">When comparing groups, focus on <strong>percentages</strong> rather than raw counts to assess relative likelihoods.</li>
+<li class="fragment">When one variable is <strong>nominal</strong> and the other is <strong>numeric</strong> (interval or ratio), compare the mean of the numeric variable across categories.</li>
+<li class="fragment">A <strong>bar chart with means</strong> shows how the average value differs between groups.</li>
+<li class="fragment">Larger differences between group means suggest a stronger association between the variables.</li>
 </ul>
 </div>
 </section>
@@ -266,7 +243,7 @@
 <div class="presenter-space">
 <p><strong>Why this matters:</strong></p>
 <ul>
-<li class="fragment">Describing associations is the first step toward asking why they exist (e.g., why do men vote differently than women?)</li>
+<li class="fragment">Describing group differences is the foundation for asking why those differences exist.</li>
 </ul>
 </div>
 

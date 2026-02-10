@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <title>Correlations Between Nominal Variables</title>
+  <title>Scatterplots and Regression Lines</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -127,80 +127,67 @@
 
 
 <section>
-<section id="correlations-between-nominal-variables" class="title-slide slide level1 title-left center">
-<h1>Correlations Between Nominal Variables</h1>
+<section id="scatterplots-and-regression-lines" class="title-slide slide level1 title-left center">
+<h1>Scatterplots and Regression Lines</h1>
 
 </section>
 <section id="youll-learn-to" class="slide level2">
 <h2>You’ll learn to</h2>
 <div class="presenter-space">
 <ul>
-<li class="fragment">Describe associations between two categorical variables using <strong>cross-tabulations</strong> and <strong>bivariate frequency charts</strong>.</li>
+<li class="fragment">Interpret <strong>scatterplots</strong> and <strong>regression lines</strong> to analyse correlations between numeric variables.</li>
 </ul>
 </div>
 </section>
-<section id="general-election-vote-frequency-table" class="slide level2">
-<h2>General Election vote: Frequency table</h2>
+<section id="support-for-brexit-across-uk-regions" class="slide level2">
+<h2>Support for Brexit across UK regions</h2>
 <div class="presenter-space">
-<p>Which <strong>party</strong> did you vote for in the general election?</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../../assets/vote-frequency.png" class="quarto-figure quarto-figure-center" style="width:80.0%" data-fig-cap=""></p>
+<p><img data-src="../../assets/leave-map.png" class="quarto-figure quarto-figure-center" style="width:40.0%" data-fig-cap=""></p>
 </figure>
 </div>
-<!-- | 2024 General Election vote    | Frequency | Percent    | -->
-<!-- | ----------------------------- | --------- | ---------- | -->
-<!-- | Refused                       | 143       | 6.48       | -->
-<!-- | Don’t know                    | 18        | 0.82       | -->
-<!-- | Labour                        | 895       | 40.55      | -->
-<!-- | Conservatives                 | 408       | 18.49      | -->
-<!-- | Liberal Democrats             | 224       | 10.15      | -->
-<!-- | Scottish National Party (SNP) | 75        | 3.40       | -->
-<!-- | Plaid Cymru                   | 22        | 1.00       | -->
-<!-- | Green Party                   | 148       | 6.71       | -->
-<!-- | Reform UK                     | 221       | 10.01      | -->
-<!-- | Other (WRITE IN)              | 20        | 0.91       | -->
-<!-- | An independent candidate      | 33        | 1.50       | -->
-<!-- | **Total**                     | **2,207** | **100.00** | -->
+<p><a href="https://www.cambridge.org/core/journals/american-political-science-review/article/global-competition-and-brexit/C843990101DB9232B654E77130F88398">Source</a></p>
 </div>
 </section>
-<section id="general-election-vote-frequency-bar-chart" class="slide level2">
-<h2>General Election vote: Frequency bar chart</h2>
+<section id="what-variables-are-correlated-with-support-for-brexit" class="slide level2">
+<h2>What variables are correlated with support for Brexit?</h2>
 <div class="presenter-space">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../../assets/bes_vote_bar.jpg" class="quarto-figure quarto-figure-center" style="width:80.0%" data-fig-cap=""></p>
+<p><img data-src="../../assets/brexit_leave_hist.jpg" class="quarto-figure quarto-figure-center" style="width:80.0%" data-fig-cap=""></p>
 </figure>
 </div>
 </div>
 </section>
-<section id="another-nominal-variable-gender" class="slide level2">
-<h2>Another nominal variable: Gender</h2>
+<section id="competition-from-imports" class="slide level2">
+<h2>Competition from imports?</h2>
 <div class="presenter-space">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../../assets/gender-frequency.png" class="quarto-figure quarto-figure-center" style="width:80.0%" data-fig-cap=""></p>
+<p><img data-src="../../assets/brexit_shock_hist.jpg" class="quarto-figure quarto-figure-center" style="width:80.0%" data-fig-cap=""></p>
 </figure>
 </div>
 </div>
 </section>
-<section id="another-nominal-variable-gender-1" class="slide level2">
-<h2>Another nominal variable: Gender</h2>
+<section id="immigration-presence" class="slide level2">
+<h2>Immigration presence?</h2>
 <div class="presenter-space">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../../assets/bes_gender_bar.jpg" class="quarto-figure quarto-figure-center" style="width:80.0%" data-fig-cap=""></p>
+<p><img data-src="../../assets/brexit_immig_hist.jpg" class="quarto-figure quarto-figure-center" style="width:80.0%" data-fig-cap=""></p>
 </figure>
 </div>
 </div>
 </section>
-<section id="gender-and-vote-how-do-they-correlate" class="slide level2">
-<h2>Gender and vote: How do they correlate?</h2>
+<section id="unemployment-rates" class="slide level2">
+<h2>Unemployment rates?</h2>
 <div class="presenter-space">
-<ul>
-<li class="fragment">Do men and women <strong>vote</strong> differently?</li>
-<li class="fragment">If so, for which <strong>parties</strong> do we see the biggest gaps?</li>
-</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../assets/brexit_unemp_hist.jpg" class="quarto-figure quarto-figure-center" style="width:80.0%" data-fig-cap=""></p>
+</figure>
+</div>
 </div>
 </section>
 <section id="correlations-between-variables" class="slide level2">
@@ -208,56 +195,85 @@
 <div class="presenter-space">
 <ul>
 <li class="fragment">Two variables are <strong>correlated</strong> if knowing the value of one variable tells you something about the likely value of the other.</li>
-<li class="fragment">For <strong>gender</strong> and <strong>vote</strong>: if men and women vote similarly, there’s no correlation. If they vote differently, there is a correlation.</li>
+<li class="fragment">If import shock tells us nothing about Leave support, there’s no correlation. If regions with higher import shock tend to have different Leave support, there is a correlation.</li>
 </ul>
 </div>
 </section>
-<section id="gender-and-vote-cross-table" class="slide level2">
-<h2>Gender and vote: cross table</h2>
+<section id="setting-up-the-scatterplot" class="slide level2">
+<h2>Setting up the scatterplot</h2>
 <div class="presenter-space">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../../assets/gender-vote-cross-v2.png" class="quarto-figure quarto-figure-center" style="width:80.0%" data-fig-cap=""></p>
+<p><img data-src="../../assets/brexit_shock_scatter_blank.jpg" class="quarto-figure quarto-figure-center" style="width:80.0%" data-fig-cap=""></p>
 </figure>
 </div>
 </div>
 </section>
-<section id="gender-and-vote-cross-table-1" class="slide level2">
-<h2>Gender and vote: cross table</h2>
-<div class="presenter-space">
-<ul>
-<li class="fragment">For <strong>Labour</strong>: 479 women (44%) vs 406 men (43.2%) — similar.</li>
-<li class="fragment">For <strong>Green</strong>: 98 women (9%) vs 46 men (4.9% ) — women more likely.</li>
-<li class="fragment">For <strong>Reform</strong>: 96 women (8.8%) vs 124 men (13.2%) — men more likely.</li>
-</ul>
-</div>
-</section>
-<section id="gender-and-vote-bivariate-frequency-chart" class="slide level2">
-<h2>Gender and vote: bivariate frequency chart</h2>
+<section id="each-dot-is-a-region" class="slide level2">
+<h2>Each dot is a region</h2>
 <div class="presenter-space">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../../assets/bes_gender_vote.jpg" class="quarto-figure quarto-figure-center"></p>
+<p><img data-src="../../assets/brexit_shock_scatter_noline.jpg" class="quarto-figure quarto-figure-center" style="width:80.0%" data-fig-cap=""></p>
 </figure>
 </div>
 </div>
 </section>
-<section id="interpreting-the-gender-gap" class="slide level2">
-<h2>Interpreting the gender gap</h2>
+<section id="the-regression-line-summarises-the-pattern" class="slide level2">
+<h2>The regression line summarises the pattern</h2>
 <div class="presenter-space">
 <ul>
-<li class="fragment">In the bar chart, the <strong>count difference</strong> for Labour (73 more women) looks larger than for Green (52 more women).</li>
-<li class="fragment">But the <strong>percentage difference</strong> is actually smaller for Labour (0.8 points) than for Green (4.1 points).</li>
-<li class="fragment">Use <strong>percentages</strong>, not counts, to compare group likelihoods.</li>
+<li class="fragment">With so many points, it’s hard to see the overall pattern at a glance.</li>
+<li class="fragment">The <strong>regression line</strong> is the line that best summarises the relationship.</li>
+<li class="fragment">An <strong>upward</strong> slope means the variables tend to move together; a <strong>downward</strong> slope means they move in opposite directions.</li>
 </ul>
+</div>
+</section>
+<section id="import-shock-and-brexit" class="slide level2">
+<h2>Import shock and Brexit</h2>
+<div class="presenter-space">
+<ul>
+<li>Import shock and share of leave votes: <strong>positive correlation</strong>.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../assets/brexit_shock_scatter_line.jpg" class="quarto-figure quarto-figure-center" style="width:80.0%" data-fig-cap=""></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="immigration-and-brexit" class="slide level2">
+<h2>Immigration and Brexit</h2>
+<div class="presenter-space">
+<ul>
+<li>The downward-sloping line shows a <strong>negative correlation</strong>.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../assets/brexit_immig_scatter_line.jpg" class="quarto-figure quarto-figure-center" style="width:80.0%" data-fig-cap=""></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="unemployment-and-brexit" class="slide level2">
+<h2>Unemployment and Brexit</h2>
+<div class="presenter-space">
+<ul>
+<li>A flat line indicates <strong>no correlation</strong>.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../assets/brexit_unemp_scatter_line.jpg" class="quarto-figure quarto-figure-center" style="width:80.0%" data-fig-cap=""></p>
+</figure>
+</div>
 </div>
 </section>
 <section id="recap" class="slide level2">
 <h2>Recap</h2>
 <div class="presenter-space">
 <ul>
-<li class="fragment">When both variables are <strong>nominal</strong>, use bivariate frequency charts and cross-tabulation to analyse if they are correlated.</li>
-<li class="fragment">When comparing groups, focus on <strong>percentages</strong> rather than raw counts to assess relative likelihoods.</li>
+<li class="fragment">When both variables are <strong>numeric</strong> (interval or ratio), use scatterplots to show their relationship by plotting each observation as a point.</li>
+<li class="fragment">The <strong>regression line</strong> summarises the overall pattern.</li>
 </ul>
 </div>
 </section>
@@ -266,7 +282,7 @@
 <div class="presenter-space">
 <p><strong>Why this matters:</strong></p>
 <ul>
-<li class="fragment">Describing associations is the first step toward asking why they exist (e.g., why do men vote differently than women?)</li>
+<li class="fragment">Scatterplots and regression lines are common tools for analysing whether and how numeric variables are correlated.</li>
 </ul>
 </div>
 
