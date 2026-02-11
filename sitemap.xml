@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://lfalab.github.io/methods-education/slides/videos-stata/transform-stata.html</loc>
+    <lastmod>2026-02-11T10:36:27.469Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/slides/videos-stata/transform-stata-slides.html</loc>
+    <lastmod>2026-02-11T10:36:27.469Z</lastmod>
+  </url>
+  <url>
     <loc>https://lfalab.github.io/methods-education/slides/videos-stata/bar-hist-stata.html</loc>
     <lastmod>2026-02-04T09:26:58.732Z</lastmod>
   </url>
@@ -101,8 +109,40 @@
     <lastmod>2026-02-08T17:41:37.484Z</lastmod>
   </url>
   <url>
+    <loc>https://lfalab.github.io/methods-education/drafts/transform-stata.html</loc>
+    <lastmod>2026-02-11T10:05:47.700Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/drafts/transform-stata-slides.html</loc>
+    <lastmod>2026-02-11T10:05:47.700Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/drafts/corr-stata.html</loc>
+    <lastmod>2026-02-11T10:15:22.129Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/drafts/corr-stata-slides.html</loc>
+    <lastmod>2026-02-11T10:15:22.129Z</lastmod>
+  </url>
+  <url>
     <loc>https://lfalab.github.io/methods-education/about.html</loc>
     <lastmod>2026-01-26T10:08:58.374Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/activities/W04-distributions-activity.html</loc>
+    <lastmod>2026-02-11T10:38:45.499Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/drafts/bivariate-stata-slides.html</loc>
+    <lastmod>2026-02-11T09:17:26.061Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/drafts/bivariate-stata.html</loc>
+    <lastmod>2026-02-11T09:17:26.061Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/drafts/W04-distributions-activity.html</loc>
+    <lastmod>2026-02-11T10:30:14.564Z</lastmod>
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/index.html</loc>
@@ -195,5 +235,13 @@
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/videos-stata/summary-stata.html</loc>
     <lastmod>2026-02-04T09:27:41.715Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/slides/videos-stata/corr-stata-slides.html</loc>
+    <lastmod>2026-02-11T10:16:59.717Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/slides/videos-stata/corr-stata.html</loc>
+    <lastmod>2026-02-11T10:16:59.717Z</lastmod>
   </url>
 </urlset>

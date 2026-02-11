@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Leonardo Falabella">
 
-<title>Bar Charts and Histograms</title>
+<title>Mock Exam Questions: Describing Distributions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +24,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-a35d343c8bdbcb87d3b82ed68e48a46c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-30ae6b2e5328ac7375bd033934d6d19c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -69,6 +70,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -81,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/summarising-distribution.html">Week 4: Describing Distributions (Univariate Description)</a></li><li class="breadcrumb-item"><a href="../../slides/videos-concepts/bar-histograms.html">Bar Charts and Histograms</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../slides/videos-concepts/summarising-distribution.html">Week 4: Describing Distributions (Univariate Description)</a></li><li class="breadcrumb-item"><a href="../activities/W04-distributions-activity.html">Mock Exam Questions: Describing Distributions</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -95,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="../../index.html" class="sidebar-logo-link">
+      <a href="../index.html" class="sidebar-logo-link">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -107,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Statistics for Political Science</span></a>
   </div>
 </li>
@@ -122,7 +152,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/lectures/thinking-with-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/lectures/thinking-with-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 1: Thinking With Data</span></a>
   </div>
 </li>
@@ -139,37 +169,37 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/empirical-vs-normative.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/empirical-vs-normative.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Normative and Empirical Questions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/descriptive-vs-causal.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/descriptive-vs-causal.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Descriptive and Causal Questions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/units-theories-hypotheses.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/units-theories-hypotheses.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Units of Analysis, Theories, and Hypotheses</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/dependent-independent-variables.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/dependent-independent-variables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dependent and Independent Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/doing-reproducible-research.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/doing-reproducible-research.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Doing Reproducible Research</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/lectures/questions-theories-hypotheses.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/lectures/questions-theories-hypotheses.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 2: Research Questions, Theories, and Hypotheses</span></a>
   </div>
 </li>
@@ -186,37 +216,37 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/measuring-variables.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/measuring-variables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Measuring Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/types-of-variables.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/types-of-variables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Types of Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/datasets-codebooks.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/datasets-codebooks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Datasets and Codebooks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/stata-interface.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/stata-interface.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The Stata Interface</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/loading-browsing-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/loading-browsing-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Loading and Browsing Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/lectures/measurement-lecture.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/lectures/measurement-lecture.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 3: Measurement and Types of Variables</span></a>
   </div>
 </li>
@@ -233,43 +263,43 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/summarising-distribution.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/summarising-distribution.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Summarising a Distribution</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/variance-sd.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/variance-sd.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Variance and Standard Deviation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/bar-histograms.html" class="sidebar-item-text sidebar-link active">
+  <a href="../slides/videos-concepts/bar-histograms.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bar Charts and Histograms</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/summary-stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/summary-stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Summarising Distributions in Stata</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/bar-hist-stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/bar-hist-stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bar Charts and Histograms in Stata</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/lectures/distributions-lecture.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/lectures/distributions-lecture.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 4: Describing Distributions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/W04-distributions-activity.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/W04-distributions-activity.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Mock Exam Questions: Describing Distributions</span></a>
   </div>
 </li>
@@ -286,37 +316,37 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/correlations-nominal.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/correlations-nominal.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Correlations Between Nominal Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/comparing-means.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/comparing-means.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Comparing Means by Category</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/scatter-reg.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/scatter-reg.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Scatterplots and Regression Lines</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/types-plots-tables.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/types-plots-tables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">From Variable Types to Plots and Tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/corr-stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/corr-stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Describing Correlations in Stata</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/transform-stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/transform-stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data Transformations in Stata</span></a>
   </div>
 </li>
@@ -331,286 +361,168 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
-  <ul>
-  <li><a href="#bar-charts-and-histograms" id="toc-bar-charts-and-histograms" class="nav-link active" data-scroll-target="#bar-charts-and-histograms">Bar Charts and Histograms</a>
   <ul class="collapse">
-  <li><a href="#youll-learn-to" id="toc-youll-learn-to" class="nav-link" data-scroll-target="#youll-learn-to">You’ll learn to</a></li>
-  <li><a href="#general-election-vote-frequency-table" id="toc-general-election-vote-frequency-table" class="nav-link" data-scroll-target="#general-election-vote-frequency-table">General Election vote: Frequency table</a></li>
-  <li><a href="#general-election-vote-frequency-bar-chart" id="toc-general-election-vote-frequency-bar-chart" class="nav-link" data-scroll-target="#general-election-vote-frequency-bar-chart">General Election vote: Frequency bar chart</a></li>
-  <li><a href="#frequency-bar-charts" id="toc-frequency-bar-charts" class="nav-link" data-scroll-target="#frequency-bar-charts">Frequency bar charts</a></li>
-  <li><a href="#nss-data-summary" id="toc-nss-data-summary" class="nav-link" data-scroll-target="#nss-data-summary">NSS Data: Summary</a></li>
-  <li><a href="#nss-data-histogram" id="toc-nss-data-histogram" class="nav-link" data-scroll-target="#nss-data-histogram">NSS Data: Histogram</a></li>
-  <li><a href="#nss-data-histogram-1" id="toc-nss-data-histogram-1" class="nav-link" data-scroll-target="#nss-data-histogram-1">NSS Data: Histogram</a></li>
-  <li><a href="#histograms" id="toc-histograms" class="nav-link" data-scroll-target="#histograms">Histograms</a></li>
-  <li><a href="#another-variable-gdp-per-capita" id="toc-another-variable-gdp-per-capita" class="nav-link" data-scroll-target="#another-variable-gdp-per-capita">Another variable: GDP per capita</a></li>
-  <li><a href="#gdp-per-capita-summary" id="toc-gdp-per-capita-summary" class="nav-link" data-scroll-target="#gdp-per-capita-summary">GDP per capita: summary</a></li>
-  <li><a href="#gdp-per-capita-histogram" id="toc-gdp-per-capita-histogram" class="nav-link" data-scroll-target="#gdp-per-capita-histogram">GDP per capita: Histogram</a></li>
-  <li><a href="#gdp-per-capita-histogram-1" id="toc-gdp-per-capita-histogram-1" class="nav-link" data-scroll-target="#gdp-per-capita-histogram-1">GDP per capita: Histogram</a></li>
-  <li><a href="#recap" id="toc-recap" class="nav-link" data-scroll-target="#recap">Recap</a></li>
-  </ul></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#part-1-interpreting-histograms" id="toc-part-1-interpreting-histograms" class="nav-link" data-scroll-target="#part-1-interpreting-histograms">Part 1: Interpreting Histograms</a></li>
+  <li><a href="#part-2-skewness-and-mean-vs-median" id="toc-part-2-skewness-and-mean-vs-median" class="nav-link" data-scroll-target="#part-2-skewness-and-mean-vs-median">Part 2: Skewness and Mean vs Median</a></li>
+  <li><a href="#part-3-manual-calculation-exercise" id="toc-part-3-manual-calculation-exercise" class="nav-link" data-scroll-target="#part-3-manual-calculation-exercise">Part 3: Manual Calculation Exercise</a></li>
+  <li><a href="#reflection-questions" id="toc-reflection-questions" class="nav-link" data-scroll-target="#reflection-questions">Reflection Questions</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="bar-histograms-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/summarising-distribution.html">Week 4: Describing Distributions (Univariate Description)</a></li><li class="breadcrumb-item"><a href="../../slides/videos-concepts/bar-histograms.html">Bar Charts and Histograms</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../slides/videos-concepts/summarising-distribution.html">Week 4: Describing Distributions (Univariate Description)</a></li><li class="breadcrumb-item"><a href="../activities/W04-distributions-activity.html">Mock Exam Questions: Describing Distributions</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Mock Exam Questions: Describing Distributions</h1>
+<p class="subtitle lead">Statistics for Political Science - Week 4</p>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="bar-charts-and-histograms" class="level1 title-left">
-<h1 class="title-left">Bar Charts and Histograms</h1>
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Leonardo Falabella </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>In this activity, you will practice interpreting histograms, understanding the relationship between distribution shape and summary statistics, and performing manual calculations. Work through the sections in order, discussing your answers with your group before moving on.</p>
 <hr>
-<section id="youll-learn-to" class="level2">
-<h2 class="anchored" data-anchor-id="youll-learn-to">You’ll learn to</h2>
-<div class="presenter-space">
+</section>
+<section id="part-1-interpreting-histograms" class="level2">
+<h2 class="anchored" data-anchor-id="part-1-interpreting-histograms">Part 1: Interpreting Histograms</h2>
+<p>Below are three histograms representing different distributions. For each histogram, answer the interpretation questions that follow.</p>
+<section id="distribution-a" class="level3">
+<h3 class="anchored" data-anchor-id="distribution-a">Distribution A</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="W04-distributions-activity_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Questions:</strong></p>
+<ol type="1">
+<li>Approximately how many observations fall between 40 and 60?</li>
+<li>Is this distribution symmetric, right-skewed, or left-skewed?</li>
+<li>Where is most of the mass concentrated?</li>
+</ol>
+<hr>
+</section>
+<section id="distribution-b" class="level3">
+<h3 class="anchored" data-anchor-id="distribution-b">Distribution B</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="W04-distributions-activity_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Questions:</strong></p>
+<ol type="1">
+<li>Approximately how many observations fall between 0 and 20?</li>
+<li>Is this distribution symmetric, right-skewed, or left-skewed?</li>
+<li>Are there any extreme values? If so, in which direction?</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="part-2-skewness-and-mean-vs-median" class="level2">
+<h2 class="anchored" data-anchor-id="part-2-skewness-and-mean-vs-median">Part 2: Skewness and Mean vs Median</h2>
+<p>In this section, you will examine two clearly skewed distributions and predict the relationship between the mean and median based on the shape of the histogram.</p>
+<section id="right-skewed-distribution" class="level3">
+<h3 class="anchored" data-anchor-id="right-skewed-distribution">Right-Skewed Distribution</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="W04-distributions-activity_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Questions:</strong></p>
+<ol type="1">
+<li>In this distribution, would you expect the mean to be larger or smaller than the median?</li>
+<li>Why? Explain your reasoning in terms of the shape of the distribution and the location of extreme values.</li>
+</ol>
+<hr>
+</section>
+<section id="left-skewed-distribution" class="level3">
+<h3 class="anchored" data-anchor-id="left-skewed-distribution">Left-Skewed Distribution</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="W04-distributions-activity_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Questions:</strong></p>
+<ol type="1">
+<li>In this distribution, would you expect the mean to be larger or smaller than the median?</li>
+<li>Why? Explain your reasoning in terms of the shape of the distribution and the location of extreme values.</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="part-3-manual-calculation-exercise" class="level2">
+<h2 class="anchored" data-anchor-id="part-3-manual-calculation-exercise">Part 3: Manual Calculation Exercise</h2>
+<p><em>These calculations won’t be in the exam, but we want you to learn them.</em></p>
+<p>Consider the following dataset, which represents the number of years of education for five respondents:</p>
+<p><strong>Years of Education:</strong> 10, 12, 14, 16, 18</p>
+<p>Using these five observations, calculate the following by hand (you may use a calculator for arithmetic):</p>
+<ol type="1">
+<li><strong>The mean</strong></li>
+<li><strong>The median</strong></li>
+<li><strong>The variance</strong> (use the formula: <span class="math inline">\(\sigma^2 = \frac{\sum_{i=1}^{N} (x_i - \mu)^2}{N}\)</span>)</li>
+<li><strong>The standard deviation</strong> (the square root of the variance)</li>
+</ol>
+<p><strong>Show your work</strong> for each calculation.</p>
+<hr>
+</section>
+<section id="reflection-questions" class="level2">
+<h2 class="anchored" data-anchor-id="reflection-questions">Reflection Questions</h2>
+<p>After completing the activity, discuss the following questions with your group:</p>
+<ol type="1">
+<li>How does the shape of a distribution (symmetric, right-skewed, left-skewed) affect the relationship between the mean and the median?</li>
+<li>Why is the standard deviation useful for understanding how unusual an observation is?</li>
+<li>In what types of real-world political or social data would you expect to see right-skewed distributions? Left-skewed distributions?</li>
+</ol>
+<hr>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>In this activity, you have:</p>
 <ul>
-<li>Choose and interpret <strong>bar charts</strong> and <strong>histograms</strong> for univariate data.</li>
+<li>Interpreted histograms to identify shape, central tendency, and spread.</li>
+<li>Connected the shape of a distribution to the relationship between mean and median.</li>
+<li>Performed manual calculations of key summary statistics.</li>
 </ul>
-</div>
-<hr>
-</section>
-<section id="general-election-vote-frequency-table" class="level2">
-<h2 class="anchored" data-anchor-id="general-election-vote-frequency-table">General Election vote: Frequency table</h2>
-<div class="presenter-space">
-<div class="nonincremental">
-<p>Which party did you vote for in the general election?</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/vote-frequency.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-<hr>
-</section>
-<section id="general-election-vote-frequency-bar-chart" class="level2">
-<h2 class="anchored" data-anchor-id="general-election-vote-frequency-bar-chart">General Election vote: Frequency bar chart</h2>
-<div class="presenter-space">
-<div class="nonincremental">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/bes_vote_bar.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-<hr>
-</section>
-<section id="frequency-bar-charts" class="level2">
-<h2 class="anchored" data-anchor-id="frequency-bar-charts">Frequency bar charts</h2>
-<div class="presenter-space">
-<ul>
-<li>Good for visualising distributions of <strong>nominal</strong> variables.</li>
-<li>Shows how many observations are in each <strong>category</strong>.</li>
-<li>The order of the bars does <strong>not</strong> make a difference.</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="nss-data-summary" class="level2">
-<h2 class="anchored" data-anchor-id="nss-data-summary">NSS Data: Summary</h2>
-<div class="presenter-space">
-<div class="nonincremental">
-<p>Q28: Overall, I am satisfied with the quality of the course</p>
-<!-- ![](../../assets/summarize-nss.png){fig-align="center"} -->
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Q28</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Obs</td>
-<td><strong>1,051</strong></td>
-</tr>
-<tr class="even">
-<td>Mean</td>
-<td><strong>82.3</strong></td>
-</tr>
-<tr class="odd">
-<td>Std. dev.</td>
-<td><strong>12</strong></td>
-</tr>
-<tr class="even">
-<td>Min</td>
-<td><strong>11.8</strong></td>
-</tr>
-<tr class="odd">
-<td>Max</td>
-<td><strong>100</strong></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<hr>
-</section>
-<section id="nss-data-histogram" class="level2">
-<h2 class="anchored" data-anchor-id="nss-data-histogram">NSS Data: Histogram</h2>
-<div class="presenter-space">
-<div class="nonincremental">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/nss_hist.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" data-fig-cap=""></p>
-</figure>
-</div>
-</div>
-</div>
-<hr>
-</section>
-<section id="nss-data-histogram-1" class="level2">
-<h2 class="anchored" data-anchor-id="nss-data-histogram-1">NSS Data: Histogram</h2>
-<div class="presenter-space">
-<div class="nonincremental">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/nss_hist_shaded.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" data-fig-cap=""></p>
-</figure>
-</div>
-<p>About <strong>200</strong> courses between 90% and 95% satisfaction rates.</p>
-</div>
-</div>
-<hr>
-</section>
-<section id="histograms" class="level2">
-<h2 class="anchored" data-anchor-id="histograms">Histograms</h2>
-<div class="presenter-space">
-<ul>
-<li>Good for visualising distributions of <strong>ordinal</strong>, <strong>interval</strong>, and <strong>ratio</strong> variables.</li>
-<li>Shows how many observations are in each <strong>range</strong> of values.</li>
-<li>The order of the bars <strong>does</strong> make a difference.</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="another-variable-gdp-per-capita" class="level2">
-<h2 class="anchored" data-anchor-id="another-variable-gdp-per-capita">Another variable: GDP per capita</h2>
-<div class="presenter-space">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Country</th>
-<th>GDP per capita</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>USA</td>
-<td><strong>$58.4k</strong></td>
-</tr>
-<tr class="even">
-<td>UK</td>
-<td><strong>$38.4k</strong></td>
-</tr>
-<tr class="odd">
-<td>China</td>
-<td><strong>$19.2k</strong></td>
-</tr>
-<tr class="even">
-<td>Brazil</td>
-<td><strong>$14.6k</strong></td>
-</tr>
-<tr class="odd">
-<td>India</td>
-<td><strong>$7.7k</strong></td>
-</tr>
-<tr class="even">
-<td>Ethiopia</td>
-<td><strong>$2.3k</strong></td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr>
-</section>
-<section id="gdp-per-capita-summary" class="level2">
-<h2 class="anchored" data-anchor-id="gdp-per-capita-summary">GDP per capita: summary</h2>
-<div class="presenter-space">
-<div class="nonincremental">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>GDPpc</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Obs</td>
-<td><strong>162</strong></td>
-</tr>
-<tr class="even">
-<td>Mean</td>
-<td><strong>19,619</strong></td>
-</tr>
-<tr class="odd">
-<td>Std. dev.</td>
-<td><strong>20,986</strong></td>
-</tr>
-<tr class="even">
-<td>Min</td>
-<td><strong>596</strong></td>
-</tr>
-<tr class="odd">
-<td>Max</td>
-<td><strong>149,171</strong></td>
-</tr>
-</tbody>
-</table>
-<!-- ![](../../assets/summarize-gdp.png){fig-align="center"} -->
-</div>
-</div>
-<hr>
-</section>
-<section id="gdp-per-capita-histogram" class="level2">
-<h2 class="anchored" data-anchor-id="gdp-per-capita-histogram">GDP per capita: Histogram</h2>
-<div class="presenter-space">
-<div class="nonincremental">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/gdp_hist.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-<hr>
-</section>
-<section id="gdp-per-capita-histogram-1" class="level2">
-<h2 class="anchored" data-anchor-id="gdp-per-capita-histogram-1">GDP per capita: Histogram</h2>
-<div class="presenter-space">
-<div class="nonincremental">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/gdp_hist_shaded.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" data-fig-cap=""></p>
-</figure>
-</div>
-<p><strong>35</strong> countries between $10k and $20k.</p>
-</div>
-</div>
-<hr>
-</section>
-<section id="recap" class="level2">
-<h2 class="anchored" data-anchor-id="recap">Recap</h2>
-<div class="presenter-space">
-<ul>
-<li><strong>Bar charts</strong> and <strong>histograms</strong> visualise distributions.</li>
-<li>Bar charts are used for <strong>nominal</strong> variables and show counts by category.</li>
-<li>Histograms are used for <strong>ordinal</strong>, <strong>interval</strong>, and <strong>ratio</strong> variables and show counts within ranges of values.</li>
-</ul>
-</div>
-<hr>
-<div class="presenter-space">
-<p><strong>Why this matters:</strong></p>
-<ul>
-<li>The wrong type of graph can obscure patterns or suggest structure that is not there.</li>
-<li>The right visualisation helps us see what is typical, what is rare, and how values are distributed.</li>
-</ul>
-</div>
+<p>These skills are foundational for describing data and understanding what patterns mean in political science research.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
