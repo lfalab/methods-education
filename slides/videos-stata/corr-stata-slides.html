@@ -190,15 +190,34 @@
 <li>The appropriate tool depends on the <strong>types of variables</strong> being analysed.</li>
 <li>Open <code>bivariate-bes.do</code> to see examples of all three cases.</li>
 </ul>
-</section>
-<section id="case-1-nominal-nominal" class="slide level2">
-<h2>Case 1: Nominal + Nominal</h2>
-<ul>
-<li><strong>Example:</strong> Gender and vote choice.</li>
-<li><strong>Tools:</strong> Cross-tabulation and bivariate bar chart.</li>
-<li>Use <code>tabulate</code> with <code>column</code> option for percentages.</li>
-<li>Use <code>catplot</code> with <code>asyvars</code> option for grouped bar charts.</li>
-</ul>
+<table class="caption-top">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">## Case 1: Nominal + Nominal</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">::: nonincremental</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">- <strong>Example:</strong> Gender and vote choice. - <strong>Tools:</strong> Cross-tabulation and bivariate bar chart. - Use <code>tabulate</code> with <code>column</code> option for percentages. - Use <code>graph hbar (count)</code> with <code>over()</code> options for grouped bar charts.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">:::</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">::: notes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Note:</strong> The video uses <code>catplot</code> for this chart. We have switched to <code>graph hbar</code> in the do files because <code>catplot</code> has changed since the video was recorded. The output is equivalent.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">:::</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="case-2-nominal-numeric" class="slide level2">
 <h2>Case 2: Nominal + Numeric</h2>

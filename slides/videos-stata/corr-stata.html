@@ -342,7 +342,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#step-5-check-if-it-has-worked-and-save-your-do-file" id="toc-step-5-check-if-it-has-worked-and-save-your-do-file" class="nav-link" data-scroll-target="#step-5-check-if-it-has-worked-and-save-your-do-file">Step 5: Check if it has worked and save your do-file</a></li>
   <li><a href="#step-6-read-through-the-do-file-comments-and-execute-the-commands" id="toc-step-6-read-through-the-do-file-comments-and-execute-the-commands" class="nav-link" data-scroll-target="#step-6-read-through-the-do-file-comments-and-execute-the-commands">Step 6: Read through the do-file comments and execute the commands</a></li>
   <li><a href="#what-is-bivariate-analysis" id="toc-what-is-bivariate-analysis" class="nav-link" data-scroll-target="#what-is-bivariate-analysis">What is bivariate analysis?</a></li>
-  <li><a href="#case-1-nominal-nominal" id="toc-case-1-nominal-nominal" class="nav-link" data-scroll-target="#case-1-nominal-nominal">Case 1: Nominal + Nominal</a></li>
   <li><a href="#case-2-nominal-numeric" id="toc-case-2-nominal-numeric" class="nav-link" data-scroll-target="#case-2-nominal-numeric">Case 2: Nominal + Numeric</a></li>
   <li><a href="#case-3-numeric-numeric" id="toc-case-3-numeric-numeric" class="nav-link" data-scroll-target="#case-3-numeric-numeric">Case 3: Numeric + Numeric</a></li>
   <li><a href="#interpreting-scatterplots-and-regression-lines" id="toc-interpreting-scatterplots-and-regression-lines" class="nav-link" data-scroll-target="#interpreting-scatterplots-and-regression-lines">Interpreting scatterplots and regression lines</a></li>
@@ -455,19 +454,34 @@ ul.task-list li input[type="checkbox"] {
 <li>Open <code>bivariate-bes.do</code> to see examples of all three cases.</li>
 </ul>
 </div>
-<hr>
-</section>
-<section id="case-1-nominal-nominal" class="level2">
-<h2 class="anchored" data-anchor-id="case-1-nominal-nominal">Case 1: Nominal + Nominal</h2>
-<div class="nonincremental">
-<ul>
-<li><strong>Example:</strong> Gender and vote choice.</li>
-<li><strong>Tools:</strong> Cross-tabulation and bivariate bar chart.</li>
-<li>Use <code>tabulate</code> with <code>column</code> option for percentages.</li>
-<li>Use <code>catplot</code> with <code>asyvars</code> option for grouped bar charts.</li>
-</ul>
-</div>
-<hr>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">## Case 1: Nominal + Nominal</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">::: nonincremental</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">- <strong>Example:</strong> Gender and vote choice. - <strong>Tools:</strong> Cross-tabulation and bivariate bar chart. - Use <code>tabulate</code> with <code>column</code> option for percentages. - Use <code>graph hbar (count)</code> with <code>over()</code> options for grouped bar charts.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">:::</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">::: notes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Note:</strong> The video uses <code>catplot</code> for this chart. We have switched to <code>graph hbar</code> in the do files because <code>catplot</code> has changed since the video was recorded. The output is equivalent.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">:::</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="case-2-nominal-numeric" class="level2">
 <h2 class="anchored" data-anchor-id="case-2-nominal-numeric">Case 2: Nominal + Numeric</h2>

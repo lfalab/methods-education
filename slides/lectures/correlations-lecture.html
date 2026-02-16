@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Leonardo Falabella">
 
-<title>Conditional Analysis and Data Transformations in Stata</title>
+<title>Lecture 5: Describing Correlations</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +24,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-a35d343c8bdbcb87d3b82ed68e48a46c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-a35d343c8bdbcb87d3b82ed68e48a46c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -81,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Lecture 5: Describing Correlations</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -95,7 +96,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="../index.html" class="sidebar-logo-link">
+      <a href="../../index.html" class="sidebar-logo-link">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -107,7 +108,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Statistics for Political Science</span></a>
   </div>
 </li>
@@ -122,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/lectures/thinking-with-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/lectures/thinking-with-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 1: Thinking With Data</span></a>
   </div>
 </li>
@@ -139,37 +140,37 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-concepts/empirical-vs-normative.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/empirical-vs-normative.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Normative and Empirical Questions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-concepts/descriptive-vs-causal.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/descriptive-vs-causal.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Descriptive and Causal Questions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-concepts/units-theories-hypotheses.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/units-theories-hypotheses.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Units of Analysis, Theories, and Hypotheses</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-concepts/dependent-independent-variables.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/dependent-independent-variables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dependent and Independent Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-stata/doing-reproducible-research.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-stata/doing-reproducible-research.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Doing Reproducible Research</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/lectures/questions-theories-hypotheses.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/lectures/questions-theories-hypotheses.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 2: Research Questions, Theories, and Hypotheses</span></a>
   </div>
 </li>
@@ -186,37 +187,37 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-concepts/measuring-variables.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/measuring-variables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Measuring Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-concepts/types-of-variables.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/types-of-variables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Types of Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-stata/datasets-codebooks.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-stata/datasets-codebooks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Datasets and Codebooks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-stata/stata-interface.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-stata/stata-interface.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The Stata Interface</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-stata/loading-browsing-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-stata/loading-browsing-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Loading and Browsing Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/lectures/measurement-lecture.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/lectures/measurement-lecture.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 3: Measurement and Types of Variables</span></a>
   </div>
 </li>
@@ -233,43 +234,43 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-concepts/summarising-distribution.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/summarising-distribution.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Summarising a Distribution</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-concepts/variance-sd.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/variance-sd.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Variance and Standard Deviation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-concepts/bar-histograms.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/bar-histograms.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bar Charts and Histograms</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-stata/summary-stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-stata/summary-stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Summarising Distributions in Stata</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-stata/bar-hist-stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-stata/bar-hist-stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bar Charts and Histograms in Stata</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/lectures/distributions-lecture.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/lectures/distributions-lecture.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 4: Describing Distributions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../activities/W04-distributions-activity.html" class="sidebar-item-text sidebar-link">
+  <a href="../../activities/W04-distributions-activity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Mock Exam Questions: Describing Distributions</span></a>
   </div>
 </li>
@@ -286,37 +287,37 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-concepts/correlations-nominal.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/correlations-nominal.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Correlations Between Nominal Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-concepts/comparing-means.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/comparing-means.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Comparing Means by Category</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-concepts/scatter-reg.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/scatter-reg.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Scatterplots and Regression Lines</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-concepts/types-plots-tables.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/types-plots-tables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">From Variable Types to Plots and Tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-stata/corr-stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-stata/corr-stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Describing Correlations in Stata</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-stata/transform-stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-stata/transform-stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data Transformations in Stata</span></a>
   </div>
 </li>
@@ -332,209 +333,263 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#conditional-analysis-and-data-transformations-in-stata" id="toc-conditional-analysis-and-data-transformations-in-stata" class="nav-link active" data-scroll-target="#conditional-analysis-and-data-transformations-in-stata">Conditional Analysis and Data Transformations in Stata</a>
-  <ul class="collapse">
-  <li><a href="#youll-learn-to" id="toc-youll-learn-to" class="nav-link" data-scroll-target="#youll-learn-to">You’ll learn to</a></li>
-  <li><a href="#step-1-download-the-british-election-study-dataset-from-our-shared-folder" id="toc-step-1-download-the-british-election-study-dataset-from-our-shared-folder" class="nav-link" data-scroll-target="#step-1-download-the-british-election-study-dataset-from-our-shared-folder">Step 1: Download the British Election Study dataset from our shared folder</a></li>
-  <li><a href="#step-2-download-the-companion-do-file-for-this-activity" id="toc-step-2-download-the-companion-do-file-for-this-activity" class="nav-link" data-scroll-target="#step-2-download-the-companion-do-file-for-this-activity">Step 2: Download the companion do-file for this activity</a></li>
-  <li><a href="#step-3-insert-the-path-to-your-folder-on-your-computer" id="toc-step-3-insert-the-path-to-your-folder-on-your-computer" class="nav-link" data-scroll-target="#step-3-insert-the-path-to-your-folder-on-your-computer">Step 3: Insert the path to your folder on your computer</a></li>
-  <li><a href="#step-4-select-the-top-portion-of-the-do-file-and-click-execute-do" id="toc-step-4-select-the-top-portion-of-the-do-file-and-click-execute-do" class="nav-link" data-scroll-target="#step-4-select-the-top-portion-of-the-do-file-and-click-execute-do">Step 4: Select the top portion of the do file and click “execute (do)”</a></li>
-  <li><a href="#step-5-check-if-it-has-worked-and-save-your-do-file" id="toc-step-5-check-if-it-has-worked-and-save-your-do-file" class="nav-link" data-scroll-target="#step-5-check-if-it-has-worked-and-save-your-do-file">Step 5: Check if it has worked and save your do-file</a></li>
-  <li><a href="#what-is-data-transformation" id="toc-what-is-data-transformation" class="nav-link" data-scroll-target="#what-is-data-transformation">What is data transformation?</a></li>
-  <li><a href="#conditional-summaries-the-if-statement" id="toc-conditional-summaries-the-if-statement" class="nav-link" data-scroll-target="#conditional-summaries-the-if-statement">Conditional summaries: The <code>if</code> statement</a></li>
-  <li><a href="#conditional-tabulations" id="toc-conditional-tabulations" class="nav-link" data-scroll-target="#conditional-tabulations">Conditional tabulations</a></li>
-  <li><a href="#filtering-observations-keep-and-drop" id="toc-filtering-observations-keep-and-drop" class="nav-link" data-scroll-target="#filtering-observations-keep-and-drop">Filtering observations: <code>keep</code> and <code>drop</code></a></li>
-  <li><a href="#combining-multiple-conditions" id="toc-combining-multiple-conditions" class="nav-link" data-scroll-target="#combining-multiple-conditions">Combining multiple conditions</a></li>
-  <li><a href="#working-with-ranges" id="toc-working-with-ranges" class="nav-link" data-scroll-target="#working-with-ranges">Working with ranges</a></li>
-  <li><a href="#your-turn-explore-conditional-analysis" id="toc-your-turn-explore-conditional-analysis" class="nav-link" data-scroll-target="#your-turn-explore-conditional-analysis">Your turn: Explore conditional analysis</a></li>
-  <li><a href="#recap" id="toc-recap" class="nav-link" data-scroll-target="#recap">Recap</a></li>
-  </ul></li>
+  <li><a href="#today-is-different" id="toc-today-is-different" class="nav-link active" data-scroll-target="#today-is-different">Today is different</a></li>
+  <li><a href="#but-first-why-does-any-of-this-matter" id="toc-but-first-why-does-any-of-this-matter" class="nav-link" data-scroll-target="#but-first-why-does-any-of-this-matter">But first: why does any of this matter?</a></li>
+  <li><a href="#the-building-blocks-arent-obvious-yet" id="toc-the-building-blocks-arent-obvious-yet" class="nav-link" data-scroll-target="#the-building-blocks-arent-obvious-yet">The building blocks aren’t obvious yet</a></li>
+  <li><a href="#what-youre-building-toward" id="toc-what-youre-building-toward" class="nav-link" data-scroll-target="#what-youre-building-toward">What you’re building toward</a></li>
+  <li><a href="#the-do-files-are-templates" id="toc-the-do-files-are-templates" class="nav-link" data-scroll-target="#the-do-files-are-templates">The do files are templates</a></li>
+  <li><a href="#what-happens-when-you-run-a-do-file-top-to-bottom" id="toc-what-happens-when-you-run-a-do-file-top-to-bottom" class="nav-link" data-scroll-target="#what-happens-when-you-run-a-do-file-top-to-bottom">What happens when you run a do file top to bottom</a></li>
+  <li><a href="#download-todays-do-file" id="toc-download-todays-do-file" class="nav-link" data-scroll-target="#download-todays-do-file">Download today’s do file</a></li>
+  <li><a href="#three-cases-three-parts" id="toc-three-cases-three-parts" class="nav-link" data-scroll-target="#three-cases-three-parts">Three cases, three parts</a></li>
+  <li><a href="#case-1-nominal-nominal" id="toc-case-1-nominal-nominal" class="nav-link" data-scroll-target="#case-1-nominal-nominal">Case 1: Nominal + Nominal</a></li>
+  <li><a href="#case-1-example-gender-and-vote-choice" id="toc-case-1-example-gender-and-vote-choice" class="nav-link" data-scroll-target="#case-1-example-gender-and-vote-choice">Case 1 example: Gender and vote choice</a></li>
+  <li><a href="#case-1-your-turn" id="toc-case-1-your-turn" class="nav-link" data-scroll-target="#case-1-your-turn">Case 1: Your turn</a></li>
+  <li><a href="#case-2-nominal-numeric" id="toc-case-2-nominal-numeric" class="nav-link" data-scroll-target="#case-2-nominal-numeric">Case 2: Nominal + Numeric</a></li>
+  <li><a href="#case-2-example-newspaper-readership-and-ideology" id="toc-case-2-example-newspaper-readership-and-ideology" class="nav-link" data-scroll-target="#case-2-example-newspaper-readership-and-ideology">Case 2 example: Newspaper readership and ideology</a></li>
+  <li><a href="#case-2-your-turn" id="toc-case-2-your-turn" class="nav-link" data-scroll-target="#case-2-your-turn">Case 2: Your turn</a></li>
+  <li><a href="#case-3-numeric-numeric" id="toc-case-3-numeric-numeric" class="nav-link" data-scroll-target="#case-3-numeric-numeric">Case 3: Numeric + Numeric</a></li>
+  <li><a href="#case-3-example-import-shock-and-brexit" id="toc-case-3-example-import-shock-and-brexit" class="nav-link" data-scroll-target="#case-3-example-import-shock-and-brexit">Case 3 example: Import shock and Brexit</a></li>
+  <li><a href="#case-3-your-turn" id="toc-case-3-your-turn" class="nav-link" data-scroll-target="#case-3-your-turn">Case 3: Your turn</a></li>
+  <li><a href="#why-this-matters" id="toc-why-this-matters" class="nav-link" data-scroll-target="#why-this-matters">Why this matters</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="transform-stata-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="correlations-lecture-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
 
-
-
-
-<section id="conditional-analysis-and-data-transformations-in-stata" class="level1 title-left">
-<h1 class="title-left">Conditional Analysis and Data Transformations in Stata</h1>
-<hr>
-<section id="youll-learn-to" class="level2">
-<h2 class="anchored" data-anchor-id="youll-learn-to">You’ll learn to</h2>
-<div class="nonincremental">
-<ul>
-<li>Use <strong>conditional statements</strong> to analyse subgroups.</li>
-<li>Filter observations using <code>keep</code> and <code>drop</code>.</li>
-<li>Combine multiple conditions to refine your analysis.</li>
-</ul>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Lecture 5: Describing Correlations</h1>
+<p class="subtitle lead">Statistics for Political Science</p>
 </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Leonardo Falabella </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<hr>
+<section id="today-is-different" class="level2">
+<h2 class="anchored" data-anchor-id="today-is-different">Today is different</h2>
+<ul>
+<li>Last week you told me you wanted <strong>less revision</strong> and <strong>more hands-on work</strong>.</li>
+<li>Today we’re skipping straight to Stata.</li>
+<li>The whole lecture is a three-part activity — one for each type of bivariate analysis.</li>
+</ul>
 <hr>
 </section>
-<section id="step-1-download-the-british-election-study-dataset-from-our-shared-folder" class="level2">
-<h2 class="anchored" data-anchor-id="step-1-download-the-british-election-study-dataset-from-our-shared-folder">Step 1: Download the British Election Study dataset from our shared folder</h2>
-<div class="nonincremental">
+<section id="but-first-why-does-any-of-this-matter" class="level2">
+<h2 class="anchored" data-anchor-id="but-first-why-does-any-of-this-matter">But first: why does any of this matter?</h2>
 <ul>
-<li>Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a></li>
-<li>Click on <code>data-raw</code></li>
-<li>Download <code>British_Election_Study_2024.dta</code></li>
-<li>Save it into the <code>data-raw</code> folder on your computer</li>
+<li>Some of you have felt like you’re learning <strong>mechanical tasks without knowing why</strong>.</li>
+<li>That’s a fair observation — and it’s worth addressing directly.</li>
 </ul>
-</div>
 <hr>
 </section>
-<section id="step-2-download-the-companion-do-file-for-this-activity" class="level2">
-<h2 class="anchored" data-anchor-id="step-2-download-the-companion-do-file-for-this-activity">Step 2: Download the companion do-file for this activity</h2>
+<section id="the-building-blocks-arent-obvious-yet" class="level2">
+<h2 class="anchored" data-anchor-id="the-building-blocks-arent-obvious-yet">The building blocks aren’t obvious yet</h2>
+<ul>
+<li>Generating a histogram or tabulating a single variable can feel pointless.</li>
+<li>But these are the <strong>building blocks</strong> of independent empirical analysis.</li>
+<li>Right now you’re learning to use a tool. Later, you’ll decide what to do with it.</li>
+</ul>
+<hr>
+</section>
+<section id="what-youre-building-toward" class="level2">
+<h2 class="anchored" data-anchor-id="what-youre-building-toward">What you’re building toward</h2>
+<ul>
+<li><strong>Problem Set 2</strong> asks you to analyse a dataset of your choice, with variables of your choice.</li>
+<li>You will need to identify the right tool for the right pair of variables — and execute it.</li>
+<li>Everything you’ve done so far is preparation for that.</li>
+</ul>
+<hr>
+</section>
+<section id="the-do-files-are-templates" class="level2">
+<h2 class="anchored" data-anchor-id="the-do-files-are-templates">The do files are templates</h2>
+<ul>
+<li>The do files in our shared folder aren’t just course materials — they’re <strong>starting points for your own analysis</strong>.</li>
+<li>You’ve set up an identical folder structure on your computer for exactly this reason.</li>
+<li>Download a do file, update the working directory, and you have a working template.</li>
+</ul>
+<hr>
+</section>
+<section id="what-happens-when-you-run-a-do-file-top-to-bottom" class="level2">
+<h2 class="anchored" data-anchor-id="what-happens-when-you-run-a-do-file-top-to-bottom">What happens when you run a do file top to bottom</h2>
+<ul>
+<li>Stata executes every line in sequence.</li>
+<li>Plots appear because the do file contains graph commands.</li>
+<li>This isn’t magic — it’s a <strong>reproducible record</strong> of your analysis.</li>
+<li>Today we’ll use a new do file as a template: <code>bivariate-lecture.do</code></li>
+</ul>
+<hr>
+</section>
+<section id="download-todays-do-file" class="level2">
+<h2 class="anchored" data-anchor-id="download-todays-do-file">Download today’s do file</h2>
 <div class="nonincremental">
 <ul>
 <li>Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a></li>
 <li>Click on <code>do</code></li>
-<li>Download <code>transform-bes.do</code></li>
-<li>Save it into the <code>do</code> folder on your computer</li>
+<li>Download <code>bivariate-lecture.do</code></li>
+<li>Save it to your <code>do</code> folder and update the working directory</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="step-3-insert-the-path-to-your-folder-on-your-computer" class="level2">
-<h2 class="anchored" data-anchor-id="step-3-insert-the-path-to-your-folder-on-your-computer">Step 3: Insert the path to your folder on your computer</h2>
+<section id="three-cases-three-parts" class="level2">
+<h2 class="anchored" data-anchor-id="three-cases-three-parts">Three cases, three parts</h2>
+<div class="nonincremental">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 56%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Case</th>
+<th>Variable 1</th>
+<th>Variable 2</th>
+<th>Tools</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Nominal</td>
+<td>Nominal</td>
+<td>Cross-tabulation, bivariate bar chart</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Nominal</td>
+<td>Numeric</td>
+<td>Compare means, bar chart of means</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Numeric</td>
+<td>Numeric</td>
+<td>Scatterplot, regression line</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+</section>
+<section id="case-1-nominal-nominal" class="level2">
+<h2 class="anchored" data-anchor-id="case-1-nominal-nominal">Case 1: Nominal + Nominal</h2>
+<ul>
+<li><strong>Tools:</strong> Cross-tabulation and bivariate bar chart.</li>
+<li>Open <code>bivariate-lecture.do</code> and go to <strong>Case 1</strong>.</li>
+</ul>
+<hr>
+</section>
+<section id="case-1-example-gender-and-vote-choice" class="level2">
+<h2 class="anchored" data-anchor-id="case-1-example-gender-and-vote-choice">Case 1 example: Gender and vote choice</h2>
 <div class="nonincremental">
 <ul>
-<li>This line of <code>transform-bes.do</code> has an “address” that only works on my computer.</li>
-<li>Replace it with the “address” to your project folder on your computer.</li>
+<li><code>tabulate b02 y09, column nofreq</code></li>
+<li><code>graph hbar (count), over(y09) over(b02) asyvars</code></li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/stata-replace-cd2.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
 </div>
 <hr>
 </section>
-<section id="step-4-select-the-top-portion-of-the-do-file-and-click-execute-do" class="level2">
-<h2 class="anchored" data-anchor-id="step-4-select-the-top-portion-of-the-do-file-and-click-execute-do">Step 4: Select the top portion of the do file and click “execute (do)”</h2>
-<div class="nonincremental">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/stata-select-execute2.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-</div>
-<hr>
-</section>
-<section id="step-5-check-if-it-has-worked-and-save-your-do-file" class="level2">
-<h2 class="anchored" data-anchor-id="step-5-check-if-it-has-worked-and-save-your-do-file">Step 5: Check if it has worked and save your do-file</h2>
+<section id="case-1-your-turn" class="level2">
+<h2 class="anchored" data-anchor-id="case-1-your-turn">Case 1: Your turn</h2>
 <div class="nonincremental">
 <ul>
-<li>If you see this on the top-right pane of your Stata screen, it has worked!</li>
-<li>Be sure to <strong>save your do-file</strong> in your <code>do</code> folder.</li>
+<li><strong>Variables:</strong> Gender (<code>y09</code>) and interest in politics (<code>a03</code>).</li>
+<li>Clean <code>a03</code>: <code>replace a03 = . if a03 &lt; 0</code></li>
+<li>Create a cross-tabulation and a bivariate chart.</li>
+<li>Use the gender/vote choice commands as templates.</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/stata-bes-variables.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
 </div>
 <hr>
 </section>
-<section id="what-is-data-transformation" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-data-transformation">What is data transformation?</h2>
+<section id="case-2-nominal-numeric" class="level2">
+<h2 class="anchored" data-anchor-id="case-2-nominal-numeric">Case 2: Nominal + Numeric</h2>
+<ul>
+<li><strong>Tools:</strong> Compare means and bar chart of means.</li>
+<li>Open <code>bivariate-lecture.do</code> and go to <strong>Case 2</strong>.</li>
+</ul>
+<hr>
+</section>
+<section id="case-2-example-newspaper-readership-and-ideology" class="level2">
+<h2 class="anchored" data-anchor-id="case-2-example-newspaper-readership-and-ideology">Case 2 example: Newspaper readership and ideology</h2>
 <div class="nonincremental">
 <ul>
-<li><p><strong>Data transformation</strong> prepares your dataset for analysis.</p></li>
-<li><p>Common tasks include:</p>
-<ul>
-<li>Analysing specific <strong>subgroups</strong> (e.g., women, Labour voters, young respondents).</li>
-<li><strong>Filtering</strong> the dataset to focus on relevant observations.</li>
-<li>Combining multiple <strong>conditions</strong> to answer complex questions.</li>
-</ul></li>
+<li><code>sort k03</code></li>
+<li><code>by k03: summarize e01</code></li>
+<li><code>graph hbar e01, over(k03)</code></li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="conditional-summaries-the-if-statement" class="level2">
-<h2 class="anchored" data-anchor-id="conditional-summaries-the-if-statement">Conditional summaries: The <code>if</code> statement</h2>
+<section id="case-2-your-turn" class="level2">
+<h2 class="anchored" data-anchor-id="case-2-your-turn">Case 2: Your turn</h2>
 <div class="nonincremental">
 <ul>
-<li>The <code>if</code> statement restricts commands to observations that meet a condition.</li>
-<li>Example: <code>sum Age if y09 == 1</code> calculates the mean age for women only.</li>
-<li>Open <code>transform-bes.do</code> and navigate to <strong>Part A</strong> to see more examples.</li>
+<li><strong>Variables:</strong> Socio-economic class (<code>SC</code>) and ideology (<code>e01</code>).</li>
+<li>Does ideology differ across socio-economic classes?</li>
+<li>Use the newspaper/ideology commands as a template — just swap the variables.</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="conditional-tabulations" class="level2">
-<h2 class="anchored" data-anchor-id="conditional-tabulations">Conditional tabulations</h2>
+<section id="case-3-numeric-numeric" class="level2">
+<h2 class="anchored" data-anchor-id="case-3-numeric-numeric">Case 3: Numeric + Numeric</h2>
+<ul>
+<li><strong>Tools:</strong> Scatterplot and regression line.</li>
+<li>Open <code>bivariate-lecture.do</code> and go to <strong>Case 3</strong>.</li>
+<li>This case uses the <strong>Brexit Regional dataset</strong>.</li>
+</ul>
+<hr>
+</section>
+<section id="case-3-example-import-shock-and-brexit" class="level2">
+<h2 class="anchored" data-anchor-id="case-3-example-import-shock-and-brexit">Case 3 example: Import shock and Brexit</h2>
 <div class="nonincremental">
 <ul>
-<li>The <code>if</code> statement also works with <code>tabulate</code>.</li>
-<li>Example: <code>tab b02 if edlevel &gt;= 4</code> shows vote choice among respondents with a degree or higher.</li>
-<li>This allows you to examine distributions within specific subgroups.</li>
+<li><code>twoway (scatter leave_share import_shock) (lfit leave_share import_shock)</code></li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="filtering-observations-keep-and-drop" class="level2">
-<h2 class="anchored" data-anchor-id="filtering-observations-keep-and-drop">Filtering observations: <code>keep</code> and <code>drop</code></h2>
+<section id="case-3-your-turn" class="level2">
+<h2 class="anchored" data-anchor-id="case-3-your-turn">Case 3: Your turn</h2>
 <div class="nonincremental">
 <ul>
-<li><code>keep if</code> retains only observations that meet a condition.</li>
-<li><code>drop if</code> removes observations that meet a condition.</li>
-<li>Example: <code>keep if b02 == 1</code> keeps only Labour voters.</li>
-<li>Navigate to <strong>Part B</strong> in <code>transform-bes.do</code> to see how this works.</li>
+<li><strong>Variables:</strong> Share with higher education (<code>share_high_skill</code>) and Leave vote share (<code>leave_share</code>).</li>
+<li>Do regions with more graduates vote differently on Brexit?</li>
+<li>Use the import shock commands as a template — just swap <code>import_shock</code> for <code>share_high_skill</code>.</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="combining-multiple-conditions" class="level2">
-<h2 class="anchored" data-anchor-id="combining-multiple-conditions">Combining multiple conditions</h2>
-<div class="nonincremental">
+<section id="why-this-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-matters">Why this matters</h2>
 <ul>
-<li>Use <code>&amp;</code> (and) to combine conditions.</li>
-<li>Example: <code>sum Age if e01 &gt;= 0 &amp; e01 &lt;= 3 &amp; y09 == 1</code> calculates the mean age of women with left-wing ideology.</li>
-<li>Open <strong>Part C</strong> in <code>transform-bes.do</code> to see more examples.</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="working-with-ranges" class="level2">
-<h2 class="anchored" data-anchor-id="working-with-ranges">Working with ranges</h2>
-<div class="nonincremental">
-<ul>
-<li>Use <code>&gt;=</code> and <code>&lt;=</code> to specify ranges.</li>
-<li>Example: <code>tab b02 if e01 &gt;= 4 &amp; e01 &lt;= 6</code> shows vote choice among respondents with moderate ideology.</li>
-<li>Navigate to <strong>Part D</strong> in <code>transform-bes.do</code> for additional examples.</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="your-turn-explore-conditional-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="your-turn-explore-conditional-analysis">Your turn: Explore conditional analysis</h2>
-<div class="nonincremental">
-<ul>
-<li>Open <code>transform-bes.do</code> and work through <strong>Part E</strong>.</li>
-<li>Try modifying the conditions to answer your own research questions.</li>
-<li>Use the BES codebook to explore additional variables.</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="recap" class="level2">
-<h2 class="anchored" data-anchor-id="recap">Recap</h2>
-<ul>
-<li><strong>Conditional statements</strong> allow you to analyse specific subgroups.</li>
-<li><code>keep</code> and <code>drop</code> filter your dataset to focus on relevant observations.</li>
-<li>Combining conditions with <code>&amp;</code> refines your analysis.</li>
-</ul>
-<hr>
-<p><strong>Why this matters:</strong></p>
-<ul>
-<li>Before visualising or modelling data, you often need to focus on specific subgroups or filter out irrelevant observations.</li>
-<li>These skills are essential for preparing data and answering precise research questions.</li>
+<li>Choosing the right tool depends on knowing your variable types.</li>
+<li>The do files you’ve been working with are templates for PS2.</li>
+<li>Every analysis you’ll do in this module starts with the question: <strong>what types are my variables?</strong></li>
 </ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

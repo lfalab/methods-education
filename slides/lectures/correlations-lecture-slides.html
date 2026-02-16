@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-html/tabby.min.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <title>Describing Correlations in Stata</title>
+  <meta name="author" content="Leonardo Falabella">
+  <title>Lecture 5: Describing Correlations</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -28,11 +29,11 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
-  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-f88d935cd01326925f73dc62b106448c.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -125,129 +126,193 @@
   <div class="reveal">
     <div class="slides">
 
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Lecture 5: Describing Correlations</h1>
+  <p class="subtitle">Statistics for Political Science</p>
 
-<section>
-<section id="describing-correlations-in-stata" class="title-slide slide level1 title-left center">
-<h1>Describing Correlations in Stata</h1>
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Leonardo Falabella 
+</div>
+</div>
+</div>
 
 </section>
-<section id="youll-learn-to" class="slide level2">
-<h2>You’ll learn to</h2>
+<section id="today-is-different" class="slide level2">
+<h2>Today is different</h2>
 <ul>
-<li>Generate and interpret <strong>bivariate summaries</strong> in Stata.</li>
+<li>Last week you told me you wanted <strong>less revision</strong> and <strong>more hands-on work</strong>.</li>
+<li>Today we’re skipping straight to Stata.</li>
+<li>The whole lecture is a three-part activity — one for each type of bivariate analysis.</li>
 </ul>
 </section>
-<section id="step-1-download-the-british-election-study-dataset-from-our-shared-folder" class="slide level2">
-<h2>Step 1: Download the British Election Study dataset from our shared folder</h2>
+<section id="but-first-why-does-any-of-this-matter" class="slide level2">
+<h2>But first: why does any of this matter?</h2>
 <ul>
-<li>Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a></li>
-<li>Click on <code>data-raw</code></li>
-<li>Download <code>British_Election_Study_2024.dta</code></li>
-<li>Save it into the <code>data-raw</code> folder on your computer</li>
+<li>Some of you have felt like you’re learning <strong>mechanical tasks without knowing why</strong>.</li>
+<li>That’s a fair observation — and it’s worth addressing directly.</li>
 </ul>
 </section>
-<section id="step-2-download-the-companion-do-file-for-this-activity" class="slide level2">
-<h2>Step 2: Download the companion do-file for this activity</h2>
+<section id="the-building-blocks-arent-obvious-yet" class="slide level2">
+<h2>The building blocks aren’t obvious yet</h2>
+<ul>
+<li>Generating a histogram or tabulating a single variable can feel pointless.</li>
+<li>But these are the <strong>building blocks</strong> of independent empirical analysis.</li>
+<li>Right now you’re learning to use a tool. Later, you’ll decide what to do with it.</li>
+</ul>
+</section>
+<section id="what-youre-building-toward" class="slide level2">
+<h2>What you’re building toward</h2>
+<ul>
+<li><strong>Problem Set 2</strong> asks you to analyse a dataset of your choice, with variables of your choice.</li>
+<li>You will need to identify the right tool for the right pair of variables — and execute it.</li>
+<li>Everything you’ve done so far is preparation for that.</li>
+</ul>
+</section>
+<section id="the-do-files-are-templates" class="slide level2">
+<h2>The do files are templates</h2>
+<ul>
+<li>The do files in our shared folder aren’t just course materials — they’re <strong>starting points for your own analysis</strong>.</li>
+<li>You’ve set up an identical folder structure on your computer for exactly this reason.</li>
+<li>Download a do file, update the working directory, and you have a working template.</li>
+</ul>
+</section>
+<section id="what-happens-when-you-run-a-do-file-top-to-bottom" class="slide level2">
+<h2>What happens when you run a do file top to bottom</h2>
+<ul>
+<li>Stata executes every line in sequence.</li>
+<li>Plots appear because the do file contains graph commands.</li>
+<li>This isn’t magic — it’s a <strong>reproducible record</strong> of your analysis.</li>
+<li>Today we’ll use a new do file as a template: <code>bivariate-lecture.do</code></li>
+</ul>
+</section>
+<section id="download-todays-do-file" class="slide level2">
+<h2>Download today’s do file</h2>
 <ul>
 <li>Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a></li>
 <li>Click on <code>do</code></li>
-<li>Download <code>bivariate-bes.do</code></li>
-<li>Save it into the <code>do</code> folder on your computer</li>
+<li>Download <code>bivariate-lecture.do</code></li>
+<li>Save it to your <code>do</code> folder and update the working directory</li>
 </ul>
 </section>
-<section id="step-3-insert-the-path-to-your-folder-on-your-computer" class="slide level2">
-<h2>Step 3: Insert the path to your folder on your computer</h2>
-<ul>
-<li>This line of <code>bivariate-bes.do</code> has an “address” that only works on my computer.</li>
-<li>Replace it with the “address” to your project folder on your computer.</li>
-</ul>
-
-<img data-src="../../assets/stata-replace-cd2.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-4-select-the-top-portion-of-the-do-file-and-click-execute-do" class="slide level2">
-<h2>Step 4: Select the top portion of the do file and click “execute (do)”</h2>
-
-<img data-src="../../assets/stata-select-execute2.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-5-check-if-it-has-worked-and-save-your-do-file" class="slide level2">
-<h2>Step 5: Check if it has worked and save your do-file</h2>
-<ul>
-<li>If you see this on the top-right pane of your Stata screen, it has worked!</li>
-<li>Be sure to <strong>save your do-file</strong> in your <code>do</code> folder.</li>
-</ul>
-
-<img data-src="../../assets/stata-bes-variables.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="what-is-bivariate-analysis" class="slide level2">
-<h2>What is bivariate analysis?</h2>
-<ul>
-<li><strong>Univariate</strong> analysis describes one variable at a time.</li>
-<li><strong>Bivariate</strong> analysis describes relationships between <strong>two variables</strong>.</li>
-<li>The appropriate tool depends on the <strong>types of variables</strong> being analysed.</li>
-<li>Open <code>bivariate-bes.do</code> to see examples of all three cases.</li>
-</ul>
+<section id="three-cases-three-parts" class="slide level2">
+<h2>Three cases, three parts</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 56%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Case</th>
+<th>Variable 1</th>
+<th>Variable 2</th>
+<th>Tools</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Nominal</td>
+<td>Nominal</td>
+<td>Cross-tabulation, bivariate bar chart</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Nominal</td>
+<td>Numeric</td>
+<td>Compare means, bar chart of means</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Numeric</td>
+<td>Numeric</td>
+<td>Scatterplot, regression line</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="case-1-nominal-nominal" class="slide level2">
 <h2>Case 1: Nominal + Nominal</h2>
 <ul>
-<li><strong>Example:</strong> Gender and vote choice.</li>
 <li><strong>Tools:</strong> Cross-tabulation and bivariate bar chart.</li>
-<li>Use <code>tabulate</code> with <code>column</code> option for percentages.</li>
-<li>Use <code>catplot</code> with <code>asyvars</code> option for grouped bar charts.</li>
+<li>Open <code>bivariate-lecture.do</code> and go to <strong>Case 1</strong>.</li>
+</ul>
+</section>
+<section id="case-1-example-gender-and-vote-choice" class="slide level2">
+<h2>Case 1 example: Gender and vote choice</h2>
+<ul>
+<li><code>tabulate b02 y09, column nofreq</code></li>
+<li><code>graph hbar (count), over(y09) over(b02) asyvars</code></li>
+</ul>
+</section>
+<section id="case-1-your-turn" class="slide level2">
+<h2>Case 1: Your turn</h2>
+<ul>
+<li><strong>Variables:</strong> Gender (<code>y09</code>) and interest in politics (<code>a03</code>).</li>
+<li>Clean <code>a03</code>: <code>replace a03 = . if a03 &lt; 0</code></li>
+<li>Create a cross-tabulation and a bivariate chart.</li>
+<li>Use the gender/vote choice commands as templates.</li>
 </ul>
 </section>
 <section id="case-2-nominal-numeric" class="slide level2">
 <h2>Case 2: Nominal + Numeric</h2>
 <ul>
-<li><strong>Example:</strong> Newspaper readership and ideology.</li>
 <li><strong>Tools:</strong> Compare means and bar chart of means.</li>
-<li>Use <code>by</code>: <code>summarize</code> to calculate group means.</li>
-<li>Use <code>graph hbar</code> with <code>over()</code> to visualise differences.</li>
+<li>Open <code>bivariate-lecture.do</code> and go to <strong>Case 2</strong>.</li>
+</ul>
+</section>
+<section id="case-2-example-newspaper-readership-and-ideology" class="slide level2">
+<h2>Case 2 example: Newspaper readership and ideology</h2>
+<ul>
+<li><code>sort k03</code></li>
+<li><code>by k03: summarize e01</code></li>
+<li><code>graph hbar e01, over(k03)</code></li>
+</ul>
+</section>
+<section id="case-2-your-turn" class="slide level2">
+<h2>Case 2: Your turn</h2>
+<ul>
+<li><strong>Variables:</strong> Socio-economic class (<code>SC</code>) and ideology (<code>e01</code>).</li>
+<li>Does ideology differ across socio-economic classes?</li>
+<li>Use the newspaper/ideology commands as a template — just swap the variables.</li>
 </ul>
 </section>
 <section id="case-3-numeric-numeric" class="slide level2">
 <h2>Case 3: Numeric + Numeric</h2>
 <ul>
-<li><strong>Example:</strong> Import shock and Brexit vote share.</li>
 <li><strong>Tools:</strong> Scatterplot and regression line.</li>
-<li>Use <code>twoway (scatter)</code> to plot individual observations.</li>
-<li>Add <code>(lfit)</code> to overlay the regression line.</li>
+<li>Open <code>bivariate-lecture.do</code> and go to <strong>Case 3</strong>.</li>
+<li>This case uses the <strong>Brexit Regional dataset</strong>.</li>
 </ul>
 </section>
-<section id="interpreting-scatterplots-and-regression-lines" class="slide level2">
-<h2>Interpreting scatterplots and regression lines</h2>
+<section id="case-3-example-import-shock-and-brexit" class="slide level2">
+<h2>Case 3 example: Import shock and Brexit</h2>
 <ul>
-<li>The <strong>scatterplot</strong> shows individual data points.</li>
-<li>The <strong>regression line</strong> summarises the overall pattern.</li>
-<li><strong>Direction:</strong> Upward slope = positive association; downward slope = negative association.</li>
-<li><strong>Strength:</strong> Points clustered near the line = strong; widely scattered = weak.</li>
+<li><code>twoway (scatter leave_share import_shock) (lfit leave_share import_shock)</code></li>
 </ul>
 </section>
-<section id="your-turn-explore-bivariate-relationships" class="slide level2">
-<h2>Your turn: Explore bivariate relationships</h2>
+<section id="case-3-your-turn" class="slide level2">
+<h2>Case 3: Your turn</h2>
 <ul>
-<li>Open <code>bivariate-bes.do</code> and work through all three cases.</li>
-<li>Download <code>bivariate-brexit.do</code> for additional scatterplot examples.</li>
-<li>Use the BES and Brexit codebooks to explore other variables.</li>
-<li>Try modifying the commands to answer your own research questions.</li>
+<li><strong>Variables:</strong> Share with higher education (<code>share_high_skill</code>) and Leave vote share (<code>leave_share</code>).</li>
+<li>Do regions with more graduates vote differently on Brexit?</li>
+<li>Use the import shock commands as a template — just swap <code>import_shock</code> for <code>share_high_skill</code>.</li>
 </ul>
 </section>
-<section id="recap" class="slide level2">
-<h2>Recap</h2>
+<section id="why-this-matters" class="slide level2">
+<h2>Why this matters</h2>
 <ul>
-<li><strong>Cross-tabulations</strong> and <strong>grouped bar charts</strong> describe associations between nominal variables.</li>
-<li><strong>Bar charts of means</strong> summarise differences in a numeric variable across categories.</li>
-<li><strong>Scatterplots</strong> and <strong>regression lines</strong> summarise relationships between two numeric variables.</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<p><strong>Why this matters:</strong></p>
-<ul>
-<li>Describing relationships between variables is the foundation for asking why those relationships exist.</li>
-<li>Choosing the wrong tool for the wrong variable types produces meaningless or misleading output.</li>
-<li>These skills are essential for interpreting bivariate analyses in research papers, reports, and public debate.</li>
+<li>Choosing the right tool depends on knowing your variable types.</li>
+<li>The do files you’ve been working with are templates for PS2.</li>
+<li>Every analysis you’ll do in this module starts with the question: <strong>what types are my variables?</strong></li>
 </ul>
 
 
-</section></section>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -256,19 +321,19 @@
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
-  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -304,7 +369,7 @@
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
