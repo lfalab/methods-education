@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Leonardo Falabella">
 
-<title>Dependent and Independent Variables</title>
+<title>Describing Correlations: Bivariate Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +24,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-a35d343c8bdbcb87d3b82ed68e48a46c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-30ae6b2e5328ac7375bd033934d6d19c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -81,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/empirical-vs-normative.html">Week 2: Research Questions, Theories, and Hypotheses</a></li><li class="breadcrumb-item"><a href="../../slides/videos-concepts/dependent-independent-variables.html">Dependent and Independent Variables</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Describing Correlations: Bivariate Analysis</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -95,7 +96,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="../../index.html" class="sidebar-logo-link">
+      <a href="../index.html" class="sidebar-logo-link">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -107,7 +108,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Statistics for Political Science</span></a>
   </div>
 </li>
@@ -122,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/lectures/thinking-with-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/lectures/thinking-with-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 1: Thinking With Data</span></a>
   </div>
 </li>
@@ -139,37 +140,37 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/empirical-vs-normative.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/empirical-vs-normative.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Normative and Empirical Questions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/descriptive-vs-causal.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/descriptive-vs-causal.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Descriptive and Causal Questions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/units-theories-hypotheses.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/units-theories-hypotheses.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Units of Analysis, Theories, and Hypotheses</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/dependent-independent-variables.html" class="sidebar-item-text sidebar-link active">
+  <a href="../slides/videos-concepts/dependent-independent-variables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dependent and Independent Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/doing-reproducible-research.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/doing-reproducible-research.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Doing Reproducible Research</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/lectures/questions-theories-hypotheses.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/lectures/questions-theories-hypotheses.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 2: Research Questions, Theories, and Hypotheses</span></a>
   </div>
 </li>
@@ -186,37 +187,37 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/measuring-variables.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/measuring-variables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Measuring Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/types-of-variables.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/types-of-variables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Types of Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/datasets-codebooks.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/datasets-codebooks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Datasets and Codebooks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/stata-interface.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/stata-interface.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The Stata Interface</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/loading-browsing-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/loading-browsing-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Loading and Browsing Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/lectures/measurement-lecture.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/lectures/measurement-lecture.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 3: Measurement and Types of Variables</span></a>
   </div>
 </li>
@@ -233,43 +234,43 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/summarising-distribution.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/summarising-distribution.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Summarising a Distribution</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/variance-sd.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/variance-sd.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Variance and Standard Deviation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/bar-histograms.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/bar-histograms.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bar Charts and Histograms</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/summary-stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/summary-stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Summarising Distributions in Stata</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/bar-hist-stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/bar-hist-stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bar Charts and Histograms in Stata</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/lectures/distributions-lecture.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/lectures/distributions-lecture.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 4: Describing Distributions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/A04-distributions-activity.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/A04-distributions-activity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Mock Exam Questions: Describing Distributions</span></a>
   </div>
 </li>
@@ -286,50 +287,50 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/correlations-nominal.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/correlations-nominal.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Correlations Between Nominal Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/comparing-means.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/comparing-means.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Comparing Means by Category</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/scatter-reg.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/scatter-reg.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Scatterplots and Regression Lines</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/types-plots-tables.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/types-plots-tables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">From Variable Types to Plots and Tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/corr-stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/corr-stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Describing Correlations in Stata</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/transform-stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/transform-stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data Transformations in Stata</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/lectures/correlations-lecture.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/lectures/correlations-lecture.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 5: Describing Correlations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/A05-correlations-activity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Seminar Activity: Country-level Correlations</span></a>
+  <a href="../activities/A05-correlations-activity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Describing Correlations: Bivariate Analysis</span></a>
   </div>
 </li>
       </ul>
@@ -343,162 +344,271 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
-  <ul>
-  <li><a href="#dependent-and-independent-variables" id="toc-dependent-and-independent-variables" class="nav-link active" data-scroll-target="#dependent-and-independent-variables">Dependent and Independent Variables</a>
   <ul class="collapse">
-  <li><a href="#youll-learn-to" id="toc-youll-learn-to" class="nav-link" data-scroll-target="#youll-learn-to">You’ll learn to</a></li>
-  <li><a href="#example-1-health-care-systems-and-policy-responses" id="toc-example-1-health-care-systems-and-policy-responses" class="nav-link" data-scroll-target="#example-1-health-care-systems-and-policy-responses">Example 1: Health care systems and policy responses</a></li>
-  <li><a href="#example-1-health-care-systems-and-policy-responses-1" id="toc-example-1-health-care-systems-and-policy-responses-1" class="nav-link" data-scroll-target="#example-1-health-care-systems-and-policy-responses-1">Example 1: Health care systems and policy responses</a></li>
-  <li><a href="#example-1-health-care-systems-and-policy-responses-2" id="toc-example-1-health-care-systems-and-policy-responses-2" class="nav-link" data-scroll-target="#example-1-health-care-systems-and-policy-responses-2">Example 1: Health care systems and policy responses</a></li>
-  <li><a href="#example-1-health-care-systems-and-policy-responses-3" id="toc-example-1-health-care-systems-and-policy-responses-3" class="nav-link" data-scroll-target="#example-1-health-care-systems-and-policy-responses-3">Example 1: Health care systems and policy responses</a></li>
-  <li><a href="#example-2-economic-conditions-and-electoral-outcomes" id="toc-example-2-economic-conditions-and-electoral-outcomes" class="nav-link" data-scroll-target="#example-2-economic-conditions-and-electoral-outcomes">Example 2: Economic conditions and electoral outcomes</a></li>
-  <li><a href="#example-2-economic-conditions-and-electoral-outcomes-1" id="toc-example-2-economic-conditions-and-electoral-outcomes-1" class="nav-link" data-scroll-target="#example-2-economic-conditions-and-electoral-outcomes-1">Example 2: Economic conditions and electoral outcomes</a></li>
-  <li><a href="#example-2-economic-conditions-and-electoral-outcomes-2" id="toc-example-2-economic-conditions-and-electoral-outcomes-2" class="nav-link" data-scroll-target="#example-2-economic-conditions-and-electoral-outcomes-2">Example 2: Economic conditions and electoral outcomes</a></li>
-  <li><a href="#recap" id="toc-recap" class="nav-link" data-scroll-target="#recap">Recap</a></li>
-  </ul></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#the-seven-variable-pairs" id="toc-the-seven-variable-pairs" class="nav-link" data-scroll-target="#the-seven-variable-pairs">The Seven Variable Pairs</a></li>
+  <li><a href="#hour-1-conceptual-mapping" id="toc-hour-1-conceptual-mapping" class="nav-link" data-scroll-target="#hour-1-conceptual-mapping">Hour 1: Conceptual Mapping</a></li>
+  <li><a href="#hour-2-stata-implementation" id="toc-hour-2-stata-implementation" class="nav-link" data-scroll-target="#hour-2-stata-implementation">Hour 2: Stata Implementation</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">Reflection</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="dependent-independent-variables-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/empirical-vs-normative.html">Week 2: Research Questions, Theories, and Hypotheses</a></li><li class="breadcrumb-item"><a href="../../slides/videos-concepts/dependent-independent-variables.html">Dependent and Independent Variables</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Describing Correlations: Bivariate Analysis</h1>
+<p class="subtitle lead">Statistics for Political Science — Week 5</p>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="dependent-and-independent-variables" class="level1 title-left">
-<h1 class="title-left">Dependent and Independent Variables</h1>
-<p><a href="https://youtu.be/j-R8ef5mPtQ">Watch on YouTube</a></p>
-<hr>
-<section id="youll-learn-to" class="level2">
-<h2 class="anchored" data-anchor-id="youll-learn-to">You’ll learn to</h2>
-<div class="presenter-space">
-<ul>
-<li>Distinguish the <strong>dependent</strong> and <strong>independent</strong> variables in causal hypothesis.</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="example-1-health-care-systems-and-policy-responses" class="level2">
-<h2 class="anchored" data-anchor-id="example-1-health-care-systems-and-policy-responses">Example 1: Health care systems and policy responses</h2>
-<div class="presenter-space">
-<ul>
-<li><p><strong>Research question:</strong></p>
-<ul>
-<li>How did countries’ health care systems affect their abilities to mitigate the impact of the Covid-19 pandemic?</li>
-</ul></li>
-<li><p><strong>Theory:</strong></p>
-<ul>
-<li>Countries with public health care systems took advantage of their centralised bureaucracies to implement more effective policy responses.</li>
-</ul></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="example-1-health-care-systems-and-policy-responses-1" class="level2">
-<h2 class="anchored" data-anchor-id="example-1-health-care-systems-and-policy-responses-1">Example 1: Health care systems and policy responses</h2>
-<div class="presenter-space">
-<ul>
-<li><p><strong>Hypothesis:</strong></p>
-<ul>
-<li>Countries with public health care systems had lower Covid death rates than countries with private health care systems.</li>
-</ul></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="example-1-health-care-systems-and-policy-responses-2" class="level2">
-<h2 class="anchored" data-anchor-id="example-1-health-care-systems-and-policy-responses-2">Example 1: Health care systems and policy responses</h2>
-<div class="presenter-space">
-<ul>
-<li><p>The unit of analysis is the <strong>country</strong>.</p></li>
-<li><p>Countries differ in a lot <strong>characteristics</strong>: population, GDP per capita, land mass…</p>
-<ul>
-<li>These characteristics are what we call <em>variables</em>.</li>
-</ul></li>
-<li><p>In this study, <strong>two variables</strong> take center place:</p>
-<ul>
-<li>Health care system type (public v. private).</li>
-<li>Covid death rate (a numeric quantity).</li>
-</ul></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="example-1-health-care-systems-and-policy-responses-3" class="level2">
-<h2 class="anchored" data-anchor-id="example-1-health-care-systems-and-policy-responses-3">Example 1: Health care systems and policy responses</h2>
-<div class="presenter-space">
-<ul>
-<li><p>The Covid death rate is the <strong>dependent</strong> variable.</p>
-<ul>
-<li>The <em>outcome</em> of our study.</li>
-</ul></li>
-<li><p>The health care system type is the <strong>independent</strong> variable.</p>
-<ul>
-<li>The variable <em>driving</em> the change.</li>
-</ul></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="example-2-economic-conditions-and-electoral-outcomes" class="level2">
-<h2 class="anchored" data-anchor-id="example-2-economic-conditions-and-electoral-outcomes">Example 2: Economic conditions and electoral outcomes</h2>
-<div class="presenter-space">
-<ul>
-<li><p><strong>Research question:</strong></p>
-<ul>
-<li>Do economic recessions increase support for populist parties?</li>
-</ul></li>
-<li><p><strong>Theory:</strong></p>
-<ul>
-<li>Economic recessions increase resentment against democratic institutions and therefore make the rhetoric of populist parties more appealing.</li>
-</ul></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="example-2-economic-conditions-and-electoral-outcomes-1" class="level2">
-<h2 class="anchored" data-anchor-id="example-2-economic-conditions-and-electoral-outcomes-1">Example 2: Economic conditions and electoral outcomes</h2>
-<div class="presenter-space">
-<ul>
-<li><p><strong>Hypothesis:</strong></p>
-<ul>
-<li>Elections held in recession years display higher vote shares for populist parties than elections in non-recession years.</li>
-</ul></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="example-2-economic-conditions-and-electoral-outcomes-2" class="level2">
-<h2 class="anchored" data-anchor-id="example-2-economic-conditions-and-electoral-outcomes-2">Example 2: Economic conditions and electoral outcomes</h2>
-<div class="presenter-space">
-<ul>
-<li><p>The unit of analysis is the <strong>election.</strong></p></li>
-<li><p>The dependent variable is the <strong>vote share for populist parties</strong>.</p></li>
-<li><p>The independent variable is <strong>economic growth rate</strong> in the election year.</p></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="recap" class="level2">
-<h2 class="anchored" data-anchor-id="recap">Recap</h2>
-<div class="presenter-space">
-<ul>
-<li><strong>Variables</strong> are characteristics of the units in our study.</li>
-<li>The <strong>dependent</strong> variable is the outcome of our study. It is affected by the independent variable.</li>
-<li>The <strong>independent</strong> variable is what’s driving the change. It affects the dependent variable.</li>
-</ul>
-</div>
-<hr>
-<div class="presenter-space">
-<p><strong>Why this matters:</strong></p>
-<ul>
-<li>Dependent and independent variables are the building blocks of causal research.</li>
-<li>Causal research designs and statistical tests hinge on properly identifying them.</li>
-</ul>
-</div>
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Leonardo Falabella </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
 
 
+</header>
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>This seminar has two parts. In the first hour, you will work through a set of variable pairs conceptually — identifying variable types, deciding which analytical case applies, and choosing the appropriate tool — without touching Stata. In the second hour, you will implement your choices in Stata and interpret the output.</p>
+<p>Work through each part in order. Discuss your answers with your group before moving on.</p>
+<p>The dataset for all exercises is the Quality of Government (QoG) Basic Cross-Section dataset (<code>qog_bas_cs_jan26.dta</code>). Refer to the QoG codebook if you need more detail about any variable.</p>
+<hr>
 </section>
+<section id="the-seven-variable-pairs" class="level2">
+<h2 class="anchored" data-anchor-id="the-seven-variable-pairs">The Seven Variable Pairs</h2>
+<p>Below are seven pairs of variables drawn from the QoG dataset. Each pair is accompanied by a brief description of how each variable is measured and a research question that motivates the analysis. Read through all seven pairs before beginning Hour 1.</p>
+<hr>
+<section id="pair-1" class="level3">
+<h3 class="anchored" data-anchor-id="pair-1">Pair 1</h3>
+<p><strong>Variables:</strong> <code>gol_est</code> and <code>ideavt_legvt</code></p>
+<ul>
+<li><strong><code>gol_est</code></strong> — Electoral system type (Bormann and Golder). A categorical variable with three values: 1 = Majoritarian, 2 = Proportional, 3 = Mixed.</li>
+<li><strong><code>ideavt_legvt</code></strong> — Parliamentary election voter turnout (Institute for Democracy and Electoral Assistance). The percentage of the voting-age population that cast a vote in the most recent parliamentary election (0–100).</li>
+</ul>
+<p><strong>Research question:</strong> Do countries with different electoral systems differ in their average levels of voter turnout?</p>
+<hr>
+</section>
+<section id="pair-2" class="level3">
+<h3 class="anchored" data-anchor-id="pair-2">Pair 2</h3>
+<p><strong>Variables:</strong> <code>wdi_gini</code> and <code>ti_cpi</code></p>
+<ul>
+<li><strong><code>wdi_gini</code></strong> — Gini index (World Bank). A continuous variable measuring income inequality within a country, ranging from 0 (perfect equality) to 100 (perfect inequality). Higher values indicate more inequality.</li>
+<li><strong><code>ti_cpi</code></strong> — Corruption Perceptions Index (Transparency International). A continuous variable ranging from 0 (highly corrupt) to 100 (highly clean), measuring perceptions of public sector corruption as seen by business people, risk analysts, and the general public.</li>
+</ul>
+<p><strong>Research question:</strong> Do more unequal countries tend to have higher levels of perceived corruption?</p>
+<hr>
+</section>
+<section id="pair-3" class="level3">
+<h3 class="anchored" data-anchor-id="pair-3">Pair 3</h3>
+<p><strong>Variables:</strong> <code>bmr_dem</code> and <code>ht_colonial</code></p>
+<ul>
+<li><strong><code>bmr_dem</code></strong> — Dichotomous democracy measure (Boix, Miller, and Rosato). This is a <strong>binary</strong> variable: 0 = not a democracy, 1 = democracy. Countries are coded as democratic if political leaders are chosen through free and fair elections and a minimum suffrage threshold is met. It does not measure degree of democracy.</li>
+<li><strong><code>ht_colonial</code></strong> — Colonial origin. A categorical variable recording the country’s former Western overseas colonial ruler (e.g.&nbsp;British, French, Spanish, Portuguese, Belgian). Countries that were never colonised by a Western overseas power are coded 0.</li>
+</ul>
+<p><strong>Research question:</strong> Do countries with different colonial histories differ in their likelihood of being democratic today?</p>
+<hr>
+</section>
+<section id="pair-4" class="level3">
+<h3 class="anchored" data-anchor-id="pair-4">Pair 4</h3>
+<p><strong>Variables:</strong> <code>wdi_internet</code> and <code>rsf_pfi</code></p>
+<ul>
+<li><strong><code>wdi_internet</code></strong> — Individuals using the internet (World Bank). The percentage of the population with internet access (0–100).</li>
+<li><strong><code>rsf_pfi</code></strong> — Press Freedom Index (Reporters Without Borders). A continuous variable measuring the degree of freedom available to journalists and media organisations in each country. <strong>Higher scores indicate more press freedom.</strong></li>
+</ul>
+<p><strong>Research question:</strong> Do countries with higher internet usage tend to have greater press freedom?</p>
+<hr>
+</section>
+<section id="pair-5" class="level3">
+<h3 class="anchored" data-anchor-id="pair-5">Pair 5</h3>
+<p><strong>Variables:</strong> <code>ht_colonial</code> and <code>ti_cpi</code></p>
+<ul>
+<li><strong><code>ht_colonial</code></strong> — Colonial origin. See Pair 3 for the full description.</li>
+<li><strong><code>ti_cpi</code></strong> — Corruption Perceptions Index. See Pair 2 for the full description.</li>
+</ul>
+<p><strong>Research question:</strong> Do countries with different colonial histories differ in their average levels of perceived corruption today?</p>
+<hr>
+</section>
+<section id="pair-6" class="level3">
+<h3 class="anchored" data-anchor-id="pair-6">Pair 6</h3>
+<p><strong>Variables:</strong> <code>gol_est</code> and <code>ht_region</code></p>
+<ul>
+<li><strong><code>gol_est</code></strong> — Electoral system type. See Pair 1 for the full description.</li>
+<li><strong><code>ht_region</code></strong> — Region of the world. A categorical variable classifying countries into ten politico-geographic regions, including Eastern Europe and post-Soviet Union, Latin America, North Africa and the Middle East, Sub-Saharan Africa, Western Europe and North America, East Asia, South-East Asia, South Asia, the Pacific, and the Caribbean.</li>
+</ul>
+<p><strong>Research question:</strong> Do countries in different world regions tend to use different electoral systems?</p>
+<hr>
+</section>
+<section id="pair-7" class="level3">
+<h3 class="anchored" data-anchor-id="pair-7">Pair 7</h3>
+<p><strong>Variables:</strong> <code>wdi_gini</code> and <code>wdi_wip</code></p>
+<ul>
+<li><strong><code>wdi_gini</code></strong> — Gini index. See Pair 2 for the full description.</li>
+<li><strong><code>wdi_wip</code></strong> — Proportion of seats held by women in national parliaments (World Bank). A continuous variable measured as a percentage (0–100).</li>
+</ul>
+<p><strong>Research question:</strong> Do more unequal countries tend to have lower levels of women’s representation in parliament?</p>
+<hr>
+</section>
+</section>
+<section id="hour-1-conceptual-mapping" class="level2">
+<h2 class="anchored" data-anchor-id="hour-1-conceptual-mapping">Hour 1: Conceptual Mapping</h2>
+<p>In this hour, you will work through the seven pairs conceptually. <strong>Do not open Stata.</strong> For each pair, answer the three questions below by discussing with your group and writing down your answers.</p>
+<p>For <strong>each of the seven pairs</strong>, answer:</p>
+<p><strong>Question A: What type is each variable?</strong></p>
+<p>Decide whether each variable is nominal (unordered categories), ordinal (ordered categories), or numeric (interval or ratio). Pay close attention to how the variable is measured — a variable coded as numbers is not necessarily numeric. Refer to the descriptions above and the codebook if needed.</p>
+<p><strong>Question B: Which analytical case applies?</strong></p>
+<p>Based on the variable types, determine which case this pair belongs to:</p>
+<ul>
+<li><strong>Case 1:</strong> Both variables are nominal → cross-tabulation and bivariate bar chart</li>
+<li><strong>Case 2:</strong> One nominal, one numeric → compare means and bar chart of means</li>
+<li><strong>Case 3:</strong> Both numeric → scatterplot and regression line</li>
+</ul>
+<p><strong>Question C: What is the appropriate tool?</strong></p>
+<p>State the specific plot or table you would use. If the case calls for more than one tool, list both.</p>
+<hr>
+<p>Once your group has worked through all seven pairs, be ready to discuss your answers. Pay particular attention to any pairs where you were uncertain — these are worth discussing carefully before moving to Hour 2.</p>
+<hr>
+</section>
+<section id="hour-2-stata-implementation" class="level2">
+<h2 class="anchored" data-anchor-id="hour-2-stata-implementation">Hour 2: Stata Implementation</h2>
+<p>In this hour, you will implement the tools you identified in Hour 1 and interpret the output. Work through the pairs in order, using <code>bivariate-lecture.do</code> as a reference for command syntax. For each pair, there are two steps: <strong>execute</strong> and <strong>interpret</strong>.</p>
+<hr>
+<section id="pair-1-gol_est-and-ideavt_legvt" class="level3">
+<h3 class="anchored" data-anchor-id="pair-1-gol_est-and-ideavt_legvt">Pair 1 — <code>gol_est</code> and <code>ideavt_legvt</code></h3>
+<p><strong>Execute:</strong> Produce the appropriate summary table and chart.</p>
+<p><strong>Interpret:</strong></p>
+<ul>
+<li>Which electoral system is associated with the highest average turnout? Which with the lowest?</li>
+<li>Is the difference between systems substantively meaningful, or are the means fairly similar?</li>
+<li>Why might the choice of electoral system be associated with turnout? Think about how different systems create incentives for parties to mobilise voters.</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Hint:</strong> A difference of a few percentage points in turnout can be politically significant at the national level, even if it looks modest in a chart.</p>
+</blockquote>
+<hr>
+</section>
+<section id="pair-2-wdi_gini-and-ti_cpi" class="level3">
+<h3 class="anchored" data-anchor-id="pair-2-wdi_gini-and-ti_cpi">Pair 2 — <code>wdi_gini</code> and <code>ti_cpi</code></h3>
+<p><strong>Execute:</strong> Produce the appropriate chart, including a regression line.</p>
+<p><strong>Interpret:</strong></p>
+<ul>
+<li>What is the direction of the association? Does a higher Gini index tend to be associated with higher or lower corruption scores?</li>
+<li>Before interpreting the slope, make sure you have the scale direction of <code>ti_cpi</code> clearly in mind: a higher score means <em>less</em> corruption, not more. What does this imply about the slope you expect to see?</li>
+<li>Is the relationship strong (points clustered near the line) or weak (widely scattered)?</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Hint:</strong> Getting the scale direction of <code>ti_cpi</code> right is essential for interpreting the slope correctly. Confirm which end of the scale represents more corruption before drawing conclusions.</p>
+</blockquote>
+<hr>
+</section>
+<section id="pair-3-bmr_dem-and-ht_colonial" class="level3">
+<h3 class="anchored" data-anchor-id="pair-3-bmr_dem-and-ht_colonial">Pair 3 — <code>bmr_dem</code> and <code>ht_colonial</code></h3>
+<p><strong>Execute:</strong> Produce the appropriate table and chart. When producing the table, run it with both row percentages and column percentages.</p>
+<p><strong>Interpret:</strong></p>
+<ul>
+<li>Compare the row percentage output and the column percentage output. What does each tell you? Which is more useful for answering the research question, and why?</li>
+<li>Are some colonial origins more strongly associated with democratic status than others? Which patterns stand out?</li>
+<li>What might explain the variation? Consider what else differs across countries with different colonial histories, such as institutional legacies or levels of development.</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Hint:</strong> Row percentages show the distribution of one variable within each category of the other. Switching between row and column orientations reveals different aspects of the same association — think carefully about which question each answers.</p>
+</blockquote>
+<hr>
+</section>
+<section id="pair-4-wdi_internet-and-rsf_pfi" class="level3">
+<h3 class="anchored" data-anchor-id="pair-4-wdi_internet-and-rsf_pfi">Pair 4 — <code>wdi_internet</code> and <code>rsf_pfi</code></h3>
+<p><strong>Execute:</strong> Produce the appropriate chart, including a regression line.</p>
+<p><strong>Interpret:</strong></p>
+<ul>
+<li>Is there a positive association, a negative association, or no clear pattern?</li>
+<li>Remember that higher <code>rsf_pfi</code> scores indicate <em>more</em> press freedom. If the slope is positive, what does that mean substantively?</li>
+<li>Internet access and press freedom could be related in multiple ways — higher access may reflect or enable more open media environments, or both could be driven by a third factor such as economic development or regime type. What do you think the scatterplot is capturing?</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Hint:</strong> Make sure you have the direction of the <code>rsf_pfi</code> scale clear before interpreting the slope. A positive slope here has a specific substantive meaning that depends on understanding what higher values represent.</p>
+</blockquote>
+<hr>
+</section>
+<section id="pair-5-ht_colonial-and-ti_cpi" class="level3">
+<h3 class="anchored" data-anchor-id="pair-5-ht_colonial-and-ti_cpi">Pair 5 — <code>ht_colonial</code> and <code>ti_cpi</code></h3>
+<p><strong>Execute:</strong> Produce the appropriate summary table and chart.</p>
+<p><strong>Interpret:</strong></p>
+<ul>
+<li>Which colonial-origin groups have the highest and lowest average corruption scores? Are the differences large or small?</li>
+<li>Are there any groups represented by very few countries? How might this affect the reliability of the group mean?</li>
+<li>Compare your findings here with Pair 2, which also involves <code>ti_cpi</code>. Both pairs ask about correlates of corruption, but use a different variable as the grouping factor. What does the comparison suggest about the sources of variation in corruption perceptions?</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Hint:</strong> The bar chart of means lets you compare average corruption scores across colonial-origin categories at a glance. Look for categories with notably higher or lower means, and keep in mind that fewer countries in a category makes the average less reliable.</p>
+</blockquote>
+<hr>
+</section>
+<section id="pair-6-gol_est-and-ht_region" class="level3">
+<h3 class="anchored" data-anchor-id="pair-6-gol_est-and-ht_region">Pair 6 — <code>gol_est</code> and <code>ht_region</code></h3>
+<p><strong>Execute:</strong> Produce the appropriate table and chart.</p>
+<p><strong>Interpret:</strong></p>
+<ul>
+<li>Does electoral system type appear to be evenly distributed across regions, or does it cluster? Are there regions where one system type clearly dominates?</li>
+<li>Are there any regions where data are sparse or missing? What might this imply?</li>
+<li>Why might the choice of electoral system vary across world regions? Think about historical legacies, colonial influences, and the regional diffusion of institutional models.</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Hint:</strong> A bivariate chart will make regional patterns easier to see than a table alone. Look for categories that are heavily concentrated in one region or largely absent from another.</p>
+</blockquote>
+<hr>
+</section>
+<section id="pair-7-wdi_gini-and-wdi_wip" class="level3">
+<h3 class="anchored" data-anchor-id="pair-7-wdi_gini-and-wdi_wip">Pair 7 — <code>wdi_gini</code> and <code>wdi_wip</code></h3>
+<p><strong>Execute:</strong> Produce the appropriate chart, including a regression line.</p>
+<p><strong>Interpret:</strong></p>
+<ul>
+<li>What does the slope of the regression line tell you about the direction of the relationship? Is a higher Gini index associated with more or fewer women in parliament?</li>
+<li>Is the relationship strong or weak? How are the points distributed around the regression line?</li>
+<li>Compare this with Pair 2, which also uses <code>wdi_gini</code>. Both pair inequality with a political outcome. Are the patterns similar or different? What might this suggest?</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Hint:</strong> Pay attention to both the direction of the regression line and how tightly the points cluster around it. A flat or nearly flat line suggests little association, even if the slope is not exactly zero.</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="reflection" class="level2">
+<h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
+<p>After completing both hours, discuss the following with your group:</p>
+<ol type="1">
+<li>Were there any pairs in Hour 1 where your group disagreed about the variable type or the appropriate case? What resolved the disagreement?</li>
+<li>In the cross-tabulation exercises, how did switching between row and column percentages change what you could see? When is each orientation more informative?</li>
+<li>Across the scatterplot exercises, how did you judge whether a relationship was strong or weak? What features of the plot did you rely on?</li>
+<li>Several pairs share variables across exercises — <code>ti_cpi</code> appears in Pairs 2 and 5, and <code>wdi_gini</code> appears in Pairs 2 and 7. What does comparing those results tell you about the sources of variation in corruption and inequality across countries?</li>
+</ol>
+<hr>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>In this activity, you have:</p>
+<ul>
+<li>Identified variable types and matched them to the appropriate bivariate analytical tool.</li>
+<li>Produced and interpreted cross-tabulations, bar charts of means, and scatterplots with regression lines.</li>
+<li>Connected descriptive patterns in data to theoretical arguments in political science.</li>
+</ul>
+<p>These skills form the foundation for the independent empirical analysis you will carry out in Problem Set 2.</p>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -575,7 +685,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/lfalab\.github\.io\/methods-education\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
