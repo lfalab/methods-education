@@ -386,7 +386,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>This seminar has two parts. In the first hour, you will work through a set of variable pairs conceptually — identifying variable types, deciding which analytical case applies, and choosing the appropriate tool — without touching Stata. In the second hour, you will implement your choices in Stata and interpret the output.</p>
 <p>Work through each part in order. Discuss your answers with your group before moving on.</p>
-<p>The dataset for all exercises is the Quality of Government (QoG) dataset. Refer to the QoG codebook if you need more detail about any variable.</p>
+<p>The dataset for all exercises is the Quality of Government (QoG) dataset (available in our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a>). Refer to the QoG codebook if you need more detail about any variable.</p>
 <hr>
 </section>
 <section id="the-seven-variable-pairs" class="level2">
@@ -397,7 +397,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="pair-1">Pair 1</h3>
 <p><strong>Variables:</strong> <code>gol_est</code> and <code>ideavt_legvt</code></p>
 <ul>
-<li><strong><code>gol_est</code></strong> — Electoral system type (Bormann and Golder). A categorical variable with three values: 1 = Majoritarian, 2 = Proportional, 3 = Mixed.</li>
+<li><strong><code>gol_est</code></strong> — Electoral system type (Bormann and Golder). Values: 1 = Majoritarian, 2 = Proportional, 3 = Mixed.</li>
 <li><strong><code>ideavt_legvt</code></strong> — Parliamentary election voter turnout (Institute for Democracy and Electoral Assistance). The percentage of the voting-age population that cast a vote in the most recent parliamentary election (0–100).</li>
 </ul>
 <p><strong>Research question:</strong> Do countries with different electoral systems differ in their average levels of voter turnout?</p>
@@ -407,7 +407,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="pair-2">Pair 2</h3>
 <p><strong>Variables:</strong> <code>wdi_gini</code> and <code>ti_cpi</code></p>
 <ul>
-<li><strong><code>wdi_gini</code></strong> — Gini index (World Bank). A continuous variable measuring income inequality within a country, ranging from 0 (perfect equality) to 100 (perfect inequality). Higher values indicate more inequality.</li>
+<li><strong><code>wdi_gini</code></strong> — Gini index (World Bank). A variable measuring income inequality within a country, ranging from 0 (perfect equality) to 100 (perfect inequality).</li>
 <li><strong><code>ti_cpi</code></strong> — Corruption Perceptions Index (Transparency International). A continuous variable ranging from 0 (highly corrupt) to 100 (highly clean), measuring perceptions of public sector corruption as seen by business people, risk analysts, and the general public.</li>
 </ul>
 <p><strong>Research question:</strong> Do more unequal countries tend to have higher levels of perceived corruption?</p>
@@ -418,7 +418,7 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Variables:</strong> <code>bmr_dem</code> and <code>ht_colonial</code></p>
 <ul>
 <li><strong><code>bmr_dem</code></strong> — Dichotomous democracy measure (Boix, Miller, and Rosato). This is a <strong>binary</strong> variable: 0 = not a democracy, 1 = democracy. Countries are coded as democratic if political leaders are chosen through free and fair elections and a minimum suffrage threshold is met. It does not measure degree of democracy.</li>
-<li><strong><code>ht_colonial</code></strong> — Colonial origin. A categorical variable recording the country’s former Western overseas colonial ruler (e.g.&nbsp;British, French, Spanish, Portuguese, Belgian). Countries that were never colonised by a Western overseas power are coded 0.</li>
+<li><strong><code>ht_colonial</code></strong> — Colonial origin. A categorical variable recording the country’s former Western overseas colonial ruler (e.g.&nbsp;British, French, Spanish, Portuguese, Belgian). Countries that were never colonised by a Western overseas power are in a separate category.</li>
 </ul>
 <p><strong>Research question:</strong> Do countries with different colonial histories differ in their likelihood of being democratic today?</p>
 <hr>
@@ -428,7 +428,7 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Variables:</strong> <code>wdi_internet</code> and <code>rsf_pfi</code></p>
 <ul>
 <li><strong><code>wdi_internet</code></strong> — Individuals using the internet (World Bank). The percentage of the population with internet access (0–100).</li>
-<li><strong><code>rsf_pfi</code></strong> — Press Freedom Index (Reporters Without Borders). A continuous variable measuring the degree of freedom available to journalists and media organisations in each country. <strong>Higher scores indicate more press freedom.</strong></li>
+<li><strong><code>rsf_pfi</code></strong> — Press Freedom Index (Reporters Without Borders). A numeric variable measuring the degree of freedom available to journalists and media organisations in each country. <strong>Higher scores indicate more press freedom.</strong></li>
 </ul>
 <p><strong>Research question:</strong> Do countries with higher internet usage tend to have greater press freedom?</p>
 <hr>
@@ -448,7 +448,7 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Variables:</strong> <code>gol_est</code> and <code>ht_region</code></p>
 <ul>
 <li><strong><code>gol_est</code></strong> — Electoral system type. See Pair 1 for the full description.</li>
-<li><strong><code>ht_region</code></strong> — Region of the world. A categorical variable classifying countries into ten politico-geographic regions, including Eastern Europe and post-Soviet Union, Latin America, North Africa and the Middle East, Sub-Saharan Africa, Western Europe and North America, East Asia, South-East Asia, South Asia, the Pacific, and the Caribbean.</li>
+<li><strong><code>ht_region</code></strong> — Region of the world. A variable classifying countries into ten politico-geographic regions, including Eastern Europe and post-Soviet Union, Latin America, North Africa and the Middle East, Sub-Saharan Africa, Western Europe and North America, East Asia, South-East Asia, South Asia, the Pacific, and the Caribbean.</li>
 </ul>
 <p><strong>Research question:</strong> Do countries in different world regions tend to use different electoral systems?</p>
 <hr>
@@ -458,7 +458,7 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Variables:</strong> <code>wdi_gini</code> and <code>wdi_wip</code></p>
 <ul>
 <li><strong><code>wdi_gini</code></strong> — Gini index. See Pair 2 for the full description.</li>
-<li><strong><code>wdi_wip</code></strong> — Proportion of seats held by women in national parliaments (World Bank). A continuous variable measured as a percentage (0–100).</li>
+<li><strong><code>wdi_wip</code></strong> — Proportion of seats held by women in national parliaments (World Bank). Measured as a percentage (0–100).</li>
 </ul>
 <p><strong>Research question:</strong> Do more unequal countries tend to have lower levels of women’s representation in parliament?</p>
 <hr>
@@ -478,7 +478,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Case 3:</strong> Both numeric → scatterplot and regression line</li>
 </ul>
 <p><strong>Question C: What is the appropriate tool?</strong></p>
-<p>State the specific plot or table you would use. If the case calls for more than one tool, list both.</p>
+<p>State the specific plot or table you would use.</p>
 <hr>
 <p>Once your group has worked through all seven pairs, be ready to discuss your answers. Pay particular attention to any pairs where you were uncertain — these are worth discussing carefully before moving to Hour 2.</p>
 <hr>
@@ -508,7 +508,6 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>What is the direction of the association? Does a higher Gini index tend to be associated with higher or lower corruption scores?</li>
 <li>Before interpreting the slope, make sure you have the scale direction of <code>ti_cpi</code> clearly in mind: a higher score means <em>less</em> corruption, not more. What does this imply about the slope you expect to see?</li>
-<li>Is the relationship strong (points clustered near the line) or weak (widely scattered)?</li>
 </ul>
 <blockquote class="blockquote">
 <p><strong>Hint:</strong> Getting the scale direction of <code>ti_cpi</code> right is essential for interpreting the slope correctly. Confirm which end of the scale represents more corruption before drawing conclusions.</p>
@@ -517,12 +516,11 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="pair-3-bmr_dem-and-ht_colonial" class="level3">
 <h3 class="anchored" data-anchor-id="pair-3-bmr_dem-and-ht_colonial">Pair 3 — <code>bmr_dem</code> and <code>ht_colonial</code></h3>
-<p><strong>Execute:</strong> Produce the appropriate table and chart. When producing the table, run it with both row percentages and column percentages.</p>
+<p><strong>Execute:</strong> Produce the appropriate table and chart. When producing the table, try running it with both row percentages and column percentages.</p>
 <p><strong>Interpret:</strong></p>
 <ul>
 <li>Compare the row percentage output and the column percentage output. What does each tell you? Which is more useful for answering the research question, and why?</li>
 <li>Are some colonial origins more strongly associated with democratic status than others? Which patterns stand out?</li>
-<li>What might explain the variation? Consider what else differs across countries with different colonial histories, such as institutional legacies or levels of development.</li>
 </ul>
 <blockquote class="blockquote">
 <p><strong>Hint:</strong> Row percentages show the distribution of one variable within each category of the other. Switching between row and column orientations reveals different aspects of the same association — think carefully about which question each answers.</p>
@@ -536,7 +534,6 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Is there a positive association, a negative association, or no clear pattern?</li>
 <li>Remember that higher <code>rsf_pfi</code> scores indicate <em>more</em> press freedom. If the slope is positive, what does that mean substantively?</li>
-<li>Internet access and press freedom could be related in multiple ways — higher access may reflect or enable more open media environments, or both could be driven by a third factor such as economic development or regime type. What do you think the scatterplot is capturing?</li>
 </ul>
 <blockquote class="blockquote">
 <p><strong>Hint:</strong> Make sure you have the direction of the <code>rsf_pfi</code> scale clear before interpreting the slope. A positive slope here has a specific substantive meaning that depends on understanding what higher values represent.</p>
