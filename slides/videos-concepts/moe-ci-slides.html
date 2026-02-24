@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <title>Loading and Browsing Data</title>
+  <title>Margin of Error and Confidence Interval</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -28,7 +28,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-f88d935cd01326925f73dc62b106448c.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-7433acd2865db5fa81269247cd6920be.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -127,95 +127,146 @@
 
 
 <section>
-<section id="loading-and-browsing-data" class="title-slide slide level1 title-left center">
-<h1>Loading and Browsing Data</h1>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nWJTyqIjYgE?si=xr8674JyN133h8M1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
-</iframe>
-<!-- [Watch on YouTube](https://youtu.be/nWJTyqIjYgE) -->
+<section id="confidence-intervals-and-margins-of-error" class="title-slide slide level1 title-left center">
+<h1>Confidence Intervals and Margins of Error</h1>
+
 </section>
 <section id="youll-learn-to" class="slide level2">
 <h2>You’ll learn to</h2>
+<div class="presenter-space">
 <ul>
-<li class="fragment"><strong>Load</strong> a dataset in Stata.</li>
-<li class="fragment"><strong>Browse</strong> a dataset by switching between Stata and the codebook.</li>
+<li class="fragment">Interpret a <strong>margin of error</strong> and explain where it comes from.</li>
+<li class="fragment">Construct and interpret a <strong>confidence interval</strong> from a point estimate and a margin of error.</li>
+<li class="fragment">Explain what makes a confidence interval <strong>wider or narrower</strong>.</li>
 </ul>
+</div>
 </section>
-<section id="step-1-download-the-brexit-dataset-from-our-shared-folder" class="slide level2">
-<h2>Step 1: Download the Brexit dataset from our shared folder</h2>
+<section id="random-samples-differ-from-one-another" class="slide level2">
+<h2>Random samples differ from one another</h2>
+<div class="presenter-space">
 <ul>
-<li class="fragment">Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a></li>
-<li class="fragment">Click on <code>data-raw</code></li>
-<li class="fragment">Download <code>Brexit_Regional.dta</code></li>
-<li class="fragment">Save it into the <code>data-raw</code> folder on your computer</li>
+<li class="fragment">Each random sample we draw from a population will be <strong>slightly different</strong> from every other.</li>
+<li class="fragment">This is not a flaw — it is an unavoidable consequence of working with samples.</li>
+<li class="fragment">It means that any estimate we produce from a sample carries <strong>uncertainty</strong>.</li>
 </ul>
+</div>
 </section>
-<section id="step-2-set-the-working-directory" class="slide level2">
-<h2>Step 2: Set the working directory</h2>
+<section id="from-sample-to-estimate" class="slide level2">
+<h2>From sample to estimate</h2>
+<div class="presenter-space">
 <ul>
-<li class="fragment">We’ve been through this in <a href="../../slides/videos-stata/stata-interface.html">The Stata Interface</a></li>
-<li class="fragment">This can be done either by clicking File &gt; Change working directory, or…</li>
-<li class="fragment">…if you have saved a do-file (<code>set-wd.do</code>) as instructed in <a href="../../slides/videos-stata/stata-interface.html">The Stata Interface</a>, you can copy the command from there.</li>
+<li class="fragment">Suppose we want to know the Prime Minister’s approval rating among all adults.</li>
+<li class="fragment">We cannot ask everyone, so we take a <strong>random sample</strong> of 1,000 people.</li>
+<li class="fragment">Our sample tells us that <strong>42%</strong> approve.</li>
+<li class="fragment">This single number (42%) is our <strong>point estimate</strong>.</li>
 </ul>
+</div>
 </section>
-<section id="step-3-open-a-new-do-file" class="slide level2">
-<h2>Step 3: Open a new do-file</h2>
+<section id="the-problem-with-a-single-number" class="slide level2">
+<h2>The problem with a single number</h2>
+<div class="presenter-space">
 <ul>
-<li>Click on the “New Do-file Editor” icon (a sheet of paper and a pencil)</li>
+<li class="fragment">A point estimate gives us our <strong>best guess</strong> from the sample.</li>
+<li class="fragment">But samples vary, and the true population value is unlikely to be <strong>exactly</strong> 42%.</li>
+<li class="fragment">We need to know <strong>how much uncertainty</strong> surrounds our estimate.</li>
+<li class="fragment">That is what the margin of error does.</li>
 </ul>
-
-<img data-src="../../assets/stata-dofile-editor.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-4-set-up-your-do-file-to-load-the-dataset" class="slide level2">
-<h2>Step 4: Set up your do-file to load the dataset</h2>
+</div>
+</section>
+<section id="the-margin-of-error" class="slide level2">
+<h2>The margin of error</h2>
+<div class="presenter-space">
 <ul>
-<li><p>The first line should be the command that sets the working directory. It should look like:</p>
+<li class="fragment">The <strong>margin of error</strong> captures the uncertainty that comes from working with a sample rather than the full population.</li>
+<li class="fragment">A margin of error of <strong>±3%</strong> means the true value is likely within 3 percentage points of our estimate.</li>
+</ul>
+</div>
+</section>
+<section id="from-margin-of-error-to-confidence-interval" class="slide level2">
+<h2>From margin of error to confidence interval</h2>
+<div class="presenter-space">
 <ul>
-<li><code>cd "[Path\To\Your\Folder]"</code></li>
-<li>If you use a Mac, there will be forward slashes instead of back slashes</li>
+<li class="fragment"><p>A <strong>confidence interval</strong> is constructed by applying the margin of error to the point estimate:</p>
+<ul>
+<li class="fragment"><strong>Lower bound:</strong> point estimate − margin of error</li>
+<li class="fragment"><strong>Upper bound:</strong> point estimate + margin of error</li>
 </ul></li>
-<li><p>Below that, enter</p>
+<li class="fragment"><p>In our example: 42% ± 3% gives a confidence interval of <strong>[39%, 45%]</strong>.</p></li>
+</ul>
+</div>
+</section>
+<section id="interpreting-the-confidence-interval" class="slide level2">
+<h2>Interpreting the confidence interval</h2>
+<div class="presenter-space">
 <ul>
-<li><code>use "data-raw/Brexit_Regional.dta", clear</code></li>
+<li class="fragment"><p>Confidence intervals vary depending on how confident we want to be.</p></li>
+<li class="fragment"><p>Most social scientists work with a <strong>95%</strong> level on confidence.</p>
+<ul>
+<li class="fragment">We are <strong>95% confident</strong> that the true approval rating in the population lies between 39% and 45%.</li>
 </ul></li>
 </ul>
+<!-- -   This does **not** mean there is a 95% chance the true value is in this particular interval. -->
+<!-- -   It means that if we repeated this procedure many times, about 95% of the intervals we produce would contain the true value. -->
+</div>
 </section>
-<section id="step-5-run-the-do-file" class="slide level2">
-<h2>Step 5: Run the do-file</h2>
+<section id="what-makes-an-interval-wider-or-narrower" class="slide level2">
+<h2>What makes an interval wider or narrower?</h2>
+<div class="presenter-space">
 <ul>
-<li>Click on the sheet of paper with a “Play” button. This will <strong>execute</strong> all commands in the do-file</li>
-<li>In the screenshot, the lines of green text after the asterisks are <strong>comments</strong>. Stata won’t run them.</li>
-</ul>
-
-<img data-src="../../assets/stata-run-dofile.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-6-check-if-it-has-worked-and-save-your-do-file" class="slide level2">
-<h2>Step 6: Check if it has worked and save your do-file</h2>
+<li class="fragment"><p><strong>Sample size:</strong> larger samples produce <strong>narrower</strong> intervals.</p>
 <ul>
-<li>If you see this on the top-right pane of your Stata screen, it has worked!</li>
-<li>Be sure to <strong>save your do-file</strong> in your <code>do</code> folder.</li>
-</ul>
-
-<img data-src="../../assets/stata-variables.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-7-browse-the-data" class="slide level2">
-<h2>Step 7: Browse the data</h2>
+<li class="fragment">More data → less uncertainty → tighter estimate.</li>
+</ul></li>
+<li class="fragment"><p><strong>Confidence level:</strong> higher confidence (e.g., 99% vs.&nbsp;95%) produces <strong>wider</strong> intervals.</p>
 <ul>
-<li>Click on this icon with magnifying glass. It will allow you to browse the data.</li>
-<li>Explore it while swithing between your Stata screen and the <a href="https://emckclac-my.sharepoint.com/:w:/r/personal/k2588471_kcl_ac_uk/_layouts/15/Doc.aspx?sourcedoc=%7BEA160DB5-B57C-4CAC-A10F-5C2B3FC18FB2%7D&amp;file=Brexit_Regional_Codebook.docx&amp;action=default&amp;mobileredirect=true">Codebook</a></li>
+<li class="fragment">More certainty requires a broader net.</li>
+</ul></li>
 </ul>
-
-<img data-src="../../assets/stata-browse.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+</div>
+</section>
+<section id="a-worked-example-two-polls" class="slide level2">
+<h2>A worked example: two polls</h2>
+<div class="presenter-space">
+<ul>
+<li class="fragment"><p>Two organisations poll the same PM approval rating independently.</p>
+<ul>
+<li class="fragment">Poll A: <strong>42%</strong> approve, margin of error <strong>±3%</strong> → interval [39%, 45%]</li>
+<li class="fragment">Poll B: <strong>44%</strong> approve, margin of error <strong>±3%</strong> → interval [41%, 47%]</li>
+</ul></li>
+<li class="fragment"><p>The point estimates differ, but the intervals <strong>overlap</strong>.</p></li>
+<li class="fragment"><p>Both polls are <strong>consistent</strong> with the same population value.</p></li>
+</ul>
+</div>
+</section>
+<section id="when-the-margin-of-error-is-meaningless" class="slide level2">
+<h2>When the margin of error is meaningless</h2>
+<div class="presenter-space">
+<ul>
+<li class="fragment">The margin of error only applies to <strong>probability samples</strong>.</li>
+<li class="fragment">Reporting a margin of error alongside a non-probability sample is <strong>misleading</strong>.</li>
+</ul>
+</div>
+</section>
 <section id="recap" class="slide level2">
 <h2>Recap</h2>
+<div class="presenter-space">
 <ul>
-<li class="fragment">By setting the <strong>working directory</strong>, we tell Stata where our project lives.</li>
-<li class="fragment">Once that is done, we can <strong>load datasets</strong> by showing Stata where to find them in the subfolders inside our working directory.</li>
-<li class="fragment">Once a dataset is loaded, we can browse them using Stata.</li>
+<li class="fragment">A <strong>point estimate</strong> is our best guess from the sample.</li>
+<li class="fragment">The <strong>margin of error</strong> expresses the uncertainty around that estimate.</li>
+<li class="fragment">A <strong>confidence interval</strong> = point estimate ± margin of error.</li>
+<li class="fragment">Margins of error are only meaningful for <strong>probability samples</strong>.</li>
 </ul>
+</div>
 </section>
 <section class="slide level2">
 
+<div class="presenter-space">
 <p><strong>Why this matters:</strong></p>
 <ul>
-<li class="fragment">This exercise allows you to familiarise yourself with how a dataset looks like in Stata.</li>
+<li class="fragment">Poll results and survey findings are reported with margins of error every day.</li>
+<li class="fragment">Knowing how to interpret a confidence interval is essential for reading empirical evidence critically.</li>
 </ul>
+</div>
 
 
 </section></section>

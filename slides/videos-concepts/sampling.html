@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Doing Reproducible Research</title>
+<title>Why Sampling Matters</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/empirical-vs-normative.html">Week 2: Research Questions, Theories, and Hypotheses</a></li><li class="breadcrumb-item"><a href="../../slides/videos-stata/doing-reproducible-research.html">Doing Reproducible Research</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/sampling.html">Week 7: Estimation, Uncertainty, and Statistical Inference</a></li><li class="breadcrumb-item"><a href="../../slides/videos-concepts/sampling.html">Why Sampling Matters</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -163,7 +163,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/doing-reproducible-research.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../slides/videos-stata/doing-reproducible-research.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Doing Reproducible Research</span></a>
   </div>
 </li>
@@ -353,7 +353,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/sampling.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/sampling.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Why Sampling Matters</span></a>
   </div>
 </li>
@@ -387,121 +387,143 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#doing-reproducible-research" id="toc-doing-reproducible-research" class="nav-link active" data-scroll-target="#doing-reproducible-research">Doing Reproducible Research</a>
+  <li><a href="#why-sampling-matters" id="toc-why-sampling-matters" class="nav-link active" data-scroll-target="#why-sampling-matters">Why Sampling Matters</a>
   <ul class="collapse">
   <li><a href="#youll-learn-to" id="toc-youll-learn-to" class="nav-link" data-scroll-target="#youll-learn-to">You’ll learn to</a></li>
-  <li><a href="#what-is-reproducible-research" id="toc-what-is-reproducible-research" class="nav-link" data-scroll-target="#what-is-reproducible-research">What is reproducible research?</a></li>
-  <li><a href="#why-care-about-reproducibility" id="toc-why-care-about-reproducibility" class="nav-link" data-scroll-target="#why-care-about-reproducibility">Why care about reproducibility?</a></li>
-  <li><a href="#data-and-code" id="toc-data-and-code" class="nav-link" data-scroll-target="#data-and-code">Data and Code</a></li>
-  <li><a href="#what-this-looks-like-in-stata" id="toc-what-this-looks-like-in-stata" class="nav-link" data-scroll-target="#what-this-looks-like-in-stata">What this looks like in Stata</a></li>
-  <li><a href="#a-simple-project-folder-structure" id="toc-a-simple-project-folder-structure" class="nav-link" data-scroll-target="#a-simple-project-folder-structure">A simple project folder structure</a></li>
-  <li><a href="#a-simple-project-folder-structure-1" id="toc-a-simple-project-folder-structure-1" class="nav-link" data-scroll-target="#a-simple-project-folder-structure-1">A simple project folder structure</a></li>
+  <li><a href="#we-want-to-know-about-populations" id="toc-we-want-to-know-about-populations" class="nav-link" data-scroll-target="#we-want-to-know-about-populations">We want to know about populations</a></li>
+  <li><a href="#populations-depend-on-the-question" id="toc-populations-depend-on-the-question" class="nav-link" data-scroll-target="#populations-depend-on-the-question">Populations depend on the question</a></li>
+  <li><a href="#the-problem-populations-are-often-inaccessible" id="toc-the-problem-populations-are-often-inaccessible" class="nav-link" data-scroll-target="#the-problem-populations-are-often-inaccessible">The problem: populations are often inaccessible</a></li>
+  <li><a href="#the-solution-samples" id="toc-the-solution-samples" class="nav-link" data-scroll-target="#the-solution-samples">The solution: samples</a></li>
+  <li><a href="#from-sample-to-population-inference" id="toc-from-sample-to-population-inference" class="nav-link" data-scroll-target="#from-sample-to-population-inference">From sample to population: inference</a></li>
+  <li><a href="#not-all-samples-are-equal" id="toc-not-all-samples-are-equal" class="nav-link" data-scroll-target="#not-all-samples-are-equal">Not all samples are equal</a></li>
+  <li><a href="#non-probability-samples" id="toc-non-probability-samples" class="nav-link" data-scroll-target="#non-probability-samples">Non-probability samples</a></li>
+  <li><a href="#probability-samples" id="toc-probability-samples" class="nav-link" data-scroll-target="#probability-samples">Probability samples</a></li>
+  <li><a href="#why-random-samples-are-powerful" id="toc-why-random-samples-are-powerful" class="nav-link" data-scroll-target="#why-random-samples-are-powerful">Why random samples are powerful</a></li>
   <li><a href="#recap" id="toc-recap" class="nav-link" data-scroll-target="#recap">Recap</a></li>
   </ul></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="doing-reproducible-research-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="sampling-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/empirical-vs-normative.html">Week 2: Research Questions, Theories, and Hypotheses</a></li><li class="breadcrumb-item"><a href="../../slides/videos-stata/doing-reproducible-research.html">Doing Reproducible Research</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/sampling.html">Week 7: Estimation, Uncertainty, and Statistical Inference</a></li><li class="breadcrumb-item"><a href="../../slides/videos-concepts/sampling.html">Why Sampling Matters</a></li></ol></nav></header>
 
 
 
 
-<section id="doing-reproducible-research" class="level1 title-left">
-<h1 class="title-left">Doing Reproducible Research</h1>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DVSg_RFjV-8?si=gFgHHBNKKhnqEEC1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
-</iframe>
-<!-- [Watch on YouTube](https://youtu.be/DVSg_RFjV-8) -->
-<hr>
+<section id="why-sampling-matters" class="level1 title-left">
+<h1 class="title-left">Why Sampling Matters</h1>
 <section id="youll-learn-to" class="level2">
 <h2 class="anchored" data-anchor-id="youll-learn-to">You’ll learn to</h2>
 <div class="presenter-space">
 <ul>
-<li>Explain what <strong>reproducible research</strong> means and why it matters.</li>
-<li>Set up a project <strong>folder structure</strong> that supports reproducible work.</li>
+<li>Define a <strong>population</strong> and a <strong>sample</strong>.</li>
+<li>Explain how we use samples to draw conclusions about populations.</li>
+<li>Explain why <strong>how data is collected</strong> affects what conclusions we can make.</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="what-is-reproducible-research" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-reproducible-research">What is reproducible research?</h2>
+<section id="we-want-to-know-about-populations" class="level2">
+<h2 class="anchored" data-anchor-id="we-want-to-know-about-populations">We want to know about populations</h2>
 <div class="presenter-space">
 <ul>
-<li>Being able to obtain the <strong>same results</strong> using the same data and code.</li>
-<li>Anyone should be able to follow the steps of your analysis.</li>
-<li>This includes <strong>you</strong> in a few weeks’ time.</li>
+<li>Once we have a research question and hypothesis, we want to collect data.</li>
+<li>Ideally, we want data on <strong>every unit</strong> we are interested in.</li>
+<li>The full set of units we want to draw conclusions about is called the <strong>population</strong>.</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="why-care-about-reproducibility" class="level2">
-<h2 class="anchored" data-anchor-id="why-care-about-reproducibility">Why care about reproducibility?</h2>
+<section id="populations-depend-on-the-question" class="level2">
+<h2 class="anchored" data-anchor-id="populations-depend-on-the-question">Populations depend on the question</h2>
 <div class="presenter-space">
 <ul>
-<li>Small changes accumulate quickly, and we often forget what we do.</li>
-<li>Clear structures make mistakes easier for you (and others) to <strong>detect and fix</strong>.</li>
-<li>Important for <strong>transparency</strong> and <strong>credibility</strong>.</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="data-and-code" class="level2">
-<h2 class="anchored" data-anchor-id="data-and-code">Data and Code</h2>
-<div class="presenter-space">
+<li><p>The population is defined by <strong>who or what</strong> we are studying.</p>
 <ul>
-<li><p><strong>Data:</strong> the information you gather to begin your analysis.</p></li>
-<li><p><strong>Code:</strong> the instructions that transform and analyse the data.</p></li>
-<li><p>Reproducible research <strong>separates</strong> data from code.</p></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="what-this-looks-like-in-stata" class="level2">
-<h2 class="anchored" data-anchor-id="what-this-looks-like-in-stata">What this looks like in Stata</h2>
-<div class="presenter-space">
-<ul>
-<li>The dataset is treated as <strong>read-only</strong>.</li>
-<li>All changes happen in a <strong>do-file</strong>.</li>
-<li>The do-file records every step in your analysis.</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="a-simple-project-folder-structure" class="level2">
-<h2 class="anchored" data-anchor-id="a-simple-project-folder-structure">A simple project folder structure</h2>
-<div class="presenter-space">
-<ul>
-<li><p><code>my-research-project/</code></p>
-<ul>
-<li><code>data-raw</code></li>
-<li><code>data-clean</code></li>
-<li><code>do</code></li>
-<li><code>output</code></li>
+<li>All voters in a general election.</li>
+<li>All countries in the world.</li>
+<li>All cities in the United Kingdom.</li>
 </ul></li>
 </ul>
+<div class="fragment">
+<p>Populations do not have to be people — they are whatever units our question is about.</p>
+</div>
 </div>
 <hr>
 </section>
-<section id="a-simple-project-folder-structure-1" class="level2">
-<h2 class="anchored" data-anchor-id="a-simple-project-folder-structure-1">A simple project folder structure</h2>
+<section id="the-problem-populations-are-often-inaccessible" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem-populations-are-often-inaccessible">The problem: populations are often inaccessible</h2>
 <div class="presenter-space">
 <ul>
-<li><p><code>data-raw</code></p>
+<li>Collecting data on every unit in a population is often <strong>too expensive</strong> or <strong>too slow</strong>.</li>
+<li>Sometimes it is simply <strong>impossible</strong>.</li>
+<li>We need a way to learn about the population without studying all of it.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="the-solution-samples" class="level2">
+<h2 class="anchored" data-anchor-id="the-solution-samples">The solution: samples</h2>
+<div class="presenter-space">
 <ul>
-<li>Original data files, never edited.</li>
-</ul></li>
-<li><p><code>data-clean</code></p>
+<li>A <strong>sample</strong> is a subset of units drawn from the population.</li>
+<li>We collect data on the sample and use it to reason about the population.</li>
+<li>This is exactly what <strong>opinion polls</strong> do before an election.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="from-sample-to-population-inference" class="level2">
+<h2 class="anchored" data-anchor-id="from-sample-to-population-inference">From sample to population: inference</h2>
+<div class="presenter-space">
 <ul>
-<li>Cleaned or transformed datasets.</li>
-</ul></li>
-<li><p><code>do</code></p>
+<li>Drawing conclusions about a <strong>population</strong> using a <strong>sample</strong> is called <strong>inference</strong>.</li>
+<li>But we can only make valid inferences from certain types of samples.</li>
+<li>This is why <strong>how data is collected</strong> matters a lot.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="not-all-samples-are-equal" class="level2">
+<h2 class="anchored" data-anchor-id="not-all-samples-are-equal">Not all samples are equal</h2>
+<div class="presenter-space">
 <ul>
-<li>All Stata do-files.</li>
-</ul></li>
-<li><p><code>output</code></p>
+<li>Imagine a news outlet that polls only its own viewers.</li>
+<li>If viewers skew towards one political side, the sample will <strong>over-represent</strong> those views.</li>
+<li>The sample will not look like the population — and any inference will be misleading.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="non-probability-samples" class="level2">
+<h2 class="anchored" data-anchor-id="non-probability-samples">Non-probability samples</h2>
+<div class="presenter-space">
 <ul>
-<li>Tables and figures.</li>
-</ul></li>
+<li>In a <strong>non-probability sample</strong>, not every unit in the population has a chance of being selected.</li>
+<li>These samples tend to be <strong>unrepresentative</strong>.</li>
+<li>We <strong>cannot</strong> use non-probability samples to make valid inferences about the population.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="probability-samples" class="level2">
+<h2 class="anchored" data-anchor-id="probability-samples">Probability samples</h2>
+<div class="presenter-space">
+<ul>
+<li>In a <strong>probability sample</strong>, every unit in the population has a known chance of being selected.</li>
+<li>The most important type is the <strong>simple random sample</strong>.</li>
+<li>In a random sample, every unit has an <strong>equal probability</strong> of being chosen.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="why-random-samples-are-powerful" class="level2">
+<h2 class="anchored" data-anchor-id="why-random-samples-are-powerful">Why random samples are powerful</h2>
+<div class="presenter-space">
+<ul>
+<li>Random samples produce samples that are <strong>representative</strong> of the population.</li>
+<li>The distribution of characteristics in the sample will closely mirror the population.</li>
+<li>This allows us to <strong>generalise</strong> from the sample to the population with confidence.</li>
 </ul>
 </div>
 <hr>
@@ -510,17 +532,18 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="recap">Recap</h2>
 <div class="presenter-space">
 <ul>
-<li><strong>Reproducibility</strong> means others can retrace your analysis.</li>
-<li><strong>Separating</strong> data and code is key.</li>
-<li>A clear folder structure is <strong>essential</strong> for good analysis.</li>
+<li>A <strong>population</strong> is the full set of units we want to draw conclusions about.</li>
+<li>A <strong>sample</strong> is a subset of the population that we actually observe.</li>
+<li><strong>Inference</strong> means using a sample to draw conclusions about a population.</li>
+<li><strong>Random samples</strong> are representative and support valid inference; <strong>non-probability samples</strong> do not.</li>
 </ul>
 </div>
 <hr>
 <div class="presenter-space">
 <p><strong>Why this matters:</strong></p>
 <ul>
-<li>Reproducible workflows make your analysis clearer and more reliable.</li>
-<li>Knowing how to set up a folder structure now will save you from headaches in the future!</li>
+<li>Almost all political science data comes from samples, not full populations.</li>
+<li>Understanding how a sample was collected determines what conclusions we can draw.</li>
 </ul>
 </div>
 

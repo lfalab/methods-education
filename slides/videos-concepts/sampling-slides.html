@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <title>Loading and Browsing Data</title>
+  <title>Why Sampling Matters</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -28,7 +28,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-f88d935cd01326925f73dc62b106448c.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-7433acd2865db5fa81269247cd6920be.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -127,95 +127,136 @@
 
 
 <section>
-<section id="loading-and-browsing-data" class="title-slide slide level1 title-left center">
-<h1>Loading and Browsing Data</h1>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nWJTyqIjYgE?si=xr8674JyN133h8M1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
-</iframe>
-<!-- [Watch on YouTube](https://youtu.be/nWJTyqIjYgE) -->
+<section id="why-sampling-matters" class="title-slide slide level1 title-left center">
+<h1>Why Sampling Matters</h1>
+
 </section>
 <section id="youll-learn-to" class="slide level2">
 <h2>You’ll learn to</h2>
+<div class="presenter-space">
 <ul>
-<li class="fragment"><strong>Load</strong> a dataset in Stata.</li>
-<li class="fragment"><strong>Browse</strong> a dataset by switching between Stata and the codebook.</li>
+<li class="fragment">Define a <strong>population</strong> and a <strong>sample</strong>.</li>
+<li class="fragment">Explain how we use samples to draw conclusions about populations.</li>
+<li class="fragment">Explain why <strong>how data is collected</strong> affects what conclusions we can make.</li>
 </ul>
+</div>
 </section>
-<section id="step-1-download-the-brexit-dataset-from-our-shared-folder" class="slide level2">
-<h2>Step 1: Download the Brexit dataset from our shared folder</h2>
+<section id="we-want-to-know-about-populations" class="slide level2">
+<h2>We want to know about populations</h2>
+<div class="presenter-space">
 <ul>
-<li class="fragment">Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a></li>
-<li class="fragment">Click on <code>data-raw</code></li>
-<li class="fragment">Download <code>Brexit_Regional.dta</code></li>
-<li class="fragment">Save it into the <code>data-raw</code> folder on your computer</li>
+<li class="fragment">Once we have a research question and hypothesis, we want to collect data.</li>
+<li class="fragment">Ideally, we want data on <strong>every unit</strong> we are interested in.</li>
+<li class="fragment">The full set of units we want to draw conclusions about is called the <strong>population</strong>.</li>
 </ul>
+</div>
 </section>
-<section id="step-2-set-the-working-directory" class="slide level2">
-<h2>Step 2: Set the working directory</h2>
+<section id="populations-depend-on-the-question" class="slide level2">
+<h2>Populations depend on the question</h2>
+<div class="presenter-space">
 <ul>
-<li class="fragment">We’ve been through this in <a href="../../slides/videos-stata/stata-interface.html">The Stata Interface</a></li>
-<li class="fragment">This can be done either by clicking File &gt; Change working directory, or…</li>
-<li class="fragment">…if you have saved a do-file (<code>set-wd.do</code>) as instructed in <a href="../../slides/videos-stata/stata-interface.html">The Stata Interface</a>, you can copy the command from there.</li>
-</ul>
-</section>
-<section id="step-3-open-a-new-do-file" class="slide level2">
-<h2>Step 3: Open a new do-file</h2>
+<li class="fragment"><p>The population is defined by <strong>who or what</strong> we are studying.</p>
 <ul>
-<li>Click on the “New Do-file Editor” icon (a sheet of paper and a pencil)</li>
-</ul>
-
-<img data-src="../../assets/stata-dofile-editor.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-4-set-up-your-do-file-to-load-the-dataset" class="slide level2">
-<h2>Step 4: Set up your do-file to load the dataset</h2>
-<ul>
-<li><p>The first line should be the command that sets the working directory. It should look like:</p>
-<ul>
-<li><code>cd "[Path\To\Your\Folder]"</code></li>
-<li>If you use a Mac, there will be forward slashes instead of back slashes</li>
-</ul></li>
-<li><p>Below that, enter</p>
-<ul>
-<li><code>use "data-raw/Brexit_Regional.dta", clear</code></li>
+<li class="fragment">All voters in a general election.</li>
+<li class="fragment">All countries in the world.</li>
+<li class="fragment">All cities in the United Kingdom.</li>
 </ul></li>
 </ul>
+<div class="fragment">
+<p>Populations do not have to be people — they are whatever units our question is about.</p>
+</div>
+</div>
 </section>
-<section id="step-5-run-the-do-file" class="slide level2">
-<h2>Step 5: Run the do-file</h2>
+<section id="the-problem-populations-are-often-inaccessible" class="slide level2">
+<h2>The problem: populations are often inaccessible</h2>
+<div class="presenter-space">
 <ul>
-<li>Click on the sheet of paper with a “Play” button. This will <strong>execute</strong> all commands in the do-file</li>
-<li>In the screenshot, the lines of green text after the asterisks are <strong>comments</strong>. Stata won’t run them.</li>
+<li class="fragment">Collecting data on every unit in a population is often <strong>too expensive</strong> or <strong>too slow</strong>.</li>
+<li class="fragment">Sometimes it is simply <strong>impossible</strong>.</li>
+<li class="fragment">We need a way to learn about the population without studying all of it.</li>
 </ul>
-
-<img data-src="../../assets/stata-run-dofile.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-6-check-if-it-has-worked-and-save-your-do-file" class="slide level2">
-<h2>Step 6: Check if it has worked and save your do-file</h2>
+</div>
+</section>
+<section id="the-solution-samples" class="slide level2">
+<h2>The solution: samples</h2>
+<div class="presenter-space">
 <ul>
-<li>If you see this on the top-right pane of your Stata screen, it has worked!</li>
-<li>Be sure to <strong>save your do-file</strong> in your <code>do</code> folder.</li>
+<li class="fragment">A <strong>sample</strong> is a subset of units drawn from the population.</li>
+<li class="fragment">We collect data on the sample and use it to reason about the population.</li>
+<li class="fragment">This is exactly what <strong>opinion polls</strong> do before an election.</li>
 </ul>
-
-<img data-src="../../assets/stata-variables.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-7-browse-the-data" class="slide level2">
-<h2>Step 7: Browse the data</h2>
+</div>
+</section>
+<section id="from-sample-to-population-inference" class="slide level2">
+<h2>From sample to population: inference</h2>
+<div class="presenter-space">
 <ul>
-<li>Click on this icon with magnifying glass. It will allow you to browse the data.</li>
-<li>Explore it while swithing between your Stata screen and the <a href="https://emckclac-my.sharepoint.com/:w:/r/personal/k2588471_kcl_ac_uk/_layouts/15/Doc.aspx?sourcedoc=%7BEA160DB5-B57C-4CAC-A10F-5C2B3FC18FB2%7D&amp;file=Brexit_Regional_Codebook.docx&amp;action=default&amp;mobileredirect=true">Codebook</a></li>
+<li class="fragment">Drawing conclusions about a <strong>population</strong> using a <strong>sample</strong> is called <strong>inference</strong>.</li>
+<li class="fragment">But we can only make valid inferences from certain types of samples.</li>
+<li class="fragment">This is why <strong>how data is collected</strong> matters a lot.</li>
 </ul>
-
-<img data-src="../../assets/stata-browse.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+</div>
+</section>
+<section id="not-all-samples-are-equal" class="slide level2">
+<h2>Not all samples are equal</h2>
+<div class="presenter-space">
+<ul>
+<li class="fragment">Imagine a news outlet that polls only its own viewers.</li>
+<li class="fragment">If viewers skew towards one political side, the sample will <strong>over-represent</strong> those views.</li>
+<li class="fragment">The sample will not look like the population — and any inference will be misleading.</li>
+</ul>
+</div>
+</section>
+<section id="non-probability-samples" class="slide level2">
+<h2>Non-probability samples</h2>
+<div class="presenter-space">
+<ul>
+<li class="fragment">In a <strong>non-probability sample</strong>, not every unit in the population has a chance of being selected.</li>
+<li class="fragment">These samples tend to be <strong>unrepresentative</strong>.</li>
+<li class="fragment">We <strong>cannot</strong> use non-probability samples to make valid inferences about the population.</li>
+</ul>
+</div>
+</section>
+<section id="probability-samples" class="slide level2">
+<h2>Probability samples</h2>
+<div class="presenter-space">
+<ul>
+<li class="fragment">In a <strong>probability sample</strong>, every unit in the population has a known chance of being selected.</li>
+<li class="fragment">The most important type is the <strong>simple random sample</strong>.</li>
+<li class="fragment">In a random sample, every unit has an <strong>equal probability</strong> of being chosen.</li>
+</ul>
+</div>
+</section>
+<section id="why-random-samples-are-powerful" class="slide level2">
+<h2>Why random samples are powerful</h2>
+<div class="presenter-space">
+<ul>
+<li class="fragment">Random samples produce samples that are <strong>representative</strong> of the population.</li>
+<li class="fragment">The distribution of characteristics in the sample will closely mirror the population.</li>
+<li class="fragment">This allows us to <strong>generalise</strong> from the sample to the population with confidence.</li>
+</ul>
+</div>
+</section>
 <section id="recap" class="slide level2">
 <h2>Recap</h2>
+<div class="presenter-space">
 <ul>
-<li class="fragment">By setting the <strong>working directory</strong>, we tell Stata where our project lives.</li>
-<li class="fragment">Once that is done, we can <strong>load datasets</strong> by showing Stata where to find them in the subfolders inside our working directory.</li>
-<li class="fragment">Once a dataset is loaded, we can browse them using Stata.</li>
+<li class="fragment">A <strong>population</strong> is the full set of units we want to draw conclusions about.</li>
+<li class="fragment">A <strong>sample</strong> is a subset of the population that we actually observe.</li>
+<li class="fragment"><strong>Inference</strong> means using a sample to draw conclusions about a population.</li>
+<li class="fragment"><strong>Random samples</strong> are representative and support valid inference; <strong>non-probability samples</strong> do not.</li>
 </ul>
+</div>
 </section>
 <section class="slide level2">
 
+<div class="presenter-space">
 <p><strong>Why this matters:</strong></p>
 <ul>
-<li class="fragment">This exercise allows you to familiarise yourself with how a dataset looks like in Stata.</li>
+<li class="fragment">Almost all political science data comes from samples, not full populations.</li>
+<li class="fragment">Understanding how a sample was collected determines what conclusions we can draw.</li>
 </ul>
+</div>
 
 
 </section></section>

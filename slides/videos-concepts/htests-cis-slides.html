@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <title>Loading and Browsing Data</title>
+  <title>Hypothesis Tests Using Confidence Intervals</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -28,7 +28,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-f88d935cd01326925f73dc62b106448c.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-7433acd2865db5fa81269247cd6920be.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -127,95 +127,218 @@
 
 
 <section>
-<section id="loading-and-browsing-data" class="title-slide slide level1 title-left center">
-<h1>Loading and Browsing Data</h1>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nWJTyqIjYgE?si=xr8674JyN133h8M1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
-</iframe>
-<!-- [Watch on YouTube](https://youtu.be/nWJTyqIjYgE) -->
+<section id="hypothesis-tests-using-confidence-intervals" class="title-slide slide level1 title-left center">
+<h1>Hypothesis Tests Using Confidence Intervals</h1>
+
 </section>
 <section id="youll-learn-to" class="slide level2">
 <h2>You’ll learn to</h2>
+<div class="presenter-space">
 <ul>
-<li class="fragment"><strong>Load</strong> a dataset in Stata.</li>
-<li class="fragment"><strong>Browse</strong> a dataset by switching between Stata and the codebook.</li>
+<li class="fragment">Use a <strong>confidence interval</strong> to assess evidence against a null hypothesis.</li>
+<li class="fragment">Interpret results using the language of <strong>rejecting</strong> or <strong>failing to reject</strong> the null.</li>
+<li class="fragment">Explain what it means to fail to reject — and what it does <strong>not</strong> mean.</li>
 </ul>
+</div>
 </section>
-<section id="step-1-download-the-brexit-dataset-from-our-shared-folder" class="slide level2">
-<h2>Step 1: Download the Brexit dataset from our shared folder</h2>
+<section id="where-we-left-off" class="slide level2">
+<h2>Where we left off</h2>
+<div class="presenter-space">
 <ul>
-<li class="fragment">Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a></li>
-<li class="fragment">Click on <code>data-raw</code></li>
-<li class="fragment">Download <code>Brexit_Regional.dta</code></li>
-<li class="fragment">Save it into the <code>data-raw</code> folder on your computer</li>
+<li class="fragment">In the previous video, we built confidence intervals around point estimates.</li>
+<li class="fragment">A 95% confidence interval gives us a <strong>range of plausible values</strong> for the true population quantity.</li>
+<li class="fragment">Now we ask: can we use that interval to test a specific claim?</li>
 </ul>
+</div>
 </section>
-<section id="step-2-set-the-working-directory" class="slide level2">
-<h2>Step 2: Set the working directory</h2>
+<section id="the-null-hypothesis-as-a-claim-about-zero" class="slide level2">
+<h2>The null hypothesis as a claim about zero</h2>
+<div class="presenter-space">
 <ul>
-<li class="fragment">We’ve been through this in <a href="../../slides/videos-stata/stata-interface.html">The Stata Interface</a></li>
-<li class="fragment">This can be done either by clicking File &gt; Change working directory, or…</li>
-<li class="fragment">…if you have saved a do-file (<code>set-wd.do</code>) as instructed in <a href="../../slides/videos-stata/stata-interface.html">The Stata Interface</a>, you can copy the command from there.</li>
+<li class="fragment">A null hypothesis typically claims there is <strong>no difference</strong> between groups.</li>
+<li class="fragment">In other words, it claims the true difference is <strong>zero</strong>.</li>
+<li class="fragment">We can test this claim directly using a confidence interval.</li>
 </ul>
+</div>
 </section>
-<section id="step-3-open-a-new-do-file" class="slide level2">
-<h2>Step 3: Open a new do-file</h2>
+<section id="the-logic-of-the-test" class="slide level2">
+<h2>The logic of the test</h2>
+<div class="presenter-space">
 <ul>
-<li>Click on the “New Do-file Editor” icon (a sheet of paper and a pencil)</li>
-</ul>
-
-<img data-src="../../assets/stata-dofile-editor.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-4-set-up-your-do-file-to-load-the-dataset" class="slide level2">
-<h2>Step 4: Set up your do-file to load the dataset</h2>
+<li class="fragment"><p>We construct a 95% confidence interval for the <strong>difference</strong> between groups.</p></li>
+<li class="fragment"><p>Then we ask: does the interval include zero?</p>
 <ul>
-<li><p>The first line should be the command that sets the working directory. It should look like:</p>
-<ul>
-<li><code>cd "[Path\To\Your\Folder]"</code></li>
-<li>If you use a Mac, there will be forward slashes instead of back slashes</li>
-</ul></li>
-<li><p>Below that, enter</p>
-<ul>
-<li><code>use "data-raw/Brexit_Regional.dta", clear</code></li>
+<li class="fragment">If zero is outside the interval: zero is not a plausible value for the true difference — we <strong>reject</strong> the null.</li>
+<li class="fragment">If zero is inside the interval: zero remains plausible — we <strong>fail to reject</strong> the null.</li>
 </ul></li>
 </ul>
+</div>
 </section>
-<section id="step-5-run-the-do-file" class="slide level2">
-<h2>Step 5: Run the do-file</h2>
+<section id="example-1-gender-and-reform-vote" class="slide level2">
+<h2>Example 1 — Gender and Reform vote</h2>
+<div class="presenter-space">
 <ul>
-<li>Click on the sheet of paper with a “Play” button. This will <strong>execute</strong> all commands in the do-file</li>
-<li>In the screenshot, the lines of green text after the asterisks are <strong>comments</strong>. Stata won’t run them.</li>
+<li class="fragment"><strong>Research question:</strong> Are men more likely than women to vote for Reform?</li>
+<li class="fragment"><strong>Null hypothesis:</strong> There is no difference between men and women in their likelihood of voting Reform.</li>
+<li class="fragment"><strong>Alternative hypothesis:</strong> Men are more likely than women to vote for Reform.</li>
 </ul>
-
-<img data-src="../../assets/stata-run-dofile.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-6-check-if-it-has-worked-and-save-your-do-file" class="slide level2">
-<h2>Step 6: Check if it has worked and save your do-file</h2>
+</div>
+</section>
+<section id="example-1-the-estimates" class="slide level2">
+<h2>Example 1 — The estimates</h2>
+<div class="presenter-space">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Group</th>
+<th>Vote share (%)</th>
+<th>95% CI</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Men</td>
+<td><strong>13.7</strong></td>
+<td>[11.4, 16.3]</td>
+</tr>
+<tr class="even">
+<td>Women</td>
+<td><strong>9.8</strong></td>
+<td>[7.8, 12.1]</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li>If you see this on the top-right pane of your Stata screen, it has worked!</li>
-<li>Be sure to <strong>save your do-file</strong> in your <code>do</code> folder.</li>
+<li>Difference (Men − Women): <strong>+3.9</strong> percentage points</li>
+<li>CI for the difference: <strong>[+0.7, +7.1]</strong></li>
 </ul>
-
-<img data-src="../../assets/stata-variables.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-7-browse-the-data" class="slide level2">
-<h2>Step 7: Browse the data</h2>
+</div>
+</section>
+<section id="example-1-the-test" class="slide level2">
+<h2>Example 1 — The test</h2>
+<div class="presenter-space">
 <ul>
-<li>Click on this icon with magnifying glass. It will allow you to browse the data.</li>
-<li>Explore it while swithing between your Stata screen and the <a href="https://emckclac-my.sharepoint.com/:w:/r/personal/k2588471_kcl_ac_uk/_layouts/15/Doc.aspx?sourcedoc=%7BEA160DB5-B57C-4CAC-A10F-5C2B3FC18FB2%7D&amp;file=Brexit_Regional_Codebook.docx&amp;action=default&amp;mobileredirect=true">Codebook</a></li>
+<li class="fragment">The confidence interval for the difference is [0.7, 7.1].</li>
+<li class="fragment">The <strong>entire interval lies above zero</strong>.</li>
+<li class="fragment">Zero is not a plausible value for the true difference.</li>
+<li class="fragment">We <strong>reject the null hypothesis</strong>.</li>
 </ul>
-
-<img data-src="../../assets/stata-browse.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+</div>
+</section>
+<section id="example-2-newspaper-readership-and-ideology" class="slide level2">
+<h2>Example 2 — Newspaper readership and ideology</h2>
+<div class="presenter-space">
+<ul>
+<li class="fragment"><strong>Research question:</strong> Do Daily Mail and Daily Telegraph readers differ in their political self-placement?</li>
+<li class="fragment"><strong>Null hypothesis:</strong> There is no difference in mean left-right self-placement between Mail and Telegraph readers.</li>
+<li class="fragment"><strong>Alternative hypothesis:</strong> Telegraph readers are more right-leaning than Mail readers.</li>
+</ul>
+</div>
+</section>
+<section id="example-2-the-estimates" class="slide level2">
+<h2>Example 2 — The estimates</h2>
+<div class="presenter-space">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Group</th>
+<th>Mean ideology</th>
+<th>95% CI</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mail</td>
+<td><strong>6.1</strong></td>
+<td>[5.9, 6.4]</td>
+</tr>
+<tr class="even">
+<td>Telegraph</td>
+<td><strong>6.5</strong></td>
+<td>[6.1, 6.8]</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Difference (Mail − Telegraph): <strong>−0.4</strong></li>
+<li>95% CI for the difference: <strong>[−0.8, +0.1]</strong></li>
+</ul>
+</div>
+</section>
+<section id="example-2-the-test" class="slide level2">
+<h2>Example 2 — The test</h2>
+<div class="presenter-space">
+<ul>
+<li class="fragment">The confidence interval for the difference is [−0.8, +0.1].</li>
+<li class="fragment">The interval <strong>crosses zero</strong> — zero is a plausible value for the true difference.</li>
+<li class="fragment">We <strong>fail to reject the null hypothesis</strong>.</li>
+</ul>
+</div>
+</section>
+<section id="two-outcomes-two-conclusions" class="slide level2">
+<h2>Two outcomes, two conclusions</h2>
+<div class="presenter-space">
+<table class="caption-top">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 30%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>CI for difference</th>
+<th>Decision</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Gender × Reform</td>
+<td>[+0.7, +7.1]</td>
+<td><strong>Reject</strong> the null</td>
+</tr>
+<tr class="even">
+<td>Mail × Telegraph</td>
+<td>[−0.8, +0.1]</td>
+<td><strong>Fail to reject</strong> the null</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li class="fragment">In both cases, the same logic applies: does the interval include zero?</li>
+</ul>
+</div>
+</section>
+<section id="what-fail-to-reject-does-not-mean" class="slide level2">
+<h2>What “fail to reject” does not mean</h2>
+<div class="presenter-space">
+<ul>
+<li class="fragment">Failing to reject the null is <strong>not</strong> the same as proving the null is true.</li>
+<li class="fragment">We cannot conclude that Mail and Telegraph readers have identical ideologies.</li>
+<li class="fragment">It means the <strong>evidence in our sample is not strong enough</strong> to rule out zero.</li>
+</ul>
+</div>
+</section>
 <section id="recap" class="slide level2">
 <h2>Recap</h2>
+<div class="presenter-space">
 <ul>
-<li class="fragment">By setting the <strong>working directory</strong>, we tell Stata where our project lives.</li>
-<li class="fragment">Once that is done, we can <strong>load datasets</strong> by showing Stata where to find them in the subfolders inside our working directory.</li>
-<li class="fragment">Once a dataset is loaded, we can browse them using Stata.</li>
+<li class="fragment">A <strong>confidence interval</strong> can be used to test a null hypothesis.</li>
+<li class="fragment">If the 95% CI for a difference <strong>excludes zero</strong>, we reject the null hypothesis.</li>
+<li class="fragment">If it <strong>includes zero</strong>, we fail to reject the null hypothesis.</li>
+<li class="fragment">Failing to reject <span class="math inline">\(\neq\)</span> confirming the null</li>
 </ul>
+</div>
 </section>
 <section class="slide level2">
 
+<div class="presenter-space">
 <p><strong>Why this matters:</strong></p>
 <ul>
-<li class="fragment">This exercise allows you to familiarise yourself with how a dataset looks like in Stata.</li>
+<li class="fragment">Confidence intervals appear in almost every piece of published quantitative research.</li>
+<li class="fragment">Knowing how to read them as hypothesis tests is a core skill for evaluating empirical evidence.</li>
 </ul>
+</div>
 
 
 </section></section>

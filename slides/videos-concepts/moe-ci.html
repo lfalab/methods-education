@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Doing Reproducible Research</title>
+<title>Margin of Error and Confidence Interval</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/empirical-vs-normative.html">Week 2: Research Questions, Theories, and Hypotheses</a></li><li class="breadcrumb-item"><a href="../../slides/videos-stata/doing-reproducible-research.html">Doing Reproducible Research</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/sampling.html">Week 7: Estimation, Uncertainty, and Statistical Inference</a></li><li class="breadcrumb-item"><a href="../../slides/videos-concepts/moe-ci.html">Confidence Intervals and Margins of Error</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -163,7 +163,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/doing-reproducible-research.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../slides/videos-stata/doing-reproducible-research.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Doing Reproducible Research</span></a>
   </div>
 </li>
@@ -359,7 +359,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/moe-ci.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/moe-ci.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Confidence Intervals and Margins of Error</span></a>
   </div>
 </li>
@@ -387,121 +387,153 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#doing-reproducible-research" id="toc-doing-reproducible-research" class="nav-link active" data-scroll-target="#doing-reproducible-research">Doing Reproducible Research</a>
+  <li><a href="#confidence-intervals-and-margins-of-error" id="toc-confidence-intervals-and-margins-of-error" class="nav-link active" data-scroll-target="#confidence-intervals-and-margins-of-error">Confidence Intervals and Margins of Error</a>
   <ul class="collapse">
   <li><a href="#youll-learn-to" id="toc-youll-learn-to" class="nav-link" data-scroll-target="#youll-learn-to">You’ll learn to</a></li>
-  <li><a href="#what-is-reproducible-research" id="toc-what-is-reproducible-research" class="nav-link" data-scroll-target="#what-is-reproducible-research">What is reproducible research?</a></li>
-  <li><a href="#why-care-about-reproducibility" id="toc-why-care-about-reproducibility" class="nav-link" data-scroll-target="#why-care-about-reproducibility">Why care about reproducibility?</a></li>
-  <li><a href="#data-and-code" id="toc-data-and-code" class="nav-link" data-scroll-target="#data-and-code">Data and Code</a></li>
-  <li><a href="#what-this-looks-like-in-stata" id="toc-what-this-looks-like-in-stata" class="nav-link" data-scroll-target="#what-this-looks-like-in-stata">What this looks like in Stata</a></li>
-  <li><a href="#a-simple-project-folder-structure" id="toc-a-simple-project-folder-structure" class="nav-link" data-scroll-target="#a-simple-project-folder-structure">A simple project folder structure</a></li>
-  <li><a href="#a-simple-project-folder-structure-1" id="toc-a-simple-project-folder-structure-1" class="nav-link" data-scroll-target="#a-simple-project-folder-structure-1">A simple project folder structure</a></li>
+  <li><a href="#random-samples-differ-from-one-another" id="toc-random-samples-differ-from-one-another" class="nav-link" data-scroll-target="#random-samples-differ-from-one-another">Random samples differ from one another</a></li>
+  <li><a href="#from-sample-to-estimate" id="toc-from-sample-to-estimate" class="nav-link" data-scroll-target="#from-sample-to-estimate">From sample to estimate</a></li>
+  <li><a href="#the-problem-with-a-single-number" id="toc-the-problem-with-a-single-number" class="nav-link" data-scroll-target="#the-problem-with-a-single-number">The problem with a single number</a></li>
+  <li><a href="#the-margin-of-error" id="toc-the-margin-of-error" class="nav-link" data-scroll-target="#the-margin-of-error">The margin of error</a></li>
+  <li><a href="#from-margin-of-error-to-confidence-interval" id="toc-from-margin-of-error-to-confidence-interval" class="nav-link" data-scroll-target="#from-margin-of-error-to-confidence-interval">From margin of error to confidence interval</a></li>
+  <li><a href="#interpreting-the-confidence-interval" id="toc-interpreting-the-confidence-interval" class="nav-link" data-scroll-target="#interpreting-the-confidence-interval">Interpreting the confidence interval</a></li>
+  <li><a href="#what-makes-an-interval-wider-or-narrower" id="toc-what-makes-an-interval-wider-or-narrower" class="nav-link" data-scroll-target="#what-makes-an-interval-wider-or-narrower">What makes an interval wider or narrower?</a></li>
+  <li><a href="#a-worked-example-two-polls" id="toc-a-worked-example-two-polls" class="nav-link" data-scroll-target="#a-worked-example-two-polls">A worked example: two polls</a></li>
+  <li><a href="#when-the-margin-of-error-is-meaningless" id="toc-when-the-margin-of-error-is-meaningless" class="nav-link" data-scroll-target="#when-the-margin-of-error-is-meaningless">When the margin of error is meaningless</a></li>
   <li><a href="#recap" id="toc-recap" class="nav-link" data-scroll-target="#recap">Recap</a></li>
   </ul></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="doing-reproducible-research-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="moe-ci-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/empirical-vs-normative.html">Week 2: Research Questions, Theories, and Hypotheses</a></li><li class="breadcrumb-item"><a href="../../slides/videos-stata/doing-reproducible-research.html">Doing Reproducible Research</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/sampling.html">Week 7: Estimation, Uncertainty, and Statistical Inference</a></li><li class="breadcrumb-item"><a href="../../slides/videos-concepts/moe-ci.html">Confidence Intervals and Margins of Error</a></li></ol></nav></header>
 
 
 
 
-<section id="doing-reproducible-research" class="level1 title-left">
-<h1 class="title-left">Doing Reproducible Research</h1>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DVSg_RFjV-8?si=gFgHHBNKKhnqEEC1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
-</iframe>
-<!-- [Watch on YouTube](https://youtu.be/DVSg_RFjV-8) -->
-<hr>
+<section id="confidence-intervals-and-margins-of-error" class="level1 title-left">
+<h1 class="title-left">Confidence Intervals and Margins of Error</h1>
 <section id="youll-learn-to" class="level2">
 <h2 class="anchored" data-anchor-id="youll-learn-to">You’ll learn to</h2>
 <div class="presenter-space">
 <ul>
-<li>Explain what <strong>reproducible research</strong> means and why it matters.</li>
-<li>Set up a project <strong>folder structure</strong> that supports reproducible work.</li>
+<li>Interpret a <strong>margin of error</strong> and explain where it comes from.</li>
+<li>Construct and interpret a <strong>confidence interval</strong> from a point estimate and a margin of error.</li>
+<li>Explain what makes a confidence interval <strong>wider or narrower</strong>.</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="what-is-reproducible-research" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-reproducible-research">What is reproducible research?</h2>
+<section id="random-samples-differ-from-one-another" class="level2">
+<h2 class="anchored" data-anchor-id="random-samples-differ-from-one-another">Random samples differ from one another</h2>
 <div class="presenter-space">
 <ul>
-<li>Being able to obtain the <strong>same results</strong> using the same data and code.</li>
-<li>Anyone should be able to follow the steps of your analysis.</li>
-<li>This includes <strong>you</strong> in a few weeks’ time.</li>
+<li>Each random sample we draw from a population will be <strong>slightly different</strong> from every other.</li>
+<li>This is not a flaw — it is an unavoidable consequence of working with samples.</li>
+<li>It means that any estimate we produce from a sample carries <strong>uncertainty</strong>.</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="why-care-about-reproducibility" class="level2">
-<h2 class="anchored" data-anchor-id="why-care-about-reproducibility">Why care about reproducibility?</h2>
+<section id="from-sample-to-estimate" class="level2">
+<h2 class="anchored" data-anchor-id="from-sample-to-estimate">From sample to estimate</h2>
 <div class="presenter-space">
 <ul>
-<li>Small changes accumulate quickly, and we often forget what we do.</li>
-<li>Clear structures make mistakes easier for you (and others) to <strong>detect and fix</strong>.</li>
-<li>Important for <strong>transparency</strong> and <strong>credibility</strong>.</li>
+<li>Suppose we want to know the Prime Minister’s approval rating among all adults.</li>
+<li>We cannot ask everyone, so we take a <strong>random sample</strong> of 1,000 people.</li>
+<li>Our sample tells us that <strong>42%</strong> approve.</li>
+<li>This single number (42%) is our <strong>point estimate</strong>.</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="data-and-code" class="level2">
-<h2 class="anchored" data-anchor-id="data-and-code">Data and Code</h2>
+<section id="the-problem-with-a-single-number" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem-with-a-single-number">The problem with a single number</h2>
 <div class="presenter-space">
 <ul>
-<li><p><strong>Data:</strong> the information you gather to begin your analysis.</p></li>
-<li><p><strong>Code:</strong> the instructions that transform and analyse the data.</p></li>
-<li><p>Reproducible research <strong>separates</strong> data from code.</p></li>
+<li>A point estimate gives us our <strong>best guess</strong> from the sample.</li>
+<li>But samples vary, and the true population value is unlikely to be <strong>exactly</strong> 42%.</li>
+<li>We need to know <strong>how much uncertainty</strong> surrounds our estimate.</li>
+<li>That is what the margin of error does.</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="what-this-looks-like-in-stata" class="level2">
-<h2 class="anchored" data-anchor-id="what-this-looks-like-in-stata">What this looks like in Stata</h2>
+<section id="the-margin-of-error" class="level2">
+<h2 class="anchored" data-anchor-id="the-margin-of-error">The margin of error</h2>
 <div class="presenter-space">
 <ul>
-<li>The dataset is treated as <strong>read-only</strong>.</li>
-<li>All changes happen in a <strong>do-file</strong>.</li>
-<li>The do-file records every step in your analysis.</li>
+<li>The <strong>margin of error</strong> captures the uncertainty that comes from working with a sample rather than the full population.</li>
+<li>A margin of error of <strong>±3%</strong> means the true value is likely within 3 percentage points of our estimate.</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="a-simple-project-folder-structure" class="level2">
-<h2 class="anchored" data-anchor-id="a-simple-project-folder-structure">A simple project folder structure</h2>
+<section id="from-margin-of-error-to-confidence-interval" class="level2">
+<h2 class="anchored" data-anchor-id="from-margin-of-error-to-confidence-interval">From margin of error to confidence interval</h2>
 <div class="presenter-space">
 <ul>
-<li><p><code>my-research-project/</code></p>
+<li><p>A <strong>confidence interval</strong> is constructed by applying the margin of error to the point estimate:</p>
 <ul>
-<li><code>data-raw</code></li>
-<li><code>data-clean</code></li>
-<li><code>do</code></li>
-<li><code>output</code></li>
+<li><strong>Lower bound:</strong> point estimate − margin of error</li>
+<li><strong>Upper bound:</strong> point estimate + margin of error</li>
+</ul></li>
+<li><p>In our example: 42% ± 3% gives a confidence interval of <strong>[39%, 45%]</strong>.</p></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="interpreting-the-confidence-interval" class="level2">
+<h2 class="anchored" data-anchor-id="interpreting-the-confidence-interval">Interpreting the confidence interval</h2>
+<div class="presenter-space">
+<ul>
+<li><p>Confidence intervals vary depending on how confident we want to be.</p></li>
+<li><p>Most social scientists work with a <strong>95%</strong> level on confidence.</p>
+<ul>
+<li>We are <strong>95% confident</strong> that the true approval rating in the population lies between 39% and 45%.</li>
+</ul></li>
+</ul>
+<!-- -   This does **not** mean there is a 95% chance the true value is in this particular interval. -->
+<!-- -   It means that if we repeated this procedure many times, about 95% of the intervals we produce would contain the true value. -->
+</div>
+<hr>
+</section>
+<section id="what-makes-an-interval-wider-or-narrower" class="level2">
+<h2 class="anchored" data-anchor-id="what-makes-an-interval-wider-or-narrower">What makes an interval wider or narrower?</h2>
+<div class="presenter-space">
+<ul>
+<li><p><strong>Sample size:</strong> larger samples produce <strong>narrower</strong> intervals.</p>
+<ul>
+<li>More data → less uncertainty → tighter estimate.</li>
+</ul></li>
+<li><p><strong>Confidence level:</strong> higher confidence (e.g., 99% vs.&nbsp;95%) produces <strong>wider</strong> intervals.</p>
+<ul>
+<li>More certainty requires a broader net.</li>
 </ul></li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="a-simple-project-folder-structure-1" class="level2">
-<h2 class="anchored" data-anchor-id="a-simple-project-folder-structure-1">A simple project folder structure</h2>
+<section id="a-worked-example-two-polls" class="level2">
+<h2 class="anchored" data-anchor-id="a-worked-example-two-polls">A worked example: two polls</h2>
 <div class="presenter-space">
 <ul>
-<li><p><code>data-raw</code></p>
+<li><p>Two organisations poll the same PM approval rating independently.</p>
 <ul>
-<li>Original data files, never edited.</li>
+<li>Poll A: <strong>42%</strong> approve, margin of error <strong>±3%</strong> → interval [39%, 45%]</li>
+<li>Poll B: <strong>44%</strong> approve, margin of error <strong>±3%</strong> → interval [41%, 47%]</li>
 </ul></li>
-<li><p><code>data-clean</code></p>
+<li><p>The point estimates differ, but the intervals <strong>overlap</strong>.</p></li>
+<li><p>Both polls are <strong>consistent</strong> with the same population value.</p></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="when-the-margin-of-error-is-meaningless" class="level2">
+<h2 class="anchored" data-anchor-id="when-the-margin-of-error-is-meaningless">When the margin of error is meaningless</h2>
+<div class="presenter-space">
 <ul>
-<li>Cleaned or transformed datasets.</li>
-</ul></li>
-<li><p><code>do</code></p>
-<ul>
-<li>All Stata do-files.</li>
-</ul></li>
-<li><p><code>output</code></p>
-<ul>
-<li>Tables and figures.</li>
-</ul></li>
+<li>The margin of error only applies to <strong>probability samples</strong>.</li>
+<li>Reporting a margin of error alongside a non-probability sample is <strong>misleading</strong>.</li>
 </ul>
 </div>
 <hr>
@@ -510,17 +542,18 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="recap">Recap</h2>
 <div class="presenter-space">
 <ul>
-<li><strong>Reproducibility</strong> means others can retrace your analysis.</li>
-<li><strong>Separating</strong> data and code is key.</li>
-<li>A clear folder structure is <strong>essential</strong> for good analysis.</li>
+<li>A <strong>point estimate</strong> is our best guess from the sample.</li>
+<li>The <strong>margin of error</strong> expresses the uncertainty around that estimate.</li>
+<li>A <strong>confidence interval</strong> = point estimate ± margin of error.</li>
+<li>Margins of error are only meaningful for <strong>probability samples</strong>.</li>
 </ul>
 </div>
 <hr>
 <div class="presenter-space">
 <p><strong>Why this matters:</strong></p>
 <ul>
-<li>Reproducible workflows make your analysis clearer and more reliable.</li>
-<li>Knowing how to set up a folder structure now will save you from headaches in the future!</li>
+<li>Poll results and survey findings are reported with margins of error every day.</li>
+<li>Knowing how to interpret a confidence interval is essential for reading empirical evidence critically.</li>
 </ul>
 </div>
 

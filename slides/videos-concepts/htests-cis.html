@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Leonardo Falabella">
 
-<title>Describing Correlations: Bivariate Analysis</title>
+<title>Hypothesis Tests Using Confidence Intervals</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,24 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-30ae6b2e5328ac7375bd033934d6d19c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-a35d343c8bdbcb87d3b82ed68e48a46c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -70,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -82,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Describing Correlations: Bivariate Analysis</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/sampling.html">Week 7: Estimation, Uncertainty, and Statistical Inference</a></li><li class="breadcrumb-item"><a href="../../slides/videos-concepts/htests-cis.html">Hypothesis Tests Using Confidence Intervals</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -96,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="../index.html" class="sidebar-logo-link">
+      <a href="../../index.html" class="sidebar-logo-link">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -108,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Statistics for Political Science</span></a>
   </div>
 </li>
@@ -123,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/lectures/thinking-with-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/lectures/thinking-with-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 1: Thinking With Data</span></a>
   </div>
 </li>
@@ -140,37 +168,37 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-concepts/empirical-vs-normative.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/empirical-vs-normative.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Normative and Empirical Questions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-concepts/descriptive-vs-causal.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/descriptive-vs-causal.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Descriptive and Causal Questions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-concepts/units-theories-hypotheses.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/units-theories-hypotheses.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Units of Analysis, Theories, and Hypotheses</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-concepts/dependent-independent-variables.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/dependent-independent-variables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dependent and Independent Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-stata/doing-reproducible-research.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-stata/doing-reproducible-research.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Doing Reproducible Research</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/lectures/questions-theories-hypotheses.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/lectures/questions-theories-hypotheses.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 2: Research Questions, Theories, and Hypotheses</span></a>
   </div>
 </li>
@@ -187,37 +215,37 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-concepts/measuring-variables.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/measuring-variables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Measuring Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-concepts/types-of-variables.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/types-of-variables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Types of Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-stata/datasets-codebooks.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-stata/datasets-codebooks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Datasets and Codebooks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-stata/stata-interface.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-stata/stata-interface.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The Stata Interface</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-stata/loading-browsing-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-stata/loading-browsing-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Loading and Browsing Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/lectures/measurement-lecture.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/lectures/measurement-lecture.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 3: Measurement and Types of Variables</span></a>
   </div>
 </li>
@@ -234,43 +262,43 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-concepts/summarising-distribution.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/summarising-distribution.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Summarising a Distribution</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-concepts/variance-sd.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/variance-sd.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Variance and Standard Deviation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-concepts/bar-histograms.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/bar-histograms.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bar Charts and Histograms</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-stata/summary-stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-stata/summary-stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Summarising Distributions in Stata</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-stata/bar-hist-stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-stata/bar-hist-stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bar Charts and Histograms in Stata</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/lectures/distributions-lecture.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/lectures/distributions-lecture.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 4: Describing Distributions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../activities/A04-distributions-activity.html" class="sidebar-item-text sidebar-link">
+  <a href="../../activities/A04-distributions-activity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Mock Exam Questions: Describing Distributions</span></a>
   </div>
 </li>
@@ -287,50 +315,93 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-concepts/correlations-nominal.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/correlations-nominal.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Correlations Between Nominal Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-concepts/comparing-means.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/comparing-means.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Comparing Means by Category</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-concepts/scatter-reg.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/scatter-reg.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Scatterplots and Regression Lines</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-concepts/types-plots-tables.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/types-plots-tables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">From Variable Types to Plots and Tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-stata/corr-stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-stata/corr-stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Describing Correlations in Stata</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/videos-stata/transform-stata.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data Transformations in Stata</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../slides/lectures/correlations-lecture.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/lectures/correlations-lecture.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 5: Describing Correlations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../activities/A05-correlations-activity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Describing Correlations: Bivariate Analysis</span></a>
+  <a href="../../activities/A05-correlations-activity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Seminar Activity: Country-level Correlations</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Reading Week</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">activities/reading-week-catchup.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 7: Estimation, Uncertainty, and Statistical Inference</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../slides/videos-concepts/sampling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Why Sampling Matters</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../slides/videos-concepts/moe-ci.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Confidence Intervals and Margins of Error</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../slides/videos-concepts/htests-cis.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Hypothesis Tests Using Confidence Intervals</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../slides/videos-concepts/p-values.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Interpreting P-values</span></a>
   </div>
 </li>
       </ul>
@@ -344,218 +415,261 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
+  <ul>
+  <li><a href="#hypothesis-tests-using-confidence-intervals" id="toc-hypothesis-tests-using-confidence-intervals" class="nav-link active" data-scroll-target="#hypothesis-tests-using-confidence-intervals">Hypothesis Tests Using Confidence Intervals</a>
   <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1">Exercise 1</a></li>
-  <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2">Exercise 2</a></li>
-  <li><a href="#exercise-3" id="toc-exercise-3" class="nav-link" data-scroll-target="#exercise-3">Exercise 3</a></li>
-  <li><a href="#exercise-4" id="toc-exercise-4" class="nav-link" data-scroll-target="#exercise-4">Exercise 4</a></li>
-  <li><a href="#exercise-5" id="toc-exercise-5" class="nav-link" data-scroll-target="#exercise-5">Exercise 5</a></li>
-  <li><a href="#exercise-6" id="toc-exercise-6" class="nav-link" data-scroll-target="#exercise-6">Exercise 6</a></li>
-  <li><a href="#exercise-7" id="toc-exercise-7" class="nav-link" data-scroll-target="#exercise-7">Exercise 7</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">Reflection</a></li>
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#youll-learn-to" id="toc-youll-learn-to" class="nav-link" data-scroll-target="#youll-learn-to">You’ll learn to</a></li>
+  <li><a href="#where-we-left-off" id="toc-where-we-left-off" class="nav-link" data-scroll-target="#where-we-left-off">Where we left off</a></li>
+  <li><a href="#the-null-hypothesis-as-a-claim-about-zero" id="toc-the-null-hypothesis-as-a-claim-about-zero" class="nav-link" data-scroll-target="#the-null-hypothesis-as-a-claim-about-zero">The null hypothesis as a claim about zero</a></li>
+  <li><a href="#the-logic-of-the-test" id="toc-the-logic-of-the-test" class="nav-link" data-scroll-target="#the-logic-of-the-test">The logic of the test</a></li>
+  <li><a href="#example-1-gender-and-reform-vote" id="toc-example-1-gender-and-reform-vote" class="nav-link" data-scroll-target="#example-1-gender-and-reform-vote">Example 1 — Gender and Reform vote</a></li>
+  <li><a href="#example-1-the-estimates" id="toc-example-1-the-estimates" class="nav-link" data-scroll-target="#example-1-the-estimates">Example 1 — The estimates</a></li>
+  <li><a href="#example-1-the-test" id="toc-example-1-the-test" class="nav-link" data-scroll-target="#example-1-the-test">Example 1 — The test</a></li>
+  <li><a href="#example-2-newspaper-readership-and-ideology" id="toc-example-2-newspaper-readership-and-ideology" class="nav-link" data-scroll-target="#example-2-newspaper-readership-and-ideology">Example 2 — Newspaper readership and ideology</a></li>
+  <li><a href="#example-2-the-estimates" id="toc-example-2-the-estimates" class="nav-link" data-scroll-target="#example-2-the-estimates">Example 2 — The estimates</a></li>
+  <li><a href="#example-2-the-test" id="toc-example-2-the-test" class="nav-link" data-scroll-target="#example-2-the-test">Example 2 — The test</a></li>
+  <li><a href="#two-outcomes-two-conclusions" id="toc-two-outcomes-two-conclusions" class="nav-link" data-scroll-target="#two-outcomes-two-conclusions">Two outcomes, two conclusions</a></li>
+  <li><a href="#what-fail-to-reject-does-not-mean" id="toc-what-fail-to-reject-does-not-mean" class="nav-link" data-scroll-target="#what-fail-to-reject-does-not-mean">What “fail to reject” does not mean</a></li>
+  <li><a href="#recap" id="toc-recap" class="nav-link" data-scroll-target="#recap">Recap</a></li>
+  </ul></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="htests-cis-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/sampling.html">Week 7: Estimation, Uncertainty, and Statistical Inference</a></li><li class="breadcrumb-item"><a href="../../slides/videos-concepts/htests-cis.html">Hypothesis Tests Using Confidence Intervals</a></li></ol></nav></header>
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Describing Correlations: Bivariate Analysis</h1>
-<p class="subtitle lead">Statistics for Political Science — Week 5</p>
+
+
+
+<section id="hypothesis-tests-using-confidence-intervals" class="level1 title-left">
+<h1 class="title-left">Hypothesis Tests Using Confidence Intervals</h1>
+<section id="youll-learn-to" class="level2">
+<h2 class="anchored" data-anchor-id="youll-learn-to">You’ll learn to</h2>
+<div class="presenter-space">
+<ul>
+<li>Use a <strong>confidence interval</strong> to assess evidence against a null hypothesis.</li>
+<li>Interpret results using the language of <strong>rejecting</strong> or <strong>failing to reject</strong> the null.</li>
+<li>Explain what it means to fail to reject — and what it does <strong>not</strong> mean.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="where-we-left-off" class="level2">
+<h2 class="anchored" data-anchor-id="where-we-left-off">Where we left off</h2>
+<div class="presenter-space">
+<ul>
+<li>In the previous video, we built confidence intervals around point estimates.</li>
+<li>A 95% confidence interval gives us a <strong>range of plausible values</strong> for the true population quantity.</li>
+<li>Now we ask: can we use that interval to test a specific claim?</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="the-null-hypothesis-as-a-claim-about-zero" class="level2">
+<h2 class="anchored" data-anchor-id="the-null-hypothesis-as-a-claim-about-zero">The null hypothesis as a claim about zero</h2>
+<div class="presenter-space">
+<ul>
+<li>A null hypothesis typically claims there is <strong>no difference</strong> between groups.</li>
+<li>In other words, it claims the true difference is <strong>zero</strong>.</li>
+<li>We can test this claim directly using a confidence interval.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="the-logic-of-the-test" class="level2">
+<h2 class="anchored" data-anchor-id="the-logic-of-the-test">The logic of the test</h2>
+<div class="presenter-space">
+<ul>
+<li><p>We construct a 95% confidence interval for the <strong>difference</strong> between groups.</p></li>
+<li><p>Then we ask: does the interval include zero?</p>
+<ul>
+<li>If zero is outside the interval: zero is not a plausible value for the true difference — we <strong>reject</strong> the null.</li>
+<li>If zero is inside the interval: zero remains plausible — we <strong>fail to reject</strong> the null.</li>
+</ul></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="example-1-gender-and-reform-vote" class="level2">
+<h2 class="anchored" data-anchor-id="example-1-gender-and-reform-vote">Example 1 — Gender and Reform vote</h2>
+<div class="presenter-space">
+<ul>
+<li><strong>Research question:</strong> Are men more likely than women to vote for Reform?</li>
+<li><strong>Null hypothesis:</strong> There is no difference between men and women in their likelihood of voting Reform.</li>
+<li><strong>Alternative hypothesis:</strong> Men are more likely than women to vote for Reform.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="example-1-the-estimates" class="level2">
+<h2 class="anchored" data-anchor-id="example-1-the-estimates">Example 1 — The estimates</h2>
+<div class="presenter-space">
+<div class="nonincremental">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Group</th>
+<th>Vote share (%)</th>
+<th>95% CI</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Men</td>
+<td><strong>13.7</strong></td>
+<td>[11.4, 16.3]</td>
+</tr>
+<tr class="even">
+<td>Women</td>
+<td><strong>9.8</strong></td>
+<td>[7.8, 12.1]</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Difference (Men − Women): <strong>+3.9</strong> percentage points</li>
+<li>CI for the difference: <strong>[+0.7, +7.1]</strong></li>
+</ul>
+</div>
+</div>
+<hr>
+</section>
+<section id="example-1-the-test" class="level2">
+<h2 class="anchored" data-anchor-id="example-1-the-test">Example 1 — The test</h2>
+<div class="presenter-space">
+<ul>
+<li>The confidence interval for the difference is [0.7, 7.1].</li>
+<li>The <strong>entire interval lies above zero</strong>.</li>
+<li>Zero is not a plausible value for the true difference.</li>
+<li>We <strong>reject the null hypothesis</strong>.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="example-2-newspaper-readership-and-ideology" class="level2">
+<h2 class="anchored" data-anchor-id="example-2-newspaper-readership-and-ideology">Example 2 — Newspaper readership and ideology</h2>
+<div class="presenter-space">
+<ul>
+<li><strong>Research question:</strong> Do Daily Mail and Daily Telegraph readers differ in their political self-placement?</li>
+<li><strong>Null hypothesis:</strong> There is no difference in mean left-right self-placement between Mail and Telegraph readers.</li>
+<li><strong>Alternative hypothesis:</strong> Telegraph readers are more right-leaning than Mail readers.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="example-2-the-estimates" class="level2">
+<h2 class="anchored" data-anchor-id="example-2-the-estimates">Example 2 — The estimates</h2>
+<div class="presenter-space">
+<div class="nonincremental">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Group</th>
+<th>Mean ideology</th>
+<th>95% CI</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mail</td>
+<td><strong>6.1</strong></td>
+<td>[5.9, 6.4]</td>
+</tr>
+<tr class="even">
+<td>Telegraph</td>
+<td><strong>6.5</strong></td>
+<td>[6.1, 6.8]</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Difference (Mail − Telegraph): <strong>−0.4</strong></li>
+<li>95% CI for the difference: <strong>[−0.8, +0.1]</strong></li>
+</ul>
+</div>
+</div>
+<hr>
+</section>
+<section id="example-2-the-test" class="level2">
+<h2 class="anchored" data-anchor-id="example-2-the-test">Example 2 — The test</h2>
+<div class="presenter-space">
+<ul>
+<li>The confidence interval for the difference is [−0.8, +0.1].</li>
+<li>The interval <strong>crosses zero</strong> — zero is a plausible value for the true difference.</li>
+<li>We <strong>fail to reject the null hypothesis</strong>.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="two-outcomes-two-conclusions" class="level2">
+<h2 class="anchored" data-anchor-id="two-outcomes-two-conclusions">Two outcomes, two conclusions</h2>
+<div class="presenter-space">
+<div class="nonincremental">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 30%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>CI for difference</th>
+<th>Decision</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Gender × Reform</td>
+<td>[+0.7, +7.1]</td>
+<td><strong>Reject</strong> the null</td>
+</tr>
+<tr class="even">
+<td>Mail × Telegraph</td>
+<td>[−0.8, +0.1]</td>
+<td><strong>Fail to reject</strong> the null</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>In both cases, the same logic applies: does the interval include zero?</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="what-fail-to-reject-does-not-mean" class="level2">
+<h2 class="anchored" data-anchor-id="what-fail-to-reject-does-not-mean">What “fail to reject” does not mean</h2>
+<div class="presenter-space">
+<ul>
+<li>Failing to reject the null is <strong>not</strong> the same as proving the null is true.</li>
+<li>We cannot conclude that Mail and Telegraph readers have identical ideologies.</li>
+<li>It means the <strong>evidence in our sample is not strong enough</strong> to rule out zero.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="recap" class="level2">
+<h2 class="anchored" data-anchor-id="recap">Recap</h2>
+<div class="presenter-space">
+<ul>
+<li>A <strong>confidence interval</strong> can be used to test a null hypothesis.</li>
+<li>If the 95% CI for a difference <strong>excludes zero</strong>, we reject the null hypothesis.</li>
+<li>If it <strong>includes zero</strong>, we fail to reject the null hypothesis.</li>
+<li>Failing to reject <span class="math inline">\(\neq\)</span> confirming the null</li>
+</ul>
+</div>
+<hr>
+<div class="presenter-space">
+<p><strong>Why this matters:</strong></p>
+<ul>
+<li>Confidence intervals appear in almost every piece of published quantitative research.</li>
+<li>Knowing how to read them as hypothesis tests is a core skill for evaluating empirical evidence.</li>
+</ul>
 </div>
 
 
-
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Leonardo Falabella </p>
-          </div>
-  </div>
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>In this activity, you will practise choosing the right analytical tool for different types of variable pairs, producing the relevant output in Stata, and interpreting what you find. Work through each exercise in order, discussing your choices and interpretations with your group before moving on.</p>
-<p>For each exercise, your first task is always the same: identify the type of each variable, decide which case applies, and choose the appropriate tool. Only then should you proceed to Stata.</p>
-<p>The dataset for all exercises is the Quality of Government (QoG) Basic Cross-Section dataset (<code>qog_bas_cs_jan26.dta</code>). Refer to the QoG codebook if you need more detail about any variable.</p>
-<hr>
 </section>
-<section id="exercise-1" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-1">Exercise 1</h2>
-<p><strong>Variables:</strong> <code>bmr_dem</code> and <code>ht_colonial</code></p>
-<ul>
-<li><strong><code>bmr_dem</code></strong> — Dichotomous democracy measure (Boix, Miller, and Rosato). This is a binary variable: 0 = not a democracy, 1 = democracy. Countries are coded as democratic if political leaders are chosen through free and fair elections and a minimum suffrage threshold is met.</li>
-<li><strong><code>ht_colonial</code></strong> — Colonial origin. A categorical variable recording the country’s former Western overseas colonial ruler (e.g.&nbsp;British, French, Spanish, Portuguese, Belgian). Countries that were never colonised by a Western overseas power are coded 0.</li>
-</ul>
-<p><strong>Research question:</strong> Do countries with different colonial histories differ in their likelihood of being democratic today?</p>
-<p><strong>Tasks:</strong></p>
-<ol type="1">
-<li>Identify the type of each variable. What analytical case does this pair belong to? What tool should you use?</li>
-<li>Produce the appropriate table in Stata. Try both row and column percentages. Which orientation is more informative for answering the research question? Why?</li>
-<li>Produce the appropriate chart.</li>
-<li>Looking at your output: are some colonial origins more strongly associated with democratic status than others? Which patterns stand out?</li>
-</ol>
-<blockquote class="blockquote">
-<p><strong>Hint:</strong> Think about what row percentages and column percentages each tell you. Row percentages show the breakdown of one variable within each category of the other — switching between them can reveal different aspects of the relationship.</p>
-</blockquote>
-<hr>
-</section>
-<section id="exercise-2" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-2">Exercise 2</h2>
-<p><strong>Variables:</strong> <code>gol_est</code> and <code>ht_region</code></p>
-<ul>
-<li><strong><code>gol_est</code></strong> — Electoral system type (Bormann and Golder). A categorical variable with three values: 1 = Majoritarian, 2 = Proportional, 3 = Mixed.</li>
-<li><strong><code>ht_region</code></strong> — Region of the world. A categorical variable classifying countries into ten politico-geographic regions, including Eastern Europe and post-Soviet Union, Latin America, North Africa and the Middle East, Sub-Saharan Africa, Western Europe and North America, East Asia, South-East Asia, South Asia, the Pacific, and the Caribbean.</li>
-</ul>
-<p><strong>Research question:</strong> Do countries in different world regions tend to use different electoral systems?</p>
-<p><strong>Tasks:</strong></p>
-<ol type="1">
-<li>Identify the type of each variable. What analytical case does this pair belong to? What tool should you use?</li>
-<li>Produce the appropriate table and chart in Stata.</li>
-<li>Looking at your output: does electoral system type appear to be evenly distributed across regions, or does it cluster? Are there any regions where one system type clearly dominates?</li>
-<li>Why might the choice of electoral system vary across world regions? Think about historical legacies, colonial influences, and regional diffusion of institutional models.</li>
-</ol>
-<blockquote class="blockquote">
-<p><strong>Hint:</strong> A bivariate chart will make regional patterns easier to see than a table alone. Look for categories that are heavily concentrated in one region or absent from another.</p>
-</blockquote>
-<hr>
-</section>
-<section id="exercise-3" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-3">Exercise 3</h2>
-<p><strong>Variables:</strong> <code>ht_colonial</code> and <code>ti_cpi</code></p>
-<ul>
-<li><strong><code>ht_colonial</code></strong> — Colonial origin. See Exercise 1 for the full description.</li>
-<li><strong><code>ti_cpi</code></strong> — Corruption Perceptions Index (Transparency International). A continuous variable ranging from 0 to 100, where 0 means highly corrupt and 100 means highly clean. It captures perceptions of public sector corruption as seen by business people, risk analysts, and the general public.</li>
-</ul>
-<p><strong>Research question:</strong> Do countries with different colonial histories differ in their average levels of perceived corruption today?</p>
-<p><strong>Tasks:</strong></p>
-<ol type="1">
-<li>Identify the type of each variable. What analytical case does this pair belong to? What tool should you use?</li>
-<li>Produce the appropriate summary table and chart in Stata.</li>
-<li>Looking at your output: which colonial-origin groups have the highest and lowest average corruption scores? Are the differences large or small?</li>
-<li>What might explain any patterns you observe? Consider what else differs across countries with different colonial histories.</li>
-</ol>
-<blockquote class="blockquote">
-<p><strong>Hint:</strong> The bar chart of means lets you compare average corruption scores across colonial-origin categories at a glance. Look for categories with notably higher or lower means, and consider whether any categories have few countries — this affects how reliable the average is.</p>
-</blockquote>
-<hr>
-</section>
-<section id="exercise-4" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-4">Exercise 4</h2>
-<p><strong>Variables:</strong> <code>gol_est</code> and <code>ideavt_legvt</code></p>
-<ul>
-<li><strong><code>gol_est</code></strong> — Electoral system type. See Exercise 2 for the full description.</li>
-<li><strong><code>ideavt_legvt</code></strong> — Parliamentary election voter turnout (Institute for Democracy and Electoral Assistance). A continuous variable measuring the percentage of the voting-age population that cast a vote in the most recent parliamentary election, ranging from 0 to 100.</li>
-</ul>
-<p><strong>Research question:</strong> Do countries with different electoral systems differ in their average levels of voter turnout?</p>
-<p><strong>Tasks:</strong></p>
-<ol type="1">
-<li>Identify the type of each variable. What analytical case does this pair belong to? What tool should you use?</li>
-<li>Produce the appropriate summary table and chart in Stata.</li>
-<li>Looking at your output: which electoral system is associated with the highest average turnout? Which with the lowest? Is the difference substantively meaningful?</li>
-<li>Why might electoral system type be associated with turnout? Think about how different systems create incentives for parties to mobilise voters.</li>
-</ol>
-<blockquote class="blockquote">
-<p><strong>Hint:</strong> Compare the means across the three electoral system categories. A difference of a few percentage points in turnout can be politically significant at the national level, even if it looks modest in a chart.</p>
-</blockquote>
-<hr>
-</section>
-<section id="exercise-5" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-5">Exercise 5</h2>
-<p><strong>Variables:</strong> <code>wdi_gini</code> and <code>wdi_wip</code></p>
-<ul>
-<li><strong><code>wdi_gini</code></strong> — Gini index (World Bank). A continuous variable measuring income inequality within a country. It ranges from 0 (perfect equality, where everyone has the same income) to 100 (perfect inequality, where one person has all the income). Higher values mean more inequality.</li>
-<li><strong><code>wdi_wip</code></strong> — Proportion of seats held by women in national parliaments (World Bank). A continuous variable measured as a percentage, ranging from 0 to 100.</li>
-</ul>
-<p><strong>Research question:</strong> Do more unequal countries tend to have lower levels of women’s representation in parliament?</p>
-<p><strong>Tasks:</strong></p>
-<ol type="1">
-<li>Identify the type of each variable. What analytical case does this pair belong to? What tool should you use?</li>
-<li>Produce the appropriate chart in Stata, including a regression line.</li>
-<li>Looking at your output: what does the slope of the regression line tell you about the direction of the relationship? Is the relationship strong (points clustered close to the line) or weak (points widely scattered)?</li>
-<li>Is the pattern what you expected? Can you think of countries or regions that might pull the pattern in one direction or another?</li>
-</ol>
-<blockquote class="blockquote">
-<p><strong>Hint:</strong> Pay attention to both the direction of the regression line (is it upward or downward sloping?) and how tightly the points cluster around it. A flat or nearly flat line suggests little association, even if the slope is not exactly zero.</p>
-</blockquote>
-<hr>
-</section>
-<section id="exercise-6" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-6">Exercise 6</h2>
-<p><strong>Variables:</strong> <code>wdi_gini</code> and <code>ti_cpi</code></p>
-<ul>
-<li><strong><code>wdi_gini</code></strong> — Gini index. See Exercise 5 for the full description.</li>
-<li><strong><code>ti_cpi</code></strong> — Corruption Perceptions Index. See Exercise 3 for the full description.</li>
-</ul>
-<p><strong>Research question:</strong> Do more unequal countries tend to have higher levels of perceived corruption?</p>
-<p><strong>Tasks:</strong></p>
-<ol type="1">
-<li>Identify the type of each variable. What analytical case does this pair belong to? What tool should you use?</li>
-<li>Produce the appropriate chart in Stata, including a regression line.</li>
-<li>Looking at your output: what is the direction of the association? Does it match the theoretical expectation that high inequality and high corruption tend to go together?</li>
-<li>Compare what you see here with Exercise 5. Both exercises use <code>wdi_gini</code> on the horizontal axis but pair it with a different variable. What does this tell you about the relationship between inequality, corruption, and gender representation?</li>
-</ol>
-<blockquote class="blockquote">
-<p><strong>Hint:</strong> Note which end of the <code>ti_cpi</code> scale means more corruption (lower scores) and which means less (higher scores). This matters for interpreting the direction of the slope correctly.</p>
-</blockquote>
-<hr>
-</section>
-<section id="exercise-7" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-7">Exercise 7</h2>
-<p><strong>Variables:</strong> <code>wdi_internet</code> and <code>rsf_pfi</code></p>
-<ul>
-<li><strong><code>wdi_internet</code></strong> — Individuals using the internet (World Bank). A continuous variable measuring the percentage of the population with internet access, ranging from 0 to 100.</li>
-<li><strong><code>rsf_pfi</code></strong> — Press Freedom Index (Reporters Without Borders). A continuous variable measuring the degree of freedom available to journalists and media organisations in each country. <strong>Higher scores indicate more press freedom.</strong></li>
-</ul>
-<p><strong>Research question:</strong> Do countries with higher internet usage tend to have greater press freedom?</p>
-<p><strong>Tasks:</strong></p>
-<ol type="1">
-<li>Identify the type of each variable. What analytical case does this pair belong to? What tool should you use?</li>
-<li>Produce the appropriate chart in Stata, including a regression line.</li>
-<li>Looking at your output: is there a positive association, a negative association, or no clear pattern?</li>
-<li>Internet access and press freedom could be related in multiple ways — higher access could reflect or enable more open media environments, or both could be driven by a third factor such as economic development or regime type. What do you think the scatterplot is actually capturing?</li>
-</ol>
-<blockquote class="blockquote">
-<p><strong>Hint:</strong> Before interpreting the slope, make sure you have the direction of the <code>rsf_pfi</code> scale clearly in mind: a higher score means more freedom, not less. If the slope is positive, that means more internet usage is associated with more press freedom.</p>
-</blockquote>
-<hr>
-</section>
-<section id="reflection" class="level2">
-<h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
-<p>After completing all seven exercises, discuss the following with your group:</p>
-<ol type="1">
-<li>Which exercises required the most thought when identifying the variable types? What made them more difficult?</li>
-<li>In the exercises involving cross-tabulations, how did switching between row and column percentages change what you could see? When is each orientation more useful?</li>
-<li>Across the scatterplot exercises, how did you judge whether a relationship was strong or weak? What features of the plot did you use?</li>
-<li>In several exercises, the variables used are measures of the same underlying concept from different sources (e.g.&nbsp;corruption appears in Exercises 3 and 6). What are the implications of this for how we interpret the results?</li>
-</ol>
-<hr>
-</section>
-<section id="summary" class="level2">
-<h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<p>In this activity, you have:</p>
-<ul>
-<li>Identified variable types and matched them to the appropriate bivariate analytical tool.</li>
-<li>Produced and interpreted cross-tabulations, bar charts of means, and scatterplots with regression lines.</li>
-<li>Connected descriptive patterns in data to theoretical arguments in political science.</li>
-</ul>
-<p>These skills form the foundation for the independent empirical analysis you will carry out in Problem Set 2.</p>
-
-
 </section>
 
 </main> <!-- /main -->
@@ -632,7 +746,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/lfalab\.github\.io\/methods-education\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

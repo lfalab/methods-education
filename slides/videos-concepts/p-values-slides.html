@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <title>Loading and Browsing Data</title>
+  <title>Interpreting P-values</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -28,7 +28,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-f88d935cd01326925f73dc62b106448c.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-7433acd2865db5fa81269247cd6920be.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -127,95 +127,201 @@
 
 
 <section>
-<section id="loading-and-browsing-data" class="title-slide slide level1 title-left center">
-<h1>Loading and Browsing Data</h1>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nWJTyqIjYgE?si=xr8674JyN133h8M1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
-</iframe>
-<!-- [Watch on YouTube](https://youtu.be/nWJTyqIjYgE) -->
+<section id="interpreting-p-values" class="title-slide slide level1 title-left center">
+<h1>Interpreting P-values</h1>
+
 </section>
 <section id="youll-learn-to" class="slide level2">
 <h2>You’ll learn to</h2>
+<div class="presenter-space">
 <ul>
-<li class="fragment"><strong>Load</strong> a dataset in Stata.</li>
-<li class="fragment"><strong>Browse</strong> a dataset by switching between Stata and the codebook.</li>
+<li class="fragment">Interpret a <strong>p-value</strong> and explain what it measures.</li>
+<li class="fragment">Use a p-value to evaluate a null hypothesis.</li>
 </ul>
+</div>
 </section>
-<section id="step-1-download-the-brexit-dataset-from-our-shared-folder" class="slide level2">
-<h2>Step 1: Download the Brexit dataset from our shared folder</h2>
+<section id="a-question-to-keep-in-mind" class="slide level2">
+<h2>A question to keep in mind</h2>
+<div class="presenter-space">
 <ul>
-<li class="fragment">Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a></li>
-<li class="fragment">Click on <code>data-raw</code></li>
-<li class="fragment">Download <code>Brexit_Regional.dta</code></li>
-<li class="fragment">Save it into the <code>data-raw</code> folder on your computer</li>
+<li class="fragment">In the previous video, we tested hypotheses using confidence intervals.</li>
+<li class="fragment">P-values offer a different way to answer the same question.</li>
+<li class="fragment">That question is always: how surprising are our results <strong>if the null hypothesis were true?</strong></li>
 </ul>
+</div>
 </section>
-<section id="step-2-set-the-working-directory" class="slide level2">
-<h2>Step 2: Set the working directory</h2>
+<section id="example-is-a-coin-fair-or-loaded" class="slide level2">
+<h2>Example: Is a coin fair or loaded?</h2>
+<div class="presenter-space">
 <ul>
-<li class="fragment">We’ve been through this in <a href="../../slides/videos-stata/stata-interface.html">The Stata Interface</a></li>
-<li class="fragment">This can be done either by clicking File &gt; Change working directory, or…</li>
-<li class="fragment">…if you have saved a do-file (<code>set-wd.do</code>) as instructed in <a href="../../slides/videos-stata/stata-interface.html">The Stata Interface</a>, you can copy the command from there.</li>
-</ul>
-</section>
-<section id="step-3-open-a-new-do-file" class="slide level2">
-<h2>Step 3: Open a new do-file</h2>
+<li class="fragment"><p>Suppose we want to check whether a coin is fair.</p></li>
+<li class="fragment"><p>We flip the coin several times and observe the results.</p>
 <ul>
-<li>Click on the “New Do-file Editor” icon (a sheet of paper and a pencil)</li>
-</ul>
-
-<img data-src="../../assets/stata-dofile-editor.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-4-set-up-your-do-file-to-load-the-dataset" class="slide level2">
-<h2>Step 4: Set up your do-file to load the dataset</h2>
-<ul>
-<li><p>The first line should be the command that sets the working directory. It should look like:</p>
-<ul>
-<li><code>cd "[Path\To\Your\Folder]"</code></li>
-<li>If you use a Mac, there will be forward slashes instead of back slashes</li>
-</ul></li>
-<li><p>Below that, enter</p>
-<ul>
-<li><code>use "data-raw/Brexit_Regional.dta", clear</code></li>
+<li class="fragment"><strong>Null hypothesis:</strong> the coin is fair — heads and tails are equally likely.</li>
+<li class="fragment"><strong>Alternative hypothesis:</strong> the coin is loaded — heads are more likely than tails.</li>
 </ul></li>
 </ul>
+</div>
 </section>
-<section id="step-5-run-the-do-file" class="slide level2">
-<h2>Step 5: Run the do-file</h2>
+<section id="the-logic-of-the-test" class="slide level2">
+<h2>The logic of the test</h2>
+<div class="presenter-space">
 <ul>
-<li>Click on the sheet of paper with a “Play” button. This will <strong>execute</strong> all commands in the do-file</li>
-<li>In the screenshot, the lines of green text after the asterisks are <strong>comments</strong>. Stata won’t run them.</li>
-</ul>
-
-<img data-src="../../assets/stata-run-dofile.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-6-check-if-it-has-worked-and-save-your-do-file" class="slide level2">
-<h2>Step 6: Check if it has worked and save your do-file</h2>
+<li class="fragment"><p>Each time we flip the coin, we ask:</p>
 <ul>
-<li>If you see this on the top-right pane of your Stata screen, it has worked!</li>
-<li>Be sure to <strong>save your do-file</strong> in your <code>do</code> folder.</li>
+<li class="fragment"><em>Assuming the coin is fair, how likely is this outcome?</em></li>
+</ul></li>
+<li class="fragment"><p>If the observed result would be very <strong>unlikely under the null</strong>, that is evidence against it.</p></li>
+<li class="fragment"><p>If it is not particularly unlikely, we have <strong>no strong reason</strong> to doubt the null.</p></li>
 </ul>
-
-<img data-src="../../assets/stata-variables.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-7-browse-the-data" class="slide level2">
-<h2>Step 7: Browse the data</h2>
+</div>
+</section>
+<section id="building-the-evidence" class="slide level2">
+<h2>Building the evidence</h2>
+<div class="presenter-space">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Flips</th>
+<th>All heads?</th>
+<th>Probability if coin is fair</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Yes</td>
+<td>(½)¹ = <strong>50%</strong></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Yes</td>
+<td>(½)² = <strong>25%</strong></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Yes</td>
+<td>(½)³ = <strong>12.5%</strong></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Yes</td>
+<td>(½)⁴ = <strong>6.3%</strong></td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Yes</td>
+<td>(½)⁵ = <strong>3.1%</strong></td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li>Click on this icon with magnifying glass. It will allow you to browse the data.</li>
-<li>Explore it while swithing between your Stata screen and the <a href="https://emckclac-my.sharepoint.com/:w:/r/personal/k2588471_kcl_ac_uk/_layouts/15/Doc.aspx?sourcedoc=%7BEA160DB5-B57C-4CAC-A10F-5C2B3FC18FB2%7D&amp;file=Brexit_Regional_Codebook.docx&amp;action=default&amp;mobileredirect=true">Codebook</a></li>
+<li class="fragment">Each consecutive heads makes the fair-coin explanation <strong>less plausible</strong>.</li>
 </ul>
-
-<img data-src="../../assets/stata-browse.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+</div>
+</section>
+<section id="what-is-a-p-value" class="slide level2">
+<h2>What is a p-value?</h2>
+<div class="presenter-space">
+<ul>
+<li class="fragment"><p>The probabilities in that table are <strong>p-values</strong>.</p>
+<ul>
+<li class="fragment"><strong>P-value</strong>: the probability of observing a result at least as extreme as the one we got, <em>assuming the null hypothesis is true</em>.</li>
+</ul></li>
+<li class="fragment"><p>A small p-value means the data would be unusual if the null were true.</p></li>
+<li class="fragment"><p>A large p-value means the data are consistent with the null.</p></li>
+</ul>
+</div>
+</section>
+<section id="how-small-is-small-enough" class="slide level2">
+<h2>How small is small enough?</h2>
+<div class="presenter-space">
+<ul>
+<li class="fragment">Researchers in quantitative social science conventionally use <strong>0.05</strong> (5%).</li>
+<li class="fragment">This is called the <strong>significance level</strong> (or α).</li>
+</ul>
+</div>
+</section>
+<section id="applying-the-threshold" class="slide level2">
+<h2>Applying the threshold</h2>
+<div class="presenter-space">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Flips</th>
+<th>All heads?</th>
+<th>P-value</th>
+<th>Decision (α = 0.05)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>4</td>
+<td>Yes</td>
+<td>6.3%</td>
+<td><strong>Fail to reject</strong> the null</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Yes</td>
+<td>3.1%</td>
+<td><strong>Reject</strong> the null</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li class="fragment">At four heads, the result is unusual but not unusual enough.</li>
+<li class="fragment">At five heads, it crosses the threshold — we reject the fair-coin hypothesis.</li>
+</ul>
+</div>
+</section>
+<section id="p-values-and-confidence-intervals" class="slide level2">
+<h2>P-values and confidence intervals</h2>
+<div class="presenter-space">
+<ul>
+<li class="fragment">In the previous video, we tested hypotheses using confidence intervals.</li>
+<li class="fragment">P-values ask the same question differently.</li>
+<li class="fragment">These two approaches will <strong>never contradict each other</strong>.</li>
+</ul>
+</div>
+</section>
+<section id="why-they-always-agree" class="slide level2">
+<h2>Why they always agree</h2>
+<div class="presenter-space">
+<ul>
+<li class="fragment">A 95% confidence interval excludes zero exactly when <strong>p &lt; 0.05</strong>.</li>
+<li class="fragment">A 95% confidence interval includes zero exactly when <strong>p ≥ 0.05</strong>.</li>
+<li class="fragment">They are two windows onto the same underlying calculation — not two independent tests.</li>
+</ul>
+</div>
+</section>
+<section id="what-a-p-value-is-not" class="slide level2">
+<h2>What a p-value is not</h2>
+<div class="presenter-space">
+<ul>
+<li class="fragment">A p-value is <strong>not</strong> the probability that the null hypothesis is true.</li>
+<li class="fragment">It means the <strong>data would be unusual</strong> if the null were true.</li>
+</ul>
+</div>
+</section>
 <section id="recap" class="slide level2">
 <h2>Recap</h2>
+<div class="presenter-space">
 <ul>
-<li class="fragment">By setting the <strong>working directory</strong>, we tell Stata where our project lives.</li>
-<li class="fragment">Once that is done, we can <strong>load datasets</strong> by showing Stata where to find them in the subfolders inside our working directory.</li>
-<li class="fragment">Once a dataset is loaded, we can browse them using Stata.</li>
+<li class="fragment">The <strong>p-value</strong> is the probability of observing results at least as extreme as ours, assuming the null hypothesis is true.</li>
+<li class="fragment">P-values and confidence intervals always lead to the same conclusion: they are two ways of expressing the same test.</li>
 </ul>
+</div>
 </section>
 <section class="slide level2">
 
+<div class="presenter-space">
 <p><strong>Why this matters:</strong></p>
 <ul>
-<li class="fragment">This exercise allows you to familiarise yourself with how a dataset looks like in Stata.</li>
+<li class="fragment">P-values appear in almost every quantitative study in political science.</li>
+<li class="fragment">Reading them correctly is a basic requirement for evaluating evidence critically.</li>
 </ul>
+</div>
 
 
 </section></section>

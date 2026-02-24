@@ -4,154 +4,98 @@
     "href": "slides/videos-stata/transform-stata.html",
     "title": "Data Transformations in Stata",
     "section": "",
-    "text": "Use conditional statements to analyse subgroups.\nFilter observations using keep and drop.\nCombine multiple conditions to refine your analysis.\n\n\n\n\n\n\n\n\nAccess our Shared Project Folder\nClick on data-raw\nDownload British_Election_Study_2024.dta\nSave it into the data-raw folder on your computer\n\n\n\n\n\n\n\n\nAccess our Shared Project Folder\nClick on do\nDownload transform-bes.do\nSave it into the do folder on your computer\n\n\n\n\n\n\n\n\nThis line of transform-bes.do has an “address” that only works on my computer.\nReplace it with the “address” to your project folder on your computer.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIf you see this on the top-right pane of your Stata screen, it has worked!\nBe sure to save your do-file in your do folder.\n\n\n\n\n\n\n\n\n\n\n\n\n\nData transformation prepares your dataset for analysis.\nCommon tasks include:\n\nAnalysing specific subgroups (e.g., women, Labour voters, young respondents).\nFiltering the dataset to focus on relevant observations.\nCombining multiple conditions to answer complex questions.\n\n\n\n\n\n\n\n\n\nThe if statement restricts commands to observations that meet a condition.\nExample: sum Age if y09 == 1 calculates the mean age for women only.\nOpen transform-bes.do and navigate to Part A to see more examples.\n\n\n\n\n\n\n\n\nThe if statement also works with tabulate.\nExample: tab b02 if edlevel &gt;= 4 shows vote choice among respondents with a degree or higher.\nThis allows you to examine distributions within specific subgroups.\n\n\n\n\n\n\n\n\nkeep if retains only observations that meet a condition.\ndrop if removes observations that meet a condition.\nExample: keep if b02 == 1 keeps only Labour voters.\nNavigate to Part B in transform-bes.do to see how this works.\n\n\n\n\n\n\n\n\nUse & (and) to combine conditions.\nExample: sum Age if e01 &gt;= 0 & e01 &lt;= 3 & y09 == 1 calculates the mean age of women with left-wing ideology.\nOpen Part C in transform-bes.do to see more examples.\n\n\n\n\n\n\n\n\nUse &gt;= and &lt;= to specify ranges.\nExample: tab b02 if e01 &gt;= 4 & e01 &lt;= 6 shows vote choice among respondents with moderate ideology.\nNavigate to Part D in transform-bes.do for additional examples.\n\n\n\n\n\n\n\n\nOpen transform-bes.do and work through Part E.\nTry modifying the conditions to answer your own research questions.\nUse the BES codebook to explore additional variables.\n\n\n\n\n\n\n\nConditional statements allow you to analyse specific subgroups.\nkeep and drop filter your dataset to focus on relevant observations.\nCombining conditions with & refines your analysis.\n\n\nWhy this matters:\n\nBefore visualising or modelling data, you often need to focus on specific subgroups or filter out irrelevant observations.\nThese skills are essential for preparing data and answering precise research questions.",
-    "crumbs": [
-      "Week 5: Describing Correlations (Bivariate Description)",
-      "Data Transformations in Stata"
-    ]
+    "text": "Use conditional statements to analyse subgroups.\nFilter observations using keep and drop.\nCombine multiple conditions to refine your analysis.\n\n\n\n\n\n\n\n\nAccess our Shared Project Folder\nClick on data-raw\nDownload British_Election_Study_2024.dta\nSave it into the data-raw folder on your computer\n\n\n\n\n\n\n\n\nAccess our Shared Project Folder\nClick on do\nDownload transform-bes.do\nSave it into the do folder on your computer\n\n\n\n\n\n\n\n\nThis line of transform-bes.do has an “address” that only works on my computer.\nReplace it with the “address” to your project folder on your computer.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIf you see this on the top-right pane of your Stata screen, it has worked!\nBe sure to save your do-file in your do folder.\n\n\n\n\n\n\n\n\n\n\n\n\n\nData transformation prepares your dataset for analysis.\nCommon tasks include:\n\nAnalysing specific subgroups (e.g., women, Labour voters, young respondents).\nFiltering the dataset to focus on relevant observations.\nCombining multiple conditions to answer complex questions.\n\n\n\n\n\n\n\n\n\nThe if statement restricts commands to observations that meet a condition.\nExample: sum Age if y09 == 1 calculates the mean age for women only.\nOpen transform-bes.do and navigate to Part A to see more examples.\n\n\n\n\n\n\n\n\nThe if statement also works with tabulate.\nExample: tab b02 if edlevel &gt;= 4 shows vote choice among respondents with a degree or higher.\nThis allows you to examine distributions within specific subgroups.\n\n\n\n\n\n\n\n\nkeep if retains only observations that meet a condition.\ndrop if removes observations that meet a condition.\nExample: keep if b02 == 1 keeps only Labour voters.\nNavigate to Part B in transform-bes.do to see how this works.\n\n\n\n\n\n\n\n\nUse & (and) to combine conditions.\nExample: sum Age if e01 &gt;= 0 & e01 &lt;= 3 & y09 == 1 calculates the mean age of women with left-wing ideology.\nOpen Part C in transform-bes.do to see more examples.\n\n\n\n\n\n\n\n\nUse &gt;= and &lt;= to specify ranges.\nExample: tab b02 if e01 &gt;= 4 & e01 &lt;= 6 shows vote choice among respondents with moderate ideology.\nNavigate to Part D in transform-bes.do for additional examples.\n\n\n\n\n\n\n\n\nOpen transform-bes.do and work through Part E.\nTry modifying the conditions to answer your own research questions.\nUse the BES codebook to explore additional variables.\n\n\n\n\n\n\n\nConditional statements allow you to analyse specific subgroups.\nkeep and drop filter your dataset to focus on relevant observations.\nCombining conditions with & refines your analysis.\n\n\nWhy this matters:\n\nBefore visualising or modelling data, you often need to focus on specific subgroups or filter out irrelevant observations.\nThese skills are essential for preparing data and answering precise research questions."
   },
   {
     "objectID": "slides/videos-stata/transform-stata.html#youll-learn-to",
     "href": "slides/videos-stata/transform-stata.html#youll-learn-to",
     "title": "Data Transformations in Stata",
     "section": "",
-    "text": "Use conditional statements to analyse subgroups.\nFilter observations using keep and drop.\nCombine multiple conditions to refine your analysis.",
-    "crumbs": [
-      "Week 5: Describing Correlations (Bivariate Description)",
-      "Data Transformations in Stata"
-    ]
+    "text": "Use conditional statements to analyse subgroups.\nFilter observations using keep and drop.\nCombine multiple conditions to refine your analysis."
   },
   {
     "objectID": "slides/videos-stata/transform-stata.html#step-1-download-the-british-election-study-dataset-from-our-shared-folder",
     "href": "slides/videos-stata/transform-stata.html#step-1-download-the-british-election-study-dataset-from-our-shared-folder",
     "title": "Data Transformations in Stata",
     "section": "",
-    "text": "Access our Shared Project Folder\nClick on data-raw\nDownload British_Election_Study_2024.dta\nSave it into the data-raw folder on your computer",
-    "crumbs": [
-      "Week 5: Describing Correlations (Bivariate Description)",
-      "Data Transformations in Stata"
-    ]
+    "text": "Access our Shared Project Folder\nClick on data-raw\nDownload British_Election_Study_2024.dta\nSave it into the data-raw folder on your computer"
   },
   {
     "objectID": "slides/videos-stata/transform-stata.html#step-2-download-the-companion-do-file-for-this-activity",
     "href": "slides/videos-stata/transform-stata.html#step-2-download-the-companion-do-file-for-this-activity",
     "title": "Data Transformations in Stata",
     "section": "",
-    "text": "Access our Shared Project Folder\nClick on do\nDownload transform-bes.do\nSave it into the do folder on your computer",
-    "crumbs": [
-      "Week 5: Describing Correlations (Bivariate Description)",
-      "Data Transformations in Stata"
-    ]
+    "text": "Access our Shared Project Folder\nClick on do\nDownload transform-bes.do\nSave it into the do folder on your computer"
   },
   {
     "objectID": "slides/videos-stata/transform-stata.html#step-3-insert-the-path-to-your-folder-on-your-computer",
     "href": "slides/videos-stata/transform-stata.html#step-3-insert-the-path-to-your-folder-on-your-computer",
     "title": "Data Transformations in Stata",
     "section": "",
-    "text": "This line of transform-bes.do has an “address” that only works on my computer.\nReplace it with the “address” to your project folder on your computer.",
-    "crumbs": [
-      "Week 5: Describing Correlations (Bivariate Description)",
-      "Data Transformations in Stata"
-    ]
+    "text": "This line of transform-bes.do has an “address” that only works on my computer.\nReplace it with the “address” to your project folder on your computer."
   },
   {
     "objectID": "slides/videos-stata/transform-stata.html#step-5-check-if-it-has-worked-and-save-your-do-file",
     "href": "slides/videos-stata/transform-stata.html#step-5-check-if-it-has-worked-and-save-your-do-file",
     "title": "Data Transformations in Stata",
     "section": "",
-    "text": "If you see this on the top-right pane of your Stata screen, it has worked!\nBe sure to save your do-file in your do folder.",
-    "crumbs": [
-      "Week 5: Describing Correlations (Bivariate Description)",
-      "Data Transformations in Stata"
-    ]
+    "text": "If you see this on the top-right pane of your Stata screen, it has worked!\nBe sure to save your do-file in your do folder."
   },
   {
     "objectID": "slides/videos-stata/transform-stata.html#what-is-data-transformation",
     "href": "slides/videos-stata/transform-stata.html#what-is-data-transformation",
     "title": "Data Transformations in Stata",
     "section": "",
-    "text": "Data transformation prepares your dataset for analysis.\nCommon tasks include:\n\nAnalysing specific subgroups (e.g., women, Labour voters, young respondents).\nFiltering the dataset to focus on relevant observations.\nCombining multiple conditions to answer complex questions.",
-    "crumbs": [
-      "Week 5: Describing Correlations (Bivariate Description)",
-      "Data Transformations in Stata"
-    ]
+    "text": "Data transformation prepares your dataset for analysis.\nCommon tasks include:\n\nAnalysing specific subgroups (e.g., women, Labour voters, young respondents).\nFiltering the dataset to focus on relevant observations.\nCombining multiple conditions to answer complex questions."
   },
   {
     "objectID": "slides/videos-stata/transform-stata.html#conditional-summaries-the-if-statement",
     "href": "slides/videos-stata/transform-stata.html#conditional-summaries-the-if-statement",
     "title": "Data Transformations in Stata",
     "section": "",
-    "text": "The if statement restricts commands to observations that meet a condition.\nExample: sum Age if y09 == 1 calculates the mean age for women only.\nOpen transform-bes.do and navigate to Part A to see more examples.",
-    "crumbs": [
-      "Week 5: Describing Correlations (Bivariate Description)",
-      "Data Transformations in Stata"
-    ]
+    "text": "The if statement restricts commands to observations that meet a condition.\nExample: sum Age if y09 == 1 calculates the mean age for women only.\nOpen transform-bes.do and navigate to Part A to see more examples."
   },
   {
     "objectID": "slides/videos-stata/transform-stata.html#conditional-tabulations",
     "href": "slides/videos-stata/transform-stata.html#conditional-tabulations",
     "title": "Data Transformations in Stata",
     "section": "",
-    "text": "The if statement also works with tabulate.\nExample: tab b02 if edlevel &gt;= 4 shows vote choice among respondents with a degree or higher.\nThis allows you to examine distributions within specific subgroups.",
-    "crumbs": [
-      "Week 5: Describing Correlations (Bivariate Description)",
-      "Data Transformations in Stata"
-    ]
+    "text": "The if statement also works with tabulate.\nExample: tab b02 if edlevel &gt;= 4 shows vote choice among respondents with a degree or higher.\nThis allows you to examine distributions within specific subgroups."
   },
   {
     "objectID": "slides/videos-stata/transform-stata.html#filtering-observations-keep-and-drop",
     "href": "slides/videos-stata/transform-stata.html#filtering-observations-keep-and-drop",
     "title": "Data Transformations in Stata",
     "section": "",
-    "text": "keep if retains only observations that meet a condition.\ndrop if removes observations that meet a condition.\nExample: keep if b02 == 1 keeps only Labour voters.\nNavigate to Part B in transform-bes.do to see how this works.",
-    "crumbs": [
-      "Week 5: Describing Correlations (Bivariate Description)",
-      "Data Transformations in Stata"
-    ]
+    "text": "keep if retains only observations that meet a condition.\ndrop if removes observations that meet a condition.\nExample: keep if b02 == 1 keeps only Labour voters.\nNavigate to Part B in transform-bes.do to see how this works."
   },
   {
     "objectID": "slides/videos-stata/transform-stata.html#combining-multiple-conditions",
     "href": "slides/videos-stata/transform-stata.html#combining-multiple-conditions",
     "title": "Data Transformations in Stata",
     "section": "",
-    "text": "Use & (and) to combine conditions.\nExample: sum Age if e01 &gt;= 0 & e01 &lt;= 3 & y09 == 1 calculates the mean age of women with left-wing ideology.\nOpen Part C in transform-bes.do to see more examples.",
-    "crumbs": [
-      "Week 5: Describing Correlations (Bivariate Description)",
-      "Data Transformations in Stata"
-    ]
+    "text": "Use & (and) to combine conditions.\nExample: sum Age if e01 &gt;= 0 & e01 &lt;= 3 & y09 == 1 calculates the mean age of women with left-wing ideology.\nOpen Part C in transform-bes.do to see more examples."
   },
   {
     "objectID": "slides/videos-stata/transform-stata.html#working-with-ranges",
     "href": "slides/videos-stata/transform-stata.html#working-with-ranges",
     "title": "Data Transformations in Stata",
     "section": "",
-    "text": "Use &gt;= and &lt;= to specify ranges.\nExample: tab b02 if e01 &gt;= 4 & e01 &lt;= 6 shows vote choice among respondents with moderate ideology.\nNavigate to Part D in transform-bes.do for additional examples.",
-    "crumbs": [
-      "Week 5: Describing Correlations (Bivariate Description)",
-      "Data Transformations in Stata"
-    ]
+    "text": "Use &gt;= and &lt;= to specify ranges.\nExample: tab b02 if e01 &gt;= 4 & e01 &lt;= 6 shows vote choice among respondents with moderate ideology.\nNavigate to Part D in transform-bes.do for additional examples."
   },
   {
     "objectID": "slides/videos-stata/transform-stata.html#your-turn-explore-conditional-analysis",
     "href": "slides/videos-stata/transform-stata.html#your-turn-explore-conditional-analysis",
     "title": "Data Transformations in Stata",
     "section": "",
-    "text": "Open transform-bes.do and work through Part E.\nTry modifying the conditions to answer your own research questions.\nUse the BES codebook to explore additional variables.",
-    "crumbs": [
-      "Week 5: Describing Correlations (Bivariate Description)",
-      "Data Transformations in Stata"
-    ]
+    "text": "Open transform-bes.do and work through Part E.\nTry modifying the conditions to answer your own research questions.\nUse the BES codebook to explore additional variables."
   },
   {
     "objectID": "slides/videos-stata/transform-stata.html#recap",
     "href": "slides/videos-stata/transform-stata.html#recap",
     "title": "Data Transformations in Stata",
     "section": "",
-    "text": "Conditional statements allow you to analyse specific subgroups.\nkeep and drop filter your dataset to focus on relevant observations.\nCombining conditions with & refines your analysis.\n\n\nWhy this matters:\n\nBefore visualising or modelling data, you often need to focus on specific subgroups or filter out irrelevant observations.\nThese skills are essential for preparing data and answering precise research questions.",
-    "crumbs": [
-      "Week 5: Describing Correlations (Bivariate Description)",
-      "Data Transformations in Stata"
-    ]
+    "text": "Conditional statements allow you to analyse specific subgroups.\nkeep and drop filter your dataset to focus on relevant observations.\nCombining conditions with & refines your analysis.\n\n\nWhy this matters:\n\nBefore visualising or modelling data, you often need to focus on specific subgroups or filter out irrelevant observations.\nThese skills are essential for preparing data and answering precise research questions."
   },
   {
     "objectID": "slides/videos-stata/transform-stata-slides.html#youll-learn-to",
@@ -472,7 +416,7 @@
     "href": "slides/videos-stata/loading-browsing-data.html",
     "title": "Loading and Browsing Data",
     "section": "",
-    "text": "Watch on YouTube\n\n\n\n\nLoad a dataset in Stata.\nBrowse a dataset by switching between Stata and the codebook.\n\n\n\n\n\n\nAccess our Shared Project Folder\nClick on data-raw\nDownload Brexit_Regional.dta\nSave it into the data-raw folder on your computer\n\n\n\n\n\n\nWe’ve been through this in The Stata Interface\nThis can be done either by clicking File &gt; Change working directory, or…\n…if you have saved a do-file (set-wd.do) as instructed in The Stata Interface, you can copy the command from there.\n\n\n\n\n\n\n\nClick on the “New Do-file Editor” icon (a sheet of paper and a pencil)\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe first line should be the command that sets the working directory. It should look like:\n\ncd \"[Path\\To\\Your\\Folder]\"\nIf you use a Mac, there will be forward slashes instead of back slashes\n\nBelow that, enter\n\nuse \"data-raw/Brexit_Regional.dta\", clear\n\n\n\n\n\n\n\n\n\nClick on the sheet of paper with a “Play” button. This will execute all commands in the do-file\nIn the screenshot, the lines of green text after the asterisks are comments. Stata won’t run them.\n\n\n\n\n\n\n\n\n\n\n\n\n\nIf you see this on the top-right pane of your Stata screen, it has worked!\nBe sure to save your do-file in your do folder.\n\n\n\n\n\n\n\n\n\n\n\n\n\nClick on this icon with magnifying glass. It will allow you to browse the data.\nExplore it while swithing between your Stata screen and the Codebook\n\n\n\n\n\n\n\n\n\n\n\n\nBy setting the working directory, we tell Stata where our project lives.\nOnce that is done, we can load datasets by showing Stata where to find them in the subfolders inside our working directory.\nOnce a dataset is loaded, we can browse them using Stata.\n\n\nWhy this matters:\n\nThis exercise allows you to familiarise yourself with how a dataset looks like in Stata.",
+    "text": "Load a dataset in Stata.\nBrowse a dataset by switching between Stata and the codebook.\n\n\n\n\n\n\nAccess our Shared Project Folder\nClick on data-raw\nDownload Brexit_Regional.dta\nSave it into the data-raw folder on your computer\n\n\n\n\n\n\nWe’ve been through this in The Stata Interface\nThis can be done either by clicking File &gt; Change working directory, or…\n…if you have saved a do-file (set-wd.do) as instructed in The Stata Interface, you can copy the command from there.\n\n\n\n\n\n\n\nClick on the “New Do-file Editor” icon (a sheet of paper and a pencil)\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe first line should be the command that sets the working directory. It should look like:\n\ncd \"[Path\\To\\Your\\Folder]\"\nIf you use a Mac, there will be forward slashes instead of back slashes\n\nBelow that, enter\n\nuse \"data-raw/Brexit_Regional.dta\", clear\n\n\n\n\n\n\n\n\n\nClick on the sheet of paper with a “Play” button. This will execute all commands in the do-file\nIn the screenshot, the lines of green text after the asterisks are comments. Stata won’t run them.\n\n\n\n\n\n\n\n\n\n\n\n\n\nIf you see this on the top-right pane of your Stata screen, it has worked!\nBe sure to save your do-file in your do folder.\n\n\n\n\n\n\n\n\n\n\n\n\n\nClick on this icon with magnifying glass. It will allow you to browse the data.\nExplore it while swithing between your Stata screen and the Codebook\n\n\n\n\n\n\n\n\n\n\n\n\nBy setting the working directory, we tell Stata where our project lives.\nOnce that is done, we can load datasets by showing Stata where to find them in the subfolders inside our working directory.\nOnce a dataset is loaded, we can browse them using Stata.\n\n\nWhy this matters:\n\nThis exercise allows you to familiarise yourself with how a dataset looks like in Stata.",
     "crumbs": [
       "Week 3: Measurement and Variable Types",
       "Loading and Browsing Data"
@@ -768,6 +712,442 @@
     "title": "",
     "section": "Recap",
     "text": "Recap\n\n\nA dataset is a table where rows are observations and columns are variables.\nA codebook documents what variables mean and how values are coded.\nWorking with data involves switching between Stata and documentation."
+  },
+  {
+    "objectID": "slides/videos-concepts/p-values.html",
+    "href": "slides/videos-concepts/p-values.html",
+    "title": "Interpreting P-values",
+    "section": "",
+    "text": "Interpret a p-value and explain what it measures.\nUse a p-value to evaluate a null hypothesis.\n\n\n\n\n\n\n\n\nIn the previous video, we tested hypotheses using confidence intervals.\nP-values offer a different way to answer the same question.\nThat question is always: how surprising are our results if the null hypothesis were true?\n\n\n\n\n\n\n\n\nSuppose we want to check whether a coin is fair.\nWe flip the coin several times and observe the results.\n\nNull hypothesis: the coin is fair — heads and tails are equally likely.\nAlternative hypothesis: the coin is loaded — heads are more likely than tails.\n\n\n\n\n\n\n\n\n\nEach time we flip the coin, we ask:\n\nAssuming the coin is fair, how likely is this outcome?\n\nIf the observed result would be very unlikely under the null, that is evidence against it.\nIf it is not particularly unlikely, we have no strong reason to doubt the null.\n\n\n\n\n\n\n\n\n\n\n\nFlips\nAll heads?\nProbability if coin is fair\n\n\n\n\n1\nYes\n(½)¹ = 50%\n\n\n2\nYes\n(½)² = 25%\n\n\n3\nYes\n(½)³ = 12.5%\n\n\n4\nYes\n(½)⁴ = 6.3%\n\n\n5\nYes\n(½)⁵ = 3.1%\n\n\n\n\n\nEach consecutive heads makes the fair-coin explanation less plausible.\n\n\n\n\n\n\n\n\nThe probabilities in that table are p-values.\n\nP-value: the probability of observing a result at least as extreme as the one we got, assuming the null hypothesis is true.\n\nA small p-value means the data would be unusual if the null were true.\nA large p-value means the data are consistent with the null.\n\n\n\n\n\n\n\n\nResearchers in quantitative social science conventionally use 0.05 (5%).\nThis is called the significance level (or α).\n\n\n\n\n\n\n\n\n\n\n\nFlips\nAll heads?\nP-value\nDecision (α = 0.05)\n\n\n\n\n4\nYes\n6.3%\nFail to reject the null\n\n\n5\nYes\n3.1%\nReject the null\n\n\n\n\n\nAt four heads, the result is unusual but not unusual enough.\nAt five heads, it crosses the threshold — we reject the fair-coin hypothesis.\n\n\n\n\n\n\n\n\nIn the previous video, we tested hypotheses using confidence intervals.\nP-values ask the same question differently.\nThese two approaches will never contradict each other.\n\n\n\n\n\n\n\n\nA 95% confidence interval excludes zero exactly when p &lt; 0.05.\nA 95% confidence interval includes zero exactly when p ≥ 0.05.\nThey are two windows onto the same underlying calculation — not two independent tests.\n\n\n\n\n\n\n\n\nA p-value is not the probability that the null hypothesis is true.\nIt means the data would be unusual if the null were true.\n\n\n\n\n\n\n\n\nThe p-value is the probability of observing results at least as extreme as ours, assuming the null hypothesis is true.\nP-values and confidence intervals always lead to the same conclusion: they are two ways of expressing the same test.\n\n\n\n\nWhy this matters:\n\nP-values appear in almost every quantitative study in political science.\nReading them correctly is a basic requirement for evaluating evidence critically.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Interpreting P-values"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/p-values.html#youll-learn-to",
+    "href": "slides/videos-concepts/p-values.html#youll-learn-to",
+    "title": "Interpreting P-values",
+    "section": "",
+    "text": "Interpret a p-value and explain what it measures.\nUse a p-value to evaluate a null hypothesis.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Interpreting P-values"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/p-values.html#a-question-to-keep-in-mind",
+    "href": "slides/videos-concepts/p-values.html#a-question-to-keep-in-mind",
+    "title": "Interpreting P-values",
+    "section": "",
+    "text": "In the previous video, we tested hypotheses using confidence intervals.\nP-values offer a different way to answer the same question.\nThat question is always: how surprising are our results if the null hypothesis were true?",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Interpreting P-values"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/p-values.html#example-is-a-coin-fair-or-loaded",
+    "href": "slides/videos-concepts/p-values.html#example-is-a-coin-fair-or-loaded",
+    "title": "Interpreting P-values",
+    "section": "",
+    "text": "Suppose we want to check whether a coin is fair.\nWe flip the coin several times and observe the results.\n\nNull hypothesis: the coin is fair — heads and tails are equally likely.\nAlternative hypothesis: the coin is loaded — heads are more likely than tails.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Interpreting P-values"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/p-values.html#the-logic-of-the-test",
+    "href": "slides/videos-concepts/p-values.html#the-logic-of-the-test",
+    "title": "Interpreting P-values",
+    "section": "",
+    "text": "Each time we flip the coin, we ask:\n\nAssuming the coin is fair, how likely is this outcome?\n\nIf the observed result would be very unlikely under the null, that is evidence against it.\nIf it is not particularly unlikely, we have no strong reason to doubt the null.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Interpreting P-values"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/p-values.html#building-the-evidence",
+    "href": "slides/videos-concepts/p-values.html#building-the-evidence",
+    "title": "Interpreting P-values",
+    "section": "",
+    "text": "Flips\nAll heads?\nProbability if coin is fair\n\n\n\n\n1\nYes\n(½)¹ = 50%\n\n\n2\nYes\n(½)² = 25%\n\n\n3\nYes\n(½)³ = 12.5%\n\n\n4\nYes\n(½)⁴ = 6.3%\n\n\n5\nYes\n(½)⁵ = 3.1%\n\n\n\n\n\nEach consecutive heads makes the fair-coin explanation less plausible.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Interpreting P-values"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/p-values.html#what-is-a-p-value",
+    "href": "slides/videos-concepts/p-values.html#what-is-a-p-value",
+    "title": "Interpreting P-values",
+    "section": "",
+    "text": "The probabilities in that table are p-values.\n\nP-value: the probability of observing a result at least as extreme as the one we got, assuming the null hypothesis is true.\n\nA small p-value means the data would be unusual if the null were true.\nA large p-value means the data are consistent with the null.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Interpreting P-values"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/p-values.html#how-small-is-small-enough",
+    "href": "slides/videos-concepts/p-values.html#how-small-is-small-enough",
+    "title": "Interpreting P-values",
+    "section": "",
+    "text": "Researchers in quantitative social science conventionally use 0.05 (5%).\nThis is called the significance level (or α).",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Interpreting P-values"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/p-values.html#applying-the-threshold",
+    "href": "slides/videos-concepts/p-values.html#applying-the-threshold",
+    "title": "Interpreting P-values",
+    "section": "",
+    "text": "Flips\nAll heads?\nP-value\nDecision (α = 0.05)\n\n\n\n\n4\nYes\n6.3%\nFail to reject the null\n\n\n5\nYes\n3.1%\nReject the null\n\n\n\n\n\nAt four heads, the result is unusual but not unusual enough.\nAt five heads, it crosses the threshold — we reject the fair-coin hypothesis.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Interpreting P-values"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/p-values.html#p-values-and-confidence-intervals",
+    "href": "slides/videos-concepts/p-values.html#p-values-and-confidence-intervals",
+    "title": "Interpreting P-values",
+    "section": "",
+    "text": "In the previous video, we tested hypotheses using confidence intervals.\nP-values ask the same question differently.\nThese two approaches will never contradict each other.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Interpreting P-values"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/p-values.html#why-they-always-agree",
+    "href": "slides/videos-concepts/p-values.html#why-they-always-agree",
+    "title": "Interpreting P-values",
+    "section": "",
+    "text": "A 95% confidence interval excludes zero exactly when p &lt; 0.05.\nA 95% confidence interval includes zero exactly when p ≥ 0.05.\nThey are two windows onto the same underlying calculation — not two independent tests.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Interpreting P-values"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/p-values.html#what-a-p-value-is-not",
+    "href": "slides/videos-concepts/p-values.html#what-a-p-value-is-not",
+    "title": "Interpreting P-values",
+    "section": "",
+    "text": "A p-value is not the probability that the null hypothesis is true.\nIt means the data would be unusual if the null were true.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Interpreting P-values"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/p-values.html#recap",
+    "href": "slides/videos-concepts/p-values.html#recap",
+    "title": "Interpreting P-values",
+    "section": "",
+    "text": "The p-value is the probability of observing results at least as extreme as ours, assuming the null hypothesis is true.\nP-values and confidence intervals always lead to the same conclusion: they are two ways of expressing the same test.\n\n\n\n\nWhy this matters:\n\nP-values appear in almost every quantitative study in political science.\nReading them correctly is a basic requirement for evaluating evidence critically.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Interpreting P-values"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/p-values-slides.html#youll-learn-to",
+    "href": "slides/videos-concepts/p-values-slides.html#youll-learn-to",
+    "title": "",
+    "section": "You’ll learn to",
+    "text": "You’ll learn to\n\n\nInterpret a p-value and explain what it measures.\nUse a p-value to evaluate a null hypothesis."
+  },
+  {
+    "objectID": "slides/videos-concepts/p-values-slides.html#a-question-to-keep-in-mind",
+    "href": "slides/videos-concepts/p-values-slides.html#a-question-to-keep-in-mind",
+    "title": "",
+    "section": "A question to keep in mind",
+    "text": "A question to keep in mind\n\n\nIn the previous video, we tested hypotheses using confidence intervals.\nP-values offer a different way to answer the same question.\nThat question is always: how surprising are our results if the null hypothesis were true?"
+  },
+  {
+    "objectID": "slides/videos-concepts/p-values-slides.html#example-is-a-coin-fair-or-loaded",
+    "href": "slides/videos-concepts/p-values-slides.html#example-is-a-coin-fair-or-loaded",
+    "title": "",
+    "section": "Example: Is a coin fair or loaded?",
+    "text": "Example: Is a coin fair or loaded?\n\n\nSuppose we want to check whether a coin is fair.\nWe flip the coin several times and observe the results.\n\nNull hypothesis: the coin is fair — heads and tails are equally likely.\nAlternative hypothesis: the coin is loaded — heads are more likely than tails."
+  },
+  {
+    "objectID": "slides/videos-concepts/p-values-slides.html#the-logic-of-the-test",
+    "href": "slides/videos-concepts/p-values-slides.html#the-logic-of-the-test",
+    "title": "",
+    "section": "The logic of the test",
+    "text": "The logic of the test\n\n\nEach time we flip the coin, we ask:\n\nAssuming the coin is fair, how likely is this outcome?\n\nIf the observed result would be very unlikely under the null, that is evidence against it.\nIf it is not particularly unlikely, we have no strong reason to doubt the null."
+  },
+  {
+    "objectID": "slides/videos-concepts/p-values-slides.html#building-the-evidence",
+    "href": "slides/videos-concepts/p-values-slides.html#building-the-evidence",
+    "title": "",
+    "section": "Building the evidence",
+    "text": "Building the evidence\n\n\n\n\nFlips\nAll heads?\nProbability if coin is fair\n\n\n\n\n1\nYes\n(½)¹ = 50%\n\n\n2\nYes\n(½)² = 25%\n\n\n3\nYes\n(½)³ = 12.5%\n\n\n4\nYes\n(½)⁴ = 6.3%\n\n\n5\nYes\n(½)⁵ = 3.1%\n\n\n\n\nEach consecutive heads makes the fair-coin explanation less plausible."
+  },
+  {
+    "objectID": "slides/videos-concepts/p-values-slides.html#what-is-a-p-value",
+    "href": "slides/videos-concepts/p-values-slides.html#what-is-a-p-value",
+    "title": "",
+    "section": "What is a p-value?",
+    "text": "What is a p-value?\n\n\nThe probabilities in that table are p-values.\n\nP-value: the probability of observing a result at least as extreme as the one we got, assuming the null hypothesis is true.\n\nA small p-value means the data would be unusual if the null were true.\nA large p-value means the data are consistent with the null."
+  },
+  {
+    "objectID": "slides/videos-concepts/p-values-slides.html#how-small-is-small-enough",
+    "href": "slides/videos-concepts/p-values-slides.html#how-small-is-small-enough",
+    "title": "",
+    "section": "How small is small enough?",
+    "text": "How small is small enough?\n\n\nResearchers in quantitative social science conventionally use 0.05 (5%).\nThis is called the significance level (or α)."
+  },
+  {
+    "objectID": "slides/videos-concepts/p-values-slides.html#applying-the-threshold",
+    "href": "slides/videos-concepts/p-values-slides.html#applying-the-threshold",
+    "title": "",
+    "section": "Applying the threshold",
+    "text": "Applying the threshold\n\n\n\n\nFlips\nAll heads?\nP-value\nDecision (α = 0.05)\n\n\n\n\n4\nYes\n6.3%\nFail to reject the null\n\n\n5\nYes\n3.1%\nReject the null\n\n\n\n\nAt four heads, the result is unusual but not unusual enough.\nAt five heads, it crosses the threshold — we reject the fair-coin hypothesis."
+  },
+  {
+    "objectID": "slides/videos-concepts/p-values-slides.html#p-values-and-confidence-intervals",
+    "href": "slides/videos-concepts/p-values-slides.html#p-values-and-confidence-intervals",
+    "title": "",
+    "section": "P-values and confidence intervals",
+    "text": "P-values and confidence intervals\n\n\nIn the previous video, we tested hypotheses using confidence intervals.\nP-values ask the same question differently.\nThese two approaches will never contradict each other."
+  },
+  {
+    "objectID": "slides/videos-concepts/p-values-slides.html#why-they-always-agree",
+    "href": "slides/videos-concepts/p-values-slides.html#why-they-always-agree",
+    "title": "",
+    "section": "Why they always agree",
+    "text": "Why they always agree\n\n\nA 95% confidence interval excludes zero exactly when p &lt; 0.05.\nA 95% confidence interval includes zero exactly when p ≥ 0.05.\nThey are two windows onto the same underlying calculation — not two independent tests."
+  },
+  {
+    "objectID": "slides/videos-concepts/p-values-slides.html#what-a-p-value-is-not",
+    "href": "slides/videos-concepts/p-values-slides.html#what-a-p-value-is-not",
+    "title": "",
+    "section": "What a p-value is not",
+    "text": "What a p-value is not\n\n\nA p-value is not the probability that the null hypothesis is true.\nIt means the data would be unusual if the null were true."
+  },
+  {
+    "objectID": "slides/videos-concepts/p-values-slides.html#recap",
+    "href": "slides/videos-concepts/p-values-slides.html#recap",
+    "title": "",
+    "section": "Recap",
+    "text": "Recap\n\n\nThe p-value is the probability of observing results at least as extreme as ours, assuming the null hypothesis is true.\nP-values and confidence intervals always lead to the same conclusion: they are two ways of expressing the same test."
+  },
+  {
+    "objectID": "slides/videos-concepts/moe-ci.html",
+    "href": "slides/videos-concepts/moe-ci.html",
+    "title": "Confidence Intervals and Margins of Error",
+    "section": "",
+    "text": "Interpret a margin of error and explain where it comes from.\nConstruct and interpret a confidence interval from a point estimate and a margin of error.\nExplain what makes a confidence interval wider or narrower.\n\n\n\n\n\n\n\n\nEach random sample we draw from a population will be slightly different from every other.\nThis is not a flaw — it is an unavoidable consequence of working with samples.\nIt means that any estimate we produce from a sample carries uncertainty.\n\n\n\n\n\n\n\n\nSuppose we want to know the Prime Minister’s approval rating among all adults.\nWe cannot ask everyone, so we take a random sample of 1,000 people.\nOur sample tells us that 42% approve.\nThis single number (42%) is our point estimate.\n\n\n\n\n\n\n\n\nA point estimate gives us our best guess from the sample.\nBut samples vary, and the true population value is unlikely to be exactly 42%.\nWe need to know how much uncertainty surrounds our estimate.\nThat is what the margin of error does.\n\n\n\n\n\n\n\n\nThe margin of error captures the uncertainty that comes from working with a sample rather than the full population.\nA margin of error of ±3% means the true value is likely within 3 percentage points of our estimate.\n\n\n\n\n\n\n\n\nA confidence interval is constructed by applying the margin of error to the point estimate:\n\nLower bound: point estimate − margin of error\nUpper bound: point estimate + margin of error\n\nIn our example: 42% ± 3% gives a confidence interval of [39%, 45%].\n\n\n\n\n\n\n\n\nConfidence intervals vary depending on how confident we want to be.\nMost social scientists work with a 95% level on confidence.\n\nWe are 95% confident that the true approval rating in the population lies between 39% and 45%.\n\n\n\n\n\n\n\n\n\n\n\nSample size: larger samples produce narrower intervals.\n\nMore data → less uncertainty → tighter estimate.\n\nConfidence level: higher confidence (e.g., 99% vs. 95%) produces wider intervals.\n\nMore certainty requires a broader net.\n\n\n\n\n\n\n\n\n\nTwo organisations poll the same PM approval rating independently.\n\nPoll A: 42% approve, margin of error ±3% → interval [39%, 45%]\nPoll B: 44% approve, margin of error ±3% → interval [41%, 47%]\n\nThe point estimates differ, but the intervals overlap.\nBoth polls are consistent with the same population value.\n\n\n\n\n\n\n\n\nThe margin of error only applies to probability samples.\nReporting a margin of error alongside a non-probability sample is misleading.\n\n\n\n\n\n\n\n\nA point estimate is our best guess from the sample.\nThe margin of error expresses the uncertainty around that estimate.\nA confidence interval = point estimate ± margin of error.\nMargins of error are only meaningful for probability samples.\n\n\n\n\nWhy this matters:\n\nPoll results and survey findings are reported with margins of error every day.\nKnowing how to interpret a confidence interval is essential for reading empirical evidence critically.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Confidence Intervals and Margins of Error"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/moe-ci.html#youll-learn-to",
+    "href": "slides/videos-concepts/moe-ci.html#youll-learn-to",
+    "title": "Confidence Intervals and Margins of Error",
+    "section": "",
+    "text": "Interpret a margin of error and explain where it comes from.\nConstruct and interpret a confidence interval from a point estimate and a margin of error.\nExplain what makes a confidence interval wider or narrower.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Confidence Intervals and Margins of Error"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/moe-ci.html#random-samples-differ-from-one-another",
+    "href": "slides/videos-concepts/moe-ci.html#random-samples-differ-from-one-another",
+    "title": "Confidence Intervals and Margins of Error",
+    "section": "",
+    "text": "Each random sample we draw from a population will be slightly different from every other.\nThis is not a flaw — it is an unavoidable consequence of working with samples.\nIt means that any estimate we produce from a sample carries uncertainty.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Confidence Intervals and Margins of Error"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/moe-ci.html#from-sample-to-estimate",
+    "href": "slides/videos-concepts/moe-ci.html#from-sample-to-estimate",
+    "title": "Confidence Intervals and Margins of Error",
+    "section": "",
+    "text": "Suppose we want to know the Prime Minister’s approval rating among all adults.\nWe cannot ask everyone, so we take a random sample of 1,000 people.\nOur sample tells us that 42% approve.\nThis single number (42%) is our point estimate.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Confidence Intervals and Margins of Error"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/moe-ci.html#the-problem-with-a-single-number",
+    "href": "slides/videos-concepts/moe-ci.html#the-problem-with-a-single-number",
+    "title": "Confidence Intervals and Margins of Error",
+    "section": "",
+    "text": "A point estimate gives us our best guess from the sample.\nBut samples vary, and the true population value is unlikely to be exactly 42%.\nWe need to know how much uncertainty surrounds our estimate.\nThat is what the margin of error does.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Confidence Intervals and Margins of Error"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/moe-ci.html#the-margin-of-error",
+    "href": "slides/videos-concepts/moe-ci.html#the-margin-of-error",
+    "title": "Confidence Intervals and Margins of Error",
+    "section": "",
+    "text": "The margin of error captures the uncertainty that comes from working with a sample rather than the full population.\nA margin of error of ±3% means the true value is likely within 3 percentage points of our estimate.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Confidence Intervals and Margins of Error"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/moe-ci.html#from-margin-of-error-to-confidence-interval",
+    "href": "slides/videos-concepts/moe-ci.html#from-margin-of-error-to-confidence-interval",
+    "title": "Confidence Intervals and Margins of Error",
+    "section": "",
+    "text": "A confidence interval is constructed by applying the margin of error to the point estimate:\n\nLower bound: point estimate − margin of error\nUpper bound: point estimate + margin of error\n\nIn our example: 42% ± 3% gives a confidence interval of [39%, 45%].",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Confidence Intervals and Margins of Error"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/moe-ci.html#interpreting-the-confidence-interval",
+    "href": "slides/videos-concepts/moe-ci.html#interpreting-the-confidence-interval",
+    "title": "Confidence Intervals and Margins of Error",
+    "section": "",
+    "text": "Confidence intervals vary depending on how confident we want to be.\nMost social scientists work with a 95% level on confidence.\n\nWe are 95% confident that the true approval rating in the population lies between 39% and 45%.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Confidence Intervals and Margins of Error"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/moe-ci.html#what-makes-an-interval-wider-or-narrower",
+    "href": "slides/videos-concepts/moe-ci.html#what-makes-an-interval-wider-or-narrower",
+    "title": "Confidence Intervals and Margins of Error",
+    "section": "",
+    "text": "Sample size: larger samples produce narrower intervals.\n\nMore data → less uncertainty → tighter estimate.\n\nConfidence level: higher confidence (e.g., 99% vs. 95%) produces wider intervals.\n\nMore certainty requires a broader net.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Confidence Intervals and Margins of Error"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/moe-ci.html#a-worked-example-two-polls",
+    "href": "slides/videos-concepts/moe-ci.html#a-worked-example-two-polls",
+    "title": "Confidence Intervals and Margins of Error",
+    "section": "",
+    "text": "Two organisations poll the same PM approval rating independently.\n\nPoll A: 42% approve, margin of error ±3% → interval [39%, 45%]\nPoll B: 44% approve, margin of error ±3% → interval [41%, 47%]\n\nThe point estimates differ, but the intervals overlap.\nBoth polls are consistent with the same population value.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Confidence Intervals and Margins of Error"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/moe-ci.html#when-the-margin-of-error-is-meaningless",
+    "href": "slides/videos-concepts/moe-ci.html#when-the-margin-of-error-is-meaningless",
+    "title": "Confidence Intervals and Margins of Error",
+    "section": "",
+    "text": "The margin of error only applies to probability samples.\nReporting a margin of error alongside a non-probability sample is misleading.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Confidence Intervals and Margins of Error"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/moe-ci.html#recap",
+    "href": "slides/videos-concepts/moe-ci.html#recap",
+    "title": "Confidence Intervals and Margins of Error",
+    "section": "",
+    "text": "A point estimate is our best guess from the sample.\nThe margin of error expresses the uncertainty around that estimate.\nA confidence interval = point estimate ± margin of error.\nMargins of error are only meaningful for probability samples.\n\n\n\n\nWhy this matters:\n\nPoll results and survey findings are reported with margins of error every day.\nKnowing how to interpret a confidence interval is essential for reading empirical evidence critically.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Confidence Intervals and Margins of Error"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/moe-ci-slides.html#youll-learn-to",
+    "href": "slides/videos-concepts/moe-ci-slides.html#youll-learn-to",
+    "title": "",
+    "section": "You’ll learn to",
+    "text": "You’ll learn to\n\n\nInterpret a margin of error and explain where it comes from.\nConstruct and interpret a confidence interval from a point estimate and a margin of error.\nExplain what makes a confidence interval wider or narrower."
+  },
+  {
+    "objectID": "slides/videos-concepts/moe-ci-slides.html#random-samples-differ-from-one-another",
+    "href": "slides/videos-concepts/moe-ci-slides.html#random-samples-differ-from-one-another",
+    "title": "",
+    "section": "Random samples differ from one another",
+    "text": "Random samples differ from one another\n\n\nEach random sample we draw from a population will be slightly different from every other.\nThis is not a flaw — it is an unavoidable consequence of working with samples.\nIt means that any estimate we produce from a sample carries uncertainty."
+  },
+  {
+    "objectID": "slides/videos-concepts/moe-ci-slides.html#from-sample-to-estimate",
+    "href": "slides/videos-concepts/moe-ci-slides.html#from-sample-to-estimate",
+    "title": "",
+    "section": "From sample to estimate",
+    "text": "From sample to estimate\n\n\nSuppose we want to know the Prime Minister’s approval rating among all adults.\nWe cannot ask everyone, so we take a random sample of 1,000 people.\nOur sample tells us that 42% approve.\nThis single number (42%) is our point estimate."
+  },
+  {
+    "objectID": "slides/videos-concepts/moe-ci-slides.html#the-problem-with-a-single-number",
+    "href": "slides/videos-concepts/moe-ci-slides.html#the-problem-with-a-single-number",
+    "title": "",
+    "section": "The problem with a single number",
+    "text": "The problem with a single number\n\n\nA point estimate gives us our best guess from the sample.\nBut samples vary, and the true population value is unlikely to be exactly 42%.\nWe need to know how much uncertainty surrounds our estimate.\nThat is what the margin of error does."
+  },
+  {
+    "objectID": "slides/videos-concepts/moe-ci-slides.html#the-margin-of-error",
+    "href": "slides/videos-concepts/moe-ci-slides.html#the-margin-of-error",
+    "title": "",
+    "section": "The margin of error",
+    "text": "The margin of error\n\n\nThe margin of error captures the uncertainty that comes from working with a sample rather than the full population.\nA margin of error of ±3% means the true value is likely within 3 percentage points of our estimate."
+  },
+  {
+    "objectID": "slides/videos-concepts/moe-ci-slides.html#from-margin-of-error-to-confidence-interval",
+    "href": "slides/videos-concepts/moe-ci-slides.html#from-margin-of-error-to-confidence-interval",
+    "title": "",
+    "section": "From margin of error to confidence interval",
+    "text": "From margin of error to confidence interval\n\n\nA confidence interval is constructed by applying the margin of error to the point estimate:\n\nLower bound: point estimate − margin of error\nUpper bound: point estimate + margin of error\n\nIn our example: 42% ± 3% gives a confidence interval of [39%, 45%]."
+  },
+  {
+    "objectID": "slides/videos-concepts/moe-ci-slides.html#interpreting-the-confidence-interval",
+    "href": "slides/videos-concepts/moe-ci-slides.html#interpreting-the-confidence-interval",
+    "title": "",
+    "section": "Interpreting the confidence interval",
+    "text": "Interpreting the confidence interval\n\n\nConfidence intervals vary depending on how confident we want to be.\nMost social scientists work with a 95% level on confidence.\n\nWe are 95% confident that the true approval rating in the population lies between 39% and 45%."
+  },
+  {
+    "objectID": "slides/videos-concepts/moe-ci-slides.html#what-makes-an-interval-wider-or-narrower",
+    "href": "slides/videos-concepts/moe-ci-slides.html#what-makes-an-interval-wider-or-narrower",
+    "title": "",
+    "section": "What makes an interval wider or narrower?",
+    "text": "What makes an interval wider or narrower?\n\n\nSample size: larger samples produce narrower intervals.\n\nMore data → less uncertainty → tighter estimate.\n\nConfidence level: higher confidence (e.g., 99% vs. 95%) produces wider intervals.\n\nMore certainty requires a broader net."
+  },
+  {
+    "objectID": "slides/videos-concepts/moe-ci-slides.html#a-worked-example-two-polls",
+    "href": "slides/videos-concepts/moe-ci-slides.html#a-worked-example-two-polls",
+    "title": "",
+    "section": "A worked example: two polls",
+    "text": "A worked example: two polls\n\n\nTwo organisations poll the same PM approval rating independently.\n\nPoll A: 42% approve, margin of error ±3% → interval [39%, 45%]\nPoll B: 44% approve, margin of error ±3% → interval [41%, 47%]\n\nThe point estimates differ, but the intervals overlap.\nBoth polls are consistent with the same population value."
+  },
+  {
+    "objectID": "slides/videos-concepts/moe-ci-slides.html#when-the-margin-of-error-is-meaningless",
+    "href": "slides/videos-concepts/moe-ci-slides.html#when-the-margin-of-error-is-meaningless",
+    "title": "",
+    "section": "When the margin of error is meaningless",
+    "text": "When the margin of error is meaningless\n\n\nThe margin of error only applies to probability samples.\nReporting a margin of error alongside a non-probability sample is misleading."
+  },
+  {
+    "objectID": "slides/videos-concepts/moe-ci-slides.html#recap",
+    "href": "slides/videos-concepts/moe-ci-slides.html#recap",
+    "title": "",
+    "section": "Recap",
+    "text": "Recap\n\n\nA point estimate is our best guess from the sample.\nThe margin of error expresses the uncertainty around that estimate.\nA confidence interval = point estimate ± margin of error.\nMargins of error are only meaningful for probability samples."
   },
   {
     "objectID": "slides/videos-concepts/types-plots-tables.html",
@@ -2926,77 +3306,46 @@
     "text": "Week 4: Describing Distributions (Univariate Description)\n\nVideos\n\nSummarising a Distribution\nVariance and Standard Deviation\nBar Charts and Histograms\nSummarising Distributions in Stata\nBar Charts and Histograms in Stata"
   },
   {
-    "objectID": "activities/A05-correlations-activity.html",
-    "href": "activities/A05-correlations-activity.html",
-    "title": "Seminar Activity: Country-level Correlations",
+    "objectID": "activities/A06-reading-week-catchup.html",
+    "href": "activities/A06-reading-week-catchup.html",
+    "title": "Reading Week Catch-Up Activity: From Data Handling to Bivariate Interpretation",
     "section": "",
-    "text": "This seminar has two parts. In the first hour, you will work through a set of variable pairs conceptually — identifying variable types, deciding which analytical case applies, and choosing the appropriate tool — without touching Stata. In the second hour, you will implement your choices in Stata and interpret the output.\nWork through each part in order. Discuss your answers with your group before moving on.\nThe dataset for all exercises is the Quality of Government (QoG) dataset (available in our Shared Project Folder). Refer to the QoG codebook if you need more detail about any variable.",
-    "crumbs": [
-      "Week 5: Describing Correlations (Bivariate Description)",
-      "Seminar Activity: Country-level Correlations"
-    ]
+    "text": "This activity is designed for students who either did not attend Week 5’s seminar or attended but found the bivariate correlations activity challenging. It helps you learn the foundational skills you will need for the second half of the module, when we move into hypothesis testing and statistical inference.\nThe activity has three parts:\n\nPart 1: Setting up your workflow — Confirming that your folder structure is in place and that you can load a dataset in Stata.\nPart 2: Describing single variables — Reviewing variable types and univariate description.\nPart 3: Describing relationships between variables — Producing and interpreting bivariate output.\n\nIf you cannot complete a step independently, note where you got stuck and bring that specific question to office hours.\nTime expectation: This activity should take approximately 90 minutes. If you cannot complete this activity independently, book an appointment with me by clicking here."
   },
   {
-    "objectID": "activities/A05-correlations-activity.html#introduction",
-    "href": "activities/A05-correlations-activity.html#introduction",
-    "title": "Seminar Activity: Country-level Correlations",
+    "objectID": "activities/A06-reading-week-catchup.html#introduction",
+    "href": "activities/A06-reading-week-catchup.html#introduction",
+    "title": "Reading Week Catch-Up Activity: From Data Handling to Bivariate Interpretation",
     "section": "",
-    "text": "This seminar has two parts. In the first hour, you will work through a set of variable pairs conceptually — identifying variable types, deciding which analytical case applies, and choosing the appropriate tool — without touching Stata. In the second hour, you will implement your choices in Stata and interpret the output.\nWork through each part in order. Discuss your answers with your group before moving on.\nThe dataset for all exercises is the Quality of Government (QoG) dataset (available in our Shared Project Folder). Refer to the QoG codebook if you need more detail about any variable.",
-    "crumbs": [
-      "Week 5: Describing Correlations (Bivariate Description)",
-      "Seminar Activity: Country-level Correlations"
-    ]
+    "text": "This activity is designed for students who either did not attend Week 5’s seminar or attended but found the bivariate correlations activity challenging. It helps you learn the foundational skills you will need for the second half of the module, when we move into hypothesis testing and statistical inference.\nThe activity has three parts:\n\nPart 1: Setting up your workflow — Confirming that your folder structure is in place and that you can load a dataset in Stata.\nPart 2: Describing single variables — Reviewing variable types and univariate description.\nPart 3: Describing relationships between variables — Producing and interpreting bivariate output.\n\nIf you cannot complete a step independently, note where you got stuck and bring that specific question to office hours.\nTime expectation: This activity should take approximately 90 minutes. If you cannot complete this activity independently, book an appointment with me by clicking here."
   },
   {
-    "objectID": "activities/A05-correlations-activity.html#the-seven-variable-pairs",
-    "href": "activities/A05-correlations-activity.html#the-seven-variable-pairs",
-    "title": "Seminar Activity: Country-level Correlations",
-    "section": "The Seven Variable Pairs",
-    "text": "The Seven Variable Pairs\nBelow are seven pairs of variables drawn from the QoG dataset. Each pair is accompanied by a brief description of how each variable is measured and a research question that motivates the analysis. Read through all seven pairs before beginning Hour 1.\n\n\nPair 1\nVariables: gol_est and ideavt_legvt\n\ngol_est — Electoral system type (Bormann and Golder). Values: 1 = Majoritarian, 2 = Proportional, 3 = Mixed.\nideavt_legvt — Parliamentary election voter turnout (Institute for Democracy and Electoral Assistance). The percentage of the voting-age population that cast a vote in the most recent parliamentary election (0–100).\n\nResearch question: Do countries with different electoral systems differ in their average levels of voter turnout?\n\n\n\nPair 2\nVariables: wdi_gini and ti_cpi\n\nwdi_gini — Gini index (World Bank). A variable measuring income inequality within a country, ranging from 0 (perfect equality) to 100 (perfect inequality).\nti_cpi — Corruption Perceptions Index (Transparency International). A continuous variable ranging from 0 (highly corrupt) to 100 (highly clean), measuring perceptions of public sector corruption as seen by business people, risk analysts, and the general public.\n\nResearch question: Do more unequal countries tend to have higher levels of perceived corruption?\n\n\n\nPair 3\nVariables: bmr_dem and ht_colonial\n\nbmr_dem — Dichotomous democracy measure (Boix, Miller, and Rosato). This is a binary variable: 0 = not a democracy, 1 = democracy. Countries are coded as democratic if political leaders are chosen through free and fair elections and a minimum suffrage threshold is met. It does not measure degree of democracy.\nht_colonial — Colonial origin. A categorical variable recording the country’s former Western overseas colonial ruler (e.g. British, French, Spanish, Portuguese, Belgian). Countries that were never colonised by a Western overseas power are in a separate category.\n\nResearch question: Do countries with different colonial histories differ in their likelihood of being democratic today?\n\n\n\nPair 4\nVariables: wdi_internet and rsf_pfi\n\nwdi_internet — Individuals using the internet (World Bank). The percentage of the population with internet access (0–100).\nrsf_pfi — Press Freedom Index (Reporters Without Borders). A numeric variable measuring the degree of freedom available to journalists and media organisations in each country. Higher scores indicate more press freedom.\n\nResearch question: Do countries with higher internet usage tend to have greater press freedom?\n\n\n\nPair 5\nVariables: ht_colonial and ti_cpi\n\nht_colonial — Colonial origin. See Pair 3 for the full description.\nti_cpi — Corruption Perceptions Index. See Pair 2 for the full description.\n\nResearch question: Do countries with different colonial histories differ in their average levels of perceived corruption today?\n\n\n\nPair 6\nVariables: gol_est and ht_region\n\ngol_est — Electoral system type. See Pair 1 for the full description.\nht_region — Region of the world. A variable classifying countries into ten politico-geographic regions, including Eastern Europe and post-Soviet Union, Latin America, North Africa and the Middle East, Sub-Saharan Africa, Western Europe and North America, East Asia, South-East Asia, South Asia, the Pacific, and the Caribbean.\n\nResearch question: Do countries in different world regions tend to use different electoral systems?\n\n\n\nPair 7\nVariables: wdi_gini and wdi_wip\n\nwdi_gini — Gini index. See Pair 2 for the full description.\nwdi_wip — Proportion of seats held by women in national parliaments (World Bank). Measured as a percentage (0–100).\n\nResearch question: Do more unequal countries tend to have lower levels of women’s representation in parliament?",
-    "crumbs": [
-      "Week 5: Describing Correlations (Bivariate Description)",
-      "Seminar Activity: Country-level Correlations"
-    ]
+    "objectID": "activities/A06-reading-week-catchup.html#part-1-setting-up-your-workflow",
+    "href": "activities/A06-reading-week-catchup.html#part-1-setting-up-your-workflow",
+    "title": "Reading Week Catch-Up Activity: From Data Handling to Bivariate Interpretation",
+    "section": "Part 1: Setting Up Your Workflow",
+    "text": "Part 1: Setting Up Your Workflow\nThis part confirms that you can navigate the folder structure, set the working directory, and load a dataset in Stata. If you completed the Week 2 seminar activities (Parts 1 and 2) successfully, this should be straightforward. If not, work through each step carefully.\nIf you get stuck, review:\n\nDoing Reproducible Research\nThe Stata Interface (Setting the Working Directory)\nLoading and Browsing Data\n\n\n\nStep 1: Locate your project folder\nYou should have created a folder called my-research-project/ (or a different name you may have chosen). This folder should contain four subfolders:\n\ndata-raw\ndata-clean\ndo\noutput\n\nAction: Open your file explorer (Windows) or Finder (Mac) and locate this folder. Confirm that all four subfolders are present.\nIf you cannot find this folder: You need to set it up now. Review the Doing Reproducible Research video and create the folder structure as instructed.\n\n\n\nStep 2: Download the dataset\nWe will use the Quality of Government (QoG) dataset for this activity. You used this dataset in Week 5’s seminar.\nAction:\n\nGo to our Shared Project Folder.\nClick on the data-raw folder.\nDownload Quality_of_Government_2026.dta.\nSave it into your local data-raw folder (inside my-research-project/data-raw).\n\nCheck yourself: Open your local data-raw folder. You should see Quality_of_Government_2026.dta listed there.\n\n\n\nStep 3: Set the working directory\nBefore you can load data in Stata, you need to tell Stata where your project folder is located. This is called setting the working directory.\nAction:\n\nOpen Stata.\nGo to File &gt; Change working directory.\nNavigate to your my-research-project/ folder and select it.\nAfter you click “OK”, look at the Command History pane (bottom-left). You should see a command that starts with cd followed by the path to your folder.\n\nIf you need a reminder: Review the The Stata Interface video, which walks through this process step-by-step.\n\n\n\nStep 4: Save the working directory command\nYou should have a file called set-wd.do in your do folder from Week 3. This file contains the command that sets your working directory. It serves as a reference so you can copy-paste the command that sets the working directory. This way, you don’t have to use the menu every time.\nAction:\n\nIn Stata, right-click on the command in the Command History pane that starts with cd.\nClick “Copy”.\nOpen the Do-file Editor by clicking the icon that looks like a sheet of paper with a pencil.\nPaste the command into a new do-file.\nSave this do-file as set-wd.do in your do folder.\n\nIf you already have set-wd.do from Week 3: Open it and confirm that the path matches your current folder location.\nCheck yourself: Open set-wd.do in Stata. The first line should be a command that starts with cd followed by the full path to your my-research-project/ folder.\n\n\n\nStep 5: Load the dataset\nNow that the working directory is set, you can load the QoG dataset.\nAction:\n\nOpen a new do-file in Stata (click the Do-file Editor icon).\nOn the first line, copy and paste the cd command from your set-wd.do file.\nOn the second line, type: use \"data-raw/Quality_of_Government_2026.dta\", clear\nClick the “Execute (do)” button (the icon that looks like a sheet of paper with a play button).\n\nCheck yourself: After running the do-file, look at the top-right pane (the Variables pane). You should see a long list of variable names, including gol_est, wdi_gini, ti_cpi, bmr_dem, and ht_colonial. If you see these variables, the dataset has loaded correctly.\nIf you see an error message: Check that: - You have saved Quality_of_Government_2026.dta in your local data-raw folder. - The working directory is set to my-research-project/. - You have spelled the dataset name exactly as shown (including the file extension .dta).\nIf you are still stuck, note the exact error message and bring it to office hours.\nIf you need a reminder: Review the Loading and Browsing Data video.\n\n\n\nStep 6: Save your do-file\nAction: Save this do-file in your do folder as reading-week-catchup.do. You will continue adding commands to this file as you work through Parts 2 and 3.\n\nSummary of Part 1:\nYou should now have:\n\nA folder structure in place (my-research-project/ with four subfolders).\nThe QoG dataset downloaded and saved in your local data-raw folder.\nA do-file that sets the working directory and loads the dataset.\nConfirmation that the dataset appears in the Variables pane when you run your do-file.\n\nIf any of these steps did not work, stop here and book an office hour. Do not move to Part 2 until Part 1 is fully working."
   },
   {
-    "objectID": "activities/A05-correlations-activity.html#hour-1-conceptual-mapping",
-    "href": "activities/A05-correlations-activity.html#hour-1-conceptual-mapping",
-    "title": "Seminar Activity: Country-level Correlations",
-    "section": "Hour 1: Conceptual Mapping",
-    "text": "Hour 1: Conceptual Mapping\nIn this hour, you will work through the seven pairs conceptually. Do not open Stata. For each pair, answer the three questions below by discussing with your group and writing down your answers.\nFor each of the seven pairs, answer:\nQuestion A: What type is each variable?\nDecide whether each variable is nominal (unordered categories), ordinal (ordered categories), or numeric (interval or ratio). Pay close attention to how the variable is measured — a variable coded as numbers is not necessarily numeric. Refer to the descriptions above and the codebook if needed.\nQuestion B: Which analytical case applies?\nBased on the variable types, determine which case this pair belongs to:\n\nCase 1: Both variables are nominal → cross-tabulation and bivariate bar chart\nCase 2: One nominal, one numeric → compare means and bar chart of means\nCase 3: Both numeric → scatterplot and regression line\n\nQuestion C: What is the appropriate tool?\nState the specific plot or table you would use.\n\nOnce your group has worked through all seven pairs, be ready to discuss your answers. Pay particular attention to any pairs where you were uncertain — these are worth discussing carefully before moving to Hour 2.",
-    "crumbs": [
-      "Week 5: Describing Correlations (Bivariate Description)",
-      "Seminar Activity: Country-level Correlations"
-    ]
+    "objectID": "activities/A06-reading-week-catchup.html#part-2-describing-single-variables",
+    "href": "activities/A06-reading-week-catchup.html#part-2-describing-single-variables",
+    "title": "Reading Week Catch-Up Activity: From Data Handling to Bivariate Interpretation",
+    "section": "Part 2: Describing Single Variables",
+    "text": "Part 2: Describing Single Variables\nBefore you can describe relationships between variables, you need to be able to describe individual variables. This part reviews variable types and univariate description.\n\n\nStep 7: Identify variable types\nThe QoG dataset contains many variables. We will focus on three variables that you encountered in Week 5:\n\ngol_est — Electoral system type (1 = Majoritarian, 2 = Proportional, 3 = Mixed)\nwdi_gini — Gini index (a measure of income inequality, ranging from 0 to 100)\nti_cpi — Corruption Perceptions Index (ranging from 0 = highly corrupt to 100 = highly clean)\n\nBefore continuing: Download the QoG Codebook from the Shared Project Folder and open it. Use the codebook to confirm the descriptions of these three variables.\nCheck yourself: Answer these questions before moving on:\n\nWhat type of variable is gol_est? (Nominal, ordinal, or numeric?)\nWhat type of variable is wdi_gini? (Nominal, ordinal, or numeric?)\nWhat type of variable is ti_cpi? (Nominal, ordinal, or numeric?)\n\nHint: A variable is not necessarily numeric just because it is coded with numbers. gol_est is coded as 1, 2, and 3, but what do these numbers represent? Are they meaningful quantities, or are they labels for categories?\nIf you are uncertain: Review the Types of Variables video before proceeding.\n\n\n\nStep 8: Describe a nominal variable\nFor nominal variables, we summarize them using frequency tables. A frequency table shows how many observations fall into each category.\nAction:\n\nAdd the following command to your do-file: tab gol_est\nRun the do-file.\nLook at the Results window. You should see a table showing how many countries have each type of electoral system.\n\nCheck yourself:\n\nHow many countries in the dataset have majoritarian electoral systems?\nHow many have proportional systems?\nHow many have mixed systems?\n\n\n\n\nStep 9: Describe a numeric variable\nFor numeric variables, we summarize them using summary statistics such as the mean, median, minimum, and maximum.\nAction:\n\nAdd the following command to your do-file: summarize wdi_gini\nRun the do-file.\nLook at the Results window. You should see a table with five columns: variable name, observations, mean, standard deviation, minimum, and maximum.\n\nCheck yourself:\n\nWhat is the mean value of the Gini index across all countries in the dataset?\nWhat is the minimum value? What is the maximum value?\nWhat does this range tell you about variation in income inequality across countries?\n\nIf you need a reminder about summary statistics: Review the Summarising a Distribution video.\n\n\n\nStep 10: Produce a histogram\nA histogram visualizes the distribution of a numeric variable. It shows you how frequently different values occur.\nAction:\n\nAdd the following command to your do-file: histogram wdi_gini, width(5)\nRun the do-file.\nA histogram should appear in a new window.\n\nCheck yourself:\n\nWhere are most countries clustered? Are most countries relatively equal (low Gini values), relatively unequal (high Gini values), or somewhere in the middle?\nAre there any countries with very extreme values?\n\nIf you need a reminder about histograms: Review the Bar Charts and Histograms video.\n\nSummary of Part 2:\nYou should now be able to:\n\nIdentify whether a variable is nominal, ordinal, or numeric.\nProduce a frequency table for a nominal variable.\nProduce summary statistics for a numeric variable.\nProduce and interpret a histogram for a numeric variable.\n\nIf you struggled with any of these tasks, revisit the relevant videos before moving to Part 3."
   },
   {
-    "objectID": "activities/A05-correlations-activity.html#hour-2-stata-implementation",
-    "href": "activities/A05-correlations-activity.html#hour-2-stata-implementation",
-    "title": "Seminar Activity: Country-level Correlations",
-    "section": "Hour 2: Stata Implementation",
-    "text": "Hour 2: Stata Implementation\nIn this hour, you will implement the tools you identified in Hour 1 and interpret the output. Work through the pairs in order, using bivariate-lecture.do as a reference for command syntax. For each pair, there are two steps: execute and interpret.\n\n\nPair 1 — gol_est and ideavt_legvt\nExecute: Produce the appropriate summary table and chart.\nInterpret:\n\nWhich electoral system is associated with the highest average turnout? Which with the lowest?\nIs the difference between systems substantively meaningful, or are the means fairly similar?\nWhy might the choice of electoral system be associated with turnout? Think about how different systems create incentives for parties to mobilise voters.\n\n\nHint: A difference of a few percentage points in turnout can be politically significant at the national level, even if it looks modest in a chart.\n\n\n\n\nPair 2 — wdi_gini and ti_cpi\nExecute: Produce the appropriate chart, including a regression line.\nInterpret:\n\nWhat is the direction of the association? Does a higher Gini index tend to be associated with higher or lower corruption scores?\nBefore interpreting the slope, make sure you have the scale direction of ti_cpi clearly in mind: a higher score means less corruption, not more. What does this imply about the slope you expect to see?\n\n\nHint: Getting the scale direction of ti_cpi right is essential for interpreting the slope correctly. Confirm which end of the scale represents more corruption before drawing conclusions.\n\n\n\n\nPair 3 — bmr_dem and ht_colonial\nExecute: Produce the appropriate table and chart. When producing the table, try running it with both row percentages and column percentages.\nInterpret:\n\nCompare the row percentage output and the column percentage output. What does each tell you? Which is more useful for answering the research question, and why?\nAre some colonial origins more strongly associated with democratic status than others? Which patterns stand out?\n\n\nHint: Row percentages show the distribution of one variable within each category of the other. Switching between row and column orientations reveals different aspects of the same association — think carefully about which question each answers.\n\n\n\n\nPair 4 — wdi_internet and rsf_pfi\nExecute: Produce the appropriate chart, including a regression line.\nInterpret:\n\nIs there a positive association, a negative association, or no clear pattern?\nRemember that higher rsf_pfi scores indicate more press freedom. If the slope is positive, what does that mean substantively?\n\n\nHint: Make sure you have the direction of the rsf_pfi scale clear before interpreting the slope. A positive slope here has a specific substantive meaning that depends on understanding what higher values represent.\n\n\n\n\nPair 5 — ht_colonial and ti_cpi\nExecute: Produce the appropriate summary table and chart.\nInterpret:\n\nWhich colonial-origin groups have the highest and lowest average corruption scores? Are the differences large or small?\nAre there any groups represented by very few countries? How might this affect the reliability of the group mean?\nCompare your findings here with Pair 2, which also involves ti_cpi. Both pairs ask about correlates of corruption, but use a different variable as the grouping factor. What does the comparison suggest about the sources of variation in corruption perceptions?\n\n\nHint: The bar chart of means lets you compare average corruption scores across colonial-origin categories at a glance. Look for categories with notably higher or lower means, and keep in mind that fewer countries in a category makes the average less reliable.\n\n\n\n\nPair 6 — gol_est and ht_region\nExecute: Produce the appropriate table and chart.\nInterpret:\n\nDoes electoral system type appear to be evenly distributed across regions, or does it cluster? Are there regions where one system type clearly dominates?\nAre there any regions where data are sparse or missing? What might this imply?\nWhy might the choice of electoral system vary across world regions? Think about historical legacies, colonial influences, and the regional diffusion of institutional models.\n\n\nHint: A bivariate chart will make regional patterns easier to see than a table alone. Look for categories that are heavily concentrated in one region or largely absent from another.\n\n\n\n\nPair 7 — wdi_gini and wdi_wip\nExecute: Produce the appropriate chart, including a regression line.\nInterpret:\n\nWhat does the slope of the regression line tell you about the direction of the relationship? Is a higher Gini index associated with more or fewer women in parliament?\nIs the relationship strong or weak? How are the points distributed around the regression line?\nCompare this with Pair 2, which also uses wdi_gini. Both pair inequality with a political outcome. Are the patterns similar or different? What might this suggest?\n\n\nHint: Pay attention to both the direction of the regression line and how tightly the points cluster around it. A flat or nearly flat line suggests little association, even if the slope is not exactly zero.",
-    "crumbs": [
-      "Week 5: Describing Correlations (Bivariate Description)",
-      "Seminar Activity: Country-level Correlations"
-    ]
+    "objectID": "activities/A06-reading-week-catchup.html#part-3-describing-relationships-between-variables",
+    "href": "activities/A06-reading-week-catchup.html#part-3-describing-relationships-between-variables",
+    "title": "Reading Week Catch-Up Activity: From Data Handling to Bivariate Interpretation",
+    "section": "Part 3: Describing Relationships Between Variables",
+    "text": "Part 3: Describing Relationships Between Variables\nIn this part, you will produce and interpret bivariate output. You will work through two variable pairs that represent two of the three analytical cases from Week 5.\n\n\nStep 11: Review the analytical cases\nIn Week 5, you learned that the appropriate bivariate tool depends on the types of variables you are analyzing:\n\nCase 1: Both variables are nominal → cross-tabulation and bivariate bar chart\nCase 2: One nominal, one numeric → compare means and bar chart of means\nCase 3: Both numeric → scatterplot and regression line\n\nIf you need a reminder: Review the From Variable Types to Plots and Tables video.\n\n\n\nStep 12: Pair 1 — Electoral system and voter turnout (Case 2)\nWe will analyze the relationship between electoral system type (gol_est) and voter turnout (ideavt_legvt).\nBefore continuing: Check the codebook to confirm what ideavt_legvt measures. Write down a one-sentence description.\nCheck yourself:\n\nWhat type of variable is gol_est? (You answered this in Part 2.)\nWhat type of variable is ideavt_legvt?\nWhich analytical case does this pair belong to? (Case 1, Case 2, or Case 3?)\n\nAction:\n\nAdd the following command to your do-file: table gol_est, statistic(mean ideavt_legvt)\nRun the do-file.\nLook at the Results window. You should see a table showing the mean turnout for each electoral system type.\n\nInterpret the output:\n\nWhich electoral system type has the highest average turnout?\nWhich has the lowest?\nIs the difference between them large or small?\n\nWrite your answers in complete sentences. For example: “Countries with [system type] electoral systems have the highest average turnout at approximately [number]%.”\n\n\n\nStep 13: Visualise the relationship\nA bar chart of means makes the comparison easier to see.\nAction:\n\nAdd the following command to your do-file: graph bar (mean) ideavt_legvt, over(gol_est)\nRun the do-file.\nA bar chart should appear in a new window.\n\nCheck yourself:\n\nDoes the visual pattern match what you saw in the table?\nIs the difference between electoral system types visually clear, or are the bars similar in height?\n\n\n\n\nStep 14: Pair 2 — Inequality and corruption (Case 3)\nWe will analyze the relationship between income inequality (wdi_gini) and perceived corruption (ti_cpi).\nBefore continuing: Check the codebook to confirm what ti_cpi measures. Pay close attention to the direction of the scale: does a higher score mean more corruption or less corruption?\nCheck yourself:\n\nWhat type of variable is wdi_gini?\nWhat type of variable is ti_cpi?\nWhich analytical case does this pair belong to? (Case 1, Case 2, or Case 3?)\n\nAction:\n\nAdd the following command to your do-file: twoway (scatter ti_cpi wdi_gini) (lfit ti_cpi wdi_gini)\nRun the do-file.\nA scatterplot with a regression line should appear in a new window.\n\nIf you need a reminder about scatterplots: Review the Scatterplots and Regression Lines video.\n\n\n\nStep 15: Interpret the scatterplot\nCheck yourself:\n\nDoes the regression line slope upward or downward?\nRemember that higher ti_cpi scores mean less corruption. What does the slope tell you about the relationship between inequality and corruption?\nAre the points tightly clustered around the regression line, or are they widely scattered?\n\nWrite your interpretation in complete sentences. For example: “The regression line slopes [upward/downward], which means that countries with higher levels of income inequality tend to have [higher/lower] levels of perceived corruption.”\n\nHint: Getting the direction of the ti_cpi scale right is essential. Confirm which end of the scale represents more corruption before interpreting the slope.\n\n\nSummary of Part 3:\nYou should now be able to:\n\nDetermine which analytical case applies to a given pair of variables.\nProduce a table of means and a bar chart of means for a nominal × numeric pair.\nProduce a scatterplot with a regression line for a numeric × numeric pair.\nInterpret the output in substantive terms."
   },
   {
-    "objectID": "activities/A05-correlations-activity.html#summary",
-    "href": "activities/A05-correlations-activity.html#summary",
-    "title": "Seminar Activity: Country-level Correlations",
-    "section": "Summary",
-    "text": "Summary\nIn this activity, you have:\n\nIdentified variable types and matched them to the appropriate bivariate analytical tool.\nProduced and interpreted cross-tabulations, bar charts of means, and scatterplots with regression lines.\nConnected descriptive patterns in data to theoretical arguments in political science.\n\nThese skills form the foundation for the independent empirical analysis you will carry out in Problem Set 2.",
-    "crumbs": [
-      "Week 5: Describing Correlations (Bivariate Description)",
-      "Seminar Activity: Country-level Correlations"
-    ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "objectID": "activities/A06-reading-week-catchup.html#what-to-do-if-you-could-not-complete-this-activity",
+    "href": "activities/A06-reading-week-catchup.html#what-to-do-if-you-could-not-complete-this-activity",
+    "title": "Reading Week Catch-Up Activity: From Data Handling to Bivariate Interpretation",
+    "section": "What to Do If You Could Not Complete This Activity",
+    "text": "What to Do If You Could Not Complete This Activity\nIf you were unable to complete this activity independently, or if you completed it but do not feel confident explaining your answers, book an office hour before Week 7.\nYou should be able to:\n\nDownload a dataset from the Shared Project Folder and load it in Stata using a do-file.\nIdentify whether a variable is nominal, ordinal, or numeric by reading the codebook.\nProduce summary statistics, frequency tables, and histograms for single variables.\nDecide which analytical tool (table of means, scatterplot, or cross-tabulation) to use for a given pair of variables.\nRun the appropriate Stata command and interpret the output in substantive terms.\n\nIf any of these skills feel shaky, seek help now. The material in Weeks 7–10 builds directly on these foundations, and struggling with this material is normal. Getting help now will prevent you from falling further behind."
   },
   {
     "objectID": "activities/A04-distributions-activity.html",
@@ -3073,6 +3422,79 @@
     "crumbs": [
       "Week 4: Describing Distributions (Univariate Description)",
       "Mock Exam Questions: Describing Distributions"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "activities/A05-correlations-activity.html",
+    "href": "activities/A05-correlations-activity.html",
+    "title": "Seminar Activity: Country-level Correlations",
+    "section": "",
+    "text": "This seminar has two parts. In the first hour, you will work through a set of variable pairs conceptually — identifying variable types, deciding which analytical case applies, and choosing the appropriate tool — without touching Stata. In the second hour, you will implement your choices in Stata and interpret the output.\nWork through each part in order. Discuss your answers with your group before moving on.\nThe dataset for all exercises is the Quality of Government (QoG) dataset (available in our Shared Project Folder). Refer to the QoG codebook if you need more detail about any variable.",
+    "crumbs": [
+      "Week 5: Describing Correlations (Bivariate Description)",
+      "Seminar Activity: Country-level Correlations"
+    ]
+  },
+  {
+    "objectID": "activities/A05-correlations-activity.html#introduction",
+    "href": "activities/A05-correlations-activity.html#introduction",
+    "title": "Seminar Activity: Country-level Correlations",
+    "section": "",
+    "text": "This seminar has two parts. In the first hour, you will work through a set of variable pairs conceptually — identifying variable types, deciding which analytical case applies, and choosing the appropriate tool — without touching Stata. In the second hour, you will implement your choices in Stata and interpret the output.\nWork through each part in order. Discuss your answers with your group before moving on.\nThe dataset for all exercises is the Quality of Government (QoG) dataset (available in our Shared Project Folder). Refer to the QoG codebook if you need more detail about any variable.",
+    "crumbs": [
+      "Week 5: Describing Correlations (Bivariate Description)",
+      "Seminar Activity: Country-level Correlations"
+    ]
+  },
+  {
+    "objectID": "activities/A05-correlations-activity.html#the-seven-variable-pairs",
+    "href": "activities/A05-correlations-activity.html#the-seven-variable-pairs",
+    "title": "Seminar Activity: Country-level Correlations",
+    "section": "The Seven Variable Pairs",
+    "text": "The Seven Variable Pairs\nBelow are seven pairs of variables drawn from the QoG dataset. Each pair is accompanied by a brief description of how each variable is measured and a research question that motivates the analysis. Read through all seven pairs before beginning Hour 1.\n\n\nPair 1\nVariables: gol_est and ideavt_legvt\n\ngol_est — Electoral system type (Bormann and Golder). Values: 1 = Majoritarian, 2 = Proportional, 3 = Mixed.\nideavt_legvt — Parliamentary election voter turnout (Institute for Democracy and Electoral Assistance). The percentage of the voting-age population that cast a vote in the most recent parliamentary election (0–100).\n\nResearch question: Do countries with different electoral systems differ in their average levels of voter turnout?\n\n\n\nPair 2\nVariables: wdi_gini and ti_cpi\n\nwdi_gini — Gini index (World Bank). A variable measuring income inequality within a country, ranging from 0 (perfect equality) to 100 (perfect inequality).\nti_cpi — Corruption Perceptions Index (Transparency International). A continuous variable ranging from 0 (highly corrupt) to 100 (highly clean), measuring perceptions of public sector corruption as seen by business people, risk analysts, and the general public.\n\nResearch question: Do more unequal countries tend to have higher levels of perceived corruption?\n\n\n\nPair 3\nVariables: bmr_dem and ht_colonial\n\nbmr_dem — Dichotomous democracy measure (Boix, Miller, and Rosato). This is a binary variable: 0 = not a democracy, 1 = democracy. Countries are coded as democratic if political leaders are chosen through free and fair elections and a minimum suffrage threshold is met. It does not measure degree of democracy.\nht_colonial — Colonial origin. A categorical variable recording the country’s former Western overseas colonial ruler (e.g. British, French, Spanish, Portuguese, Belgian). Countries that were never colonised by a Western overseas power are in a separate category.\n\nResearch question: Do countries with different colonial histories differ in their likelihood of being democratic today?\n\n\n\nPair 4\nVariables: wdi_internet and rsf_pfi\n\nwdi_internet — Individuals using the internet (World Bank). The percentage of the population with internet access (0–100).\nrsf_pfi — Press Freedom Index (Reporters Without Borders). A numeric variable measuring the degree of freedom available to journalists and media organisations in each country. Higher scores indicate more press freedom.\n\nResearch question: Do countries with higher internet usage tend to have greater press freedom?\n\n\n\nPair 5\nVariables: ht_colonial and ti_cpi\n\nht_colonial — Colonial origin. See Pair 3 for the full description.\nti_cpi — Corruption Perceptions Index. See Pair 2 for the full description.\n\nResearch question: Do countries with different colonial histories differ in their average levels of perceived corruption today?\n\n\n\nPair 6\nVariables: gol_est and ht_region\n\ngol_est — Electoral system type. See Pair 1 for the full description.\nht_region — Region of the world. A variable classifying countries into ten politico-geographic regions, including Eastern Europe and post-Soviet Union, Latin America, North Africa and the Middle East, Sub-Saharan Africa, Western Europe and North America, East Asia, South-East Asia, South Asia, the Pacific, and the Caribbean.\n\nResearch question: Do countries in different world regions tend to use different electoral systems?\n\n\n\nPair 7\nVariables: wdi_gini and wdi_wip\n\nwdi_gini — Gini index. See Pair 2 for the full description.\nwdi_wip — Proportion of seats held by women in national parliaments (World Bank). Measured as a percentage (0–100).\n\nResearch question: Do more unequal countries tend to have lower levels of women’s representation in parliament?",
+    "crumbs": [
+      "Week 5: Describing Correlations (Bivariate Description)",
+      "Seminar Activity: Country-level Correlations"
+    ]
+  },
+  {
+    "objectID": "activities/A05-correlations-activity.html#hour-1-conceptual-mapping",
+    "href": "activities/A05-correlations-activity.html#hour-1-conceptual-mapping",
+    "title": "Seminar Activity: Country-level Correlations",
+    "section": "Hour 1: Conceptual Mapping",
+    "text": "Hour 1: Conceptual Mapping\nIn this hour, you will work through the seven pairs conceptually. Do not open Stata. For each pair, answer the three questions below by discussing with your group and writing down your answers.\nFor each of the seven pairs, answer:\nQuestion A: What type is each variable?\nDecide whether each variable is nominal (unordered categories), ordinal (ordered categories), or numeric (interval or ratio). Pay close attention to how the variable is measured — a variable coded as numbers is not necessarily numeric. Refer to the descriptions above and the codebook if needed.\nQuestion B: Which analytical case applies?\nBased on the variable types, determine which case this pair belongs to:\n\nCase 1: Both variables are nominal → cross-tabulation and bivariate bar chart\nCase 2: One nominal, one numeric → compare means and bar chart of means\nCase 3: Both numeric → scatterplot and regression line\n\nQuestion C: What is the appropriate tool?\nState the specific plot or table you would use.\n\nOnce your group has worked through all seven pairs, be ready to discuss your answers. Pay particular attention to any pairs where you were uncertain — these are worth discussing carefully before moving to Hour 2.",
+    "crumbs": [
+      "Week 5: Describing Correlations (Bivariate Description)",
+      "Seminar Activity: Country-level Correlations"
+    ]
+  },
+  {
+    "objectID": "activities/A05-correlations-activity.html#hour-2-stata-implementation",
+    "href": "activities/A05-correlations-activity.html#hour-2-stata-implementation",
+    "title": "Seminar Activity: Country-level Correlations",
+    "section": "Hour 2: Stata Implementation",
+    "text": "Hour 2: Stata Implementation\nIn this hour, you will implement the tools you identified in Hour 1 and interpret the output. Work through the pairs in order, using bivariate-lecture.do as a reference for command syntax. For each pair, there are two steps: execute and interpret.\n\n\nPair 1 — gol_est and ideavt_legvt\nExecute: Produce the appropriate summary table and chart.\nInterpret:\n\nWhich electoral system is associated with the highest average turnout? Which with the lowest?\nIs the difference between systems substantively meaningful, or are the means fairly similar?\nWhy might the choice of electoral system be associated with turnout? Think about how different systems create incentives for parties to mobilise voters.\n\n\nHint: A difference of a few percentage points in turnout can be politically significant at the national level, even if it looks modest in a chart.\n\n\n\n\nPair 2 — wdi_gini and ti_cpi\nExecute: Produce the appropriate chart, including a regression line.\nInterpret:\n\nWhat is the direction of the association? Does a higher Gini index tend to be associated with higher or lower corruption scores?\nBefore interpreting the slope, make sure you have the scale direction of ti_cpi clearly in mind: a higher score means less corruption, not more. What does this imply about the slope you expect to see?\n\n\nHint: Getting the scale direction of ti_cpi right is essential for interpreting the slope correctly. Confirm which end of the scale represents more corruption before drawing conclusions.\n\n\n\n\nPair 3 — bmr_dem and ht_colonial\nExecute: Produce the appropriate table and chart. When producing the table, try running it with both row percentages and column percentages.\nInterpret:\n\nCompare the row percentage output and the column percentage output. What does each tell you? Which is more useful for answering the research question, and why?\nAre some colonial origins more strongly associated with democratic status than others? Which patterns stand out?\n\n\nHint: Row percentages show the distribution of one variable within each category of the other. Switching between row and column orientations reveals different aspects of the same association — think carefully about which question each answers.\n\n\n\n\nPair 4 — wdi_internet and rsf_pfi\nExecute: Produce the appropriate chart, including a regression line.\nInterpret:\n\nIs there a positive association, a negative association, or no clear pattern?\nRemember that higher rsf_pfi scores indicate more press freedom. If the slope is positive, what does that mean substantively?\n\n\nHint: Make sure you have the direction of the rsf_pfi scale clear before interpreting the slope. A positive slope here has a specific substantive meaning that depends on understanding what higher values represent.\n\n\n\n\nPair 5 — ht_colonial and ti_cpi\nExecute: Produce the appropriate summary table and chart.\nInterpret:\n\nWhich colonial-origin groups have the highest and lowest average corruption scores? Are the differences large or small?\nAre there any groups represented by very few countries? How might this affect the reliability of the group mean?\nCompare your findings here with Pair 2, which also involves ti_cpi. Both pairs ask about correlates of corruption, but use a different variable as the grouping factor. What does the comparison suggest about the sources of variation in corruption perceptions?\n\n\nHint: The bar chart of means lets you compare average corruption scores across colonial-origin categories at a glance. Look for categories with notably higher or lower means, and keep in mind that fewer countries in a category makes the average less reliable.\n\n\n\n\nPair 6 — gol_est and ht_region\nExecute: Produce the appropriate table and chart.\nInterpret:\n\nDoes electoral system type appear to be evenly distributed across regions, or does it cluster? Are there regions where one system type clearly dominates?\nAre there any regions where data are sparse or missing? What might this imply?\nWhy might the choice of electoral system vary across world regions? Think about historical legacies, colonial influences, and the regional diffusion of institutional models.\n\n\nHint: A bivariate chart will make regional patterns easier to see than a table alone. Look for categories that are heavily concentrated in one region or largely absent from another.\n\n\n\n\nPair 7 — wdi_gini and wdi_wip\nExecute: Produce the appropriate chart, including a regression line.\nInterpret:\n\nWhat does the slope of the regression line tell you about the direction of the relationship? Is a higher Gini index associated with more or fewer women in parliament?\nIs the relationship strong or weak? How are the points distributed around the regression line?\nCompare this with Pair 2, which also uses wdi_gini. Both pair inequality with a political outcome. Are the patterns similar or different? What might this suggest?\n\n\nHint: Pay attention to both the direction of the regression line and how tightly the points cluster around it. A flat or nearly flat line suggests little association, even if the slope is not exactly zero.",
+    "crumbs": [
+      "Week 5: Describing Correlations (Bivariate Description)",
+      "Seminar Activity: Country-level Correlations"
+    ]
+  },
+  {
+    "objectID": "activities/A05-correlations-activity.html#summary",
+    "href": "activities/A05-correlations-activity.html#summary",
+    "title": "Seminar Activity: Country-level Correlations",
+    "section": "Summary",
+    "text": "Summary\nIn this activity, you have:\n\nIdentified variable types and matched them to the appropriate bivariate analytical tool.\nProduced and interpreted cross-tabulations, bar charts of means, and scatterplots with regression lines.\nConnected descriptive patterns in data to theoretical arguments in political science.\n\nThese skills form the foundation for the independent empirical analysis you will carry out in Problem Set 2.",
+    "crumbs": [
+      "Week 5: Describing Correlations (Bivariate Description)",
+      "Seminar Activity: Country-level Correlations"
     ]
   },
   {
@@ -4588,7 +5010,7 @@
     "href": "slides/videos-concepts/types-of-variables.html",
     "title": "Types of Variables",
     "section": "",
-    "text": "Watch on YouTube\n\n\n\n\n\nClassify variables by type.\nEvaluate how different types lead to different summaries.\n\n\n\n\n\n\n\n\nWhat is your age?\nOn a 0-10 scale, where 0 means left and 10 means right, where would you place yourself?\nWhat is the highest qualification you have?\nWhich party did you vote for in the general election?\n\n\n\n\n\n\n\n\n\nWhat is your age?\n\n\n\n\n\n\n\n\n\n\nAnswers are numeric quantities.\nHas a true zero, and a 40-year-old is twice as old as a 20-year-old.\nAge is a ratio variable.\n\n\n\n\n\n\n\n\nRatio variables come in quantities that have a true zero.\n\nAdditional examples: A country’s GDP; A country’s population; A person’s income.\n\nWe can compute the mean and make mathematical operations with a ratio variable.\n\nEg., Dividing a country’s GDP by its population to compute the GDP per capita.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOn a 0-10 scale, where 0 means left and 10 means right, where would you place yourself?\n\n\n\n\n\n\n\n\n\n\nAnswers are numeric quantities.\nDoes not have a true zero; a four does not mean “twice as much to the right” than a two.\nIdeology is an interval variable.\n\n\n\n\n\n\n\n\nInterval variables come in quantities that do not have a true zero.\n\nAdditional examples: Temperature (Celsius/Fahrenheit); a person’s credit score.\n\nWe can compute the mean of an interval variable, but cannot make certain mathematical operations with it.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat is the highest qualification you have?\n\n\n\n\n\n\n\n\n\n\nAnswers are categories (not quantities).\nThese categories are ordered.\nThe education level is an ordinal variable.\n\n\n\n\n\n\n\n\nOrdinal variables come in categories that are ranked in a specific order.\n\nAdditional examples: How strongly a person agrees with a statement.\n\nWe can compute the means of certain ordinal variables, but interpreting them demands added caution.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhich party did you vote for in the general election?\n\n\n\n\n\n\n\n\n\n\nAnswers are categories (not quantities).\nCategories cannot be ordered.\nThe General Election vote is a nominal variable.\n\n\n\n\n\n\n\n\nNominal variables come in categories that cannot be ranked.\n\nAdditional examples: A person’s gender; a country’s electoral system type.\n\nWe cannot compute the mean or draw a histogram for a nominal variable.\n\n\n\n\n\n\n\n\nVariables differ in the kind of information they carry.\nThe type of a variable constrains which summaries and comparisons make sense.\n\n\n\n\nWhy this matters:\n\nMisclassifying variables leads to incorrect interpretation, not just technical mistakes.\nOur choices of graphs, models, and statistical tests depend on variable type.",
+    "text": "Classify variables by type.\nEvaluate how different types lead to different summaries.\n\n\n\n\n\n\n\n\nWhat is your age?\nOn a 0-10 scale, where 0 means left and 10 means right, where would you place yourself?\nWhat is the highest qualification you have?\nWhich party did you vote for in the general election?\n\n\n\n\n\n\n\n\n\nWhat is your age?\n\n\n\n\n\n\n\n\n\n\nAnswers are numeric quantities.\nHas a true zero, and a 40-year-old is twice as old as a 20-year-old.\nAge is a ratio variable.\n\n\n\n\n\n\n\n\nRatio variables come in quantities that have a true zero.\n\nAdditional examples: A country’s GDP; A country’s population; A person’s income.\n\nWe can compute the mean and make mathematical operations with a ratio variable.\n\nEg., Dividing a country’s GDP by its population to compute the GDP per capita.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOn a 0-10 scale, where 0 means left and 10 means right, where would you place yourself?\n\n\n\n\n\n\n\n\n\n\nAnswers are numeric quantities.\nDoes not have a true zero; a four does not mean “twice as much to the right” than a two.\nIdeology is an interval variable.\n\n\n\n\n\n\n\n\nInterval variables come in quantities that do not have a true zero.\n\nAdditional examples: Temperature (Celsius/Fahrenheit); a person’s credit score.\n\nWe can compute the mean of an interval variable, but cannot make certain mathematical operations with it.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat is the highest qualification you have?\n\n\n\n\n\n\n\n\n\n\nAnswers are categories (not quantities).\nThese categories are ordered.\nThe education level is an ordinal variable.\n\n\n\n\n\n\n\n\nOrdinal variables come in categories that are ranked in a specific order.\n\nAdditional examples: How strongly a person agrees with a statement.\n\nWe can compute the means of certain ordinal variables, but interpreting them demands added caution.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhich party did you vote for in the general election?\n\n\n\n\n\n\n\n\n\n\nAnswers are categories (not quantities).\nCategories cannot be ordered.\nThe General Election vote is a nominal variable.\n\n\n\n\n\n\n\n\nNominal variables come in categories that cannot be ranked.\n\nAdditional examples: A person’s gender; a country’s electoral system type.\n\nWe cannot compute the mean or draw a histogram for a nominal variable.\n\n\n\n\n\n\n\n\nVariables differ in the kind of information they carry.\nThe type of a variable constrains which summaries and comparisons make sense.\n\n\n\n\nWhy this matters:\n\nMisclassifying variables leads to incorrect interpretation, not just technical mistakes.\nOur choices of graphs, models, and statistical tests depend on variable type.",
     "crumbs": [
       "Week 3: Measurement and Variable Types",
       "Types of Variables"
@@ -5320,6 +5742,460 @@
     ]
   },
   {
+    "objectID": "slides/videos-concepts/sampling-slides.html#youll-learn-to",
+    "href": "slides/videos-concepts/sampling-slides.html#youll-learn-to",
+    "title": "",
+    "section": "You’ll learn to",
+    "text": "You’ll learn to\n\n\nDefine a population and a sample.\nExplain how we use samples to draw conclusions about populations.\nExplain why how data is collected affects what conclusions we can make."
+  },
+  {
+    "objectID": "slides/videos-concepts/sampling-slides.html#we-want-to-know-about-populations",
+    "href": "slides/videos-concepts/sampling-slides.html#we-want-to-know-about-populations",
+    "title": "",
+    "section": "We want to know about populations",
+    "text": "We want to know about populations\n\n\nOnce we have a research question and hypothesis, we want to collect data.\nIdeally, we want data on every unit we are interested in.\nThe full set of units we want to draw conclusions about is called the population."
+  },
+  {
+    "objectID": "slides/videos-concepts/sampling-slides.html#populations-depend-on-the-question",
+    "href": "slides/videos-concepts/sampling-slides.html#populations-depend-on-the-question",
+    "title": "",
+    "section": "Populations depend on the question",
+    "text": "Populations depend on the question\n\n\nThe population is defined by who or what we are studying.\n\nAll voters in a general election.\nAll countries in the world.\nAll cities in the United Kingdom.\n\n\n\nPopulations do not have to be people — they are whatever units our question is about."
+  },
+  {
+    "objectID": "slides/videos-concepts/sampling-slides.html#the-problem-populations-are-often-inaccessible",
+    "href": "slides/videos-concepts/sampling-slides.html#the-problem-populations-are-often-inaccessible",
+    "title": "",
+    "section": "The problem: populations are often inaccessible",
+    "text": "The problem: populations are often inaccessible\n\n\nCollecting data on every unit in a population is often too expensive or too slow.\nSometimes it is simply impossible.\nWe need a way to learn about the population without studying all of it."
+  },
+  {
+    "objectID": "slides/videos-concepts/sampling-slides.html#the-solution-samples",
+    "href": "slides/videos-concepts/sampling-slides.html#the-solution-samples",
+    "title": "",
+    "section": "The solution: samples",
+    "text": "The solution: samples\n\n\nA sample is a subset of units drawn from the population.\nWe collect data on the sample and use it to reason about the population.\nThis is exactly what opinion polls do before an election."
+  },
+  {
+    "objectID": "slides/videos-concepts/sampling-slides.html#from-sample-to-population-inference",
+    "href": "slides/videos-concepts/sampling-slides.html#from-sample-to-population-inference",
+    "title": "",
+    "section": "From sample to population: inference",
+    "text": "From sample to population: inference\n\n\nDrawing conclusions about a population using a sample is called inference.\nBut we can only make valid inferences from certain types of samples.\nThis is why how data is collected matters a lot."
+  },
+  {
+    "objectID": "slides/videos-concepts/sampling-slides.html#not-all-samples-are-equal",
+    "href": "slides/videos-concepts/sampling-slides.html#not-all-samples-are-equal",
+    "title": "",
+    "section": "Not all samples are equal",
+    "text": "Not all samples are equal\n\n\nImagine a news outlet that polls only its own viewers.\nIf viewers skew towards one political side, the sample will over-represent those views.\nThe sample will not look like the population — and any inference will be misleading."
+  },
+  {
+    "objectID": "slides/videos-concepts/sampling-slides.html#non-probability-samples",
+    "href": "slides/videos-concepts/sampling-slides.html#non-probability-samples",
+    "title": "",
+    "section": "Non-probability samples",
+    "text": "Non-probability samples\n\n\nIn a non-probability sample, not every unit in the population has a chance of being selected.\nThese samples tend to be unrepresentative.\nWe cannot use non-probability samples to make valid inferences about the population."
+  },
+  {
+    "objectID": "slides/videos-concepts/sampling-slides.html#probability-samples",
+    "href": "slides/videos-concepts/sampling-slides.html#probability-samples",
+    "title": "",
+    "section": "Probability samples",
+    "text": "Probability samples\n\n\nIn a probability sample, every unit in the population has a known chance of being selected.\nThe most important type is the simple random sample.\nIn a random sample, every unit has an equal probability of being chosen."
+  },
+  {
+    "objectID": "slides/videos-concepts/sampling-slides.html#why-random-samples-are-powerful",
+    "href": "slides/videos-concepts/sampling-slides.html#why-random-samples-are-powerful",
+    "title": "",
+    "section": "Why random samples are powerful",
+    "text": "Why random samples are powerful\n\n\nRandom samples produce samples that are representative of the population.\nThe distribution of characteristics in the sample will closely mirror the population.\nThis allows us to generalise from the sample to the population with confidence."
+  },
+  {
+    "objectID": "slides/videos-concepts/sampling-slides.html#recap",
+    "href": "slides/videos-concepts/sampling-slides.html#recap",
+    "title": "",
+    "section": "Recap",
+    "text": "Recap\n\n\nA population is the full set of units we want to draw conclusions about.\nA sample is a subset of the population that we actually observe.\nInference means using a sample to draw conclusions about a population.\nRandom samples are representative and support valid inference; non-probability samples do not."
+  },
+  {
+    "objectID": "slides/videos-concepts/sampling.html",
+    "href": "slides/videos-concepts/sampling.html",
+    "title": "Why Sampling Matters",
+    "section": "",
+    "text": "Define a population and a sample.\nExplain how we use samples to draw conclusions about populations.\nExplain why how data is collected affects what conclusions we can make.\n\n\n\n\n\n\n\n\nOnce we have a research question and hypothesis, we want to collect data.\nIdeally, we want data on every unit we are interested in.\nThe full set of units we want to draw conclusions about is called the population.\n\n\n\n\n\n\n\n\nThe population is defined by who or what we are studying.\n\nAll voters in a general election.\nAll countries in the world.\nAll cities in the United Kingdom.\n\n\n\nPopulations do not have to be people — they are whatever units our question is about.\n\n\n\n\n\n\n\n\nCollecting data on every unit in a population is often too expensive or too slow.\nSometimes it is simply impossible.\nWe need a way to learn about the population without studying all of it.\n\n\n\n\n\n\n\n\nA sample is a subset of units drawn from the population.\nWe collect data on the sample and use it to reason about the population.\nThis is exactly what opinion polls do before an election.\n\n\n\n\n\n\n\n\nDrawing conclusions about a population using a sample is called inference.\nBut we can only make valid inferences from certain types of samples.\nThis is why how data is collected matters a lot.\n\n\n\n\n\n\n\n\nImagine a news outlet that polls only its own viewers.\nIf viewers skew towards one political side, the sample will over-represent those views.\nThe sample will not look like the population — and any inference will be misleading.\n\n\n\n\n\n\n\n\nIn a non-probability sample, not every unit in the population has a chance of being selected.\nThese samples tend to be unrepresentative.\nWe cannot use non-probability samples to make valid inferences about the population.\n\n\n\n\n\n\n\n\nIn a probability sample, every unit in the population has a known chance of being selected.\nThe most important type is the simple random sample.\nIn a random sample, every unit has an equal probability of being chosen.\n\n\n\n\n\n\n\n\nRandom samples produce samples that are representative of the population.\nThe distribution of characteristics in the sample will closely mirror the population.\nThis allows us to generalise from the sample to the population with confidence.\n\n\n\n\n\n\n\n\nA population is the full set of units we want to draw conclusions about.\nA sample is a subset of the population that we actually observe.\nInference means using a sample to draw conclusions about a population.\nRandom samples are representative and support valid inference; non-probability samples do not.\n\n\n\n\nWhy this matters:\n\nAlmost all political science data comes from samples, not full populations.\nUnderstanding how a sample was collected determines what conclusions we can draw.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Why Sampling Matters"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/sampling.html#youll-learn-to",
+    "href": "slides/videos-concepts/sampling.html#youll-learn-to",
+    "title": "Why Sampling Matters",
+    "section": "",
+    "text": "Define a population and a sample.\nExplain how we use samples to draw conclusions about populations.\nExplain why how data is collected affects what conclusions we can make.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Why Sampling Matters"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/sampling.html#we-want-to-know-about-populations",
+    "href": "slides/videos-concepts/sampling.html#we-want-to-know-about-populations",
+    "title": "Why Sampling Matters",
+    "section": "",
+    "text": "Once we have a research question and hypothesis, we want to collect data.\nIdeally, we want data on every unit we are interested in.\nThe full set of units we want to draw conclusions about is called the population.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Why Sampling Matters"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/sampling.html#populations-depend-on-the-question",
+    "href": "slides/videos-concepts/sampling.html#populations-depend-on-the-question",
+    "title": "Why Sampling Matters",
+    "section": "",
+    "text": "The population is defined by who or what we are studying.\n\nAll voters in a general election.\nAll countries in the world.\nAll cities in the United Kingdom.\n\n\n\nPopulations do not have to be people — they are whatever units our question is about.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Why Sampling Matters"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/sampling.html#the-problem-populations-are-often-inaccessible",
+    "href": "slides/videos-concepts/sampling.html#the-problem-populations-are-often-inaccessible",
+    "title": "Why Sampling Matters",
+    "section": "",
+    "text": "Collecting data on every unit in a population is often too expensive or too slow.\nSometimes it is simply impossible.\nWe need a way to learn about the population without studying all of it.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Why Sampling Matters"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/sampling.html#the-solution-samples",
+    "href": "slides/videos-concepts/sampling.html#the-solution-samples",
+    "title": "Why Sampling Matters",
+    "section": "",
+    "text": "A sample is a subset of units drawn from the population.\nWe collect data on the sample and use it to reason about the population.\nThis is exactly what opinion polls do before an election.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Why Sampling Matters"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/sampling.html#from-sample-to-population-inference",
+    "href": "slides/videos-concepts/sampling.html#from-sample-to-population-inference",
+    "title": "Why Sampling Matters",
+    "section": "",
+    "text": "Drawing conclusions about a population using a sample is called inference.\nBut we can only make valid inferences from certain types of samples.\nThis is why how data is collected matters a lot.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Why Sampling Matters"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/sampling.html#not-all-samples-are-equal",
+    "href": "slides/videos-concepts/sampling.html#not-all-samples-are-equal",
+    "title": "Why Sampling Matters",
+    "section": "",
+    "text": "Imagine a news outlet that polls only its own viewers.\nIf viewers skew towards one political side, the sample will over-represent those views.\nThe sample will not look like the population — and any inference will be misleading.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Why Sampling Matters"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/sampling.html#non-probability-samples",
+    "href": "slides/videos-concepts/sampling.html#non-probability-samples",
+    "title": "Why Sampling Matters",
+    "section": "",
+    "text": "In a non-probability sample, not every unit in the population has a chance of being selected.\nThese samples tend to be unrepresentative.\nWe cannot use non-probability samples to make valid inferences about the population.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Why Sampling Matters"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/sampling.html#probability-samples",
+    "href": "slides/videos-concepts/sampling.html#probability-samples",
+    "title": "Why Sampling Matters",
+    "section": "",
+    "text": "In a probability sample, every unit in the population has a known chance of being selected.\nThe most important type is the simple random sample.\nIn a random sample, every unit has an equal probability of being chosen.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Why Sampling Matters"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/sampling.html#why-random-samples-are-powerful",
+    "href": "slides/videos-concepts/sampling.html#why-random-samples-are-powerful",
+    "title": "Why Sampling Matters",
+    "section": "",
+    "text": "Random samples produce samples that are representative of the population.\nThe distribution of characteristics in the sample will closely mirror the population.\nThis allows us to generalise from the sample to the population with confidence.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Why Sampling Matters"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/sampling.html#recap",
+    "href": "slides/videos-concepts/sampling.html#recap",
+    "title": "Why Sampling Matters",
+    "section": "",
+    "text": "A population is the full set of units we want to draw conclusions about.\nA sample is a subset of the population that we actually observe.\nInference means using a sample to draw conclusions about a population.\nRandom samples are representative and support valid inference; non-probability samples do not.\n\n\n\n\nWhy this matters:\n\nAlmost all political science data comes from samples, not full populations.\nUnderstanding how a sample was collected determines what conclusions we can draw.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Why Sampling Matters"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/htests-cis-slides.html#youll-learn-to",
+    "href": "slides/videos-concepts/htests-cis-slides.html#youll-learn-to",
+    "title": "",
+    "section": "You’ll learn to",
+    "text": "You’ll learn to\n\n\nUse a confidence interval to assess evidence against a null hypothesis.\nInterpret results using the language of rejecting or failing to reject the null.\nExplain what it means to fail to reject — and what it does not mean."
+  },
+  {
+    "objectID": "slides/videos-concepts/htests-cis-slides.html#where-we-left-off",
+    "href": "slides/videos-concepts/htests-cis-slides.html#where-we-left-off",
+    "title": "",
+    "section": "Where we left off",
+    "text": "Where we left off\n\n\nIn the previous video, we built confidence intervals around point estimates.\nA 95% confidence interval gives us a range of plausible values for the true population quantity.\nNow we ask: can we use that interval to test a specific claim?"
+  },
+  {
+    "objectID": "slides/videos-concepts/htests-cis-slides.html#the-null-hypothesis-as-a-claim-about-zero",
+    "href": "slides/videos-concepts/htests-cis-slides.html#the-null-hypothesis-as-a-claim-about-zero",
+    "title": "",
+    "section": "The null hypothesis as a claim about zero",
+    "text": "The null hypothesis as a claim about zero\n\n\nA null hypothesis typically claims there is no difference between groups.\nIn other words, it claims the true difference is zero.\nWe can test this claim directly using a confidence interval."
+  },
+  {
+    "objectID": "slides/videos-concepts/htests-cis-slides.html#the-logic-of-the-test",
+    "href": "slides/videos-concepts/htests-cis-slides.html#the-logic-of-the-test",
+    "title": "",
+    "section": "The logic of the test",
+    "text": "The logic of the test\n\n\nWe construct a 95% confidence interval for the difference between groups.\nThen we ask: does the interval include zero?\n\nIf zero is outside the interval: zero is not a plausible value for the true difference — we reject the null.\nIf zero is inside the interval: zero remains plausible — we fail to reject the null."
+  },
+  {
+    "objectID": "slides/videos-concepts/htests-cis-slides.html#example-1-gender-and-reform-vote",
+    "href": "slides/videos-concepts/htests-cis-slides.html#example-1-gender-and-reform-vote",
+    "title": "",
+    "section": "Example 1 — Gender and Reform vote",
+    "text": "Example 1 — Gender and Reform vote\n\n\nResearch question: Are men more likely than women to vote for Reform?\nNull hypothesis: There is no difference between men and women in their likelihood of voting Reform.\nAlternative hypothesis: Men are more likely than women to vote for Reform."
+  },
+  {
+    "objectID": "slides/videos-concepts/htests-cis-slides.html#example-1-the-estimates",
+    "href": "slides/videos-concepts/htests-cis-slides.html#example-1-the-estimates",
+    "title": "",
+    "section": "Example 1 — The estimates",
+    "text": "Example 1 — The estimates\n\n\n\n\nGroup\nVote share (%)\n95% CI\n\n\n\n\nMen\n13.7\n[11.4, 16.3]\n\n\nWomen\n9.8\n[7.8, 12.1]\n\n\n\n\nDifference (Men − Women): +3.9 percentage points\nCI for the difference: [+0.7, +7.1]"
+  },
+  {
+    "objectID": "slides/videos-concepts/htests-cis-slides.html#example-1-the-test",
+    "href": "slides/videos-concepts/htests-cis-slides.html#example-1-the-test",
+    "title": "",
+    "section": "Example 1 — The test",
+    "text": "Example 1 — The test\n\n\nThe confidence interval for the difference is [0.7, 7.1].\nThe entire interval lies above zero.\nZero is not a plausible value for the true difference.\nWe reject the null hypothesis."
+  },
+  {
+    "objectID": "slides/videos-concepts/htests-cis-slides.html#example-2-newspaper-readership-and-ideology",
+    "href": "slides/videos-concepts/htests-cis-slides.html#example-2-newspaper-readership-and-ideology",
+    "title": "",
+    "section": "Example 2 — Newspaper readership and ideology",
+    "text": "Example 2 — Newspaper readership and ideology\n\n\nResearch question: Do Daily Mail and Daily Telegraph readers differ in their political self-placement?\nNull hypothesis: There is no difference in mean left-right self-placement between Mail and Telegraph readers.\nAlternative hypothesis: Telegraph readers are more right-leaning than Mail readers."
+  },
+  {
+    "objectID": "slides/videos-concepts/htests-cis-slides.html#example-2-the-estimates",
+    "href": "slides/videos-concepts/htests-cis-slides.html#example-2-the-estimates",
+    "title": "",
+    "section": "Example 2 — The estimates",
+    "text": "Example 2 — The estimates\n\n\n\n\nGroup\nMean ideology\n95% CI\n\n\n\n\nMail\n6.1\n[5.9, 6.4]\n\n\nTelegraph\n6.5\n[6.1, 6.8]\n\n\n\n\nDifference (Mail − Telegraph): −0.4\n95% CI for the difference: [−0.8, +0.1]"
+  },
+  {
+    "objectID": "slides/videos-concepts/htests-cis-slides.html#example-2-the-test",
+    "href": "slides/videos-concepts/htests-cis-slides.html#example-2-the-test",
+    "title": "",
+    "section": "Example 2 — The test",
+    "text": "Example 2 — The test\n\n\nThe confidence interval for the difference is [−0.8, +0.1].\nThe interval crosses zero — zero is a plausible value for the true difference.\nWe fail to reject the null hypothesis."
+  },
+  {
+    "objectID": "slides/videos-concepts/htests-cis-slides.html#two-outcomes-two-conclusions",
+    "href": "slides/videos-concepts/htests-cis-slides.html#two-outcomes-two-conclusions",
+    "title": "",
+    "section": "Two outcomes, two conclusions",
+    "text": "Two outcomes, two conclusions\n\n\n\n\n\n\n\n\n\n\nCI for difference\nDecision\n\n\n\n\nGender × Reform\n[+0.7, +7.1]\nReject the null\n\n\nMail × Telegraph\n[−0.8, +0.1]\nFail to reject the null\n\n\n\n\nIn both cases, the same logic applies: does the interval include zero?"
+  },
+  {
+    "objectID": "slides/videos-concepts/htests-cis-slides.html#what-fail-to-reject-does-not-mean",
+    "href": "slides/videos-concepts/htests-cis-slides.html#what-fail-to-reject-does-not-mean",
+    "title": "",
+    "section": "What “fail to reject” does not mean",
+    "text": "What “fail to reject” does not mean\n\n\nFailing to reject the null is not the same as proving the null is true.\nWe cannot conclude that Mail and Telegraph readers have identical ideologies.\nIt means the evidence in our sample is not strong enough to rule out zero."
+  },
+  {
+    "objectID": "slides/videos-concepts/htests-cis-slides.html#recap",
+    "href": "slides/videos-concepts/htests-cis-slides.html#recap",
+    "title": "",
+    "section": "Recap",
+    "text": "Recap\n\n\nA confidence interval can be used to test a null hypothesis.\nIf the 95% CI for a difference excludes zero, we reject the null hypothesis.\nIf it includes zero, we fail to reject the null hypothesis.\nFailing to reject \\(\\neq\\) confirming the null"
+  },
+  {
+    "objectID": "slides/videos-concepts/htests-cis.html",
+    "href": "slides/videos-concepts/htests-cis.html",
+    "title": "Hypothesis Tests Using Confidence Intervals",
+    "section": "",
+    "text": "Use a confidence interval to assess evidence against a null hypothesis.\nInterpret results using the language of rejecting or failing to reject the null.\nExplain what it means to fail to reject — and what it does not mean.\n\n\n\n\n\n\n\n\nIn the previous video, we built confidence intervals around point estimates.\nA 95% confidence interval gives us a range of plausible values for the true population quantity.\nNow we ask: can we use that interval to test a specific claim?\n\n\n\n\n\n\n\n\nA null hypothesis typically claims there is no difference between groups.\nIn other words, it claims the true difference is zero.\nWe can test this claim directly using a confidence interval.\n\n\n\n\n\n\n\n\nWe construct a 95% confidence interval for the difference between groups.\nThen we ask: does the interval include zero?\n\nIf zero is outside the interval: zero is not a plausible value for the true difference — we reject the null.\nIf zero is inside the interval: zero remains plausible — we fail to reject the null.\n\n\n\n\n\n\n\n\n\nResearch question: Are men more likely than women to vote for Reform?\nNull hypothesis: There is no difference between men and women in their likelihood of voting Reform.\nAlternative hypothesis: Men are more likely than women to vote for Reform.\n\n\n\n\n\n\n\n\n\n\n\nGroup\nVote share (%)\n95% CI\n\n\n\n\nMen\n13.7\n[11.4, 16.3]\n\n\nWomen\n9.8\n[7.8, 12.1]\n\n\n\n\nDifference (Men − Women): +3.9 percentage points\nCI for the difference: [+0.7, +7.1]\n\n\n\n\n\n\n\n\n\nThe confidence interval for the difference is [0.7, 7.1].\nThe entire interval lies above zero.\nZero is not a plausible value for the true difference.\nWe reject the null hypothesis.\n\n\n\n\n\n\n\n\nResearch question: Do Daily Mail and Daily Telegraph readers differ in their political self-placement?\nNull hypothesis: There is no difference in mean left-right self-placement between Mail and Telegraph readers.\nAlternative hypothesis: Telegraph readers are more right-leaning than Mail readers.\n\n\n\n\n\n\n\n\n\n\n\nGroup\nMean ideology\n95% CI\n\n\n\n\nMail\n6.1\n[5.9, 6.4]\n\n\nTelegraph\n6.5\n[6.1, 6.8]\n\n\n\n\nDifference (Mail − Telegraph): −0.4\n95% CI for the difference: [−0.8, +0.1]\n\n\n\n\n\n\n\n\n\nThe confidence interval for the difference is [−0.8, +0.1].\nThe interval crosses zero — zero is a plausible value for the true difference.\nWe fail to reject the null hypothesis.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCI for difference\nDecision\n\n\n\n\nGender × Reform\n[+0.7, +7.1]\nReject the null\n\n\nMail × Telegraph\n[−0.8, +0.1]\nFail to reject the null\n\n\n\n\n\nIn both cases, the same logic applies: does the interval include zero?\n\n\n\n\n\n\n\n\nFailing to reject the null is not the same as proving the null is true.\nWe cannot conclude that Mail and Telegraph readers have identical ideologies.\nIt means the evidence in our sample is not strong enough to rule out zero.\n\n\n\n\n\n\n\n\nA confidence interval can be used to test a null hypothesis.\nIf the 95% CI for a difference excludes zero, we reject the null hypothesis.\nIf it includes zero, we fail to reject the null hypothesis.\nFailing to reject \\(\\neq\\) confirming the null\n\n\n\n\nWhy this matters:\n\nConfidence intervals appear in almost every piece of published quantitative research.\nKnowing how to read them as hypothesis tests is a core skill for evaluating empirical evidence.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Hypothesis Tests Using Confidence Intervals"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/htests-cis.html#youll-learn-to",
+    "href": "slides/videos-concepts/htests-cis.html#youll-learn-to",
+    "title": "Hypothesis Tests Using Confidence Intervals",
+    "section": "",
+    "text": "Use a confidence interval to assess evidence against a null hypothesis.\nInterpret results using the language of rejecting or failing to reject the null.\nExplain what it means to fail to reject — and what it does not mean.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Hypothesis Tests Using Confidence Intervals"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/htests-cis.html#where-we-left-off",
+    "href": "slides/videos-concepts/htests-cis.html#where-we-left-off",
+    "title": "Hypothesis Tests Using Confidence Intervals",
+    "section": "",
+    "text": "In the previous video, we built confidence intervals around point estimates.\nA 95% confidence interval gives us a range of plausible values for the true population quantity.\nNow we ask: can we use that interval to test a specific claim?",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Hypothesis Tests Using Confidence Intervals"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/htests-cis.html#the-null-hypothesis-as-a-claim-about-zero",
+    "href": "slides/videos-concepts/htests-cis.html#the-null-hypothesis-as-a-claim-about-zero",
+    "title": "Hypothesis Tests Using Confidence Intervals",
+    "section": "",
+    "text": "A null hypothesis typically claims there is no difference between groups.\nIn other words, it claims the true difference is zero.\nWe can test this claim directly using a confidence interval.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Hypothesis Tests Using Confidence Intervals"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/htests-cis.html#the-logic-of-the-test",
+    "href": "slides/videos-concepts/htests-cis.html#the-logic-of-the-test",
+    "title": "Hypothesis Tests Using Confidence Intervals",
+    "section": "",
+    "text": "We construct a 95% confidence interval for the difference between groups.\nThen we ask: does the interval include zero?\n\nIf zero is outside the interval: zero is not a plausible value for the true difference — we reject the null.\nIf zero is inside the interval: zero remains plausible — we fail to reject the null.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Hypothesis Tests Using Confidence Intervals"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/htests-cis.html#example-1-gender-and-reform-vote",
+    "href": "slides/videos-concepts/htests-cis.html#example-1-gender-and-reform-vote",
+    "title": "Hypothesis Tests Using Confidence Intervals",
+    "section": "",
+    "text": "Research question: Are men more likely than women to vote for Reform?\nNull hypothesis: There is no difference between men and women in their likelihood of voting Reform.\nAlternative hypothesis: Men are more likely than women to vote for Reform.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Hypothesis Tests Using Confidence Intervals"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/htests-cis.html#example-1-the-estimates",
+    "href": "slides/videos-concepts/htests-cis.html#example-1-the-estimates",
+    "title": "Hypothesis Tests Using Confidence Intervals",
+    "section": "",
+    "text": "Group\nVote share (%)\n95% CI\n\n\n\n\nMen\n13.7\n[11.4, 16.3]\n\n\nWomen\n9.8\n[7.8, 12.1]\n\n\n\n\nDifference (Men − Women): +3.9 percentage points\nCI for the difference: [+0.7, +7.1]",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Hypothesis Tests Using Confidence Intervals"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/htests-cis.html#example-1-the-test",
+    "href": "slides/videos-concepts/htests-cis.html#example-1-the-test",
+    "title": "Hypothesis Tests Using Confidence Intervals",
+    "section": "",
+    "text": "The confidence interval for the difference is [0.7, 7.1].\nThe entire interval lies above zero.\nZero is not a plausible value for the true difference.\nWe reject the null hypothesis.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Hypothesis Tests Using Confidence Intervals"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/htests-cis.html#example-2-newspaper-readership-and-ideology",
+    "href": "slides/videos-concepts/htests-cis.html#example-2-newspaper-readership-and-ideology",
+    "title": "Hypothesis Tests Using Confidence Intervals",
+    "section": "",
+    "text": "Research question: Do Daily Mail and Daily Telegraph readers differ in their political self-placement?\nNull hypothesis: There is no difference in mean left-right self-placement between Mail and Telegraph readers.\nAlternative hypothesis: Telegraph readers are more right-leaning than Mail readers.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Hypothesis Tests Using Confidence Intervals"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/htests-cis.html#example-2-the-estimates",
+    "href": "slides/videos-concepts/htests-cis.html#example-2-the-estimates",
+    "title": "Hypothesis Tests Using Confidence Intervals",
+    "section": "",
+    "text": "Group\nMean ideology\n95% CI\n\n\n\n\nMail\n6.1\n[5.9, 6.4]\n\n\nTelegraph\n6.5\n[6.1, 6.8]\n\n\n\n\nDifference (Mail − Telegraph): −0.4\n95% CI for the difference: [−0.8, +0.1]",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Hypothesis Tests Using Confidence Intervals"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/htests-cis.html#example-2-the-test",
+    "href": "slides/videos-concepts/htests-cis.html#example-2-the-test",
+    "title": "Hypothesis Tests Using Confidence Intervals",
+    "section": "",
+    "text": "The confidence interval for the difference is [−0.8, +0.1].\nThe interval crosses zero — zero is a plausible value for the true difference.\nWe fail to reject the null hypothesis.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Hypothesis Tests Using Confidence Intervals"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/htests-cis.html#two-outcomes-two-conclusions",
+    "href": "slides/videos-concepts/htests-cis.html#two-outcomes-two-conclusions",
+    "title": "Hypothesis Tests Using Confidence Intervals",
+    "section": "",
+    "text": "CI for difference\nDecision\n\n\n\n\nGender × Reform\n[+0.7, +7.1]\nReject the null\n\n\nMail × Telegraph\n[−0.8, +0.1]\nFail to reject the null\n\n\n\n\n\nIn both cases, the same logic applies: does the interval include zero?",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Hypothesis Tests Using Confidence Intervals"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/htests-cis.html#what-fail-to-reject-does-not-mean",
+    "href": "slides/videos-concepts/htests-cis.html#what-fail-to-reject-does-not-mean",
+    "title": "Hypothesis Tests Using Confidence Intervals",
+    "section": "",
+    "text": "Failing to reject the null is not the same as proving the null is true.\nWe cannot conclude that Mail and Telegraph readers have identical ideologies.\nIt means the evidence in our sample is not strong enough to rule out zero.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Hypothesis Tests Using Confidence Intervals"
+    ]
+  },
+  {
+    "objectID": "slides/videos-concepts/htests-cis.html#recap",
+    "href": "slides/videos-concepts/htests-cis.html#recap",
+    "title": "Hypothesis Tests Using Confidence Intervals",
+    "section": "",
+    "text": "A confidence interval can be used to test a null hypothesis.\nIf the 95% CI for a difference excludes zero, we reject the null hypothesis.\nIf it includes zero, we fail to reject the null hypothesis.\nFailing to reject \\(\\neq\\) confirming the null\n\n\n\n\nWhy this matters:\n\nConfidence intervals appear in almost every piece of published quantitative research.\nKnowing how to read them as hypothesis tests is a core skill for evaluating empirical evidence.",
+    "crumbs": [
+      "Week 7: Estimation, Uncertainty, and Statistical Inference",
+      "Hypothesis Tests Using Confidence Intervals"
+    ]
+  },
+  {
     "objectID": "slides/videos-stata/doing-reproducible-research-slides.html#youll-learn-to",
     "href": "slides/videos-stata/doing-reproducible-research-slides.html#youll-learn-to",
     "title": "",
@@ -5380,7 +6256,7 @@
     "href": "slides/videos-stata/doing-reproducible-research.html",
     "title": "Doing Reproducible Research",
     "section": "",
-    "text": "Watch on YouTube\n\n\n\n\n\nExplain what reproducible research means and why it matters.\nSet up a project folder structure that supports reproducible work.\n\n\n\n\n\n\n\n\nBeing able to obtain the same results using the same data and code.\nAnyone should be able to follow the steps of your analysis.\nThis includes you in a few weeks’ time.\n\n\n\n\n\n\n\n\nSmall changes accumulate quickly, and we often forget what we do.\nClear structures make mistakes easier for you (and others) to detect and fix.\nImportant for transparency and credibility.\n\n\n\n\n\n\n\n\nData: the information you gather to begin your analysis.\nCode: the instructions that transform and analyse the data.\nReproducible research separates data from code.\n\n\n\n\n\n\n\n\nThe dataset is treated as read-only.\nAll changes happen in a do-file.\nThe do-file records every step in your analysis.\n\n\n\n\n\n\n\n\nmy-research-project/\n\ndata-raw\ndata-clean\ndo\noutput\n\n\n\n\n\n\n\n\n\ndata-raw\n\nOriginal data files, never edited.\n\ndata-clean\n\nCleaned or transformed datasets.\n\ndo\n\nAll Stata do-files.\n\noutput\n\nTables and figures.\n\n\n\n\n\n\n\n\n\nReproducibility means others can retrace your analysis.\nSeparating data and code is key.\nA clear folder structure is essential for good analysis.\n\n\n\n\nWhy this matters:\n\nReproducible workflows make your analysis clearer and more reliable.\nKnowing how to set up a folder structure now will save you from headaches in the future!",
+    "text": "Explain what reproducible research means and why it matters.\nSet up a project folder structure that supports reproducible work.\n\n\n\n\n\n\n\n\nBeing able to obtain the same results using the same data and code.\nAnyone should be able to follow the steps of your analysis.\nThis includes you in a few weeks’ time.\n\n\n\n\n\n\n\n\nSmall changes accumulate quickly, and we often forget what we do.\nClear structures make mistakes easier for you (and others) to detect and fix.\nImportant for transparency and credibility.\n\n\n\n\n\n\n\n\nData: the information you gather to begin your analysis.\nCode: the instructions that transform and analyse the data.\nReproducible research separates data from code.\n\n\n\n\n\n\n\n\nThe dataset is treated as read-only.\nAll changes happen in a do-file.\nThe do-file records every step in your analysis.\n\n\n\n\n\n\n\n\nmy-research-project/\n\ndata-raw\ndata-clean\ndo\noutput\n\n\n\n\n\n\n\n\n\ndata-raw\n\nOriginal data files, never edited.\n\ndata-clean\n\nCleaned or transformed datasets.\n\ndo\n\nAll Stata do-files.\n\noutput\n\nTables and figures.\n\n\n\n\n\n\n\n\n\nReproducibility means others can retrace your analysis.\nSeparating data and code is key.\nA clear folder structure is essential for good analysis.\n\n\n\n\nWhy this matters:\n\nReproducible workflows make your analysis clearer and more reliable.\nKnowing how to set up a folder structure now will save you from headaches in the future!",
     "crumbs": [
       "Week 2: Research Questions, Theories, and Hypotheses",
       "Doing Reproducible Research"
@@ -5542,7 +6418,7 @@
     "href": "slides/videos-stata/stata-interface.html",
     "title": "The Stata Interface",
     "section": "",
-    "text": "Watch on YouTube\n\n\n\n\nIdentify the different panes in Stata.\nSet the working directory in Stata.\nCreate and save a do-file.\n\n\n\n\n\n\n\nmy-research-project/\n\ndata-raw\ndata-clean\ndo\noutput\n\n\n\n\n\n\n\n\n\ndata-raw\n\nOriginal data files, never edited.\n\ndata-clean\n\nCleaned or transformed datasets.\n\ndo\n\nAll Stata do-files.\n\noutput\n\nTables and figures.\n\n\n\n\n\n\n\n\nThe working directory is where your project lives.\n\nBy setting the working directory, you’re directing Stata to the folder where your files are stored.\n\nGo to File &gt; Change working directory and select the top-level folder you created for this module.\n\n\n\n\n\n\n\nAfter you set the working directory, Stata registers this action as command in the Command History pane (left-hand side).\nRight-click the first command on the Command History pane and click “Copy”\n\n\n\n\n\n\n\n\n\n\n\n\n\nClick on the New Do-file Editor icon (a sheet of paper and a pencil)\nThe do-file keeps a record of everything you do in Stata.\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn the do-file editor, paste the command you copied from the Command History pane.\nLater on, you will be able to set the working directory using the command in this do-file.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrom the do-file editor, save your do-file in your do folder.\nName it set-wd.do\nThis do file will be helpful for future work. Keep it.\n\n\n\n\n\n\n\nThe working directory is the folder on your computer where your project lives.\nKeeping a do-file with a command that sets the working directory will be helpful for future tasks.\n\n\nWhy this matters:\n\nTo open a dataset, we must point Stata to the folder where it is located.\nSetting the working directory makes replicability easier.",
+    "text": "Identify the different panes in Stata.\nSet the working directory in Stata.\nCreate and save a do-file.\n\n\n\n\n\n\n\nmy-research-project/\n\ndata-raw\ndata-clean\ndo\noutput\n\n\n\n\n\n\n\n\n\ndata-raw\n\nOriginal data files, never edited.\n\ndata-clean\n\nCleaned or transformed datasets.\n\ndo\n\nAll Stata do-files.\n\noutput\n\nTables and figures.\n\n\n\n\n\n\n\n\nThe working directory is where your project lives.\n\nBy setting the working directory, you’re directing Stata to the folder where your files are stored.\n\nGo to File &gt; Change working directory and select the top-level folder you created for this module.\n\n\n\n\n\n\n\nAfter you set the working directory, Stata registers this action as command in the Command History pane (left-hand side).\nRight-click the first command on the Command History pane and click “Copy”\n\n\n\n\n\n\n\n\n\n\n\n\n\nClick on the New Do-file Editor icon (a sheet of paper and a pencil)\nThe do-file keeps a record of everything you do in Stata.\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn the do-file editor, paste the command you copied from the Command History pane.\nLater on, you will be able to set the working directory using the command in this do-file.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrom the do-file editor, save your do-file in your do folder.\nName it set-wd.do\nThis do file will be helpful for future work. Keep it.\n\n\n\n\n\n\n\nThe working directory is the folder on your computer where your project lives.\nKeeping a do-file with a command that sets the working directory will be helpful for future tasks.\n\n\nWhy this matters:\n\nTo open a dataset, we must point Stata to the folder where it is located.\nSetting the working directory makes replicability easier.",
     "crumbs": [
       "Week 3: Measurement and Variable Types",
       "The Stata Interface"
