@@ -533,6 +533,11 @@ ul.task-list li input[type="checkbox"] {
 <section id="part-2-describing-single-variables" class="level2">
 <h2 class="anchored" data-anchor-id="part-2-describing-single-variables">Part 2: Describing Single Variables</h2>
 <p>Before you can describe relationships between variables, you need to be able to describe individual variables. This part reviews variable types and univariate description.</p>
+<p><strong>If you get stuck, review:</strong></p>
+<ul>
+<li><a href="https://lfalab.github.io/methods-education/slides/videos-concepts/summarising-distribution.html">Summarising a Distribution</a> (<a href="https://keats.kcl.ac.uk/mod/hvp/view.php?id=9397289">Keats</a>)</li>
+<li><a href="https://lfalab.github.io/methods-education/slides/videos-stata/summary-stata.html">Summarising Distributions in Stata</a> (<a href="https://keats.kcl.ac.uk/mod/hvp/view.php?id=9397521">Keats</a>)</li>
+</ul>
 <section id="identify-variable-types" class="level3">
 <h3 class="anchored" data-anchor-id="identify-variable-types">Identify variable types</h3>
 <p>The QoG dataset contains many variables. We will focus on three variables that you encountered in Week 5:</p>
@@ -558,7 +563,7 @@ ul.task-list li input[type="checkbox"] {
 <p>For nominal variables, we summarize them using <strong>frequency tables</strong>. A frequency table shows how many observations fall into each category.</p>
 <ol type="1">
 <li>Add the following command to your do-file: <code>tab gol_est</code></li>
-<li>Run the command (select it and click “do”).</li>
+<li>Run the command (select it and click “execute/do”).</li>
 <li>Look at the results. You should see a table showing how many countries have each type of electoral system.</li>
 </ol>
 <p><strong>Check:</strong></p>
@@ -573,7 +578,7 @@ ul.task-list li input[type="checkbox"] {
 <p>For numeric variables, we summarize them using <strong>summary statistics</strong> such as the mean, median, minimum, and maximum.</p>
 <ol type="1">
 <li>Add the following command to your do-file: <code>summarize wdi_gini</code></li>
-<li>Run the command (select it and click “do”).</li>
+<li>Run the command (select it and click “execute/do”).</li>
 <li>Look at the results. You should see a table with five columns: variable name, observations, mean, standard deviation, minimum, and maximum.</li>
 </ol>
 <p><strong>Check:</strong></p>
@@ -600,7 +605,13 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="part-3-describing-relationships-between-variables">Part 3: Describing Relationships Between Variables</h2>
 <p>In this part, you will produce and interpret bivariate output. You will work through two variable pairs that represent two of the three analytical cases from Week 5.</p>
 <p><strong>Reference material:</strong> You can download the <code>bivariate-lecture.do</code> file from the <a href="https://emckclac-my.sharepoint.com/personal/k2588471_kcl_ac_uk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fk2588471%5Fkcl%5Fac%5Fuk%2FDocuments%2Fshared%2Dproject%2Dfolder&amp;ga=1">Shared Project Folder</a> (in the <code>do</code> subfolder) to see worked examples of all the commands used in this section. Open this file in Stata and inspect how the commands are structured.</p>
-<hr>
+<p><strong>If you get stuck, review:</strong></p>
+<ul>
+<li><a href="https://lfalab.github.io/methods-education/slides/videos-concepts/comparing-means.html">Comparing Means by Category</a> (<a href="https://keats.kcl.ac.uk/mod/hvp/view.php?id=9403365">Keats</a>)</li>
+<li><a href="https://lfalab.github.io/methods-education/slides/videos-concepts/scatter-reg.html">Scatterplots and Regression Lines</a> (<a href="https://keats.kcl.ac.uk/mod/hvp/view.php?id=9403372">Keats</a>)</li>
+<li><a href="https://lfalab.github.io/methods-education/slides/videos-concepts/types-plots-tables.html">From Variable Types to Plots and Tables</a> (<a href="https://keats.kcl.ac.uk/mod/hvp/view.php?id=9403376">Keats</a>)</li>
+<li><a href="https://lfalab.github.io/methods-education/slides/videos-stata/corr-stata.html">Describing Correlations in Stata</a> (<a href="https://keats.kcl.ac.uk/mod/hvp/view.php?id=9404133">Keats</a>)</li>
+</ul>
 <section id="review-the-analytical-cases" class="level3">
 <h3 class="anchored" data-anchor-id="review-the-analytical-cases">Review the analytical cases</h3>
 <p>In Week 5, you learned that the appropriate bivariate tool depends on the types of variables you are analyzing:</p>
@@ -610,7 +621,6 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Case 3:</strong> Both numeric → scatterplot and regression line</li>
 </ul>
 <p><strong>If you need a reminder:</strong> Review the <a href="https://lfalab.github.io/methods-education/slides/videos-concepts/types-plots-tables.html">From Variable Types to Plots and Tables</a> video (also on <a href="https://keats.kcl.ac.uk/mod/hvp/view.php?id=9403376">Keats</a>).</p>
-<hr>
 </section>
 <section id="pair-1-electoral-system-and-voter-turnout-case-2" class="level3">
 <h3 class="anchored" data-anchor-id="pair-1-electoral-system-and-voter-turnout-case-2">Pair 1 — Electoral system and voter turnout (Case 2)</h3>
@@ -630,7 +640,7 @@ ul.task-list li input[type="checkbox"] {
 <li><code>sort gol_est</code></li>
 <li><code>by gol_est: summarize ideavt_legvt</code></li>
 </ul></li>
-<li>Run the command (select it and click “do”).</li>
+<li>Run the commands (select them and click “execute/do”).</li>
 <li>Look at the results. You should see separate summary statistics for each electoral system type.</li>
 </ol>
 <p><strong>Interpret the output:</strong></p>
@@ -645,7 +655,7 @@ ul.task-list li input[type="checkbox"] {
 <p>A bar chart of means makes the comparison easier to see.</p>
 <ol type="1">
 <li>Add the following command to your do-file: <code>graph hbar ideavt_legvt, over(gol_est)</code></li>
-<li>Run the command (select the command and click “do”).</li>
+<li>Run the command (select the command and click “execute/do”).</li>
 <li>A bar chart should appear in a new window.</li>
 </ol>
 <p><strong>Check:</strong></p>
@@ -653,7 +663,6 @@ ul.task-list li input[type="checkbox"] {
 <li>Does the visual pattern match what you saw in the summary statistics?</li>
 <li>Is the difference between electoral system types visually clear, or are the bars similar in height?</li>
 </ul>
-<hr>
 </section>
 </section>
 <section id="pair-2-inequality-and-corruption-case-3" class="level3">
