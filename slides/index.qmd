@@ -3,17 +3,48 @@ title: "Slides"
 format: html
 ---
 
-## Video slides (Concepts)
+## Week 1: Thinking With Data
+
+### Lecture
+
+-   [Week 1: Thinking with Data](lectures/W01-thinking-with-data.qmd)
+
+## Week 2: Research Questions, Theories, and Hypotheses
+
+### Videos
 
 -   [Empirical and Normative Questions](videos-concepts/C01-empirical-vs-normative.qmd)
 -   [Descriptive and Causal Questions](videos-concepts/C02-descriptive-vs-causal.qmd)
 -   [Units of Analysis, Theories, and Hypotheses](videos-concepts/C03-units-theories-hypotheses.qmd)
 -   [Dependent and Independent Variables](videos-concepts/C04-dependent-independent-variables.qmd)
-
-## Video slides (Stata)
-
 -   [Doing Reproducible Research](videos-stata/S01-doing-reproducible-research.qmd)
 
-## Lecture slides
+### Lecture
 
--   [Week 1: Thinking with Data](lectures/W01-thinking-with-data.qmd)
+-   [Week 2: Research Questions, Theories, and Hypotheses](lectures/W02-questions-theories-hypotheses.qmd)
+
+## Week 3: Measurement and Variable Types
+
+### Videos
+
+-   [Measuring Variables](videos-concepts/C05-measuring-variables.qmd)
+-   [Types of Variables](videos-concepts/C06-types-of-variables.qmd)
+-   [Datasets and Codebooks](videos-stata/S02-datasets-codebooks.qmd)
+-   [The Stata Interface](videos-stata/S03-stata-interface.qmd)
+-   [Loading and Browsing Data](videos-stata/S04-loading-browsing-data.qmd)
+
+### Lecture
+
+- [Week 3: Measurement and Types of Variables](lectures/W03-measurement.qmd)
+
+## Week 4: Describing Distributions (Univariate Description)
+
+### Videos
+
+-   [Summarising a Distribution](videos-concepts/C07-summarising-distribution.qmd)
+-   [Variance and Standard Deviation](videos-concepts/C08-variance-sd.qmd)
+-   [Bar Charts and Histograms](videos-concepts/C09-bar-histograms.qmd)
+-   [Summarising Distributions in Stata](videos-stata/S05-summary-stata.qmd)
+-   [Bar Charts and Histograms in Stata](videos-stata/S06-bar-hist-stata.qmd)
+
+

@@ -9,9 +9,39 @@ $text-color: #1a1a1a;
 $muted-text: #6b7280;
 
 /* Fonts */
-$font-family-sans-serif: 'Inter', 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+$font-family-sans-serif: 'Inter', 'Source Sans 3',
+  system-ui, -apple-system,
+  'Helvetica Neue', Arial, sans-serif;
 
 /*-- scss:rules --*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+.reveal,
+.reveal .slides,
+.reveal .slides section,
+.reveal p,
+.reveal li,
+.reveal td,
+.reveal th,
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  font-family: "Inter", "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+
+.reveal .slides section {
+  background: transparent !important;
+}
+
+
+html, body {
+  background: #F0F0F0 !important;
+}
+
+
 
 /* Title slide: left-aligned and presenter-aware */
 .reveal .slides section.title-slide {
