@@ -1,0 +1,149 @@
+---
+pagetitle: "Margin of Error and Confidence Interval"
+class: video
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: moe-ci
+  revealjs:
+    output-file: moe-ci-slides
+---
+
+# Confidence Intervals and Margins of Error {.title-left}
+
+## You'll learn to
+
+::: presenter-space
+-   Interpret a **margin of error** and explain where it comes from.
+-   Construct and interpret a **confidence interval** from a point estimate and a margin of error.
+-   Explain what makes a confidence interval **wider or narrower**.
+:::
+
+------------------------------------------------------------------------
+
+## Random samples differ from one another
+
+::: presenter-space
+-   Each random sample we draw from a population will be **slightly different** from every other.
+-   This is not a flaw — it is an unavoidable consequence of working with samples.
+-   It means that any estimate we produce from a sample carries **uncertainty**.
+:::
+
+------------------------------------------------------------------------
+
+## From sample to estimate
+
+::: presenter-space
+-   Suppose we want to know the Prime Minister's approval rating among all adults.
+-   We cannot ask everyone, so we take a **random sample** of 1,000 people.
+-   Our sample tells us that **42%** approve.
+-   This single number (42%) is our **point estimate**.
+:::
+
+------------------------------------------------------------------------
+
+## The problem with a single number
+
+:::: presenter-space
+-   A point estimate gives us our **best guess** from the sample.
+-   But samples vary, and the true population value is unlikely to be **exactly** 42%.
+-   We need to know **how much uncertainty** surrounds our estimate.
+-   That is what the margin of error does.
+::::
+
+------------------------------------------------------------------------
+
+## The margin of error
+
+::: presenter-space
+-   The **margin of error** captures the uncertainty that comes from working with a sample rather than the full population.
+-   A margin of error of **±3%** means the true value is likely within 3 percentage points of our estimate.
+:::
+
+------------------------------------------------------------------------
+
+## From margin of error to confidence interval
+
+::: presenter-space
+-   A **confidence interval** is constructed by applying the margin of error to the point estimate:
+
+    -   **Lower bound:** point estimate − margin of error
+    -   **Upper bound:** point estimate + margin of error
+
+-   In our example: 42% ± 3% gives a confidence interval of **[39%, 45%]**.
+:::
+
+------------------------------------------------------------------------
+
+## Interpreting the confidence interval
+
+:::: presenter-space
+-   Confidence intervals vary depending on how confident we want to be.
+-   Most social scientists work with a **95%** level on confidence.
+
+    -   We are **95% confident** that the true approval rating in the population lies between 39% and 45%.
+    
+<!-- -   This does **not** mean there is a 95% chance the true value is in this particular interval. -->
+<!-- -   It means that if we repeated this procedure many times, about 95% of the intervals we produce would contain the true value. -->
+::::
+
+------------------------------------------------------------------------
+
+## What makes an interval wider or narrower?
+
+::: presenter-space
+-   **Sample size:** larger samples produce **narrower** intervals.
+
+    -   More data → less uncertainty → tighter estimate.
+
+-   **Confidence level:** higher confidence (e.g., 99% vs. 95%) produces **wider** intervals.
+
+    -   More certainty requires a broader net.
+:::
+
+------------------------------------------------------------------------
+
+## A worked example: two polls
+
+::: presenter-space
+-   Two organisations poll the same PM approval rating independently.
+
+    -   Poll A: **42%** approve, margin of error **±3%** → interval [39%, 45%]
+    -   Poll B: **44%** approve, margin of error **±3%** → interval [41%, 47%]
+
+-   The point estimates differ, but the intervals **overlap**.
+-   Both polls are **consistent** with the same population value.
+:::
+
+
+
+------------------------------------------------------------------------
+
+## When the margin of error is meaningless
+
+::: presenter-space
+-   The margin of error only applies to **probability samples**.
+-   Reporting a margin of error alongside a non-probability sample is **misleading**.
+:::
+
+------------------------------------------------------------------------
+
+## Recap
+
+::: presenter-space
+-   A **point estimate** is our best guess from the sample.
+-   The **margin of error** expresses the uncertainty around that estimate.
+-   A **confidence interval** = point estimate ± margin of error.
+-   Margins of error are only meaningful for **probability samples**.
+:::
+
+------------------------------------------------------------------------
+
+::: presenter-space
+**Why this matters:**
+
+-   Poll results and survey findings are reported with margins of error every day.
+-   Knowing how to interpret a confidence interval is essential for reading empirical evidence critically.
+:::

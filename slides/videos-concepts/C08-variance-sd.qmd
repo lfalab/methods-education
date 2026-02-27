@@ -1,0 +1,124 @@
+---
+pagetitle: "Variance and Standard Deviation"
+class: video
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: variance-sd
+  revealjs:
+    output-file: variance-sd-slides
+---
+
+# Variance and Standard Deviation {.title-left}
+
+------------------------------------------------------------------------
+
+## You'll learn to
+
+::: presenter-space
+-   Interpret the **variance** and **standard deviation** as summaries of dispersion.
+:::
+
+------------------------------------------------------------------------
+
+## How good is 80%?
+
+::: presenter-space
+- A university advertises that **80% of students are satisfied** with the course.
+- But the national mean is about **82%**.
+- With this new information, 80% is not as impressive as it seems.
+:::
+
+------------------------------------------------------------------------
+
+## Variance and standard deviation
+
+::: presenter-space
+- The **variance** and **standard deviation** add context by informing us how spread out the distribution is.
+- This adds insight into how much an observation **stands out** from the rest.
+:::
+
+------------------------------------------------------------------------
+
+## Variance
+
+::: presenter-space
+- The variance measures how **far from the mean** the observations tend to be.
+- The course with 80% approval rates is not too far from the mean.
+- But how about the others?
+:::
+
+------------------------------------------------------------------------
+
+## Calculating the variance
+
+::: presenter-space
+- To get the **variance**, we start by subtracting the mean from each observation and squaring the difference.
+- Linguistics at the University of Glasgow has a **90%** approval rate.
+- By subtracting the mean from this rate and squaring the difference, we get $(90-82)^2=8^2=64$
+:::
+
+------------------------------------------------------------------------
+
+## Calculating the variance
+
+::: presenter-space
+- We do this for every course and take the **sum of the squared deviations** for all courses.
+- By dividing this sum by the number of courses, we get the **variance**.
+- Courses that are further from the mean **increase** the variance of the distribution.
+:::
+
+------------------------------------------------------------------------
+
+## The variance formula
+
+::: presenter-space
+
+$$\sigma^2 = \frac{\sum_{i=1}^{N} (x_i - \mu)^2}{N}$$
+
+- $\mu$ is the **mean**.
+- $(x_i - \mu)^2$ is what we did earlier: $(90-82)^2$
+- $\sum_{i=1}^{N}$ means, "do this for every observation ($x_i$) and take the sum."
+- We divide it by N to get the **variance** ($\sigma^2$).
+
+:::
+
+------------------------------------------------------------------------
+
+## The standard deviation
+
+::: presenter-space
+- The standard deviation is the **square root** of the variance.
+- More commonly used than the variance and useful to judge how **unusual** an observation is.
+- The **variance** for satisfaction with courses is about 145, and the **standard deviation** is about $\sqrt{145}\approx12$.
+:::
+
+------------------------------------------------------------------------
+
+## Interpreting the standard deviation
+
+::: presenter-space
+- Linguistics at Glasgow (90%) is **two-thirds** of a standard deviation above the mean: $8/12=2/3\textrm{ s.d.}$
+- Accounting at Strathclyde (94%) can be more boastful at **one standard deviation** above the mean: $12/12=1\textrm{ s.d.}$
+:::
+
+------------------------------------------------------------------------
+
+## Recap
+
+::: presenter-space
+- **Variance** and **standard deviation** summarise how spread out a distribution is.
+- They are built by measuring how far observations are from the **mean**.
+:::
+
+------------------------------------------------------------------------
+
+::: presenter-space
+**Why this matters:**
+
+- Knowing the mean tells us what is typical.
+- The standard deviation tells us whether differences from the mean are small or substantial.
+- Together, they allow us to judge how unusual an observation is.
+:::

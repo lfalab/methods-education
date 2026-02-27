@@ -1,0 +1,125 @@
+---
+pagetitle: "Summarising a Distribution"
+class: video
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: summarising-distribution
+  revealjs:
+    output-file: summarising-distribution-slides
+---
+
+# Summarising a Distribution {.title-left}
+
+------------------------------------------------------------------------
+
+## You'll learn to
+
+::: presenter-space
+-   Interpret the **mean**, **median**, and **mode** as summaries of a distribution’s central tendency.
+:::
+
+------------------------------------------------------------------------
+
+## How good is 80%?
+
+::: presenter-space
+- Imagine you are choosing a course to apply for.
+- A university advertises that **80% of students are satisfied** with the course.
+- At first glance, this sounds positive.
+:::
+
+------------------------------------------------------------------------
+
+## Data in context
+
+::: presenter-space
+- A number on its own is hard to evaluate.
+- To judge whether 80% is impressive, we need to know what is **typical** for similar courses.
+- This is where **summaries of central tendency** become useful.
+:::
+
+------------------------------------------------------------------------
+
+## The mean
+
+::: presenter-space
+- The **mean** is the average value. We find it by summing the values of observations and dividing by the number of observations.
+- It informs what is **typical** in a distribution of numerical values.
+- For course satisfaction, the national mean is about **82%**.
+:::
+
+------------------------------------------------------------------------
+
+## Interpreting the mean
+
+::: presenter-space
+- An 80% satisfaction rate is slightly **below** the national average.
+- The value itself did not change, but its **interpretation** did once we introduced a reference point.
+- With this new information, **80%** is not as impressive as it seems.
+:::
+
+------------------------------------------------------------------------
+
+## The median
+
+::: presenter-space
+- The **median** is the value that divides the distribution in half.
+- Half of the observations lie above it, and half lie below it.
+- For course satisfaction, the national median is about **84%**.
+:::
+
+------------------------------------------------------------------------
+
+## Interpreting the median
+
+::: presenter-space
+- The **median** is useful when we want a summary that is less sensitive to extreme values.
+- The *mean* annual salary in London (2025) is **£70.3k.**
+- The *median* salary is **£49.7k.**
+:::
+
+------------------------------------------------------------------------
+
+## The mode
+
+::: presenter-space
+- The **mode** is the most frequently occurring value or category.
+- It is especially useful for **nominal variables**, where averages are not meaningful.
+:::
+
+------------------------------------------------------------------------
+
+## Example: General Election vote
+
+::: presenter-space
+
+::: nonincremental
+
+Which party did you vote for in the general election?
+
+![](../../assets/vote-frequency.png){fig-align="center"}
+
+:::
+
+:::
+
+------------------------------------------------------------------------
+
+## Recap
+
+::: presenter-space
+-   Mean, median, and mode **summarize** what is typical in a distribution.
+-   They answer related but distinct questions about **central tendency**.
+:::
+
+------------------------------------------------------------------------
+
+::: presenter-space
+**Why this matters:**
+
+-   Summaries of central tendency help us interpret numbers in context rather than in isolation.
+-   They allow meaningful comparison across cases, such as courses, voters, or income levels.
+:::

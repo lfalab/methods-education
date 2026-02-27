@@ -1,9 +1,19 @@
 ---
 pagetitle: "Units of Analysis, Theories, and Hypotheses "
 class: video
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: units-theories-hypotheses
+  revealjs:
+    output-file: units-theories-hypotheses-slides
 ---
 
 # Units of Analysis, Theories, and Hypotheses {.title-left}
+
+[Watch on YouTube](https://youtu.be/YkeRnIcYe8E)
 
 ------------------------------------------------------------------------
 

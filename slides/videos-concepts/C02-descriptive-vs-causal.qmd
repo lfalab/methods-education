@@ -1,9 +1,19 @@
 ---
 pagetitle: "Descriptive and Causal Questions"
 class: video
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: descriptive-vs-causal
+  revealjs:
+    output-file: descriptive-vs-causal-slides
 ---
 
 # Descriptive and Causal Questions {.title-left}
+
+[Watch on YouTube](https://youtu.be/QiB1lYUS28A)
 
 ## You'll learn to
 

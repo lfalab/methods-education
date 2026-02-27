@@ -1,0 +1,126 @@
+---
+pagetitle: "Measuring Variables"
+class: video
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: measuring-variables
+  revealjs:
+    output-file: measuring-variables-slides
+---
+
+::: presenter-space
+
+# Measuring Variables {.title-left}
+
+[Watch on YouTube](https://youtu.be/IjOV2bF9yOI)
+
+:::
+
+------------------------------------------------------------------------
+
+## You'll learn to
+
+::: presenter-space
+-   Evaluate how **measurement strategies** shape the conclusions that research can support.
+:::
+
+------------------------------------------------------------------------
+
+## Example: Education levels and democratisation
+
+::: presenter-space
+-   **Research question:** Do higher levels of education make countries more likely to democratise?
+:::
+
+------------------------------------------------------------------------
+
+## Example: Education levels and democratisation
+
+::: presenter-space
+-   **Unit of analysis:** Country
+-   **Dependent variable:** Regime type
+-   **Independent variable:** Level of education
+:::
+
+------------------------------------------------------------------------
+
+## Level of education
+
+::: presenter-space
+-   How do we know if a country's **level of education** is high or low?
+-   What information do we collect?
+-   We should start by figuring out a **definition** for the level of education.
+:::
+
+------------------------------------------------------------------------
+
+## Defining the level of education
+
+::: presenter-space
+-   **Accessibility** of basic education to all citizens?
+-   **Proficiency** of students in reading, math, and science?
+-   The **implications** for research are not trivial!
+:::
+
+------------------------------------------------------------------------
+
+## From definition to measurement
+
+::: presenter-space
+-   A measurement for **accessibility:** Literacy rates.
+
+    -   A good (but not perfect) approximation.
+
+-   A measurement for **proficiency:** Students' standardised exam scores.
+
+    -   PISA (Programme for International Student Assessment).
+:::
+
+------------------------------------------------------------------------
+
+## Literacy rates
+
+::: presenter-space
+
+![](../../assets/literacy-rates.png)
+:::
+
+------------------------------------------------------------------------
+
+## PISA scores
+
+::: presenter-space
+
+![](../../assets/pisa-scores.png)
+
+:::
+
+------------------------------------------------------------------------
+
+## Back to the research question
+
+-   **Research question:** Do higher levels of education make countries more likely to democratise?
+-   How should we **define** and **measure** the level of education here?
+-   The answer should depend on our **theory** and **hypothesis**!
+
+------------------------------------------------------------------------
+
+## Recap
+
+::: presenter-space
+-   Different measurement strategies can lead to radically different **conclusions**.
+-   A suitable measurement depends on a suitable **definition**.
+-   Definitions and measurements must be **consistent** with our theories and hypotheses.
+:::
+
+------------------------------------------------------------------------
+
+::: presenter-space
+**Why this matters:**
+
+-   Measurement choices are highly consequential for the conclusions we can make.
+-   Inconsistencies between definitions, measurements, theories, and hypotheses can make entire research projects fall apart.
+:::

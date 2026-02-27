@@ -1,0 +1,187 @@
+---
+pagetitle: "Hypothesis Tests Using Confidence Intervals"
+class: video
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: htests-cis
+  revealjs:
+    output-file: htests-cis-slides
+---
+
+# Hypothesis Tests Using Confidence Intervals {.title-left}
+
+## You'll learn to
+
+::: presenter-space
+-   Use a **confidence interval** to assess evidence against a null hypothesis.
+-   Interpret results using the language of **rejecting** or **failing to reject** the null.
+-   Explain what it means to fail to reject — and what it does **not** mean.
+:::
+
+------------------------------------------------------------------------
+
+## Where we left off
+
+::: presenter-space
+-   In the previous video, we built confidence intervals around point estimates.
+-   A 95% confidence interval gives us a **range of plausible values** for the true population quantity.
+-   Now we ask: can we use that interval to test a specific claim?
+:::
+
+------------------------------------------------------------------------
+
+## The null hypothesis as a claim about zero
+
+::: presenter-space
+-   A null hypothesis typically claims there is **no difference** between groups.
+-   In other words, it claims the true difference is **zero**.
+-   We can test this claim directly using a confidence interval.
+:::
+
+------------------------------------------------------------------------
+
+## The logic of the test
+
+:::: presenter-space
+-   We construct a 95% confidence interval for the **difference** between groups.
+-   Then we ask: does the interval include zero?
+
+    -   If zero is outside the interval: zero is not a plausible value for the true difference — we **reject** the null.
+    -   If zero is inside the interval: zero remains plausible — we **fail to reject** the null.
+
+::::
+
+------------------------------------------------------------------------
+
+## Example 1 — Gender and Reform vote
+
+::: presenter-space
+-   **Research question:** Are men more likely than women to vote for Reform?
+-   **Null hypothesis:** There is no difference between men and women in their likelihood of voting Reform.
+-   **Alternative hypothesis:** Men are more likely than women to vote for Reform.
+:::
+
+------------------------------------------------------------------------
+
+## Example 1 — The estimates
+
+::: presenter-space
+
+::: nonincremental
+
+| Group  | Vote share (%) | 95% CI          |
+|--------|-------------------|-----------------|
+| Men    | **13.7**         | [11.4, 16.3]  |
+| Women  | **9.8**          | [7.8, 12.1]   |
+
+-   Difference (Men − Women): **+3.9** percentage points
+-   CI for the difference: **[+0.7, +7.1]**
+
+:::
+
+:::
+
+------------------------------------------------------------------------
+
+## Example 1 — The test
+
+:::: presenter-space
+-   The confidence interval for the difference is [0.7, 7.1].
+-   The **entire interval lies above zero**.
+-   Zero is not a plausible value for the true difference.
+-   We **reject the null hypothesis**.
+::::
+
+------------------------------------------------------------------------
+
+## Example 2 — Newspaper readership and ideology
+
+::: presenter-space
+-   **Research question:** Do Daily Mail and Daily Telegraph readers differ in their political self-placement?
+-   **Null hypothesis:** There is no difference in mean left-right self-placement between Mail and Telegraph readers.
+-   **Alternative hypothesis:** Telegraph readers are more right-leaning than Mail readers.
+:::
+
+------------------------------------------------------------------------
+
+## Example 2 — The estimates
+
+::: presenter-space
+
+::: nonincremental
+
+| Group      | Mean ideology | 95% CI       |
+|------------|---------------|--------------|
+| Mail       | **6.1**       | [5.9, 6.4]   |
+| Telegraph  | **6.5**       | [6.1, 6.8]   |
+
+-   Difference (Mail − Telegraph): **−0.4**
+-   95% CI for the difference: **[−0.8, +0.1]**
+
+:::
+
+:::
+
+------------------------------------------------------------------------
+
+## Example 2 — The test
+
+:::: presenter-space
+-   The confidence interval for the difference is [−0.8, +0.1].
+-   The interval **crosses zero** — zero is a plausible value for the true difference.
+-   We **fail to reject the null hypothesis**.
+
+::::
+
+------------------------------------------------------------------------
+
+## Two outcomes, two conclusions
+
+::: presenter-space
+
+::: nonincremental
+
+|                    | CI for difference    | Decision                    |
+|--------------------|----------------------|-----------------------------|
+| Gender × Reform    | [+0.7, +7.1]     | **Reject** the null         |
+| Mail × Telegraph   | [−0.8, +0.1]         | **Fail to reject** the null |
+
+:::
+
+-   In both cases, the same logic applies: does the interval include zero?
+
+:::
+
+------------------------------------------------------------------------
+
+## What "fail to reject" does not mean
+
+:::: presenter-space
+-   Failing to reject the null is **not** the same as proving the null is true.
+-   We cannot conclude that Mail and Telegraph readers have identical ideologies.
+-   It means the **evidence in our sample is not strong enough** to rule out zero.
+
+::::
+
+------------------------------------------------------------------------
+
+## Recap
+
+::: presenter-space
+-   A **confidence interval** can be used to test a null hypothesis.
+-   If the 95% CI for a difference **excludes zero**, we reject the null hypothesis.
+-   If it **includes zero**, we fail to reject the null hypothesis.
+-   Failing to reject $\neq$ confirming the null
+:::
+
+------------------------------------------------------------------------
+
+::: presenter-space
+**Why this matters:**
+
+-   Confidence intervals appear in almost every piece of published quantitative research.
+-   Knowing how to read them as hypothesis tests is a core skill for evaluating empirical evidence.
+:::

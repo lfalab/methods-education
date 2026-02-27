@@ -1,9 +1,21 @@
 ---
 pagetitle: "Normative and Empirical Questions"
 class: video
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: empirical-vs-normative
+  revealjs:
+    output-file: empirical-vs-normative-slides
 ---
 
+<!-- {{< include ../../includes/youtube.html video-id="QCPkKubsMS8" >}} -->
+
 # Normative and Empirical Questions {.title-left}
+
+[Watch on YouTube](https://youtu.be/QCPkKubsMS8)
 
 ## You'll learn to
 

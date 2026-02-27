@@ -1,9 +1,19 @@
 ---
 pagetitle: "Dependent and Independent Variables"
 class: video
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: dependent-independent-variables
+  revealjs:
+    output-file: dependent-independent-variables-slides
 ---
 
 # Dependent and Independent Variables {.title-left}
+
+[Watch on YouTube](https://youtu.be/j-R8ef5mPtQ)
 
 ------------------------------------------------------------------------
 

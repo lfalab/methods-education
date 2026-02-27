@@ -1,0 +1,168 @@
+---
+pagetitle: "Interpreting P-values"
+class: video
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: p-values
+  revealjs:
+    output-file: p-values-slides
+---
+
+# Interpreting P-values {.title-left}
+
+## You'll learn to
+
+::: presenter-space
+-   Interpret a **p-value** and explain what it measures.
+-   Use a p-value to evaluate a null hypothesis.
+:::
+
+------------------------------------------------------------------------
+
+## A question to keep in mind
+
+::: presenter-space
+-   In the previous video, we tested hypotheses using confidence intervals.
+-   P-values offer a different way to answer the same question.
+-   That question is always: how surprising are our results **if the null hypothesis were true?**
+:::
+
+------------------------------------------------------------------------
+
+## Example: Is a coin fair or loaded?
+
+::: presenter-space
+-   Suppose we want to check whether a coin is fair.
+-   We flip the coin several times and observe the results.
+
+    -   **Null hypothesis:** the coin is fair — heads and tails are equally likely.
+    -   **Alternative hypothesis:** the coin is loaded — heads are more likely than tails.
+:::
+
+------------------------------------------------------------------------
+
+## The logic of the test
+
+::: presenter-space
+-   Each time we flip the coin, we ask:
+
+    -   *Assuming the coin is fair, how likely is this outcome?*
+
+-   If the observed result would be very **unlikely under the null**, that is evidence against it.
+-   If it is not particularly unlikely, we have **no strong reason** to doubt the null.
+:::
+
+------------------------------------------------------------------------
+
+## Building the evidence
+
+::: presenter-space
+
+::: nonincremental
+
+| Flips | All heads? | Probability if coin is fair |
+|-------|------------|------------------------------|
+| 1     | Yes        | (½)¹ = **50%**              |
+| 2     | Yes        | (½)² = **25%**              |
+| 3     | Yes        | (½)³ = **12.5%**            |
+| 4     | Yes        | (½)⁴ = **6.3%**             |
+| 5     | Yes        | (½)⁵ = **3.1%**             |
+
+:::
+
+-   Each consecutive heads makes the fair-coin explanation **less plausible**.
+
+:::
+
+------------------------------------------------------------------------
+
+## What is a p-value?
+
+::: presenter-space
+-   The probabilities in that table are **p-values**.
+
+    -   **P-value**: the probability of observing a result at least as extreme as the one we got, *assuming the null hypothesis is true*.
+
+-   A small p-value means the data would be unusual if the null were true.
+-   A large p-value means the data are consistent with the null.
+:::
+
+------------------------------------------------------------------------
+
+## How small is small enough?
+
+:::: presenter-space
+-   Researchers in quantitative social science conventionally use **0.05** (5%).
+-   This is called the **significance level** (or α).
+::::
+
+------------------------------------------------------------------------
+
+## Applying the threshold
+
+::: presenter-space
+
+::: nonincremental
+
+| Flips | All heads? | P-value | Decision (α = 0.05)       |
+|-------|-----------|---------|---------------------------|
+| 4     | Yes       | 6.3%    | **Fail to reject** the null |
+| 5     | Yes       | 3.1%    | **Reject** the null         |
+
+:::
+
+-   At four heads, the result is unusual but not unusual enough.
+-   At five heads, it crosses the threshold — we reject the fair-coin hypothesis.
+
+:::
+
+------------------------------------------------------------------------
+
+## P-values and confidence intervals
+
+::: presenter-space
+-   In the previous video, we tested hypotheses using confidence intervals.
+-   P-values ask the same question differently.
+-   These two approaches will **never contradict each other**.
+:::
+
+------------------------------------------------------------------------
+
+## Why they always agree
+
+:::: presenter-space
+-   A 95% confidence interval excludes zero exactly when **p < 0.05**.
+-   A 95% confidence interval includes zero exactly when **p ≥ 0.05**.
+-   They are two windows onto the same underlying calculation — not two independent tests.
+
+::::
+
+------------------------------------------------------------------------
+
+## What a p-value is not
+
+:::: presenter-space
+-   A p-value is **not** the probability that the null hypothesis is true.
+-   It means the **data would be unusual** if the null were true.
+::::
+
+------------------------------------------------------------------------
+
+## Recap
+
+::: presenter-space
+-   The **p-value** is the probability of observing results at least as extreme as ours, assuming the null hypothesis is true.
+-   P-values and confidence intervals always lead to the same conclusion: they are two ways of expressing the same test.
+:::
+
+------------------------------------------------------------------------
+
+::: presenter-space
+**Why this matters:**
+
+-   P-values appear in almost every quantitative study in political science.
+-   Reading them correctly is a basic requirement for evaluating evidence critically.
+:::
