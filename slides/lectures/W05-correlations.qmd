@@ -1,0 +1,189 @@
+---
+title: "Lecture 5: Describing Correlations"
+subtitle: "Statistics for Political Science"
+author: "Leonardo Falabella"
+class: lecture
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: correlations-lecture
+  revealjs:
+    output-file: correlations-lecture-slides
+---
+
+------------------------------------------------------------------------
+
+## Today is different
+
+- Last week you told me you wanted **less revision** and **more hands-on work**.
+- Today we're skipping straight to Stata.
+- The whole lecture is a three-part activity — one for each type of bivariate analysis.
+
+------------------------------------------------------------------------
+
+## But first: why does any of this matter?
+
+- Some of you have felt like you're learning **mechanical tasks without knowing why**.
+- That's a fair observation — and it's worth addressing directly.
+
+------------------------------------------------------------------------
+
+## The building blocks aren't obvious yet
+
+- Generating a histogram or tabulating a single variable can feel pointless.
+- But these are the **building blocks** of independent empirical analysis.
+- Right now you're learning to use a tool. Later, you'll decide what to do with it.
+
+------------------------------------------------------------------------
+
+## What you're building toward
+
+- **Problem Set 2** asks you to analyse a dataset of your choice, with variables of your choice.
+- You will need to identify the right tool for the right pair of variables — and execute it.
+- Everything you've done so far is preparation for that.
+
+------------------------------------------------------------------------
+
+## The do files are templates
+
+- The do files in our shared folder aren't just course materials — they're **starting points for your own analysis**.
+- You've set up an identical folder structure on your computer for exactly this reason.
+- Download a do file, update the working directory, and you have a working template.
+
+------------------------------------------------------------------------
+
+## What happens when you run a do file top to bottom
+
+- Stata executes every line in sequence.
+- Plots appear because the do file contains graph commands.
+- This isn't magic — it's a **reproducible record** of your analysis.
+- Today we'll use a new do file as a template: ``bivariate-lecture.do``
+
+------------------------------------------------------------------------
+
+## Download today's do file
+
+::: nonincremental
+
+- Access our [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE)
+- Click on ``do``
+- Download ``bivariate-lecture.do``
+- Save it to your ``do`` folder and update the working directory
+
+:::
+
+------------------------------------------------------------------------
+
+## Three cases, three parts
+
+::: nonincremental
+
+| Case | Variable 1 | Variable 2 | Tools                                 |
+|------|------------|------------|---------------------------------------|
+| 1    | Nominal    | Nominal    | Cross-tabulation, bivariate bar chart |
+| 2    | Nominal    | Numeric    | Compare means, bar chart of means     |
+| 3    | Numeric    | Numeric    | Scatterplot, regression line          |
+
+:::
+
+------------------------------------------------------------------------
+
+## Case 1: Nominal + Nominal
+
+- **Tools:** Cross-tabulation and bivariate bar chart.
+- Open ``bivariate-lecture.do`` and go to **Case 1**.
+
+------------------------------------------------------------------------
+
+## Case 1 example: Gender and vote choice
+
+::: nonincremental
+
+- ``tabulate b02 y09, column nofreq``
+- ``graph hbar (count), over(y09) over(b02) asyvars``
+
+:::
+
+------------------------------------------------------------------------
+
+## Case 1: Your turn
+
+::: nonincremental
+
+- **Variables:** Gender (``y09``) and interest in politics (``a03``).
+- Clean ``a03``: ``replace a03 = . if a03 < 0``
+- Create a cross-tabulation and a bivariate chart.
+- Use the gender/vote choice commands as templates.
+
+:::
+
+------------------------------------------------------------------------
+
+## Case 2: Nominal + Numeric
+
+- **Tools:** Compare means and bar chart of means.
+- Open ``bivariate-lecture.do`` and go to **Case 2**.
+
+------------------------------------------------------------------------
+
+## Case 2 example: Newspaper readership and ideology
+
+::: nonincremental
+
+- ``sort k03``
+- ``by k03: summarize e01``
+- ``graph hbar e01, over(k03)``
+
+:::
+
+------------------------------------------------------------------------
+
+## Case 2: Your turn
+
+::: nonincremental
+
+- **Variables:** Socio-economic class (``sc``) and ideology (``e01``).
+- Does ideology differ across socio-economic classes?
+- Use the newspaper/ideology commands as a template — just swap the variables.
+
+:::
+
+------------------------------------------------------------------------
+
+## Case 3: Numeric + Numeric
+
+- **Tools:** Scatterplot and regression line.
+- Open ``bivariate-lecture.do`` and go to **Case 3**.
+- This case uses the **Brexit Regional dataset**.
+
+------------------------------------------------------------------------
+
+## Case 3 example: Import shock and Brexit
+
+::: nonincremental
+
+- ``twoway (scatter leave_share import_shock) (lfit leave_share import_shock)``
+
+:::
+
+------------------------------------------------------------------------
+
+## Case 3: Your turn
+
+::: nonincremental
+
+- **Variables:** Share with higher education (``share_high_skill``) and Leave vote share (``leave_share``).
+- Do regions with more graduates vote differently on Brexit?
+- Use the import shock commands as a template — just swap ``import_shock`` for ``share_high_skill``.
+
+:::
+
+------------------------------------------------------------------------
+
+## Why this matters
+
+- Choosing the right tool depends on knowing your variable types.
+- The do files you've been working with are templates for PS2.
+- Every analysis you'll do in this module starts with the question: **what types are my variables?**

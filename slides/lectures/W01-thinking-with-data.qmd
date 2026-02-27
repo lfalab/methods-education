@@ -1,8 +1,16 @@
 ---
-title: "Thinking With Data"
-subtitle: "Statistics for Political Science I"
-author: "Week 1"
+title: "Lecture 1: Thinking With Data"
+subtitle: "Statistics for Political Science"
+author: "Leonardo Falabella"
 class: lecture
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: thinking-with-data
+  revealjs:
+    output-file: thinking-with-data-slides
 ---
 
 ## Welcome
@@ -22,9 +30,9 @@ class: lecture
 
 This module **is** about:
 
--   Thinking clearly with data\
--   Understanding what statistical claims **can** and **cannot** show\
--   Evaluating evidence in political science research\
+-   Thinking clearly with data
+-   Understanding what statistical claims **can** and **cannot** show
+-   Evaluating evidence in political science research
 -   Learning how to ask and test empirical questions
 
 It is **not** about memorising formulas or becoming a statistician

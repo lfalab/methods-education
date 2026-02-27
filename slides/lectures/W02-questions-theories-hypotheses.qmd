@@ -1,0 +1,205 @@
+---
+title: "Lecture 2: Research Questions, Theories, and Hypotheses"
+subtitle: "Statistics for Political Science"
+author: "Leonardo Falabella"
+class: lecture
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: questions-theories-hypotheses
+  revealjs:
+    output-file: questions-theories-hypotheses-slides
+---
+
+------------------------------------------------------------------------
+
+## Welcome
+
+Today’s goals:
+
+-   Reiterate how Problem Set 1 (PS1) works
+-   Recap the core points from this week's videos
+-   Work through a group activity on **research questions, theories, and hypotheses**
+
+------------------------------------------------------------------------
+
+## Announcements
+
+-   [Website](https://lfalab.github.io/methods-education/) hosting all video and lecture slides
+-   [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE) for the datasets and do-files we'll be using throughout the module
+-   Have a question about module content? Ask it on the KEATS [Discussion Forum](https://keats.kcl.ac.uk/mod/forum/view.php?id=8967500)!
+
+------------------------------------------------------------------------
+
+## Problem Set 1 (PS1): The Big Picture
+
+PS1 is completed through **weekly preparatory activities** on KEATS:
+
+-   Interactive videos (with attention-check questions)
+-   Short quizzes
+-   These run from **Week 2** to **Week 10** (excluding Reading Week)
+-   The first PS1 work was due **today** (28 Jan) **before lecture**
+
+------------------------------------------------------------------------
+
+## How PS1 Works (Core Rules)
+
+Each week:
+
+-   **Videos** introduce key concepts
+-   **Quizzes** test understanding of those concepts
+-   **Lecture** and seminar activities assume this preparation
+
+PS1 is designed to support learning over time, not last-minute revision
+
+------------------------------------------------------------------------
+
+## Quizzes vs Videos (Important Distinction)
+
+-   **Quizzes**
+
+    -   5–10 multiple-choice questions
+    -   Unlimited attempts
+    -   Highest score counts
+    -   Deadlines are enforced
+
+------------------------------------------------------------------------
+
+## Quizzes vs Videos (Important Distinction)
+
+-   **Videos**
+
+    -   Include attention-check questions
+    -   One attempt per question
+    -   Videos remain accessible throughout the term
+
+-   If you miss a quiz, you can still earn **partial credit** for that week via the videos.
+
+------------------------------------------------------------------------
+
+## Flexibility Built In
+
+-   There are **eight** weeks with PS1 activities
+-   Your **best six weekly scores** count
+-   The two lowest scores are dropped
+-   This is designed as **insurance**, not a target
+
+------------------------------------------------------------------------
+
+## Research Questions: Descriptive vs Causal
+
+-   Empirical questions can be descriptive or causal.
+-   **Descriptive** questions ask what the world looks like.
+-   **Causal** questions ask what would happen if we intervened.
+
+------------------------------------------------------------------------
+
+## Descriptive questions
+
+-   Descriptive questions can be about **distributions**, **trends**, or **correlations**.
+
+    -   What percentage of countries are democratic?
+    -   Is there a global trend towards democratic backsliding?
+    -   Is democratic backsliding more prevalent in countries with higher political polarisation?
+    
+------------------------------------------------------------------------
+
+## Causal questions
+
+-   Causal questions ask if some variables **drive change** in others.
+
+    -   Does exposure to divisive content on social media make people more tolerant of political violence?
+    -   Does declining trust in political elites weaken commitment to democratic norms?
+    -   Do compulsory voting laws increase political participation?
+
+------------------------------------------------------------------------
+
+## Complementarities between questions
+
+-   **Describing a distribution:**
+
+    -   What percentage of the world's wealth is held by the 50 richest people?
+
+-   **Describing a trend:**
+
+    -   Is economic inequality increasing across the world?
+    
+------------------------------------------------------------------------
+
+## Complementarities between questions
+
+-   **Describing a correlation:**
+
+    -   Are autocracies more unequal than democracies?
+
+-   **Probing causation:**
+
+    -   Do increases in income inequality make democratic backsliding more likely?
+    
+------------------------------------------------------------------------
+
+## Theories
+
+-   A **theory** is "a reasoned and precise speculation about the answer to a research question" (King, Keohane, and Verba 1994:3).
+-   Based on our knowledge and reasoning, what's a plausible answer to a research question?
+
+------------------------------------------------------------------------
+
+## Example: Health care systems and policy responses
+
+-   **Research question:** How did countries' health care systems affect their abilities to mitigate the impact of the Covid-19 pandemic?
+
+-   **Theory:** Countries with public health care systems took advantage of their centralised bureaucracies to implement more effective policy responses.
+
+------------------------------------------------------------------------
+
+## Hypotheses
+
+-   A **hypothesis** is an empirically testable implication of a theory.
+-   Given your theory, what should we observe in the world?
+
+------------------------------------------------------------------------
+
+## Example: Health care systems and policy responses
+
+-   **Theory:** Countries with public health care systems took advantage of their centralised bureaucracies to implement more effective policy responses.
+
+-   **Hypothesis:** Countries with public health care systems had lower Covid death rates than countries with private health care systems.
+
+------------------------------------------------------------------------
+
+## Group Activity: Research Questions, Theories, and Hypotheses
+
+Working in groups of about three. By the end of the activity, each group should have:
+
+- One clearly stated **research question**
+- A decision about whether the question is **descriptive** or **causal**
+- One **theory** that offers a a reasoned and precise speculation about the answer to your question
+- One **hypothesis** that follows logically from the theory
+
+------------------------------------------------------------------------
+
+## Group Activity: Research Questions, Theories, and Hypotheses
+
+General guidance:
+
+- The **research question** should come first and guide everything else
+- The **theory** should explain why, not just what
+- The **hypothesis** should be empirically testable
+- Descriptive questions can still have theories and hypotheses
+
+------------------------------------------------------------------------
+
+## Why This Matters for the Module
+
+- This structure, **question → theory → hypothesis**, will reappear throughout the module and your future research projects.
+- These are **foundational concepts** where misunderstandings are very common.
+
+------------------------------------------------------------------------
+
+## Looking Ahead
+
+-   The next PS1 work is due **next week** (4 Feb) **before lecture**
+-   Please check KEATS regularly.

@@ -1,0 +1,199 @@
+---
+title: "Lecture 4: Describing Distributions"
+subtitle: "Statistics for Political Science"
+author: "Leonardo Falabella"
+class: lecture
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: distributions-lecture
+  revealjs:
+    output-file: distributions-lecture-slides
+---
+
+------------------------------------------------------------------------
+
+## Welcome
+
+Today’s goals:
+
+-   Review what you learned about **describing distributions**.
+-   Have a group discussion about the module and collect **feedback**.
+
+------------------------------------------------------------------------
+
+## How good is 80%?
+
+- Imagine you are choosing a course to apply for.
+- A university advertises that **80% of students are satisfied** with the course.
+- At first glance, this sounds positive.
+
+
+------------------------------------------------------------------------
+
+## Data in context
+
+- A number on its own is hard to evaluate.
+- To judge whether 80% is impressive, we need to know what is **typical** for similar courses.
+- This is where **summaries of central tendency** become useful.
+
+------------------------------------------------------------------------
+
+## The mean
+
+- The **mean** is the average value. We find it by summing the values of observations and dividing by the number of observations.
+- It informs what is **typical** in a distribution of numerical values.
+- For course satisfaction, the national mean is about **82%**.
+
+------------------------------------------------------------------------
+
+## The median
+
+- The **median** is the value that divides the distribution in half
+- Half of the observations lie above it, and half lie below it.
+- For course satisfaction, the national median is about **84%**.
+
+------------------------------------------------------------------------
+
+## NSS Data: Histogram
+
+![](../../assets/nss_hist.jpg){fig-cap="" fig-align="center" width="80%"}
+
+------------------------------------------------------------------------
+
+## NSS Data: Histogram
+
+![](../../assets/nss_hist_shaded.jpg){fig-cap="" fig-align="center" width="80%"}
+
+About **200** courses between 90% and 95% satisfaction rates.
+
+------------------------------------------------------------------------
+
+## Interpreting the median
+
+- The **median** is useful when we want a summary that is less sensitive to extreme values.
+- The *mean* annual salary in London (2025) is **£70.3k.**
+- The *median* salary is **£49.7k.**
+
+------------------------------------------------------------------------
+
+## Another distribution with extreme values: GDP per capita
+
+![](../../assets/gdp_hist.jpg){fig-cap="" fig-align="center" width="80%"}
+
+------------------------------------------------------------------------
+
+## GDP per capita: summary statistics
+
+| GDPpc     |         |
+|-----------|---------|
+| Obs       | **162**     |
+| Mean      | **19,619**  |
+| Median      | **12,890**  |
+| Std. dev. | **20,986**  |
+| Min       | **596**     |
+| Max       | **149,171** |
+
+------------------------------------------------------------------------
+
+## Right-skewed distributions
+
+- When a histogram looks like your right foot, the distribution is **right-skewed**.
+- A few extremely **high** values make the mean (19.6k) larger than the median (12.9k).
+
+![](../../assets/gdp_hist.jpg){fig-cap="" fig-align="center" width="50%"}
+
+------------------------------------------------------------------------
+
+## Left-skewed distributions
+
+- When a histogram looks like your left foot, the distribution is **left-skewed**.
+- A few extremely **low** values make the mean (82) smaller than the median (84).
+
+![](../../assets/nss_hist.jpg){fig-cap="" fig-align="center" width="50%"}
+
+------------------------------------------------------------------------
+
+## Variance and standard deviation
+
+- The **variance** and **standard deviation** add context by informing us how spread out the distribution is.
+- This adds insight into how much an observation **stands out** from the rest.
+
+------------------------------------------------------------------------
+
+## The variance formula
+
+$$\sigma^2 = \frac{\sum_{i=1}^{N} (x_i - \mu)^2}{N}$$
+
+- $\mu$ is the **mean**.
+- $(x_i - \mu)^2$ means, "take the value of an observation, subtract the mean, and square the result."
+- $\sum_{i=1}^{N}$ means, "do this for every observation ($x_i$) and take the sum."
+- We divide it by N to get the **variance** ($\sigma^2$).
+
+------------------------------------------------------------------------
+
+## The standard deviation
+
+- The standard deviation ($\sigma$) is the **square root** of the variance.
+- More commonly used than the variance and useful to judge how **unusual** an observation is.
+- The **variance** for satisfaction with courses is about 145, and the **standard deviation** is about $\sqrt{145}\approx12$.
+
+------------------------------------------------------------------------
+
+## Interpreting the standard deviation
+
+- Linguistics at Glasgow (90%) is **two-thirds** of a standard deviation above the mean: $8/12=2/3\textrm{ s.d.}$
+   - Accounting at Strathclyde (94%) sits at **one standard deviation** above the mean: $12/12=1\textrm{ s.d.}$
+
+------------------------------------------------------------------------
+
+## Four Weeks In: A Check-In
+
+We're at a good moment to pause and reflect:
+
+-   You've completed **three cycles** of videos, quizzes, and in-class work.
+-   You've started working with **Stata** in seminars.
+-   The module structure is now **familiar** but not yet routine.
+
+This is the ideal time to gather feedback on what's working and what isn't.
+
+------------------------------------------------------------------------
+
+## Why This Feedback Matters
+
+The module design (videos before lectures, active learning in class) is grounded in education research. But **implementation** matters as much as design.
+
+-   Are the videos helping you prepare?
+-   Are the seminars giving you enough hands-on practice?
+-   Are the activities reinforcing the concepts you need?
+
+------------------------------------------------------------------------
+
+## Group Discussion: Three Questions
+
+1.  **Videos and quizzes:** What's working? What could be clearer or more useful?
+2.  **Stata labs:** Are the seminar activities helping you build confidence? What's still confusing?
+3.  **Lectures:** Are the in-class activities helping you connect concepts to practice?
+
+Think about concrete examples of what helps or what could be improved.
+
+------------------------------------------------------------------------
+
+## Share your thoughts
+
+- [Click here](https://www.menti.com/al7qyx45mxtv), scan the QR code, or join at menti.com using the code **4396 2288**
+- Your feedback is anonymous!
+
+![](../../assets/mentimeter_qr_code_feedback.png){fig-cap="" fig-align="center" width="33%"}
+
+
+------------------------------------------------------------------------
+
+## Why this matters
+
+- The **mean** and **median** tell us what is typical.
+- The **standard deviation** tells us whether differences from the mean are small or substantial.
+- These indicators enable meaningful **comparison** across cases, such as courses, voters, or income levels.
+
