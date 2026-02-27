@@ -1,14 +1,71 @@
 project:
   type: website
+  resources:
+    - assets/**
+
+# website:
+#   title: "Methods Education"
+#   navbar:
+#     left:
+#       - href: index.qmd
+#         text: Home
+#       - href: slides/index.qmd
+#         text: Slides
 
 website:
-  title: "Methods Education"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - href: slides/index.qmd
-        text: Slides
+  sidebar:
+    style: docked
+    search: true
+    contents:
+      - index.qmd
+      - section: "Week 1: Thinking with Data"
+        contents:
+            - slides/lectures/W01-thinking-with-data.qmd
+      - section: "Week 2: Research Questions, Theories, and Hypotheses"
+        contents:
+            - slides/videos-concepts/C01-empirical-vs-normative.qmd
+            - slides/videos-concepts/C02-descriptive-vs-causal.qmd
+            - slides/videos-concepts/C03-units-theories-hypotheses.qmd
+            - slides/videos-concepts/C04-dependent-independent-variables.qmd
+            - slides/videos-stata/S01-doing-reproducible-research.qmd
+            - slides/lectures/W02-questions-theories-hypotheses.qmd
+      - section: "Week 3: Measurement and Variable Types"
+        contents:
+            - slides/videos-concepts/C05-measuring-variables.qmd
+            - slides/videos-concepts/C06-types-of-variables.qmd
+            - slides/videos-stata/S02-datasets-codebooks.qmd
+            - slides/videos-stata/S03-stata-interface.qmd
+            - slides/videos-stata/S04-loading-browsing-data.qmd
+            - slides/lectures/W03-measurement.qmd
+      - section: "Week 4: Describing Distributions (Univariate Description)"
+        contents:
+            - slides/videos-concepts/C07-summarising-distribution.qmd
+            - slides/videos-concepts/C08-variance-sd.qmd
+            - slides/videos-concepts/C09-bar-histograms.qmd
+            - slides/videos-stata/S05-summary-stata.qmd
+            - slides/videos-stata/S06-bar-hist-stata.qmd
+            - slides/lectures/W04-distributions.qmd
+            - activities/A04-distributions-activity.qmd
+      - section: "Week 5: Describing Correlations (Bivariate Description)"
+        contents:
+            - slides/videos-concepts/C10-correlations-nominal.qmd
+            - slides/videos-concepts/C11-comparing-means.qmd
+            - slides/videos-concepts/C12-scatter-reg.qmd
+            - slides/videos-concepts/C13-types-plots-tables.qmd
+            - slides/videos-stata/S07-corr-stata.qmd
+            - slides/lectures/W05-correlations.qmd
+            - activities/A05-correlations-activity.qmd
+      - section: "Reading Week"
+        contents:
+            - activities/A06-reading-week-catchup.qmd
+      - section: "Week 7: Estimation, Uncertainty, and Statistical Inference"
+        contents:
+            - slides/videos-concepts/C14-sampling.qmd
+            - slides/videos-concepts/C15-moe-ci.qmd
+            - slides/videos-concepts/C16-htests-cis.qmd
+            - slides/videos-concepts/C17-p-values.qmd
+            - slides/videos-stata/S08-htests-stata.qmd
+
 
 format:
   html:

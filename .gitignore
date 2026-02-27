@@ -6,6 +6,10 @@ _site/
 _freeze/
 .quarto/
 .quarto-cache/
+cards/
+quizzes/
+reference/
+attention-checks/
 
 /.quarto/
 **/*.quarto_ipynb
