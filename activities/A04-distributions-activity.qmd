@@ -1,0 +1,170 @@
+---
+title: "Mock Exam Questions: Describing Distributions"
+subtitle: "Statistics for Political Science - Week 4"
+author: "Leonardo Falabella"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    theme: default
+---
+
+## Introduction
+
+In this activity, you will practice interpreting histograms, understanding the relationship between distribution shape and summary statistics, and performing manual calculations. Work through the sections in order, discussing your answers with your group before moving on.
+
+------------------------------------------------------------------------
+
+## Part 1: Interpreting Histograms
+
+Below are three histograms representing different distributions. For each histogram, answer the interpretation questions that follow.
+
+### Distribution A
+
+```{r}
+#| echo: false
+#| fig-width: 7
+#| fig-height: 5
+
+set.seed(123)
+data_a <- rnorm(500, mean = 50, sd = 10)
+
+hist(data_a, 
+     breaks = 20,
+     main = "Distribution A",
+     xlab = "Value",
+     ylab = "Frequency",
+     col = "lightblue",
+     border = "white")
+```
+
+**Questions:**
+
+1. Approximately how many observations fall between 40 and 60?
+2. Is this distribution symmetric, right-skewed, or left-skewed?
+3. Where is most of the mass concentrated?
+
+------------------------------------------------------------------------
+
+### Distribution B
+
+```{r}
+#| echo: false
+#| fig-width: 7
+#| fig-height: 5
+
+set.seed(456)
+data_b <- rexp(500, rate = 0.05)
+
+hist(data_b, 
+     breaks = 30,
+     main = "Distribution B",
+     xlab = "Value",
+     ylab = "Frequency",
+     col = "lightcoral",
+     border = "white")
+```
+
+**Questions:**
+
+1. Approximately how many observations fall between 0 and 20?
+2. Is this distribution symmetric, right-skewed, or left-skewed?
+3. Are there any extreme values? If so, in which direction?
+
+------------------------------------------------------------------------
+
+## Part 2: Skewness and Mean vs Median
+
+In this section, you will examine two clearly skewed distributions and predict the relationship between the mean and median based on the shape of the histogram.
+
+### Right-Skewed Distribution
+
+```{r}
+#| echo: false
+#| fig-width: 7
+#| fig-height: 5
+
+set.seed(101)
+income_data <- rexp(400, rate = 0.0001)
+
+hist(income_data, 
+     breaks = 30,
+     main = "Income Distribution (Simulated)",
+     xlab = "Annual Income (£ thousands)",
+     ylab = "Frequency",
+     col = "grey50",
+     border = "white")
+```
+
+**Questions:**
+
+1. In this distribution, would you expect the mean to be larger or smaller than the median?
+2. Why? Explain your reasoning in terms of the shape of the distribution and the location of extreme values.
+
+------------------------------------------------------------------------
+
+### Left-Skewed Distribution
+
+```{r}
+#| echo: false
+#| fig-width: 7
+#| fig-height: 5
+
+set.seed(202)
+exam_scores <- 100 - rexp(400, rate = 0.1)
+
+hist(exam_scores, 
+     breaks = 25,
+     main = "Exam Scores (Simulated)",
+     xlab = "Score",
+     ylab = "Frequency",
+     col = "lavender",
+     border = "white")
+```
+
+**Questions:**
+
+1. In this distribution, would you expect the mean to be larger or smaller than the median?
+2. Why? Explain your reasoning in terms of the shape of the distribution and the location of extreme values.
+
+------------------------------------------------------------------------
+
+## Part 3: Manual Calculation Exercise
+
+*These calculations won't be in the exam, but we want you to learn them.*
+
+Consider the following dataset, which represents the number of years of education for five respondents:
+
+**Years of Education:** 10, 12, 14, 16, 18
+
+Using these five observations, calculate the following by hand (you may use a calculator for arithmetic):
+
+1. **The mean**
+2. **The median**
+3. **The variance** (use the formula: $\sigma^2 = \frac{\sum_{i=1}^{N} (x_i - \mu)^2}{N}$)
+4. **The standard deviation** (the square root of the variance)
+
+**Show your work** for each calculation.
+
+------------------------------------------------------------------------
+
+## Reflection Questions
+
+After completing the activity, discuss the following questions with your group:
+
+1. How does the shape of a distribution (symmetric, right-skewed, left-skewed) affect the relationship between the mean and the median?
+2. Why is the standard deviation useful for understanding how unusual an observation is?
+3. In what types of real-world political or social data would you expect to see right-skewed distributions? Left-skewed distributions?
+
+------------------------------------------------------------------------
+
+## Summary
+
+In this activity, you have:
+
+- Interpreted histograms to identify shape, central tendency, and spread.
+- Connected the shape of a distribution to the relationship between mean and median.
+- Performed manual calculations of key summary statistics.
+
+These skills are foundational for describing data and understanding what patterns mean in political science research.

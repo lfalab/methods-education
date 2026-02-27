@@ -1,0 +1,243 @@
+---
+title: "Seminar Activity: Country-level Correlations"
+subtitle: "Statistics for Political Science — Week 5"
+author: "Leonardo Falabella"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    theme: default
+---
+
+## Introduction
+
+This seminar has two parts. In the first hour, you will work through a set of variable pairs conceptually — identifying variable types, deciding which analytical case applies, and choosing the appropriate tool — without touching Stata. In the second hour, you will implement your choices in Stata and interpret the output.
+
+Work through each part in order. Discuss your answers with your group before moving on.
+
+The dataset for all exercises is the Quality of Government (QoG) dataset (available in our [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE)). Refer to the QoG codebook if you need more detail about any variable.
+
+------------------------------------------------------------------------
+
+## The Seven Variable Pairs
+
+Below are seven pairs of variables drawn from the QoG dataset. Each pair is accompanied by a brief description of how each variable is measured and a research question that motivates the analysis. Read through all seven pairs before beginning Hour 1.
+
+------------------------------------------------------------------------
+
+### Pair 1
+
+**Variables:** `gol_est` and `ideavt_legvt`
+
+- **`gol_est`** — Electoral system type (Bormann and Golder). Values: 1 = Majoritarian, 2 = Proportional, 3 = Mixed.
+- **`ideavt_legvt`** — Parliamentary election voter turnout (Institute for Democracy and Electoral Assistance). The percentage of the voting-age population that cast a vote in the most recent parliamentary election (0–100).
+
+**Research question:** Do countries with different electoral systems differ in their average levels of voter turnout?
+
+------------------------------------------------------------------------
+
+### Pair 2
+
+**Variables:** `wdi_gini` and `ti_cpi`
+
+- **`wdi_gini`** — Gini index (World Bank). A variable measuring income inequality within a country, ranging from 0 (perfect equality) to 100 (perfect inequality).
+- **`ti_cpi`** — Corruption Perceptions Index (Transparency International). A continuous variable ranging from 0 (highly corrupt) to 100 (highly clean), measuring perceptions of public sector corruption as seen by business people, risk analysts, and the general public.
+
+**Research question:** Do more unequal countries tend to have higher levels of perceived corruption?
+
+------------------------------------------------------------------------
+
+### Pair 3
+
+**Variables:** `bmr_dem` and `ht_colonial`
+
+- **`bmr_dem`** — Dichotomous democracy measure (Boix, Miller, and Rosato). This is a **binary** variable: 0 = not a democracy, 1 = democracy. Countries are coded as democratic if political leaders are chosen through free and fair elections and a minimum suffrage threshold is met. It does not measure degree of democracy.
+- **`ht_colonial`** — Colonial origin. A categorical variable recording the country's former Western overseas colonial ruler (e.g. British, French, Spanish, Portuguese, Belgian). Countries that were never colonised by a Western overseas power are in a separate category.
+
+**Research question:** Do countries with different colonial histories differ in their likelihood of being democratic today?
+
+------------------------------------------------------------------------
+
+### Pair 4
+
+**Variables:** `wdi_internet` and `rsf_pfi`
+
+- **`wdi_internet`** — Individuals using the internet (World Bank). The percentage of the population with internet access (0–100).
+- **`rsf_pfi`** — Press Freedom Index (Reporters Without Borders). A numeric variable measuring the degree of freedom available to journalists and media organisations in each country. **Higher scores indicate more press freedom.**
+
+**Research question:** Do countries with higher internet usage tend to have greater press freedom?
+
+------------------------------------------------------------------------
+
+### Pair 5
+
+**Variables:** `ht_colonial` and `ti_cpi`
+
+- **`ht_colonial`** — Colonial origin. See Pair 3 for the full description.
+- **`ti_cpi`** — Corruption Perceptions Index. See Pair 2 for the full description.
+
+**Research question:** Do countries with different colonial histories differ in their average levels of perceived corruption today?
+
+------------------------------------------------------------------------
+
+### Pair 6
+
+**Variables:** `gol_est` and `ht_region`
+
+- **`gol_est`** — Electoral system type. See Pair 1 for the full description.
+- **`ht_region`** — Region of the world. A variable classifying countries into ten politico-geographic regions, including Eastern Europe and post-Soviet Union, Latin America, North Africa and the Middle East, Sub-Saharan Africa, Western Europe and North America, East Asia, South-East Asia, South Asia, the Pacific, and the Caribbean.
+
+**Research question:** Do countries in different world regions tend to use different electoral systems?
+
+------------------------------------------------------------------------
+
+### Pair 7
+
+**Variables:** `wdi_gini` and `wdi_wip`
+
+- **`wdi_gini`** — Gini index. See Pair 2 for the full description.
+- **`wdi_wip`** — Proportion of seats held by women in national parliaments (World Bank). Measured as a percentage (0–100).
+
+**Research question:** Do more unequal countries tend to have lower levels of women's representation in parliament?
+
+------------------------------------------------------------------------
+
+## Hour 1: Conceptual Mapping
+
+In this hour, you will work through the seven pairs conceptually. **Do not open Stata.** For each pair, answer the three questions below by discussing with your group and writing down your answers.
+
+For **each of the seven pairs**, answer:
+
+**Question A: What type is each variable?**
+
+Decide whether each variable is nominal (unordered categories), ordinal (ordered categories), or numeric (interval or ratio). Pay close attention to how the variable is measured — a variable coded as numbers is not necessarily numeric. Refer to the descriptions above and the codebook if needed.
+
+**Question B: Which analytical case applies?**
+
+Based on the variable types, determine which case this pair belongs to:
+
+- **Case 1:** Both variables are nominal → cross-tabulation and bivariate bar chart
+- **Case 2:** One nominal, one numeric → compare means and bar chart of means
+- **Case 3:** Both numeric → scatterplot and regression line
+
+**Question C: What is the appropriate tool?**
+
+State the specific plot or table you would use.
+
+---
+
+Once your group has worked through all seven pairs, be ready to discuss your answers. Pay particular attention to any pairs where you were uncertain — these are worth discussing carefully before moving to Hour 2.
+
+------------------------------------------------------------------------
+
+## Hour 2: Stata Implementation
+
+In this hour, you will implement the tools you identified in Hour 1 and interpret the output. Work through the pairs in order, using `bivariate-lecture.do` as a reference for command syntax. For each pair, there are two steps: **execute** and **interpret**.
+
+------------------------------------------------------------------------
+
+### Pair 1 — `gol_est` and `ideavt_legvt`
+
+**Execute:** Produce the appropriate summary table and chart.
+
+**Interpret:**
+
+- Which electoral system is associated with the highest average turnout? Which with the lowest?
+- Is the difference between systems substantively meaningful, or are the means fairly similar?
+- Why might the choice of electoral system be associated with turnout? Think about how different systems create incentives for parties to mobilise voters.
+
+> **Hint:** A difference of a few percentage points in turnout can be politically significant at the national level, even if it looks modest in a chart.
+
+------------------------------------------------------------------------
+
+### Pair 2 — `wdi_gini` and `ti_cpi`
+
+**Execute:** Produce the appropriate chart, including a regression line.
+
+**Interpret:**
+
+- What is the direction of the association? Does a higher Gini index tend to be associated with higher or lower corruption scores?
+- Before interpreting the slope, make sure you have the scale direction of `ti_cpi` clearly in mind: a higher score means *less* corruption, not more. What does this imply about the slope you expect to see?
+
+> **Hint:** Getting the scale direction of `ti_cpi` right is essential for interpreting the slope correctly. Confirm which end of the scale represents more corruption before drawing conclusions.
+
+------------------------------------------------------------------------
+
+### Pair 3 — `bmr_dem` and `ht_colonial`
+
+**Execute:** Produce the appropriate table and chart. When producing the table, try running it with both row percentages and column percentages.
+
+**Interpret:**
+
+- Compare the row percentage output and the column percentage output. What does each tell you? Which is more useful for answering the research question, and why?
+- Are some colonial origins more strongly associated with democratic status than others? Which patterns stand out?
+
+> **Hint:** Row percentages show the distribution of one variable within each category of the other. Switching between row and column orientations reveals different aspects of the same association — think carefully about which question each answers.
+
+------------------------------------------------------------------------
+
+### Pair 4 — `wdi_internet` and `rsf_pfi`
+
+**Execute:** Produce the appropriate chart, including a regression line.
+
+**Interpret:**
+
+- Is there a positive association, a negative association, or no clear pattern?
+- Remember that higher `rsf_pfi` scores indicate *more* press freedom. If the slope is positive, what does that mean substantively?
+
+> **Hint:** Make sure you have the direction of the `rsf_pfi` scale clear before interpreting the slope. A positive slope here has a specific substantive meaning that depends on understanding what higher values represent.
+
+------------------------------------------------------------------------
+
+### Pair 5 — `ht_colonial` and `ti_cpi`
+
+**Execute:** Produce the appropriate summary table and chart.
+
+**Interpret:**
+
+- Which colonial-origin groups have the highest and lowest average corruption scores? Are the differences large or small?
+- Are there any groups represented by very few countries? How might this affect the reliability of the group mean?
+- Compare your findings here with Pair 2, which also involves `ti_cpi`. Both pairs ask about correlates of corruption, but use a different variable as the grouping factor. What does the comparison suggest about the sources of variation in corruption perceptions?
+
+> **Hint:** The bar chart of means lets you compare average corruption scores across colonial-origin categories at a glance. Look for categories with notably higher or lower means, and keep in mind that fewer countries in a category makes the average less reliable.
+
+------------------------------------------------------------------------
+
+### Pair 6 — `gol_est` and `ht_region`
+
+**Execute:** Produce the appropriate table and chart.
+
+**Interpret:**
+
+- Does electoral system type appear to be evenly distributed across regions, or does it cluster? Are there regions where one system type clearly dominates?
+- Are there any regions where data are sparse or missing? What might this imply?
+- Why might the choice of electoral system vary across world regions? Think about historical legacies, colonial influences, and the regional diffusion of institutional models.
+
+> **Hint:** A bivariate chart will make regional patterns easier to see than a table alone. Look for categories that are heavily concentrated in one region or largely absent from another.
+
+------------------------------------------------------------------------
+
+### Pair 7 — `wdi_gini` and `wdi_wip`
+
+**Execute:** Produce the appropriate chart, including a regression line.
+
+**Interpret:**
+
+- What does the slope of the regression line tell you about the direction of the relationship? Is a higher Gini index associated with more or fewer women in parliament?
+- Is the relationship strong or weak? How are the points distributed around the regression line?
+- Compare this with Pair 2, which also uses `wdi_gini`. Both pair inequality with a political outcome. Are the patterns similar or different? What might this suggest?
+
+> **Hint:** Pay attention to both the direction of the regression line and how tightly the points cluster around it. A flat or nearly flat line suggests little association, even if the slope is not exactly zero.
+
+------------------------------------------------------------------------
+
+## Summary
+
+In this activity, you have:
+
+- Identified variable types and matched them to the appropriate bivariate analytical tool.
+- Produced and interpreted cross-tabulations, bar charts of means, and scatterplots with regression lines.
+- Connected descriptive patterns in data to theoretical arguments in political science.
+
+These skills form the foundation for the independent empirical analysis you will carry out in Problem Set 2.

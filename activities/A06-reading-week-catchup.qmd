@@ -1,0 +1,306 @@
+---
+title: "Catch-Up Activity: From Data Handling to Bivariate Interpretation"
+subtitle: "Statistics for Political Science — Reading Week"
+author: "Leonardo Falabella"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    theme: default
+---
+
+## Introduction
+
+This activity is designed for students who either did not attend their seminars on Week 5 or attended but found the bivariate correlations activity challenging. It helps you learn the foundational skills you will need for the second half of the module, when we move into hypothesis testing and statistical inference.
+
+The activity has three parts:
+
+1. **Setting up your workflow** — Confirming that your folder structure is in place and that you can load a dataset in Stata.
+2. **Describing single variables** — Reviewing variable types and univariate description.
+3. **Describing relationships between variables** — Producing and interpreting bivariate output.
+
+If you are comfortable with Parts 1 or 2, feel free to skip ahead. If you're in doubt on whether you're comfortable or not, give them a try.
+
+Completing all three parts should take approximately 90 minutes. If you cannot complete this activity independently, book an appointment with me by [clicking here.](https://outlook.office.com/bookwithme/user/fbf0f18fe8b84b8bbe71922285fbf0e2@kcl.ac.uk?anonymous&ismsaljsauthenabled&ep=plink)
+
+------------------------------------------------------------------------
+
+## Part 1: Setting Up Your Workflow
+
+This part confirms that you can navigate the folder structure, set the working directory, and load a dataset in Stata. If you completed the Week 2 seminar activities (Parts [1](https://lfalab.github.io/methods-education/slides/videos-stata/stata-interface.html) and [2](https://lfalab.github.io/methods-education/slides/videos-stata/loading-browsing-data.html)) successfully, this should be straightforward. If not, work through each step carefully.
+
+**If you get stuck, review:**
+
+- [Doing Reproducible Research](https://lfalab.github.io/methods-education/slides/videos-stata/doing-reproducible-research.html) (also on [Keats](https://keats.kcl.ac.uk/mod/hvp/view.php?id=9383034))
+- [The Stata Interface (Setting the Working Directory)](https://lfalab.github.io/methods-education/slides/videos-stata/stata-interface.html) ([Keats](https://keats.kcl.ac.uk/mod/hvp/view.php?id=9389619))
+- [Loading and Browsing Data](https://lfalab.github.io/methods-education/slides/videos-stata/loading-browsing-data.html) ([Keats](https://keats.kcl.ac.uk/mod/hvp/view.php?id=9389655))
+
+
+### Locate your project folder
+
+You should have created a folder called `my-research-project/` (or a different name you may have chosen). This folder should contain four subfolders:
+
+- `data-raw`
+- `data-clean`
+- `do`
+- `output`
+
+Open your file explorer (Windows) or Finder (Mac) and locate this folder. Confirm that all four subfolders are present.
+
+If you cannot find this folder, you need to set it up now. Review the [Doing Reproducible Research](https://lfalab.github.io/methods-education/slides/videos-stata/doing-reproducible-research.html) video (also on [Keats](https://keats.kcl.ac.uk/mod/hvp/view.php?id=9383034)) and create the folder structure as instructed.
+
+### Download the dataset
+
+We will use the Quality of Government (QoG) dataset for this activity.
+
+1. Go to our [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE).
+2. Click on the `data-raw` folder.
+3. Download `Quality_of_Government_2026.dta`.
+4. Save it into your local `data-raw` folder.
+
+### Set the working directory
+
+Before you can load data in Stata, you need to tell Stata where your project folder is located. This is called setting the working directory.
+
+1. Open Stata.
+2. Go to **File > Change working directory**.
+3. Navigate to your `my-research-project/` folder and select it.
+4. After you click "OK", look at the **Command History** pane on the left-hand side. You should see a command that starts with `cd` followed by the path to your folder.
+
+If you need a reminder, review the [The Stata Interface](https://lfalab.github.io/methods-education/slides/videos-stata/stata-interface.html) video (also on [Keats](https://keats.kcl.ac.uk/mod/hvp/view.php?id=9389619)), which walks through this process step-by-step.
+
+### Save the working directory command
+
+You should have a file called `set-wd.do` in your `do` folder from Week 3. This file contains the command that sets your working directory. It serves as a reference so you can copy-paste the command that sets the working directory. This way, you don't have to use the menu every time.
+
+1. In Stata, right-click on the command in the **Command History** pane that starts with `cd`.
+2. Click "Copy".
+3. Open the Do-file Editor by clicking the icon that looks like a sheet of paper with a pencil.
+4. Paste the command into a new do-file.
+5. Save this do-file as `set-wd.do` in your `do` folder.
+
+**If you already have `set-wd.do` from Week 3:** Open it and confirm that the path matches your current folder location.
+
+### Load the dataset
+
+Now that the working directory is set, you can load the QoG dataset.
+
+1. Open a new do-file in Stata (click the Do-file Editor icon).
+2. On the first line, copy and paste the `cd` command from your `set-wd.do` file.
+3. On the second line, type: `use "data-raw/Quality_of_Government_2026.dta", clear`
+4. Click the "Execute (do)" button (the icon that looks like a sheet of paper with a play button).
+
+**If you see an error message,** check that:
+
+- You have saved `Quality_of_Government_2026.dta` in your local `data-raw` folder.
+- The working directory is set to `my-research-project/`.
+- You have spelled the dataset name exactly as shown (including the file extension `.dta`).
+
+If you are still stuck, note the exact error message and bring it to office hours.
+
+**If you need a reminder:** Review the [Loading and Browsing Data](https://lfalab.github.io/methods-education/slides/videos-stata/loading-browsing-data.html) video (also on [Keats](https://keats.kcl.ac.uk/mod/hvp/view.php?id=9389655)).
+
+### Save your do-file
+
+Save this do-file in your `do` folder as `reading-week-catchup.do`. You will continue adding commands to this file as you work through Parts 2 and 3.
+
+### Summary of Part 1
+
+You should now have:
+
+- A folder structure in place with four subfolders.
+- The QoG dataset downloaded and saved in your local `data-raw` folder.
+- A do-file that sets the working directory and loads the dataset.
+- Confirmation that the dataset appears in the Variables pane when you run your do-file.
+
+If any of these steps did not work, [book an office hour](https://outlook.office.com/bookwithme/user/fbf0f18fe8b84b8bbe71922285fbf0e2@kcl.ac.uk?anonymous&ismsaljsauthenabled&ep=plink).
+
+------------------------------------------------------------------------
+
+## Part 2: Describing Single Variables
+
+Before you can describe relationships between variables, you need to be able to describe individual variables. This part reviews variable types and univariate description.
+
+**If you get stuck, review:**
+
+- [Summarising a Distribution](https://lfalab.github.io/methods-education/slides/videos-concepts/summarising-distribution.html) ([Keats](https://keats.kcl.ac.uk/mod/hvp/view.php?id=9397289))
+- [Summarising Distributions in Stata](https://lfalab.github.io/methods-education/slides/videos-stata/summary-stata.html) ([Keats](https://keats.kcl.ac.uk/mod/hvp/view.php?id=9397521))
+
+### Identify variable types
+
+The QoG dataset contains many variables. We will focus on three variables that you encountered in Week 5:
+
+- `gol_est` — Electoral system type (1 = Majoritarian, 2 = Proportional, 3 = Mixed)
+- `wdi_gini` — Gini index (a measure of income inequality, ranging from 0 to 100)
+- `ti_cpi` — Corruption Perceptions Index (ranging from 0 = highly corrupt to 100 = highly clean)
+
+**Before continuing:** Download the QoG Codebook from the [Shared Project Folder]((https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE)) and open it. Use the codebook to confirm the descriptions of these three variables.
+
+**Check:** Answer these questions before moving on:
+
+1. What type of variable is `gol_est`? (Nominal, ordinal, or numeric?)
+2. What type of variable is `wdi_gini`? (Nominal, ordinal, or numeric?)
+3. What type of variable is `ti_cpi`? (Nominal, ordinal, or numeric?)
+
+> *Hint:* A variable is not necessarily numeric just because it is coded with numbers. `gol_est` is coded as 1, 2, and 3, but what do these numbers represent? Are they meaningful quantities, or are they labels for categories?
+
+**If you are uncertain:** Review the [Types of Variables](https://lfalab.github.io/methods-education/slides/videos-concepts/types-of-variables.html) video (also on [Keats](https://keats.kcl.ac.uk/mod/hvp/view.php?id=9389427)) before proceeding.
+
+### Describe a nominal variable
+
+For nominal variables, we summarize them using **frequency tables**. A frequency table shows how many observations fall into each category.
+
+1. Add the following command to your do-file: `tab gol_est`
+2. Run the command (select it and click "execute/do").
+3. Look at the results. You should see a table showing how many countries have each type of electoral system.
+
+**Check:** 
+
+- How many countries in the dataset have majoritarian electoral systems?
+- How many have proportional systems?
+- How many have mixed systems?
+
+### Describe a numeric variable
+
+For numeric variables, we summarize them using **summary statistics** such as the mean, median, minimum, and maximum.
+
+1. Add the following command to your do-file: `summarize wdi_gini`
+2. Run the command (select it and click "execute/do").
+3. Look at the results. You should see a table with five columns: variable name, observations, mean, standard deviation, minimum, and maximum.
+
+**Check:**
+
+- What is the mean value of the Gini index across all countries in the dataset?
+- What is the minimum value? What is the maximum value?
+- What does this range tell you about variation in income inequality across countries?
+
+**If you need a reminder about summary statistics:** Review the [Summarising a Distribution](https://lfalab.github.io/methods-education/slides/videos-concepts/summarising-distribution.html) video (also on [Keats](https://keats.kcl.ac.uk/mod/hvp/view.php?id=9397289)).
+
+### Summary of Part 2
+
+You should now be able to:
+
+- Identify whether a variable is nominal, ordinal, or numeric.
+- Produce a frequency table for a nominal variable.
+- Produce summary statistics for a numeric variable.
+
+If you struggled with any of these tasks, revisit the relevant videos before moving to Part 3.
+
+------------------------------------------------------------------------
+
+## Part 3: Describing Relationships Between Variables
+
+In this part, you will produce and interpret bivariate output. You will work through two variable pairs that represent two of the three analytical cases from Week 5.
+
+**Reference material:** You can download the `bivariate-qog.do` file from the [Shared Project Folder](https://emckclac-my.sharepoint.com/personal/k2588471_kcl_ac_uk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fk2588471%5Fkcl%5Fac%5Fuk%2FDocuments%2Fshared%2Dproject%2Dfolder&ga=1) (in the `do` subfolder) to see worked examples of all the commands used in this section. Open this file in Stata and inspect how the commands are structured.
+
+**If you get stuck, review:**
+
+- [Comparing Means by Category](https://lfalab.github.io/methods-education/slides/videos-concepts/comparing-means.html) ([Keats](https://keats.kcl.ac.uk/mod/hvp/view.php?id=9403365))
+- [Scatterplots and Regression Lines](https://lfalab.github.io/methods-education/slides/videos-concepts/scatter-reg.html) ([Keats](https://keats.kcl.ac.uk/mod/hvp/view.php?id=9403372))
+- [From Variable Types to Plots and Tables](https://lfalab.github.io/methods-education/slides/videos-concepts/types-plots-tables.html) ([Keats](https://keats.kcl.ac.uk/mod/hvp/view.php?id=9403376))
+- [Describing Correlations in Stata](https://lfalab.github.io/methods-education/slides/videos-stata/corr-stata.html) ([Keats](https://keats.kcl.ac.uk/mod/hvp/view.php?id=9404133))
+
+### Review the analytical cases
+
+In Week 5, you learned that the appropriate bivariate tool depends on the types of variables you are analyzing:
+
+- **Case 1:** Both variables are nominal → cross-tabulation and bivariate bar chart
+- **Case 2:** One nominal, one numeric → compare means and bar chart of means
+- **Case 3:** Both numeric → scatterplot and regression line
+
+**If you need a reminder:** Review the [From Variable Types to Plots and Tables](https://lfalab.github.io/methods-education/slides/videos-concepts/types-plots-tables.html) video (also on [Keats](https://keats.kcl.ac.uk/mod/hvp/view.php?id=9403376)).
+
+### Pair 1 — Electoral system and voter turnout (Case 2)
+
+We will analyze the relationship between electoral system type (`gol_est`) and voter turnout (`ideavt_legvt`). Check the codebook to confirm what `ideavt_legvt` measures.
+
+**Check:**
+
+- What type of variable is `gol_est`? (You answered this in Part 2.)
+- What type of variable is `ideavt_legvt`?
+- Which analytical case does this pair belong to? (Case 1, Case 2, or Case 3?)
+
+#### Compare means across groups
+
+To compare the mean turnout for each electoral system type, we use the `sort` and `by` commands together.
+
+1. Add these two commands to your do-file:
+   - `sort gol_est`
+   - `by gol_est: summarize ideavt_legvt`
+2. Run the commands (select them and click "execute/do").
+3. Look at the results. You should see separate summary statistics for each electoral system type.
+
+**Interpret the output:**
+
+- Which electoral system type has the highest mean turnout?
+- Which has the lowest mean turnout?
+- Is the difference between them large or small?
+
+#### Visualize the relationship
+
+A bar chart of means makes the comparison easier to see.
+
+1. Add the following command to your do-file: `graph hbar ideavt_legvt, over(gol_est)`
+2. Run the command (select the command and click "execute/do").
+3. A bar chart should appear in a new window.
+
+**Check:**
+
+- Does the visual pattern match what you saw in the summary statistics?
+- Is the difference between electoral system types visually clear, or are the bars similar in height?
+
+### Pair 2 — Inequality and corruption (Case 3)
+
+We will analyze the relationship between income inequality (`wdi_gini`) and perceived corruption (`ti_cpi`). Check the codebook to confirm what `ti_cpi` measures. Pay close attention to the direction of the scale: does a higher score mean more corruption or less corruption?
+
+**Check**
+
+- What type of variable is `wdi_gini`?
+- What type of variable is `ti_cpi`?
+- Which analytical case does this pair belong to? (Case 1, Case 2, or Case 3?)
+
+#### Create a scatterplot with regression line
+
+1. Add the following command to your do-file: `twoway (scatter ti_cpi wdi_gini) (lfit ti_cpi wdi_gini), leg(off)`
+2. Run the command.
+3. A scatterplot with a regression line should appear in a new window.
+
+**If you need a reminder about scatterplots:** Review the [Scatterplots and Regression Lines](https://lfalab.github.io/methods-education/slides/videos-concepts/scatter-reg.html) video (also on [Keats](https://keats.kcl.ac.uk/mod/hvp/view.php?id=9403372)).
+
+#### Interpret the scatterplot
+
+- Does the regression line slope upward or downward?
+- Remember that higher `ti_cpi` scores mean *less* corruption. What does the slope tell you about the relationship between inequality and corruption?
+- Are the points tightly clustered around the regression line, or are they widely scattered?
+
+Write your interpretation in complete sentences. For example: "The regression line slopes [upward/downward], which means that countries with higher levels of income inequality tend to have [higher/lower] levels of perceived corruption."
+
+> *Hint:* Getting the direction of the `ti_cpi` scale right is essential. Confirm which end of the scale represents more corruption before interpreting the slope.
+
+### Summary of Part 3
+
+You should now be able to:
+
+- Determine which analytical case applies to a given pair of variables.
+- Compare means across groups using `sort` and `by: summarize`.
+- Produce a bar chart of means for a nominal × numeric pair.
+- Produce a scatterplot with a regression line for a numeric × numeric pair.
+- Interpret the output in substantive terms.
+
+------------------------------------------------------------------------
+
+## What to Do If You Could Not Complete This Activity
+
+If you were unable to complete this activity, [book an office hour](https://outlook.office.com/bookwithme/user/fbf0f18fe8b84b8bbe71922285fbf0e2@kcl.ac.uk?anonymous&ismsaljsauthenabled&ep=plink).
+
+You should be able to:
+
+- Download a dataset from the Shared Project Folder and load it in Stata using a do-file.
+- Identify whether a variable is nominal, ordinal, or numeric by reading the codebook.
+- Produce summary statistics and frequency tables.
+- Decide which analytical tool (table of means, scatterplot, or cross-tabulation) to use for a given pair of variables.
+- Run the appropriate Stata command and interpret the output in substantive terms.
+
+If any of these skills feel shaky, [seek help now](https://outlook.office.com/bookwithme/user/fbf0f18fe8b84b8bbe71922285fbf0e2@kcl.ac.uk?anonymous&ismsaljsauthenabled&ep=plink). The material in Weeks 7–10 builds directly on these foundations, and struggling with this material is normal. Getting help now will prevent you from falling further behind.
