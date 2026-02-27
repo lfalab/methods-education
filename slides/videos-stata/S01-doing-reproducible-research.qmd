@@ -1,9 +1,21 @@
 ---
 pagetitle: "Doing Reproducible Research"
 class: video
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: doing-reproducible-research
+  revealjs:
+    output-file: doing-reproducible-research-slides
 ---
 
 # Doing Reproducible Research {.title-left}
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DVSg_RFjV-8?si=gFgHHBNKKhnqEEC1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<!-- [Watch on YouTube](https://youtu.be/DVSg_RFjV-8) -->
 
 ------------------------------------------------------------------------
 
@@ -41,11 +53,7 @@ class: video
 ::: presenter-space
 -   **Data:** the information you gather to begin your analysis.
 
-    -   Examples: Public opinion surveys; Election results; National census statistics.
-
 -   **Code:** the instructions that transform and analyse the data.
-
-    -   Examples: Merge data on economic growth rates with election results; Create a table that shows how many elections were held in recession years.
 
 -   Reproducible research **separates** data from code.
 :::

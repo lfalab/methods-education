@@ -1,0 +1,130 @@
+---
+pagetitle: "Datasets and Codebooks"
+class: video
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: datasets-codebooks
+  revealjs:
+    output-file: datasets-codebooks-slides
+---
+
+# Datasets and Codebooks {.title-left}
+
+[Watch on YouTube](https://youtu.be/QFWFimlyhas)
+
+------------------------------------------------------------------------
+
+## You'll learn to
+
+::: presenter-space
+-   Identify how **datasets** are structured.
+-   Use a **codebook** to interpret variable meanings, coding schemes, and missing-value conventions.
+:::
+
+------------------------------------------------------------------------
+
+## Example 1: Global Competition and Brexit
+
+::: presenter-space
+
+::: nonincremental
+
+![](../../assets/brexit-paper.png)
+
+*American Political Science Review* (2018)
+
+:::
+
+:::
+
+------------------------------------------------------------------------
+
+## Example 1: Global Competition and Brexit
+
+::: presenter-space
+
+![](../../assets/brexit-data.png){fig-align="center"}
+
+:::
+
+------------------------------------------------------------------------
+
+## Codebooks
+
+::: presenter-space
+
+- Every good dataset has a **codebook.**
+- A codebook provides researchers with **necessary information** about the dataset.
+
+    -   Full explanations of what information the variable carries.
+    -   Sources, measurement choices, timespans.
+    -   Coding schemes.
+    
+:::
+
+------------------------------------------------------------------------
+
+## Codebook example: Global Competition and Brexit
+
+::: presenter-space
+
+- **eu_15_imm_growth:** growth of immigrants from EU15 countries over 2001-2011. Source: UK Census.
+- **share_council_rent:** share of the population in public housing in 2001. Source: UK Census.
+
+:::
+
+------------------------------------------------------------------------
+
+## Example 2: British Election Study
+
+::: presenter-space
+
+![](../../assets/bes-logo.png){fig-align="center"}
+
+:::
+
+------------------------------------------------------------------------
+
+## Example 2: British Election Study
+
+::: presenter-space
+
+![](../../assets/bes-data.png){fig-align="center"}
+
+:::
+
+------------------------------------------------------------------------
+
+## Codebook example: British Election Study
+
+::: presenter-space
+
+::: nonincremental
+
+![](../../assets/bes-codebook.png){fig-align="center"}
+
+:::
+
+:::
+
+------------------------------------------------------------------------
+
+## Recap
+
+::: presenter-space
+- A **dataset** is a table where rows are observations and columns are variables.
+- A **codebook** documents what variables mean and how values are coded.
+- Working with data involves switching between Stata and documentation.
+:::
+
+------------------------------------------------------------------------
+
+::: presenter-space
+**Why this matters:**
+
+- Real-world datasets rarely “explain themselves.”
+- Learning to read documentation is a core data-analysis skill.
+:::

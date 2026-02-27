@@ -1,5 +1,6 @@
 format:
   revealjs:
-    theme: [default, ../../theme/reveal-video.scss]
+    theme: [default, ../../theme/reveal-lecture.scss]
     slide-number: true
     incremental: true
+

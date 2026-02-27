@@ -1,0 +1,282 @@
+---
+pagetitle: "Hypothesis Testing in Stata"
+class: lecture
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: htests-stata
+  revealjs:
+    output-file: htests-stata-slides
+---
+
+# Hypothesis Testing in Stata {.title-left}
+
+------------------------------------------------------------------------
+
+## You'll learn to
+
+::: nonincremental
+
+-   Run a **difference-in-proportions** test in Stata.
+-   Run a **difference-in-means** test in Stata.
+-   Read the output and apply the **confidence interval decision rule**.
+
+:::
+
+------------------------------------------------------------------------
+
+## Download the Quality of Government dataset from our shared folder
+
+::: nonincremental
+
+-   Access our [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE)
+-   Click on ``data-raw``
+-   Download ``Quality_of_Government_2026.dta``
+-   Save it into the ``data-raw`` folder on your computer
+
+:::
+
+------------------------------------------------------------------------
+
+## Download the companion do-file for this activity
+
+::: nonincremental
+
+-   Access our [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE)
+-   Click on ``do``
+-   Download ``hypothesis-qog.do``
+-   Save it into the ``do`` folder on your computer
+
+:::
+
+------------------------------------------------------------------------
+
+## Load the dataset
+
+::: nonincremental
+
+- Set the working directory to your project folder on your computer.
+- Load the dataset
+
+```stata
+cd "C:\Users\leona\OneDrive - King's College London\shared-project-folder"
+
+use "data-raw/Quality_of_Government_2026.dta", clear
+```
+
+:::
+
+------------------------------------------------------------------------
+
+## Read through the do-file comments and execute the commands
+
+::: nonincremental
+
+- This do-file will serve as your companion for learning how to run **hypothesis tests** in Stata.
+- The do-file covers **two tests**: a difference in proportions and a difference in means.
+
+:::
+
+------------------------------------------------------------------------
+
+## From description to inference
+
+::: nonincremental
+
+- Last week: cross-tabulations, bar charts of means, scatterplots.
+- This week: could the patterns we observed be due to **chance variation** alone?
+
+:::
+
+------------------------------------------------------------------------
+
+## Test 1: Difference in proportions
+
+::: nonincremental
+
+- **Research question:** Are countries with a British colonial history more likely to be democracies today than countries with a French colonial history?
+- **Null Hypothesis (H0):** There is no systematic difference between British- and French-colonised countries in their likelihood of being democracies.
+- **Alternative Hypothesis (H1):** Countries with a British colonial history are more likely to be democratic than countries with a French colonial history.
+
+:::
+
+------------------------------------------------------------------------
+
+## Cross-tabulation
+
+::: nonincremental
+
+```stata
+keep if ht_colonial == 5 | ht_colonial == 6
+
+tabulate ht_colonial bmr_dem, row nofreq
+```
+
+- This restricts the data to British (5) and French (6) colonised countries.
+- The row percentages show the share of democracies in each group.
+- These are the proportions the test will compare.
+
+:::
+
+------------------------------------------------------------------------
+
+## Run the test
+
+::: nonincremental
+
+- ``prtest`` compares the proportion of a binary variable across two groups.
+
+```stata
+prtest bmr_dem, by(ht_colonial)
+```
+
+- ``bmr_dem`` is already coded 0 (non-democracy) and 1 (democracy) — no recoding needed.
+- Stata will compare the proportion of 1s (democracies) in each group.
+
+:::
+
+------------------------------------------------------------------------
+
+## Reading the output
+
+::: nonincremental
+
+| Element | What it tells you |
+|---|---|
+| Proportion 1 / Proportion 2 | Share of democracies in each group |
+| ``diff`` | Estimated gap (Group 1 − Group 2) |
+| 95% Conf. Interval for diff | Range of plausible values for the true gap |
+| ``Pr(|Z| > |z|)`` | p-value: probability of this gap if H0 were true |
+
+:::
+
+------------------------------------------------------------------------
+
+## The decision rule
+
+::: nonincremental
+
+- Focus on the **95% confidence interval for the difference**.
+- Ask: does the interval include zero?
+
+| CI for the difference | Decision |
+|---|---|
+| Does **not** include 0 | **Reject** the null hypothesis |
+| Includes 0 | **Fail to reject** the null hypothesis |
+
+:::
+
+------------------------------------------------------------------------
+
+## Test 2: Difference in means
+
+::: nonincremental
+
+- **Research question:** Is turnout higher in countries with proportional systems than in countries with majoritarian systems?
+- **Null Hypothesis (H0):** Mean voter turnout is the same in majoritarian and proportional electoral systems.
+- **Alternative Hypothesis (H1):** Proportional systems have higher turnout than majoritarian systems.
+
+:::
+
+------------------------------------------------------------------------
+
+## Before moving on: reload the dataset
+
+::: nonincremental
+
+```stata
+use "data-raw/Quality_of_Government_2026.dta", clear
+```
+
+- Earlier on, we ran a command to only keep countries that were British or French colonies.
+- Reload so we can have the full dataset again.
+
+:::
+
+------------------------------------------------------------------------
+
+## Compare means
+
+::: nonincremental
+
+```stata
+keep if gol_est == 1 | gol_est == 2
+
+by gol_est, sort: summarize ideavt_legvt
+```
+
+- This restricts the data to majoritarian (1) and proportional (2) systems.
+- Mixed systems (3) are excluded — we are comparing the two pure types.
+
+:::
+
+------------------------------------------------------------------------
+
+## Run the test
+
+::: nonincremental
+
+- ``ttest`` compares the mean of a continuous variable across two groups.
+
+```stata
+ttest ideavt_legvt, by(gol_est)
+```
+
+- ``ideavt_legvt`` is the percentage of the voting-age population that cast a vote.
+- Stata will compare the mean turnout in each electoral system type.
+
+:::
+
+------------------------------------------------------------------------
+
+## Reading the output
+
+::: nonincremental
+
+| Element | What it tells you |
+|---|---|
+| Mean | Average turnout in each group |
+| ``diff`` | Estimated gap (Group 1 − Group 2) |
+| 95% Conf. Interval for diff | Range of plausible values for the true gap |
+| ``Pr(|T| > |t|)`` | p-value: probability of this gap if H0 were true |
+
+:::
+
+------------------------------------------------------------------------
+
+## The decision rule
+
+::: nonincremental
+
+- Focus on the **95% confidence interval for the difference**.
+- Ask: does the interval include zero?
+
+| CI for the difference | Decision |
+|---|---|
+| Does **not** include 0 | **Reject** the null hypothesis |
+| Includes 0 | **Fail to reject** the null hypothesis |
+
+:::
+
+------------------------------------------------------------------------
+
+## Recap
+
+::: nonincremental
+
+-   ``prtest`` tests whether two groups differ in their **proportion** of a binary outcome.
+-   ``ttest`` tests whether two groups differ in their **mean** of a continuous outcome.
+-   Both tests produce a difference, a confidence interval, and a p-value.
+-   If the 95% CI for the difference **excludes zero**, reject the null hypothesis.
+
+:::
+
+------------------------------------------------------------------------
+
+**Why this matters:**
+
+- Descriptive analysis tells us what patterns look like in our data.
+- Hypothesis testing tells us whether those patterns are too large to dismiss as chance variation.
+- These two commands — ``prtest`` and ``ttest`` — are the building blocks for statistical inference in political science research.
