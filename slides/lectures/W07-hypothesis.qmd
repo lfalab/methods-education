@@ -1,0 +1,229 @@
+---
+title: "Lecture 7: Hypothesis Testing"
+subtitle: "Statistics for Political Science"
+author: "Leonardo Falabella"
+class: lecture
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: hypothesis-lecture
+  revealjs:
+    output-file: hypothesis-lecture-slides
+---
+
+------------------------------------------------------------------------
+
+## From description to inference
+
+- Last week: we described **relationships** between variables.
+- This week: we ask whether those relationships are **statistically significant**.
+- Same logic, new question — and two new Stata commands.
+
+------------------------------------------------------------------------
+
+## The do-file is your template
+
+- Everything we do today is in ``hypothesis-lecture.do``.
+- Download it, update the working directory, and run along.
+
+------------------------------------------------------------------------
+
+## Download today's do-file
+
+::: nonincremental
+
+- Access our [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE)
+- Click on ``do``
+- Download ``hypothesis-lecture.do``
+- Save it to your ``do`` folder and update the working directory
+
+:::
+
+------------------------------------------------------------------------
+
+## Two tests, two parts
+
+::: nonincremental
+
+| Test | Variable types | Command |
+|------|---------------|---------|
+| Difference in proportions | Nominal outcome | ``prtest`` |
+| Difference in means | Numeric outcome | ``ttest`` |
+
+:::
+
+------------------------------------------------------------------------
+
+## Test 1: Difference in proportions
+
+- **Research question:** Are countries with a British colonial history more likely to be democracies today than countries with a French colonial history?
+- **Null Hypothesis (H0):** There is no systematic difference between British- and French-colonised countries in their likelihood of being democracies.
+- **Alternative Hypothesis (H1):** Countries with a British colonial history are more likely to be democratic than countries with a French colonial history.
+
+------------------------------------------------------------------------
+
+## Test 1 example: Step 1 — descriptive
+
+::: nonincremental
+
+```stata
+keep if ht_colonial == 5 | ht_colonial == 6
+
+tabulate ht_colonial bmr_dem, row nofreq
+```
+
+- Restricts to British (5) and French (6) colonised countries.
+- Row percentages show the share of democracies in each group.
+
+:::
+
+------------------------------------------------------------------------
+
+## Test 1 example: Step 2 — run the test
+
+::: nonincremental
+
+```stata
+prtest bmr_dem, by(ht_colonial)
+```
+
+- ``diff`` — estimated gap in proportions.
+- **95% CI excludes 0** → reject the null.
+
+:::
+
+------------------------------------------------------------------------
+
+## Test 1: Your turn
+
+::: nonincremental
+
+- **Research question:** Are elections in dictatorships more likely to be followed by protests?
+- Variables: ``bmr_dem`` (regime type) and ``nelda_rpae`` (protests after elections).
+- State the null hypothesis ($H_0$) and the alternative hypothesis ($H_1$), then run the test using ``prtest``.
+
+:::
+
+------------------------------------------------------------------------
+
+## Test 1: Your turn — setup
+
+::: nonincremental
+
+```stata
+use "data-raw/Quality_of_Government_2026.dta", clear
+
+drop if nelda_rpae == 99
+
+label define bmr_dem_lbl 1 "Democracy" 0 "Dictatorship"
+label values bmr_dem bmr_dem_lbl
+
+tabulate bmr_dem nelda_rpae, row nofreq
+```
+
+:::
+
+------------------------------------------------------------------------
+
+## Test 1: Your turn — questions
+
+::: nonincremental
+
+- What share of dictatorships have post-election protests?
+- Run the test. Does the 95% CI include zero?
+- Do we reject or fail to reject the null?
+
+:::
+
+------------------------------------------------------------------------
+
+## Test 2: Difference in means
+
+- **Research question:** Is turnout higher in countries with proportional systems than in countries with majoritarian systems?
+- **Null Hypothesis (H0):** Mean voter turnout is the same in majoritarian and proportional electoral systems.
+- **Alternative Hypothesis (H1):** Proportional systems have higher turnout than majoritarian systems.
+
+------------------------------------------------------------------------
+
+## Test 2 example: Step 1 — descriptive
+
+::: nonincremental
+
+```stata
+keep if gol_est == 1 | gol_est == 2
+
+by gol_est, sort: summarize ideavt_legvt
+```
+
+- Restricts to majoritarian (1) and proportional (2) systems.
+- Group means show average turnout in each system type.
+
+:::
+
+------------------------------------------------------------------------
+
+## Test 2 example: Step 2 — run the test
+
+::: nonincremental
+
+```stata
+ttest ideavt_legvt, by(gol_est)
+```
+
+- ``diff`` — estimated gap in mean turnout.
+- **95% CI includes 0** → fail to reject the null.
+
+:::
+
+------------------------------------------------------------------------
+
+## Test 2: Your turn
+
+::: nonincremental
+
+- **Research question:** Is income inequality higher in dictatorships than in democracies?
+- Variables: ``bmr_dem`` (regime type) and ``wdi_gini`` (Gini index).
+- State the null hypothesis ($H_0$) and the alternative hypothesis ($H_1$), then run the test using ``ttest``.
+
+:::
+
+------------------------------------------------------------------------
+
+## Test 2: Your turn — setup
+
+::: nonincremental
+
+```stata
+use "data-raw/Quality_of_Government_2026.dta", clear
+
+label define bmr_dem_lbl 1 "Democracy" 0 "Dictatorship"
+label values bmr_dem bmr_dem_lbl
+
+summarize wdi_gini
+
+by bmr_dem, sort: summarize wdi_gini
+```
+
+:::
+
+------------------------------------------------------------------------
+
+## Test 2: Your turn — questions
+
+::: nonincremental
+
+- What is the mean Gini for dictatorships? For democracies?
+- Run the test. Does the 95% CI include zero?
+- Do we reject or fail to reject H0?
+
+:::
+
+------------------------------------------------------------------------
+
+## Why this matters
+
+- Descriptive analysis shows us patterns in our data.
+- Hypothesis testing tells us whether those patterns are larger than chance.
+- ``prtest`` and ``ttest`` are the building blocks for inference in PS2.
