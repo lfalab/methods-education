@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Leonardo Falabella">
 
-<title>Lecture 3: Measurement and Types of Variables</title>
+<title>R-squared</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -82,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/measuring-variables.html">Week 3: Measurement and Variable Types</a></li><li class="breadcrumb-item"><a href="../../slides/lectures/measurement-lecture.html">Lecture 3: Measurement and Types of Variables</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/regression-intro.html">Week 8: Regression Analysis</a></li><li class="breadcrumb-item"><a href="../../slides/videos-concepts/regression-rsquared.html">R-squared</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -217,7 +245,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/lectures/measurement-lecture.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../slides/lectures/measurement-lecture.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 3: Measurement and Types of Variables</span></a>
   </div>
 </li>
@@ -434,7 +462,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/regression-rsquared.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/regression-rsquared.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">R-squared</span></a>
   </div>
 </li>
@@ -450,257 +478,201 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a></li>
-  <li><a href="#example-education-levels-and-democratisation" id="toc-example-education-levels-and-democratisation" class="nav-link" data-scroll-target="#example-education-levels-and-democratisation">Example: Education levels and democratisation</a></li>
-  <li><a href="#level-of-education" id="toc-level-of-education" class="nav-link" data-scroll-target="#level-of-education">Level of education</a></li>
-  <li><a href="#defining-the-level-of-education" id="toc-defining-the-level-of-education" class="nav-link" data-scroll-target="#defining-the-level-of-education">Defining the level of education</a></li>
-  <li><a href="#from-definition-to-measurement" id="toc-from-definition-to-measurement" class="nav-link" data-scroll-target="#from-definition-to-measurement">From definition to measurement</a></li>
-  <li><a href="#literacy-rates" id="toc-literacy-rates" class="nav-link" data-scroll-target="#literacy-rates">Literacy rates</a></li>
-  <li><a href="#pisa-scores" id="toc-pisa-scores" class="nav-link" data-scroll-target="#pisa-scores">PISA scores</a></li>
-  <li><a href="#from-education-to-democracy" id="toc-from-education-to-democracy" class="nav-link" data-scroll-target="#from-education-to-democracy">From education to democracy</a></li>
-  <li><a href="#varieties-of-democracy-v-dem" id="toc-varieties-of-democracy-v-dem" class="nav-link" data-scroll-target="#varieties-of-democracy-v-dem">Varieties of Democracy (V-DEM)</a></li>
-  <li><a href="#the-v-dem-world-map" id="toc-the-v-dem-world-map" class="nav-link" data-scroll-target="#the-v-dem-world-map">The V-DEM world map</a></li>
-  <li><a href="#is-democracy-backsliding-according-to-v-dem-yes" id="toc-is-democracy-backsliding-according-to-v-dem-yes" class="nav-link" data-scroll-target="#is-democracy-backsliding-according-to-v-dem-yes">Is democracy backsliding? According to V-DEM, yes!</a></li>
-  <li><a href="#is-democracy-backsliding-according-to-other-indicators-no" id="toc-is-democracy-backsliding-according-to-other-indicators-no" class="nav-link" data-scroll-target="#is-democracy-backsliding-according-to-other-indicators-no">Is democracy backsliding? According to other indicators, no!</a></li>
-  <li><a href="#the-critique-little-meng-2024-on-v-dem" id="toc-the-critique-little-meng-2024-on-v-dem" class="nav-link" data-scroll-target="#the-critique-little-meng-2024-on-v-dem">The critique: Little &amp; Meng (2024) on V-Dem</a></li>
-  <li><a href="#what-does-their-alternative-look-like" id="toc-what-does-their-alternative-look-like" class="nav-link" data-scroll-target="#what-does-their-alternative-look-like">What does their alternative look like?</a></li>
-  <li><a href="#the-counter-critique-v-dems-side" id="toc-the-counter-critique-v-dems-side" class="nav-link" data-scroll-target="#the-counter-critique-v-dems-side">The counter-critique: V-DEM’s side</a></li>
-  <li><a href="#group-activity-how-to-measure-democracy" id="toc-group-activity-how-to-measure-democracy" class="nav-link" data-scroll-target="#group-activity-how-to-measure-democracy">Group activity: How to measure democracy?</a></li>
-  <li><a href="#guiding-questions-for-discussion" id="toc-guiding-questions-for-discussion" class="nav-link" data-scroll-target="#guiding-questions-for-discussion">Guiding questions for discussion</a></li>
-  <li><a href="#share-your-thoughts" id="toc-share-your-thoughts" class="nav-link" data-scroll-target="#share-your-thoughts">Share your thoughts</a></li>
-  <li><a href="#dig-deeper" id="toc-dig-deeper" class="nav-link" data-scroll-target="#dig-deeper">Dig Deeper</a></li>
-  <li><a href="#why-this-matters" id="toc-why-this-matters" class="nav-link" data-scroll-target="#why-this-matters">Why this matters</a></li>
+  <li><a href="#r-squared" id="toc-r-squared" class="nav-link active" data-scroll-target="#r-squared">R-squared</a>
+  <ul class="collapse">
+  <li><a href="#youll-learn-to" id="toc-youll-learn-to" class="nav-link" data-scroll-target="#youll-learn-to">You’ll learn to</a></li>
+  <li><a href="#the-question-this-video-answers" id="toc-the-question-this-video-answers" class="nav-link" data-scroll-target="#the-question-this-video-answers">The question this video answers</a></li>
+  <li><a href="#what-r-squared-measures" id="toc-what-r-squared-measures" class="nav-link" data-scroll-target="#what-r-squared-measures">What R-squared measures</a></li>
+  <li><a href="#the-formula" id="toc-the-formula" class="nav-link" data-scroll-target="#the-formula">The formula</a></li>
+  <li><a href="#ss_res-residual-sum-of-squares" id="toc-ss_res-residual-sum-of-squares" class="nav-link" data-scroll-target="#ss_res-residual-sum-of-squares"><span class="math inline">\(SS_{RES}\)</span>: Residual Sum of Squares</a></li>
+  <li><a href="#ss_tot-total-sum-of-squares" id="toc-ss_tot-total-sum-of-squares" class="nav-link" data-scroll-target="#ss_tot-total-sum-of-squares"><span class="math inline">\(SS_{TOT}\)</span>: Total Sum of Squares</a></li>
+  <li><a href="#the-logic-of-the-formula" id="toc-the-logic-of-the-formula" class="nav-link" data-scroll-target="#the-logic-of-the-formula">The logic of the formula</a></li>
+  <li><a href="#visual-intuition-low-r-squared" id="toc-visual-intuition-low-r-squared" class="nav-link" data-scroll-target="#visual-intuition-low-r-squared">Visual intuition: low R-squared</a></li>
+  <li><a href="#visual-intuition-high-r-squared" id="toc-visual-intuition-high-r-squared" class="nav-link" data-scroll-target="#visual-intuition-high-r-squared">Visual intuition: high R-squared</a></li>
+  <li><a href="#brexit-example" id="toc-brexit-example" class="nav-link" data-scroll-target="#brexit-example">Brexit example</a></li>
+  <li><a href="#what-the-remaining-70-means" id="toc-what-the-remaining-70-means" class="nav-link" data-scroll-target="#what-the-remaining-70-means">What the remaining 70% means</a></li>
+  <li><a href="#what-r-squared-does-not-mean" id="toc-what-r-squared-does-not-mean" class="nav-link" data-scroll-target="#what-r-squared-does-not-mean">What R-squared does not mean</a></li>
+  <li><a href="#r-squared-and-statistical-significance" id="toc-r-squared-and-statistical-significance" class="nav-link" data-scroll-target="#r-squared-and-statistical-significance">R-squared and statistical significance</a></li>
+  <li><a href="#recap" id="toc-recap" class="nav-link" data-scroll-target="#recap">Recap</a></li>
+  </ul></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="measurement-lecture-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="regression-rsquared-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/measuring-variables.html">Week 3: Measurement and Variable Types</a></li><li class="breadcrumb-item"><a href="../../slides/lectures/measurement-lecture.html">Lecture 3: Measurement and Types of Variables</a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title">Lecture 3: Measurement and Types of Variables</h1>
-<p class="subtitle lead">Statistics for Political Science</p>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/regression-intro.html">Week 8: Regression Analysis</a></li><li class="breadcrumb-item"><a href="../../slides/videos-concepts/regression-rsquared.html">R-squared</a></li></ol></nav></header>
 
 
 
-<div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Leonardo Falabella </p>
-          </div>
-  </div>
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
+<section id="r-squared" class="level1 title-left">
+<h1 class="title-left">R-squared</h1>
 <hr>
-<section id="welcome" class="level2">
-<h2 class="anchored" data-anchor-id="welcome">Welcome</h2>
-<p>Today’s goals:</p>
+<section id="youll-learn-to" class="level2">
+<h2 class="anchored" data-anchor-id="youll-learn-to">You’ll learn to</h2>
+<div class="presenter-space">
 <ul>
-<li>Recap the core points from this week’s videos</li>
-<li>Work through a group discussion on <strong>measuring democracy</strong></li>
+<li>Define <strong>R-squared</strong> and explain what it measures.</li>
+<li>Interpret R-squared as a <strong>percentage of explained variance</strong>.</li>
+<li>Understand what R-squared <strong>does and does not</strong> tell you.</li>
 </ul>
-<hr>
-</section>
-<section id="example-education-levels-and-democratisation" class="level2">
-<h2 class="anchored" data-anchor-id="example-education-levels-and-democratisation">Example: Education levels and democratisation</h2>
-<ul>
-<li><strong>Research question:</strong> Do higher levels of education make countries more likely to democratise?</li>
-</ul>
-<hr>
-</section>
-<section id="level-of-education" class="level2">
-<h2 class="anchored" data-anchor-id="level-of-education">Level of education</h2>
-<ul>
-<li>How do we know if a country’s <strong>level of education</strong> is high or low?</li>
-<li>What information do we collect?</li>
-<li>We should start by figuring out a <strong>definition</strong> for the level of education.</li>
-</ul>
-<hr>
-</section>
-<section id="defining-the-level-of-education" class="level2">
-<h2 class="anchored" data-anchor-id="defining-the-level-of-education">Defining the level of education</h2>
-<ul>
-<li><strong>Accessibility</strong> of basic education to all citizens?</li>
-<li><strong>Proficiency</strong> of students in reading, math, and science?</li>
-<li>The <strong>implications</strong> for research are not trivial!</li>
-</ul>
-<hr>
-</section>
-<section id="from-definition-to-measurement" class="level2">
-<h2 class="anchored" data-anchor-id="from-definition-to-measurement">From definition to measurement</h2>
-<ul>
-<li><p>A measurement for <strong>accessibility:</strong> Literacy rates.</p>
-<ul>
-<li>A good (but not perfect) approximation.</li>
-</ul></li>
-<li><p>A measurement for <strong>proficiency:</strong> Students’ standardised exam scores.</p>
-<ul>
-<li>PISA (Programme for International Student Assessment).</li>
-</ul></li>
-</ul>
-<hr>
-</section>
-<section id="literacy-rates" class="level2">
-<h2 class="anchored" data-anchor-id="literacy-rates">Literacy rates</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/literacy-rates.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" data-fig-cap=""></p>
-</figure>
 </div>
 <hr>
 </section>
-<section id="pisa-scores" class="level2">
-<h2 class="anchored" data-anchor-id="pisa-scores">PISA scores</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/pisa-scores.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" data-fig-cap=""></p>
-</figure>
+<section id="the-question-this-video-answers" class="level2">
+<h2 class="anchored" data-anchor-id="the-question-this-video-answers">The question this video answers</h2>
+<div class="presenter-space">
+<ul>
+<li>C18–C20: we estimated a slope and tested whether it differs from zero.</li>
+<li>A separate question: how <strong>useful</strong> is the model as a whole?</li>
+<li>R-squared answers: how much of the variation in y does x <strong>explain</strong>?</li>
+</ul>
 </div>
 <hr>
 </section>
-<section id="from-education-to-democracy" class="level2">
-<h2 class="anchored" data-anchor-id="from-education-to-democracy">From education to democracy</h2>
+<section id="what-r-squared-measures" class="level2">
+<h2 class="anchored" data-anchor-id="what-r-squared-measures">What R-squared measures</h2>
+<div class="presenter-space">
 <ul>
-<li><strong>Research question:</strong> Is there a global trend towards democratic backsliding?</li>
-<li>A pressing contemporary debate that highlights the importance of measurement choices.</li>
-<li>Recent debates focus on a particular measurement: <strong>Varieties of Democracy (V-DEM)</strong>.</li>
+<li>R-squared is the <strong>proportion of variance</strong> in y explained by x.</li>
+<li>It always lies <strong>between 0 and 1</strong>.</li>
+<li>Read it as a percentage: R² = 0.30 means <strong>30% of variance explained</strong>.</li>
 </ul>
-<hr>
-</section>
-<section id="varieties-of-democracy-v-dem" class="level2">
-<h2 class="anchored" data-anchor-id="varieties-of-democracy-v-dem">Varieties of Democracy (V-DEM)</h2>
-<ul>
-<li>Democracy measured as an <strong>interval</strong> variable (countries are given scores between 0 and 1)</li>
-<li>Sends questionnaires to over <strong>3,700</strong> country experts.</li>
-<li>Questions about several indicators deemed necessary to determine if a country is democratic.</li>
-</ul>
-<hr>
-</section>
-<section id="the-v-dem-world-map" class="level2">
-<h2 class="anchored" data-anchor-id="the-v-dem-world-map">The V-DEM world map</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/vdem-map.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" data-fig-cap=""></p>
-</figure>
-</div>
-<p><a href="https://www.v-dem.net/documents/60/V-dem-dr__2025_lowres.pdf">Source</a></p>
-<hr>
-</section>
-<section id="is-democracy-backsliding-according-to-v-dem-yes" class="level2">
-<h2 class="anchored" data-anchor-id="is-democracy-backsliding-according-to-v-dem-yes">Is democracy backsliding? According to V-DEM, yes!</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/vdem-trend.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" data-fig-cap=""></p>
-</figure>
-</div>
-<p><a href="https://www.v-dem.net/documents/60/V-dem-dr__2025_lowres.pdf">Source</a></p>
-<hr>
-</section>
-<section id="is-democracy-backsliding-according-to-other-indicators-no" class="level2">
-<h2 class="anchored" data-anchor-id="is-democracy-backsliding-according-to-other-indicators-no">Is democracy backsliding? According to other indicators, no!</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/others-trend.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" data-fig-cap=""></p>
-</figure>
-</div>
-<p><a href="https://www.cambridge.org/core/journals/ps-political-science-and-politics/article/measuring-democratic-backsliding/9EE2044CDA598BD815349912E61189D8">Source</a></p>
-<hr>
-</section>
-<section id="the-critique-little-meng-2024-on-v-dem" class="level2">
-<h2 class="anchored" data-anchor-id="the-critique-little-meng-2024-on-v-dem">The critique: Little &amp; Meng (2024) on V-Dem</h2>
-<ul>
-<li><p>V-Dem relies heavily on <strong>expert judgments</strong>, which may shift over time even if underlying political institutions do not.</p></li>
-<li><p>Changes in expert <strong>expectations</strong> or <strong>standards</strong> can look like changes in democracy.</p></li>
-<li><p>As an alternative, Little and Meng argue for focusing on indicators of democracy that are less sensitive to <strong>subjective interpretation</strong>.</p></li>
-</ul>
-<hr>
-</section>
-<section id="what-does-their-alternative-look-like" class="level2">
-<h2 class="anchored" data-anchor-id="what-does-their-alternative-look-like">What does their alternative look like?</h2>
-<p><a href="https://www.cambridge.org/core/journals/ps-political-science-and-politics/article/measuring-democratic-backsliding/9EE2044CDA598BD815349912E61189D8">Little and Meng (2024)</a> propose measuring democracy using indicators as:</p>
-<ul>
-<li><p>Whether incumbents and ruling parties <strong>lose elections</strong> and <strong>accept defeat</strong>.</p></li>
-<li><p>The degree of electoral competition, including <strong>vote shares</strong> and <strong>seat shares</strong> of winning parties.</p></li>
-<li><p>The presence and enforcement of formal institutional constraints, such as <strong>term limits</strong> and <strong>succession rules</strong>.</p></li>
-</ul>
-<hr>
-</section>
-<section id="the-counter-critique-v-dems-side" class="level2">
-<h2 class="anchored" data-anchor-id="the-counter-critique-v-dems-side">The counter-critique: V-DEM’s side</h2>
-<p>Scholars associated with V-Dem <a href="https://www.v-dem.net/media/publications/wp_140.pdf">respond that</a>:</p>
-<ul>
-<li><p>Democracy is inherently <strong>multidimensional</strong> and cannot be adequately captured by a narrow set of observable outcomes.</p></li>
-<li><p>Indicators presented as “objective” by Little and Meng still involve <strong>coding decisions</strong> and <strong>theoretical assumptions</strong>; they are not free from subjectivity.</p></li>
-<li><p>Expert-based measures are not a feature, not a bug for measuring <strong>complex political concepts</strong>.</p></li>
-</ul>
-<hr>
-</section>
-<section id="group-activity-how-to-measure-democracy" class="level2">
-<h2 class="anchored" data-anchor-id="group-activity-how-to-measure-democracy">Group activity: How to measure democracy?</h2>
-<ul>
-<li><p>In small groups, <strong>discuss</strong> the debate you have just seen.</p></li>
-<li><p>Your task is not to decide whether democracy is declining, but to decide which approach to measurement you find <strong>more convincing</strong>.</p></li>
-<li><p>Focus on the <strong>trade-offs</strong> between expert judgment and more “objective” indicators, and on what each approach can and cannot capture.</p></li>
-</ul>
-<hr>
-</section>
-<section id="guiding-questions-for-discussion" class="level2">
-<h2 class="anchored" data-anchor-id="guiding-questions-for-discussion">Guiding questions for discussion</h2>
-<ul>
-<li><p>Which critique or defense do you find more persuasive, and <strong>why</strong>?</p></li>
-<li><p>What do you think is lost when we move away from <strong>expert judgments</strong>?</p></li>
-<li><p>What do you think is lost when we rely heavily on <strong>subjective assessments</strong>?</p></li>
-<li><p>If you had to choose one approach to answer the question of <strong>democratic backsliding</strong>, which would you choose?</p></li>
-</ul>
-<hr>
-</section>
-<section id="share-your-thoughts" class="level2">
-<h2 class="anchored" data-anchor-id="share-your-thoughts">Share your thoughts</h2>
-<ul>
-<li><a href="https://www.menti.com/alp5xzysmysp">Click here</a>, scan the QR code, or join at menti.com using the code <strong>2173 3787</strong></li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/mentimeter_qr_code_democracy.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%" data-fig-cap=""></p>
-</figure>
 </div>
 <hr>
 </section>
-<section id="dig-deeper" class="level2">
-<h2 class="anchored" data-anchor-id="dig-deeper">Dig Deeper</h2>
+<section id="the-formula" class="level2">
+<h2 class="anchored" data-anchor-id="the-formula">The formula</h2>
+<div class="presenter-space">
+<p><span class="math display">\[R^2 = 1 - \frac{SS_{RES}}{SS_{TOT}}\]</span></p>
 <ul>
-<li><p><a href="https://www.ft.com/content/b474855e-66b0-4e6e-9b73-7e252bd88938">How steep is Trump’s democratic backsliding?</a></p>
-<ul>
-<li>Financial Times, 31 Jan 2026 (Access with your King’s email account).</li>
-</ul></li>
-<li><p><a href="https://docs.google.com/document/d/e/2PACX-1vTNz8J13MV_ZLQ8BT-AsRNTn4lADHidb3KRYpuQ7ZiA895SgDGwz2PaCi3KQeHpEdjcOMUl4bVs6qNn/pub">Methodology</a> reviewed by Anne Meng.</p></li>
+<li><span class="math inline">\(SS_{RES}\)</span>: how much the model <strong>misses</strong>.</li>
+<li><span class="math inline">\(SS_{TOT}\)</span>: how much y <strong>varies in total</strong>.</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/usa-backsliding.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:67.0%" data-fig-cap=""></p>
-</figure>
 </div>
 <hr>
 </section>
-<section id="why-this-matters" class="level2">
-<h2 class="anchored" data-anchor-id="why-this-matters">Why this matters</h2>
+<section id="ss_res-residual-sum-of-squares" class="level2">
+<h2 class="anchored" data-anchor-id="ss_res-residual-sum-of-squares"><span class="math inline">\(SS_{RES}\)</span>: Residual Sum of Squares</h2>
+<div class="presenter-space">
 <ul>
-<li><p>Measurement choices are <strong>not neutral</strong>. They shape what we see in the data and the conclusions we draw from it.</p></li>
-<li><p>Different <strong>definitions</strong> and <strong>measurements</strong> of the same concept can lead to very different <strong>answers</strong> to the same research question.</p></li>
+<li>Each residual is the <strong>vertical distance</strong> from a dot to the regression line.</li>
+<li>We square each distance and sum them all up.</li>
+<li>Large residuals → model predictions are <strong>often far off</strong>.</li>
 </ul>
+</div>
+<hr>
+</section>
+<section id="ss_tot-total-sum-of-squares" class="level2">
+<h2 class="anchored" data-anchor-id="ss_tot-total-sum-of-squares"><span class="math inline">\(SS_{TOT}\)</span>: Total Sum of Squares</h2>
+<div class="presenter-space">
+<ul>
+<li>Each observation’s distance from the <strong>mean of y</strong>, squared and summed.</li>
+<li>This is simply the <strong>variance of y</strong> — total spread in the outcome.</li>
+<li>It is a baseline: how much y varies <strong>without any model</strong>.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="the-logic-of-the-formula" class="level2">
+<h2 class="anchored" data-anchor-id="the-logic-of-the-formula">The logic of the formula</h2>
+<div class="presenter-space">
+<p><span class="math display">\[R^2 = 1 - \frac{SS_{RES}}{SS_{TOT}}\]</span></p>
+<ul>
+<li>If the model fits well: <span class="math inline">\(SS_{RES}\)</span> is <strong>small</strong> relative to <span class="math inline">\(SS_{TOT}\)</span>.</li>
+<li>The fraction is close to 0 → R² is <strong>close to 1</strong>.</li>
+<li>If the model fits poorly: the fraction is close to 1 → R² is <strong>close to 0</strong>.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="visual-intuition-low-r-squared" class="level2">
+<h2 class="anchored" data-anchor-id="visual-intuition-low-r-squared">Visual intuition: low R-squared</h2>
+<div class="presenter-space">
+<ul>
+<li>Dots are <strong>widely scattered</strong> around the regression line.</li>
+<li>Residuals are large — the model misses most observations badly.</li>
+<li><span class="math inline">\(SS_{RES} \approx SS_{TOT}\)</span> → <strong>R² near 0</strong>.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="visual-intuition-high-r-squared" class="level2">
+<h2 class="anchored" data-anchor-id="visual-intuition-high-r-squared">Visual intuition: high R-squared</h2>
+<div class="presenter-space">
+<ul>
+<li>Dots cluster <strong>tightly</strong> around the regression line.</li>
+<li>Residuals are small — predictions are close to the observed values.</li>
+<li><span class="math inline">\(SS_{RES} \ll SS_{TOT}\)</span> → <strong>R² near 1</strong>.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="brexit-example" class="level2">
+<h2 class="anchored" data-anchor-id="brexit-example">Brexit example</h2>
+<div class="presenter-space">
+<ul>
+<li>In the Leave vote on higher education regression: <strong>R² ≈ 0.30</strong>.</li>
+<li>About <strong>30%</strong> of the variation in Leave vote share across UK regions…</li>
+<li>…is explained by differences in <strong>higher education share</strong>.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="what-the-remaining-70-means" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-remaining-70-means">What the remaining 70% means</h2>
+<div class="presenter-space">
+<ul>
+<li>70% of the variation in Leave vote share is <strong>not explained</strong> by education.</li>
+<li>Other factors matter: economic conditions, age, geography, identity.</li>
+<li>A bivariate model captures <strong>one piece</strong> of a more complex picture.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="what-r-squared-does-not-mean" class="level2">
+<h2 class="anchored" data-anchor-id="what-r-squared-does-not-mean">What R-squared does not mean</h2>
+<div class="presenter-space">
+<ul>
+<li>A higher R² does <strong>not</strong> mean the relationship is causal.</li>
+<li>A low R² does <strong>not</strong> mean the slope is wrong or unimportant.</li>
+<li>R-squared measures <strong>fit</strong>, not truth.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="r-squared-and-statistical-significance" class="level2">
+<h2 class="anchored" data-anchor-id="r-squared-and-statistical-significance">R-squared and statistical significance</h2>
+<div class="presenter-space">
+<ul>
+<li>A slope can be <strong>statistically significant</strong> with a low R².</li>
+<li>Statistical significance (C20): is the slope distinguishable from zero?</li>
+<li>R-squared (C21): how much of y does the model explain?</li>
+<li>These are <strong>different questions</strong>.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="recap" class="level2">
+<h2 class="anchored" data-anchor-id="recap">Recap</h2>
+<div class="presenter-space">
+<ul>
+<li>R² = proportion of variance in y explained by x; always between 0 and 1.</li>
+<li>Brexit model: R² ≈ 0.30 — education explains <strong>30%</strong> of Leave vote variation.</li>
+<li>High R² means good fit; it does <strong>not</strong> imply causality.</li>
+</ul>
+</div>
+<hr>
+<div class="presenter-space">
+<p><strong>Why this matters:</strong></p>
+<ul>
+<li>R-squared tells you how much work your model is doing.</li>
+<li>In political science, bivariate R² values are often modest — that is expected.</li>
+<li>Evaluating fit is part of responsible, transparent quantitative research.</li>
+</ul>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

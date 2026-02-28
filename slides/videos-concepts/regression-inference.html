@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Leonardo Falabella">
 
-<title>Lecture 3: Measurement and Types of Variables</title>
+<title>Inference in Regression: CIs and P-values</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -82,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/measuring-variables.html">Week 3: Measurement and Variable Types</a></li><li class="breadcrumb-item"><a href="../../slides/lectures/measurement-lecture.html">Lecture 3: Measurement and Types of Variables</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/regression-intro.html">Week 8: Regression Analysis</a></li><li class="breadcrumb-item"><a href="../../slides/videos-concepts/regression-inference.html">Inference in Regression: CIs and P-values</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -217,7 +245,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/lectures/measurement-lecture.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../slides/lectures/measurement-lecture.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 3: Measurement and Types of Variables</span></a>
   </div>
 </li>
@@ -428,7 +456,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/regression-inference.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/regression-inference.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Inference in Regression: CIs and P-values</span></a>
   </div>
 </li>
@@ -450,257 +478,218 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a></li>
-  <li><a href="#example-education-levels-and-democratisation" id="toc-example-education-levels-and-democratisation" class="nav-link" data-scroll-target="#example-education-levels-and-democratisation">Example: Education levels and democratisation</a></li>
-  <li><a href="#level-of-education" id="toc-level-of-education" class="nav-link" data-scroll-target="#level-of-education">Level of education</a></li>
-  <li><a href="#defining-the-level-of-education" id="toc-defining-the-level-of-education" class="nav-link" data-scroll-target="#defining-the-level-of-education">Defining the level of education</a></li>
-  <li><a href="#from-definition-to-measurement" id="toc-from-definition-to-measurement" class="nav-link" data-scroll-target="#from-definition-to-measurement">From definition to measurement</a></li>
-  <li><a href="#literacy-rates" id="toc-literacy-rates" class="nav-link" data-scroll-target="#literacy-rates">Literacy rates</a></li>
-  <li><a href="#pisa-scores" id="toc-pisa-scores" class="nav-link" data-scroll-target="#pisa-scores">PISA scores</a></li>
-  <li><a href="#from-education-to-democracy" id="toc-from-education-to-democracy" class="nav-link" data-scroll-target="#from-education-to-democracy">From education to democracy</a></li>
-  <li><a href="#varieties-of-democracy-v-dem" id="toc-varieties-of-democracy-v-dem" class="nav-link" data-scroll-target="#varieties-of-democracy-v-dem">Varieties of Democracy (V-DEM)</a></li>
-  <li><a href="#the-v-dem-world-map" id="toc-the-v-dem-world-map" class="nav-link" data-scroll-target="#the-v-dem-world-map">The V-DEM world map</a></li>
-  <li><a href="#is-democracy-backsliding-according-to-v-dem-yes" id="toc-is-democracy-backsliding-according-to-v-dem-yes" class="nav-link" data-scroll-target="#is-democracy-backsliding-according-to-v-dem-yes">Is democracy backsliding? According to V-DEM, yes!</a></li>
-  <li><a href="#is-democracy-backsliding-according-to-other-indicators-no" id="toc-is-democracy-backsliding-according-to-other-indicators-no" class="nav-link" data-scroll-target="#is-democracy-backsliding-according-to-other-indicators-no">Is democracy backsliding? According to other indicators, no!</a></li>
-  <li><a href="#the-critique-little-meng-2024-on-v-dem" id="toc-the-critique-little-meng-2024-on-v-dem" class="nav-link" data-scroll-target="#the-critique-little-meng-2024-on-v-dem">The critique: Little &amp; Meng (2024) on V-Dem</a></li>
-  <li><a href="#what-does-their-alternative-look-like" id="toc-what-does-their-alternative-look-like" class="nav-link" data-scroll-target="#what-does-their-alternative-look-like">What does their alternative look like?</a></li>
-  <li><a href="#the-counter-critique-v-dems-side" id="toc-the-counter-critique-v-dems-side" class="nav-link" data-scroll-target="#the-counter-critique-v-dems-side">The counter-critique: V-DEM’s side</a></li>
-  <li><a href="#group-activity-how-to-measure-democracy" id="toc-group-activity-how-to-measure-democracy" class="nav-link" data-scroll-target="#group-activity-how-to-measure-democracy">Group activity: How to measure democracy?</a></li>
-  <li><a href="#guiding-questions-for-discussion" id="toc-guiding-questions-for-discussion" class="nav-link" data-scroll-target="#guiding-questions-for-discussion">Guiding questions for discussion</a></li>
-  <li><a href="#share-your-thoughts" id="toc-share-your-thoughts" class="nav-link" data-scroll-target="#share-your-thoughts">Share your thoughts</a></li>
-  <li><a href="#dig-deeper" id="toc-dig-deeper" class="nav-link" data-scroll-target="#dig-deeper">Dig Deeper</a></li>
-  <li><a href="#why-this-matters" id="toc-why-this-matters" class="nav-link" data-scroll-target="#why-this-matters">Why this matters</a></li>
+  <li><a href="#inference-in-regression-cis-and-p-values" id="toc-inference-in-regression-cis-and-p-values" class="nav-link active" data-scroll-target="#inference-in-regression-cis-and-p-values">Inference in Regression: CIs and P-values</a>
+  <ul class="collapse">
+  <li><a href="#youll-learn-to" id="toc-youll-learn-to" class="nav-link" data-scroll-target="#youll-learn-to">You’ll learn to</a></li>
+  <li><a href="#from-description-to-inference" id="toc-from-description-to-inference" class="nav-link" data-scroll-target="#from-description-to-inference">From description to inference</a></li>
+  <li><a href="#stating-the-hypothesis-in-regression-terms" id="toc-stating-the-hypothesis-in-regression-terms" class="nav-link" data-scroll-target="#stating-the-hypothesis-in-regression-terms">Stating the hypothesis in regression terms</a></li>
+  <li><a href="#the-null-hypothesis" id="toc-the-null-hypothesis" class="nav-link" data-scroll-target="#the-null-hypothesis">The null hypothesis</a></li>
+  <li><a href="#what-h0-0-means" id="toc-what-h0-0-means" class="nav-link" data-scroll-target="#what-h0-0-means">What H0 = 0 means</a></li>
+  <li><a href="#the-significance-test-for-the-slope" id="toc-the-significance-test-for-the-slope" class="nav-link" data-scroll-target="#the-significance-test-for-the-slope">The significance test for the slope</a></li>
+  <li><a href="#the-p-value-for-the-slope" id="toc-the-p-value-for-the-slope" class="nav-link" data-scroll-target="#the-p-value-for-the-slope">The p-value for the slope</a></li>
+  <li><a href="#the-decision-rule" id="toc-the-decision-rule" class="nav-link" data-scroll-target="#the-decision-rule">The decision rule</a></li>
+  <li><a href="#confidence-intervals-for-the-slope" id="toc-confidence-intervals-for-the-slope" class="nav-link" data-scroll-target="#confidence-intervals-for-the-slope">Confidence intervals for the slope</a></li>
+  <li><a href="#p-values-and-cis-always-agree" id="toc-p-values-and-cis-always-agree" class="nav-link" data-scroll-target="#p-values-and-cis-always-agree">P-values and CIs always agree</a></li>
+  <li><a href="#brexit-results-applying-the-logic" id="toc-brexit-results-applying-the-logic" class="nav-link" data-scroll-target="#brexit-results-applying-the-logic">Brexit results: applying the logic</a></li>
+  <li><a href="#brexit-results-the-decision" id="toc-brexit-results-the-decision" class="nav-link" data-scroll-target="#brexit-results-the-decision">Brexit results: the decision</a></li>
+  <li><a href="#what-makes-a-result-more-significant" id="toc-what-makes-a-result-more-significant" class="nav-link" data-scroll-target="#what-makes-a-result-more-significant">What makes a result more significant?</a></li>
+  <li><a href="#recap" id="toc-recap" class="nav-link" data-scroll-target="#recap">Recap</a></li>
+  </ul></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="measurement-lecture-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="regression-inference-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/measuring-variables.html">Week 3: Measurement and Variable Types</a></li><li class="breadcrumb-item"><a href="../../slides/lectures/measurement-lecture.html">Lecture 3: Measurement and Types of Variables</a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title">Lecture 3: Measurement and Types of Variables</h1>
-<p class="subtitle lead">Statistics for Political Science</p>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/regression-intro.html">Week 8: Regression Analysis</a></li><li class="breadcrumb-item"><a href="../../slides/videos-concepts/regression-inference.html">Inference in Regression: CIs and P-values</a></li></ol></nav></header>
 
 
 
-<div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Leonardo Falabella </p>
-          </div>
-  </div>
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
+<section id="inference-in-regression-cis-and-p-values" class="level1 title-left">
+<h1 class="title-left">Inference in Regression: CIs and P-values</h1>
 <hr>
-<section id="welcome" class="level2">
-<h2 class="anchored" data-anchor-id="welcome">Welcome</h2>
-<p>Today’s goals:</p>
+<section id="youll-learn-to" class="level2">
+<h2 class="anchored" data-anchor-id="youll-learn-to">You’ll learn to</h2>
+<div class="presenter-space">
 <ul>
-<li>Recap the core points from this week’s videos</li>
-<li>Work through a group discussion on <strong>measuring democracy</strong></li>
+<li>Translate a verbal hypothesis into a <strong>regression hypothesis</strong>.</li>
+<li>Define the <strong>p-value for a slope estimate</strong>.</li>
+<li>Use a <strong>confidence interval</strong> for the slope to test the null hypothesis.</li>
+<li>Apply the decision rule to <strong>Brexit regression results</strong>.</li>
 </ul>
-<hr>
-</section>
-<section id="example-education-levels-and-democratisation" class="level2">
-<h2 class="anchored" data-anchor-id="example-education-levels-and-democratisation">Example: Education levels and democratisation</h2>
-<ul>
-<li><strong>Research question:</strong> Do higher levels of education make countries more likely to democratise?</li>
-</ul>
-<hr>
-</section>
-<section id="level-of-education" class="level2">
-<h2 class="anchored" data-anchor-id="level-of-education">Level of education</h2>
-<ul>
-<li>How do we know if a country’s <strong>level of education</strong> is high or low?</li>
-<li>What information do we collect?</li>
-<li>We should start by figuring out a <strong>definition</strong> for the level of education.</li>
-</ul>
-<hr>
-</section>
-<section id="defining-the-level-of-education" class="level2">
-<h2 class="anchored" data-anchor-id="defining-the-level-of-education">Defining the level of education</h2>
-<ul>
-<li><strong>Accessibility</strong> of basic education to all citizens?</li>
-<li><strong>Proficiency</strong> of students in reading, math, and science?</li>
-<li>The <strong>implications</strong> for research are not trivial!</li>
-</ul>
-<hr>
-</section>
-<section id="from-definition-to-measurement" class="level2">
-<h2 class="anchored" data-anchor-id="from-definition-to-measurement">From definition to measurement</h2>
-<ul>
-<li><p>A measurement for <strong>accessibility:</strong> Literacy rates.</p>
-<ul>
-<li>A good (but not perfect) approximation.</li>
-</ul></li>
-<li><p>A measurement for <strong>proficiency:</strong> Students’ standardised exam scores.</p>
-<ul>
-<li>PISA (Programme for International Student Assessment).</li>
-</ul></li>
-</ul>
-<hr>
-</section>
-<section id="literacy-rates" class="level2">
-<h2 class="anchored" data-anchor-id="literacy-rates">Literacy rates</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/literacy-rates.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" data-fig-cap=""></p>
-</figure>
 </div>
 <hr>
 </section>
-<section id="pisa-scores" class="level2">
-<h2 class="anchored" data-anchor-id="pisa-scores">PISA scores</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/pisa-scores.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" data-fig-cap=""></p>
-</figure>
+<section id="from-description-to-inference" class="level2">
+<h2 class="anchored" data-anchor-id="from-description-to-inference">From description to inference</h2>
+<div class="presenter-space">
+<ul>
+<li>C18 and C19: we estimated a slope of <strong>−1.13</strong>.</li>
+<li>But could this reflect <strong>chance variation</strong> rather than a real relationship?</li>
+<li>This video: how do we test whether the slope is <strong>statistically significant</strong>?</li>
+</ul>
 </div>
 <hr>
 </section>
-<section id="from-education-to-democracy" class="level2">
-<h2 class="anchored" data-anchor-id="from-education-to-democracy">From education to democracy</h2>
+<section id="stating-the-hypothesis-in-regression-terms" class="level2">
+<h2 class="anchored" data-anchor-id="stating-the-hypothesis-in-regression-terms">Stating the hypothesis in regression terms</h2>
+<div class="presenter-space">
+<p><span class="math display">\[\widehat{\text{Leave}} = \hat{\beta}_0 + \hat{\beta}_1 \times \text{HigherEd}\]</span></p>
 <ul>
-<li><strong>Research question:</strong> Is there a global trend towards democratic backsliding?</li>
-<li>A pressing contemporary debate that highlights the importance of measurement choices.</li>
-<li>Recent debates focus on a particular measurement: <strong>Varieties of Democracy (V-DEM)</strong>.</li>
+<li><strong>Alternative hypothesis (H1):</strong> regions with more graduates voted Leave less.</li>
+<li>In regression terms: <span class="math inline">\(\hat{\beta}_1 &lt; 0\)</span>.</li>
 </ul>
-<hr>
-</section>
-<section id="varieties-of-democracy-v-dem" class="level2">
-<h2 class="anchored" data-anchor-id="varieties-of-democracy-v-dem">Varieties of Democracy (V-DEM)</h2>
-<ul>
-<li>Democracy measured as an <strong>interval</strong> variable (countries are given scores between 0 and 1)</li>
-<li>Sends questionnaires to over <strong>3,700</strong> country experts.</li>
-<li>Questions about several indicators deemed necessary to determine if a country is democratic.</li>
-</ul>
-<hr>
-</section>
-<section id="the-v-dem-world-map" class="level2">
-<h2 class="anchored" data-anchor-id="the-v-dem-world-map">The V-DEM world map</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/vdem-map.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" data-fig-cap=""></p>
-</figure>
-</div>
-<p><a href="https://www.v-dem.net/documents/60/V-dem-dr__2025_lowres.pdf">Source</a></p>
-<hr>
-</section>
-<section id="is-democracy-backsliding-according-to-v-dem-yes" class="level2">
-<h2 class="anchored" data-anchor-id="is-democracy-backsliding-according-to-v-dem-yes">Is democracy backsliding? According to V-DEM, yes!</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/vdem-trend.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" data-fig-cap=""></p>
-</figure>
-</div>
-<p><a href="https://www.v-dem.net/documents/60/V-dem-dr__2025_lowres.pdf">Source</a></p>
-<hr>
-</section>
-<section id="is-democracy-backsliding-according-to-other-indicators-no" class="level2">
-<h2 class="anchored" data-anchor-id="is-democracy-backsliding-according-to-other-indicators-no">Is democracy backsliding? According to other indicators, no!</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/others-trend.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" data-fig-cap=""></p>
-</figure>
-</div>
-<p><a href="https://www.cambridge.org/core/journals/ps-political-science-and-politics/article/measuring-democratic-backsliding/9EE2044CDA598BD815349912E61189D8">Source</a></p>
-<hr>
-</section>
-<section id="the-critique-little-meng-2024-on-v-dem" class="level2">
-<h2 class="anchored" data-anchor-id="the-critique-little-meng-2024-on-v-dem">The critique: Little &amp; Meng (2024) on V-Dem</h2>
-<ul>
-<li><p>V-Dem relies heavily on <strong>expert judgments</strong>, which may shift over time even if underlying political institutions do not.</p></li>
-<li><p>Changes in expert <strong>expectations</strong> or <strong>standards</strong> can look like changes in democracy.</p></li>
-<li><p>As an alternative, Little and Meng argue for focusing on indicators of democracy that are less sensitive to <strong>subjective interpretation</strong>.</p></li>
-</ul>
-<hr>
-</section>
-<section id="what-does-their-alternative-look-like" class="level2">
-<h2 class="anchored" data-anchor-id="what-does-their-alternative-look-like">What does their alternative look like?</h2>
-<p><a href="https://www.cambridge.org/core/journals/ps-political-science-and-politics/article/measuring-democratic-backsliding/9EE2044CDA598BD815349912E61189D8">Little and Meng (2024)</a> propose measuring democracy using indicators as:</p>
-<ul>
-<li><p>Whether incumbents and ruling parties <strong>lose elections</strong> and <strong>accept defeat</strong>.</p></li>
-<li><p>The degree of electoral competition, including <strong>vote shares</strong> and <strong>seat shares</strong> of winning parties.</p></li>
-<li><p>The presence and enforcement of formal institutional constraints, such as <strong>term limits</strong> and <strong>succession rules</strong>.</p></li>
-</ul>
-<hr>
-</section>
-<section id="the-counter-critique-v-dems-side" class="level2">
-<h2 class="anchored" data-anchor-id="the-counter-critique-v-dems-side">The counter-critique: V-DEM’s side</h2>
-<p>Scholars associated with V-Dem <a href="https://www.v-dem.net/media/publications/wp_140.pdf">respond that</a>:</p>
-<ul>
-<li><p>Democracy is inherently <strong>multidimensional</strong> and cannot be adequately captured by a narrow set of observable outcomes.</p></li>
-<li><p>Indicators presented as “objective” by Little and Meng still involve <strong>coding decisions</strong> and <strong>theoretical assumptions</strong>; they are not free from subjectivity.</p></li>
-<li><p>Expert-based measures are not a feature, not a bug for measuring <strong>complex political concepts</strong>.</p></li>
-</ul>
-<hr>
-</section>
-<section id="group-activity-how-to-measure-democracy" class="level2">
-<h2 class="anchored" data-anchor-id="group-activity-how-to-measure-democracy">Group activity: How to measure democracy?</h2>
-<ul>
-<li><p>In small groups, <strong>discuss</strong> the debate you have just seen.</p></li>
-<li><p>Your task is not to decide whether democracy is declining, but to decide which approach to measurement you find <strong>more convincing</strong>.</p></li>
-<li><p>Focus on the <strong>trade-offs</strong> between expert judgment and more “objective” indicators, and on what each approach can and cannot capture.</p></li>
-</ul>
-<hr>
-</section>
-<section id="guiding-questions-for-discussion" class="level2">
-<h2 class="anchored" data-anchor-id="guiding-questions-for-discussion">Guiding questions for discussion</h2>
-<ul>
-<li><p>Which critique or defense do you find more persuasive, and <strong>why</strong>?</p></li>
-<li><p>What do you think is lost when we move away from <strong>expert judgments</strong>?</p></li>
-<li><p>What do you think is lost when we rely heavily on <strong>subjective assessments</strong>?</p></li>
-<li><p>If you had to choose one approach to answer the question of <strong>democratic backsliding</strong>, which would you choose?</p></li>
-</ul>
-<hr>
-</section>
-<section id="share-your-thoughts" class="level2">
-<h2 class="anchored" data-anchor-id="share-your-thoughts">Share your thoughts</h2>
-<ul>
-<li><a href="https://www.menti.com/alp5xzysmysp">Click here</a>, scan the QR code, or join at menti.com using the code <strong>2173 3787</strong></li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/mentimeter_qr_code_democracy.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%" data-fig-cap=""></p>
-</figure>
 </div>
 <hr>
 </section>
-<section id="dig-deeper" class="level2">
-<h2 class="anchored" data-anchor-id="dig-deeper">Dig Deeper</h2>
+<section id="the-null-hypothesis" class="level2">
+<h2 class="anchored" data-anchor-id="the-null-hypothesis">The null hypothesis</h2>
+<div class="presenter-space">
+<p><span class="math display">\[\widehat{\text{Leave}} = \hat{\beta}_0 + \hat{\beta}_1 \times \text{HigherEd}\]</span></p>
 <ul>
-<li><p><a href="https://www.ft.com/content/b474855e-66b0-4e6e-9b73-7e252bd88938">How steep is Trump’s democratic backsliding?</a></p>
-<ul>
-<li>Financial Times, 31 Jan 2026 (Access with your King’s email account).</li>
-</ul></li>
-<li><p><a href="https://docs.google.com/document/d/e/2PACX-1vTNz8J13MV_ZLQ8BT-AsRNTn4lADHidb3KRYpuQ7ZiA895SgDGwz2PaCi3KQeHpEdjcOMUl4bVs6qNn/pub">Methodology</a> reviewed by Anne Meng.</p></li>
+<li><strong>Null hypothesis (H0):</strong> education share is unrelated to Leave vote share.</li>
+<li>In regression terms: <span class="math inline">\(\beta_1 = 0\)</span>.</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/usa-backsliding.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:67.0%" data-fig-cap=""></p>
-</figure>
 </div>
 <hr>
 </section>
-<section id="why-this-matters" class="level2">
-<h2 class="anchored" data-anchor-id="why-this-matters">Why this matters</h2>
+<section id="what-h0-0-means" class="level2">
+<h2 class="anchored" data-anchor-id="what-h0-0-means">What H0 = 0 means</h2>
+<div class="presenter-space">
 <ul>
-<li><p>Measurement choices are <strong>not neutral</strong>. They shape what we see in the data and the conclusions we draw from it.</p></li>
-<li><p>Different <strong>definitions</strong> and <strong>measurements</strong> of the same concept can lead to very different <strong>answers</strong> to the same research question.</p></li>
+<li>If <span class="math inline">\(\beta_1 = 0\)</span>, the regression line is <strong>flat</strong>.</li>
+<li>Higher education share would have <strong>no predictive value</strong>.</li>
+<li>The apparent pattern in the data would be <strong>due to chance</strong>.</li>
 </ul>
+</div>
+<hr>
+</section>
+<section id="the-significance-test-for-the-slope" class="level2">
+<h2 class="anchored" data-anchor-id="the-significance-test-for-the-slope">The significance test for the slope</h2>
+<div class="presenter-space">
+<ul>
+<li>We estimated <span class="math inline">\(\hat{\beta}_1 = -1.13\)</span>.</li>
+<li>Is this far enough from zero to <strong>rule out chance</strong>?</li>
+<li>This is what the significance test answers.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="the-p-value-for-the-slope" class="level2">
+<h2 class="anchored" data-anchor-id="the-p-value-for-the-slope">The p-value for the slope</h2>
+<div class="presenter-space">
+<ul>
+<li>The p-value is the probability of observing a slope <strong>at least as extreme as −1.13</strong>…</li>
+<li>…if the true slope were <strong>zero</strong> (i.e., if H0 were true).</li>
+<li>A small p-value means the result is unlikely to be a chance finding.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="the-decision-rule" class="level2">
+<h2 class="anchored" data-anchor-id="the-decision-rule">The decision rule</h2>
+<div class="presenter-space">
+<ul>
+<li>Set significance level: <span class="math inline">\(\alpha = 0.05\)</span>.</li>
+<li>If <strong>p &lt; 0.05</strong> → reject H0; the slope is statistically significant.</li>
+<li>If <strong>p &gt; 0.05</strong> → fail to reject H0.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="confidence-intervals-for-the-slope" class="level2">
+<h2 class="anchored" data-anchor-id="confidence-intervals-for-the-slope">Confidence intervals for the slope</h2>
+<div class="presenter-space">
+<ul>
+<li>We can also construct a <strong>95% confidence interval</strong> for <span class="math inline">\(\hat{\beta}_1\)</span>.</li>
+<li>If the CI does <strong>not include zero</strong> → reject H0.</li>
+<li>If the CI <strong>includes zero</strong> → fail to reject H0.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="p-values-and-cis-always-agree" class="level2">
+<h2 class="anchored" data-anchor-id="p-values-and-cis-always-agree">P-values and CIs always agree</h2>
+<div class="presenter-space">
+<ul>
+<li>The same information goes into both calculations.</li>
+<li>They will <strong>never contradict each other</strong>.</li>
+</ul>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>If…</th>
+<th>Then…</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>95% CI does not include 0</td>
+<td>p &lt; 0.05</td>
+</tr>
+<tr class="even">
+<td>95% CI includes 0</td>
+<td>p &gt; 0.05</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+</section>
+<section id="brexit-results-applying-the-logic" class="level2">
+<h2 class="anchored" data-anchor-id="brexit-results-applying-the-logic">Brexit results: applying the logic</h2>
+<div class="presenter-space">
+<ul>
+<li>Estimated slope: <span class="math inline">\(\hat{\beta}_1 = -1.13\)</span> (negative, as H1 predicted).</li>
+<li>95% CI for the slope does <strong>not include zero</strong>.</li>
+<li>p-value is <strong>below 0.05</strong>.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="brexit-results-the-decision" class="level2">
+<h2 class="anchored" data-anchor-id="brexit-results-the-decision">Brexit results: the decision</h2>
+<div class="presenter-space">
+<ul>
+<li>We <strong>reject the null hypothesis</strong>.</li>
+<li>Regions with higher education shares had a <strong>systematically lower</strong> Leave vote share.</li>
+<li>The result is unlikely to reflect chance variation alone.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="what-makes-a-result-more-significant" class="level2">
+<h2 class="anchored" data-anchor-id="what-makes-a-result-more-significant">What makes a result more significant?</h2>
+<div class="presenter-space">
+<ul>
+<li><strong>Larger sample</strong> → smaller p-value.</li>
+<li><strong>Steeper slope</strong> (further from 0) → smaller p-value.</li>
+<li><strong>Less scatter</strong> around the regression line → smaller p-value.</li>
+<li><strong>Greater spread</strong> in x → smaller p-value.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="recap" class="level2">
+<h2 class="anchored" data-anchor-id="recap">Recap</h2>
+<div class="presenter-space">
+<ul>
+<li>H1 says <span class="math inline">\(\beta_1 \neq 0\)</span>; H0 says <span class="math inline">\(\beta_1 = 0\)</span>.</li>
+<li>The p-value: probability of our slope <strong>if H0 were true</strong>.</li>
+<li>A 95% CI excluding zero is equivalent to p &lt; 0.05.</li>
+</ul>
+</div>
+<hr>
+<div class="presenter-space">
+<p><strong>Why this matters:</strong></p>
+<ul>
+<li>Every regression table you read reports slopes, CIs, and p-values.</li>
+<li>This video gives you the logic needed to interpret them correctly.</li>
+<li>The next video adds one more key quantity: <strong>R-squared</strong>.</li>
+</ul>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

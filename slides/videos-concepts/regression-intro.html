@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Leonardo Falabella">
 
-<title>Lecture 3: Measurement and Types of Variables</title>
+<title>Regression Analysis: Introduction</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -82,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/measuring-variables.html">Week 3: Measurement and Variable Types</a></li><li class="breadcrumb-item"><a href="../../slides/lectures/measurement-lecture.html">Lecture 3: Measurement and Types of Variables</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/regression-intro.html">Week 8: Regression Analysis</a></li><li class="breadcrumb-item"><a href="../../slides/videos-concepts/regression-intro.html">Regression Analysis: Introduction</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -217,7 +245,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/lectures/measurement-lecture.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../slides/lectures/measurement-lecture.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 3: Measurement and Types of Variables</span></a>
   </div>
 </li>
@@ -416,7 +444,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/regression-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-concepts/regression-intro.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Regression Analysis: Introduction</span></a>
   </div>
 </li>
@@ -450,257 +478,208 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a></li>
-  <li><a href="#example-education-levels-and-democratisation" id="toc-example-education-levels-and-democratisation" class="nav-link" data-scroll-target="#example-education-levels-and-democratisation">Example: Education levels and democratisation</a></li>
-  <li><a href="#level-of-education" id="toc-level-of-education" class="nav-link" data-scroll-target="#level-of-education">Level of education</a></li>
-  <li><a href="#defining-the-level-of-education" id="toc-defining-the-level-of-education" class="nav-link" data-scroll-target="#defining-the-level-of-education">Defining the level of education</a></li>
-  <li><a href="#from-definition-to-measurement" id="toc-from-definition-to-measurement" class="nav-link" data-scroll-target="#from-definition-to-measurement">From definition to measurement</a></li>
-  <li><a href="#literacy-rates" id="toc-literacy-rates" class="nav-link" data-scroll-target="#literacy-rates">Literacy rates</a></li>
-  <li><a href="#pisa-scores" id="toc-pisa-scores" class="nav-link" data-scroll-target="#pisa-scores">PISA scores</a></li>
-  <li><a href="#from-education-to-democracy" id="toc-from-education-to-democracy" class="nav-link" data-scroll-target="#from-education-to-democracy">From education to democracy</a></li>
-  <li><a href="#varieties-of-democracy-v-dem" id="toc-varieties-of-democracy-v-dem" class="nav-link" data-scroll-target="#varieties-of-democracy-v-dem">Varieties of Democracy (V-DEM)</a></li>
-  <li><a href="#the-v-dem-world-map" id="toc-the-v-dem-world-map" class="nav-link" data-scroll-target="#the-v-dem-world-map">The V-DEM world map</a></li>
-  <li><a href="#is-democracy-backsliding-according-to-v-dem-yes" id="toc-is-democracy-backsliding-according-to-v-dem-yes" class="nav-link" data-scroll-target="#is-democracy-backsliding-according-to-v-dem-yes">Is democracy backsliding? According to V-DEM, yes!</a></li>
-  <li><a href="#is-democracy-backsliding-according-to-other-indicators-no" id="toc-is-democracy-backsliding-according-to-other-indicators-no" class="nav-link" data-scroll-target="#is-democracy-backsliding-according-to-other-indicators-no">Is democracy backsliding? According to other indicators, no!</a></li>
-  <li><a href="#the-critique-little-meng-2024-on-v-dem" id="toc-the-critique-little-meng-2024-on-v-dem" class="nav-link" data-scroll-target="#the-critique-little-meng-2024-on-v-dem">The critique: Little &amp; Meng (2024) on V-Dem</a></li>
-  <li><a href="#what-does-their-alternative-look-like" id="toc-what-does-their-alternative-look-like" class="nav-link" data-scroll-target="#what-does-their-alternative-look-like">What does their alternative look like?</a></li>
-  <li><a href="#the-counter-critique-v-dems-side" id="toc-the-counter-critique-v-dems-side" class="nav-link" data-scroll-target="#the-counter-critique-v-dems-side">The counter-critique: V-DEM’s side</a></li>
-  <li><a href="#group-activity-how-to-measure-democracy" id="toc-group-activity-how-to-measure-democracy" class="nav-link" data-scroll-target="#group-activity-how-to-measure-democracy">Group activity: How to measure democracy?</a></li>
-  <li><a href="#guiding-questions-for-discussion" id="toc-guiding-questions-for-discussion" class="nav-link" data-scroll-target="#guiding-questions-for-discussion">Guiding questions for discussion</a></li>
-  <li><a href="#share-your-thoughts" id="toc-share-your-thoughts" class="nav-link" data-scroll-target="#share-your-thoughts">Share your thoughts</a></li>
-  <li><a href="#dig-deeper" id="toc-dig-deeper" class="nav-link" data-scroll-target="#dig-deeper">Dig Deeper</a></li>
-  <li><a href="#why-this-matters" id="toc-why-this-matters" class="nav-link" data-scroll-target="#why-this-matters">Why this matters</a></li>
+  <li><a href="#regression-analysis-introduction" id="toc-regression-analysis-introduction" class="nav-link active" data-scroll-target="#regression-analysis-introduction">Regression Analysis: Introduction</a>
+  <ul class="collapse">
+  <li><a href="#youll-learn-to" id="toc-youll-learn-to" class="nav-link" data-scroll-target="#youll-learn-to">You’ll learn to</a></li>
+  <li><a href="#where-we-left-off" id="toc-where-we-left-off" class="nav-link" data-scroll-target="#where-we-left-off">Where we left off</a></li>
+  <li><a href="#linear-functions-the-general-form" id="toc-linear-functions-the-general-form" class="nav-link" data-scroll-target="#linear-functions-the-general-form">Linear functions: the general form</a></li>
+  <li><a href="#a-simple-example" id="toc-a-simple-example" class="nav-link" data-scroll-target="#a-simple-example">A simple example</a></li>
+  <li><a href="#a-simple-example-1" id="toc-a-simple-example-1" class="nav-link" data-scroll-target="#a-simple-example-1">A simple example</a></li>
+  <li><a href="#a-regression-equation-is-a-linear-function" id="toc-a-regression-equation-is-a-linear-function" class="nav-link" data-scroll-target="#a-regression-equation-is-a-linear-function">A regression equation is a linear function</a></li>
+  <li><a href="#the-brexit-example" id="toc-the-brexit-example" class="nav-link" data-scroll-target="#the-brexit-example">The Brexit example</a></li>
+  <li><a href="#education-and-brexit" id="toc-education-and-brexit" class="nav-link" data-scroll-target="#education-and-brexit">Education and Brexit</a></li>
+  <li><a href="#reading-the-plot" id="toc-reading-the-plot" class="nav-link" data-scroll-target="#reading-the-plot">Reading the plot</a></li>
+  <li><a href="#reading-the-plot-1" id="toc-reading-the-plot-1" class="nav-link" data-scroll-target="#reading-the-plot-1">Reading the plot</a></li>
+  <li><a href="#the-regression-equation" id="toc-the-regression-equation" class="nav-link" data-scroll-target="#the-regression-equation">The regression equation</a></li>
+  <li><a href="#generating-predictions" id="toc-generating-predictions" class="nav-link" data-scroll-target="#generating-predictions">Generating predictions</a></li>
+  <li><a href="#predictions-are-approximations" id="toc-predictions-are-approximations" class="nav-link" data-scroll-target="#predictions-are-approximations">Predictions are approximations</a></li>
+  <li><a href="#whats-coming-next" id="toc-whats-coming-next" class="nav-link" data-scroll-target="#whats-coming-next">What’s coming next</a></li>
+  <li><a href="#recap" id="toc-recap" class="nav-link" data-scroll-target="#recap">Recap</a></li>
+  </ul></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="measurement-lecture-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="regression-intro-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/measuring-variables.html">Week 3: Measurement and Variable Types</a></li><li class="breadcrumb-item"><a href="../../slides/lectures/measurement-lecture.html">Lecture 3: Measurement and Types of Variables</a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title">Lecture 3: Measurement and Types of Variables</h1>
-<p class="subtitle lead">Statistics for Political Science</p>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/regression-intro.html">Week 8: Regression Analysis</a></li><li class="breadcrumb-item"><a href="../../slides/videos-concepts/regression-intro.html">Regression Analysis: Introduction</a></li></ol></nav></header>
 
 
 
-<div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Leonardo Falabella </p>
-          </div>
-  </div>
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
+<section id="regression-analysis-introduction" class="level1 title-left">
+<h1 class="title-left">Regression Analysis: Introduction</h1>
 <hr>
-<section id="welcome" class="level2">
-<h2 class="anchored" data-anchor-id="welcome">Welcome</h2>
-<p>Today’s goals:</p>
+<section id="youll-learn-to" class="level2">
+<h2 class="anchored" data-anchor-id="youll-learn-to">You’ll learn to</h2>
+<div class="presenter-space">
 <ul>
-<li>Recap the core points from this week’s videos</li>
-<li>Work through a group discussion on <strong>measuring democracy</strong></li>
+<li>Recognise a <strong>regression equation</strong> as a linear function.</li>
+<li>Read a <strong>scatterplot with a regression line</strong>.</li>
+<li>Use a regression equation to generate <strong>predicted values</strong>.</li>
 </ul>
-<hr>
-</section>
-<section id="example-education-levels-and-democratisation" class="level2">
-<h2 class="anchored" data-anchor-id="example-education-levels-and-democratisation">Example: Education levels and democratisation</h2>
-<ul>
-<li><strong>Research question:</strong> Do higher levels of education make countries more likely to democratise?</li>
-</ul>
-<hr>
-</section>
-<section id="level-of-education" class="level2">
-<h2 class="anchored" data-anchor-id="level-of-education">Level of education</h2>
-<ul>
-<li>How do we know if a country’s <strong>level of education</strong> is high or low?</li>
-<li>What information do we collect?</li>
-<li>We should start by figuring out a <strong>definition</strong> for the level of education.</li>
-</ul>
-<hr>
-</section>
-<section id="defining-the-level-of-education" class="level2">
-<h2 class="anchored" data-anchor-id="defining-the-level-of-education">Defining the level of education</h2>
-<ul>
-<li><strong>Accessibility</strong> of basic education to all citizens?</li>
-<li><strong>Proficiency</strong> of students in reading, math, and science?</li>
-<li>The <strong>implications</strong> for research are not trivial!</li>
-</ul>
-<hr>
-</section>
-<section id="from-definition-to-measurement" class="level2">
-<h2 class="anchored" data-anchor-id="from-definition-to-measurement">From definition to measurement</h2>
-<ul>
-<li><p>A measurement for <strong>accessibility:</strong> Literacy rates.</p>
-<ul>
-<li>A good (but not perfect) approximation.</li>
-</ul></li>
-<li><p>A measurement for <strong>proficiency:</strong> Students’ standardised exam scores.</p>
-<ul>
-<li>PISA (Programme for International Student Assessment).</li>
-</ul></li>
-</ul>
-<hr>
-</section>
-<section id="literacy-rates" class="level2">
-<h2 class="anchored" data-anchor-id="literacy-rates">Literacy rates</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/literacy-rates.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" data-fig-cap=""></p>
-</figure>
 </div>
 <hr>
 </section>
-<section id="pisa-scores" class="level2">
-<h2 class="anchored" data-anchor-id="pisa-scores">PISA scores</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/pisa-scores.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" data-fig-cap=""></p>
-</figure>
+<section id="where-we-left-off" class="level2">
+<h2 class="anchored" data-anchor-id="where-we-left-off">Where we left off</h2>
+<div class="presenter-space">
+<ul>
+<li>Scatterplots show the relationship between two numeric variables.</li>
+<li>We added a <strong>line of best fit</strong> (trend line) to summarise that relationship.</li>
+<li>That line is a <strong>regression line</strong> — and it comes from an equation.</li>
+</ul>
 </div>
 <hr>
 </section>
-<section id="from-education-to-democracy" class="level2">
-<h2 class="anchored" data-anchor-id="from-education-to-democracy">From education to democracy</h2>
+<section id="linear-functions-the-general-form" class="level2">
+<h2 class="anchored" data-anchor-id="linear-functions-the-general-form">Linear functions: the general form</h2>
+<div class="presenter-space">
+<p><span class="math display">\[y = a + bx\]</span></p>
 <ul>
-<li><strong>Research question:</strong> Is there a global trend towards democratic backsliding?</li>
-<li>A pressing contemporary debate that highlights the importance of measurement choices.</li>
-<li>Recent debates focus on a particular measurement: <strong>Varieties of Democracy (V-DEM)</strong>.</li>
+<li><strong>a</strong> is the <strong>intercept</strong> — the value of y when x = 0.</li>
+<li><strong>b</strong> is the <strong>slope</strong> — how much y changes per unit increase in x.</li>
 </ul>
-<hr>
-</section>
-<section id="varieties-of-democracy-v-dem" class="level2">
-<h2 class="anchored" data-anchor-id="varieties-of-democracy-v-dem">Varieties of Democracy (V-DEM)</h2>
-<ul>
-<li>Democracy measured as an <strong>interval</strong> variable (countries are given scores between 0 and 1)</li>
-<li>Sends questionnaires to over <strong>3,700</strong> country experts.</li>
-<li>Questions about several indicators deemed necessary to determine if a country is democratic.</li>
-</ul>
-<hr>
-</section>
-<section id="the-v-dem-world-map" class="level2">
-<h2 class="anchored" data-anchor-id="the-v-dem-world-map">The V-DEM world map</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/vdem-map.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" data-fig-cap=""></p>
-</figure>
-</div>
-<p><a href="https://www.v-dem.net/documents/60/V-dem-dr__2025_lowres.pdf">Source</a></p>
-<hr>
-</section>
-<section id="is-democracy-backsliding-according-to-v-dem-yes" class="level2">
-<h2 class="anchored" data-anchor-id="is-democracy-backsliding-according-to-v-dem-yes">Is democracy backsliding? According to V-DEM, yes!</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/vdem-trend.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" data-fig-cap=""></p>
-</figure>
-</div>
-<p><a href="https://www.v-dem.net/documents/60/V-dem-dr__2025_lowres.pdf">Source</a></p>
-<hr>
-</section>
-<section id="is-democracy-backsliding-according-to-other-indicators-no" class="level2">
-<h2 class="anchored" data-anchor-id="is-democracy-backsliding-according-to-other-indicators-no">Is democracy backsliding? According to other indicators, no!</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/others-trend.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" data-fig-cap=""></p>
-</figure>
-</div>
-<p><a href="https://www.cambridge.org/core/journals/ps-political-science-and-politics/article/measuring-democratic-backsliding/9EE2044CDA598BD815349912E61189D8">Source</a></p>
-<hr>
-</section>
-<section id="the-critique-little-meng-2024-on-v-dem" class="level2">
-<h2 class="anchored" data-anchor-id="the-critique-little-meng-2024-on-v-dem">The critique: Little &amp; Meng (2024) on V-Dem</h2>
-<ul>
-<li><p>V-Dem relies heavily on <strong>expert judgments</strong>, which may shift over time even if underlying political institutions do not.</p></li>
-<li><p>Changes in expert <strong>expectations</strong> or <strong>standards</strong> can look like changes in democracy.</p></li>
-<li><p>As an alternative, Little and Meng argue for focusing on indicators of democracy that are less sensitive to <strong>subjective interpretation</strong>.</p></li>
-</ul>
-<hr>
-</section>
-<section id="what-does-their-alternative-look-like" class="level2">
-<h2 class="anchored" data-anchor-id="what-does-their-alternative-look-like">What does their alternative look like?</h2>
-<p><a href="https://www.cambridge.org/core/journals/ps-political-science-and-politics/article/measuring-democratic-backsliding/9EE2044CDA598BD815349912E61189D8">Little and Meng (2024)</a> propose measuring democracy using indicators as:</p>
-<ul>
-<li><p>Whether incumbents and ruling parties <strong>lose elections</strong> and <strong>accept defeat</strong>.</p></li>
-<li><p>The degree of electoral competition, including <strong>vote shares</strong> and <strong>seat shares</strong> of winning parties.</p></li>
-<li><p>The presence and enforcement of formal institutional constraints, such as <strong>term limits</strong> and <strong>succession rules</strong>.</p></li>
-</ul>
-<hr>
-</section>
-<section id="the-counter-critique-v-dems-side" class="level2">
-<h2 class="anchored" data-anchor-id="the-counter-critique-v-dems-side">The counter-critique: V-DEM’s side</h2>
-<p>Scholars associated with V-Dem <a href="https://www.v-dem.net/media/publications/wp_140.pdf">respond that</a>:</p>
-<ul>
-<li><p>Democracy is inherently <strong>multidimensional</strong> and cannot be adequately captured by a narrow set of observable outcomes.</p></li>
-<li><p>Indicators presented as “objective” by Little and Meng still involve <strong>coding decisions</strong> and <strong>theoretical assumptions</strong>; they are not free from subjectivity.</p></li>
-<li><p>Expert-based measures are not a feature, not a bug for measuring <strong>complex political concepts</strong>.</p></li>
-</ul>
-<hr>
-</section>
-<section id="group-activity-how-to-measure-democracy" class="level2">
-<h2 class="anchored" data-anchor-id="group-activity-how-to-measure-democracy">Group activity: How to measure democracy?</h2>
-<ul>
-<li><p>In small groups, <strong>discuss</strong> the debate you have just seen.</p></li>
-<li><p>Your task is not to decide whether democracy is declining, but to decide which approach to measurement you find <strong>more convincing</strong>.</p></li>
-<li><p>Focus on the <strong>trade-offs</strong> between expert judgment and more “objective” indicators, and on what each approach can and cannot capture.</p></li>
-</ul>
-<hr>
-</section>
-<section id="guiding-questions-for-discussion" class="level2">
-<h2 class="anchored" data-anchor-id="guiding-questions-for-discussion">Guiding questions for discussion</h2>
-<ul>
-<li><p>Which critique or defense do you find more persuasive, and <strong>why</strong>?</p></li>
-<li><p>What do you think is lost when we move away from <strong>expert judgments</strong>?</p></li>
-<li><p>What do you think is lost when we rely heavily on <strong>subjective assessments</strong>?</p></li>
-<li><p>If you had to choose one approach to answer the question of <strong>democratic backsliding</strong>, which would you choose?</p></li>
-</ul>
-<hr>
-</section>
-<section id="share-your-thoughts" class="level2">
-<h2 class="anchored" data-anchor-id="share-your-thoughts">Share your thoughts</h2>
-<ul>
-<li><a href="https://www.menti.com/alp5xzysmysp">Click here</a>, scan the QR code, or join at menti.com using the code <strong>2173 3787</strong></li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/mentimeter_qr_code_democracy.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%" data-fig-cap=""></p>
-</figure>
 </div>
 <hr>
 </section>
-<section id="dig-deeper" class="level2">
-<h2 class="anchored" data-anchor-id="dig-deeper">Dig Deeper</h2>
+<section id="a-simple-example" class="level2">
+<h2 class="anchored" data-anchor-id="a-simple-example">A simple example</h2>
+<div class="presenter-space">
+<p><span class="math display">\[y = 5 + 2x\]</span></p>
 <ul>
-<li><p><a href="https://www.ft.com/content/b474855e-66b0-4e6e-9b73-7e252bd88938">How steep is Trump’s democratic backsliding?</a></p>
-<ul>
-<li>Financial Times, 31 Jan 2026 (Access with your King’s email account).</li>
-</ul></li>
-<li><p><a href="https://docs.google.com/document/d/e/2PACX-1vTNz8J13MV_ZLQ8BT-AsRNTn4lADHidb3KRYpuQ7ZiA895SgDGwz2PaCi3KQeHpEdjcOMUl4bVs6qNn/pub">Methodology</a> reviewed by Anne Meng.</p></li>
+<li>If x = 0, y = 5 + 2(0) = <strong>5</strong></li>
+<li>If x = 1, y = 5 + 2(1) = <strong>7</strong></li>
+<li>If x = 3, y = 5 + 2(3) = <strong>11</strong></li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/usa-backsliding.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:67.0%" data-fig-cap=""></p>
-</figure>
 </div>
 <hr>
 </section>
-<section id="why-this-matters" class="level2">
-<h2 class="anchored" data-anchor-id="why-this-matters">Why this matters</h2>
+<section id="a-simple-example-1" class="level2">
+<h2 class="anchored" data-anchor-id="a-simple-example-1">A simple example</h2>
+<div class="presenter-space">
+<p><span class="math display">\[y = 5 + 2x\]</span></p>
 <ul>
-<li><p>Measurement choices are <strong>not neutral</strong>. They shape what we see in the data and the conclusions we draw from it.</p></li>
-<li><p>Different <strong>definitions</strong> and <strong>measurements</strong> of the same concept can lead to very different <strong>answers</strong> to the same research question.</p></li>
+<li>Each value of x gives us a predicted value of y.</li>
+<li>These predictions trace out a straight line on a plot.</li>
 </ul>
+</div>
+<hr>
+</section>
+<section id="a-regression-equation-is-a-linear-function" class="level2">
+<h2 class="anchored" data-anchor-id="a-regression-equation-is-a-linear-function">A regression equation is a linear function</h2>
+<div class="presenter-space">
+<ul>
+<li>Using data, we estimate the intercept and slope that best fit the observations.</li>
+<li>The result is a linear equation — the same form as y = a + bx.</li>
+<li><strong>y</strong> is the <strong>dependent variable</strong>; <strong>x</strong> is the <strong>independent variable</strong>.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="the-brexit-example" class="level2">
+<h2 class="anchored" data-anchor-id="the-brexit-example">The Brexit example</h2>
+<div class="presenter-space">
+<ul>
+<li><strong>Research question:</strong> Do areas with more graduates vote differently on Brexit?</li>
+<li><strong>y</strong> (dependent): Share of Leave votes (%)</li>
+<li><strong>x</strong> (independent): Share of population with higher education (%)</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="education-and-brexit" class="level2">
+<h2 class="anchored" data-anchor-id="education-and-brexit">Education and Brexit</h2>
+<div class="presenter-space">
+<p><img src="../../assets/brexit_educ_scatter_line.jpg" class="img-fluid"></p>
+</div>
+<hr>
+</section>
+<section id="reading-the-plot" class="level2">
+<h2 class="anchored" data-anchor-id="reading-the-plot">Reading the plot</h2>
+<div class="presenter-space">
+<ul>
+<li>Each dot is a <strong>UK region</strong>.</li>
+<li>x-axis: share of the local population with higher education (2000).</li>
+<li>y-axis: share of votes cast for Leave in the 2016 referendum.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="reading-the-plot-1" class="level2">
+<h2 class="anchored" data-anchor-id="reading-the-plot-1">Reading the plot</h2>
+<div class="presenter-space">
+<ul>
+<li>The regression line runs through the cloud of dots.</li>
+<li>The line slopes <strong>downward</strong>: higher education share is associated with lower Leave vote.</li>
+<li>This is the relationship the regression equation captures.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="the-regression-equation" class="level2">
+<h2 class="anchored" data-anchor-id="the-regression-equation">The regression equation</h2>
+<div class="presenter-space">
+<p><span class="math display">\[\widehat{\text{Leave}} = 84 - 1.13 \times \text{HigherEd}\]</span></p>
+<ul>
+<li>Intercept ≈ 84</li>
+<li>Slope ≈ −1.13</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="generating-predictions" class="level2">
+<h2 class="anchored" data-anchor-id="generating-predictions">Generating predictions</h2>
+<div class="presenter-space">
+<p><span class="math display">\[\widehat{\text{Leave}} = 84 - 1.13 \times \text{HigherEd}\]</span></p>
+<ul>
+<li>If HigherEd = 20%: 84 − 1.13(20) ≈ <strong>61%</strong> Leave</li>
+<li>If HigherEd = 30%: 84 − 1.13(30) ≈ <strong>50%</strong> Leave</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="predictions-are-approximations" class="level2">
+<h2 class="anchored" data-anchor-id="predictions-are-approximations">Predictions are approximations</h2>
+<div class="presenter-space">
+<ul>
+<li>Look at the scatter: not all regions with HigherEd = 20% voted 61% Leave.</li>
+<li>Education is not the only factor that shapes the Leave vote.</li>
+<li>The regression line summarises the <strong>average tendency</strong>, not every dot.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="whats-coming-next" class="level2">
+<h2 class="anchored" data-anchor-id="whats-coming-next">What’s coming next</h2>
+<div class="presenter-space">
+<ul>
+<li><strong>C19:</strong> How to interpret the slope precisely — and what it does and does not mean.</li>
+<li><strong>C20:</strong> Inference — confidence intervals and p-values for regression estimates.</li>
+<li><strong>C21:</strong> R-squared — how much variation in y does the model explain?</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="recap" class="level2">
+<h2 class="anchored" data-anchor-id="recap">Recap</h2>
+<div class="presenter-space">
+<ul>
+<li>A regression equation is a <strong>linear function</strong> fitted to data.</li>
+<li>It has an <strong>intercept</strong> (value of y when x = 0) and a <strong>slope</strong> (change in y per unit x).</li>
+<li>We use it to generate <strong>predicted values</strong> of y for any value of x.</li>
+</ul>
+</div>
+<hr>
+<div class="presenter-space">
+<p><strong>Why this matters:</strong></p>
+<ul>
+<li>Regression is the workhorse of quantitative political science.</li>
+<li>It turns a visual pattern in a scatterplot into a precise, testable statement.</li>
+<li>Everything we do from here builds on this foundation.</li>
+</ul>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
