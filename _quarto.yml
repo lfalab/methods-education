@@ -74,6 +74,7 @@ website:
             - slides/videos-concepts/C19-regression-slope.qmd
             - slides/videos-concepts/C20-regression-inference.qmd
             - slides/videos-concepts/C21-regression-rsquared.qmd
+            - slides/videos-stata/S09-regression-stata.qmd
 
 
 format:

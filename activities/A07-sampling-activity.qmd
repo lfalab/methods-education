@@ -16,11 +16,11 @@ A sample is **biased** if the units selected differ systematically from the popu
 
 For each scenario, work through the three questions below with your group before moving on. Write down your answers: the exam will ask you to justify your reasoning in writing.
 
-------------------------------------------------------------------------
+
 
 ## The Five Scenarios
 
-------------------------------------------------------------------------
+
 
 ### Scenario A
 
@@ -34,9 +34,9 @@ A policy analyst working for a business association wants to know whether UK sma
 
 **A3.** Would you expect this procedure to produce a **biased** or **unbiased** estimate of UK small businesses' intentions to transition to electric fleets? If biased, would it **overestimate** or **underestimate** the proportion planning to transition? Justify your answer.
 
-> **Hint:** Think carefully about who is on the sampling frame. What kind of businesses join the Good Business Charter voluntarily? How might they differ from the broader population of small businesses?
+<!-- > **Hint:** Think carefully about who is on the sampling frame. What kind of businesses join the Good Business Charter voluntarily? How might they differ from the broader population of small businesses? -->
 
-------------------------------------------------------------------------
+
 
 ### Scenario B
 
@@ -50,9 +50,9 @@ A King's College London student believes that university accommodation in London
 
 **B3.** Would you expect this procedure to produce a **biased** or **unbiased** estimate of KCL student opinion on accommodation costs? If biased, in which direction? Justify your answer.
 
-> **Hint:** Think about who lives in university halls versus who does not. Also consider what determines which students happen to pass by the table on a given day.
+<!-- > **Hint:** Think about who lives in university halls versus who does not. Also consider what determines which students happen to pass by the table on a given day. -->
 
-------------------------------------------------------------------------
+
 
 ### Scenario C
 
@@ -66,9 +66,9 @@ A researcher is commissioned by an environmental think tank to assess whether En
 
 **C3.** Would you expect this procedure to produce a **biased** or **unbiased** estimate of the extent to which English councils have implemented environmental policies? If biased, in which direction? Justify your answer.
 
-> **Hint:** Who is more likely to respond to a survey about environmental policies — councils that have implemented many such policies, or councils that have not? What does this imply for the estimates the researcher will obtain?
+<!-- > **Hint:** Who is more likely to respond to a survey about environmental policies — councils that have implemented many such policies, or councils that have not? What does this imply for the estimates the researcher will obtain? -->
 
-------------------------------------------------------------------------
+
 
 ### Scenario D
 
@@ -82,9 +82,9 @@ A criminologist wants to study the relationship between the provision of youth s
 
 **D3.** Are there any features of this design that might limit the conclusions the researcher can draw? Consider both the sampling procedure and the size of the sample relative to the population.
 
-> **Hint:** This scenario is different from the others. Think about what type of sampling strategy is being used and whether it is executed correctly. Also consider how many boroughs are in each stratum and how many are selected.
+<!-- > **Hint:** This scenario is different from the others. Think about what type of sampling strategy is being used and whether it is executed correctly. Also consider how many boroughs are in each stratum and how many are selected. -->
 
-------------------------------------------------------------------------
+
 
 ### Scenario E
 
@@ -98,9 +98,9 @@ A market research company is hired by a major UK supermarket chain to measure cu
 
 **E3.** Would you expect this procedure to produce a **biased** or **unbiased** estimate of customer satisfaction? If biased, in which direction? Justify your answer.
 
-> **Hint:** Two separate decisions determine who ends up in the sample: which stores are selected, and which customers within those stores participate. Focus on the second decision — what determines whether a customer fills out the survey?
+<!-- > **Hint:** Two separate decisions determine who ends up in the sample: which stores are selected, and which customers within those stores participate. Focus on the second decision — what determines whether a customer fills out the survey? -->
 
-------------------------------------------------------------------------
+
 
 ## Synthesis
 
