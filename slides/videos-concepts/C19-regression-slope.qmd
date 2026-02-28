@@ -1,0 +1,192 @@
+---
+pagetitle: "Regression Slope"
+class: video
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: regression-slope
+  revealjs:
+    output-file: regression-slope-slides
+---
+
+# Regression Slope {.title-left}
+
+------------------------------------------------------------------------
+
+## You'll learn to
+
+::: presenter-space
+-   Identify the **intercept** and **slope** in a regression equation.
+-   Explain intuitively where the **slope comes from**.
+-   Interpret the slope and intercept in **substantive terms**.
+-   Understand why regression is called **Ordinary Least Squares**.
+:::
+
+------------------------------------------------------------------------
+
+## Where we left off
+
+::: presenter-space
+$$\widehat{\text{Leave}} = 84 - 1.13 \times \text{HigherEd}$$
+
+-   A regression equation is a **linear function** fitted to data.
+-   But where do **84** and **−1.13** come from?
+:::
+
+------------------------------------------------------------------------
+
+## The components of a regression equation
+
+::: presenter-space
+$$\hat{y} = \hat{\beta}_0 + \hat{\beta}_1 x$$
+
+-   $\hat{y}$ — **dependent variable** (predicted value)
+-   $x$ — **independent variable**
+:::
+
+------------------------------------------------------------------------
+
+## The components of a regression equation
+
+::: presenter-space
+$$\hat{y} = \hat{\beta}_0 + \hat{\beta}_1 x$$
+
+-   $\hat{\beta}_0$ — the **intercept** (or constant)
+-   $\hat{\beta}_1$ — the **slope** (or coefficient)
+:::
+
+------------------------------------------------------------------------
+
+## Where does the slope come from?
+
+::: presenter-space
+$$\hat{\beta}_1 = \frac{\text{Cov}(X, Y)}{\text{Var}(X)}$$
+
+-   Numerator: **covariance** of X and Y — do they move together?
+-   Denominator: **variance** of X — how spread out is X?
+:::
+
+------------------------------------------------------------------------
+
+## Intuition behind the formula
+
+::: presenter-space
+-   If X and Y tend to move in the **same direction**: positive slope.
+-   If X and Y tend to move in **opposite directions**: negative slope.
+-   We scale by Var(X) so the slope is expressed in the **right units**.
+:::
+
+------------------------------------------------------------------------
+
+## You do not need to compute this by hand
+
+::: presenter-space
+-   Stata calculates the slope from the data automatically.
+-   The formula tells you **what the slope captures** — not how to derive it.
+:::
+
+------------------------------------------------------------------------
+
+## Interpreting the slope
+
+::: presenter-space
+-   For each **1-unit increase** in x, y is expected to change by $\hat{\beta}_1$.
+-   Direction: the **sign** of the slope tells you positive or negative association.
+-   Magnitude: the **size** tells you how much y changes per unit of x.
+:::
+
+------------------------------------------------------------------------
+
+## Slope: Brexit example
+
+::: presenter-space
+$$\hat{\beta}_1 = -1.13$$
+
+-   For each 1 percentage point increase in **higher education share**...
+-   ...Leave vote share is expected to **decrease by 1.13 percentage points**.
+:::
+
+------------------------------------------------------------------------
+
+## Where does the intercept come from?
+
+::: presenter-space
+$$\hat{\beta}_0 = \bar{y} - \hat{\beta}_1 \bar{x}$$
+
+-   $\bar{y}$ — mean of the dependent variable
+-   $\bar{x}$ — mean of the independent variable
+:::
+
+------------------------------------------------------------------------
+
+## Interpreting the intercept
+
+::: presenter-space
+-   The intercept is the **predicted value of y when x = 0**.
+-   Often this is not a meaningful real-world scenario.
+-   It anchors the line — do not over-interpret it.
+:::
+
+------------------------------------------------------------------------
+
+## Intercept: Brexit example
+
+::: presenter-space
+$$\hat{\beta}_0 = 84$$
+
+-   Predicted Leave share when higher education share = 0%.
+-   No UK region has 0% higher education — this is **outside the data**.
+-   The intercept is a mathematical anchor, not a substantive prediction.
+:::
+
+------------------------------------------------------------------------
+
+## Residuals: the line is never perfect
+
+::: presenter-space
+-   Each region's **actual** Leave vote differs from its **predicted** value.
+-   The vertical distance from a dot to the line is the **residual** (or error).
+-   Larger residuals mean the regression predicts that region less well.
+:::
+
+------------------------------------------------------------------------
+
+## Ordinary Least Squares
+
+::: presenter-space
+-   The slope and intercept are chosen to **minimise the sum of squared residuals**.
+-   This quantity is called the **Residual Sum of Squares** (RSS).
+-   Because we minimise squared residuals: **Ordinary Least Squares (OLS)**.
+:::
+
+------------------------------------------------------------------------
+
+## What's coming next
+
+::: presenter-space
+-   We now have an estimated slope: −1.13.
+-   But could this reflect **chance variation** rather than a real relationship?
+-   **C20** covers inference for the slope: standard errors, confidence intervals, p-values.
+:::
+
+------------------------------------------------------------------------
+
+## Recap
+
+::: presenter-space
+-   The **slope** = Cov(X, Y) / Var(X) — how y changes per unit of x.
+-   The **intercept** is the predicted y when x = 0.
+-   OLS finds the line that **minimises the sum of squared residuals**.
+:::
+
+------------------------------------------------------------------------
+
+::: presenter-space
+**Why this matters:**
+
+-   Every regression result you read in a paper rests on these calculations.
+-   Knowing what the slope captures helps you evaluate whether it makes sense.
+-   OLS is the standard estimation method across political science and economics.
+:::

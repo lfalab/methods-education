@@ -1,0 +1,173 @@
+---
+pagetitle: "Inference in Regression: CIs and P-values"
+class: video
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: regression-inference
+  revealjs:
+    output-file: regression-inference-slides
+---
+
+# Inference in Regression: CIs and P-values {.title-left}
+
+------------------------------------------------------------------------
+
+## You'll learn to
+
+::: presenter-space
+-   Translate a verbal hypothesis into a **regression hypothesis**.
+-   Define the **p-value for a slope estimate**.
+-   Use a **confidence interval** for the slope to test the null hypothesis.
+-   Apply the decision rule to **Brexit regression results**.
+:::
+
+------------------------------------------------------------------------
+
+## From description to inference
+
+::: presenter-space
+-   C18 and C19: we estimated a slope of **−1.13**.
+-   But could this reflect **chance variation** rather than a real relationship?
+-   This video: how do we test whether the slope is **statistically significant**?
+:::
+
+------------------------------------------------------------------------
+
+## Stating the hypothesis in regression terms
+
+::: presenter-space
+$$\widehat{\text{Leave}} = \hat{\beta}_0 + \hat{\beta}_1 \times \text{HigherEd}$$
+
+-   **Alternative hypothesis (H1):** regions with more graduates voted Leave less.
+-   In regression terms: $\hat{\beta}_1 < 0$.
+:::
+
+------------------------------------------------------------------------
+
+## The null hypothesis
+
+::: presenter-space
+$$\widehat{\text{Leave}} = \hat{\beta}_0 + \hat{\beta}_1 \times \text{HigherEd}$$
+
+-   **Null hypothesis (H0):** education share is unrelated to Leave vote share.
+-   In regression terms: $\beta_1 = 0$.
+:::
+
+------------------------------------------------------------------------
+
+## What H0 = 0 means
+
+::: presenter-space
+-   If $\beta_1 = 0$, the regression line is **flat**.
+-   Higher education share would have **no predictive value**.
+-   The apparent pattern in the data would be **due to chance**.
+:::
+
+------------------------------------------------------------------------
+
+## The significance test for the slope
+
+::: presenter-space
+-   We estimated $\hat{\beta}_1 = -1.13$.
+-   Is this far enough from zero to **rule out chance**?
+-   This is what the significance test answers.
+:::
+
+------------------------------------------------------------------------
+
+## The p-value for the slope
+
+::: presenter-space
+-   The p-value is the probability of observing a slope **at least as extreme as −1.13**...
+-   ...if the true slope were **zero** (i.e., if H0 were true).
+-   A small p-value means the result is unlikely to be a chance finding.
+:::
+
+------------------------------------------------------------------------
+
+## The decision rule
+
+::: presenter-space
+-   Set significance level: $\alpha = 0.05$.
+-   If **p < 0.05** → reject H0; the slope is statistically significant.
+-   If **p > 0.05** → fail to reject H0.
+:::
+
+------------------------------------------------------------------------
+
+## Confidence intervals for the slope
+
+::: presenter-space
+-   We can also construct a **95% confidence interval** for $\hat{\beta}_1$.
+-   If the CI does **not include zero** → reject H0.
+-   If the CI **includes zero** → fail to reject H0.
+:::
+
+------------------------------------------------------------------------
+
+## P-values and CIs always agree
+
+::: presenter-space
+-   The same information goes into both calculations.
+-   They will **never contradict each other**.
+
+| If…                              | Then…         |
+|----------------------------------|---------------|
+| 95% CI does not include 0        | p < 0.05      |
+| 95% CI includes 0                | p > 0.05      |
+
+:::
+
+------------------------------------------------------------------------
+
+## Brexit results: applying the logic
+
+::: presenter-space
+-   Estimated slope: $\hat{\beta}_1 = -1.13$ (negative, as H1 predicted).
+-   95% CI for the slope does **not include zero**.
+-   p-value is **below 0.05**.
+:::
+
+------------------------------------------------------------------------
+
+## Brexit results: the decision
+
+::: presenter-space
+-   We **reject the null hypothesis**.
+-   Regions with higher education shares had a **systematically lower** Leave vote share.
+-   The result is unlikely to reflect chance variation alone.
+:::
+
+------------------------------------------------------------------------
+
+## What makes a result more significant?
+
+::: presenter-space
+-   **Larger sample** → smaller p-value.
+-   **Steeper slope** (further from 0) → smaller p-value.
+-   **Less scatter** around the regression line → smaller p-value.
+-   **Greater spread** in x → smaller p-value.
+:::
+
+------------------------------------------------------------------------
+
+## Recap
+
+::: presenter-space
+-   H1 says $\beta_1 \neq 0$; H0 says $\beta_1 = 0$.
+-   The p-value: probability of our slope **if H0 were true**.
+-   A 95% CI excluding zero is equivalent to p < 0.05.
+:::
+
+------------------------------------------------------------------------
+
+::: presenter-space
+**Why this matters:**
+
+-   Every regression table you read reports slopes, CIs, and p-values.
+-   This video gives you the logic needed to interpret them correctly.
+-   The next video adds one more key quantity: **R-squared**.
+:::

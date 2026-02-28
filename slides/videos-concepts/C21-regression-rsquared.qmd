@@ -1,0 +1,168 @@
+---
+pagetitle: "R-squared"
+class: video
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: regression-rsquared
+  revealjs:
+    output-file: regression-rsquared-slides
+---
+
+# R-squared {.title-left}
+
+------------------------------------------------------------------------
+
+## You'll learn to
+
+::: presenter-space
+-   Define **R-squared** and explain what it measures.
+-   Interpret R-squared as a **percentage of explained variance**.
+-   Understand what R-squared **does and does not** tell you.
+:::
+
+------------------------------------------------------------------------
+
+## The question this video answers
+
+::: presenter-space
+-   C18–C20: we estimated a slope and tested whether it differs from zero.
+-   A separate question: how **useful** is the model as a whole?
+-   R-squared answers: how much of the variation in y does x **explain**?
+:::
+
+------------------------------------------------------------------------
+
+## What R-squared measures
+
+::: presenter-space
+-   R-squared is the **proportion of variance** in y explained by x.
+-   It always lies **between 0 and 1**.
+-   Read it as a percentage: R² = 0.30 means **30% of variance explained**.
+:::
+
+------------------------------------------------------------------------
+
+## The formula
+
+::: presenter-space
+$$R^2 = 1 - \frac{SS_{RES}}{SS_{TOT}}$$
+
+-   $SS_{RES}$: how much the model **misses**.
+-   $SS_{TOT}$: how much y **varies in total**.
+:::
+
+------------------------------------------------------------------------
+
+## $SS_{RES}$: Residual Sum of Squares
+
+::: presenter-space
+-   Each residual is the **vertical distance** from a dot to the regression line.
+-   We square each distance and sum them all up.
+-   Large residuals → model predictions are **often far off**.
+:::
+
+------------------------------------------------------------------------
+
+## $SS_{TOT}$: Total Sum of Squares
+
+::: presenter-space
+-   Each observation's distance from the **mean of y**, squared and summed.
+-   This is simply the **variance of y** — total spread in the outcome.
+-   It is a baseline: how much y varies **without any model**.
+:::
+
+------------------------------------------------------------------------
+
+## The logic of the formula
+
+::: presenter-space
+$$R^2 = 1 - \frac{SS_{RES}}{SS_{TOT}}$$
+
+-   If the model fits well: $SS_{RES}$ is **small** relative to $SS_{TOT}$.
+-   The fraction is close to 0 → R² is **close to 1**.
+-   If the model fits poorly: the fraction is close to 1 → R² is **close to 0**.
+:::
+
+------------------------------------------------------------------------
+
+## Visual intuition: low R-squared
+
+::: presenter-space
+-   Dots are **widely scattered** around the regression line.
+-   Residuals are large — the model misses most observations badly.
+-   $SS_{RES} \approx SS_{TOT}$ → **R² near 0**.
+:::
+
+------------------------------------------------------------------------
+
+## Visual intuition: high R-squared
+
+::: presenter-space
+-   Dots cluster **tightly** around the regression line.
+-   Residuals are small — predictions are close to the observed values.
+-   $SS_{RES} \ll SS_{TOT}$ → **R² near 1**.
+:::
+
+------------------------------------------------------------------------
+
+## Brexit example
+
+::: presenter-space
+-   In the Leave vote on higher education regression: **R² ≈ 0.30**.
+-   About **30%** of the variation in Leave vote share across UK regions...
+-   ...is explained by differences in **higher education share**.
+:::
+
+------------------------------------------------------------------------
+
+## What the remaining 70% means
+
+::: presenter-space
+-   70% of the variation in Leave vote share is **not explained** by education.
+-   Other factors matter: economic conditions, age, geography, identity.
+-   A bivariate model captures **one piece** of a more complex picture.
+:::
+
+------------------------------------------------------------------------
+
+## What R-squared does not mean
+
+::: presenter-space
+-   A higher R² does **not** mean the relationship is causal.
+-   A low R² does **not** mean the slope is wrong or unimportant.
+-   R-squared measures **fit**, not truth.
+:::
+
+------------------------------------------------------------------------
+
+## R-squared and statistical significance
+
+::: presenter-space
+-   A slope can be **statistically significant** with a low R².
+-   Statistical significance (C20): is the slope distinguishable from zero?
+-   R-squared (C21): how much of y does the model explain?
+-   These are **different questions**.
+:::
+
+------------------------------------------------------------------------
+
+## Recap
+
+::: presenter-space
+-   R² = proportion of variance in y explained by x; always between 0 and 1.
+-   Brexit model: R² ≈ 0.30 — education explains **30%** of Leave vote variation.
+-   High R² means good fit; it does **not** imply causality.
+:::
+
+------------------------------------------------------------------------
+
+::: presenter-space
+**Why this matters:**
+
+-   R-squared tells you how much work your model is doing.
+-   In political science, bivariate R² values are often modest — that is expected.
+-   Evaluating fit is part of responsible, transparent quantitative research.
+:::
