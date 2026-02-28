@@ -138,17 +138,17 @@
 <li class="fragment">Translate a verbal hypothesis into a <strong>regression hypothesis</strong>.</li>
 <li class="fragment">Define the <strong>p-value for a slope estimate</strong>.</li>
 <li class="fragment">Use a <strong>confidence interval</strong> for the slope to test the null hypothesis.</li>
-<li class="fragment">Apply the decision rule to <strong>Brexit regression results</strong>.</li>
 </ul>
 </div>
 </section>
 <section id="from-description-to-inference" class="slide level2">
 <h2>From description to inference</h2>
 <div class="presenter-space">
+<p><span class="math display">\[\widehat{\text{Leave}} = 84 - 1.13 \times \text{HigherEd}\]</span></p>
 <ul>
-<li class="fragment">C18 and C19: we estimated a slope of <strong>−1.13</strong>.</li>
+<li class="fragment">We estimated a slope of <strong>−1.13</strong>.</li>
 <li class="fragment">But could this reflect <strong>chance variation</strong> rather than a real relationship?</li>
-<li class="fragment">This video: how do we test whether the slope is <strong>statistically significant</strong>?</li>
+<li class="fragment">How do we test whether the slope is <strong>statistically significant</strong>?</li>
 </ul>
 </div>
 </section>
@@ -188,7 +188,6 @@
 <ul>
 <li class="fragment">We estimated <span class="math inline">\(\hat{\beta}_1 = -1.13\)</span>.</li>
 <li class="fragment">Is this far enough from zero to <strong>rule out chance</strong>?</li>
-<li class="fragment">This is what the significance test answers.</li>
 </ul>
 </div>
 </section>
@@ -196,8 +195,7 @@
 <h2>The p-value for the slope</h2>
 <div class="presenter-space">
 <ul>
-<li class="fragment">The p-value is the probability of observing a slope <strong>at least as extreme as −1.13</strong>…</li>
-<li class="fragment">…if the true slope were <strong>zero</strong> (i.e., if H0 were true).</li>
+<li class="fragment">The p-value is the probability of observing a slope <strong>at least as extreme as −1.13</strong> if the true slope were <strong>zero</strong> (i.e., if H0 were true).</li>
 <li class="fragment">A small p-value means the result is unlikely to be a chance finding.</li>
 </ul>
 </div>
@@ -222,39 +220,12 @@
 </ul>
 </div>
 </section>
-<section id="p-values-and-cis-always-agree" class="slide level2">
-<h2>P-values and CIs always agree</h2>
-<div class="presenter-space">
-<ul>
-<li class="fragment">The same information goes into both calculations.</li>
-<li class="fragment">They will <strong>never contradict each other</strong>.</li>
-</ul>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>If…</th>
-<th>Then…</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>95% CI does not include 0</td>
-<td>p &lt; 0.05</td>
-</tr>
-<tr class="even">
-<td>95% CI includes 0</td>
-<td>p &gt; 0.05</td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
 <section id="brexit-results-applying-the-logic" class="slide level2">
 <h2>Brexit results: applying the logic</h2>
 <div class="presenter-space">
 <ul>
 <li class="fragment">Estimated slope: <span class="math inline">\(\hat{\beta}_1 = -1.13\)</span> (negative, as H1 predicted).</li>
-<li class="fragment">95% CI for the slope does <strong>not include zero</strong>.</li>
+<li class="fragment">95% CI for the slope: <strong>[-1.42, -0.84]</strong>.</li>
 <li class="fragment">p-value is <strong>below 0.05</strong>.</li>
 </ul>
 </div>
@@ -285,7 +256,7 @@
 <div class="presenter-space">
 <ul>
 <li class="fragment">H1 says <span class="math inline">\(\beta_1 \neq 0\)</span>; H0 says <span class="math inline">\(\beta_1 = 0\)</span>.</li>
-<li class="fragment">The p-value: probability of our slope <strong>if H0 were true</strong>.</li>
+<li class="fragment">The p-value: probability of a slope at least as extreme as ours, <strong>if H0 were true</strong>.</li>
 <li class="fragment">A 95% CI excluding zero is equivalent to p &lt; 0.05.</li>
 </ul>
 </div>
@@ -295,9 +266,8 @@
 <div class="presenter-space">
 <p><strong>Why this matters:</strong></p>
 <ul>
-<li class="fragment">Every regression table you read reports slopes, CIs, and p-values.</li>
+<li class="fragment">Every regression table you read reports slopes and p-values.</li>
 <li class="fragment">This video gives you the logic needed to interpret them correctly.</li>
-<li class="fragment">The next video adds one more key quantity: <strong>R-squared</strong>.</li>
 </ul>
 </div>
 

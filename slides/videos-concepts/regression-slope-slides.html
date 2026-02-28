@@ -136,9 +136,8 @@
 <div class="presenter-space">
 <ul>
 <li class="fragment">Identify the <strong>intercept</strong> and <strong>slope</strong> in a regression equation.</li>
-<li class="fragment">Explain intuitively where the <strong>slope comes from</strong>.</li>
+<li class="fragment">Explain where the <strong>slope comes from</strong>.</li>
 <li class="fragment">Interpret the slope and intercept in <strong>substantive terms</strong>.</li>
-<li class="fragment">Understand why regression is called <strong>Ordinary Least Squares</strong>.</li>
 </ul>
 </div>
 </section>
@@ -189,15 +188,6 @@
 <li class="fragment">If X and Y tend to move in the <strong>same direction</strong>: positive slope.</li>
 <li class="fragment">If X and Y tend to move in <strong>opposite directions</strong>: negative slope.</li>
 <li class="fragment">We scale by Var(X) so the slope is expressed in the <strong>right units</strong>.</li>
-</ul>
-</div>
-</section>
-<section id="you-do-not-need-to-compute-this-by-hand" class="slide level2">
-<h2>You do not need to compute this by hand</h2>
-<div class="presenter-space">
-<ul>
-<li class="fragment">Stata calculates the slope from the data automatically.</li>
-<li class="fragment">The formula tells you <strong>what the slope captures</strong> — not how to derive it.</li>
 </ul>
 </div>
 </section>
@@ -255,6 +245,16 @@
 <section id="residuals-the-line-is-never-perfect" class="slide level2">
 <h2>Residuals: the line is never perfect</h2>
 <div class="presenter-space">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../assets/brexit_educ_scatter_line.jpg" class="quarto-figure quarto-figure-center" style="width:90.0%" data-fig-cap=""></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="residuals-the-line-is-never-perfect-1" class="slide level2">
+<h2>Residuals: the line is never perfect</h2>
+<div class="presenter-space">
 <ul>
 <li class="fragment">Each region’s <strong>actual</strong> Leave vote differs from its <strong>predicted</strong> value.</li>
 <li class="fragment">The vertical distance from a dot to the line is the <strong>residual</strong> (or error).</li>
@@ -269,16 +269,6 @@
 <li class="fragment">The slope and intercept are chosen to <strong>minimise the sum of squared residuals</strong>.</li>
 <li class="fragment">This quantity is called the <strong>Residual Sum of Squares</strong> (RSS).</li>
 <li class="fragment">Because we minimise squared residuals: <strong>Ordinary Least Squares (OLS)</strong>.</li>
-</ul>
-</div>
-</section>
-<section id="whats-coming-next" class="slide level2">
-<h2>What’s coming next</h2>
-<div class="presenter-space">
-<ul>
-<li class="fragment">We now have an estimated slope: −1.13.</li>
-<li class="fragment">But could this reflect <strong>chance variation</strong> rather than a real relationship?</li>
-<li class="fragment"><strong>C20</strong> covers inference for the slope: standard errors, confidence intervals, p-values.</li>
 </ul>
 </div>
 </section>
@@ -299,7 +289,7 @@
 <ul>
 <li class="fragment">Every regression result you read in a paper rests on these calculations.</li>
 <li class="fragment">Knowing what the slope captures helps you evaluate whether it makes sense.</li>
-<li class="fragment">OLS is the standard estimation method across political science and economics.</li>
+<li class="fragment">OLS is the standard estimation method across the social sciences.</li>
 </ul>
 </div>
 

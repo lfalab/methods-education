@@ -466,6 +466,12 @@ window.Quarto = {
  <span class="menu-text">R-squared</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../slides/videos-stata/regression-stata.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bivariate Regression in Stata</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -489,7 +495,6 @@ window.Quarto = {
   <li><a href="#the-p-value-for-the-slope" id="toc-the-p-value-for-the-slope" class="nav-link" data-scroll-target="#the-p-value-for-the-slope">The p-value for the slope</a></li>
   <li><a href="#the-decision-rule" id="toc-the-decision-rule" class="nav-link" data-scroll-target="#the-decision-rule">The decision rule</a></li>
   <li><a href="#confidence-intervals-for-the-slope" id="toc-confidence-intervals-for-the-slope" class="nav-link" data-scroll-target="#confidence-intervals-for-the-slope">Confidence intervals for the slope</a></li>
-  <li><a href="#p-values-and-cis-always-agree" id="toc-p-values-and-cis-always-agree" class="nav-link" data-scroll-target="#p-values-and-cis-always-agree">P-values and CIs always agree</a></li>
   <li><a href="#brexit-results-applying-the-logic" id="toc-brexit-results-applying-the-logic" class="nav-link" data-scroll-target="#brexit-results-applying-the-logic">Brexit results: applying the logic</a></li>
   <li><a href="#brexit-results-the-decision" id="toc-brexit-results-the-decision" class="nav-link" data-scroll-target="#brexit-results-the-decision">Brexit results: the decision</a></li>
   <li><a href="#what-makes-a-result-more-significant" id="toc-what-makes-a-result-more-significant" class="nav-link" data-scroll-target="#what-makes-a-result-more-significant">What makes a result more significant?</a></li>
@@ -514,7 +519,6 @@ window.Quarto = {
 <li>Translate a verbal hypothesis into a <strong>regression hypothesis</strong>.</li>
 <li>Define the <strong>p-value for a slope estimate</strong>.</li>
 <li>Use a <strong>confidence interval</strong> for the slope to test the null hypothesis.</li>
-<li>Apply the decision rule to <strong>Brexit regression results</strong>.</li>
 </ul>
 </div>
 <hr>
@@ -522,10 +526,11 @@ window.Quarto = {
 <section id="from-description-to-inference" class="level2">
 <h2 class="anchored" data-anchor-id="from-description-to-inference">From description to inference</h2>
 <div class="presenter-space">
+<p><span class="math display">\[\widehat{\text{Leave}} = 84 - 1.13 \times \text{HigherEd}\]</span></p>
 <ul>
-<li>C18 and C19: we estimated a slope of <strong>−1.13</strong>.</li>
+<li>We estimated a slope of <strong>−1.13</strong>.</li>
 <li>But could this reflect <strong>chance variation</strong> rather than a real relationship?</li>
-<li>This video: how do we test whether the slope is <strong>statistically significant</strong>?</li>
+<li>How do we test whether the slope is <strong>statistically significant</strong>?</li>
 </ul>
 </div>
 <hr>
@@ -569,7 +574,6 @@ window.Quarto = {
 <ul>
 <li>We estimated <span class="math inline">\(\hat{\beta}_1 = -1.13\)</span>.</li>
 <li>Is this far enough from zero to <strong>rule out chance</strong>?</li>
-<li>This is what the significance test answers.</li>
 </ul>
 </div>
 <hr>
@@ -578,8 +582,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="the-p-value-for-the-slope">The p-value for the slope</h2>
 <div class="presenter-space">
 <ul>
-<li>The p-value is the probability of observing a slope <strong>at least as extreme as −1.13</strong>…</li>
-<li>…if the true slope were <strong>zero</strong> (i.e., if H0 were true).</li>
+<li>The p-value is the probability of observing a slope <strong>at least as extreme as −1.13</strong> if the true slope were <strong>zero</strong> (i.e., if H0 were true).</li>
 <li>A small p-value means the result is unlikely to be a chance finding.</li>
 </ul>
 </div>
@@ -607,40 +610,12 @@ window.Quarto = {
 </div>
 <hr>
 </section>
-<section id="p-values-and-cis-always-agree" class="level2">
-<h2 class="anchored" data-anchor-id="p-values-and-cis-always-agree">P-values and CIs always agree</h2>
-<div class="presenter-space">
-<ul>
-<li>The same information goes into both calculations.</li>
-<li>They will <strong>never contradict each other</strong>.</li>
-</ul>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>If…</th>
-<th>Then…</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>95% CI does not include 0</td>
-<td>p &lt; 0.05</td>
-</tr>
-<tr class="even">
-<td>95% CI includes 0</td>
-<td>p &gt; 0.05</td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr>
-</section>
 <section id="brexit-results-applying-the-logic" class="level2">
 <h2 class="anchored" data-anchor-id="brexit-results-applying-the-logic">Brexit results: applying the logic</h2>
 <div class="presenter-space">
 <ul>
 <li>Estimated slope: <span class="math inline">\(\hat{\beta}_1 = -1.13\)</span> (negative, as H1 predicted).</li>
-<li>95% CI for the slope does <strong>not include zero</strong>.</li>
+<li>95% CI for the slope: <strong>[-1.42, -0.84]</strong>.</li>
 <li>p-value is <strong>below 0.05</strong>.</li>
 </ul>
 </div>
@@ -674,7 +649,7 @@ window.Quarto = {
 <div class="presenter-space">
 <ul>
 <li>H1 says <span class="math inline">\(\beta_1 \neq 0\)</span>; H0 says <span class="math inline">\(\beta_1 = 0\)</span>.</li>
-<li>The p-value: probability of our slope <strong>if H0 were true</strong>.</li>
+<li>The p-value: probability of a slope at least as extreme as ours, <strong>if H0 were true</strong>.</li>
 <li>A 95% CI excluding zero is equivalent to p &lt; 0.05.</li>
 </ul>
 </div>
@@ -682,9 +657,8 @@ window.Quarto = {
 <div class="presenter-space">
 <p><strong>Why this matters:</strong></p>
 <ul>
-<li>Every regression table you read reports slopes, CIs, and p-values.</li>
+<li>Every regression table you read reports slopes and p-values.</li>
 <li>This video gives you the logic needed to interpret them correctly.</li>
-<li>The next video adds one more key quantity: <strong>R-squared</strong>.</li>
 </ul>
 </div>
 

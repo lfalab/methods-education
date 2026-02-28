@@ -466,6 +466,12 @@ window.Quarto = {
  <span class="menu-text">R-squared</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../slides/videos-stata/regression-stata.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bivariate Regression in Stata</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -481,7 +487,7 @@ window.Quarto = {
   <li><a href="#regression-analysis-introduction" id="toc-regression-analysis-introduction" class="nav-link active" data-scroll-target="#regression-analysis-introduction">Regression Analysis: Introduction</a>
   <ul class="collapse">
   <li><a href="#youll-learn-to" id="toc-youll-learn-to" class="nav-link" data-scroll-target="#youll-learn-to">You’ll learn to</a></li>
-  <li><a href="#where-we-left-off" id="toc-where-we-left-off" class="nav-link" data-scroll-target="#where-we-left-off">Where we left off</a></li>
+  <li><a href="#scatterplots-and-regression-lines" id="toc-scatterplots-and-regression-lines" class="nav-link" data-scroll-target="#scatterplots-and-regression-lines">Scatterplots and regression lines</a></li>
   <li><a href="#linear-functions-the-general-form" id="toc-linear-functions-the-general-form" class="nav-link" data-scroll-target="#linear-functions-the-general-form">Linear functions: the general form</a></li>
   <li><a href="#a-simple-example" id="toc-a-simple-example" class="nav-link" data-scroll-target="#a-simple-example">A simple example</a></li>
   <li><a href="#a-simple-example-1" id="toc-a-simple-example-1" class="nav-link" data-scroll-target="#a-simple-example-1">A simple example</a></li>
@@ -493,7 +499,6 @@ window.Quarto = {
   <li><a href="#the-regression-equation" id="toc-the-regression-equation" class="nav-link" data-scroll-target="#the-regression-equation">The regression equation</a></li>
   <li><a href="#generating-predictions" id="toc-generating-predictions" class="nav-link" data-scroll-target="#generating-predictions">Generating predictions</a></li>
   <li><a href="#predictions-are-approximations" id="toc-predictions-are-approximations" class="nav-link" data-scroll-target="#predictions-are-approximations">Predictions are approximations</a></li>
-  <li><a href="#whats-coming-next" id="toc-whats-coming-next" class="nav-link" data-scroll-target="#whats-coming-next">What’s coming next</a></li>
   <li><a href="#recap" id="toc-recap" class="nav-link" data-scroll-target="#recap">Recap</a></li>
   </ul></li>
   </ul>
@@ -519,12 +524,16 @@ window.Quarto = {
 </div>
 <hr>
 </section>
-<section id="where-we-left-off" class="level2">
-<h2 class="anchored" data-anchor-id="where-we-left-off">Where we left off</h2>
+<section id="scatterplots-and-regression-lines" class="level2">
+<h2 class="anchored" data-anchor-id="scatterplots-and-regression-lines">Scatterplots and regression lines</h2>
 <div class="presenter-space">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/brexit_educ_scatter_line.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%" data-fig-cap=""></p>
+</figure>
+</div>
 <ul>
 <li>Scatterplots show the relationship between two numeric variables.</li>
-<li>We added a <strong>line of best fit</strong> (trend line) to summarise that relationship.</li>
 <li>That line is a <strong>regression line</strong> — and it comes from an equation.</li>
 </ul>
 </div>
@@ -545,6 +554,11 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="a-simple-example">A simple example</h2>
 <div class="presenter-space">
 <p><span class="math display">\[y = 5 + 2x\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/linear-function.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:33.0%" data-fig-cap=""></p>
+</figure>
+</div>
 <ul>
 <li>If x = 0, y = 5 + 2(0) = <strong>5</strong></li>
 <li>If x = 1, y = 5 + 2(1) = <strong>7</strong></li>
@@ -557,9 +571,13 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="a-simple-example-1">A simple example</h2>
 <div class="presenter-space">
 <p><span class="math display">\[y = 5 + 2x\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/linear-function.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:33.0%" data-fig-cap=""></p>
+</figure>
+</div>
 <ul>
 <li>Each value of x gives us a predicted value of y.</li>
-<li>These predictions trace out a straight line on a plot.</li>
 </ul>
 </div>
 <hr>
@@ -589,7 +607,11 @@ window.Quarto = {
 <section id="education-and-brexit" class="level2">
 <h2 class="anchored" data-anchor-id="education-and-brexit">Education and Brexit</h2>
 <div class="presenter-space">
-<p><img src="../../assets/brexit_educ_scatter_line.jpg" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/brexit_educ_scatter_line.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" data-fig-cap=""></p>
+</figure>
+</div>
 </div>
 <hr>
 </section>
@@ -648,17 +670,6 @@ window.Quarto = {
 </div>
 <hr>
 </section>
-<section id="whats-coming-next" class="level2">
-<h2 class="anchored" data-anchor-id="whats-coming-next">What’s coming next</h2>
-<div class="presenter-space">
-<ul>
-<li><strong>C19:</strong> How to interpret the slope precisely — and what it does and does not mean.</li>
-<li><strong>C20:</strong> Inference — confidence intervals and p-values for regression estimates.</li>
-<li><strong>C21:</strong> R-squared — how much variation in y does the model explain?</li>
-</ul>
-</div>
-<hr>
-</section>
 <section id="recap" class="level2">
 <h2 class="anchored" data-anchor-id="recap">Recap</h2>
 <div class="presenter-space">
@@ -672,8 +683,7 @@ window.Quarto = {
 <div class="presenter-space">
 <p><strong>Why this matters:</strong></p>
 <ul>
-<li>Regression is the workhorse of quantitative political science.</li>
-<li>It turns a visual pattern in a scatterplot into a precise, testable statement.</li>
+<li>Regression turns a visual pattern in a scatterplot into a precise, testable statement.</li>
 <li>Everything we do from here builds on this foundation.</li>
 </ul>
 </div>

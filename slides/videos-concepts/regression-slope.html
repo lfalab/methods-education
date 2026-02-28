@@ -466,6 +466,12 @@ window.Quarto = {
  <span class="menu-text">R-squared</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../slides/videos-stata/regression-stata.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bivariate Regression in Stata</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -486,15 +492,14 @@ window.Quarto = {
   <li><a href="#the-components-of-a-regression-equation-1" id="toc-the-components-of-a-regression-equation-1" class="nav-link" data-scroll-target="#the-components-of-a-regression-equation-1">The components of a regression equation</a></li>
   <li><a href="#where-does-the-slope-come-from" id="toc-where-does-the-slope-come-from" class="nav-link" data-scroll-target="#where-does-the-slope-come-from">Where does the slope come from?</a></li>
   <li><a href="#intuition-behind-the-formula" id="toc-intuition-behind-the-formula" class="nav-link" data-scroll-target="#intuition-behind-the-formula">Intuition behind the formula</a></li>
-  <li><a href="#you-do-not-need-to-compute-this-by-hand" id="toc-you-do-not-need-to-compute-this-by-hand" class="nav-link" data-scroll-target="#you-do-not-need-to-compute-this-by-hand">You do not need to compute this by hand</a></li>
   <li><a href="#interpreting-the-slope" id="toc-interpreting-the-slope" class="nav-link" data-scroll-target="#interpreting-the-slope">Interpreting the slope</a></li>
   <li><a href="#slope-brexit-example" id="toc-slope-brexit-example" class="nav-link" data-scroll-target="#slope-brexit-example">Slope: Brexit example</a></li>
   <li><a href="#where-does-the-intercept-come-from" id="toc-where-does-the-intercept-come-from" class="nav-link" data-scroll-target="#where-does-the-intercept-come-from">Where does the intercept come from?</a></li>
   <li><a href="#interpreting-the-intercept" id="toc-interpreting-the-intercept" class="nav-link" data-scroll-target="#interpreting-the-intercept">Interpreting the intercept</a></li>
   <li><a href="#intercept-brexit-example" id="toc-intercept-brexit-example" class="nav-link" data-scroll-target="#intercept-brexit-example">Intercept: Brexit example</a></li>
   <li><a href="#residuals-the-line-is-never-perfect" id="toc-residuals-the-line-is-never-perfect" class="nav-link" data-scroll-target="#residuals-the-line-is-never-perfect">Residuals: the line is never perfect</a></li>
+  <li><a href="#residuals-the-line-is-never-perfect-1" id="toc-residuals-the-line-is-never-perfect-1" class="nav-link" data-scroll-target="#residuals-the-line-is-never-perfect-1">Residuals: the line is never perfect</a></li>
   <li><a href="#ordinary-least-squares" id="toc-ordinary-least-squares" class="nav-link" data-scroll-target="#ordinary-least-squares">Ordinary Least Squares</a></li>
-  <li><a href="#whats-coming-next" id="toc-whats-coming-next" class="nav-link" data-scroll-target="#whats-coming-next">What’s coming next</a></li>
   <li><a href="#recap" id="toc-recap" class="nav-link" data-scroll-target="#recap">Recap</a></li>
   </ul></li>
   </ul>
@@ -514,9 +519,8 @@ window.Quarto = {
 <div class="presenter-space">
 <ul>
 <li>Identify the <strong>intercept</strong> and <strong>slope</strong> in a regression equation.</li>
-<li>Explain intuitively where the <strong>slope comes from</strong>.</li>
+<li>Explain where the <strong>slope comes from</strong>.</li>
 <li>Interpret the slope and intercept in <strong>substantive terms</strong>.</li>
-<li>Understand why regression is called <strong>Ordinary Least Squares</strong>.</li>
 </ul>
 </div>
 <hr>
@@ -572,16 +576,6 @@ window.Quarto = {
 <li>If X and Y tend to move in the <strong>same direction</strong>: positive slope.</li>
 <li>If X and Y tend to move in <strong>opposite directions</strong>: negative slope.</li>
 <li>We scale by Var(X) so the slope is expressed in the <strong>right units</strong>.</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="you-do-not-need-to-compute-this-by-hand" class="level2">
-<h2 class="anchored" data-anchor-id="you-do-not-need-to-compute-this-by-hand">You do not need to compute this by hand</h2>
-<div class="presenter-space">
-<ul>
-<li>Stata calculates the slope from the data automatically.</li>
-<li>The formula tells you <strong>what the slope captures</strong> — not how to derive it.</li>
 </ul>
 </div>
 <hr>
@@ -645,6 +639,17 @@ window.Quarto = {
 <section id="residuals-the-line-is-never-perfect" class="level2">
 <h2 class="anchored" data-anchor-id="residuals-the-line-is-never-perfect">Residuals: the line is never perfect</h2>
 <div class="presenter-space">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/brexit_educ_scatter_line.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" data-fig-cap=""></p>
+</figure>
+</div>
+</div>
+<hr>
+</section>
+<section id="residuals-the-line-is-never-perfect-1" class="level2">
+<h2 class="anchored" data-anchor-id="residuals-the-line-is-never-perfect-1">Residuals: the line is never perfect</h2>
+<div class="presenter-space">
 <ul>
 <li>Each region’s <strong>actual</strong> Leave vote differs from its <strong>predicted</strong> value.</li>
 <li>The vertical distance from a dot to the line is the <strong>residual</strong> (or error).</li>
@@ -664,17 +669,6 @@ window.Quarto = {
 </div>
 <hr>
 </section>
-<section id="whats-coming-next" class="level2">
-<h2 class="anchored" data-anchor-id="whats-coming-next">What’s coming next</h2>
-<div class="presenter-space">
-<ul>
-<li>We now have an estimated slope: −1.13.</li>
-<li>But could this reflect <strong>chance variation</strong> rather than a real relationship?</li>
-<li><strong>C20</strong> covers inference for the slope: standard errors, confidence intervals, p-values.</li>
-</ul>
-</div>
-<hr>
-</section>
 <section id="recap" class="level2">
 <h2 class="anchored" data-anchor-id="recap">Recap</h2>
 <div class="presenter-space">
@@ -690,7 +684,7 @@ window.Quarto = {
 <ul>
 <li>Every regression result you read in a paper rests on these calculations.</li>
 <li>Knowing what the slope captures helps you evaluate whether it makes sense.</li>
-<li>OLS is the standard estimation method across political science and economics.</li>
+<li>OLS is the standard estimation method across the social sciences.</li>
 </ul>
 </div>
 

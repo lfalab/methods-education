@@ -466,6 +466,12 @@ window.Quarto = {
  <span class="menu-text">R-squared</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../slides/videos-stata/regression-stata.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bivariate Regression in Stata</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -481,11 +487,10 @@ window.Quarto = {
   <li><a href="#r-squared" id="toc-r-squared" class="nav-link active" data-scroll-target="#r-squared">R-squared</a>
   <ul class="collapse">
   <li><a href="#youll-learn-to" id="toc-youll-learn-to" class="nav-link" data-scroll-target="#youll-learn-to">You’ll learn to</a></li>
-  <li><a href="#the-question-this-video-answers" id="toc-the-question-this-video-answers" class="nav-link" data-scroll-target="#the-question-this-video-answers">The question this video answers</a></li>
-  <li><a href="#what-r-squared-measures" id="toc-what-r-squared-measures" class="nav-link" data-scroll-target="#what-r-squared-measures">What R-squared measures</a></li>
+  <li><a href="#what-the-r-squared-measures" id="toc-what-the-r-squared-measures" class="nav-link" data-scroll-target="#what-the-r-squared-measures">What the R-squared measures</a></li>
   <li><a href="#the-formula" id="toc-the-formula" class="nav-link" data-scroll-target="#the-formula">The formula</a></li>
-  <li><a href="#ss_res-residual-sum-of-squares" id="toc-ss_res-residual-sum-of-squares" class="nav-link" data-scroll-target="#ss_res-residual-sum-of-squares"><span class="math inline">\(SS_{RES}\)</span>: Residual Sum of Squares</a></li>
-  <li><a href="#ss_tot-total-sum-of-squares" id="toc-ss_tot-total-sum-of-squares" class="nav-link" data-scroll-target="#ss_tot-total-sum-of-squares"><span class="math inline">\(SS_{TOT}\)</span>: Total Sum of Squares</a></li>
+  <li><a href="#residual-sum-of-squares" id="toc-residual-sum-of-squares" class="nav-link" data-scroll-target="#residual-sum-of-squares">Residual Sum of Squares</a></li>
+  <li><a href="#total-sum-of-squares" id="toc-total-sum-of-squares" class="nav-link" data-scroll-target="#total-sum-of-squares">Total Sum of Squares</a></li>
   <li><a href="#the-logic-of-the-formula" id="toc-the-logic-of-the-formula" class="nav-link" data-scroll-target="#the-logic-of-the-formula">The logic of the formula</a></li>
   <li><a href="#visual-intuition-low-r-squared" id="toc-visual-intuition-low-r-squared" class="nav-link" data-scroll-target="#visual-intuition-low-r-squared">Visual intuition: low R-squared</a></li>
   <li><a href="#visual-intuition-high-r-squared" id="toc-visual-intuition-high-r-squared" class="nav-link" data-scroll-target="#visual-intuition-high-r-squared">Visual intuition: high R-squared</a></li>
@@ -518,19 +523,8 @@ window.Quarto = {
 </div>
 <hr>
 </section>
-<section id="the-question-this-video-answers" class="level2">
-<h2 class="anchored" data-anchor-id="the-question-this-video-answers">The question this video answers</h2>
-<div class="presenter-space">
-<ul>
-<li>C18–C20: we estimated a slope and tested whether it differs from zero.</li>
-<li>A separate question: how <strong>useful</strong> is the model as a whole?</li>
-<li>R-squared answers: how much of the variation in y does x <strong>explain</strong>?</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="what-r-squared-measures" class="level2">
-<h2 class="anchored" data-anchor-id="what-r-squared-measures">What R-squared measures</h2>
+<section id="what-the-r-squared-measures" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-r-squared-measures">What the R-squared measures</h2>
 <div class="presenter-space">
 <ul>
 <li>R-squared is the <strong>proportion of variance</strong> in y explained by x.</li>
@@ -551,8 +545,8 @@ window.Quarto = {
 </div>
 <hr>
 </section>
-<section id="ss_res-residual-sum-of-squares" class="level2">
-<h2 class="anchored" data-anchor-id="ss_res-residual-sum-of-squares"><span class="math inline">\(SS_{RES}\)</span>: Residual Sum of Squares</h2>
+<section id="residual-sum-of-squares" class="level2">
+<h2 class="anchored" data-anchor-id="residual-sum-of-squares">Residual Sum of Squares</h2>
 <div class="presenter-space">
 <ul>
 <li>Each residual is the <strong>vertical distance</strong> from a dot to the regression line.</li>
@@ -562,8 +556,8 @@ window.Quarto = {
 </div>
 <hr>
 </section>
-<section id="ss_tot-total-sum-of-squares" class="level2">
-<h2 class="anchored" data-anchor-id="ss_tot-total-sum-of-squares"><span class="math inline">\(SS_{TOT}\)</span>: Total Sum of Squares</h2>
+<section id="total-sum-of-squares" class="level2">
+<h2 class="anchored" data-anchor-id="total-sum-of-squares">Total Sum of Squares</h2>
 <div class="presenter-space">
 <ul>
 <li>Each observation’s distance from the <strong>mean of y</strong>, squared and summed.</li>
@@ -588,9 +582,13 @@ window.Quarto = {
 <section id="visual-intuition-low-r-squared" class="level2">
 <h2 class="anchored" data-anchor-id="visual-intuition-low-r-squared">Visual intuition: low R-squared</h2>
 <div class="presenter-space">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/low_rsquared.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:30.0%" data-fig-cap=""></p>
+</figure>
+</div>
 <ul>
 <li>Dots are <strong>widely scattered</strong> around the regression line.</li>
-<li>Residuals are large — the model misses most observations badly.</li>
 <li><span class="math inline">\(SS_{RES} \approx SS_{TOT}\)</span> → <strong>R² near 0</strong>.</li>
 </ul>
 </div>
@@ -599,9 +597,13 @@ window.Quarto = {
 <section id="visual-intuition-high-r-squared" class="level2">
 <h2 class="anchored" data-anchor-id="visual-intuition-high-r-squared">Visual intuition: high R-squared</h2>
 <div class="presenter-space">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/high_rsquared.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:30.0%" data-fig-cap=""></p>
+</figure>
+</div>
 <ul>
 <li>Dots cluster <strong>tightly</strong> around the regression line.</li>
-<li>Residuals are small — predictions are close to the observed values.</li>
 <li><span class="math inline">\(SS_{RES} \ll SS_{TOT}\)</span> → <strong>R² near 1</strong>.</li>
 </ul>
 </div>
@@ -612,8 +614,7 @@ window.Quarto = {
 <div class="presenter-space">
 <ul>
 <li>In the Leave vote on higher education regression: <strong>R² ≈ 0.30</strong>.</li>
-<li>About <strong>30%</strong> of the variation in Leave vote share across UK regions…</li>
-<li>…is explained by differences in <strong>higher education share</strong>.</li>
+<li>About <strong>30%</strong> of the variation in Leave vote share across UK regions is explained by differences in <strong>higher education share</strong>.</li>
 </ul>
 </div>
 <hr>
@@ -645,9 +646,8 @@ window.Quarto = {
 <div class="presenter-space">
 <ul>
 <li>A slope can be <strong>statistically significant</strong> with a low R².</li>
-<li>Statistical significance (C20): is the slope distinguishable from zero?</li>
-<li>R-squared (C21): how much of y does the model explain?</li>
-<li>These are <strong>different questions</strong>.</li>
+<li>Statistical significance: is the slope distinguishable from zero?</li>
+<li>R-squared: how much of y does the model explain?</li>
 </ul>
 </div>
 <hr>
@@ -657,7 +657,6 @@ window.Quarto = {
 <div class="presenter-space">
 <ul>
 <li>R² = proportion of variance in y explained by x; always between 0 and 1.</li>
-<li>Brexit model: R² ≈ 0.30 — education explains <strong>30%</strong> of Leave vote variation.</li>
 <li>High R² means good fit; it does <strong>not</strong> imply causality.</li>
 </ul>
 </div>
@@ -666,7 +665,7 @@ window.Quarto = {
 <p><strong>Why this matters:</strong></p>
 <ul>
 <li>R-squared tells you how much work your model is doing.</li>
-<li>In political science, bivariate R² values are often modest — that is expected.</li>
+<li>Bivariate R² values are often modest — that is expected.</li>
 <li>Evaluating fit is part of responsible, transparent quantitative research.</li>
 </ul>
 </div>

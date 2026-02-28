@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <title>R-squared</title>
+  <title>Bivariate Regression in Stata</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -27,8 +27,74 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-7433acd2865db5fa81269247cd6920be.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-f88d935cd01326925f73dc62b106448c.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -127,157 +193,231 @@
 
 
 <section>
-<section id="r-squared" class="title-slide slide level1 title-left center">
-<h1>R-squared</h1>
+<section id="bivariate-regression-in-stata" class="title-slide slide level1 title-left center">
+<h1>Bivariate Regression in Stata</h1>
 
 </section>
 <section id="youll-learn-to" class="slide level2">
 <h2>You’ll learn to</h2>
-<div class="presenter-space">
 <ul>
-<li class="fragment">Define <strong>R-squared</strong> and explain what it measures.</li>
-<li class="fragment">Interpret R-squared as a <strong>percentage of explained variance</strong>.</li>
-<li class="fragment">Understand what R-squared <strong>does and does not</strong> tell you.</li>
+<li>Run a <strong>bivariate regression</strong> in Stata.</li>
+<li>Read the output: <strong>slope, intercept, p-value, R-squared</strong>.</li>
+<li>Assess whether a regression result is <strong>statistically significant</strong>.</li>
 </ul>
-</div>
 </section>
-<section id="what-the-r-squared-measures" class="slide level2">
-<h2>What the R-squared measures</h2>
-<div class="presenter-space">
+<section id="download-the-brexit-regional-dataset-from-our-shared-folder" class="slide level2">
+<h2>Download the Brexit Regional dataset from our shared folder</h2>
 <ul>
-<li class="fragment">R-squared is the <strong>proportion of variance</strong> in y explained by x.</li>
-<li class="fragment">It always lies <strong>between 0 and 1</strong>.</li>
-<li class="fragment">Read it as a percentage: R² = 0.30 means <strong>30% of variance explained</strong>.</li>
+<li>Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a></li>
+<li>Click on <code>data-raw</code></li>
+<li>Download <code>Brexit_Regional.dta</code></li>
+<li>Save it into the <code>data-raw</code> folder on your computer</li>
 </ul>
-</div>
 </section>
-<section id="the-formula" class="slide level2">
-<h2>The formula</h2>
-<div class="presenter-space">
-<p><span class="math display">\[R^2 = 1 - \frac{SS_{RES}}{SS_{TOT}}\]</span></p>
+<section id="download-the-companion-do-file-for-this-activity" class="slide level2">
+<h2>Download the companion do-file for this activity</h2>
 <ul>
-<li class="fragment"><span class="math inline">\(SS_{RES}\)</span>: how much the model <strong>misses</strong>.</li>
-<li class="fragment"><span class="math inline">\(SS_{TOT}\)</span>: how much y <strong>varies in total</strong>.</li>
+<li>Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a></li>
+<li>Click on <code>do</code></li>
+<li>Download <code>regression-brexit.do</code></li>
+<li>Save it into the <code>do</code> folder on your computer</li>
 </ul>
-</div>
 </section>
-<section id="residual-sum-of-squares" class="slide level2">
-<h2>Residual Sum of Squares</h2>
-<div class="presenter-space">
+<section id="load-the-dataset" class="slide level2">
+<h2>Load the dataset</h2>
 <ul>
-<li class="fragment">Each residual is the <strong>vertical distance</strong> from a dot to the regression line.</li>
-<li class="fragment">We square each distance and sum them all up.</li>
-<li class="fragment">Large residuals → model predictions are <strong>often far off</strong>.</li>
+<li>Set the working directory to your project folder on your computer.</li>
+<li>Load the dataset.</li>
 </ul>
-</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a></a>cd <span class="st">"C:\Users\leona\OneDrive - King's College London\shared-project-folder"</span></span>
+<span id="cb1-2"><a></a></span>
+<span id="cb1-3"><a></a><span class="kw">use</span> <span class="st">"data-raw/Brexit_Regional.dta"</span>, <span class="kw">clear</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="total-sum-of-squares" class="slide level2">
-<h2>Total Sum of Squares</h2>
-<div class="presenter-space">
+<section id="read-through-the-do-file-comments-and-execute-the-commands" class="slide level2">
+<h2>Read through the do-file comments and execute the commands</h2>
 <ul>
-<li class="fragment">Each observation’s distance from the <strong>mean of y</strong>, squared and summed.</li>
-<li class="fragment">This is simply the <strong>variance of y</strong> — total spread in the outcome.</li>
-<li class="fragment">It is a baseline: how much y varies <strong>without any model</strong>.</li>
+<li>This do-file is your companion for running <strong>bivariate regressions</strong> in Stata.</li>
+<li>It covers <strong>two regressions</strong>: one significant, one not.</li>
 </ul>
-</div>
 </section>
-<section id="the-logic-of-the-formula" class="slide level2">
-<h2>The logic of the formula</h2>
-<div class="presenter-space">
-<p><span class="math display">\[R^2 = 1 - \frac{SS_{RES}}{SS_{TOT}}\]</span></p>
+<section id="from-inference-to-regression" class="slide level2">
+<h2>From inference to regression</h2>
 <ul>
-<li class="fragment">If the model fits well: <span class="math inline">\(SS_{RES}\)</span> is <strong>small</strong> relative to <span class="math inline">\(SS_{TOT}\)</span>.</li>
-<li class="fragment">The fraction is close to 0 → R² is <strong>close to 1</strong>.</li>
-<li class="fragment">If the model fits poorly: the fraction is close to 1 → R² is <strong>close to 0</strong>.</li>
+<li>Last week: we tested whether two groups differ in a mean or proportion.</li>
+<li>This week: we describe and test a <strong>linear relationship</strong> between two numeric variables.</li>
 </ul>
-</div>
 </section>
-<section id="visual-intuition-low-r-squared" class="slide level2">
-<h2>Visual intuition: low R-squared</h2>
-<div class="presenter-space">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../../assets/low_rsquared.png" class="quarto-figure quarto-figure-center" style="width:30.0%" data-fig-cap=""></p>
-</figure>
-</div>
+<section id="regression-1-education-and-the-leave-vote" class="slide level2">
+<h2>Regression 1: Education and the Leave vote</h2>
 <ul>
-<li class="fragment">Dots are <strong>widely scattered</strong> around the regression line.</li>
-<li class="fragment"><span class="math inline">\(SS_{RES} \approx SS_{TOT}\)</span> → <strong>R² near 0</strong>.</li>
+<li><strong>Research question:</strong> Do regions with higher education shares vote Leave less?</li>
+<li><strong>H0:</strong> No linear relationship between education share and Leave vote share.</li>
+<li><strong>H1:</strong> Higher education share is associated with a lower Leave vote share.</li>
 </ul>
-</div>
 </section>
-<section id="visual-intuition-high-r-squared" class="slide level2">
-<h2>Visual intuition: high R-squared</h2>
-<div class="presenter-space">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../../assets/high_rsquared.png" class="quarto-figure quarto-figure-center" style="width:30.0%" data-fig-cap=""></p>
-</figure>
-</div>
+<section id="step-1-produce-the-scatterplot" class="slide level2">
+<h2>Step 1: Produce the scatterplot</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a></a><span class="kw">twoway</span> (<span class="kw">scatter</span> leave_share share_high_skill) <span class="co">///</span></span>
+<span id="cb2-2"><a></a>       (<span class="kw">lfit</span> leave_share share_high_skill), leg(<span class="kw">off</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li class="fragment">Dots cluster <strong>tightly</strong> around the regression line.</li>
-<li class="fragment"><span class="math inline">\(SS_{RES} \ll SS_{TOT}\)</span> → <strong>R² near 1</strong>.</li>
+<li>Each dot is a UK region.</li>
+<li>The line shows the estimated linear relationship.</li>
 </ul>
-</div>
 </section>
-<section id="brexit-example" class="slide level2">
-<h2>Brexit example</h2>
-<div class="presenter-space">
+<section id="step-2-run-the-regression" class="slide level2">
+<h2>Step 2: Run the regression</h2>
 <ul>
-<li class="fragment">In the Leave vote on higher education regression: <strong>R² ≈ 0.30</strong>.</li>
-<li class="fragment">About <strong>30%</strong> of the variation in Leave vote share across UK regions is explained by differences in <strong>higher education share</strong>.</li>
+<li><code>regress</code> fits a bivariate regression: outcome on one predictor.</li>
 </ul>
-</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb3-1"><a></a><span class="kw">regress</span> leave_share share_high_skill</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li><code>leave_share</code> is the <strong>dependent variable</strong> (y).</li>
+<li><code>share_high_skill</code> is the <strong>independent variable</strong> (x).</li>
+</ul>
 </section>
-<section id="what-the-remaining-70-means" class="slide level2">
-<h2>What the remaining 70% means</h2>
-<div class="presenter-space">
-<ul>
-<li class="fragment">70% of the variation in Leave vote share is <strong>not explained</strong> by education.</li>
-<li class="fragment">Other factors matter: economic conditions, age, geography, identity.</li>
-<li class="fragment">A bivariate model captures <strong>one piece</strong> of a more complex picture.</li>
-</ul>
-</div>
+<section id="reading-the-output-the-coefficient-table" class="slide level2">
+<h2>Reading the output: the coefficient table</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Element</th>
+<th>What it tells you</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Coefficient</code></td>
+<td>Estimated slope (β̂₁) or intercept (β̂₀)</td>
+</tr>
+<tr class="even">
+<td><code>P&gt;|t|</code></td>
+<td>p-value</td>
+</tr>
+<tr class="odd">
+<td><code>[95% conf. interval]</code></td>
+<td>Plausible range for the true coefficient</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="what-r-squared-does-not-mean" class="slide level2">
-<h2>What R-squared does not mean</h2>
-<div class="presenter-space">
-<ul>
-<li class="fragment">A higher R² does <strong>not</strong> mean the relationship is causal.</li>
-<li class="fragment">A low R² does <strong>not</strong> mean the slope is wrong or unimportant.</li>
-<li class="fragment">R-squared measures <strong>fit</strong>, not truth.</li>
-</ul>
-</div>
+<section id="reading-the-output-top-right-block" class="slide level2">
+<h2>Reading the output: top-right block</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Element</th>
+<th>What it tells you</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Number of obs</code></td>
+<td>Sample size used in the regression</td>
+</tr>
+<tr class="even">
+<td><code>R-squared</code></td>
+<td>Share of variance in y explained by x</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="r-squared-and-statistical-significance" class="slide level2">
-<h2>R-squared and statistical significance</h2>
-<div class="presenter-space">
+<section id="writing-the-regression-equation" class="slide level2">
+<h2>Writing the regression equation</h2>
 <ul>
-<li class="fragment">A slope can be <strong>statistically significant</strong> with a low R².</li>
-<li class="fragment">Statistical significance: is the slope distinguishable from zero?</li>
-<li class="fragment">R-squared: how much of y does the model explain?</li>
+<li><code>_cons</code> ≈ 83.92 — this is the <strong>intercept</strong> (β̂₀).</li>
+<li><code>share_high_skill</code> ≈ −1.13 — this is the <strong>slope</strong> (β̂₁).</li>
 </ul>
-</div>
+<p><span class="math display">\[\widehat{\text{Leave}} = 83.92 - 1.13 \times \text{HigherEd}\]</span></p>
+</section>
+<section id="interpreting-the-slope" class="slide level2">
+<h2>Interpreting the slope</h2>
+<ul>
+<li>For each 1 percentage point increase in higher education share…</li>
+<li>…Leave vote share is expected to <strong>decrease by 1.13 percentage points</strong>.</li>
+<li>The negative sign confirms the <strong>direction</strong> seen in the scatterplot.</li>
+</ul>
+</section>
+<section id="assessing-statistical-significance" class="slide level2">
+<h2>Assessing statistical significance</h2>
+<ul>
+<li>p-value ≈ 0.000 → <strong>well below</strong> the 0.05 threshold.</li>
+<li>95% CI: [−1.42, −0.84] → <strong>does not include zero</strong>.</li>
+<li>We <strong>reject H0</strong>: the relationship is statistically significant.</li>
+</ul>
+</section>
+<section id="reporting-r-squared" class="slide level2">
+<h2>Reporting R-squared</h2>
+<ul>
+<li>R-squared ≈ <strong>0.30</strong>.</li>
+<li>About 30% of the variation in Leave vote share is explained by education share.</li>
+<li>The remaining 70% is explained by <strong>other factors</strong> not in this model.</li>
+</ul>
+</section>
+<section id="regression-2-unemployment-and-the-leave-vote" class="slide level2">
+<h2>Regression 2: Unemployment and the Leave vote</h2>
+<ul>
+<li><strong>Research question:</strong> Do regions with higher unemployment vote Leave more?</li>
+<li>Same procedure — one command change.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb4-1"><a></a><span class="kw">regress</span> leave_share unemployment</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="reading-the-output-non-significant-result" class="slide level2">
+<h2>Reading the output: non-significant result</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Element</th>
+<th>Value</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Slope</td>
+<td>+0.19</td>
+<td>Small positive estimate</td>
+</tr>
+<tr class="even">
+<td>p-value</td>
+<td>0.655</td>
+<td><strong>Much larger</strong> than 0.05</td>
+</tr>
+<tr class="odd">
+<td>95% CI</td>
+<td>[−0.64, +1.02]</td>
+<td><strong>Includes zero</strong></td>
+</tr>
+<tr class="even">
+<td>R-squared</td>
+<td>0.001</td>
+<td>Near-zero explanatory power</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="the-decision-rule-same-logic-different-outcome" class="slide level2">
+<h2>The decision rule: same logic, different outcome</h2>
+<ul>
+<li>95% CI includes zero → <strong>fail to reject H0</strong>.</li>
+<li>p-value = 0.655 → far above 0.05; result consistent with chance variation.</li>
+<li>R-squared ≈ 0 → unemployment explains almost <strong>none</strong> of the variation in Leave vote.</li>
+</ul>
 </section>
 <section id="recap" class="slide level2">
 <h2>Recap</h2>
-<div class="presenter-space">
 <ul>
-<li class="fragment">R² = proportion of variance in y explained by x; always between 0 and 1.</li>
-<li class="fragment">High R² means good fit; it does <strong>not</strong> imply causality.</li>
+<li><code>regress y x</code> fits a bivariate regression and produces slope, intercept, p-value, CI, and R-squared.</li>
+<li>If the 95% CI for the slope <strong>excludes zero</strong>, reject the null hypothesis.</li>
+<li>R-squared measures how much variation in y is <strong>explained</strong> by x.</li>
 </ul>
-</div>
 </section>
 <section class="slide level2">
 
-<div class="presenter-space">
 <p><strong>Why this matters:</strong></p>
 <ul>
-<li class="fragment">R-squared tells you how much work your model is doing.</li>
-<li class="fragment">Bivariate R² values are often modest — that is expected.</li>
-<li class="fragment">Evaluating fit is part of responsible, transparent quantitative research.</li>
+<li class="fragment">Regression is the core tool of quantitative social science.</li>
+<li class="fragment">Reading output correctly is an essential skill.</li>
 </ul>
-</div>
 
 
 </section></section>
