@@ -1,0 +1,276 @@
+---
+pagetitle: "Bivariate Regression in Stata"
+class: lecture
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: regression-stata
+  revealjs:
+    output-file: regression-stata-slides
+---
+
+# Bivariate Regression in Stata {.title-left}
+
+------------------------------------------------------------------------
+
+## You'll learn to
+
+::: nonincremental
+
+-   Run a **bivariate regression** in Stata.
+-   Read the output: **slope, intercept, p-value, R-squared**.
+-   Assess whether a regression result is **statistically significant**.
+
+:::
+
+------------------------------------------------------------------------
+
+## Download the Brexit Regional dataset from our shared folder
+
+::: nonincremental
+
+-   Access our [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE)
+-   Click on ``data-raw``
+-   Download ``Brexit_Regional.dta``
+-   Save it into the ``data-raw`` folder on your computer
+
+:::
+
+------------------------------------------------------------------------
+
+## Download the companion do-file for this activity
+
+::: nonincremental
+
+-   Access our [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE)
+-   Click on ``do``
+-   Download ``regression-brexit.do``
+-   Save it into the ``do`` folder on your computer
+
+:::
+
+------------------------------------------------------------------------
+
+## Load the dataset
+
+::: nonincremental
+
+- Set the working directory to your project folder on your computer.
+- Load the dataset.
+
+```stata
+cd "C:\Users\leona\OneDrive - King's College London\shared-project-folder"
+
+use "data-raw/Brexit_Regional.dta", clear
+```
+
+:::
+
+------------------------------------------------------------------------
+
+## Read through the do-file comments and execute the commands
+
+::: nonincremental
+
+- This do-file is your companion for running **bivariate regressions** in Stata.
+- It covers **two regressions**: one significant, one not.
+
+:::
+
+------------------------------------------------------------------------
+
+## From inference to regression
+
+::: nonincremental
+
+- Last week: we tested whether two groups differ in a mean or proportion.
+- This week: we describe and test a **linear relationship** between two numeric variables.
+
+:::
+
+------------------------------------------------------------------------
+
+## Regression 1: Education and the Leave vote
+
+::: nonincremental
+
+- **Research question:** Do regions with higher education shares vote Leave less?
+- **H0:** No linear relationship between education share and Leave vote share.
+- **H1:** Higher education share is associated with a lower Leave vote share.
+
+:::
+
+------------------------------------------------------------------------
+
+## Step 1: Produce the scatterplot
+
+::: nonincremental
+
+```stata
+twoway (scatter leave_share share_high_skill) ///
+       (lfit leave_share share_high_skill), leg(off)
+```
+
+- Each dot is a UK region.
+- The line shows the estimated linear relationship.
+
+:::
+
+------------------------------------------------------------------------
+
+## Step 2: Run the regression
+
+::: nonincremental
+
+- ``regress`` fits a bivariate regression: outcome on one predictor.
+
+```stata
+regress leave_share share_high_skill
+```
+
+- ``leave_share`` is the **dependent variable** (y).
+- ``share_high_skill`` is the **independent variable** (x).
+
+:::
+
+------------------------------------------------------------------------
+
+## Reading the output: the coefficient table
+
+::: nonincremental
+
+| Element | What it tells you |
+|---|---|
+| ``Coefficient`` | Estimated slope (β̂₁) or intercept (β̂₀) |
+| ``Std. err.`` | Uncertainty around the estimate |
+| ``t`` | Test statistic (coefficient ÷ std. err.) |
+| ``P>|t|`` | p-value: probability of this slope if H0 were true |
+| ``[95% conf. interval]`` | Plausible range for the true coefficient |
+
+:::
+
+------------------------------------------------------------------------
+
+## Reading the output: top-right block
+
+::: nonincremental
+
+| Element | What it tells you |
+|---|---|
+| ``Number of obs`` | Sample size used in the regression |
+| ``R-squared`` | Share of variance in y explained by x |
+
+:::
+
+------------------------------------------------------------------------
+
+## Writing the regression equation
+
+::: nonincremental
+
+- ``_cons`` ≈ 83.92 — this is the **intercept** (β̂₀).
+- ``share_high_skill`` ≈ −1.13 — this is the **slope** (β̂₁).
+
+$$\widehat{\text{Leave}} = 83.92 - 1.13 \times \text{HigherEd}$$
+
+:::
+
+------------------------------------------------------------------------
+
+## Interpreting the slope
+
+::: nonincremental
+
+- For each 1 percentage point increase in higher education share...
+- ...Leave vote share is expected to **decrease by 1.13 percentage points**.
+- The negative sign confirms the **direction** seen in the scatterplot.
+
+:::
+
+------------------------------------------------------------------------
+
+## Assessing statistical significance
+
+::: nonincremental
+
+- p-value ≈ 0.000 → **well below** the 0.05 threshold.
+- 95% CI: [−1.42, −0.84] → **does not include zero**.
+- We **reject H0**: the relationship is statistically significant.
+
+:::
+
+------------------------------------------------------------------------
+
+## Reporting R-squared
+
+::: nonincremental
+
+- R-squared ≈ **0.30**.
+- About 30% of the variation in Leave vote share is explained by education share.
+- The remaining 70% is explained by **other factors** not in this model.
+
+:::
+
+------------------------------------------------------------------------
+
+## Regression 2: Unemployment and the Leave vote
+
+::: nonincremental
+
+- **Research question:** Do regions with higher unemployment vote Leave more?
+- Same procedure — one command change.
+
+```stata
+regress leave_share unemployment
+```
+
+:::
+
+------------------------------------------------------------------------
+
+## Reading the output: non-significant result
+
+::: nonincremental
+
+| Element | Value | Interpretation |
+|---|---|---|
+| Slope | +0.19 | Small positive estimate |
+| p-value | 0.655 | **Much larger** than 0.05 |
+| 95% CI | [−0.64, +1.02] | **Includes zero** |
+| R-squared | 0.001 | Near-zero explanatory power |
+
+:::
+
+------------------------------------------------------------------------
+
+## The decision rule: same logic, different outcome
+
+::: nonincremental
+
+- 95% CI includes zero → **fail to reject H0**.
+- p-value = 0.655 → far above 0.05; result consistent with chance variation.
+- R-squared ≈ 0 → unemployment explains almost **none** of the variation in Leave vote.
+
+:::
+
+------------------------------------------------------------------------
+
+## Recap
+
+::: nonincremental
+
+-   ``regress y x`` fits a bivariate regression and produces slope, intercept, p-value, CI, and R-squared.
+-   If the 95% CI for the slope **excludes zero**, reject the null hypothesis.
+-   R-squared measures how much variation in y is **explained** by x.
+
+:::
+
+------------------------------------------------------------------------
+
+**Why this matters:**
+
+- Regression is the core tool of quantitative political science.
+- Reading output correctly — slope, significance, and fit — is essential for PS2 and beyond.
+- The same logic applies whether the result is significant or not.
