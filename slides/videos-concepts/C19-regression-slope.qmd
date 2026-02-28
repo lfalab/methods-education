@@ -19,7 +19,7 @@ format:
 
 ::: presenter-space
 -   Identify the **intercept** and **slope** in a regression equation.
--   Explain intuitively where the **slope comes from**.
+-   Explain where the **slope comes from**.
 -   Interpret the slope and intercept in **substantive terms**.
 :::
 

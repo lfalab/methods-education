@@ -144,9 +144,7 @@ regress leave_share share_high_skill
 | Element | What it tells you |
 |---|---|
 | ``Coefficient`` | Estimated slope (β̂₁) or intercept (β̂₀) |
-| ``Std. err.`` | Uncertainty around the estimate |
-| ``t`` | Test statistic (coefficient ÷ std. err.) |
-| ``P>|t|`` | p-value: probability of this slope if H0 were true |
+| ``P>|t|`` | p-value |
 | ``[95% conf. interval]`` | Plausible range for the true coefficient |
 
 :::
@@ -271,6 +269,5 @@ regress leave_share unemployment
 
 **Why this matters:**
 
-- Regression is the core tool of quantitative political science.
-- Reading output correctly — slope, significance, and fit — is essential for PS2 and beyond.
-- The same logic applies whether the result is significant or not.
+- Regression is the core tool of quantitative social science.
+- Reading output correctly is an essential skill.

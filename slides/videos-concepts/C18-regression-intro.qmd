@@ -25,11 +25,12 @@ format:
 
 ------------------------------------------------------------------------
 
-## Where we left off
+## Scatterplots and regression lines
 
 ::: presenter-space
+![](../../assets/brexit_educ_scatter_line.jpg){fig-cap="" fig-align="center" width="40%"}
+
 -   Scatterplots show the relationship between two numeric variables.
--   We added a **line of best fit** (trend line) to summarise that relationship.
 -   That line is a **regression line** — and it comes from an equation.
 :::
 
@@ -51,7 +52,7 @@ $$y = a + bx$$
 ::: presenter-space
 $$y = 5 + 2x$$
 
-![](../../assets/linear-function.png){fig-cap="" fig-align="center" width="70%"}
+![](../../assets/linear-function.png){fig-cap="" fig-align="center" width="33%"}
 
 -   If x = 0, y = 5 + 2(0) = **5**
 -   If x = 1, y = 5 + 2(1) = **7**
@@ -65,10 +66,10 @@ $$y = 5 + 2x$$
 ::: presenter-space
 $$y = 5 + 2x$$
 
-![](../../assets/linear-function.png){fig-cap="" fig-align="center" width="70%"}
+![](../../assets/linear-function.png){fig-cap="" fig-align="center" width="33%"}
 
 - Each value of x gives us a predicted value of y.
-- These predictions trace out a straight line on a plot.
+
 :::
 
 ------------------------------------------------------------------------

@@ -25,7 +25,7 @@ format:
 
 ------------------------------------------------------------------------
 
-## What R-squared measures
+## What the R-squared measures
 
 ::: presenter-space
 -   R-squared is the **proportion of variance** in y explained by x.
@@ -82,10 +82,9 @@ $$R^2 = 1 - \frac{SS_{RES}}{SS_{TOT}}$$
 
 ::: presenter-space
 
-![](../../assets/low_rsquared.png){fig-cap="" fig-align="center" width="70%"}
+![](../../assets/low_rsquared.png){fig-cap="" fig-align="center" width="30%"}
 
 -   Dots are **widely scattered** around the regression line.
--   Residuals are large — the model misses most observations badly.
 -   $SS_{RES} \approx SS_{TOT}$ → **R² near 0**.
 :::
 
@@ -95,10 +94,9 @@ $$R^2 = 1 - \frac{SS_{RES}}{SS_{TOT}}$$
 
 ::: presenter-space
 
-![](../../assets/high_rsquared.png){fig-cap="" fig-align="center" width="70%"}
+![](../../assets/high_rsquared.png){fig-cap="" fig-align="center" width="30%"}
 
 -   Dots cluster **tightly** around the regression line.
--   Residuals are small — predictions are close to the observed values.
 -   $SS_{RES} \ll SS_{TOT}$ → **R² near 1**.
 :::
 
