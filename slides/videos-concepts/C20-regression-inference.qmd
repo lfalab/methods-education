@@ -21,7 +21,6 @@ format:
 -   Translate a verbal hypothesis into a **regression hypothesis**.
 -   Define the **p-value for a slope estimate**.
 -   Use a **confidence interval** for the slope to test the null hypothesis.
--   Apply the decision rule to **Brexit regression results**.
 :::
 
 ------------------------------------------------------------------------
@@ -29,9 +28,12 @@ format:
 ## From description to inference
 
 ::: presenter-space
--   C18 and C19: we estimated a slope of **−1.13**.
+
+$$\widehat{\text{Leave}} = 84 - 1.13 \times \text{HigherEd}$$
+
+-   We estimated a slope of **−1.13**.
 -   But could this reflect **chance variation** rather than a real relationship?
--   This video: how do we test whether the slope is **statistically significant**?
+-   How do we test whether the slope is **statistically significant**?
 :::
 
 ------------------------------------------------------------------------
@@ -73,7 +75,6 @@ $$\widehat{\text{Leave}} = \hat{\beta}_0 + \hat{\beta}_1 \times \text{HigherEd}$
 ::: presenter-space
 -   We estimated $\hat{\beta}_1 = -1.13$.
 -   Is this far enough from zero to **rule out chance**?
--   This is what the significance test answers.
 :::
 
 ------------------------------------------------------------------------
@@ -81,8 +82,7 @@ $$\widehat{\text{Leave}} = \hat{\beta}_0 + \hat{\beta}_1 \times \text{HigherEd}$
 ## The p-value for the slope
 
 ::: presenter-space
--   The p-value is the probability of observing a slope **at least as extreme as −1.13**...
--   ...if the true slope were **zero** (i.e., if H0 were true).
+-   The p-value is the probability of observing a slope **at least as extreme as −1.13** if the true slope were **zero** (i.e., if H0 were true).
 -   A small p-value means the result is unlikely to be a chance finding.
 :::
 
@@ -108,26 +108,11 @@ $$\widehat{\text{Leave}} = \hat{\beta}_0 + \hat{\beta}_1 \times \text{HigherEd}$
 
 ------------------------------------------------------------------------
 
-## P-values and CIs always agree
-
-::: presenter-space
--   The same information goes into both calculations.
--   They will **never contradict each other**.
-
-| If…                              | Then…         |
-|----------------------------------|---------------|
-| 95% CI does not include 0        | p < 0.05      |
-| 95% CI includes 0                | p > 0.05      |
-
-:::
-
-------------------------------------------------------------------------
-
 ## Brexit results: applying the logic
 
 ::: presenter-space
 -   Estimated slope: $\hat{\beta}_1 = -1.13$ (negative, as H1 predicted).
--   95% CI for the slope does **not include zero**.
+-   95% CI for the slope: **[-1.42, -0.84]**.
 -   p-value is **below 0.05**.
 :::
 
@@ -158,7 +143,7 @@ $$\widehat{\text{Leave}} = \hat{\beta}_0 + \hat{\beta}_1 \times \text{HigherEd}$
 
 ::: presenter-space
 -   H1 says $\beta_1 \neq 0$; H0 says $\beta_1 = 0$.
--   The p-value: probability of our slope **if H0 were true**.
+-   The p-value: probability of a slope at least as extreme as ours, **if H0 were true**.
 -   A 95% CI excluding zero is equivalent to p < 0.05.
 :::
 
@@ -167,7 +152,6 @@ $$\widehat{\text{Leave}} = \hat{\beta}_0 + \hat{\beta}_1 \times \text{HigherEd}$
 ::: presenter-space
 **Why this matters:**
 
--   Every regression table you read reports slopes, CIs, and p-values.
+-   Every regression table you read reports slopes and p-values.
 -   This video gives you the logic needed to interpret them correctly.
--   The next video adds one more key quantity: **R-squared**.
 :::

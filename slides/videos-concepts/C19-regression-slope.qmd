@@ -21,7 +21,6 @@ format:
 -   Identify the **intercept** and **slope** in a regression equation.
 -   Explain intuitively where the **slope comes from**.
 -   Interpret the slope and intercept in **substantive terms**.
--   Understand why regression is called **Ordinary Least Squares**.
 :::
 
 ------------------------------------------------------------------------
@@ -76,15 +75,6 @@ $$\hat{\beta}_1 = \frac{\text{Cov}(X, Y)}{\text{Var}(X)}$$
 -   If X and Y tend to move in the **same direction**: positive slope.
 -   If X and Y tend to move in **opposite directions**: negative slope.
 -   We scale by Var(X) so the slope is expressed in the **right units**.
-:::
-
-------------------------------------------------------------------------
-
-## You do not need to compute this by hand
-
-::: presenter-space
--   Stata calculates the slope from the data automatically.
--   The formula tells you **what the slope captures** — not how to derive it.
 :::
 
 ------------------------------------------------------------------------
@@ -146,6 +136,15 @@ $$\hat{\beta}_0 = 84$$
 ## Residuals: the line is never perfect
 
 ::: presenter-space
+![](../../assets/brexit_educ_scatter_line.jpg){fig-cap="" fig-align="center" width="90%"}
+:::
+
+
+------------------------------------------------------------------------
+
+## Residuals: the line is never perfect
+
+::: presenter-space
 -   Each region's **actual** Leave vote differs from its **predicted** value.
 -   The vertical distance from a dot to the line is the **residual** (or error).
 -   Larger residuals mean the regression predicts that region less well.
@@ -159,16 +158,6 @@ $$\hat{\beta}_0 = 84$$
 -   The slope and intercept are chosen to **minimise the sum of squared residuals**.
 -   This quantity is called the **Residual Sum of Squares** (RSS).
 -   Because we minimise squared residuals: **Ordinary Least Squares (OLS)**.
-:::
-
-------------------------------------------------------------------------
-
-## What's coming next
-
-::: presenter-space
--   We now have an estimated slope: −1.13.
--   But could this reflect **chance variation** rather than a real relationship?
--   **C20** covers inference for the slope: standard errors, confidence intervals, p-values.
 :::
 
 ------------------------------------------------------------------------
@@ -188,5 +177,5 @@ $$\hat{\beta}_0 = 84$$
 
 -   Every regression result you read in a paper rests on these calculations.
 -   Knowing what the slope captures helps you evaluate whether it makes sense.
--   OLS is the standard estimation method across political science and economics.
+-   OLS is the standard estimation method across the social sciences.
 :::
