@@ -68,6 +68,12 @@ website:
             - slides/lectures/W07-hypothesis.qmd
             - activities/A07-sampling-activity.qmd
             - activities/SA07-htests-weights.qmd
+      - section: "Week 8: Regression Analysis"
+        contents:
+            - slides/videos-concepts/C18-regression-intro.qmd
+            - slides/videos-concepts/C19-regression-slope.qmd
+            - slides/videos-concepts/C20-regression-inference.qmd
+            - slides/videos-concepts/C21-regression-rsquared.qmd
 
 
 format:
