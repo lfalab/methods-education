@@ -65,6 +65,9 @@ website:
             - slides/videos-concepts/C16-htests-cis.qmd
             - slides/videos-concepts/C17-p-values.qmd
             - slides/videos-stata/S08-htests-stata.qmd
+            - slides/lectures/W07-hypothesis.qmd
+            - activities/A07-sampling-activity.qmd
+            - activities/SA07-htests-weights.qmd
 
 
 format:

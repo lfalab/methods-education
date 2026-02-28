@@ -1,0 +1,215 @@
+---
+title: "Seminar Activity: Weights and Visual Inference"
+subtitle: "Statistics for Political Science — Week 7"
+author: "Leonardo Falabella"
+class: lecture
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    theme: default
+    output-file: htests-weights-activity
+  revealjs:
+    output-file: htests-weights-slides
+---
+
+------------------------------------------------------------------------
+
+## Two ideas for today
+
+- What are **survey weights**, and why do we use them?
+- How can we use **plots with confidence intervals** to visually approximate a hypothesis test?
+
+------------------------------------------------------------------------
+
+## What is a survey?
+
+- A survey samples people from a larger **target population**.
+- We want our estimates to represent that population — not just who happened to respond.
+- But some groups are harder to reach than others.
+
+------------------------------------------------------------------------
+
+## The problem: unequal representation
+
+- Young men, low-income households, and rural residents tend to respond less.
+- This means the raw sample is not a mirror image of the population.
+- Estimates from an unweighted sample can be **systematically biased**.
+
+------------------------------------------------------------------------
+
+## What weights do
+
+- Each respondent is assigned a **weight** that corrects for their under- or over-representation.
+- A weight above 1 means the respondent's group is **underrepresented** in the sample.
+- A weight below 1 means their group is **overrepresented**.
+
+------------------------------------------------------------------------
+
+## Weights in the BES
+
+- The BES uses a **demographic post-stratification weight** (`wt_demog`).
+- It adjusts for age, sex, and region.
+- Weighted estimates better reflect the **voting-eligible population**.
+
+------------------------------------------------------------------------
+
+## From tables to plots
+
+- So far, inference has meant reading a table: find `diff`, find the 95% CI, check if it includes 0.
+- Plots with confidence intervals let us do the same thing **visually**.
+- This is how results are typically presented in published research.
+
+------------------------------------------------------------------------
+
+## The visual heuristic
+
+- Each group gets a **point estimate** (dot) and a **95% confidence interval** (bar).
+- Ask: does one group's dot lie **outside** the other group's interval?
+
+------------------------------------------------------------------------
+
+## The rule of thumb
+
+- Point estimate **clearly outside** the other group's CI → groups likely differ significantly.
+- Point estimate **inside** the other group's CI → difference likely not significant.
+- This is a **heuristic**: it can be conservative in borderline cases.
+
+------------------------------------------------------------------------
+
+## Heuristic vs formal test
+
+- The visual check gives intuition — it is not the definitive answer.
+- The formal decision rule remains: **does the CI for the difference include 0?**
+- Use the plot to orient yourself; use the test output to confirm.
+
+------------------------------------------------------------------------
+
+## Today's activity
+
+- Open `hypothesis-bes.do` and run it in two stages per test.
+- Use the plots to apply the visual heuristic.
+- Then verify against the formal inferential output.
+
+------------------------------------------------------------------------
+
+## Activity
+
+This activity uses the British Election Study (BES) 2024. You will run two hypothesis tests — each in an unweighted and a survey-weighted version — and use the visual heuristic introduced above to approximate each conclusion before checking the formal output.
+
+The companion do-file is `hypothesis-bes.do`. It contains all the commands you need.
+
+------------------------------------------------------------------------
+
+### Setup
+
+1. Access our [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE).
+2. Click on `do` and download `hypothesis-bes.do`.
+3. Save it to your `do` folder and update the working directory.
+4. Read through the file from top to bottom before running anything.
+
+------------------------------------------------------------------------
+
+## Test 1 — Gender and Reform vote share
+
+- **Research question:** Are men more likely than women to have voted for Reform UK?
+- **Alternative Hypothesis (H1):** Men are more likely to vote Reform than women.
+- **Null Hypothesis (H0):** No difference between men and women in their likelihood of voting Reform.
+
+------------------------------------------------------------------------
+
+### Stage 1: Unweighted
+
+**Execute:** Run the descriptive tabulation and the `prtest` command.
+
+**Interpret:**
+
+- What share of men voted Reform? What share of women?
+- What is the estimated difference (`diff`)? Is it positive or negative?
+- Does the 95% confidence interval for `diff` include zero?
+- Do we reject or fail to reject H0?
+
+------------------------------------------------------------------------
+
+### Stage 2: Survey-weighted
+
+**Execute:** Run the `svyset` declaration, `svy: proportion`, `svy: regress`, and the `marginsplot` commands.
+
+**Visual heuristic — inspect the plot:**
+
+- Locate the point estimate for men and the confidence interval for women.
+- Does the men's point estimate lie inside or outside the women's confidence interval?
+- Based on this visual check alone: would you reject or fail to reject H0?
+
+**Formal check — inspect the `svy: regress` table:**
+
+- Find the coefficient for "Female".
+- Does the 95% CI for this coefficient include zero?
+- Does the formal output agree with your visual judgment?
+
+> **Note:** The coefficient in `svy: regress` is Female − Male. A negative value means women are less likely than men to have voted Reform.
+
+**Compare Stage 1 and Stage 2:**
+
+- Do the unweighted and weighted results lead to the same conclusion?
+- If the estimates differ, which direction does the weighting move them?
+
+------------------------------------------------------------------------
+
+## Test 2 — Newspaper readership and ideology
+
+- **Research question:** Are Telegraph readers more right-leaning than Daily Mail readers?
+- **Alternative Hypothesis (H1):** Telegraph readers are more right-leaning than Mail readers.
+- **Null Hypothesis (H0):** No difference in mean ideology between Mail and Telegraph readers.
+
+------------------------------------------------------------------------
+
+### Stage 1: Unweighted
+
+**Execute:** Run the descriptive summary and the `ttest` command.
+
+**Interpret:**
+
+- What is the mean ideology score for Mail readers? For Telegraph readers?
+- What is the estimated difference (`diff`)? Which group is further right?
+- Does the 95% confidence interval for `diff` include zero?
+- Do we reject or fail to reject H0?
+
+------------------------------------------------------------------------
+
+### Stage 2: Survey-weighted
+
+**Execute:** Run the `svyset` declaration, `svy: mean`, `svy: regress`, and the `marginsplot` commands.
+
+**Visual heuristic — inspect the plot:**
+
+- Locate the point estimate for Daily Mail readers and the confidence interval for Telegraph readers.
+- Does the Mail point estimate lie inside or outside the Telegraph confidence interval?
+- Based on this visual check alone: would you reject or fail to reject H0?
+
+**Formal check — inspect the `svy: regress` table:**
+
+- Find the coefficient for the Telegraph group.
+- Does the 95% CI for this coefficient include zero?
+- Does the formal output agree with your visual judgment?
+
+> **Note:** The coefficient in `svy: regress` is Telegraph − Mail. A positive value means Telegraph readers place themselves further right than Mail readers on average.
+
+**Compare Stage 1 and Stage 2:**
+
+- Do the unweighted and weighted results lead to the same conclusion?
+- This example is chosen deliberately: the result does not change dramatically. What does this tell us about when weights matter most?
+
+------------------------------------------------------------------------
+
+## Summary
+
+In this activity, you have:
+
+- Applied survey weights using `svyset` and `svy:` commands to produce design-corrected estimates.
+- Used a `marginsplot` to visually approximate whether two groups differ significantly.
+- Practised the rule of thumb: a point estimate lying outside the other group's CI is a signal of a likely significant difference.
+- Verified visual judgments against the formal confidence interval for the difference.
+
+The visual heuristic is a practical skill for reading published research. The formal test remains the definitive check.
