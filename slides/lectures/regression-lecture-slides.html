@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-html/tabby.min.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
   <meta name="author" content="Leonardo Falabella">
-  <title>Seminar Activity: Weights and Visual Inference</title>
+  <title>Lecture 8: Bivariate Regression</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -28,12 +28,78 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-f88d935cd01326925f73dc62b106448c.css">
-  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-f88d935cd01326925f73dc62b106448c.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -127,8 +193,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Seminar Activity: Weights and Visual Inference</h1>
-  <p class="subtitle">Statistics for Political Science — Week 7</p>
+  <h1 class="title">Lecture 8: Bivariate Regression</h1>
+  <p class="subtitle">Statistics for Political Science</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -139,199 +205,180 @@ Leonardo Falabella
 </div>
 
 </section>
-<section id="two-ideas-for-today" class="slide level2">
-<h2>Two ideas for today</h2>
+<section id="from-inference-to-regression" class="slide level2">
+<h2>From inference to regression</h2>
 <ul>
-<li>What are <strong>survey weights</strong>, and why do we use them?</li>
-<li>How can we use <strong>plots with confidence intervals</strong> to visually approximate a hypothesis test?</li>
+<li>Last week: we tested whether two groups differ.</li>
+<li>This week: we describe and test a <strong>linear relationship</strong> between two numeric variables.</li>
+<li>Same inferential logic — new command, richer output.</li>
 </ul>
 </section>
-<section id="what-is-a-survey" class="slide level2">
-<h2>What is a survey?</h2>
+<section id="the-do-file-is-your-template" class="slide level2">
+<h2>The do-file is your template</h2>
 <ul>
-<li>A survey samples people from a larger <strong>target population</strong>.</li>
-<li>We want our estimates to represent that population — not just who happened to respond.</li>
-<li>But some groups are harder to reach than others.</li>
+<li>Everything we do today is in <code>regression-lecture.do</code>.</li>
+<li>Download it, update the working directory, and run along.</li>
 </ul>
 </section>
-<section id="the-problem-unequal-representation" class="slide level2">
-<h2>The problem: unequal representation</h2>
+<section id="download-todays-do-file" class="slide level2">
+<h2>Download today’s do-file</h2>
 <ul>
-<li>Young men, low-income households, and rural residents tend to respond less.</li>
-<li>This means the raw sample is not a mirror image of the population.</li>
-<li>Estimates from an unweighted sample can be <strong>systematically biased</strong>.</li>
+<li>Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a></li>
+<li>Click on <code>do</code></li>
+<li>Download <code>regression-lecture.do</code></li>
+<li>Save it to your <code>do</code> folder and update the working directory</li>
 </ul>
 </section>
-<section id="what-weights-do" class="slide level2">
-<h2>What weights do</h2>
+<section id="todays-structure" class="slide level2">
+<h2>Today’s structure</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Part</th>
+<th>Independent variable</th>
+<th>Question</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Example</td>
+<td>Higher education share</td>
+<td>Do graduates vote Leave less?</td>
+</tr>
+<tr class="even">
+<td>Your Turn 1</td>
+<td>Import shock</td>
+<td>Does trade exposure predict Leave?</td>
+</tr>
+<tr class="odd">
+<td>Your Turn 2</td>
+<td>Immigrant share</td>
+<td>Does immigration predict Leave?</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="example-education-and-the-leave-vote" class="slide level2">
+<h2>Example: Education and the Leave vote</h2>
 <ul>
-<li>Each respondent is assigned a <strong>weight</strong> that corrects for their under- or over-representation.</li>
-<li>A weight above 1 means the respondent’s group is <strong>underrepresented</strong> in the sample.</li>
-<li>A weight below 1 means their group is <strong>overrepresented</strong>.</li>
+<li><strong>Research question:</strong> Do regions with higher education shares vote Leave less?</li>
+<li><strong>H0:</strong> No linear relationship between education share and Leave vote share.</li>
+<li>Open <code>regression-lecture.do</code> and go to the <strong>Example</strong> section.</li>
 </ul>
 </section>
-<section id="weights-in-the-bes" class="slide level2">
-<h2>Weights in the BES</h2>
+<section id="example-step-1-scatterplot" class="slide level2">
+<h2>Example: Step 1 — scatterplot</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a></a><span class="kw">twoway</span> (<span class="kw">scatter</span> leave_share share_high_skill) <span class="co">///</span></span>
+<span id="cb1-2"><a></a>       (<span class="kw">lfit</span> leave_share share_high_skill), leg(<span class="kw">off</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li>The BES uses a <strong>demographic post-stratification weight</strong> (<code>wt_demog</code>).</li>
-<li>It adjusts for age, sex, and region.</li>
-<li>Weighted estimates better reflect the <strong>voting-eligible population</strong>.</li>
+<li>Each dot is a UK region.</li>
+<li>The line shows the estimated linear relationship.</li>
 </ul>
 </section>
-<section id="from-tables-to-plots" class="slide level2">
-<h2>From tables to plots</h2>
+<section id="example-step-2-run-the-regression" class="slide level2">
+<h2>Example: Step 2 — run the regression</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a></a><span class="kw">regress</span> leave_share share_high_skill</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li>So far, inference has meant reading a table: find <code>diff</code>, find the 95% CI, check if it includes 0.</li>
-<li>Plots with confidence intervals let us do the same thing <strong>visually</strong>.</li>
-<li>This is how results are typically presented in published research.</li>
+<li>Slope ≈ <strong>−1.13</strong>: each 1pp increase in education → 1.13pp less Leave.</li>
+<li>95% CI: [−1.42, −0.84] — <strong>excludes zero</strong> → reject H0.</li>
+<li>R-squared ≈ <strong>0.30</strong>: education explains 30% of Leave vote variation.</li>
 </ul>
 </section>
-<section id="the-visual-heuristic" class="slide level2">
-<h2>The visual heuristic</h2>
+<section id="your-turn-1-import-shock-and-the-leave-vote" class="slide level2">
+<h2>Your Turn 1: Import shock and the Leave vote</h2>
 <ul>
-<li>Each group gets a <strong>point estimate</strong> (dot) and a <strong>95% confidence interval</strong> (bar).</li>
-<li>Ask: does one group’s dot lie <strong>outside</strong> the other group’s interval?</li>
+<li><strong>Research question:</strong> Do regions more exposed to Chinese import competition vote Leave more?</li>
+<li><code>import_shock</code>: import shock from China (source: ONS and Eurostat).</li>
+<li>State H0 and H1, then run the regression.</li>
 </ul>
 </section>
-<section id="the-rule-of-thumb" class="slide level2">
-<h2>The rule of thumb</h2>
+<section id="your-turn-1-setup-and-run" class="slide level2">
+<h2>Your Turn 1 — setup and run</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb3-1"><a></a><span class="kw">use</span> <span class="st">"data-raw/Brexit_Regional.dta"</span>, <span class="kw">clear</span></span>
+<span id="cb3-2"><a></a></span>
+<span id="cb3-3"><a></a><span class="kw">twoway</span> (<span class="kw">scatter</span> leave_share import_shock) <span class="co">///</span></span>
+<span id="cb3-4"><a></a>       (<span class="kw">lfit</span> leave_share import_shock), leg(<span class="kw">off</span>)</span>
+<span id="cb3-5"><a></a></span>
+<span id="cb3-6"><a></a><span class="kw">regress</span> leave_share import_shock</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="your-turn-1-questions" class="slide level2">
+<h2>Your Turn 1 — questions</h2>
 <ul>
-<li>Point estimate <strong>clearly outside</strong> the other group’s CI → groups likely differ significantly.</li>
-<li>Point estimate <strong>inside</strong> the other group’s CI → difference likely not significant.</li>
-<li>This is a <strong>heuristic</strong>: it can be conservative in borderline cases.</li>
+<li>What is the sign of the slope? What does it mean substantively?</li>
+<li>Write the regression equation: $ = $ ___ + ___ × ImportShock</li>
+<li>Does the 95% CI exclude zero? Do we reject H0?</li>
+<li>What is R-squared? How does it compare to the education model?</li>
 </ul>
 </section>
-<section id="heuristic-vs-formal-test" class="slide level2">
-<h2>Heuristic vs formal test</h2>
+<section id="your-turn-2-immigrant-share-and-the-leave-vote" class="slide level2">
+<h2>Your Turn 2: Immigrant share and the Leave vote</h2>
 <ul>
-<li>The visual check gives intuition — it is not the definitive answer.</li>
-<li>The formal decision rule remains: <strong>does the CI for the difference include 0?</strong></li>
-<li>Use the plot to orient yourself; use the test output to confirm.</li>
+<li><strong>Research question:</strong> Do regions with larger foreign-born populations vote Leave more or less?</li>
+<li><code>immigrant_share</code>: share of foreign-born residents in 2015 (source: ONS).</li>
+<li>State H0 and H1, then run the regression.</li>
 </ul>
 </section>
-<section id="todays-activity" class="slide level2">
-<h2>Today’s activity</h2>
+<section id="your-turn-2-setup-and-run" class="slide level2">
+<h2>Your Turn 2 — setup and run</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb4-1"><a></a><span class="kw">use</span> <span class="st">"data-raw/Brexit_Regional.dta"</span>, <span class="kw">clear</span></span>
+<span id="cb4-2"><a></a></span>
+<span id="cb4-3"><a></a><span class="kw">twoway</span> (<span class="kw">scatter</span> leave_share immigrant_share) <span class="co">///</span></span>
+<span id="cb4-4"><a></a>       (<span class="kw">lfit</span> leave_share immigrant_share), leg(<span class="kw">off</span>)</span>
+<span id="cb4-5"><a></a></span>
+<span id="cb4-6"><a></a><span class="kw">regress</span> leave_share immigrant_share</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="your-turn-2-questions" class="slide level2">
+<h2>Your Turn 2 — questions</h2>
 <ul>
-<li>Open <code>hypothesis-bes.do</code> and run it in two stages per test.</li>
-<li>Use the plots to apply the visual heuristic.</li>
-<li>Then verify against the formal inferential output.</li>
+<li>What is the sign of the slope? Is it what you expected?</li>
+<li>Write the regression equation: $ = $ ___ + ___ × ImmigrantShare</li>
+<li>Does the 95% CI exclude zero? Do we reject H0?</li>
+<li>What is R-squared? How does it compare to the other two models?</li>
 </ul>
 </section>
-<section id="activity" class="slide level2">
-<h2>Activity</h2>
-<p>This activity uses the British Election Study (BES) 2024. You will run two hypothesis tests — each in an unweighted and a survey-weighted version — and use the visual heuristic introduced above to approximate each conclusion before checking the formal output.</p>
-<p>The companion do-file is <code>hypothesis-bes.do</code>. It contains all the commands you need.</p>
+<section id="comparing-the-three-models" class="slide level2">
+<h2>Comparing the three models</h2>
+<ul>
+<li>Fill in the table using your Stata output:</li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Slope</th>
+<th>Significant?</th>
+<th>R-squared</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Education</td>
+<td>−1.13</td>
+<td>Yes</td>
+<td>0.30</td>
+</tr>
+<tr class="even">
+<td>Import shock</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+</tr>
+<tr class="odd">
+<td>Immigrant share</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section class="slide level2">
-
-<h3 id="setup">Setup</h3>
-<ol type="1">
-<li>Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a>.</li>
-<li>Click on <code>do</code> and download <code>hypothesis-bes.do</code>.</li>
-<li>Save it to your <code>do</code> folder and update the working directory.</li>
-<li>Read through the file from top to bottom before running anything.</li>
-</ol>
-</section>
-<section id="test-1-gender-and-reform-vote-share" class="slide level2">
-<h2>Test 1 — Gender and Reform vote share</h2>
+<section id="why-this-matters" class="slide level2">
+<h2>Why this matters</h2>
 <ul>
-<li><strong>Research question:</strong> Are men more likely than women to have voted for Reform UK?</li>
-<li><strong>Alternative Hypothesis (H1):</strong> Men are more likely to vote Reform than women.</li>
-<li><strong>Null Hypothesis (H0):</strong> No difference between men and women in their likelihood of voting Reform.</li>
+<li>The regression structure stays the same — only the <strong>independent variable</strong> changes.</li>
+<li>Comparing slopes, significance, and R-squared is how we evaluate <strong>competing explanations</strong>.</li>
+<li>This is exactly what PS2 asks you to do.</li>
 </ul>
-</section>
-<section class="slide level2">
-
-<h3 id="stage-1-unweighted">Stage 1: Unweighted</h3>
-<p><strong>Execute:</strong> Run the descriptive tabulation and the <code>prtest</code> command.</p>
-<p><strong>Interpret:</strong></p>
-<ul>
-<li>What share of men voted Reform? What share of women?</li>
-<li>What is the estimated difference (<code>diff</code>)? Is it positive or negative?</li>
-<li>Does the 95% confidence interval for <code>diff</code> include zero?</li>
-<li>Do we reject or fail to reject H0?</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h3 id="stage-2-survey-weighted">Stage 2: Survey-weighted</h3>
-<p><strong>Execute:</strong> Run the <code>svyset</code> declaration, <code>svy: proportion</code>, <code>svy: regress</code>, and the <code>marginsplot</code> commands.</p>
-<p><strong>Visual heuristic — inspect the plot:</strong></p>
-<ul>
-<li>Locate the point estimate for men and the confidence interval for women.</li>
-<li>Does the men’s point estimate lie inside or outside the women’s confidence interval?</li>
-<li>Based on this visual check alone: would you reject or fail to reject H0?</li>
-</ul>
-<p><strong>Formal check — inspect the <code>svy: regress</code> table:</strong></p>
-<ul>
-<li>Find the coefficient for “Female”.</li>
-<li>Does the 95% CI for this coefficient include zero?</li>
-<li>Does the formal output agree with your visual judgment?</li>
-</ul>
-<blockquote>
-<p><strong>Note:</strong> The coefficient in <code>svy: regress</code> is Female − Male. A negative value means women are less likely than men to have voted Reform.</p>
-</blockquote>
-<p><strong>Compare Stage 1 and Stage 2:</strong></p>
-<ul>
-<li>Do the unweighted and weighted results lead to the same conclusion?</li>
-<li>If the estimates differ, which direction does the weighting move them?</li>
-</ul>
-</section>
-<section id="test-2-newspaper-readership-and-ideology" class="slide level2">
-<h2>Test 2 — Newspaper readership and ideology</h2>
-<ul>
-<li><strong>Research question:</strong> Are Telegraph readers more right-leaning than Daily Mail readers?</li>
-<li><strong>Alternative Hypothesis (H1):</strong> Telegraph readers are more right-leaning than Mail readers.</li>
-<li><strong>Null Hypothesis (H0):</strong> No difference in mean ideology between Mail and Telegraph readers.</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h3 id="stage-1-unweighted-1">Stage 1: Unweighted</h3>
-<p><strong>Execute:</strong> Run the descriptive summary and the <code>ttest</code> command.</p>
-<p><strong>Interpret:</strong></p>
-<ul>
-<li>What is the mean ideology score for Mail readers? For Telegraph readers?</li>
-<li>What is the estimated difference (<code>diff</code>)? Which group is further right?</li>
-<li>Does the 95% confidence interval for <code>diff</code> include zero?</li>
-<li>Do we reject or fail to reject H0?</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h3 id="stage-2-survey-weighted-1">Stage 2: Survey-weighted</h3>
-<p><strong>Execute:</strong> Run the <code>svyset</code> declaration, <code>svy: mean</code>, <code>svy: regress</code>, and the <code>marginsplot</code> commands.</p>
-<p><strong>Visual heuristic — inspect the plot:</strong></p>
-<ul>
-<li>Locate the point estimate for Daily Mail readers and the confidence interval for Telegraph readers.</li>
-<li>Does the Mail point estimate lie inside or outside the Telegraph confidence interval?</li>
-<li>Based on this visual check alone: would you reject or fail to reject H0?</li>
-</ul>
-<p><strong>Formal check — inspect the <code>svy: regress</code> table:</strong></p>
-<ul>
-<li>Find the coefficient for the Telegraph group.</li>
-<li>Does the 95% CI for this coefficient include zero?</li>
-<li>Does the formal output agree with your visual judgment?</li>
-</ul>
-<blockquote>
-<p><strong>Note:</strong> The coefficient in <code>svy: regress</code> is Telegraph − Mail. A positive value means Telegraph readers place themselves further right than Mail readers on average.</p>
-</blockquote>
-<p><strong>Compare Stage 1 and Stage 2:</strong></p>
-<ul>
-<li>Do the unweighted and weighted results lead to the same conclusion?</li>
-<li>This example is chosen deliberately: the result does not change dramatically. What does this tell us about when weights matter most?</li>
-</ul>
-</section>
-<section id="summary" class="slide level2">
-<h2>Summary</h2>
-<p>In this activity, you have:</p>
-<ul>
-<li>Applied survey weights using <code>svyset</code> and <code>svy:</code> commands to produce design-corrected estimates.</li>
-<li>Used a <code>marginsplot</code> to visually approximate whether two groups differ significantly.</li>
-<li>Practised the rule of thumb: a point estimate lying outside the other group’s CI is a signal of a likely significant difference.</li>
-<li>Verified visual judgments against the formal confidence interval for the difference.</li>
-</ul>
-<p>The visual heuristic is a practical skill for reading published research. The formal test remains the definitive check.</p>
 
 
 </section>
@@ -343,19 +390,19 @@ Leonardo Falabella
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
-  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>

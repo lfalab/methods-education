@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Leonardo Falabella">
 
-<title>Loading and Browsing Data</title>
+<title>Lecture 8: Bivariate Regression</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -81,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/measuring-variables.html">Week 3: Measurement and Variable Types</a></li><li class="breadcrumb-item"><a href="../../slides/videos-stata/loading-browsing-data.html">Loading and Browsing Data</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/regression-intro.html">Week 8: Regression Analysis</a></li><li class="breadcrumb-item"><a href="../../slides/lectures/regression-lecture.html">Lecture 8: Bivariate Regression</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -210,7 +246,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/loading-browsing-data.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../slides/videos-stata/loading-browsing-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Loading and Browsing Data</span></a>
   </div>
 </li>
@@ -445,7 +481,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/lectures/regression-lecture.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/lectures/regression-lecture.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Lecture 8: Bivariate Regression</span></a>
   </div>
 </li>
@@ -467,151 +503,262 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#loading-and-browsing-data" id="toc-loading-and-browsing-data" class="nav-link active" data-scroll-target="#loading-and-browsing-data">Loading and Browsing Data</a>
-  <ul class="collapse">
-  <li><a href="#youll-learn-to" id="toc-youll-learn-to" class="nav-link" data-scroll-target="#youll-learn-to">You’ll learn to</a></li>
-  <li><a href="#step-1-download-the-brexit-dataset-from-our-shared-folder" id="toc-step-1-download-the-brexit-dataset-from-our-shared-folder" class="nav-link" data-scroll-target="#step-1-download-the-brexit-dataset-from-our-shared-folder">Step 1: Download the Brexit dataset from our shared folder</a></li>
-  <li><a href="#step-2-set-the-working-directory" id="toc-step-2-set-the-working-directory" class="nav-link" data-scroll-target="#step-2-set-the-working-directory">Step 2: Set the working directory</a></li>
-  <li><a href="#step-3-open-a-new-do-file" id="toc-step-3-open-a-new-do-file" class="nav-link" data-scroll-target="#step-3-open-a-new-do-file">Step 3: Open a new do-file</a></li>
-  <li><a href="#step-4-set-up-your-do-file-to-load-the-dataset" id="toc-step-4-set-up-your-do-file-to-load-the-dataset" class="nav-link" data-scroll-target="#step-4-set-up-your-do-file-to-load-the-dataset">Step 4: Set up your do-file to load the dataset</a></li>
-  <li><a href="#step-5-run-the-do-file" id="toc-step-5-run-the-do-file" class="nav-link" data-scroll-target="#step-5-run-the-do-file">Step 5: Run the do-file</a></li>
-  <li><a href="#step-6-check-if-it-has-worked-and-save-your-do-file" id="toc-step-6-check-if-it-has-worked-and-save-your-do-file" class="nav-link" data-scroll-target="#step-6-check-if-it-has-worked-and-save-your-do-file">Step 6: Check if it has worked and save your do-file</a></li>
-  <li><a href="#step-7-browse-the-data" id="toc-step-7-browse-the-data" class="nav-link" data-scroll-target="#step-7-browse-the-data">Step 7: Browse the data</a></li>
-  <li><a href="#recap" id="toc-recap" class="nav-link" data-scroll-target="#recap">Recap</a></li>
-  </ul></li>
+  <li><a href="#from-inference-to-regression" id="toc-from-inference-to-regression" class="nav-link active" data-scroll-target="#from-inference-to-regression">From inference to regression</a></li>
+  <li><a href="#the-do-file-is-your-template" id="toc-the-do-file-is-your-template" class="nav-link" data-scroll-target="#the-do-file-is-your-template">The do-file is your template</a></li>
+  <li><a href="#download-todays-do-file" id="toc-download-todays-do-file" class="nav-link" data-scroll-target="#download-todays-do-file">Download today’s do-file</a></li>
+  <li><a href="#todays-structure" id="toc-todays-structure" class="nav-link" data-scroll-target="#todays-structure">Today’s structure</a></li>
+  <li><a href="#example-education-and-the-leave-vote" id="toc-example-education-and-the-leave-vote" class="nav-link" data-scroll-target="#example-education-and-the-leave-vote">Example: Education and the Leave vote</a></li>
+  <li><a href="#example-step-1-scatterplot" id="toc-example-step-1-scatterplot" class="nav-link" data-scroll-target="#example-step-1-scatterplot">Example: Step 1 — scatterplot</a></li>
+  <li><a href="#example-step-2-run-the-regression" id="toc-example-step-2-run-the-regression" class="nav-link" data-scroll-target="#example-step-2-run-the-regression">Example: Step 2 — run the regression</a></li>
+  <li><a href="#your-turn-1-import-shock-and-the-leave-vote" id="toc-your-turn-1-import-shock-and-the-leave-vote" class="nav-link" data-scroll-target="#your-turn-1-import-shock-and-the-leave-vote">Your Turn 1: Import shock and the Leave vote</a></li>
+  <li><a href="#your-turn-1-setup-and-run" id="toc-your-turn-1-setup-and-run" class="nav-link" data-scroll-target="#your-turn-1-setup-and-run">Your Turn 1 — setup and run</a></li>
+  <li><a href="#your-turn-1-questions" id="toc-your-turn-1-questions" class="nav-link" data-scroll-target="#your-turn-1-questions">Your Turn 1 — questions</a></li>
+  <li><a href="#your-turn-2-immigrant-share-and-the-leave-vote" id="toc-your-turn-2-immigrant-share-and-the-leave-vote" class="nav-link" data-scroll-target="#your-turn-2-immigrant-share-and-the-leave-vote">Your Turn 2: Immigrant share and the Leave vote</a></li>
+  <li><a href="#your-turn-2-setup-and-run" id="toc-your-turn-2-setup-and-run" class="nav-link" data-scroll-target="#your-turn-2-setup-and-run">Your Turn 2 — setup and run</a></li>
+  <li><a href="#your-turn-2-questions" id="toc-your-turn-2-questions" class="nav-link" data-scroll-target="#your-turn-2-questions">Your Turn 2 — questions</a></li>
+  <li><a href="#comparing-the-three-models" id="toc-comparing-the-three-models" class="nav-link" data-scroll-target="#comparing-the-three-models">Comparing the three models</a></li>
+  <li><a href="#why-this-matters" id="toc-why-this-matters" class="nav-link" data-scroll-target="#why-this-matters">Why this matters</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="loading-browsing-data-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="regression-lecture-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/measuring-variables.html">Week 3: Measurement and Variable Types</a></li><li class="breadcrumb-item"><a href="../../slides/videos-stata/loading-browsing-data.html">Loading and Browsing Data</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/regression-intro.html">Week 8: Regression Analysis</a></li><li class="breadcrumb-item"><a href="../../slides/lectures/regression-lecture.html">Lecture 8: Bivariate Regression</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Lecture 8: Bivariate Regression</h1>
+<p class="subtitle lead">Statistics for Political Science</p>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="loading-and-browsing-data" class="level1 title-left">
-<h1 class="title-left">Loading and Browsing Data</h1>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nWJTyqIjYgE?si=xr8674JyN133h8M1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
-</iframe>
-<!-- [Watch on YouTube](https://youtu.be/nWJTyqIjYgE) -->
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Leonardo Falabella </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
 <hr>
-<section id="youll-learn-to" class="level2">
-<h2 class="anchored" data-anchor-id="youll-learn-to">You’ll learn to</h2>
+<section id="from-inference-to-regression" class="level2">
+<h2 class="anchored" data-anchor-id="from-inference-to-regression">From inference to regression</h2>
 <ul>
-<li><strong>Load</strong> a dataset in Stata.</li>
-<li><strong>Browse</strong> a dataset by switching between Stata and the codebook.</li>
+<li>Last week: we tested whether two groups differ.</li>
+<li>This week: we describe and test a <strong>linear relationship</strong> between two numeric variables.</li>
+<li>Same inferential logic — new command, richer output.</li>
 </ul>
 <hr>
 </section>
-<section id="step-1-download-the-brexit-dataset-from-our-shared-folder" class="level2">
-<h2 class="anchored" data-anchor-id="step-1-download-the-brexit-dataset-from-our-shared-folder">Step 1: Download the Brexit dataset from our shared folder</h2>
+<section id="the-do-file-is-your-template" class="level2">
+<h2 class="anchored" data-anchor-id="the-do-file-is-your-template">The do-file is your template</h2>
+<ul>
+<li>Everything we do today is in <code>regression-lecture.do</code>.</li>
+<li>Download it, update the working directory, and run along.</li>
+</ul>
+<hr>
+</section>
+<section id="download-todays-do-file" class="level2">
+<h2 class="anchored" data-anchor-id="download-todays-do-file">Download today’s do-file</h2>
+<div class="nonincremental">
 <ul>
 <li>Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a></li>
-<li>Click on <code>data-raw</code></li>
-<li>Download <code>Brexit_Regional.dta</code></li>
-<li>Save it into the <code>data-raw</code> folder on your computer</li>
+<li>Click on <code>do</code></li>
+<li>Download <code>regression-lecture.do</code></li>
+<li>Save it to your <code>do</code> folder and update the working directory</li>
 </ul>
+</div>
 <hr>
 </section>
-<section id="step-2-set-the-working-directory" class="level2">
-<h2 class="anchored" data-anchor-id="step-2-set-the-working-directory">Step 2: Set the working directory</h2>
+<section id="todays-structure" class="level2">
+<h2 class="anchored" data-anchor-id="todays-structure">Today’s structure</h2>
+<div class="nonincremental">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Part</th>
+<th>Independent variable</th>
+<th>Question</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Example</td>
+<td>Higher education share</td>
+<td>Do graduates vote Leave less?</td>
+</tr>
+<tr class="even">
+<td>Your Turn 1</td>
+<td>Import shock</td>
+<td>Does trade exposure predict Leave?</td>
+</tr>
+<tr class="odd">
+<td>Your Turn 2</td>
+<td>Immigrant share</td>
+<td>Does immigration predict Leave?</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+</section>
+<section id="example-education-and-the-leave-vote" class="level2">
+<h2 class="anchored" data-anchor-id="example-education-and-the-leave-vote">Example: Education and the Leave vote</h2>
 <ul>
-<li>We’ve been through this in <a href="../../slides/videos-stata/stata-interface.html">The Stata Interface</a></li>
-<li>This can be done either by clicking File &gt; Change working directory, or…</li>
-<li>…if you have saved a do-file (<code>set-wd.do</code>) as instructed in <a href="../../slides/videos-stata/stata-interface.html">The Stata Interface</a>, you can copy the command from there.</li>
+<li><strong>Research question:</strong> Do regions with higher education shares vote Leave less?</li>
+<li><strong>H0:</strong> No linear relationship between education share and Leave vote share.</li>
+<li>Open <code>regression-lecture.do</code> and go to the <strong>Example</strong> section.</li>
 </ul>
 <hr>
 </section>
-<section id="step-3-open-a-new-do-file" class="level2">
-<h2 class="anchored" data-anchor-id="step-3-open-a-new-do-file">Step 3: Open a new do-file</h2>
+<section id="example-step-1-scatterplot" class="level2">
+<h2 class="anchored" data-anchor-id="example-step-1-scatterplot">Example: Step 1 — scatterplot</h2>
+<div class="nonincremental">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">twoway</span> (<span class="kw">scatter</span> leave_share share_high_skill) <span class="co">///</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>       (<span class="kw">lfit</span> leave_share share_high_skill), leg(<span class="kw">off</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Each dot is a UK region.</li>
+<li>The line shows the estimated linear relationship.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="example-step-2-run-the-regression" class="level2">
+<h2 class="anchored" data-anchor-id="example-step-2-run-the-regression">Example: Step 2 — run the regression</h2>
+<div class="nonincremental">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">regress</span> leave_share share_high_skill</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Slope ≈ <strong>−1.13</strong>: each 1pp increase in education → 1.13pp less Leave.</li>
+<li>95% CI: [−1.42, −0.84] — <strong>excludes zero</strong> → reject H0.</li>
+<li>R-squared ≈ <strong>0.30</strong>: education explains 30% of Leave vote variation.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="your-turn-1-import-shock-and-the-leave-vote" class="level2">
+<h2 class="anchored" data-anchor-id="your-turn-1-import-shock-and-the-leave-vote">Your Turn 1: Import shock and the Leave vote</h2>
+<ul>
+<li><strong>Research question:</strong> Do regions more exposed to Chinese import competition vote Leave more?</li>
+<li><code>import_shock</code>: import shock from China (source: ONS and Eurostat).</li>
+<li>State H0 and H1, then run the regression.</li>
+</ul>
+<hr>
+</section>
+<section id="your-turn-1-setup-and-run" class="level2">
+<h2 class="anchored" data-anchor-id="your-turn-1-setup-and-run">Your Turn 1 — setup and run</h2>
+<div class="nonincremental">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="st">"data-raw/Brexit_Regional.dta"</span>, <span class="kw">clear</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">twoway</span> (<span class="kw">scatter</span> leave_share import_shock) <span class="co">///</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>       (<span class="kw">lfit</span> leave_share import_shock), leg(<span class="kw">off</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="kw">regress</span> leave_share import_shock</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<hr>
+</section>
+<section id="your-turn-1-questions" class="level2">
+<h2 class="anchored" data-anchor-id="your-turn-1-questions">Your Turn 1 — questions</h2>
 <div class="nonincremental">
 <ul>
-<li>Click on the “New Do-file Editor” icon (a sheet of paper and a pencil)</li>
+<li>What is the sign of the slope? What does it mean substantively?</li>
+<li>Write the regression equation: $ = $ ___ + ___ × ImportShock</li>
+<li>Does the 95% CI exclude zero? Do we reject H0?</li>
+<li>What is R-squared? How does it compare to the education model?</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/stata-dofile-editor.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
 </div>
 <hr>
 </section>
-<section id="step-4-set-up-your-do-file-to-load-the-dataset" class="level2">
-<h2 class="anchored" data-anchor-id="step-4-set-up-your-do-file-to-load-the-dataset">Step 4: Set up your do-file to load the dataset</h2>
+<section id="your-turn-2-immigrant-share-and-the-leave-vote" class="level2">
+<h2 class="anchored" data-anchor-id="your-turn-2-immigrant-share-and-the-leave-vote">Your Turn 2: Immigrant share and the Leave vote</h2>
+<ul>
+<li><strong>Research question:</strong> Do regions with larger foreign-born populations vote Leave more or less?</li>
+<li><code>immigrant_share</code>: share of foreign-born residents in 2015 (source: ONS).</li>
+<li>State H0 and H1, then run the regression.</li>
+</ul>
+<hr>
+</section>
+<section id="your-turn-2-setup-and-run" class="level2">
+<h2 class="anchored" data-anchor-id="your-turn-2-setup-and-run">Your Turn 2 — setup and run</h2>
+<div class="nonincremental">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="st">"data-raw/Brexit_Regional.dta"</span>, <span class="kw">clear</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">twoway</span> (<span class="kw">scatter</span> leave_share immigrant_share) <span class="co">///</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>       (<span class="kw">lfit</span> leave_share immigrant_share), leg(<span class="kw">off</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="kw">regress</span> leave_share immigrant_share</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<hr>
+</section>
+<section id="your-turn-2-questions" class="level2">
+<h2 class="anchored" data-anchor-id="your-turn-2-questions">Your Turn 2 — questions</h2>
 <div class="nonincremental">
 <ul>
-<li><p>The first line should be the command that sets the working directory. It should look like:</p>
-<ul>
-<li><code>cd "[Path\To\Your\Folder]"</code></li>
-<li>If you use a Mac, there will be forward slashes instead of back slashes</li>
-</ul></li>
-<li><p>Below that, enter</p>
-<ul>
-<li><code>use "data-raw/Brexit_Regional.dta", clear</code></li>
-</ul></li>
+<li>What is the sign of the slope? Is it what you expected?</li>
+<li>Write the regression equation: $ = $ ___ + ___ × ImmigrantShare</li>
+<li>Does the 95% CI exclude zero? Do we reject H0?</li>
+<li>What is R-squared? How does it compare to the other two models?</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="step-5-run-the-do-file" class="level2">
-<h2 class="anchored" data-anchor-id="step-5-run-the-do-file">Step 5: Run the do-file</h2>
+<section id="comparing-the-three-models" class="level2">
+<h2 class="anchored" data-anchor-id="comparing-the-three-models">Comparing the three models</h2>
 <div class="nonincremental">
 <ul>
-<li>Click on the sheet of paper with a “Play” button. This will <strong>execute</strong> all commands in the do-file</li>
-<li>In the screenshot, the lines of green text after the asterisks are <strong>comments</strong>. Stata won’t run them.</li>
+<li>Fill in the table using your Stata output:</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/stata-run-dofile.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Slope</th>
+<th>Significant?</th>
+<th>R-squared</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Education</td>
+<td>−1.13</td>
+<td>Yes</td>
+<td>0.30</td>
+</tr>
+<tr class="even">
+<td>Import shock</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+</tr>
+<tr class="odd">
+<td>Immigrant share</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+</tr>
+</tbody>
+</table>
 </div>
 <hr>
 </section>
-<section id="step-6-check-if-it-has-worked-and-save-your-do-file" class="level2">
-<h2 class="anchored" data-anchor-id="step-6-check-if-it-has-worked-and-save-your-do-file">Step 6: Check if it has worked and save your do-file</h2>
-<div class="nonincremental">
+<section id="why-this-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-matters">Why this matters</h2>
 <ul>
-<li>If you see this on the top-right pane of your Stata screen, it has worked!</li>
-<li>Be sure to <strong>save your do-file</strong> in your <code>do</code> folder.</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/stata-variables.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-</div>
-<hr>
-</section>
-<section id="step-7-browse-the-data" class="level2">
-<h2 class="anchored" data-anchor-id="step-7-browse-the-data">Step 7: Browse the data</h2>
-<div class="nonincremental">
-<ul>
-<li>Click on this icon with magnifying glass. It will allow you to browse the data.</li>
-<li>Explore it while swithing between your Stata screen and the <a href="https://emckclac-my.sharepoint.com/:w:/r/personal/k2588471_kcl_ac_uk/_layouts/15/Doc.aspx?sourcedoc=%7BEA160DB5-B57C-4CAC-A10F-5C2B3FC18FB2%7D&amp;file=Brexit_Regional_Codebook.docx&amp;action=default&amp;mobileredirect=true">Codebook</a></li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/stata-browse.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-</div>
-<hr>
-</section>
-<section id="recap" class="level2">
-<h2 class="anchored" data-anchor-id="recap">Recap</h2>
-<ul>
-<li>By setting the <strong>working directory</strong>, we tell Stata where our project lives.</li>
-<li>Once that is done, we can <strong>load datasets</strong> by showing Stata where to find them in the subfolders inside our working directory.</li>
-<li>Once a dataset is loaded, we can browse them using Stata.</li>
-</ul>
-<hr>
-<p><strong>Why this matters:</strong></p>
-<ul>
-<li>This exercise allows you to familiarise yourself with how a dataset looks like in Stata.</li>
+<li>The regression structure stays the same — only the <strong>independent variable</strong> changes.</li>
+<li>Comparing slopes, significance, and R-squared is how we evaluate <strong>competing explanations</strong>.</li>
+<li>This is exactly what PS2 asks you to do.</li>
 </ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
