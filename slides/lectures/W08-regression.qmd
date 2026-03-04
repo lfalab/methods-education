@@ -1,0 +1,196 @@
+---
+title: "Lecture 8: Bivariate Regression"
+subtitle: "Statistics for Political Science"
+author: "Leonardo Falabella"
+class: lecture
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: regression-lecture
+  revealjs:
+    output-file: regression-lecture-slides
+---
+
+------------------------------------------------------------------------
+
+## From inference to regression
+
+- Last week: we tested whether two groups differ.
+- This week: we describe and test a **linear relationship** between two numeric variables.
+- Same inferential logic — new command, richer output.
+
+------------------------------------------------------------------------
+
+## The do-file is your template
+
+- Everything we do today is in ``regression-lecture.do``.
+- Download it, update the working directory, and run along.
+
+------------------------------------------------------------------------
+
+## Download today's do-file
+
+::: nonincremental
+
+- Access our [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE)
+- Click on ``do``
+- Download ``regression-lecture.do``
+- Save it to your ``do`` folder and update the working directory
+
+:::
+
+------------------------------------------------------------------------
+
+## Today's structure
+
+::: nonincremental
+
+| Part | Independent variable | Question |
+|------|---------------------|----------|
+| Example | Higher education share | Do graduates vote Leave less? |
+| Your Turn 1 | Import shock | Does trade exposure predict Leave? |
+| Your Turn 2 | Immigrant share | Does immigration predict Leave? |
+
+:::
+
+------------------------------------------------------------------------
+
+## Example: Education and the Leave vote
+
+- **Research question:** Do regions with higher education shares vote Leave less?
+- **H0:** No linear relationship between education share and Leave vote share.
+- Open ``regression-lecture.do`` and go to the **Example** section.
+
+------------------------------------------------------------------------
+
+## Example: Step 1 — scatterplot
+
+::: nonincremental
+
+```stata
+twoway (scatter leave_share share_high_skill) ///
+       (lfit leave_share share_high_skill), leg(off)
+```
+
+- Each dot is a UK region.
+- The line shows the estimated linear relationship.
+
+:::
+
+------------------------------------------------------------------------
+
+## Example: Step 2 — run the regression
+
+::: nonincremental
+
+```stata
+regress leave_share share_high_skill
+```
+
+- Slope ≈ **−1.13**: each 1pp increase in education → 1.13pp less Leave.
+- 95% CI: [−1.42, −0.84] — **excludes zero** → reject H0.
+- R-squared ≈ **0.30**: education explains 30% of Leave vote variation.
+
+:::
+
+------------------------------------------------------------------------
+
+## Your Turn 1: Import shock and the Leave vote
+
+- **Research question:** Do regions more exposed to Chinese import competition vote Leave more?
+- ``import_shock``: import shock from China (source: ONS and Eurostat).
+- State H0 and H1, then run the regression.
+
+------------------------------------------------------------------------
+
+## Your Turn 1 — setup and run
+
+::: nonincremental
+
+```stata
+use "data-raw/Brexit_Regional.dta", clear
+
+twoway (scatter leave_share import_shock) ///
+       (lfit leave_share import_shock), leg(off)
+
+regress leave_share import_shock
+```
+
+:::
+
+------------------------------------------------------------------------
+
+## Your Turn 1 — questions
+
+::: nonincremental
+
+- What is the sign of the slope? What does it mean substantively?
+- Write the regression equation: $\widehat{\text{Leave}} = $ \_\_\_ + \_\_\_ × ImportShock
+- Does the 95% CI exclude zero? Do we reject H0?
+- What is R-squared? How does it compare to the education model?
+
+:::
+
+------------------------------------------------------------------------
+
+## Your Turn 2: Immigrant share and the Leave vote
+
+- **Research question:** Do regions with larger foreign-born populations vote Leave more or less?
+- ``immigrant_share``: share of foreign-born residents in 2015 (source: ONS).
+- State H0 and H1, then run the regression.
+
+------------------------------------------------------------------------
+
+## Your Turn 2 — setup and run
+
+::: nonincremental
+
+```stata
+use "data-raw/Brexit_Regional.dta", clear
+
+twoway (scatter leave_share immigrant_share) ///
+       (lfit leave_share immigrant_share), leg(off)
+
+regress leave_share immigrant_share
+```
+
+:::
+
+------------------------------------------------------------------------
+
+## Your Turn 2 — questions
+
+::: nonincremental
+
+- What is the sign of the slope? Is it what you expected?
+- Write the regression equation: $\widehat{\text{Leave}} = $ \_\_\_ + \_\_\_ × ImmigrantShare
+- Does the 95% CI exclude zero? Do we reject H0?
+- What is R-squared? How does it compare to the other two models?
+
+:::
+
+------------------------------------------------------------------------
+
+## Comparing the three models
+
+::: nonincremental
+
+- Fill in the table using your Stata output:
+
+| Model | Slope | Significant? | R-squared |
+|-------|-------|-------------|-----------|
+| Education | −1.13 | Yes | 0.30 |
+| Import shock | ? | ? | ? |
+| Immigrant share | ? | ? | ? |
+
+:::
+
+------------------------------------------------------------------------
+
+## Why this matters
+
+- The regression structure stays the same — only the **independent variable** changes.
+- Comparing slopes, significance, and R-squared is how we evaluate **competing explanations**.
+- This is exactly what PS2 asks you to do.
