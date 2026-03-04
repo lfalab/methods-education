@@ -12,6 +12,9 @@ format:
     output-file: htests-weights-activity
   revealjs:
     output-file: htests-weights-slides
+    theme: ../theme/reveal-lecture.scss
+    slide-number: true
+    incremental: false
 ---
 
 ------------------------------------------------------------------------

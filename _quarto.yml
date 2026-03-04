@@ -75,6 +75,8 @@ website:
             - slides/videos-concepts/C20-regression-inference.qmd
             - slides/videos-concepts/C21-regression-rsquared.qmd
             - slides/videos-stata/S09-regression-stata.qmd
+            - slides/lectures/W08-regression.qmd
+            - activities/A08-regression-activity.qmd
 
 
 format:
