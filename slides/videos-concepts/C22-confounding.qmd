@@ -1,0 +1,131 @@
+---
+pagetitle: "Confounding Variables"
+class: video
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: confounding
+  revealjs:
+    output-file: confounding-slides
+---
+
+# Confounding Variables {.title-left}
+
+------------------------------------------------------------------------
+
+## You'll learn to
+
+::: presenter-space
+- Define a confounding variable.
+- Explain why correlation doesn't imply causation by referring to confounding variables.
+:::
+
+------------------------------------------------------------------------
+
+## Health care spending and greenhouse gas emissions
+
+::: presenter-space
+- **Research Question**: Does spending more in health care cause increases in greenhouse gas emissions?
+- **Hypothesis:** More health care spending causes greenhouse gas emissions to increase.
+:::
+
+------------------------------------------------------------------------
+
+## Hypothesis
+
+:::: nonincremental
+
+::: presenter-space
+
+![](../../assets/x-causes-y.png){fig-cap="" fig-align="center" width="75%"}
+
+:::
+
+::::
+
+------------------------------------------------------------------------
+
+## Hypothesis
+
+:::: nonincremental
+
+::: presenter-space
+
+![](../../assets/health-causes-carbon.png){fig-cap="" fig-align="center" width="75%"}
+
+:::
+
+::::
+
+------------------------------------------------------------------------
+
+## A positive correlation
+
+:::: nonincremental
+
+::: presenter-space
+
+![](../../assets/health-carbon-canvas.png){fig-cap="" fig-align="center" width="75%"}
+
+:::
+
+::::
+
+------------------------------------------------------------------------
+
+## A positive correlation
+
+:::: nonincremental
+
+::: presenter-space
+
+![](../../assets/health-carbon-scatter.png){fig-cap="" fig-align="center" width="75%"}
+
+:::
+
+::::
+
+------------------------------------------------------------------------
+
+## A confounding variable
+
+:::: nonincremental
+
+::: presenter-space
+
+![](../../assets/wealth-dag.png){fig-cap="" fig-align="center" width="75%"}
+
+:::
+
+::::
+
+------------------------------------------------------------------------
+
+## Definition
+
+::: presenter-space
+A **confounding variable**:
+
+- Affects the dependent variable.
+- Affects the independent variable.
+- Is not a result of the independent variable.
+
+:::
+
+------------------------------------------------------------------------
+
+## Recap
+
+::: presenter-space
+
+:::
+
+------------------------------------------------------------------------
+
+::: presenter-space
+**Why this matters:**
+
+
+:::
