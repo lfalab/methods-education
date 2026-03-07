@@ -1,0 +1,143 @@
+---
+pagetitle: "Random Assignment and Causal Inference"
+class: video
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: random-assignment
+  revealjs:
+    output-file: random-assignment-slides
+---
+
+# Random Assignment and Causal Inference {.title-left}
+
+------------------------------------------------------------------------
+
+## You'll learn to
+
+::: presenter-space
+- Explain the **counterfactual problem** in causal inference.
+- Describe how **random assignment** addresses confounding and reverse causality.
+- Identify the **limits** of experimental designs.
+:::
+
+------------------------------------------------------------------------
+
+## A causal question
+
+::: presenter-space
+- Does exposure to **misinformation online** increase belief in conspiracy claims?
+- We observe a correlation: more exposure, more agreement with conspiracies.
+- But does exposure **cause** the beliefs — or is something else going on?
+:::
+
+------------------------------------------------------------------------
+
+## Problem 1: Reverse causality
+
+::: presenter-space
+- People who already believe conspiracies may **actively seek out** misinformation.
+- The correlation may run from **beliefs → exposure**, not exposure → beliefs.
+- The causal direction is unclear from observational data alone.
+:::
+
+------------------------------------------------------------------------
+
+## Problem 2: Confounding variables
+
+::: presenter-space
+- Political distrust, ideology, and education may **influence both** variables.
+- People with high distrust may be exposed to more misinformation **and** hold more conspiracy beliefs.
+- These confounders can make the relationship appear causal when it is not.
+:::
+
+------------------------------------------------------------------------
+
+## The counterfactual problem
+
+::: presenter-space
+- Ideally, we would observe the **same person** in two states simultaneously.
+- One state: exposed to misinformation. One state: not exposed.
+- This is impossible — we can only observe what actually happened.
+:::
+
+------------------------------------------------------------------------
+
+## The logic of the counterfactual
+
+::: presenter-space
+- We want to know: what would this person have believed **without** exposure?
+- That unobserved outcome is the **counterfactual**.
+- Causal inference is the problem of estimating it.
+:::
+
+------------------------------------------------------------------------
+
+## The experimental solution
+
+::: presenter-space
+- Randomly assign participants to different **information environments**.
+- Treatment group: exposed to misinformation content.
+- Control group: exposed to neutral or factual content.
+:::
+
+------------------------------------------------------------------------
+
+## Why randomisation works
+
+::: presenter-space
+- Random assignment makes the two groups **similar on average**.
+- Similar in distrust, ideology, education — and everything else.
+- Any difference in beliefs afterwards can be attributed to **exposure itself**.
+:::
+
+------------------------------------------------------------------------
+
+## What randomisation achieves
+
+::: presenter-space
+- It **breaks the link** between exposure and pre-existing characteristics.
+- Confounders cannot be correlated with treatment if assignment is random.
+- Reverse causality cannot operate — exposure is **imposed**, not self-selected.
+:::
+
+------------------------------------------------------------------------
+
+## A brief note on ethics
+
+::: presenter-space
+- Deliberately exposing participants to misinformation raises **ethical concerns**.
+- Researchers often use safeguards: simulated content, debriefing after the study.
+- Not all causal questions can be answered experimentally for ethical reasons.
+:::
+
+------------------------------------------------------------------------
+
+## When experiments are not possible
+
+::: presenter-space
+- We cannot randomly assign people to **years of education**, **war**, or **poverty**.
+- Many important political questions involve variables that cannot be manipulated.
+- Other methods exist to approximate causal inference from observational data.
+:::
+
+------------------------------------------------------------------------
+
+## Recap
+
+::: presenter-space
+- Random assignment creates comparable groups, isolating the effect of **one variable**.
+- It addresses both confounding and reverse causality simultaneously.
+- Where experiments are impossible, other tools are needed — and that is where **statistics** comes in.
+:::
+
+------------------------------------------------------------------------
+
+::: presenter-space
+**Why this matters:**
+
+- Most data in political science is observational, not experimental.
+- Understanding what experiments achieve helps you evaluate what observational studies **cannot** establish.
+:::

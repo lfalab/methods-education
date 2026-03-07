@@ -1,0 +1,136 @@
+---
+pagetitle: "Reverse Causality"
+class: video
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: reverse-causality
+  revealjs:
+    output-file: reverse-causality-slides
+---
+
+# Reverse Causality {.title-left}
+
+------------------------------------------------------------------------
+
+## You'll learn to
+
+::: presenter-space
+- Define **reverse causality**.
+- Identify relationships where causal direction is ambiguous.
+- Explain why correlations alone cannot determine which way causation runs.
+:::
+
+------------------------------------------------------------------------
+
+## A familiar correlation
+
+::: presenter-space
+- Healthcare spending and CO₂ emissions are **positively correlated**.
+- One interpretation: spending more on healthcare **causes** more emissions.
+- In the previous video: national wealth may **confound** this relationship.
+:::
+
+------------------------------------------------------------------------
+
+## A second problem with the same correlation
+
+::: presenter-space
+- Confounding is not the only threat to causal interpretation.
+- A second problem: we may have the **direction of causation backwards**.
+- This is **reverse causality**.
+:::
+
+------------------------------------------------------------------------
+
+## Definition
+
+::: presenter-space
+**Reverse causality** occurs when:
+
+- X and Y are correlated.
+- We assume X causes Y.
+- But Y may actually cause X — or causation runs **both ways**.
+:::
+
+------------------------------------------------------------------------
+
+## The reversed pathway: healthcare and emissions
+
+::: presenter-space
+- Higher emissions → more **pollution-related illness**.
+- More illness → **greater demand** for healthcare.
+- So emissions may drive spending, not the other way around.
+:::
+
+------------------------------------------------------------------------
+
+## Both directions may be plausible
+
+::: presenter-space
+- Wealthier, higher-emitting countries may also **invest more** in healthcare.
+- But higher emissions may also **generate** healthcare need.
+- The data alone cannot tell us which direction dominates.
+:::
+
+------------------------------------------------------------------------
+
+## Example 1: Education and democracy
+
+::: presenter-space
+- More educated populations may **demand** democratic governance.
+- But democracies may also **invest more** in public education.
+- Does education cause democracy, or democracy cause education?
+:::
+
+------------------------------------------------------------------------
+
+## Example 2: Policing and crime
+
+::: presenter-space
+- More police may **deter** criminal activity.
+- But higher crime rates may **prompt** increases in policing.
+- The observed correlation is consistent with **both** directions.
+:::
+
+------------------------------------------------------------------------
+
+## Example 3: Income and health
+
+::: presenter-space
+- Higher income enables **better nutrition, housing, and care**.
+- But better health may allow people to **work more and earn more**.
+- Income and health may **mutually reinforce** each other over time.
+:::
+
+------------------------------------------------------------------------
+
+## The core difficulty
+
+::: presenter-space
+- Observational data show that X and Y move **together**.
+- They cannot tell us whether X drives Y, Y drives X, or **both**.
+- Establishing causal direction requires more than a correlation.
+:::
+
+------------------------------------------------------------------------
+
+## Recap
+
+::: presenter-space
+- Reverse causality: Y may cause X, not just X causing Y.
+- The healthcare–emissions correlation is consistent with **both** directions.
+- Correlations alone cannot resolve which direction causation runs.
+:::
+
+------------------------------------------------------------------------
+
+::: presenter-space
+**Why this matters:**
+
+- Causal claims based on correlations appear constantly in public debate.
+- Reverse causality is one reason those claims may be wrong.
+- Recognising it is crucial for evaluating quantitative evidence critically.
+:::
