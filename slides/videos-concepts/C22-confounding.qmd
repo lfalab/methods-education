@@ -116,10 +116,52 @@ A **confounding variable**:
 
 ------------------------------------------------------------------------
 
+## Confounders vs. mediators
+
+::: presenter-space
+- A **confounder** influences both X and Y from outside the relationship.
+- A **mediator** lies on the causal pathway from X to Y.
+- Mediators are part of the mechanism — not confounders.
+:::
+
+------------------------------------------------------------------------
+
+## An example of the distinction
+
+::: presenter-space
+- Does education reduce crime? Possibly via **higher income** (mediator).
+- Higher income lies on the pathway: education → income → crime.
+- A confounder would affect both education and crime **independently**.
+:::
+
+------------------------------------------------------------------------
+
+## Omitted variable bias
+
+::: presenter-space
+- When a confounder is **left out** of the analysis, estimates can mislead.
+- The relationship between X and Y may appear causal when it is not.
+- This is called **omitted variable bias**.
+:::
+
+------------------------------------------------------------------------
+
+## Omitted variable bias: the healthcare example
+
+::: presenter-space
+- National wealth is omitted → spending appears to **cause** emissions.
+- Once wealth is accounted for, the direct relationship may **disappear**.
+- This is why bivariate regression is often not enough.
+:::
+
+------------------------------------------------------------------------
+
 ## Recap
 
 ::: presenter-space
-
+- A confounding variable affects both X and Y and is not caused by X.
+- Confounders create correlations that can **look causal** but are not.
+- Identifying confounders is essential before drawing causal conclusions.
 :::
 
 ------------------------------------------------------------------------
@@ -127,5 +169,7 @@ A **confounding variable**:
 ::: presenter-space
 **Why this matters:**
 
-
+- Most data in political science is observational, not experimental.
+- Causal claims in public debate are often based on bivariate correlations.
+- Recognising possible confounders is how you read those claims critically — and why multivariate methods matter.
 :::
