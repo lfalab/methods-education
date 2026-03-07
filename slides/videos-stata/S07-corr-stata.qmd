@@ -119,10 +119,6 @@ format:
 - Use ``tabulate`` with ``column`` option for percentages.
 - Use ``graph hbar (count)`` with ``over()`` options for grouped bar charts.
 
-:::
-
-::: notes
-
 **Note:** The video uses ``catplot`` for this chart. We have switched to ``graph hbar`` in the do files because ``catplot`` has changed since the video was recorded. The output is equivalent.
   
 :::
