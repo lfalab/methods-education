@@ -79,6 +79,7 @@ website:
             - activities/A08-regression-activity.qmd
             - activities/A08-ps2-workshop-1.qmd
       - section: "Week 9: Confounding Variables and Reverse Causality"
+        contents:
             - slides/videos-concepts/C22-confounding.qmd
             - slides/videos-concepts/C23-reverse-causality.qmd
             - slides/videos-concepts/C24-random-assignment.qmd
