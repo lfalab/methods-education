@@ -95,7 +95,7 @@ format:
 
 ::: presenter-space
 
-![](../../assets/wealth-dag.png){fig-cap="" fig-align="center" width="75%"}
+![](../../assets/wealth-dag.png){fig-cap="" fig-align="center" width="50%"}
 
 :::
 
@@ -171,5 +171,5 @@ A **confounding variable**:
 
 - Most data in political science is observational, not experimental.
 - Causal claims in public debate are often based on bivariate correlations.
-- Recognising possible confounders is how you read those claims critically — and why multivariate methods matter.
+- Recognising possible confounders is how you read those claims critically.
 :::

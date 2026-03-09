@@ -78,9 +78,9 @@ format:
 ## The experimental solution
 
 ::: presenter-space
-- Randomly assign participants to different **information environments**.
-- Treatment group: exposed to misinformation content.
-- Control group: exposed to neutral or factual content.
+- **Randomly assign** participants to different information environments.
+- **Treatment group:** exposed to misinformation content.
+- **Control group:** exposed to neutral or factual content.
 :::
 
 ------------------------------------------------------------------------

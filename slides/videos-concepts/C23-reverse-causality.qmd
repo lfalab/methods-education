@@ -97,16 +97,6 @@ format:
 
 ------------------------------------------------------------------------
 
-## Example 3: Income and health
-
-::: presenter-space
-- Higher income enables **better nutrition, housing, and care**.
-- But better health may allow people to **work more and earn more**.
-- Income and health may **mutually reinforce** each other over time.
-:::
-
-------------------------------------------------------------------------
-
 ## The core difficulty
 
 ::: presenter-space
