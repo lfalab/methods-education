@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <title>Data Transformations in Stata</title>
+  <title>Preparing Data in Stata</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -27,6 +27,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-f88d935cd01326925f73dc62b106448c.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -127,132 +193,139 @@
 
 
 <section>
-<section id="data-transformations-in-stata" class="title-slide slide level1 title-left center">
-<h1>Data Transformations in Stata</h1>
+<section id="preparing-data-in-stata" class="title-slide slide level1 title-left center">
+<h1>Preparing Data in Stata</h1>
 
 </section>
 <section id="youll-learn-to" class="slide level2">
 <h2>You’ll learn to</h2>
+<div class="presenter-space">
 <ul>
-<li>Use <strong>conditional statements</strong> to analyse subgroups.</li>
-<li>Filter observations using <code>keep</code> and <code>drop</code>.</li>
-<li>Combine multiple conditions to refine your analysis.</li>
+<li class="fragment">Recode <strong>invalid values</strong> to missing using <code>replace</code>.</li>
+<li class="fragment"><strong>Drop observations</strong> based on a condition.</li>
+<li class="fragment"><strong>Generate a binary variable</strong> from a logical statement.</li>
+<li class="fragment">Save a <strong>cleaned dataset</strong> as a separate file.</li>
 </ul>
+</div>
 </section>
-<section id="step-1-download-the-british-election-study-dataset-from-our-shared-folder" class="slide level2">
-<h2>Step 1: Download the British Election Study dataset from our shared folder</h2>
+<section id="why-data-preparation-matters" class="slide level2">
+<h2>Why data preparation matters</h2>
+<div class="presenter-space">
 <ul>
-<li>Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a></li>
-<li>Click on <code>data-raw</code></li>
-<li>Download <code>British_Election_Study_2024.dta</code></li>
-<li>Save it into the <code>data-raw</code> folder on your computer</li>
+<li class="fragment">Raw survey data often contains <strong>invalid or missing value codes</strong>.</li>
+<li class="fragment">Analysing uncleaned data can produce <strong>incorrect results</strong>.</li>
+<li class="fragment">A short preparation step before analysis prevents these errors.</li>
 </ul>
+</div>
 </section>
-<section id="step-2-download-the-companion-do-file-for-this-activity" class="slide level2">
-<h2>Step 2: Download the companion do-file for this activity</h2>
+<section id="missing-values-in-stata" class="slide level2">
+<h2>Missing values in Stata</h2>
+<div class="presenter-space">
 <ul>
-<li>Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a></li>
-<li>Click on <code>do</code></li>
-<li>Download <code>transform-bes.do</code></li>
-<li>Save it into the <code>do</code> folder on your computer</li>
+<li class="fragment">In Stata, <code>.</code> represents a <strong>missing value</strong>.</li>
+<li class="fragment">Survey datasets often encode missing responses as <strong>negative numbers</strong>.</li>
+<li class="fragment">These must be recoded to <code>.</code> before analysis.</li>
 </ul>
+</div>
 </section>
-<section id="step-3-insert-the-path-to-your-folder-on-your-computer" class="slide level2">
-<h2>Step 3: Insert the path to your folder on your computer</h2>
+<section id="operation-1-recode-invalid-values-to-missing" class="slide level2">
+<h2>Operation 1: Recode invalid values to missing</h2>
+<div class="presenter-space">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a></a><span class="kw">replace</span> age = . <span class="kw">if</span> age &lt; 0</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li>This line of <code>transform-bes.do</code> has an “address” that only works on my computer.</li>
-<li>Replace it with the “address” to your project folder on your computer.</li>
+<li class="fragment">Any observation where <code>age</code> is negative gets recoded to <strong>missing</strong>.</li>
+<li class="fragment">Stata will then exclude these observations from calculations automatically.</li>
+<li class="fragment">Repeat for each variable that uses negative codes for missing data.</li>
 </ul>
-
-<img data-src="../../assets/stata-replace-cd2.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-4-select-the-top-portion-of-the-do-file-and-click-execute-do" class="slide level2">
-<h2>Step 4: Select the top portion of the do file and click “execute (do)”</h2>
-
-<img data-src="../../assets/stata-select-execute3.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-5-check-if-it-has-worked-and-save-your-do-file" class="slide level2">
-<h2>Step 5: Check if it has worked and save your do-file</h2>
-<ul>
-<li>If you see this on the top-right pane of your Stata screen, it has worked!</li>
-<li>Be sure to <strong>save your do-file</strong> in your <code>do</code> folder.</li>
-</ul>
-
-<img data-src="../../assets/stata-bes-variables.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="what-is-data-transformation" class="slide level2">
-<h2>What is data transformation?</h2>
-<ul>
-<li><p><strong>Data transformation</strong> prepares your dataset for analysis.</p></li>
-<li><p>Common tasks include:</p>
-<ul>
-<li>Analysing specific <strong>subgroups</strong> (e.g., women, Labour voters, young respondents).</li>
-<li><strong>Filtering</strong> the dataset to focus on relevant observations.</li>
-<li>Combining multiple <strong>conditions</strong> to answer complex questions.</li>
-</ul></li>
-</ul>
+</div>
 </section>
-<section id="conditional-summaries-the-if-statement" class="slide level2">
-<h2>Conditional summaries: The <code>if</code> statement</h2>
+<section id="operation-2-drop-observations-based-on-a-condition" class="slide level2">
+<h2>Operation 2: Drop observations based on a condition</h2>
+<div class="presenter-space">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a></a><span class="kw">drop</span> <span class="kw">if</span> k03 != 7 &amp; k03 != 13</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li>The <code>if</code> statement restricts commands to observations that meet a condition.</li>
-<li>Example: <code>sum Age if y09 == 1</code> calculates the mean age for women only.</li>
-<li>Open <code>transform-bes.do</code> and navigate to <strong>Part A</strong> to see more examples.</li>
+<li class="fragment">Removes all observations that are <strong>neither</strong> Mail nor Telegraph readers.</li>
+<li class="fragment">Restricts the sample to the <strong>two groups</strong> being compared.</li>
+<li class="fragment">Use <code>drop if</code> whenever analysis requires a specific subgroup only.</li>
 </ul>
+</div>
 </section>
-<section id="conditional-tabulations" class="slide level2">
-<h2>Conditional tabulations</h2>
+<section id="the-equivalent-using-keep-if" class="slide level2">
+<h2>The equivalent using <code>keep if</code></h2>
+<div class="presenter-space">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb3-1"><a></a><span class="kw">keep</span> <span class="kw">if</span> k03 == 7 | k03 == 13</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li>The <code>if</code> statement also works with <code>tabulate</code>.</li>
-<li>Example: <code>tab b02 if edlevel &gt;= 4</code> shows vote choice among respondents with a degree or higher.</li>
-<li>This allows you to examine distributions within specific subgroups.</li>
+<li class="fragment">Keeps only Mail (<code>7</code>) or Telegraph (<code>13</code>) readers — <strong>same result</strong>.</li>
+<li class="fragment"><code>drop if</code> and <code>keep if</code> are logical <strong>mirror images</strong> of each other.</li>
+<li class="fragment">Use whichever makes the intended restriction easier to read.</li>
 </ul>
+</div>
 </section>
-<section id="filtering-observations-keep-and-drop" class="slide level2">
-<h2>Filtering observations: <code>keep</code> and <code>drop</code></h2>
+<section id="operation-3-generate-a-binary-variable" class="slide level2">
+<h2>Operation 3: Generate a binary variable</h2>
+<div class="presenter-space">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb4-1"><a></a><span class="kw">gen</span> voted_reform = (b02 == 8) <span class="kw">if</span> b02 != .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li><code>keep if</code> retains only observations that meet a condition.</li>
-<li><code>drop if</code> removes observations that meet a condition.</li>
-<li>Example: <code>keep if b02 == 1</code> keeps only Labour voters.</li>
-<li>Navigate to <strong>Part B</strong> in <code>transform-bes.do</code> to see how this works.</li>
+<li class="fragment">The expression <code>(b02 == 8)</code> returns <strong>1 if true, 0 if false</strong>.</li>
+<li class="fragment">The condition <code>if b02 != .</code> ensures missing values are <strong>not assigned a code</strong>.</li>
+<li class="fragment">This is how <strong>dummy variables</strong> are created in Stata.</li>
 </ul>
+</div>
 </section>
-<section id="combining-multiple-conditions" class="slide level2">
-<h2>Combining multiple conditions</h2>
+<section id="labelling-the-new-variable" class="slide level2">
+<h2>Labelling the new variable</h2>
+<div class="presenter-space">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb5-1"><a></a><span class="kw">label</span> <span class="kw">define</span> reform_lbl 1 <span class="st">"Reform"</span> 0 <span class="st">"Another Party"</span></span>
+<span id="cb5-2"><a></a><span class="kw">label</span> <span class="kw">values</span> voted_reform reform_lbl</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li>Use <code>&amp;</code> (and) to combine conditions.</li>
-<li>Example: <code>sum Age if e01 &gt;= 0 &amp; e01 &lt;= 3 &amp; y09 == 1</code> calculates the mean age of women with left-wing ideology.</li>
-<li>Open <strong>Part C</strong> in <code>transform-bes.do</code> to see more examples.</li>
+<li class="fragment"><code>label define</code> creates a set of value labels.</li>
+<li class="fragment"><code>label values</code> attaches them to the variable.</li>
+<li class="fragment">Labels make output <strong>easier to read</strong> without changing underlying values.</li>
 </ul>
+</div>
 </section>
-<section id="working-with-ranges" class="slide level2">
-<h2>Working with ranges</h2>
+<section id="operation-4-save-the-cleaned-dataset" class="slide level2">
+<h2>Operation 4: Save the cleaned dataset</h2>
+<div class="presenter-space">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb6-1"><a></a><span class="kw">save</span> <span class="st">"data-clean/bes_clean.dta"</span>, <span class="kw">replace</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li>Use <code>&gt;=</code> and <code>&lt;=</code> to specify ranges.</li>
-<li>Example: <code>tab b02 if e01 &gt;= 4 &amp; e01 &lt;= 6</code> shows vote choice among respondents with moderate ideology.</li>
-<li>Navigate to <strong>Part D</strong> in <code>transform-bes.do</code> for additional examples.</li>
+<li class="fragment">Save the cleaned file to a <strong>separate folder</strong> from the raw data.</li>
+<li class="fragment">Never overwrite raw data — keep it as originally downloaded.</li>
+<li class="fragment">The <code>replace</code> option overwrites any previous version of the clean file.</li>
 </ul>
+</div>
 </section>
-<section id="your-turn-explore-conditional-analysis" class="slide level2">
-<h2>Your turn: Explore conditional analysis</h2>
+<section id="the-cleaning-workflow" class="slide level2">
+<h2>The cleaning workflow</h2>
+<div class="presenter-space">
 <ul>
-<li>Open <code>transform-bes.do</code> and work through <strong>Part E</strong>.</li>
-<li>Try modifying the conditions to answer your own research questions.</li>
-<li>Use the BES codebook to explore additional variables.</li>
+<li class="fragment">Load raw data → recode invalids → drop if needed → generate new variables.</li>
+<li class="fragment">Save the cleaned file → run analysis from the <strong>clean file</strong>.</li>
+<li class="fragment">This makes your analysis reproducible and easier to review.</li>
 </ul>
+</div>
 </section>
 <section id="recap" class="slide level2">
 <h2>Recap</h2>
+<div class="presenter-space">
 <ul>
-<li class="fragment"><strong>Conditional statements</strong> allow you to analyse specific subgroups.</li>
-<li class="fragment"><code>keep</code> and <code>drop</code> filter your dataset to focus on relevant observations.</li>
-<li class="fragment">Combining conditions with <code>&amp;</code> refines your analysis.</li>
+<li class="fragment"><code>replace x = . if x &lt; 0</code> — recode invalid values to <strong>missing</strong>.</li>
+<li class="fragment"><code>drop if condition</code> — remove observations <strong>outside</strong> the subgroup of interest.</li>
+<li class="fragment"><code>generate</code> with a logical statement — create a <strong>binary variable</strong>.</li>
+<li class="fragment">Save cleaned data to a separate folder; never overwrite raw data.</li>
 </ul>
+</div>
 </section>
 <section class="slide level2">
 
+<div class="presenter-space">
 <p><strong>Why this matters:</strong></p>
 <ul>
-<li class="fragment">Before visualising or modelling data, you often need to focus on specific subgroups or filter out irrelevant observations.</li>
-<li class="fragment">These skills are essential for preparing data and answering precise research questions.</li>
+<li class="fragment">Uncleaned data produces unreliable results — even correct commands will fail if the inputs are wrong.</li>
+<li class="fragment">These four operations appear in almost every real data analysis workflow.</li>
+<li class="fragment">Good data preparation habits make your work transparent, reproducible, and easier to check.</li>
 </ul>
+</div>
 
 
 </section></section>

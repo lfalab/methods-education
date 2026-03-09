@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <title>Describing Correlations in Stata</title>
+  <title>Confounding Variables</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -28,7 +28,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-f88d935cd01326925f73dc62b106448c.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-7433acd2865db5fa81269247cd6920be.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -127,144 +127,149 @@
 
 
 <section>
-<section id="describing-correlations-in-stata" class="title-slide slide level1 title-left center">
-<h1>Describing Correlations in Stata</h1>
+<section id="confounding-variables" class="title-slide slide level1 title-left center">
+<h1>Confounding Variables</h1>
 
 </section>
 <section id="youll-learn-to" class="slide level2">
 <h2>You’ll learn to</h2>
+<div class="presenter-space">
 <ul>
-<li>Generate and interpret <strong>bivariate summaries</strong> in Stata.</li>
+<li class="fragment">Define a confounding variable.</li>
+<li class="fragment">Explain why correlation doesn’t imply causation by referring to confounding variables.</li>
 </ul>
+</div>
 </section>
-<section id="step-1-download-the-british-election-study-dataset-from-our-shared-folder" class="slide level2">
-<h2>Step 1: Download the British Election Study dataset from our shared folder</h2>
+<section id="health-care-spending-and-greenhouse-gas-emissions" class="slide level2">
+<h2>Health care spending and greenhouse gas emissions</h2>
+<div class="presenter-space">
 <ul>
-<li>Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a></li>
-<li>Click on <code>data-raw</code></li>
-<li>Download <code>British_Election_Study_2024.dta</code></li>
-<li>Save it into the <code>data-raw</code> folder on your computer</li>
+<li class="fragment"><strong>Research Question</strong>: Does spending more in health care cause increases in greenhouse gas emissions?</li>
+<li class="fragment"><strong>Hypothesis:</strong> More health care spending causes greenhouse gas emissions to increase.</li>
 </ul>
+</div>
 </section>
-<section id="step-2-download-the-companion-do-file-for-this-activity" class="slide level2">
-<h2>Step 2: Download the companion do-file for this activity</h2>
-<ul>
-<li>Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a></li>
-<li>Click on <code>do</code></li>
-<li>Download <code>bivariate-bes.do</code></li>
-<li>Save it into the <code>do</code> folder on your computer</li>
-</ul>
+<section id="hypothesis" class="slide level2">
+<h2>Hypothesis</h2>
+<div class="presenter-space">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../assets/x-causes-y.png" class="quarto-figure quarto-figure-center" style="width:75.0%" data-fig-cap=""></p>
+</figure>
+</div>
+</div>
 </section>
-<section id="step-3-insert-the-path-to-your-folder-on-your-computer" class="slide level2">
-<h2>Step 3: Insert the path to your folder on your computer</h2>
-<ul>
-<li>This line of <code>bivariate-bes.do</code> has an “address” that only works on my computer.</li>
-<li>Replace it with the “address” to your project folder on your computer.</li>
-</ul>
-
-<img data-src="../../assets/stata-replace-cd2.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-4-select-the-top-portion-of-the-do-file-and-click-execute-do" class="slide level2">
-<h2>Step 4: Select the top portion of the do file and click “execute (do)”</h2>
-
-<img data-src="../../assets/stata-select-execute3.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-5-check-if-it-has-worked-and-save-your-do-file" class="slide level2">
-<h2>Step 5: Check if it has worked and save your do-file</h2>
-<ul>
-<li>If you see this on the top-right pane of your Stata screen, it has worked!</li>
-<li>Be sure to <strong>save your do-file</strong> in your <code>do</code> folder.</li>
-</ul>
-
-<img data-src="../../assets/stata-bes-variables.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-6-read-through-the-do-file-comments-and-execute-the-commands" class="slide level2">
-<h2>Step 6: Read through the do-file comments and execute the commands</h2>
-<ul>
-<li>This do-file will serve as your companion for learning how to describe <strong>bivariate relationships</strong> in Stata.</li>
-<li>The do-file covers <strong>three types</strong> of bivariate analysis, depending on the variable types involved.</li>
-</ul>
+<section id="hypothesis-1" class="slide level2">
+<h2>Hypothesis</h2>
+<div class="presenter-space">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../assets/health-causes-carbon.png" class="quarto-figure quarto-figure-center" style="width:75.0%" data-fig-cap=""></p>
+</figure>
+</div>
+</div>
 </section>
-<section id="what-is-bivariate-analysis" class="slide level2">
-<h2>What is bivariate analysis?</h2>
-<ul>
-<li><strong>Univariate</strong> analysis describes one variable at a time.</li>
-<li><strong>Bivariate</strong> analysis describes relationships between <strong>two variables</strong>.</li>
-<li>The appropriate tool depends on the <strong>types of variables</strong> being analysed.</li>
-<li>Open <code>bivariate-bes.do</code> to see examples of all three cases.</li>
-</ul>
-<table class="caption-top">
-<colgroup>
-<col style="width: 100%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">## Case 1: Nominal + Nominal</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">::: nonincremental</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">- <strong>Example:</strong> Gender and vote choice. - <strong>Tools:</strong> Cross-tabulation and bivariate bar chart. - Use <code>tabulate</code> with <code>column</code> option for percentages. - Use <code>graph hbar (count)</code> with <code>over()</code> options for grouped bar charts.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><strong>Note:</strong> The video uses <code>catplot</code> for this chart. We have switched to <code>graph hbar</code> in the do files because <code>catplot</code> has changed since the video was recorded. The output is equivalent.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">:::</td>
-</tr>
-</tbody>
-</table>
+<section id="a-positive-correlation" class="slide level2">
+<h2>A positive correlation</h2>
+<div class="presenter-space">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../assets/health-carbon-canvas.png" class="quarto-figure quarto-figure-center" style="width:75.0%" data-fig-cap=""></p>
+</figure>
+</div>
+</div>
 </section>
-<section id="case-2-nominal-numeric" class="slide level2">
-<h2>Case 2: Nominal + Numeric</h2>
-<ul>
-<li><strong>Example:</strong> Newspaper readership and ideology.</li>
-<li><strong>Tools:</strong> Compare means and bar chart of means.</li>
-<li>Use <code>by</code>: <code>summarize</code> to calculate group means.</li>
-<li>Use <code>graph hbar</code> with <code>over()</code> to visualise differences.</li>
-</ul>
+<section id="a-positive-correlation-1" class="slide level2">
+<h2>A positive correlation</h2>
+<div class="presenter-space">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../assets/health-carbon-scatter.png" class="quarto-figure quarto-figure-center" style="width:75.0%" data-fig-cap=""></p>
+</figure>
+</div>
+</div>
 </section>
-<section id="case-3-numeric-numeric" class="slide level2">
-<h2>Case 3: Numeric + Numeric</h2>
-<ul>
-<li><strong>Example:</strong> Import shock and Brexit vote share.</li>
-<li><strong>Tools:</strong> Scatterplot and regression line.</li>
-<li>Use <code>twoway (scatter)</code> to plot individual observations.</li>
-<li>Add <code>(lfit)</code> to overlay the regression line.</li>
-</ul>
+<section id="a-confounding-variable" class="slide level2">
+<h2>A confounding variable</h2>
+<div class="presenter-space">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../assets/wealth-dag.png" class="quarto-figure quarto-figure-center" style="width:50.0%" data-fig-cap=""></p>
+</figure>
+</div>
+</div>
 </section>
-<section id="interpreting-scatterplots-and-regression-lines" class="slide level2">
-<h2>Interpreting scatterplots and regression lines</h2>
+<section id="definition" class="slide level2">
+<h2>Definition</h2>
+<div class="presenter-space">
+<p>A <strong>confounding variable</strong>:</p>
 <ul>
-<li>The <strong>scatterplot</strong> shows individual data points.</li>
-<li>The <strong>regression line</strong> summarises the overall pattern.</li>
-<li><strong>Direction:</strong> Upward slope = positive association; downward slope = negative association.</li>
-<li><strong>Strength:</strong> Points clustered near the line = strong; widely scattered = weak.</li>
+<li class="fragment">Affects the dependent variable.</li>
+<li class="fragment">Affects the independent variable.</li>
+<li class="fragment">Is not a result of the independent variable.</li>
 </ul>
+</div>
 </section>
-<section id="your-turn-explore-bivariate-relationships" class="slide level2">
-<h2>Your turn: Explore bivariate relationships</h2>
+<section id="confounders-vs.-mediators" class="slide level2">
+<h2>Confounders vs.&nbsp;mediators</h2>
+<div class="presenter-space">
 <ul>
-<li>Open <code>bivariate-bes.do</code> and work through all three cases.</li>
-<li>Download <code>bivariate-brexit.do</code> for additional scatterplot examples.</li>
-<li>Use the BES and Brexit codebooks to explore other variables.</li>
-<li>Try modifying the commands to answer your own research questions.</li>
+<li class="fragment">A <strong>confounder</strong> influences both X and Y from outside the relationship.</li>
+<li class="fragment">A <strong>mediator</strong> lies on the causal pathway from X to Y.</li>
+<li class="fragment">Mediators are part of the mechanism — not confounders.</li>
 </ul>
+</div>
+</section>
+<section id="an-example-of-the-distinction" class="slide level2">
+<h2>An example of the distinction</h2>
+<div class="presenter-space">
+<ul>
+<li class="fragment">Does education reduce crime? Possibly via <strong>higher income</strong> (mediator).</li>
+<li class="fragment">Higher income lies on the pathway: education → income → crime.</li>
+<li class="fragment">A confounder would affect both education and crime <strong>independently</strong>.</li>
+</ul>
+</div>
+</section>
+<section id="omitted-variable-bias" class="slide level2">
+<h2>Omitted variable bias</h2>
+<div class="presenter-space">
+<ul>
+<li class="fragment">When a confounder is <strong>left out</strong> of the analysis, estimates can mislead.</li>
+<li class="fragment">The relationship between X and Y may appear causal when it is not.</li>
+<li class="fragment">This is called <strong>omitted variable bias</strong>.</li>
+</ul>
+</div>
+</section>
+<section id="omitted-variable-bias-the-healthcare-example" class="slide level2">
+<h2>Omitted variable bias: the healthcare example</h2>
+<div class="presenter-space">
+<ul>
+<li class="fragment">National wealth is omitted → spending appears to <strong>cause</strong> emissions.</li>
+<li class="fragment">Once wealth is accounted for, the direct relationship may <strong>disappear</strong>.</li>
+<li class="fragment">This is why bivariate regression is often not enough.</li>
+</ul>
+</div>
 </section>
 <section id="recap" class="slide level2">
 <h2>Recap</h2>
+<div class="presenter-space">
 <ul>
-<li class="fragment"><strong>Cross-tabulations</strong> and <strong>grouped bar charts</strong> describe associations between nominal variables.</li>
-<li class="fragment"><strong>Bar charts of means</strong> summarise differences in a numeric variable across categories.</li>
-<li class="fragment"><strong>Scatterplots</strong> and <strong>regression lines</strong> summarise relationships between two numeric variables.</li>
+<li class="fragment">A confounding variable affects both X and Y and is not caused by X.</li>
+<li class="fragment">Confounders create correlations that can <strong>look causal</strong> but are not.</li>
+<li class="fragment">Identifying confounders is essential before drawing causal conclusions.</li>
 </ul>
+</div>
 </section>
 <section class="slide level2">
 
+<div class="presenter-space">
 <p><strong>Why this matters:</strong></p>
 <ul>
-<li class="fragment">Describing relationships between variables is the foundation for asking why those relationships exist.</li>
-<li class="fragment">Choosing the wrong tool for the wrong variable types produces meaningless or misleading output.</li>
-<li class="fragment">These skills are essential for interpreting bivariate analyses in research papers, reports, and public debate.</li>
+<li class="fragment">Most data in political science is observational, not experimental.</li>
+<li class="fragment">Causal claims in public debate are often based on bivariate correlations.</li>
+<li class="fragment">Recognising possible confounders is how you read those claims critically.</li>
 </ul>
+</div>
 
 
 </section></section>
