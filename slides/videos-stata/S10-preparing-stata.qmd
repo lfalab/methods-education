@@ -1,0 +1,173 @@
+---
+pagetitle: "Preparing Data in Stata"
+class: video
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: transform-stata
+  revealjs:
+    output-file: transform-stata-slides
+---
+
+# Preparing Data in Stata {.title-left}
+
+------------------------------------------------------------------------
+
+## You'll learn to
+
+::: presenter-space
+- Recode **invalid values** to missing using `replace`.
+- **Drop observations** based on a condition.
+- **Generate a binary variable** from a logical statement.
+- Save a **cleaned dataset** as a separate file.
+:::
+
+------------------------------------------------------------------------
+
+## Why data preparation matters
+
+::: presenter-space
+- Raw survey data often contains **invalid or missing value codes**.
+- Analysing uncleaned data can produce **incorrect results**.
+- A short preparation step before analysis prevents these errors.
+:::
+
+------------------------------------------------------------------------
+
+## Missing values in Stata
+
+::: presenter-space
+- In Stata, `.` represents a **missing value**.
+- Survey datasets often encode missing responses as **negative numbers**.
+- These must be recoded to `.` before analysis.
+:::
+
+------------------------------------------------------------------------
+
+## Operation 1: Recode invalid values to missing
+
+::: presenter-space
+
+```stata
+replace age = . if age < 0
+```
+
+- Any observation where `age` is negative gets recoded to **missing**.
+- Stata will then exclude these observations from calculations automatically.
+- Repeat for each variable that uses negative codes for missing data.
+
+:::
+
+------------------------------------------------------------------------
+
+## Operation 2: Drop observations based on a condition
+
+::: presenter-space
+
+```stata
+drop if k03 != 7 & k03 != 13
+```
+
+- Removes all observations that are **neither** Mail nor Telegraph readers.
+- Restricts the sample to the **two groups** being compared.
+- Use `drop if` whenever analysis requires a specific subgroup only.
+
+:::
+
+------------------------------------------------------------------------
+
+## The equivalent using `keep if`
+
+::: presenter-space
+
+```stata
+keep if k03 == 7 | k03 == 13
+```
+
+- Keeps only Mail (`7`) or Telegraph (`13`) readers — **same result**.
+- `drop if` and `keep if` are logical **mirror images** of each other.
+- Use whichever makes the intended restriction easier to read.
+
+:::
+
+------------------------------------------------------------------------
+
+## Operation 3: Generate a binary variable
+
+::: presenter-space
+
+```stata
+gen voted_reform = (b02 == 8) if b02 != .
+```
+
+- The expression `(b02 == 8)` returns **1 if true, 0 if false**.
+- The condition `if b02 != .` ensures missing values are **not assigned a code**.
+- This is how **dummy variables** are created in Stata.
+
+:::
+
+------------------------------------------------------------------------
+
+## Labelling the new variable
+
+::: presenter-space
+
+```stata
+label define reform_lbl 1 "Reform" 0 "Another Party"
+label values voted_reform reform_lbl
+```
+
+- `label define` creates a set of value labels.
+- `label values` attaches them to the variable.
+- Labels make output **easier to read** without changing underlying values.
+
+:::
+
+------------------------------------------------------------------------
+
+## Operation 4: Save the cleaned dataset
+
+::: presenter-space
+
+```stata
+save "data-clean/bes_clean.dta", replace
+```
+
+- Save the cleaned file to a **separate folder** from the raw data.
+- Never overwrite raw data — keep it as originally downloaded.
+- The `replace` option overwrites any previous version of the clean file.
+
+:::
+
+------------------------------------------------------------------------
+
+## The cleaning workflow
+
+::: presenter-space
+- Load raw data → recode invalids → drop if needed → generate new variables.
+- Save the cleaned file → run analysis from the **clean file**.
+- This makes your analysis reproducible and easier to review.
+:::
+
+------------------------------------------------------------------------
+
+## Recap
+
+::: presenter-space
+- `replace x = . if x < 0` — recode invalid values to **missing**.
+- `drop if condition` — remove observations **outside** the subgroup of interest.
+- `generate` with a logical statement — create a **binary variable**.
+- Save cleaned data to a separate folder; never overwrite raw data.
+:::
+
+------------------------------------------------------------------------
+
+::: presenter-space
+**Why this matters:**
+
+- Uncleaned data produces unreliable results — even correct commands will fail if the inputs are wrong.
+- These four operations appear in almost every real data analysis workflow.
+- Good data preparation habits make your work transparent, reproducible, and easier to check.
+:::
