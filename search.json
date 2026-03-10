@@ -3775,7 +3775,7 @@
     "href": "slides/lectures/regression-lecture.html#why-this-matters",
     "title": "Lecture 8: Bivariate Regression",
     "section": "Why this matters",
-    "text": "Why this matters\n\nComparing slopes, significance, and R-squared is how we evaluate competing explanations.\nThis is exactly what PS2 asks you to do.",
+    "text": "Why this matters\n\nRegression turns a visual pattern in a scatterplot into a precise, testable statement.\nComparing slopes, significance, and R-squared is how we evaluate competing explanations.",
     "crumbs": [
       "Week 8: Regression Analysis",
       "Lecture 8: Bivariate Regression"
@@ -3884,7 +3884,7 @@
     "href": "slides/lectures/regression-lecture-slides.html#why-this-matters",
     "title": "Lecture 8: Bivariate Regression",
     "section": "Why this matters",
-    "text": "Why this matters\n\nComparing slopes, significance, and R-squared is how we evaluate competing explanations.\nThis is exactly what PS2 asks you to do."
+    "text": "Why this matters\n\nRegression turns a visual pattern in a scatterplot into a precise, testable statement.\nComparing slopes, significance, and R-squared is how we evaluate competing explanations."
   },
   {
     "objectID": "slides/lectures/correlations-lecture.html#today-is-different",
