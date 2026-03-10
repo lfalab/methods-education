@@ -199,14 +199,12 @@
 </section>
 <section id="youll-learn-to" class="slide level2">
 <h2>You’ll learn to</h2>
-<div class="presenter-space">
 <ul>
-<li class="fragment">Recode <strong>invalid values</strong> to missing using <code>replace</code>.</li>
-<li class="fragment"><strong>Drop observations</strong> based on a condition.</li>
-<li class="fragment"><strong>Generate a binary variable</strong> from a logical statement.</li>
-<li class="fragment">Save a <strong>cleaned dataset</strong> as a separate file.</li>
+<li>Recode <strong>invalid values</strong> to missing using <code>replace</code>.</li>
+<li><strong>Drop observations</strong> based on a condition.</li>
+<li><strong>Generate a binary variable</strong> from a logical statement.</li>
+<li>Save a <strong>cleaned dataset</strong> as a separate file.</li>
 </ul>
-</div>
 </section>
 <section id="download-the-companion-do-file-for-this-activity" class="slide level2">
 <h2>Download the companion do-file for this activity</h2>
@@ -219,121 +217,99 @@
 </section>
 <section id="why-data-preparation-matters" class="slide level2">
 <h2>Why data preparation matters</h2>
-<div class="presenter-space">
 <ul>
-<li class="fragment">Raw data may contain <strong>invalid or missing value codes</strong>.</li>
-<li class="fragment">Analysing uncleaned data can produce <strong>incorrect results</strong>.</li>
-<li class="fragment">A short preparation step before analysis prevents these errors.</li>
+<li>Raw data may contain <strong>invalid or missing value codes</strong>.</li>
+<li>Analysing uncleaned data can produce <strong>incorrect results</strong>.</li>
+<li>A short preparation step before analysis prevents these errors.</li>
 </ul>
-</div>
 </section>
 <section id="an-important-preamble" class="slide level2">
 <h2>An important preamble</h2>
-<div class="presenter-space">
 <ul>
-<li class="fragment">Data preparation is not always necessary! Depending on the data you choose, running the analysis with raw data may work.</li>
-<li class="fragment">The examples in this video won’t be needed in every analysis. Don’t apply them to your case without considering whether you need them.</li>
-<li class="fragment">You should learn to determine when data preparation is needed and what commands to use (but you can always ask for help).</li>
+<li>Data preparation is not always necessary! Depending on the data you choose, analysing raw data may work.</li>
+<li>Don’t apply these examples to your case without considering whether you need them.</li>
+<li>You should learn to determine when data preparation is needed and what commands to use (but you can always ask for help).</li>
 </ul>
-</div>
 </section>
 <section id="missing-values-in-stata" class="slide level2">
 <h2>Missing values in Stata</h2>
-<div class="presenter-space">
 <ul>
-<li class="fragment">In Stata, <code>.</code> represents a <strong>missing value</strong>.</li>
-<li class="fragment">Survey datasets often encode missing responses as <strong>negative numbers</strong>.</li>
-<li class="fragment">These must be recoded to <code>.</code> before analysis.</li>
+<li>In Stata, <code>.</code> represents a <strong>missing value</strong>.</li>
+<li>Survey datasets often encode missing responses as <strong>negative numbers</strong>.</li>
+<li>These must be recoded to <code>.</code> before analysis.</li>
 </ul>
-</div>
 </section>
 <section id="operation-1-recode-invalid-values-to-missing" class="slide level2">
 <h2>Operation 1: Recode invalid values to missing</h2>
-<div class="presenter-space">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a></a><span class="kw">replace</span> age = . <span class="kw">if</span> age &lt; 0</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li class="fragment">Any observation where <code>age</code> is negative gets recoded to <strong>missing</strong>.</li>
-<li class="fragment">Stata will then exclude these observations from calculations automatically.</li>
-<li class="fragment">Repeat for each variable that uses negative codes for missing data.</li>
+<li>Any observation where <code>age</code> is negative gets recoded to <strong>missing</strong>.</li>
+<li>Stata will then exclude these observations from calculations automatically.</li>
+<li>Repeat for each variable that uses negative codes for missing data.</li>
 </ul>
-</div>
 </section>
 <section id="operation-2-drop-observations-based-on-a-condition" class="slide level2">
 <h2>Operation 2: Drop observations based on a condition</h2>
-<div class="presenter-space">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a></a><span class="kw">drop</span> <span class="kw">if</span> k03 != 7 &amp; k03 != 13</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li class="fragment">Removes all observations that are <strong>neither</strong> Mail nor Telegraph readers.</li>
-<li class="fragment">Restricts the sample to the <strong>two groups</strong> being compared.</li>
-<li class="fragment">Use <code>drop if</code> whenever analysis requires a specific subgroup only.</li>
+<li>Removes all observations that are <strong>neither</strong> Mail nor Telegraph readers.</li>
+<li>Restricts the sample to the <strong>two groups</strong> being compared.</li>
+<li>Use <code>drop if</code> whenever analysis requires a specific subgroup only.</li>
 </ul>
-</div>
 </section>
 <section id="the-equivalent-using-keep-if" class="slide level2">
 <h2>The equivalent using <code>keep if</code></h2>
-<div class="presenter-space">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb3-1"><a></a><span class="kw">keep</span> <span class="kw">if</span> k03 == 7 | k03 == 13</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li class="fragment">Keeps only Mail (<code>7</code>) or Telegraph (<code>13</code>) readers — <strong>same result</strong>.</li>
-<li class="fragment"><code>drop if</code> and <code>keep if</code> are logical <strong>mirror images</strong> of each other.</li>
-<li class="fragment">Use whichever makes the intended restriction easier to read.</li>
+<li>Keeps only Mail (<code>7</code>) or Telegraph (<code>13</code>) readers — <strong>same result</strong>.</li>
+<li><code>drop if</code> and <code>keep if</code> are logical <strong>mirror images</strong> of each other.</li>
+<li>Use whichever makes the intended restriction easier to read.</li>
 </ul>
-</div>
 </section>
 <section id="operation-3-generate-a-binary-variable" class="slide level2">
 <h2>Operation 3: Generate a binary variable</h2>
-<div class="presenter-space">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb4-1"><a></a><span class="kw">gen</span> voted_reform = (b02 == 8) <span class="kw">if</span> b02 != .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li class="fragment">The expression <code>(b02 == 8)</code> returns <strong>1 if true, 0 if false</strong>.</li>
-<li class="fragment">The condition <code>if b02 != .</code> ensures missing values are <strong>not assigned a code</strong>.</li>
-<li class="fragment">Use when you need to reclassify multiple categories into two.</li>
+<li>The expression <code>(b02 == 8)</code> returns <strong>1 if true, 0 if false</strong>.</li>
+<li>The condition <code>if b02 != .</code> ensures missing values are <strong>not assigned a code</strong>.</li>
+<li>Use when you need to reclassify multiple categories into two.</li>
 </ul>
-</div>
 </section>
 <section id="labelling-the-new-variable" class="slide level2">
 <h2>Labelling the new variable</h2>
-<div class="presenter-space">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb5-1"><a></a><span class="kw">label</span> <span class="kw">define</span> reform_lbl 1 <span class="st">"Reform"</span> 0 <span class="st">"Another Party"</span></span>
 <span id="cb5-2"><a></a><span class="kw">label</span> <span class="kw">values</span> voted_reform reform_lbl</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li class="fragment"><code>label define</code> creates a set of value labels.</li>
-<li class="fragment"><code>label values</code> attaches them to the variable.</li>
-<li class="fragment">Labels make output <strong>easier to read</strong> without changing underlying values.</li>
+<li><code>label define</code> creates a set of value labels.</li>
+<li><code>label values</code> attaches them to the variable.</li>
+<li>Labels make output <strong>easier to read</strong> without changing underlying values.</li>
 </ul>
-</div>
 </section>
 <section id="operation-4-optional-save-the-cleaned-dataset" class="slide level2">
 <h2>Operation 4 (Optional): Save the cleaned dataset</h2>
-<div class="presenter-space">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb6-1"><a></a><span class="kw">save</span> <span class="st">"data-clean/bes_clean.dta"</span>, <span class="kw">replace</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li class="fragment">Save the cleaned file to a <strong>separate folder</strong> from the raw data.</li>
-<li class="fragment">Never overwrite raw data — keep it as originally downloaded.</li>
-<li class="fragment">The <code>replace</code> option overwrites any previous version of the clean file.</li>
+<li>Save the cleaned file to a <strong>separate folder</strong> from the raw data.</li>
+<li>Never overwrite raw data — keep it as originally downloaded.</li>
+<li>The <code>replace</code> option overwrites any previous version of the clean file.</li>
 </ul>
-</div>
 </section>
 <section id="recap" class="slide level2">
 <h2>Recap</h2>
-<div class="presenter-space">
 <ul>
-<li class="fragment"><code>replace x = . if x &lt; 0</code> — recode invalid values to <strong>missing</strong>.</li>
-<li class="fragment"><code>drop if condition</code> — remove observations <strong>outside</strong> the subgroup of interest.</li>
-<li class="fragment"><code>generate</code> with a logical statement — create a <strong>binary variable</strong>.</li>
-<li class="fragment">Save cleaned data to a separate folder; never overwrite raw data.</li>
+<li><code>replace x = . if x &lt; 0</code> — recode invalid values to <strong>missing</strong>.</li>
+<li><code>drop if condition</code> — remove observations <strong>outside</strong> the subgroup of interest.</li>
+<li><code>generate</code> with a logical statement — create a <strong>binary variable</strong>.</li>
+<li>Save cleaned data to a separate folder; never overwrite raw data.</li>
 </ul>
-</div>
 </section>
 <section class="slide level2">
 
-<div class="presenter-space">
 <p><strong>Why this matters:</strong></p>
 <ul>
-<li class="fragment">Uncleaned data produces unreliable results — even correct commands will fail if the inputs are wrong.</li>
-<li class="fragment">Good data preparation habits make your work transparent, reproducible, and easier to check.</li>
+<li>Uncleaned data produces unreliable results — even correct commands will fail if the inputs are wrong.</li>
+<li>Good data preparation habits make your work transparent, reproducible, and easier to check.</li>
 </ul>
-</div>
 
 
 </section></section>
