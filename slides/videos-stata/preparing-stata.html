@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Hypothesis Testing in Stata</title>
+<title>Preparing Data in Stata</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -116,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/sampling.html">Week 7: Estimation, Uncertainty, and Statistical Inference</a></li><li class="breadcrumb-item"><a href="../../slides/videos-stata/htests-stata.html">Hypothesis Testing in Stata</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/confounding.html">Week 9: Confounding Variables and Reverse Causality</a></li><li class="breadcrumb-item"><a href="../../slides/videos-stata/preparing-stata.html">Preparing Data in Stata</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -415,7 +415,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/htests-stata.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../slides/videos-stata/htests-stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hypothesis Testing in Stata</span></a>
   </div>
 </li>
@@ -527,7 +527,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/preparing-stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/videos-stata/preparing-stata.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Preparing Data in Stata</span></a>
   </div>
 </li>
@@ -543,58 +543,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#hypothesis-testing-in-stata" id="toc-hypothesis-testing-in-stata" class="nav-link active" data-scroll-target="#hypothesis-testing-in-stata">Hypothesis Testing in Stata</a>
+  <li><a href="#preparing-data-in-stata" id="toc-preparing-data-in-stata" class="nav-link active" data-scroll-target="#preparing-data-in-stata">Preparing Data in Stata</a>
   <ul class="collapse">
   <li><a href="#youll-learn-to" id="toc-youll-learn-to" class="nav-link" data-scroll-target="#youll-learn-to">You’ll learn to</a></li>
-  <li><a href="#download-the-quality-of-government-dataset-from-our-shared-folder" id="toc-download-the-quality-of-government-dataset-from-our-shared-folder" class="nav-link" data-scroll-target="#download-the-quality-of-government-dataset-from-our-shared-folder">Download the Quality of Government dataset from our shared folder</a></li>
   <li><a href="#download-the-companion-do-file-for-this-activity" id="toc-download-the-companion-do-file-for-this-activity" class="nav-link" data-scroll-target="#download-the-companion-do-file-for-this-activity">Download the companion do-file for this activity</a></li>
-  <li><a href="#load-the-dataset" id="toc-load-the-dataset" class="nav-link" data-scroll-target="#load-the-dataset">Load the dataset</a></li>
-  <li><a href="#read-through-the-do-file-comments-and-execute-the-commands" id="toc-read-through-the-do-file-comments-and-execute-the-commands" class="nav-link" data-scroll-target="#read-through-the-do-file-comments-and-execute-the-commands">Read through the do-file comments and execute the commands</a></li>
-  <li><a href="#from-description-to-inference" id="toc-from-description-to-inference" class="nav-link" data-scroll-target="#from-description-to-inference">From description to inference</a></li>
-  <li><a href="#test-1-difference-in-proportions" id="toc-test-1-difference-in-proportions" class="nav-link" data-scroll-target="#test-1-difference-in-proportions">Test 1: Difference in proportions</a></li>
-  <li><a href="#cross-tabulation" id="toc-cross-tabulation" class="nav-link" data-scroll-target="#cross-tabulation">Cross-tabulation</a></li>
-  <li><a href="#run-the-test" id="toc-run-the-test" class="nav-link" data-scroll-target="#run-the-test">Run the test</a></li>
-  <li><a href="#reading-the-output" id="toc-reading-the-output" class="nav-link" data-scroll-target="#reading-the-output">Reading the output</a></li>
-  <li><a href="#the-decision-rule" id="toc-the-decision-rule" class="nav-link" data-scroll-target="#the-decision-rule">The decision rule</a></li>
-  <li><a href="#test-2-difference-in-means" id="toc-test-2-difference-in-means" class="nav-link" data-scroll-target="#test-2-difference-in-means">Test 2: Difference in means</a></li>
-  <li><a href="#before-moving-on-reload-the-dataset" id="toc-before-moving-on-reload-the-dataset" class="nav-link" data-scroll-target="#before-moving-on-reload-the-dataset">Before moving on: reload the dataset</a></li>
-  <li><a href="#compare-means" id="toc-compare-means" class="nav-link" data-scroll-target="#compare-means">Compare means</a></li>
-  <li><a href="#run-the-test-1" id="toc-run-the-test-1" class="nav-link" data-scroll-target="#run-the-test-1">Run the test</a></li>
-  <li><a href="#reading-the-output-1" id="toc-reading-the-output-1" class="nav-link" data-scroll-target="#reading-the-output-1">Reading the output</a></li>
-  <li><a href="#the-decision-rule-1" id="toc-the-decision-rule-1" class="nav-link" data-scroll-target="#the-decision-rule-1">The decision rule</a></li>
+  <li><a href="#why-data-preparation-matters" id="toc-why-data-preparation-matters" class="nav-link" data-scroll-target="#why-data-preparation-matters">Why data preparation matters</a></li>
+  <li><a href="#an-important-preamble" id="toc-an-important-preamble" class="nav-link" data-scroll-target="#an-important-preamble">An important preamble</a></li>
+  <li><a href="#missing-values-in-stata" id="toc-missing-values-in-stata" class="nav-link" data-scroll-target="#missing-values-in-stata">Missing values in Stata</a></li>
+  <li><a href="#operation-1-recode-invalid-values-to-missing" id="toc-operation-1-recode-invalid-values-to-missing" class="nav-link" data-scroll-target="#operation-1-recode-invalid-values-to-missing">Operation 1: Recode invalid values to missing</a></li>
+  <li><a href="#operation-2-drop-observations-based-on-a-condition" id="toc-operation-2-drop-observations-based-on-a-condition" class="nav-link" data-scroll-target="#operation-2-drop-observations-based-on-a-condition">Operation 2: Drop observations based on a condition</a></li>
+  <li><a href="#the-equivalent-using-keep-if" id="toc-the-equivalent-using-keep-if" class="nav-link" data-scroll-target="#the-equivalent-using-keep-if">The equivalent using <code>keep if</code></a></li>
+  <li><a href="#operation-3-generate-a-binary-variable" id="toc-operation-3-generate-a-binary-variable" class="nav-link" data-scroll-target="#operation-3-generate-a-binary-variable">Operation 3: Generate a binary variable</a></li>
+  <li><a href="#labelling-the-new-variable" id="toc-labelling-the-new-variable" class="nav-link" data-scroll-target="#labelling-the-new-variable">Labelling the new variable</a></li>
+  <li><a href="#operation-4-optional-save-the-cleaned-dataset" id="toc-operation-4-optional-save-the-cleaned-dataset" class="nav-link" data-scroll-target="#operation-4-optional-save-the-cleaned-dataset">Operation 4 (Optional): Save the cleaned dataset</a></li>
   <li><a href="#recap" id="toc-recap" class="nav-link" data-scroll-target="#recap">Recap</a></li>
   </ul></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="htests-stata-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="preparing-stata-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/sampling.html">Week 7: Estimation, Uncertainty, and Statistical Inference</a></li><li class="breadcrumb-item"><a href="../../slides/videos-stata/htests-stata.html">Hypothesis Testing in Stata</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/confounding.html">Week 9: Confounding Variables and Reverse Causality</a></li><li class="breadcrumb-item"><a href="../../slides/videos-stata/preparing-stata.html">Preparing Data in Stata</a></li></ol></nav></header>
 
 
 
 
-<section id="hypothesis-testing-in-stata" class="level1 title-left">
-<h1 class="title-left">Hypothesis Testing in Stata</h1>
+<section id="preparing-data-in-stata" class="level1 title-left">
+<h1 class="title-left">Preparing Data in Stata</h1>
 <hr>
 <section id="youll-learn-to" class="level2">
 <h2 class="anchored" data-anchor-id="youll-learn-to">You’ll learn to</h2>
-<div class="nonincremental">
+<div class="presenter-space">
 <ul>
-<li>Run a <strong>difference-in-proportions</strong> test in Stata.</li>
-<li>Run a <strong>difference-in-means</strong> test in Stata.</li>
-<li>Read the output and apply the <strong>confidence interval decision rule</strong>.</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="download-the-quality-of-government-dataset-from-our-shared-folder" class="level2">
-<h2 class="anchored" data-anchor-id="download-the-quality-of-government-dataset-from-our-shared-folder">Download the Quality of Government dataset from our shared folder</h2>
-<div class="nonincremental">
-<ul>
-<li>Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a></li>
-<li>Click on <code>data-raw</code></li>
-<li>Download <code>Quality_of_Government_2026.dta</code></li>
-<li>Save it into the <code>data-raw</code> folder on your computer</li>
+<li>Recode <strong>invalid values</strong> to missing using <code>replace</code>.</li>
+<li><strong>Drop observations</strong> based on a condition.</li>
+<li><strong>Generate a binary variable</strong> from a logical statement.</li>
+<li>Save a <strong>cleaned dataset</strong> as a separate file.</li>
 </ul>
 </div>
 <hr>
@@ -605,278 +588,136 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a></li>
 <li>Click on <code>do</code></li>
-<li>Download <code>hypothesis-qog.do</code></li>
+<li>Download <code>prepare-bes.do</code></li>
 <li>Save it into the <code>do</code> folder on your computer</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="load-the-dataset" class="level2">
-<h2 class="anchored" data-anchor-id="load-the-dataset">Load the dataset</h2>
-<div class="nonincremental">
+<section id="why-data-preparation-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-data-preparation-matters">Why data preparation matters</h2>
+<div class="presenter-space">
 <ul>
-<li>Set the working directory to your project folder on your computer.</li>
-<li>Load the dataset</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>cd <span class="st">"C:\Users\leona\OneDrive - King's College London\shared-project-folder"</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="st">"data-raw/Quality_of_Government_2026.dta"</span>, <span class="kw">clear</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<hr>
-</section>
-<section id="read-through-the-do-file-comments-and-execute-the-commands" class="level2">
-<h2 class="anchored" data-anchor-id="read-through-the-do-file-comments-and-execute-the-commands">Read through the do-file comments and execute the commands</h2>
-<div class="nonincremental">
-<ul>
-<li>This do-file will serve as your companion for learning how to run <strong>hypothesis tests</strong> in Stata.</li>
-<li>The do-file covers <strong>two tests</strong>: a difference in proportions and a difference in means.</li>
+<li>Raw data may contain <strong>invalid or missing value codes</strong>.</li>
+<li>Analysing uncleaned data can produce <strong>incorrect results</strong>.</li>
+<li>A short preparation step before analysis prevents these errors.</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="from-description-to-inference" class="level2">
-<h2 class="anchored" data-anchor-id="from-description-to-inference">From description to inference</h2>
-<div class="nonincremental">
+<section id="an-important-preamble" class="level2">
+<h2 class="anchored" data-anchor-id="an-important-preamble">An important preamble</h2>
+<div class="presenter-space">
 <ul>
-<li>Last week: cross-tabulations, bar charts of means, scatterplots.</li>
-<li>This week: could the patterns we observed be due to <strong>chance variation</strong> alone?</li>
+<li>Data preparation is not always necessary! Depending on the data you choose, running the analysis with raw data may work.</li>
+<li>The examples in this video won’t be needed in every analysis. Don’t apply them to your case without considering whether you need them.</li>
+<li>You should learn to determine when data preparation is needed and what commands to use (but you can always ask for help).</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="test-1-difference-in-proportions" class="level2">
-<h2 class="anchored" data-anchor-id="test-1-difference-in-proportions">Test 1: Difference in proportions</h2>
-<div class="nonincremental">
+<section id="missing-values-in-stata" class="level2">
+<h2 class="anchored" data-anchor-id="missing-values-in-stata">Missing values in Stata</h2>
+<div class="presenter-space">
 <ul>
-<li><strong>Research question:</strong> Are countries with a British colonial history more likely to be democracies today than countries with a French colonial history?</li>
-<li><strong>Null Hypothesis (H0):</strong> There is no systematic difference between British- and French-colonised countries in their likelihood of being democracies.</li>
-<li><strong>Alternative Hypothesis (H1):</strong> Countries with a British colonial history are more likely to be democratic than countries with a French colonial history.</li>
+<li>In Stata, <code>.</code> represents a <strong>missing value</strong>.</li>
+<li>Survey datasets often encode missing responses as <strong>negative numbers</strong>.</li>
+<li>These must be recoded to <code>.</code> before analysis.</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="cross-tabulation" class="level2">
-<h2 class="anchored" data-anchor-id="cross-tabulation">Cross-tabulation</h2>
-<div class="nonincremental">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">keep</span> <span class="kw">if</span> ht_colonial == 5 | ht_colonial == 6</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">tabulate</span> ht_colonial bmr_dem, <span class="ot">row</span> nofreq</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="operation-1-recode-invalid-values-to-missing" class="level2">
+<h2 class="anchored" data-anchor-id="operation-1-recode-invalid-values-to-missing">Operation 1: Recode invalid values to missing</h2>
+<div class="presenter-space">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">replace</span> age = . <span class="kw">if</span> age &lt; 0</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li>This restricts the data to British (5) and French (6) colonised countries.</li>
-<li>The row percentages show the share of democracies in each group.</li>
-<li>These are the proportions the test will compare.</li>
+<li>Any observation where <code>age</code> is negative gets recoded to <strong>missing</strong>.</li>
+<li>Stata will then exclude these observations from calculations automatically.</li>
+<li>Repeat for each variable that uses negative codes for missing data.</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="run-the-test" class="level2">
-<h2 class="anchored" data-anchor-id="run-the-test">Run the test</h2>
-<div class="nonincremental">
+<section id="operation-2-drop-observations-based-on-a-condition" class="level2">
+<h2 class="anchored" data-anchor-id="operation-2-drop-observations-based-on-a-condition">Operation 2: Drop observations based on a condition</h2>
+<div class="presenter-space">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">drop</span> <span class="kw">if</span> k03 != 7 &amp; k03 != 13</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li><code>prtest</code> compares the proportion of a binary variable across two groups.</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">prtest</span> bmr_dem, <span class="kw">by</span>(ht_colonial)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li><code>bmr_dem</code> is already coded 0 (non-democracy) and 1 (democracy) — no recoding needed.</li>
-<li>Stata will compare the proportion of 1s (democracies) in each group.</li>
+<li>Removes all observations that are <strong>neither</strong> Mail nor Telegraph readers.</li>
+<li>Restricts the sample to the <strong>two groups</strong> being compared.</li>
+<li>Use <code>drop if</code> whenever analysis requires a specific subgroup only.</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="reading-the-output" class="level2">
-<h2 class="anchored" data-anchor-id="reading-the-output">Reading the output</h2>
-<div class="nonincremental">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Element</th>
-<th>What it tells you</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Proportion 1 / Proportion 2</td>
-<td>Share of democracies in each group</td>
-</tr>
-<tr class="even">
-<td><code>diff</code></td>
-<td>Estimated gap (Group 1 − Group 2)</td>
-</tr>
-<tr class="odd">
-<td>95% Conf. Interval for diff</td>
-<td>Range of plausible values for the true gap</td>
-</tr>
-<tr class="even">
-<td><code>Pr(|Z| &gt; |z|)</code></td>
-<td>p-value: probability of this gap if H0 were true</td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr>
-</section>
-<section id="the-decision-rule" class="level2">
-<h2 class="anchored" data-anchor-id="the-decision-rule">The decision rule</h2>
-<div class="nonincremental">
+<section id="the-equivalent-using-keep-if" class="level2">
+<h2 class="anchored" data-anchor-id="the-equivalent-using-keep-if">The equivalent using <code>keep if</code></h2>
+<div class="presenter-space">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">keep</span> <span class="kw">if</span> k03 == 7 | k03 == 13</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li>Focus on the <strong>95% confidence interval for the difference</strong>.</li>
-<li>Ask: does the interval include zero?</li>
-</ul>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>CI for the difference</th>
-<th>Decision</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Does <strong>not</strong> include 0</td>
-<td><strong>Reject</strong> the null hypothesis</td>
-</tr>
-<tr class="even">
-<td>Includes 0</td>
-<td><strong>Fail to reject</strong> the null hypothesis</td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr>
-</section>
-<section id="test-2-difference-in-means" class="level2">
-<h2 class="anchored" data-anchor-id="test-2-difference-in-means">Test 2: Difference in means</h2>
-<div class="nonincremental">
-<ul>
-<li><strong>Research question:</strong> Is turnout higher in countries with proportional systems than in countries with majoritarian systems?</li>
-<li><strong>Null Hypothesis (H0):</strong> Mean voter turnout is the same in majoritarian and proportional electoral systems.</li>
-<li><strong>Alternative Hypothesis (H1):</strong> Proportional systems have higher turnout than majoritarian systems.</li>
+<li>Keeps only Mail (<code>7</code>) or Telegraph (<code>13</code>) readers — <strong>same result</strong>.</li>
+<li><code>drop if</code> and <code>keep if</code> are logical <strong>mirror images</strong> of each other.</li>
+<li>Use whichever makes the intended restriction easier to read.</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="before-moving-on-reload-the-dataset" class="level2">
-<h2 class="anchored" data-anchor-id="before-moving-on-reload-the-dataset">Before moving on: reload the dataset</h2>
-<div class="nonincremental">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="st">"data-raw/Quality_of_Government_2026.dta"</span>, <span class="kw">clear</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="operation-3-generate-a-binary-variable" class="level2">
+<h2 class="anchored" data-anchor-id="operation-3-generate-a-binary-variable">Operation 3: Generate a binary variable</h2>
+<div class="presenter-space">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">gen</span> voted_reform = (b02 == 8) <span class="kw">if</span> b02 != .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li>Earlier on, we ran a command to only keep countries that were British or French colonies.</li>
-<li>Reload so we can have the full dataset again.</li>
+<li>The expression <code>(b02 == 8)</code> returns <strong>1 if true, 0 if false</strong>.</li>
+<li>The condition <code>if b02 != .</code> ensures missing values are <strong>not assigned a code</strong>.</li>
+<li>Use when you need to reclassify multiple categories into two.</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="compare-means" class="level2">
-<h2 class="anchored" data-anchor-id="compare-means">Compare means</h2>
-<div class="nonincremental">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">keep</span> <span class="kw">if</span> gol_est == 1 | gol_est == 2</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">by</span> gol_est, <span class="kw">sort</span>: <span class="kw">summarize</span> ideavt_legvt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="labelling-the-new-variable" class="level2">
+<h2 class="anchored" data-anchor-id="labelling-the-new-variable">Labelling the new variable</h2>
+<div class="presenter-space">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">label</span> <span class="kw">define</span> reform_lbl 1 <span class="st">"Reform"</span> 0 <span class="st">"Another Party"</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">label</span> <span class="kw">values</span> voted_reform reform_lbl</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li>This restricts the data to majoritarian (1) and proportional (2) systems.</li>
-<li>Mixed systems (3) are excluded — we are comparing the two pure types.</li>
+<li><code>label define</code> creates a set of value labels.</li>
+<li><code>label values</code> attaches them to the variable.</li>
+<li>Labels make output <strong>easier to read</strong> without changing underlying values.</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="run-the-test-1" class="level2">
-<h2 class="anchored" data-anchor-id="run-the-test-1">Run the test</h2>
-<div class="nonincremental">
+<section id="operation-4-optional-save-the-cleaned-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="operation-4-optional-save-the-cleaned-dataset">Operation 4 (Optional): Save the cleaned dataset</h2>
+<div class="presenter-space">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">save</span> <span class="st">"data-clean/bes_clean.dta"</span>, <span class="kw">replace</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li><code>ttest</code> compares the mean of a continuous variable across two groups.</li>
+<li>Save the cleaned file to a <strong>separate folder</strong> from the raw data.</li>
+<li>Never overwrite raw data — keep it as originally downloaded.</li>
+<li>The <code>replace</code> option overwrites any previous version of the clean file.</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">ttest</span> ideavt_legvt, <span class="kw">by</span>(gol_est)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li><code>ideavt_legvt</code> is the percentage of the voting-age population that cast a vote.</li>
-<li>Stata will compare the mean turnout in each electoral system type.</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="reading-the-output-1" class="level2">
-<h2 class="anchored" data-anchor-id="reading-the-output-1">Reading the output</h2>
-<div class="nonincremental">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Element</th>
-<th>What it tells you</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Mean</td>
-<td>Average turnout in each group</td>
-</tr>
-<tr class="even">
-<td><code>diff</code></td>
-<td>Estimated gap (Group 1 − Group 2)</td>
-</tr>
-<tr class="odd">
-<td>95% Conf. Interval for diff</td>
-<td>Range of plausible values for the true gap</td>
-</tr>
-<tr class="even">
-<td><code>Pr(|T| &gt; |t|)</code></td>
-<td>p-value: probability of this gap if H0 were true</td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr>
-</section>
-<section id="the-decision-rule-1" class="level2">
-<h2 class="anchored" data-anchor-id="the-decision-rule-1">The decision rule</h2>
-<div class="nonincremental">
-<ul>
-<li>Focus on the <strong>95% confidence interval for the difference</strong>.</li>
-<li>Ask: does the interval include zero?</li>
-</ul>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>CI for the difference</th>
-<th>Decision</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Does <strong>not</strong> include 0</td>
-<td><strong>Reject</strong> the null hypothesis</td>
-</tr>
-<tr class="even">
-<td>Includes 0</td>
-<td><strong>Fail to reject</strong> the null hypothesis</td>
-</tr>
-</tbody>
-</table>
 </div>
 <hr>
 </section>
 <section id="recap" class="level2">
 <h2 class="anchored" data-anchor-id="recap">Recap</h2>
-<div class="nonincremental">
+<div class="presenter-space">
 <ul>
-<li><code>prtest</code> tests whether two groups differ in their <strong>proportion</strong> of a binary outcome.</li>
-<li><code>ttest</code> tests whether two groups differ in their <strong>mean</strong> of a continuous outcome.</li>
-<li>Both tests produce a difference, a confidence interval, and a p-value.</li>
-<li>If the 95% CI for the difference <strong>excludes zero</strong>, reject the null hypothesis.</li>
+<li><code>replace x = . if x &lt; 0</code> — recode invalid values to <strong>missing</strong>.</li>
+<li><code>drop if condition</code> — remove observations <strong>outside</strong> the subgroup of interest.</li>
+<li><code>generate</code> with a logical statement — create a <strong>binary variable</strong>.</li>
+<li>Save cleaned data to a separate folder; never overwrite raw data.</li>
 </ul>
 </div>
 <hr>
+<div class="presenter-space">
 <p><strong>Why this matters:</strong></p>
 <ul>
-<li>Descriptive analysis tells us what patterns look like in our data.</li>
-<li>Hypothesis testing tells us whether those patterns are too large to dismiss as chance variation.</li>
-<li>These two commands — <code>prtest</code> and <code>ttest</code> — are the building blocks for statistical inference in political science research.</li>
+<li>Uncleaned data produces unreliable results — even correct commands will fail if the inputs are wrong.</li>
+<li>Good data preparation habits make your work transparent, reproducible, and easier to check.</li>
 </ul>
+</div>
 
 
 </section>

@@ -1,18 +1,18 @@
 [
   {
-    "objectID": "slides/videos-stata/transform-stata.html",
-    "href": "slides/videos-stata/transform-stata.html",
+    "objectID": "slides/videos-stata/preparing-stata.html",
+    "href": "slides/videos-stata/preparing-stata.html",
     "title": "Preparing Data in Stata",
     "section": "",
-    "text": "Recode invalid values to missing using replace.\nDrop observations based on a condition.\nGenerate a binary variable from a logical statement.\nSave a cleaned dataset as a separate file.\n\n\n\n\n\n\n\n\nRaw survey data often contains invalid or missing value codes.\nAnalysing uncleaned data can produce incorrect results.\nA short preparation step before analysis prevents these errors.\n\n\n\n\n\n\n\n\nIn Stata, . represents a missing value.\nSurvey datasets often encode missing responses as negative numbers.\nThese must be recoded to . before analysis.\n\n\n\n\n\n\n\nreplace age = . if age &lt; 0\n\nAny observation where age is negative gets recoded to missing.\nStata will then exclude these observations from calculations automatically.\nRepeat for each variable that uses negative codes for missing data.\n\n\n\n\n\n\n\ndrop if k03 != 7 & k03 != 13\n\nRemoves all observations that are neither Mail nor Telegraph readers.\nRestricts the sample to the two groups being compared.\nUse drop if whenever analysis requires a specific subgroup only.\n\n\n\n\n\n\n\nkeep if k03 == 7 | k03 == 13\n\nKeeps only Mail (7) or Telegraph (13) readers — same result.\ndrop if and keep if are logical mirror images of each other.\nUse whichever makes the intended restriction easier to read.\n\n\n\n\n\n\n\ngen voted_reform = (b02 == 8) if b02 != .\n\nThe expression (b02 == 8) returns 1 if true, 0 if false.\nThe condition if b02 != . ensures missing values are not assigned a code.\nThis is how dummy variables are created in Stata.\n\n\n\n\n\n\n\nlabel define reform_lbl 1 \"Reform\" 0 \"Another Party\"\nlabel values voted_reform reform_lbl\n\nlabel define creates a set of value labels.\nlabel values attaches them to the variable.\nLabels make output easier to read without changing underlying values.\n\n\n\n\n\n\n\nsave \"data-clean/bes_clean.dta\", replace\n\nSave the cleaned file to a separate folder from the raw data.\nNever overwrite raw data — keep it as originally downloaded.\nThe replace option overwrites any previous version of the clean file.\n\n\n\n\n\n\n\n\nLoad raw data → recode invalids → drop if needed → generate new variables.\nSave the cleaned file → run analysis from the clean file.\nThis makes your analysis reproducible and easier to review.\n\n\n\n\n\n\n\n\nreplace x = . if x &lt; 0 — recode invalid values to missing.\ndrop if condition — remove observations outside the subgroup of interest.\ngenerate with a logical statement — create a binary variable.\nSave cleaned data to a separate folder; never overwrite raw data.\n\n\n\n\nWhy this matters:\n\nUncleaned data produces unreliable results — even correct commands will fail if the inputs are wrong.\nThese four operations appear in almost every real data analysis workflow.\nGood data preparation habits make your work transparent, reproducible, and easier to check.",
+    "text": "Recode invalid values to missing using replace.\nDrop observations based on a condition.\nGenerate a binary variable from a logical statement.\nSave a cleaned dataset as a separate file.\n\n\n\n\n\n\n\n\nAccess our Shared Project Folder\nClick on do\nDownload prepare-bes.do\nSave it into the do folder on your computer\n\n\n\n\n\n\n\n\nRaw data may contain invalid or missing value codes.\nAnalysing uncleaned data can produce incorrect results.\nA short preparation step before analysis prevents these errors.\n\n\n\n\n\n\n\n\nData preparation is not always necessary! Depending on the data you choose, running the analysis with raw data may work.\nThe examples in this video won’t be needed in every analysis. Don’t apply them to your case without considering whether you need them.\nYou should learn to determine when data preparation is needed and what commands to use (but you can always ask for help).\n\n\n\n\n\n\n\n\nIn Stata, . represents a missing value.\nSurvey datasets often encode missing responses as negative numbers.\nThese must be recoded to . before analysis.\n\n\n\n\n\n\n\nreplace age = . if age &lt; 0\n\nAny observation where age is negative gets recoded to missing.\nStata will then exclude these observations from calculations automatically.\nRepeat for each variable that uses negative codes for missing data.\n\n\n\n\n\n\n\ndrop if k03 != 7 & k03 != 13\n\nRemoves all observations that are neither Mail nor Telegraph readers.\nRestricts the sample to the two groups being compared.\nUse drop if whenever analysis requires a specific subgroup only.\n\n\n\n\n\n\n\nkeep if k03 == 7 | k03 == 13\n\nKeeps only Mail (7) or Telegraph (13) readers — same result.\ndrop if and keep if are logical mirror images of each other.\nUse whichever makes the intended restriction easier to read.\n\n\n\n\n\n\n\ngen voted_reform = (b02 == 8) if b02 != .\n\nThe expression (b02 == 8) returns 1 if true, 0 if false.\nThe condition if b02 != . ensures missing values are not assigned a code.\nUse when you need to reclassify multiple categories into two.\n\n\n\n\n\n\n\nlabel define reform_lbl 1 \"Reform\" 0 \"Another Party\"\nlabel values voted_reform reform_lbl\n\nlabel define creates a set of value labels.\nlabel values attaches them to the variable.\nLabels make output easier to read without changing underlying values.\n\n\n\n\n\n\n\nsave \"data-clean/bes_clean.dta\", replace\n\nSave the cleaned file to a separate folder from the raw data.\nNever overwrite raw data — keep it as originally downloaded.\nThe replace option overwrites any previous version of the clean file.\n\n\n\n\n\n\n\n\nreplace x = . if x &lt; 0 — recode invalid values to missing.\ndrop if condition — remove observations outside the subgroup of interest.\ngenerate with a logical statement — create a binary variable.\nSave cleaned data to a separate folder; never overwrite raw data.\n\n\n\n\nWhy this matters:\n\nUncleaned data produces unreliable results — even correct commands will fail if the inputs are wrong.\nGood data preparation habits make your work transparent, reproducible, and easier to check.",
     "crumbs": [
       "Week 9: Confounding Variables and Reverse Causality",
       "Preparing Data in Stata"
     ]
   },
   {
-    "objectID": "slides/videos-stata/transform-stata.html#youll-learn-to",
-    "href": "slides/videos-stata/transform-stata.html#youll-learn-to",
+    "objectID": "slides/videos-stata/preparing-stata.html#youll-learn-to",
+    "href": "slides/videos-stata/preparing-stata.html#youll-learn-to",
     "title": "Preparing Data in Stata",
     "section": "",
     "text": "Recode invalid values to missing using replace.\nDrop observations based on a condition.\nGenerate a binary variable from a logical statement.\nSave a cleaned dataset as a separate file.",
@@ -22,19 +22,41 @@
     ]
   },
   {
-    "objectID": "slides/videos-stata/transform-stata.html#why-data-preparation-matters",
-    "href": "slides/videos-stata/transform-stata.html#why-data-preparation-matters",
+    "objectID": "slides/videos-stata/preparing-stata.html#download-the-companion-do-file-for-this-activity",
+    "href": "slides/videos-stata/preparing-stata.html#download-the-companion-do-file-for-this-activity",
     "title": "Preparing Data in Stata",
     "section": "",
-    "text": "Raw survey data often contains invalid or missing value codes.\nAnalysing uncleaned data can produce incorrect results.\nA short preparation step before analysis prevents these errors.",
+    "text": "Access our Shared Project Folder\nClick on do\nDownload prepare-bes.do\nSave it into the do folder on your computer",
     "crumbs": [
       "Week 9: Confounding Variables and Reverse Causality",
       "Preparing Data in Stata"
     ]
   },
   {
-    "objectID": "slides/videos-stata/transform-stata.html#missing-values-in-stata",
-    "href": "slides/videos-stata/transform-stata.html#missing-values-in-stata",
+    "objectID": "slides/videos-stata/preparing-stata.html#why-data-preparation-matters",
+    "href": "slides/videos-stata/preparing-stata.html#why-data-preparation-matters",
+    "title": "Preparing Data in Stata",
+    "section": "",
+    "text": "Raw data may contain invalid or missing value codes.\nAnalysing uncleaned data can produce incorrect results.\nA short preparation step before analysis prevents these errors.",
+    "crumbs": [
+      "Week 9: Confounding Variables and Reverse Causality",
+      "Preparing Data in Stata"
+    ]
+  },
+  {
+    "objectID": "slides/videos-stata/preparing-stata.html#an-important-preamble",
+    "href": "slides/videos-stata/preparing-stata.html#an-important-preamble",
+    "title": "Preparing Data in Stata",
+    "section": "",
+    "text": "Data preparation is not always necessary! Depending on the data you choose, running the analysis with raw data may work.\nThe examples in this video won’t be needed in every analysis. Don’t apply them to your case without considering whether you need them.\nYou should learn to determine when data preparation is needed and what commands to use (but you can always ask for help).",
+    "crumbs": [
+      "Week 9: Confounding Variables and Reverse Causality",
+      "Preparing Data in Stata"
+    ]
+  },
+  {
+    "objectID": "slides/videos-stata/preparing-stata.html#missing-values-in-stata",
+    "href": "slides/videos-stata/preparing-stata.html#missing-values-in-stata",
     "title": "Preparing Data in Stata",
     "section": "",
     "text": "In Stata, . represents a missing value.\nSurvey datasets often encode missing responses as negative numbers.\nThese must be recoded to . before analysis.",
@@ -44,8 +66,8 @@
     ]
   },
   {
-    "objectID": "slides/videos-stata/transform-stata.html#operation-1-recode-invalid-values-to-missing",
-    "href": "slides/videos-stata/transform-stata.html#operation-1-recode-invalid-values-to-missing",
+    "objectID": "slides/videos-stata/preparing-stata.html#operation-1-recode-invalid-values-to-missing",
+    "href": "slides/videos-stata/preparing-stata.html#operation-1-recode-invalid-values-to-missing",
     "title": "Preparing Data in Stata",
     "section": "",
     "text": "replace age = . if age &lt; 0\n\nAny observation where age is negative gets recoded to missing.\nStata will then exclude these observations from calculations automatically.\nRepeat for each variable that uses negative codes for missing data.",
@@ -55,8 +77,8 @@
     ]
   },
   {
-    "objectID": "slides/videos-stata/transform-stata.html#operation-2-drop-observations-based-on-a-condition",
-    "href": "slides/videos-stata/transform-stata.html#operation-2-drop-observations-based-on-a-condition",
+    "objectID": "slides/videos-stata/preparing-stata.html#operation-2-drop-observations-based-on-a-condition",
+    "href": "slides/videos-stata/preparing-stata.html#operation-2-drop-observations-based-on-a-condition",
     "title": "Preparing Data in Stata",
     "section": "",
     "text": "drop if k03 != 7 & k03 != 13\n\nRemoves all observations that are neither Mail nor Telegraph readers.\nRestricts the sample to the two groups being compared.\nUse drop if whenever analysis requires a specific subgroup only.",
@@ -66,8 +88,8 @@
     ]
   },
   {
-    "objectID": "slides/videos-stata/transform-stata.html#the-equivalent-using-keep-if",
-    "href": "slides/videos-stata/transform-stata.html#the-equivalent-using-keep-if",
+    "objectID": "slides/videos-stata/preparing-stata.html#the-equivalent-using-keep-if",
+    "href": "slides/videos-stata/preparing-stata.html#the-equivalent-using-keep-if",
     "title": "Preparing Data in Stata",
     "section": "",
     "text": "keep if k03 == 7 | k03 == 13\n\nKeeps only Mail (7) or Telegraph (13) readers — same result.\ndrop if and keep if are logical mirror images of each other.\nUse whichever makes the intended restriction easier to read.",
@@ -77,19 +99,19 @@
     ]
   },
   {
-    "objectID": "slides/videos-stata/transform-stata.html#operation-3-generate-a-binary-variable",
-    "href": "slides/videos-stata/transform-stata.html#operation-3-generate-a-binary-variable",
+    "objectID": "slides/videos-stata/preparing-stata.html#operation-3-generate-a-binary-variable",
+    "href": "slides/videos-stata/preparing-stata.html#operation-3-generate-a-binary-variable",
     "title": "Preparing Data in Stata",
     "section": "",
-    "text": "gen voted_reform = (b02 == 8) if b02 != .\n\nThe expression (b02 == 8) returns 1 if true, 0 if false.\nThe condition if b02 != . ensures missing values are not assigned a code.\nThis is how dummy variables are created in Stata.",
+    "text": "gen voted_reform = (b02 == 8) if b02 != .\n\nThe expression (b02 == 8) returns 1 if true, 0 if false.\nThe condition if b02 != . ensures missing values are not assigned a code.\nUse when you need to reclassify multiple categories into two.",
     "crumbs": [
       "Week 9: Confounding Variables and Reverse Causality",
       "Preparing Data in Stata"
     ]
   },
   {
-    "objectID": "slides/videos-stata/transform-stata.html#labelling-the-new-variable",
-    "href": "slides/videos-stata/transform-stata.html#labelling-the-new-variable",
+    "objectID": "slides/videos-stata/preparing-stata.html#labelling-the-new-variable",
+    "href": "slides/videos-stata/preparing-stata.html#labelling-the-new-variable",
     "title": "Preparing Data in Stata",
     "section": "",
     "text": "label define reform_lbl 1 \"Reform\" 0 \"Another Party\"\nlabel values voted_reform reform_lbl\n\nlabel define creates a set of value labels.\nlabel values attaches them to the variable.\nLabels make output easier to read without changing underlying values.",
@@ -99,8 +121,8 @@
     ]
   },
   {
-    "objectID": "slides/videos-stata/transform-stata.html#operation-4-save-the-cleaned-dataset",
-    "href": "slides/videos-stata/transform-stata.html#operation-4-save-the-cleaned-dataset",
+    "objectID": "slides/videos-stata/preparing-stata.html#operation-4-optional-save-the-cleaned-dataset",
+    "href": "slides/videos-stata/preparing-stata.html#operation-4-optional-save-the-cleaned-dataset",
     "title": "Preparing Data in Stata",
     "section": "",
     "text": "save \"data-clean/bes_clean.dta\", replace\n\nSave the cleaned file to a separate folder from the raw data.\nNever overwrite raw data — keep it as originally downloaded.\nThe replace option overwrites any previous version of the clean file.",
@@ -110,100 +132,96 @@
     ]
   },
   {
-    "objectID": "slides/videos-stata/transform-stata.html#the-cleaning-workflow",
-    "href": "slides/videos-stata/transform-stata.html#the-cleaning-workflow",
+    "objectID": "slides/videos-stata/preparing-stata.html#recap",
+    "href": "slides/videos-stata/preparing-stata.html#recap",
     "title": "Preparing Data in Stata",
     "section": "",
-    "text": "Load raw data → recode invalids → drop if needed → generate new variables.\nSave the cleaned file → run analysis from the clean file.\nThis makes your analysis reproducible and easier to review.",
+    "text": "replace x = . if x &lt; 0 — recode invalid values to missing.\ndrop if condition — remove observations outside the subgroup of interest.\ngenerate with a logical statement — create a binary variable.\nSave cleaned data to a separate folder; never overwrite raw data.\n\n\n\n\nWhy this matters:\n\nUncleaned data produces unreliable results — even correct commands will fail if the inputs are wrong.\nGood data preparation habits make your work transparent, reproducible, and easier to check.",
     "crumbs": [
       "Week 9: Confounding Variables and Reverse Causality",
       "Preparing Data in Stata"
     ]
   },
   {
-    "objectID": "slides/videos-stata/transform-stata.html#recap",
-    "href": "slides/videos-stata/transform-stata.html#recap",
-    "title": "Preparing Data in Stata",
-    "section": "",
-    "text": "replace x = . if x &lt; 0 — recode invalid values to missing.\ndrop if condition — remove observations outside the subgroup of interest.\ngenerate with a logical statement — create a binary variable.\nSave cleaned data to a separate folder; never overwrite raw data.\n\n\n\n\nWhy this matters:\n\nUncleaned data produces unreliable results — even correct commands will fail if the inputs are wrong.\nThese four operations appear in almost every real data analysis workflow.\nGood data preparation habits make your work transparent, reproducible, and easier to check.",
-    "crumbs": [
-      "Week 9: Confounding Variables and Reverse Causality",
-      "Preparing Data in Stata"
-    ]
-  },
-  {
-    "objectID": "slides/videos-stata/transform-stata-slides.html#youll-learn-to",
-    "href": "slides/videos-stata/transform-stata-slides.html#youll-learn-to",
+    "objectID": "slides/videos-stata/preparing-stata-slides.html#youll-learn-to",
+    "href": "slides/videos-stata/preparing-stata-slides.html#youll-learn-to",
     "title": "",
     "section": "You’ll learn to",
     "text": "You’ll learn to\n\n\nRecode invalid values to missing using replace.\nDrop observations based on a condition.\nGenerate a binary variable from a logical statement.\nSave a cleaned dataset as a separate file."
   },
   {
-    "objectID": "slides/videos-stata/transform-stata-slides.html#why-data-preparation-matters",
-    "href": "slides/videos-stata/transform-stata-slides.html#why-data-preparation-matters",
+    "objectID": "slides/videos-stata/preparing-stata-slides.html#download-the-companion-do-file-for-this-activity",
+    "href": "slides/videos-stata/preparing-stata-slides.html#download-the-companion-do-file-for-this-activity",
     "title": "",
-    "section": "Why data preparation matters",
-    "text": "Why data preparation matters\n\n\nRaw survey data often contains invalid or missing value codes.\nAnalysing uncleaned data can produce incorrect results.\nA short preparation step before analysis prevents these errors."
+    "section": "Download the companion do-file for this activity",
+    "text": "Download the companion do-file for this activity\n\nAccess our Shared Project Folder\nClick on do\nDownload prepare-bes.do\nSave it into the do folder on your computer"
   },
   {
-    "objectID": "slides/videos-stata/transform-stata-slides.html#missing-values-in-stata",
-    "href": "slides/videos-stata/transform-stata-slides.html#missing-values-in-stata",
+    "objectID": "slides/videos-stata/preparing-stata-slides.html#why-data-preparation-matters",
+    "href": "slides/videos-stata/preparing-stata-slides.html#why-data-preparation-matters",
+    "title": "",
+    "section": "Why data preparation matters",
+    "text": "Why data preparation matters\n\n\nRaw data may contain invalid or missing value codes.\nAnalysing uncleaned data can produce incorrect results.\nA short preparation step before analysis prevents these errors."
+  },
+  {
+    "objectID": "slides/videos-stata/preparing-stata-slides.html#an-important-preamble",
+    "href": "slides/videos-stata/preparing-stata-slides.html#an-important-preamble",
+    "title": "",
+    "section": "An important preamble",
+    "text": "An important preamble\n\n\nData preparation is not always necessary! Depending on the data you choose, running the analysis with raw data may work.\nThe examples in this video won’t be needed in every analysis. Don’t apply them to your case without considering whether you need them.\nYou should learn to determine when data preparation is needed and what commands to use (but you can always ask for help)."
+  },
+  {
+    "objectID": "slides/videos-stata/preparing-stata-slides.html#missing-values-in-stata",
+    "href": "slides/videos-stata/preparing-stata-slides.html#missing-values-in-stata",
     "title": "",
     "section": "Missing values in Stata",
     "text": "Missing values in Stata\n\n\nIn Stata, . represents a missing value.\nSurvey datasets often encode missing responses as negative numbers.\nThese must be recoded to . before analysis."
   },
   {
-    "objectID": "slides/videos-stata/transform-stata-slides.html#operation-1-recode-invalid-values-to-missing",
-    "href": "slides/videos-stata/transform-stata-slides.html#operation-1-recode-invalid-values-to-missing",
+    "objectID": "slides/videos-stata/preparing-stata-slides.html#operation-1-recode-invalid-values-to-missing",
+    "href": "slides/videos-stata/preparing-stata-slides.html#operation-1-recode-invalid-values-to-missing",
     "title": "",
     "section": "Operation 1: Recode invalid values to missing",
     "text": "Operation 1: Recode invalid values to missing\n\nreplace age = . if age &lt; 0\n\nAny observation where age is negative gets recoded to missing.\nStata will then exclude these observations from calculations automatically.\nRepeat for each variable that uses negative codes for missing data."
   },
   {
-    "objectID": "slides/videos-stata/transform-stata-slides.html#operation-2-drop-observations-based-on-a-condition",
-    "href": "slides/videos-stata/transform-stata-slides.html#operation-2-drop-observations-based-on-a-condition",
+    "objectID": "slides/videos-stata/preparing-stata-slides.html#operation-2-drop-observations-based-on-a-condition",
+    "href": "slides/videos-stata/preparing-stata-slides.html#operation-2-drop-observations-based-on-a-condition",
     "title": "",
     "section": "Operation 2: Drop observations based on a condition",
     "text": "Operation 2: Drop observations based on a condition\n\ndrop if k03 != 7 & k03 != 13\n\nRemoves all observations that are neither Mail nor Telegraph readers.\nRestricts the sample to the two groups being compared.\nUse drop if whenever analysis requires a specific subgroup only."
   },
   {
-    "objectID": "slides/videos-stata/transform-stata-slides.html#the-equivalent-using-keep-if",
-    "href": "slides/videos-stata/transform-stata-slides.html#the-equivalent-using-keep-if",
+    "objectID": "slides/videos-stata/preparing-stata-slides.html#the-equivalent-using-keep-if",
+    "href": "slides/videos-stata/preparing-stata-slides.html#the-equivalent-using-keep-if",
     "title": "",
     "section": "The equivalent using keep if",
     "text": "The equivalent using keep if\n\nkeep if k03 == 7 | k03 == 13\n\nKeeps only Mail (7) or Telegraph (13) readers — same result.\ndrop if and keep if are logical mirror images of each other.\nUse whichever makes the intended restriction easier to read."
   },
   {
-    "objectID": "slides/videos-stata/transform-stata-slides.html#operation-3-generate-a-binary-variable",
-    "href": "slides/videos-stata/transform-stata-slides.html#operation-3-generate-a-binary-variable",
+    "objectID": "slides/videos-stata/preparing-stata-slides.html#operation-3-generate-a-binary-variable",
+    "href": "slides/videos-stata/preparing-stata-slides.html#operation-3-generate-a-binary-variable",
     "title": "",
     "section": "Operation 3: Generate a binary variable",
-    "text": "Operation 3: Generate a binary variable\n\ngen voted_reform = (b02 == 8) if b02 != .\n\nThe expression (b02 == 8) returns 1 if true, 0 if false.\nThe condition if b02 != . ensures missing values are not assigned a code.\nThis is how dummy variables are created in Stata."
+    "text": "Operation 3: Generate a binary variable\n\ngen voted_reform = (b02 == 8) if b02 != .\n\nThe expression (b02 == 8) returns 1 if true, 0 if false.\nThe condition if b02 != . ensures missing values are not assigned a code.\nUse when you need to reclassify multiple categories into two."
   },
   {
-    "objectID": "slides/videos-stata/transform-stata-slides.html#labelling-the-new-variable",
-    "href": "slides/videos-stata/transform-stata-slides.html#labelling-the-new-variable",
+    "objectID": "slides/videos-stata/preparing-stata-slides.html#labelling-the-new-variable",
+    "href": "slides/videos-stata/preparing-stata-slides.html#labelling-the-new-variable",
     "title": "",
     "section": "Labelling the new variable",
     "text": "Labelling the new variable\n\nlabel define reform_lbl 1 \"Reform\" 0 \"Another Party\"\nlabel values voted_reform reform_lbl\n\nlabel define creates a set of value labels.\nlabel values attaches them to the variable.\nLabels make output easier to read without changing underlying values."
   },
   {
-    "objectID": "slides/videos-stata/transform-stata-slides.html#operation-4-save-the-cleaned-dataset",
-    "href": "slides/videos-stata/transform-stata-slides.html#operation-4-save-the-cleaned-dataset",
+    "objectID": "slides/videos-stata/preparing-stata-slides.html#operation-4-optional-save-the-cleaned-dataset",
+    "href": "slides/videos-stata/preparing-stata-slides.html#operation-4-optional-save-the-cleaned-dataset",
     "title": "",
-    "section": "Operation 4: Save the cleaned dataset",
-    "text": "Operation 4: Save the cleaned dataset\n\nsave \"data-clean/bes_clean.dta\", replace\n\nSave the cleaned file to a separate folder from the raw data.\nNever overwrite raw data — keep it as originally downloaded.\nThe replace option overwrites any previous version of the clean file."
+    "section": "Operation 4 (Optional): Save the cleaned dataset",
+    "text": "Operation 4 (Optional): Save the cleaned dataset\n\nsave \"data-clean/bes_clean.dta\", replace\n\nSave the cleaned file to a separate folder from the raw data.\nNever overwrite raw data — keep it as originally downloaded.\nThe replace option overwrites any previous version of the clean file."
   },
   {
-    "objectID": "slides/videos-stata/transform-stata-slides.html#the-cleaning-workflow",
-    "href": "slides/videos-stata/transform-stata-slides.html#the-cleaning-workflow",
-    "title": "",
-    "section": "The cleaning workflow",
-    "text": "The cleaning workflow\n\n\nLoad raw data → recode invalids → drop if needed → generate new variables.\nSave the cleaned file → run analysis from the clean file.\nThis makes your analysis reproducible and easier to review."
-  },
-  {
-    "objectID": "slides/videos-stata/transform-stata-slides.html#recap",
-    "href": "slides/videos-stata/transform-stata-slides.html#recap",
+    "objectID": "slides/videos-stata/preparing-stata-slides.html#recap",
+    "href": "slides/videos-stata/preparing-stata-slides.html#recap",
     "title": "",
     "section": "Recap",
     "text": "Recap\n\n\nreplace x = . if x &lt; 0 — recode invalid values to missing.\ndrop if condition — remove observations outside the subgroup of interest.\ngenerate with a logical statement — create a binary variable.\nSave cleaned data to a separate folder; never overwrite raw data."
