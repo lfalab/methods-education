@@ -3753,7 +3753,7 @@
     "href": "slides/lectures/regression-lecture.html#your-turn-2-questions",
     "title": "Lecture 8: Bivariate Regression",
     "section": "Your Turn 2 — questions",
-    "text": "Your Turn 2 — questions\n\n\nWhat is the sign of the slope? Is it what you expected?\nWrite the regression equation: $ = $ ___ + ___ × ImmigrantShare\nDoes the 95% CI exclude zero? Do we reject H0?\nWhat is R-squared? How does it compare to the other two models?",
+    "text": "Your Turn 2 — questions\n\n\nWhat is the sign of the slope? Is it what you expected?\nWrite the regression equation: \\(\\widehat{\\text{Leave}}\\) = ___ + ___ × ImmigrantShare\nDoes the 95% CI exclude zero? Do we reject H0?\nWhat is R-squared? How does it compare to the other two models?",
     "crumbs": [
       "Week 8: Regression Analysis",
       "Lecture 8: Bivariate Regression"
@@ -3870,7 +3870,7 @@
     "href": "slides/lectures/regression-lecture-slides.html#your-turn-2-questions",
     "title": "Lecture 8: Bivariate Regression",
     "section": "Your Turn 2 — questions",
-    "text": "Your Turn 2 — questions\n\nWhat is the sign of the slope? Is it what you expected?\nWrite the regression equation: $ = $ ___ + ___ × ImmigrantShare\nDoes the 95% CI exclude zero? Do we reject H0?\nWhat is R-squared? How does it compare to the other two models?"
+    "text": "Your Turn 2 — questions\n\nWhat is the sign of the slope? Is it what you expected?\nWrite the regression equation: \\(\\widehat{\\text{Leave}}\\) = ___ + ___ × ImmigrantShare\nDoes the 95% CI exclude zero? Do we reject H0?\nWhat is R-squared? How does it compare to the other two models?"
   },
   {
     "objectID": "slides/lectures/regression-lecture-slides.html#comparing-the-three-models",
