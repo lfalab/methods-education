@@ -3720,7 +3720,7 @@
     "href": "slides/lectures/regression-lecture.html#your-turn-1-questions",
     "title": "Lecture 8: Bivariate Regression",
     "section": "Your Turn 1 — questions",
-    "text": "Your Turn 1 — questions\n\n\nWhat is the sign of the slope? What does it mean substantively?\nWrite the regression equation: $ = $ ___ + ___ × ImportShock\nDoes the 95% CI exclude zero? Do we reject H0?\nWhat is R-squared? How does it compare to the education model?",
+    "text": "Your Turn 1 — questions\n\n\nWhat is the sign of the slope? What does it mean substantively?\nWrite the regression equation: \\(\\widehat{\\text{Leave}}\\) = ___ + ___ × ImportShock\nDoes the 95% CI exclude zero? Do we reject H0?\nWhat is R-squared? How does it compare to the education model?",
     "crumbs": [
       "Week 8: Regression Analysis",
       "Lecture 8: Bivariate Regression"
@@ -3775,7 +3775,7 @@
     "href": "slides/lectures/regression-lecture.html#why-this-matters",
     "title": "Lecture 8: Bivariate Regression",
     "section": "Why this matters",
-    "text": "Why this matters\n\nThe regression structure stays the same — only the independent variable changes.\nComparing slopes, significance, and R-squared is how we evaluate competing explanations.\nThis is exactly what PS2 asks you to do.",
+    "text": "Why this matters\n\nComparing slopes, significance, and R-squared is how we evaluate competing explanations.\nThis is exactly what PS2 asks you to do.",
     "crumbs": [
       "Week 8: Regression Analysis",
       "Lecture 8: Bivariate Regression"
@@ -3849,7 +3849,7 @@
     "href": "slides/lectures/regression-lecture-slides.html#your-turn-1-questions",
     "title": "Lecture 8: Bivariate Regression",
     "section": "Your Turn 1 — questions",
-    "text": "Your Turn 1 — questions\n\nWhat is the sign of the slope? What does it mean substantively?\nWrite the regression equation: $ = $ ___ + ___ × ImportShock\nDoes the 95% CI exclude zero? Do we reject H0?\nWhat is R-squared? How does it compare to the education model?"
+    "text": "Your Turn 1 — questions\n\nWhat is the sign of the slope? What does it mean substantively?\nWrite the regression equation: \\(\\widehat{\\text{Leave}}\\) = ___ + ___ × ImportShock\nDoes the 95% CI exclude zero? Do we reject H0?\nWhat is R-squared? How does it compare to the education model?"
   },
   {
     "objectID": "slides/lectures/regression-lecture-slides.html#your-turn-2-immigrant-share-and-the-leave-vote",
@@ -3884,7 +3884,7 @@
     "href": "slides/lectures/regression-lecture-slides.html#why-this-matters",
     "title": "Lecture 8: Bivariate Regression",
     "section": "Why this matters",
-    "text": "Why this matters\n\nThe regression structure stays the same — only the independent variable changes.\nComparing slopes, significance, and R-squared is how we evaluate competing explanations.\nThis is exactly what PS2 asks you to do."
+    "text": "Why this matters\n\nComparing slopes, significance, and R-squared is how we evaluate competing explanations.\nThis is exactly what PS2 asks you to do."
   },
   {
     "objectID": "slides/lectures/correlations-lecture.html#today-is-different",
