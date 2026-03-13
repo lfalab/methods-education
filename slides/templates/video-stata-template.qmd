@@ -1,7 +1,5 @@
 ---
-title: "Stata Tutorial Title"
-subtitle: "Statistics for Political Science"
-author: "Leonardo Falabella"
+pagetitle: "Stata Tutorial Title"
 class: lecture
 format:
   html:
@@ -19,32 +17,40 @@ format:
 
 ## You'll learn to
 
+:::: nonincremental
 - Run a Stata command.
 - Interpret the output.
 - Diagnose common mistakes.
+::::
 
 ------------------------------------------------------------------------
 
 ## Run Stata Command
 
+:::: nonincremental
 ```stata
 twoway (scatter leave_share share_high_skill) ///
        (lfit leave_share share_high_skill), leg(off)
 ```
 
 - This command does X.
+::::
 
 ------------------------------------------------------------------------
 
 ## Recap
 
+:::: nonincremental
 - Recap statement 1.
 - Recap statement 2.
 - Recap statement 3.
+::::
 
 ------------------------------------------------------------------------
 
 **Why this matters:**
 
+:::: nonincremental
 - This matters because of this.
 - Also because of that.
+::::

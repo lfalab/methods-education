@@ -59,14 +59,14 @@ Content directories:
 
 slides/ — lecture and concept slide decks  
 activities/ — interactive exercises  
-quizzes/ — quiz material  
-cards/ — flashcard-style learning material  
-attention-checks/ — classroom attention checks  
+quizzes/ — quiz material
+attention-checks/ — classroom attention checks
 reference/ — project reference material
 
 Shared resources:
 
-assets/ — images and media  
+assets/ — images and media
+cards/ — thumbnail images for YouTube video uploads
 theme/ — SCSS theme files controlling slide styling
 
 ---

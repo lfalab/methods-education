@@ -13,8 +13,6 @@ format:
 
 # Units of Analysis, Theories, and Hypotheses {.title-left}
 
-[Watch on YouTube](https://youtu.be/YkeRnIcYe8E)
-
 ------------------------------------------------------------------------
 
 ## You'll learn to

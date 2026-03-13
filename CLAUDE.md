@@ -44,7 +44,6 @@ These contain teaching material and are safe to edit.
 - `slides/` — lecture slide decks written in `.qmd`
 - `activities/` — interactive learning activities
 - `quizzes/` — quiz materials
-- `cards/` — flashcard-style learning materials
 - `attention-checks/` — classroom attention checks
 
 - `reference/` — reference material and project metadata
@@ -68,6 +67,7 @@ However, **the directory structure must not be modified**.
 These directories contain reusable assets.
 
 - `assets/` — images and static media
+- `cards/` — thumbnail images used for YouTube video uploads
 - `theme/` — SCSS theme files controlling slide styling
 
 Claude may read these files but **must not modify them unless explicitly instructed**.

@@ -15,8 +15,6 @@ format:
 
 # Measuring Variables {.title-left}
 
-[Watch on YouTube](https://youtu.be/IjOV2bF9yOI)
-
 :::
 
 ------------------------------------------------------------------------

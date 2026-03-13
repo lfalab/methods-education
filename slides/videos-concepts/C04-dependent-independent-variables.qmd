@@ -13,8 +13,6 @@ format:
 
 # Dependent and Independent Variables {.title-left}
 
-[Watch on YouTube](https://youtu.be/j-R8ef5mPtQ)
-
 ------------------------------------------------------------------------
 
 ## You'll learn to

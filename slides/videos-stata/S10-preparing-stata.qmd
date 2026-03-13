@@ -1,6 +1,6 @@
 ---
 pagetitle: "Preparing Data in Stata"
-class: video
+class: lecture
 format:
   html:
     toc: true
@@ -29,12 +29,10 @@ format:
 ## Download the companion do-file for this activity
 
 ::: nonincremental
-
 -   Access our [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE)
 -   Click on ``do``
 -   Download ``prepare-bes.do``
 -   Save it into the ``do`` folder on your computer
-
 :::
 
 ------------------------------------------------------------------------

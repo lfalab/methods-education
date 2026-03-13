@@ -13,8 +13,6 @@ format:
 
 # Descriptive and Causal Questions {.title-left}
 
-[Watch on YouTube](https://youtu.be/QiB1lYUS28A)
-
 ## You'll learn to
 
 ::: presenter-space
