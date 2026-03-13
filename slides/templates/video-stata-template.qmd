@@ -1,0 +1,50 @@
+---
+title: "Stata Tutorial Title"
+subtitle: "Statistics for Political Science"
+author: "Leonardo Falabella"
+class: lecture
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: stata-slug
+  revealjs:
+    output-file: stata-slug-slides
+---
+
+# Stata Tutorial Title {.title-left}
+
+------------------------------------------------------------------------
+
+## You'll learn to
+
+- Run a Stata command.
+- Interpret the output.
+- Diagnose common mistakes.
+
+------------------------------------------------------------------------
+
+## Run Stata Command
+
+```stata
+twoway (scatter leave_share share_high_skill) ///
+       (lfit leave_share share_high_skill), leg(off)
+```
+
+- This command does X.
+
+------------------------------------------------------------------------
+
+## Recap
+
+- Recap statement 1.
+- Recap statement 2.
+- Recap statement 3.
+
+------------------------------------------------------------------------
+
+**Why this matters:**
+
+- This matters because of this.
+- Also because of that.

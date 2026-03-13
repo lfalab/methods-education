@@ -1,0 +1,53 @@
+---
+pagetitle: "Concept Video Title"
+class: video
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: concept-slug
+  revealjs:
+    output-file: concept-slug-slides
+---
+
+# Concept Video Title {.title-left}
+
+------------------------------------------------------------------------
+
+## You'll learn to
+
+::: presenter-space
+- Recognise the concept.
+- Explain the concept.
+- Apply the concept.
+:::
+
+------------------------------------------------------------------------
+
+## Concept explanation
+
+::: presenter-space
+- Main idea.
+- Supporting explanation.
+- Example.
+:::
+
+------------------------------------------------------------------------
+
+## Recap
+
+::: presenter-space
+-   Recap statement 1.
+-   Recap statement 2.
+-   Recap statement 3.
+:::
+
+------------------------------------------------------------------------
+
+::: presenter-space
+**Why this matters:**
+
+-   This matters because of this.
+-   Also because of that.
+:::

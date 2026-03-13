@@ -1,0 +1,29 @@
+---
+title: "Lecture X: Title"
+subtitle: "Statistics for Political Science"
+author: "Leonardo Falabella"
+class: lecture
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: lecture-slug
+  revealjs:
+    output-file: lecture-slug-slides
+---
+
+------------------------------------------------------------------------
+
+## Slide title
+
+- First point
+- Second point
+- Third point
+
+------------------------------------------------------------------------
+
+## Why this matters
+
+- This matters because of this.
+- Also because of that.
