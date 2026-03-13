@@ -1,0 +1,120 @@
+---
+title: "Seminar Activity: Bivariate Regression"
+subtitle: "Statistics for Political Science — Week 8"
+author: "Leonardo Falabella"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    theme: default
+---
+
+## Introduction
+
+In Week 5, you described bivariate relationships between pairs of variables from the Quality of Government (QoG) dataset. For numeric–numeric pairs, you produced scatterplots with regression lines and described the direction and strength of the association visually.
+
+This activity revisits three of those pairs. This time, you will move from description to inference: fitting a regression model, reading the output, and assessing statistical significance.
+
+Work through each pair in order using `regression-qog.do`. The dataset is the Quality of Government (QoG) dataset (available in our [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE)). Refer to the QoG codebook if you need more detail about any variable.
+
+------------------------------------------------------------------------
+
+## Pair 1 — `wdi_gini` and `wdi_wip`
+
+**Variables:**
+
+- **`wdi_gini`** — Gini index (World Bank). Measures income inequality within a country, ranging from 0 (perfect equality) to 100 (perfect inequality).
+- **`wdi_wip`** — Proportion of seats held by women in national parliaments (World Bank). Measured as a percentage (0–100).
+
+**Research question:** Do more unequal countries tend to have lower levels of women's representation in parliament?
+
+------------------------------------------------------------------------
+
+**Execute:** Produce the scatterplot with regression line and run the regression.
+
+**Interpret:**
+
+- What is the estimated slope for `wdi_gini`? Write out the full regression equation.
+- How do you interpret the slope substantively? For each one-unit increase in the Gini index, what change in women's representation does the model predict?
+- Is the coefficient on `wdi_gini` statistically significant at the 5% level? How do you know?
+- What does the 95% confidence interval for the slope tell you?
+- What is the R-squared? What percentage of the variation in women's parliamentary representation is explained by inequality?
+- Would you describe this as a strong, moderate, or weak relationship? What is your basis for that judgment?
+
+> **Hint:** Check the sign of the slope carefully. A negative slope would mean that higher inequality is associated with *fewer* women in parliament; a positive slope would mean the opposite. Make sure your substantive interpretation matches the sign.
+
+------------------------------------------------------------------------
+
+## Pair 2 — `wdi_gini` and `ti_cpi`
+
+**Variables:**
+
+- **`wdi_gini`** — Gini index (World Bank). See Pair 1 for the full description.
+- **`ti_cpi`** — Corruption Perceptions Index (Transparency International). Ranges from 0 (highly corrupt) to 100 (highly clean). **Higher scores indicate less corruption.**
+
+**Research question:** Do more unequal countries tend to have higher levels of perceived corruption?
+
+------------------------------------------------------------------------
+
+**Execute:** Produce the scatterplot with regression line and run the regression.
+
+**Interpret:**
+
+- What is the estimated slope for `wdi_gini`? Write out the full regression equation.
+- How do you interpret the slope substantively? For each one-unit increase in the Gini index, what change in the CPI does the model predict?
+- Is the coefficient on `wdi_gini` statistically significant at the 5% level? How do you know?
+- What does the 95% confidence interval for the slope tell you?
+- What is the R-squared? What percentage of the variation in corruption perceptions is explained by inequality?
+- Would you describe this as a strong, moderate, or weak relationship?
+
+> **Hint:** The CPI scale runs in the direction where higher = cleaner. A negative slope would mean that more unequal countries tend to score *lower* on the CPI — i.e., are perceived as *more* corrupt. Make sure your substantive interpretation accounts for the scale direction before drawing conclusions.
+
+------------------------------------------------------------------------
+
+## Pair 3 — `wdi_internet` and `rsf_pfi`
+
+**Variables:**
+
+- **`wdi_internet`** — Individuals using the internet (World Bank). The percentage of the population with internet access (0–100).
+- **`rsf_pfi`** — Press Freedom Index (Reporters Without Borders). Measures the degree of freedom available to journalists and media organisations. **Higher scores indicate more press freedom.**
+
+**Research question:** Do countries with higher internet usage tend to have greater press freedom?
+
+------------------------------------------------------------------------
+
+**Execute:** Produce the scatterplot with regression line and run the regression.
+
+**Interpret:**
+
+- What is the estimated slope for `wdi_internet`? Write out the full regression equation.
+- How do you interpret the slope substantively? For each one percentage point increase in internet usage, what change in press freedom does the model predict?
+- Is the coefficient on `wdi_internet` statistically significant at the 5% level? How do you know?
+- What does the 95% confidence interval for the slope tell you?
+- What is the R-squared? What percentage of the variation in press freedom is explained by internet usage?
+- Would you describe this as a strong, moderate, or weak relationship?
+
+> **Hint:** Remember that higher `rsf_pfi` scores mean *more* press freedom. A positive slope means that countries with more internet users tend to have greater press freedom. Think about why this relationship might exist — and whether you find it plausible.
+
+------------------------------------------------------------------------
+
+## Comparing the Three Models
+
+Once you have worked through all three pairs, discuss the following questions with your group:
+
+- Which of the three relationships has the largest R-squared? What does this mean in terms of explanatory power?
+- Which relationship is most precisely estimated (i.e., has the narrowest confidence interval)? Does this correspond to the largest or smallest standard error?
+- All three slopes are estimated with uncertainty. For which pair, if any, would you be most cautious about drawing a strong substantive conclusion? Why?
+
+------------------------------------------------------------------------
+
+## Summary
+
+In this activity, you have:
+
+- Fitted bivariate regression models and read the full Stata output.
+- Interpreted slopes in substantive terms, paying attention to scale direction.
+- Assessed statistical significance using p-values and confidence intervals.
+- Compared explanatory power across models using R-squared.
+
+These are the core skills required for the regression component of Problem Set 2.

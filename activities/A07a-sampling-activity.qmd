@@ -1,0 +1,125 @@
+---
+title: "Seminar Activity: Sampling and Bias"
+subtitle: "Statistics for Political Science — Week 7"
+author: "Leonardo Falabella"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    theme: default
+---
+
+## Introduction
+
+A sample is **biased** if the units selected differ systematically from the population the researcher wants to study. Bias can arise from a flawed sampling frame, from non-random selection, from nonresponse, or from other features of the study design. In this activity you will examine five sampling scenarios and practise diagnosing these problems — the same reasoning the exam requires.
+
+For each scenario, work through the three questions below with your group before moving on. Write down your answers: the exam will ask you to justify your reasoning in writing.
+
+
+
+## The Five Scenarios
+
+
+
+### Scenario A
+
+A policy analyst working for a business association wants to know whether UK small businesses plan to transition to electric vehicle fleets over the next five years. The analyst obtains a list of all businesses currently registered with the [Good Business Charter](https://goodbusinesscharter.com/) — a voluntary certification scheme for companies that commit to responsible environmental and employment practices. From this list, the analyst randomly selects 600 businesses and sends each a short online survey.
+
+**Questions:**
+
+**A1.** What is the **population of interest** in this study? Be precise: what group is the analyst trying to draw conclusions about?
+
+**A2.** Is this a **probability sample** or a **non-probability sample**? Justify your answer. Your justification should show that you understand what distinguishes probability from non-probability sampling — not just which label applies.
+
+**A3.** Would you expect this procedure to produce a **biased** or **unbiased** estimate of UK small businesses' intentions to transition to electric fleets? If biased, would it **overestimate** or **underestimate** the proportion planning to transition? Justify your answer.
+
+<!-- > **Hint:** Think carefully about who is on the sampling frame. What kind of businesses join the Good Business Charter voluntarily? How might they differ from the broader population of small businesses? -->
+
+
+
+### Scenario B
+
+A King's College London student believes that university accommodation in London is unaffordably expensive and wants to gather evidence to make the case to the Students' Union. The student compiles a list of all KCL student halls of residence, randomly selects three halls, and over three separate days sets up a table near the entrance of each hall and asks students entering and leaving what they think about the cost of student accommodation in London.
+
+**Questions:**
+
+**B1.** What is the **population of interest** in this study?
+
+**B2.** Is this a **probability sample** or a **non-probability sample**? Justify your answer.
+
+**B3.** Would you expect this procedure to produce a **biased** or **unbiased** estimate of KCL student opinion on accommodation costs? If biased, in which direction? Justify your answer.
+
+<!-- > **Hint:** Think about who lives in university halls versus who does not. Also consider what determines which students happen to pass by the table on a given day. -->
+
+
+
+### Scenario C
+
+A researcher is commissioned by an environmental think tank to assess whether English local councils have been implementing policies to reduce carbon emissions. The researcher obtains a list of all 317 principal councils in England and emails the leader of a randomly selected sample of 200 councils, inviting them to complete a 10-minute survey about their council's environmental policies over the past five years.
+
+**Questions:**
+
+**C1.** What is the **population of interest** in this study?
+
+**C2.** Is this a **probability sample** or a **non-probability sample**? Justify your answer.
+
+**C3.** Would you expect this procedure to produce a **biased** or **unbiased** estimate of the extent to which English councils have implemented environmental policies? If biased, in which direction? Justify your answer.
+
+<!-- > **Hint:** Who is more likely to respond to a survey about environmental policies — councils that have implemented many such policies, or councils that have not? What does this imply for the estimates the researcher will obtain? -->
+
+
+
+### Scenario D
+
+A criminologist wants to study the relationship between the provision of youth services and rates of anti-social behaviour across London boroughs. The researcher first categorises the 33 London boroughs into three groups based on how much they spend per capita on youth services: low, medium, and high. From each group, the researcher randomly selects four boroughs and conducts an in-depth study in those twelve boroughs.
+
+**Questions:**
+
+**D1.** What is the **population of interest** in this study?
+
+**D2.** Is this a **probability sample** or a **non-probability sample**? Justify your answer.
+
+**D3.** Are there any features of this design that might limit the conclusions the researcher can draw? Consider both the sampling procedure and the size of the sample relative to the population.
+
+<!-- > **Hint:** This scenario is different from the others. Think about what type of sampling strategy is being used and whether it is executed correctly. Also consider how many boroughs are in each stratum and how many are selected. -->
+
+
+
+### Scenario E
+
+A market research company is hired by a major UK supermarket chain to measure customer satisfaction. The company randomly selects 30 stores from across the chain's 600 locations. Staff at each selected store are asked to hand out short paper surveys to customers who are shopping at the time. Customers who agree to participate fill out the survey before leaving the store.
+
+**Questions:**
+
+**E1.** What is the **population of interest** in this study?
+
+**E2.** Is this a **probability sample** or a **non-probability sample**? Justify your answer.
+
+**E3.** Would you expect this procedure to produce a **biased** or **unbiased** estimate of customer satisfaction? If biased, in which direction? Justify your answer.
+
+<!-- > **Hint:** Two separate decisions determine who ends up in the sample: which stores are selected, and which customers within those stores participate. Focus on the second decision — what determines whether a customer fills out the survey? -->
+
+
+
+## Synthesis
+
+Once your group has worked through all five scenarios, discuss the following:
+
+**S1.** Looking across all five scenarios: in which cases was random selection used somewhere in the design? Does the presence of random selection at one stage guarantee that the overall sample is unbiased? Why or why not?
+
+**S2.** For the scenarios where you predicted bias, were the estimates more likely to overestimate or underestimate the quantity of interest? Is there a common pattern in what drives the direction of bias?
+
+**S3.** The exam will present a single scenario and ask you to identify the population, classify the sampling procedure, and predict the direction of bias. Based on this activity, what are the key questions to ask yourself when working through a scenario like this?
+
+------------------------------------------------------------------------
+
+## Summary
+
+In this activity, you have:
+
+- Identified the population of interest for a range of research scenarios.
+- Distinguished probability sampling from non-probability sampling and explained what makes each type what it is.
+- Diagnosed sources of bias in sampling procedures and predicted the direction of expected bias.
+
+These are the core skills tested in Part Two of the exam.
