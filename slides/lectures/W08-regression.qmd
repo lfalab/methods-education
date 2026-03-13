@@ -191,6 +191,6 @@ regress leave_share immigrant_share
 
 ## Why this matters
 
--   Regression turns a visual pattern in a scatterplot into a precise, testable statement.
+- Regression turns a visual pattern in a scatterplot into a precise, testable statement.
 - Comparing slopes, significance, and R-squared is how we evaluate **competing explanations**.
 
