@@ -127,7 +127,7 @@ regress leave_share import_shock
 ::: nonincremental
 
 - What is the sign of the slope? What does it mean substantively?
-- Write the regression equation: $\widehat{\text{Leave}} = $ \_\_\_ + \_\_\_ × ImportShock
+- Write the regression equation: $\widehat{\text{Leave}}$ =  \_\_\_ + \_\_\_ × ImportShock
 - Does the 95% CI exclude zero? Do we reject H0?
 - What is R-squared? How does it compare to the education model?
 
@@ -165,7 +165,7 @@ regress leave_share immigrant_share
 ::: nonincremental
 
 - What is the sign of the slope? Is it what you expected?
-- Write the regression equation: $\widehat{\text{Leave}} = $ \_\_\_ + \_\_\_ × ImmigrantShare
+- Write the regression equation: $\widehat{\text{Leave}}$ =  \_\_\_ + \_\_\_ × ImmigrantShare
 - Does the 95% CI exclude zero? Do we reject H0?
 - What is R-squared? How does it compare to the other two models?
 
@@ -191,6 +191,6 @@ regress leave_share immigrant_share
 
 ## Why this matters
 
-- The regression structure stays the same — only the **independent variable** changes.
+-   Regression turns a visual pattern in a scatterplot into a precise, testable statement.
 - Comparing slopes, significance, and R-squared is how we evaluate **competing explanations**.
-- This is exactly what PS2 asks you to do.
+
