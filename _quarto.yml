@@ -66,8 +66,8 @@ website:
             - slides/videos-concepts/C17-p-values.qmd
             - slides/videos-stata/S08-htests-stata.qmd
             - slides/lectures/W07-hypothesis.qmd
-            - activities/A07-sampling-activity.qmd
-            - activities/SA07-htests-weights.qmd
+            - activities/A07a-sampling-activity.qmd
+            - activities/A07b-htests-weights.qmd
       - section: "Week 8: Regression Analysis"
         contents:
             - slides/videos-concepts/C18-regression-intro.qmd
@@ -76,8 +76,8 @@ website:
             - slides/videos-concepts/C21-regression-rsquared.qmd
             - slides/videos-stata/S09-regression-stata.qmd
             - slides/lectures/W08-regression.qmd
-            - activities/A08-regression-activity.qmd
-            - activities/A08-ps2-workshop-1.qmd
+            - activities/A08a-regression-activity.qmd
+            - activities/A08b-ps2-workshop-1.qmd
       - section: "Week 9: Confounding Variables and Reverse Causality"
         contents:
             - slides/videos-concepts/C22-confounding.qmd
