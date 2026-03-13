@@ -1,0 +1,5 @@
+According to the video, if a 95% confidence interval for a difference in means includes 0, what does this imply?
+
+- We fail to reject the null hypothesis
+- We reject the null hypothesis
+- The two group means are exactly equal

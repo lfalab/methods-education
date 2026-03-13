@@ -1,0 +1,217 @@
+QUESTION: You are interested in whether voter turnout differs between men and women. Voter turnout is coded as voted / did not vote, and gender is coded as male / female. Which option correctly identifies the variable types and the appropriate analysis?
+
+A. Both variables are nominal; use a cross-tabulation or bivariate bar chart
+B. Gender is nominal and turnout is numeric; compare means
+C. Both variables are numeric; use a scatter plot
+D. Gender is numeric and turnout is nominal; use a histogram
+
+ANSWER: A
+
+---
+
+QUESTION: You are analysing the relationship between age (in years) and income (in pounds). Which option correctly identifies the variables and method?
+
+A. Age is nominal and income is numeric; compare means
+B. Age is numeric and income is nominal; use a bar chart
+C. Both variables are numeric; use a scatter plot
+D. Both variables are nominal; use a cross-tabulation
+
+ANSWER: C
+
+---
+
+QUESTION: You want to know whether support for a policy (support / oppose) differs by political party. Which option is correct?
+
+A. Both variables are nominal; use a cross-tabulation
+B. Party is numeric and support is nominal; use a scatter plot
+C. Both variables are numeric; compare means
+D. Party is nominal and support is numeric; use a histogram
+
+ANSWER: A
+
+---
+
+QUESTION: You are studying whether average test scores differ between public and private schools. Test score is numeric. Which option is correct?
+
+A. Both variables are numeric; use a scatter plot
+B. School type is nominal and test score is numeric; compare means
+C. Both variables are nominal; use a cross-tabulation
+D. School type is numeric and test score is nominal; use a histogram
+
+ANSWER: B
+
+---
+
+QUESTION: You want to examine the relationship between years of education and hourly wages. Which option is correct?
+
+A. Years of education is nominal and wages are numeric; compare means
+B. Years of education is numeric and wages are nominal; use a bar chart
+C. Both variables are numeric; use a scatter plot
+D. Both variables are nominal; use a cross-tabulation
+
+ANSWER: C
+
+---
+
+QUESTION: You are interested in whether party identification differs by region (North / South / East / West). Which option is correct?
+
+A. Both variables are nominal; use a cross-tabulation
+B. Region is numeric and party is nominal; use a scatter plot
+C. Both variables are numeric; compare means
+D. Region is nominal and party is numeric; use a histogram
+
+ANSWER: A
+
+---
+
+QUESTION: You want to compare average life satisfaction scores between men and women. Life satisfaction is measured on a numeric scale. Which option is correct?
+
+A. Life satisfaction is nominal and gender is numeric; use a histogram
+B. Both variables are numeric; use a scatter plot
+C. Gender is nominal and life satisfaction is numeric; compare means
+D. Both variables are nominal; use a cross-tabulation
+
+ANSWER: C
+
+---
+
+QUESTION: You are analysing the relationship between household size and monthly electricity consumption. Which option is correct?
+
+A. Both variables are numeric; use a scatter plot
+B. Household size is nominal and consumption is numeric; compare means
+C. Both variables are nominal; use a cross-tabulation
+D. Consumption is nominal and household size is numeric; use a bar chart
+
+ANSWER: A
+
+---
+
+QUESTION: You want to know whether vote choice differs between urban and rural residents. Which option is correct?
+
+A. Both variables are numeric; use a scatter plot
+B. Urban–rural status is nominal and vote choice is nominal; use a cross-tabulation
+C. Urban–rural status is numeric and vote choice is nominal; compare means
+D. Both variables are nominal; use a histogram
+
+ANSWER: B
+
+---
+
+QUESTION: You want to analyse the relationship between years since migration and language proficiency score. Which option is correct?
+
+A. Both variables are numeric; use a scatter plot
+B. Migration status is nominal and proficiency is numeric; compare means
+C. Both variables are nominal; use a cross-tabulation
+D. Proficiency is nominal and years since migration is numeric; use a bar chart
+
+ANSWER: A
+
+---
+
+QUESTION: You are interested in whether average hours worked per week differ by employment sector (public / private / self-employed). Which option is correct?
+
+A. Both variables are numeric; use a scatter plot
+B. Employment sector is nominal and hours worked is numeric; compare means
+C. Both variables are nominal; use a cross-tabulation
+D. Employment sector is numeric and hours worked is nominal; use a histogram
+
+ANSWER: B
+
+---
+
+QUESTION: You are analysing the relationship between GDP per capita and life expectancy across countries. Which option is correct?
+
+A. Both variables are numeric; use a scatter plot
+B. GDP is nominal and life expectancy is numeric; compare means
+C. Both variables are nominal; use a cross-tabulation
+D. Life expectancy is nominal and GDP is numeric; use a bar chart
+
+ANSWER: A
+
+---
+
+QUESTION: You want to compare average exam scores between morning and afternoon classes. Which option is correct?
+
+A. Both variables are numeric; use a scatter plot
+B. Class time is nominal and exam score is numeric; compare means
+C. Both variables are nominal; use a cross-tabulation
+D. Exam score is nominal and class time is numeric; use a histogram
+
+ANSWER: B
+
+---
+
+QUESTION: You are studying whether attitudes toward immigration (favour / oppose / neutral) differ by gender. Which option is correct?
+
+A. Both variables are numeric; use a scatter plot
+B. Gender is nominal and attitudes are numeric; compare means
+C. Both variables are nominal; use a cross-tabulation
+D. Gender is numeric and attitudes are nominal; use a histogram
+
+ANSWER: C
+
+---
+
+QUESTION: You want to analyse the relationship between years of work experience and annual earnings. Which option is correct?
+
+A. Experience is nominal and earnings are numeric; compare means
+B. Both variables are numeric; use a scatter plot
+C. Both variables are nominal; use a cross-tabulation
+D. Earnings are nominal and experience is numeric; use a bar chart
+
+ANSWER: B
+
+---
+
+QUESTION: You are interested in whether average health expenditure differs by insurance type (private / public / uninsured). Which option is correct?
+
+A. Both variables are numeric; use a scatter plot
+B. Insurance type is nominal and health expenditure is numeric; compare means
+C. Both variables are nominal; use a cross-tabulation
+D. Health expenditure is nominal and insurance type is numeric; use a histogram
+
+ANSWER: B
+
+---
+
+QUESTION: You want to examine whether referendum vote (Leave / Remain) differs by region. Which option is correct?
+
+A. Both variables are numeric; use a scatter plot
+B. Region is numeric and referendum vote is nominal; compare means
+C. Both variables are nominal; use a cross-tabulation
+D. Referendum vote is numeric and region is nominal; use a histogram
+
+ANSWER: C
+
+---
+
+QUESTION: You are analysing the relationship between campaign spending (in thousands of pounds) and vote share (percentage). Which option is correct?
+
+A. Campaign spending is nominal and vote share is numeric; compare means
+B. Both variables are numeric; use a scatter plot
+C. Both variables are nominal; use a cross-tabulation
+D. Vote share is nominal and campaign spending is numeric; use a histogram
+
+ANSWER: B
+
+---
+
+QUESTION: You want to compare average trust in government scores between people who voted and those who did not vote. Trust is measured on a numeric scale. Which option is correct?
+
+A. Both variables are numeric; use a scatter plot
+B. Voting behaviour is nominal and trust score is numeric; compare means
+C. Both variables are nominal; use a cross-tabulation
+D. Trust score is nominal and voting behaviour is numeric; use a histogram
+
+ANSWER: B
+
+---
+
+QUESTION: You are studying whether newspaper readership (Guardian / Telegraph / Times / Mail) differs by social class (working / middle / upper). Which option is correct?
+
+A. Both variables are numeric; use a scatter plot
+B. Social class is nominal and newspaper is numeric; compare means
+C. Both variables are nominal; use a cross-tabulation
+D. Newspaper is numeric and social class is nominal; use a histogram
+
+ANSWER: C

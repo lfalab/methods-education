@@ -1,0 +1,217 @@
+QUESTION: Which type of variable best describes respondents’ gender coded as Male, Female, or Other?
+
+A. Nominal variable
+B. Ordinal variable
+C. Interval variable
+D. Ratio variable
+
+ANSWER: A
+
+---
+
+QUESTION: Which type of variable best describes a five-point Likert scale measuring agreement from “Strongly disagree” to “Strongly agree”?
+
+A. Nominal variable
+B. Ordinal variable
+C. Interval variable
+D. Ratio variable
+
+ANSWER: B
+
+---
+
+QUESTION: Which of the following is an example of a ratio variable?
+
+A. Political ideology measured on a left–right scale
+B. Country of residence
+C. Number of children in a household
+D. Level of trust in government (low, medium, high)
+
+ANSWER: C
+
+---
+
+QUESTION: Which property distinguishes ratio variables from interval variables?
+
+A. Ratio variables can be ranked
+B. Ratio variables have categories without order
+C. Ratio variables have a meaningful zero point
+D. Ratio variables cannot be measured numerically
+
+ANSWER: C
+
+---
+
+QUESTION: A variable measuring temperature in degrees Celsius is best classified as:
+
+A. Nominal
+B. Ordinal
+C. Interval
+D. Ratio
+
+ANSWER: C
+
+---
+
+QUESTION: A dataset records whether a respondent voted in the last election (Yes/No). What type of variable is this?
+
+A. Nominal
+B. Ordinal
+C. Interval
+D. Ratio
+
+ANSWER: A
+
+---
+
+QUESTION: Which variable type allows statements such as “twice as much”?
+
+A. Nominal
+B. Ordinal
+C. Interval
+D. Ratio
+
+ANSWER: D
+
+---
+
+QUESTION: Years of education completed is best described as:
+
+A. Nominal
+B. Ordinal
+C. Interval
+D. Ratio
+
+ANSWER: D
+
+---
+
+QUESTION: A researcher codes political parties as 1 = Labour, 2 = Conservative, 3 = Liberal Democrats. What type of variable is this?
+
+A. Nominal
+B. Ordinal
+C. Interval
+D. Ratio
+
+ANSWER: A
+
+---
+
+QUESTION: Income measured in pounds per year is best classified as:
+
+A. Nominal
+B. Ordinal
+C. Interval
+D. Ratio
+
+ANSWER: D
+
+---
+
+QUESTION: Which variable type is most appropriate for ranking countries by level of democracy, if our measurement were to code countries as 1 = Autocracy, 2 = Mixed Regime, and 3 = Full Democracy?
+
+A. Nominal
+B. Ordinal
+C. Interval
+D. Ratio
+
+ANSWER: B
+
+---
+
+QUESTION: A survey asks respondents to report their age in years. What type of variable is age?
+
+A. Nominal
+B. Ordinal
+C. Interval
+D. Ratio
+
+ANSWER: D
+
+---
+
+QUESTION: Which of the following is an example of an ordinal variable?
+
+A. Country of birth
+B. Number of protests attended
+C. Satisfaction with democracy (very dissatisfied to very satisfied)
+D. GDP per capita
+
+ANSWER: C
+
+---
+
+QUESTION: A codebook lists a variable “region” with values North, South, East, and West. What type of variable is this?
+
+A. Nominal
+B. Ordinal
+C. Interval
+D. Ratio
+
+ANSWER: A
+
+---
+
+QUESTION: Which statement about nominal variables is correct?
+
+A. They have a meaningful zero
+B. They can be ordered
+C. Differences between values are meaningful
+D. Categories have no inherent order
+
+ANSWER: D
+
+---
+
+QUESTION: Which variable type is most appropriate for measuring the distance between two cities in kilometres?
+
+A. Nominal
+B. Ordinal
+C. Interval
+D. Ratio
+
+ANSWER: D
+
+---
+
+QUESTION: A variable records respondents’ self-rated health as Poor, Fair, Good, or Excellent. What type of variable is this?
+
+A. Nominal
+B. Ordinal
+C. Interval
+D. Ratio
+
+ANSWER: B
+
+---
+
+QUESTION: Which variable type is least appropriate for calculating a mean?
+
+A. Nominal
+B. Ordinal
+C. Interval
+D. Ratio
+
+ANSWER: A
+
+---
+
+QUESTION: A researcher creates a variable counting the number of times a respondent attended religious services last month. This variable is:
+
+A. Nominal
+B. Ordinal
+C. Interval
+D. Ratio
+
+ANSWER: D
+
+---
+
+QUESTION: Which of the following best describes an interval variable?
+
+A. Categories with no order
+B. Ordered categories without equal distances
+C. Equal distances between values but no true zero
+D. A true zero and meaningful ratios
+
+ANSWER: C

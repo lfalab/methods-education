@@ -1,0 +1,6 @@
+According to the video, when both variables are numeric, what is the appropriate way to analyse their relationship?
+
+- Create a scatter plot (and possibly add a regression line)
+- Create a histogram of both variables
+- Create a bar chart
+- Use a cross-tabulation

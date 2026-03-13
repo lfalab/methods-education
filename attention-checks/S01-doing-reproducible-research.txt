@@ -1,0 +1,5 @@
+What is reproducible research?
+
+- Being able to obtain the same results using the same data and code
+- Being able to prove that your hypothesis is correct
+- Being able to formulate a good theory for a research question

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <question type="multichoice">
+    <name><text>W03_Q01</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Which type of variable best describes respondents’ gender coded as Male, Female, or Other?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100"><text><![CDATA[Nominal variable]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Ordinal variable]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Interval variable]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Ratio variable]]></text></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W03_Q02</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Which type of variable best describes a five-point Likert scale measuring agreement from “Strongly disagree” to “Strongly agree”?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0"><text><![CDATA[Nominal variable]]></text></answer>
+    <answer fraction="100"><text><![CDATA[Ordinal variable]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Interval variable]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Ratio variable]]></text></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W03_Q03</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Which of the following is an example of a ratio variable?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0"><text><![CDATA[Political ideology measured on a left–right scale]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Country of residence]]></text></answer>
+    <answer fraction="100"><text><![CDATA[Number of children in a household]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Level of trust in government (low, medium, high)]]></text></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W03_Q04</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Which property distinguishes ratio variables from interval variables?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0"><text><![CDATA[Ratio variables can be ranked]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Ratio variables have categories without order]]></text></answer>
+    <answer fraction="100"><text><![CDATA[Ratio variables have a meaningful zero point]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Ratio variables cannot be measured numerically]]></text></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W03_Q05</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>A variable measuring temperature in degrees Celsius is best classified as:</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0"><text><![CDATA[Nominal]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Ordinal]]></text></answer>
+    <answer fraction="100"><text><![CDATA[Interval]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Ratio]]></text></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W03_Q06</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>A dataset records whether a respondent voted in the last election (Yes/No). What type of variable is this?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100"><text><![CDATA[Nominal]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Ordinal]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Interval]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Ratio]]></text></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W03_Q07</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Which variable type allows statements such as “twice as much”?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0"><text><![CDATA[Nominal]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Ordinal]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Interval]]></text></answer>
+    <answer fraction="100"><text><![CDATA[Ratio]]></text></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W03_Q08</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Years of education completed is best described as:</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0"><text><![CDATA[Nominal]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Ordinal]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Interval]]></text></answer>
+    <answer fraction="100"><text><![CDATA[Ratio]]></text></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W03_Q09</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>A researcher codes political parties as 1 = Labour, 2 = Conservative, 3 = Liberal Democrats. What type of variable is this?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100"><text><![CDATA[Nominal]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Ordinal]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Interval]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Ratio]]></text></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W03_Q10</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Income measured in pounds per year is best classified as:</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0"><text><![CDATA[Nominal]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Ordinal]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Interval]]></text></answer>
+    <answer fraction="100"><text><![CDATA[Ratio]]></text></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W03_Q11</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Which variable type is most appropriate for ranking countries by level of democracy, if our measurement were to code countries as 1 = Autocracy, 2 = Mixed Regime, and 3 = Full Democracy?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0"><text><![CDATA[Nominal]]></text></answer>
+    <answer fraction="100"><text><![CDATA[Ordinal]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Interval]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Ratio]]></text></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W03_Q12</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>A survey asks respondents to report their age in years. What type of variable is age?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0"><text><![CDATA[Nominal]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Ordinal]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Interval]]></text></answer>
+    <answer fraction="100"><text><![CDATA[Ratio]]></text></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W03_Q13</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Which of the following is an example of an ordinal variable?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0"><text><![CDATA[Country of birth]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Number of protests attended]]></text></answer>
+    <answer fraction="100"><text><![CDATA[Satisfaction with democracy (very dissatisfied to very satisfied)]]></text></answer>
+    <answer fraction="0"><text><![CDATA[GDP per capita]]></text></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W03_Q14</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>A codebook lists a variable “region” with values North, South, East, and West. What type of variable is this?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100"><text><![CDATA[Nominal]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Ordinal]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Interval]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Ratio]]></text></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W03_Q15</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Which statement about nominal variables is correct?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0"><text><![CDATA[They have a meaningful zero]]></text></answer>
+    <answer fraction="0"><text><![CDATA[They can be ordered]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Differences between values are meaningful]]></text></answer>
+    <answer fraction="100"><text><![CDATA[Categories have no inherent order]]></text></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W03_Q16</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Which variable type is most appropriate for measuring the distance between two cities in kilometres?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0"><text><![CDATA[Nominal]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Ordinal]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Interval]]></text></answer>
+    <answer fraction="100"><text><![CDATA[Ratio]]></text></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W03_Q17</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>A variable records respondents’ self-rated health as Poor, Fair, Good, or Excellent. What type of variable is this?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0"><text><![CDATA[Nominal]]></text></answer>
+    <answer fraction="100"><text><![CDATA[Ordinal]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Interval]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Ratio]]></text></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W03_Q18</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Which variable type is least appropriate for calculating a mean?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100"><text><![CDATA[Nominal]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Ordinal]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Interval]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Ratio]]></text></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W03_Q19</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>A researcher creates a variable counting the number of times a respondent attended religious services last month. This variable is:</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0"><text><![CDATA[Nominal]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Ordinal]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Interval]]></text></answer>
+    <answer fraction="100"><text><![CDATA[Ratio]]></text></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W03_Q20</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Which of the following best describes an interval variable?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0"><text><![CDATA[Categories with no order]]></text></answer>
+    <answer fraction="0"><text><![CDATA[Ordered categories without equal distances]]></text></answer>
+    <answer fraction="100"><text><![CDATA[Equal distances between values but no true zero]]></text></answer>
+    <answer fraction="0"><text><![CDATA[A true zero and meaningful ratios]]></text></answer>
+  </question>
+</quiz>

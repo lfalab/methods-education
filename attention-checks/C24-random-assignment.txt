@@ -1,0 +1,6 @@
+Why is random assignment useful in experiments?
+
+- It makes the treatment and control groups similar on average
+- It guarantees that we reject the null hypothesis
+- It ensures that the regression slope is positive
+- It removes the need for statistical analysis

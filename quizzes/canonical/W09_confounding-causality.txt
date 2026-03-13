@@ -1,0 +1,217 @@
+QUESTION: A confounding variable is best defined as a variable that:
+
+A. Lies on the causal pathway between X and Y
+B. Affects both the independent and dependent variables and is not caused by the independent variable
+C. Is caused by the independent variable
+D. Affects only the dependent variable
+
+ANSWER: B
+
+---
+
+QUESTION: A study finds that countries with higher ice cream sales have higher rates of violent crime. A researcher suggests that warm weather may be a confounding variable. Why would warm weather be considered a confounder?
+
+A. Warm weather causes ice cream sales but not crime
+B. Warm weather affects both ice cream sales and crime rates independently
+C. Warm weather is caused by ice cream consumption
+D. Warm weather lies on the pathway from ice cream sales to crime
+
+ANSWER: B
+
+---
+
+QUESTION: A researcher observes that students who take notes on laptops perform worse on exams than students who handwrite notes. Prior academic ability could be a confounding variable if:
+
+A. Prior ability affects both the choice of note-taking method and exam performance
+B. Prior ability is caused by laptop use
+C. Prior ability only affects exam performance
+D. Prior ability lies on the pathway from note-taking to exam performance
+
+ANSWER: A
+
+---
+
+QUESTION: Which of the following best describes the difference between a confounder and a mediator?
+
+A. A confounder is caused by the independent variable; a mediator is not
+B. A confounder influences both X and Y from outside the relationship; a mediator lies on the causal pathway from X to Y
+C. A confounder only affects Y; a mediator only affects X
+D. A confounder is always measured; a mediator is always unmeasured
+
+ANSWER: B
+
+---
+
+QUESTION: A study finds that people who drink coffee have lower rates of depression. If coffee consumption reduces depression by improving sleep quality, what role does sleep quality play?
+
+A. Sleep quality is a confounder
+B. Sleep quality is a mediator
+C. Sleep quality is an independent variable
+D. Sleep quality is omitted variable bias
+
+ANSWER: B
+
+---
+
+QUESTION: What is omitted variable bias?
+
+A. When a mediating variable is included in the analysis
+B. When a confounding variable is left out of the analysis, leading to misleading estimates
+C. When the dependent variable is omitted from a regression
+D. When too many variables are included in a model
+
+ANSWER: B
+
+---
+
+QUESTION: A study finds that cities with more coffee shops have higher crime rates. If population density is a confounding variable, this means:
+
+A. Population density causes coffee shops but not crime
+B. Population density affects both the number of coffee shops and crime rates
+C. Coffee shops cause population density
+D. Population density is caused by crime rates
+
+ANSWER: B
+
+---
+
+QUESTION: Reverse causality occurs when:
+
+A. X and Y are uncorrelated
+B. We assume X causes Y, but Y may actually cause X
+C. A confounding variable affects both X and Y
+D. The independent variable is measured incorrectly
+
+ANSWER: B
+
+---
+
+QUESTION: A study finds that cities with more police officers have higher crime rates. Which statement best describes the reverse causality concern?
+
+A. Police officers cause crime
+B. Crime rates may prompt cities to hire more police, rather than police causing crime
+C. A confounding variable affects both policing and crime
+D. The correlation is spurious and meaningless
+
+ANSWER: B
+
+---
+
+QUESTION: Researchers observe that countries with higher levels of education have stronger democracies. Why might reverse causality be a concern?
+
+A. Education levels cannot affect democracy
+B. Democracies may invest more in education, rather than education causing democracy
+C. Education and democracy are unrelated
+D. A third variable causes both education and democracy
+
+ANSWER: B
+
+---
+
+QUESTION: A correlation shows that people who exercise more report better mental health. Which scenario represents reverse causality?
+
+A. A confounding variable affects both exercise and mental health
+B. People with better mental health may be more motivated to exercise
+C. Exercise improves mental health through biological mechanisms
+D. Exercise and mental health are unrelated
+
+ANSWER: B
+
+---
+
+QUESTION: Why can correlations alone not determine causal direction?
+
+A. Correlations are always spurious
+B. Y may cause X, X may cause Y, or both directions may operate
+C. Correlations only measure strength, not direction
+D. Causal direction can only be determined by p-values
+
+ANSWER: B
+
+---
+
+QUESTION: A study finds that students who attend office hours get higher grades. Both confounding and reverse causality could threaten this causal claim. Which describes the reverse causality concern?
+
+A. Prior academic ability affects both office hour attendance and grades
+B. Students who are already doing well may be more likely to attend office hours
+C. Office hours directly cause grade improvement
+D. A third variable causes both attendance and grades
+
+ANSWER: B
+
+---
+
+QUESTION: What is the counterfactual problem in causal inference?
+
+A. We can never collect enough data
+B. We cannot observe the same unit in both treated and untreated states simultaneously
+C. We cannot measure all variables perfectly
+D. Correlations are always confounded
+
+ANSWER: B
+
+---
+
+QUESTION: How does random assignment address confounding variables?
+
+A. It eliminates all confounders from the study
+B. It ensures treatment and control groups are similar on average, including on potential confounders
+C. It measures confounders more accurately
+D. It proves that confounders do not exist
+
+ANSWER: B
+
+---
+
+QUESTION: In an experiment testing whether exposure to negative news increases anxiety, participants are randomly assigned to read either negative or neutral news stories. How does random assignment address reverse causality?
+
+A. It proves that anxiety cannot cause news exposure
+B. It ensures that pre-existing anxiety levels cannot cause exposure, because exposure is imposed by the researcher
+C. It eliminates anxiety from the study
+D. It measures the direction of causation directly
+
+ANSWER: B
+
+---
+
+QUESTION: A researcher randomly assigns voters to receive either a campaign flyer or no flyer, then measures voting behaviour. What does random assignment achieve?
+
+A. It guarantees that every participant votes
+B. It ensures the treatment and control groups are comparable on average before the flyer is distributed
+C. It eliminates all differences between participants
+D. It proves that campaign flyers always increase turnout
+
+ANSWER: B
+
+---
+
+QUESTION: Why can researchers not use random assignment to study whether poverty causes poor health outcomes?
+
+A. Poverty and health are unrelated
+B. It would be unethical and impractical to randomly assign people to poverty
+C. Random assignment only works for small sample sizes
+D. Poverty cannot be measured
+
+ANSWER: B
+
+---
+
+QUESTION: An experiment finds that students randomly assigned to receive tutoring score higher on exams than those who do not receive tutoring. What can we conclude?
+
+A. Tutoring causes exam score improvement
+B. Students who seek tutoring are already higher-achieving
+C. A confounding variable explains the relationship
+D. Reverse causality undermines the causal claim
+
+ANSWER: A
+
+---
+
+QUESTION: Which statement correctly describes a limitation of experimental research?
+
+A. Experiments cannot establish causation
+B. Many important political variables cannot be randomly assigned for ethical or practical reasons
+C. Random assignment introduces confounding variables
+D. Experiments always suffer from reverse causality
+
+ANSWER: B

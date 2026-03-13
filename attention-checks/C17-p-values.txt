@@ -1,0 +1,5 @@
+According to the video, what does a p-value represent?
+
+- The probability of observing data at least as extreme as ours, assuming the null hypothesis is true
+- The proportion of the sample that supports the hypothesis
+- The probability that the alternative hypothesis is correct

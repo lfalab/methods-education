@@ -1,0 +1,6 @@
+What is a confounding variable?
+
+- A variable that influences both the independent variable and the dependent variable
+- A variable that replaces the dependent variable in a regression
+- A variable that always equals zero
+- A variable that only appears in experimental data

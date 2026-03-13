@@ -1,0 +1,6 @@
+According to the video, why do we rely on samples rather than studying the entire population?
+
+- Because studying the entire population is often impractical or impossible
+- Because samples eliminate uncertainty
+- Because samples are always representative
+- Because samples always give exact results

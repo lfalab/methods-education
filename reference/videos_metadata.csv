@@ -1,0 +1,40 @@
+﻿Week,File name,Final Title,YouTube ID,Badge,Key Learning Goal
+2,C01-empirical-vs-normative,Normative and Empirical Questions,QCPkKubsMS8,Concept,Distinguish normative and empirical questions and explain why the module focuses on empirical questions.
+2,C02-descriptive-vs-causal,Descriptive and Causal Questions,QiB1lYUS28A,Concept,Distinguish descriptive from causal questions and state what kind of claim each supports.
+2,C03-units-theories-hypotheses,"Units of Analysis, Theories, and Hypotheses",YkeRnIcYe8E,Concept,"Define theory and hypothesis, and identify an appropriate unit of analysis for a quantitative claim."
+2,C04-dependent-independent-variables,Dependent and Independent Variables,j-R8ef5mPtQ,Concept,Identify the dependent and independent variables when studying causal relationships
+2,S01-doing-reproducible-research,Doing Reproducible Research,DVSg_RFjV-8,Lab,Explain why replicability is important for research and set up a project folder structure that supports replicable quantitative analysis.
+3,C05-measuring-variables,Measuring Variables,IjOV2bF9yOI,Concept,Evaluate how measurement strategies shape the conclusions that research can support.
+3,C06-types-of-variables,Types of Variables,nCVu3XtdRJI,Concept,Classify variables by type and match each type to appropriate summaries and visualisations.
+3,S02-datasets-codebooks,Datasets and Codebooks,QFWFimlyhas,Lab,"Use a codebook to interpret variable meanings, coding schemes, and missing-value conventions."
+3,S03-stata-interface,The Stata Interface (Setting the Working Directory),rzjMrTdF9HE,Lab,Navigate Stata’s interface and locate key information needed to run and interpret commands.
+3,S04-loading-browsing-data,Loading and Browsing Data,nWJTyqIjYgE,Lab,Write and run a do-file to document an analysis so it can be reproduced.
+4,C07-summarising-distribution,Summarising a Distribution,,Concept,"Interpret the mean, median, and mode as summaries of a distribution’s central tendency."
+4,C08-variance-sd,Variance and Standard Deviation,,Concept,Interpret the variance and standard deviation as summaries of dispersion.
+4,C09-bar-histograms,Bar Charts and Histograms,,Concept,Choose and interpret bar charts and histograms for univariate data.
+4,S05-summary-stata,Summarising Distributions in Stata,,Lab,Produce summary statistics and frequency tables in Stata and interpret what they show.
+4,S06-bar-hist-stata,Bar Charts and Histograms in Stata,,Lab,Create bar charts and histograms in Stata and use them to describe distributions.
+5,C10-correlations-nominal,Correlations Between Nominal Variables,,Concept,Describe associations between two categorical variables using cross-tabulations and bivariate frequency charts.
+5,C11-comparing-means,Comparing Means by Category,,Concept,Summarise differences between groups by comparing group means
+5,C12-scatter-reg,Scatterplots and Regression Lines,,Concept,Interpret scatter plots and regression lines to analyse correlations between numeric variables.
+5,C13-types-plots-tables,From Variable Types to Plots and Tables,,Concept,"Choose appropriate tables, plots, and summary statistics based on the types of variables being analysed."
+5,S07-corr-stata,Describing Correlations in Stata,,Lab,Generate and interpret bivariate summaries in Stata.
+7,C14-sampling,Why Sampling Matters,,Concept,Explain how samples relate to populations and why unbiased sampling matters for inference.
+7,C15-moe-ci,Confidence Intervals and Margins of Error,,Concept,"Interpret confidence intervals and margins of error, and explain what makes them wider or narrower."
+7,C16-htests-cis,Hypothesis Tests Using Confidence Intervals,,Concept,Use confidence intervals to assess evidence against a null hypothesis in a transparent way.
+7,C17-p-values,Interpreting P-values,,Concept,Interpret a p-value and use it to evaluate a null hypothesis without conflating it with effect size.
+7,S08-htests-stata,Hypothesis Testing in Stata,,Lab,Run and interpret a difference-in-proportions test and a difference in means test in Stata using both CIs and p-values.
+8,C18-regression-intro,Regression Analysis: Introduction,,Concept,Interpret how a bivariate regression models the relationship between two variables
+8,C19-regression-slope,Regression Slope,,Concept,Explain what determines the regression slope and how changes in variation affect its magnitude.
+8,C20-regression-inference,Inference in Regression: CIs and P-values,,Concept,Use CIs and p-values in regression output to assess evidence about a coefficient.
+8,C21-regression-rsquared,R-squared,,Concept,Interpret R-squared as explained variation and describe factors that affect its value.
+8,S09-regression-stata,Bivariate Regression in Stata,,Lab,Fit a bivariate regression in Stata and extract the intercept and slope from the output.
+9,C22-confounding,Confounding Variables,,Concept,Define confounding and explain how it can create or mask relationships in observational data.
+9,C23-reverse-causality,Reverse Causality,,Concept,Explain how reverse causality can generate correlations that misrepresent direction of influence.
+9,C24-random-assignment,Random Assignment and Causal Inference,,Concept,Explain how random assignment helps isolate causal effects by breaking confounding links.
+9,S10-preparing-stata,Preparing Data in Stata,,Lab,Clean and recode data in Stata for analysis.
+10,,Multivariate regression: adding controls,,Concept,Describe how multivariate regression conditions on additional variables to summarise relationships.
+10,,Controls and confounding in multivariate regression,,Concept,Explain how adding controls can mitigate some confounding concerns and what it cannot resolve.
+10,,Multivariate regression in Stata,,Lab,Fit and interpret a multivariate regression model in Stata.
+10,,The Standard Error,,Concept,
+10,,Reading regression tables for publication,,Concept,"Read a regression table and accurately interpret coefficients, uncertainty, and model specifications."

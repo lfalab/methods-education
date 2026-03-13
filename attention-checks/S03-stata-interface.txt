@@ -1,0 +1,7 @@
+According to the video, where should you save the do-file that sets the working directory?
+
+- In the do folder, as part of the project’s do-files
+- In the data-raw folder, alongside the original datasets
+- In the output folder, together with tables and figures
+- Anywhere on your computer, as long as Stata can find it
+

@@ -1,0 +1,7 @@
+"Countries with public health care systems had lower Covid death rates than countries with private health care systems."
+
+What is the dependent variable?
+
+- Covid death rate
+- Health care system
+- Country

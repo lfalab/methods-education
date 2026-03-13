@@ -1,0 +1,217 @@
+QUESTION: A researcher wants to know the average income of all households in London. They survey 500 randomly selected households. What is the population in this study?
+
+A. The 500 households surveyed
+B. All households in London
+C. All households in the United Kingdom
+D. All residents of London
+
+ANSWER: B
+
+---
+
+QUESTION: A television network conducts a poll by asking viewers to text their opinions on a political issue. Which statement best describes this sampling method?
+
+A. This is a probability sample because every viewer has a chance to respond
+B. This is a non-probability sample and cannot support a valid inference about the general population
+C. This is a random sample because viewers choose whether to participate
+D. This is representative because the network has many viewers
+
+ANSWER: B
+
+---
+
+QUESTION: In a simple random sample, which statement is correct?
+
+A. Every unit in the population has an equal probability of being selected
+B. Only units with certain characteristics can be selected
+C. The sample is guaranteed to be identical to the population
+D. Larger units have a higher probability of being selected
+
+ANSWER: A
+
+---
+
+QUESTION: A poll estimates that 58% of voters support a policy, with a margin of error of ±4%. What is the 95% confidence interval for this estimate?
+
+A. [54%, 62%]
+B. [58%, 62%]
+C. [50%, 66%]
+D. [54%, 58%]
+
+ANSWER: A
+
+---
+
+QUESTION: Two polls estimate support for the same candidate. Poll A finds 47% ± 3%, and Poll B finds 51% ± 3%. Which statement is correct?
+
+A. The polls contradict each other because the point estimates differ
+B. The polls are consistent because their confidence intervals overlap
+C. Poll B is more accurate because it has a higher point estimate
+D. The polls cannot both be correct
+
+ANSWER: B
+
+---
+
+QUESTION: Which of the following would make a 95% confidence interval narrower?
+
+A. Decreasing the sample size
+B. Increasing the confidence level to 99%
+C. Increasing the sample size
+D. Using a non-probability sample
+
+ANSWER: C
+
+---
+
+QUESTION: A survey of 800 randomly selected adults finds that 35% support a proposed law, with a 95% confidence interval of [32%, 38%]. What does this confidence interval mean?
+
+A. There is a 95% probability that the true population support is between 32% and 38%
+B. We are 95% confident that the true population support lies between 32% and 38%
+C. 95% of the sample supports the law
+D. The true population support is exactly 35%
+
+ANSWER: B
+
+---
+
+QUESTION: A researcher wants to study the habits of all consumers in the UK. They report a margin of error of ±2% for a poll conducted by surveying people at a single shopping centre. What is wrong with this procedure?
+
+A. The margin of error is too small
+B. This sampling method generates a non-probability sample, and margins of error are only meaningful for probability samples
+C. The sample size must be larger to report a margin of error
+D. Nothing is wrong; margins of error can be calculated for any sample
+
+ANSWER: B
+
+---
+
+QUESTION: A study compares average exam scores between two teaching methods. The 95% confidence interval for the difference is [−2.1, +8.4] points. The null hypothesis states that there is no difference between methods. What should the researcher conclude?
+
+A. Reject the null hypothesis because the interval includes positive values
+B. Fail to reject the null hypothesis because the interval includes zero
+C. Reject the null hypothesis because the interval includes negative values
+D. Accept the null hypothesis because zero is in the interval
+
+ANSWER: B
+
+---
+
+QUESTION: Researchers test whether men and women differ in their average hours worked per week. The 95% confidence interval for the difference (women − men) is [+2.3, +6.8] hours. What conclusion is justified?
+
+A. Reject the null hypothesis of no difference
+B. Fail to reject the null hypothesis of no difference
+C. Accept that men and women work the same hours
+D. The test is inconclusive
+
+ANSWER: A
+
+---
+
+QUESTION: A confidence interval for the difference in turnout rates between two regions is [−1.2%, +3.8%]. The null hypothesis states that there is no difference. If the researchers fail to reject the null, what can they conclude?
+
+A. The two regions definitely have identical turnout rates
+B. There is no difference between the regions
+C. The evidence is not strong enough to conclude that the regions differ
+D. The null hypothesis is proven true
+
+ANSWER: C
+
+---
+
+QUESTION: A study finds that the 95% confidence interval for the difference in average ages between two groups is [+4.2, +9.1] years. Which statement correctly interprets this result?
+
+A. Zero is a plausible value for the true difference
+B. The entire interval lies above zero, so we reject the null hypothesis of no difference
+C. We cannot determine whether to reject the null without knowing the sample size
+D. The confidence interval is too wide to draw any conclusion
+
+ANSWER: B
+
+---
+
+QUESTION: What does it mean if a 95% confidence interval for a difference includes zero?
+
+A. The null hypothesis is proven true
+B. There is definitely no difference between the groups
+C. Zero is a plausible value for the true difference, so we fail to reject the null
+D. The study design was flawed
+
+ANSWER: C
+
+---
+
+QUESTION: A researcher compares average incomes between two cities. The 95% confidence interval for the difference is [−£2,400, +£800]. Based on this interval, what decision should be made about the null hypothesis of no difference?
+
+A. Reject the null because the interval includes negative values
+B. Reject the null because the interval is wide
+C. Fail to reject the null because zero is inside the interval
+D. Accept the null because the point estimate is close to zero
+
+ANSWER: C
+
+---
+
+QUESTION: What does a p-value measure?
+
+A. The probability that the null hypothesis is true
+B. The probability of observing results at least as extreme as ours, assuming the null hypothesis is true
+C. The probability that our sample is representative
+D. The percentage of the population that supports the alternative hypothesis
+
+ANSWER: B
+
+---
+
+QUESTION: A study reports a p-value of 0.03. Using a significance level of α = 0.05, what should the researcher conclude?
+
+A. Fail to reject the null hypothesis
+B. Reject the null hypothesis
+C. Accept the null hypothesis
+D. The result is inconclusive
+
+ANSWER: B
+
+---
+
+QUESTION: A researcher obtains a p-value of 0.12 when testing whether two groups differ in their average spending. What does this p-value indicate?
+
+A. The null hypothesis is definitely true
+B. The observed difference would not be particularly unusual if the null hypothesis were true
+C. There is a 12% probability that the null hypothesis is true
+D. The two groups definitely differ
+
+ANSWER: B
+
+---
+
+QUESTION: Which statement correctly describes the relationship between p-values and 95% confidence intervals?
+
+A. They are independent tests that may contradict each other
+B. A p-value less than 0.05 corresponds to a 95% confidence interval that excludes zero
+C. P-values are more reliable than confidence intervals
+D. Confidence intervals are only used when p-values cannot be calculated
+
+ANSWER: B
+
+---
+
+QUESTION: A study finds a p-value of 0.08. Which statement is correct?
+
+A. This provides strong evidence against the null hypothesis
+B. Using α = 0.05, we would fail to reject the null hypothesis
+C. The null hypothesis is proven true
+D. We should accept the alternative hypothesis
+
+ANSWER: B
+
+---
+
+QUESTION: Which statement about p-values is incorrect?
+
+A. A p-value tells us how surprising our data would be if the null hypothesis were true
+B. A p-value is the probability that the null hypothesis is true
+C. A small p-value provides evidence against the null hypothesis
+D. P-values and confidence intervals will always lead to the same conclusion about rejecting the null
+
+ANSWER: B

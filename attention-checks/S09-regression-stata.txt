@@ -1,0 +1,6 @@
+Which Stata command is used to estimate a linear regression model?
+
+- regress
+- ols
+- runreg
+- run regression

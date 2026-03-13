@@ -1,0 +1,6 @@
+In Stata, what symbol represents a missing value?
+
+- .
+- 0
+- NA
+- MISS

@@ -1,0 +1,6 @@
+What does the R-squared statistic tell us?
+
+- The proportion of variation in the dependent variable explained by the independent variable
+- The number of independent variables
+- The slope of the regression line
+- The probability that the null hypothesis is true

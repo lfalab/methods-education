@@ -1,0 +1,217 @@
+QUESTION: A regression equation is given as: y = 10 + 3x. What is the predicted value of y when x = 5?
+
+A. 13
+B. 15
+C. 25
+D. 50
+
+ANSWER: C
+
+---
+
+QUESTION: In the regression equation y = 20 − 2x, what does the slope tell us?
+
+A. For each 1-unit increase in x, y is expected to decrease by 2 units
+B. For each 1-unit increase in y, x is expected to decrease by 2 units
+C. When x = 0, y equals 2
+D. For each 1-unit increase in x, y is expected to increase by 2 units
+
+ANSWER: A
+
+---
+
+QUESTION: A regression line slopes downward from left to right on a scatterplot. What does this indicate about the relationship between x and y?
+
+A. As x increases, y tends to increase
+B. As x increases, y tends to decrease
+C. x and y are unrelated
+D. The regression equation has a positive intercept
+
+ANSWER: B
+
+---
+
+QUESTION: In a regression of vote share on campaign spending, the equation is: Vote Share = 35 + 0.8 × Spending (where spending is in thousands of pounds). What is the intercept?
+
+A. 0.8
+B. 35
+C. 35.8
+D. 28
+
+ANSWER: B
+
+---
+
+QUESTION: What does the intercept in a regression equation represent?
+
+A. The predicted value of y when x = 0
+B. The change in y per unit increase in x
+C. The predicted value of x when y = 0
+D. The average value of y
+
+ANSWER: A
+
+---
+
+QUESTION: A researcher estimates the regression: Income = 15,000 + 2,500 × Years of Education. What does the coefficient 2,500 mean?
+
+A. When education is zero, income is £2,500
+B. For each additional year of education, income is expected to increase by £2,500
+C. The average income in the sample is £2,500
+D. Education explains 2,500 units of income variation
+
+ANSWER: B
+
+---
+
+QUESTION: In a regression of exam scores on hours studied, the intercept is 40. If no students in the sample studied fewer than 5 hours, what can we say about the intercept?
+
+A. It represents a meaningful prediction for students who did not study
+B. It should be interpreted with caution as it lies outside the range of the data
+C. It is incorrect and should be zero
+D. It indicates the minimum possible exam score
+
+ANSWER: B
+
+---
+
+QUESTION: What is a residual in regression analysis?
+
+A. The difference between the predicted value and the actual value for an observation
+B. The slope of the regression line
+C. The proportion of variance explained by the model
+D. The sum of all predicted values
+
+ANSWER: A
+
+---
+
+QUESTION: Ordinary Least Squares (OLS) estimation finds the regression line by:
+
+A. Maximising the sum of squared residuals
+B. Minimising the sum of squared residuals
+C. Setting all residuals equal to zero
+D. Maximising the correlation between x and y
+
+ANSWER: B
+
+---
+
+QUESTION: In regression hypothesis testing, what does the null hypothesis typically state?
+
+A. The slope equals zero
+B. The intercept equals zero
+C. The slope equals one
+D. R-squared equals zero
+
+ANSWER: A
+
+---
+
+QUESTION: A regression of turnout on age yields a slope of 0.4 with a 95% confidence interval of [0.1, 0.7]. What conclusion is justified?
+
+A. Reject the null hypothesis that the slope equals zero
+B. Fail to reject the null hypothesis that the slope equals zero
+C. Accept that age has no effect on turnout
+D. The relationship is not statistically significant
+
+ANSWER: A
+
+---
+
+QUESTION: A regression slope has a 95% confidence interval of [−0.3, +0.5]. What does this tell us about the null hypothesis that the slope equals zero?
+
+A. We reject the null hypothesis
+B. We fail to reject the null hypothesis
+C. The slope is definitely positive
+D. The slope is definitely zero
+
+ANSWER: B
+
+---
+
+QUESTION: A regression of support for a policy on income produces a slope of 0.02 with a p-value of 0.001. Using α = 0.05, what should we conclude?
+
+A. Fail to reject the null hypothesis
+B. Reject the null hypothesis
+C. Accept the null hypothesis
+D. The result is not statistically significant
+
+ANSWER: B
+
+---
+
+QUESTION: Which of the following would make a regression slope more likely to be statistically significant?
+
+A. A smaller sample size
+B. More scatter around the regression line
+C. A steeper slope (further from zero)
+D. Less spread in the independent variable
+
+ANSWER: C
+
+---
+
+QUESTION: What does an R-squared value of 0.45 mean?
+
+A. 45% of the variance in y is explained by x
+B. The slope equals 0.45
+C. 45% of observations lie on the regression line
+D. The correlation between x and y is 0.45
+
+ANSWER: A
+
+---
+
+QUESTION: A regression has an R-squared of 0.15. Which statement is correct?
+
+A. The regression is invalid because R-squared is too low
+B. The slope must be statistically insignificant
+C. 15% of the variance in y is explained by x
+D. The model is incorrectly specified
+
+ANSWER: C
+
+---
+
+QUESTION: Which statement about R-squared is correct?
+
+A. R-squared can take any value from negative infinity to positive infinity
+B. R-squared always falls between 0 and 1
+C. R-squared measures the strength of the causal relationship
+D. A higher R-squared always means the slope is more statistically significant
+
+ANSWER: B
+
+---
+
+QUESTION: A regression of health spending (dependent variable) on GDP (independent variable) has R-squared = 0.72 and a statistically significant slope. What can we conclude?
+
+A. GDP causes health spending to increase
+B. 72% of the variance in health spending is explained by GDP
+C. The relationship between GDP and health spending is definitely causal
+D. Health spending does not explain any variance in GDP
+
+ANSWER: B
+
+---
+
+QUESTION: Which statement correctly distinguishes between statistical significance and R-squared?
+
+A. Statistical significance tests whether the slope differs from zero; R-squared measures how much variance is explained
+B. R-squared tests whether the slope differs from zero; statistical significance measures variance explained
+C. They measure the same thing using different scales
+D. Statistical significance is only relevant when R-squared is above 0.5
+
+ANSWER: A
+
+---
+
+QUESTION: A researcher finds a statistically significant slope with p = 0.01 but R-squared = 0.08. Which interpretation is most accurate?
+
+A. The low R-squared proves the slope estimate is wrong
+B. There is strong evidence of a relationship, but other factors also matter
+C. The result contradicts itself and cannot be trusted
+D. Statistical significance is impossible with such a low R-squared
+
+ANSWER: B

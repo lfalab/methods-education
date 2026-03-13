@@ -1,0 +1,6 @@
+What does reverse causality mean?
+
+- The dependent variable may actually influence the independent variable
+- Two variables are measured in reverse order
+- The regression coefficient is negative
+- The independent variable is missing from the dataset

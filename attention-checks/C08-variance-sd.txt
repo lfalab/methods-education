@@ -1,0 +1,5 @@
+According to the video, what do variance and standard deviation help us describe?
+
+- How spread out the data are
+- The most frequent value in the data
+- Whether the data are categorical or numerical

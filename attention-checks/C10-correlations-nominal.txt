@@ -1,0 +1,5 @@
+According to the video, when both variables are nominal, what is the appropriate way to analyse their relationship?
+
+- Use a cross-tabulation
+- Compare means
+- Create a scatter plot

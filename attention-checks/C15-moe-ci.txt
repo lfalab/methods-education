@@ -1,0 +1,5 @@
+According to the video, what does a 95% confidence interval represent?
+
+- A range of values within which the true population parameter is likely to lie
+- The percentage of observations within one standard deviation
+- The range of values observed in the sample

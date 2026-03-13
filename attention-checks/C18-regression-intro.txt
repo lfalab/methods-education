@@ -1,0 +1,6 @@
+According to the video, what is the main purpose of regression analysis?
+
+- To estimate the relationship between a dependent variable and one or more independent variables
+- To calculate the standard deviation
+- To create histograms
+- To compare frequencies across categories

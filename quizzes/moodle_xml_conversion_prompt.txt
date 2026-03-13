@@ -1,0 +1,90 @@
+PROMPT FOR CONVERTING CANONICAL QUIZ TXT TO MOODLE XML
+
+You are converting a canonical quiz text file into a Moodle XML (multichoice) file that must import into Moodle/KEATS with no errors.
+
+==============================
+CONTEXT AND COMMON FAILURE MODES
+==============================
+Previous attempts failed because:
+- Moodle requires at least 2 answer choices per question.
+- Answer options were accidentally absorbed into the question stem.
+- HTML artefacts (e.g. <br>, numbering, inline letters) appeared in question text.
+- Wrapped option lines were mis-parsed.
+- <n> tags were used instead of <name> tags for question names.
+You must therefore parse the file defensively and validate before generating XML.
+
+==============================
+CANONICAL TEXT FILE FORMAT
+==============================
+Each question follows EXACTLY this structure:
+
+QUESTION: <question text, possibly spanning multiple lines>
+
+A. <option text>
+B. <option text>
+C. <option text>
+D. <option text>
+
+ANSWER: <single capital letter, e.g. A>
+
+Questions are separated by a line containing only:
+---
+
+Important notes:
+- Question text may span multiple lines.
+- Option text may wrap onto the next line; wrapped lines belong to the PRECEDING option.
+- Only lines beginning with A. B. C. D. (or A) B) etc.) define options.
+- Ignore any numbering that appears inside the question text.
+- Every question has exactly ONE correct answer.
+
+==============================
+REQUIRED PARSING RULES
+==============================
+1. Detect all QUESTION blocks separated by ---
+2. For each block:
+   - Extract the full question stem (before options).
+   - Extract options ONLY from valid option lines.
+   - Append wrapped lines to the previous option.
+   - Extract ANSWER letter.
+3. Validation (MANDATORY):
+   - At least 2 options per question.
+   - ANSWER letter must match one of the option letters.
+   - Abort and explain if any question fails validation.
+
+==============================
+MOODLE XML GENERATION RULES
+==============================
+For each question, generate:
+
+- <question type="multichoice">
+- single = true
+- shuffleanswers = true
+- answernumbering = abc
+- One correct answer with fraction="100"
+- All other answers with fraction="0"
+
+Additional requirements:
+- Preserve paragraph breaks using <p>...</p>
+- Do NOT include stray HTML, numbering prefixes, or option letters in the stem.
+- Give each question a stable name, e.g.:
+  W02_Q01, W02_Q02, ...
+
+==============================
+FINAL CHECK BEFORE OUTPUT
+==============================
+Before outputting the XML:
+- Confirm total number of questions parsed.
+- Confirm minimum number of answers per question >= 2.
+If any check fails, explain the issue instead of producing XML.
+
+==============================
+OUTPUT
+==============================
+- Output ONE valid Moodle XML file ready for import via:
+  Question bank → Import → Moodle XML
+- Do not include commentary inside the XML.
+- After the XML, briefly confirm:
+  - number of questions
+  - that the file is safe to import into Moodle/KEATS
+
+I will now upload the canonical .txt file.

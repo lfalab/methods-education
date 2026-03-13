@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <question type="multichoice">
+    <name><text>W04_Q01</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>If two datasets have the same mean but different standard deviations, what does this imply?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0">
+      <text><![CDATA[They have the same number of observations]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[They have the same maximum value]]></text>
+    </answer>
+    <answer fraction="100">
+      <text><![CDATA[They differ in how spread out the observations are]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[They are identical distributions]]></text>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W04_Q02</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Which statement about variance is correct?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0">
+      <text><![CDATA[It measures the centre of the distribution]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[It is expressed in the same units as the original variable]]></text>
+    </answer>
+    <answer fraction="100">
+      <text><![CDATA[It increases when observations are more spread out]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[It ignores the mean entirely]]></text>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W04_Q03</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Which measure of central tendency is most appropriate for describing an income distribution with extreme values?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0">
+      <text><![CDATA[Mean]]></text>
+    </answer>
+    <answer fraction="100">
+      <text><![CDATA[Median]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[Mode]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[Variance]]></text>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W04_Q04</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>What does the mean of a variable represent?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0">
+      <text><![CDATA[The most frequent value]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[The middle value when observations are ordered]]></text>
+    </answer>
+    <answer fraction="100">
+      <text><![CDATA[The arithmetic average of all values]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[The spread of the distribution]]></text>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W04_Q05</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Which measure of central tendency is most sensitive to extreme values?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0">
+      <text><![CDATA[Median]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[Mode]]></text>
+    </answer>
+    <answer fraction="100">
+      <text><![CDATA[Mean]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[They're all equally sensitive to extreme values]]></text>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W04_Q06</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>What information does the median provide?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0">
+      <text><![CDATA[The average distance between observations]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[The most common value]]></text>
+    </answer>
+    <answer fraction="100">
+      <text><![CDATA[The value that divides the distribution into two equal halves]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[The maximum value in the dataset]]></text>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W04_Q07</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Which measure describes the most frequent category or value in a dataset?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0">
+      <text><![CDATA[Mean]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[Median]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[Variance]]></text>
+    </answer>
+    <answer fraction="100">
+      <text><![CDATA[Mode]]></text>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W04_Q08</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>What does the variance measure?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0">
+      <text><![CDATA[The centre of a distribution]]></text>
+    </answer>
+    <answer fraction="100">
+      <text><![CDATA[The average squared deviation from the mean]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[The difference between the maximum and minimum values]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[The minimum value]]></text>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W04_Q09</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>What is the standard deviation?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0">
+      <text><![CDATA[The square of the variance]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[The median distance from the mean]]></text>
+    </answer>
+    <answer fraction="100">
+      <text><![CDATA[The square root of the variance]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[The maximum deviation from the mean]]></text>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W04_Q10</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>If all observations in a dataset are identical, what is the variance?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0">
+      <text><![CDATA[1]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[Equal to the mean]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[Undefined]]></text>
+    </answer>
+    <answer fraction="100">
+      <text><![CDATA[0]]></text>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W04_Q11</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Which statistic summarises the overall spread of the data around the mean?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0">
+      <text><![CDATA[Median]]></text>
+    </answer>
+    <answer fraction="100">
+      <text><![CDATA[Variance]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[Mode]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[Mean]]></text>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W04_Q12</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>What does a larger standard deviation indicate?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernnumbering>abc</answernnumbering>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0">
+      <text><![CDATA[Observations are more tightly clustered around the mean]]></text>
+    </answer>
+    <answer fraction="100">
+      <text><![CDATA[Observations are more spread out around the mean]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[The mean is larger]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[The dataset is symmetric]]></text>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W04_Q13</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Which measure of central tendency is most appropriate for nominal variables?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0">
+      <text><![CDATA[Mean]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[Median]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[Standard deviation]]></text>
+    </answer>
+    <answer fraction="100">
+      <text><![CDATA[Mode]]></text>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W04_Q14</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>If the standard deviation is zero, what must be true about the data?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0">
+      <text><![CDATA[The data are symmetric]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[The mean equals the median]]></text>
+    </answer>
+    <answer fraction="100">
+      <text><![CDATA[All observations take the same value]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[There are no outliers]]></text>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W04_Q15</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Which statement best describes what the standard deviation tells us?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0">
+      <text><![CDATA[It tells us the most frequent value in the data]]></text>
+    </answer>
+    <answer fraction="100">
+      <text><![CDATA[It tells us how spread out the data are around the mean]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[It tells us the minimum value in the dataset]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[It tells us whether the data are ordered]]></text>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W04_Q16</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Knowing the mean and standard deviation of a distribution allows us to:</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0">
+      <text><![CDATA[Identify the most frequent observation]]></text>
+    </answer>
+    <answer fraction="100">
+      <text><![CDATA[Determine whether an observation is unusual relative to the rest of the data]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[Rank observations from lowest to highest]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[Eliminate extreme values from the dataset]]></text>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W04_Q17</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Which statement best captures the main difference between measures of central tendency (eg, mean and median) and measures of spread (eg, variance and standard deviation)?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernnumbering>abc</answernnumbering>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0">
+      <text><![CDATA[Central tendency describes categories, while spread describes numbers]]></text>
+    </answer>
+    <answer fraction="100">
+      <text><![CDATA[Central tendency describes the centre of a distribution, while spread describes variability]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[Central tendency applies only to numerical data, while spread applies only to categorical data]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[Central tendency ignores extreme values, while spread removes them]]></text>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W04_Q18</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Which statement best describes the purpose of a bar chart?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0">
+      <text><![CDATA[To show the distribution of a continuous variable]]></text>
+    </answer>
+    <answer fraction="100">
+      <text><![CDATA[To compare frequencies or counts across categories]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[To display the relationship between two numerical variables]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[To show how a variable changes over time]]></text>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W04_Q19</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Which statement correctly distinguishes histograms from bar charts?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0">
+      <text><![CDATA[Histograms display categories, while bar charts display time series]]></text>
+    </answer>
+    <answer fraction="100">
+      <text><![CDATA[Histograms show the distribution of numerical data, while bar charts compare categories]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[Histograms are used for small datasets, while bar charts are used for large datasets]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[Histograms require a codebook, while bar charts do not]]></text>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>W04_Q20</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>In a histogram, what does the height of each bar represent?</p>]]></text>
+    </questiontext>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0">
+      <text><![CDATA[The value of the variable]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[The average of observations in the bin]]></text>
+    </answer>
+    <answer fraction="100">
+      <text><![CDATA[The number of observations within a range of values]]></text>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[The order of categories]]></text>
+    </answer>
+  </question>
+</quiz>

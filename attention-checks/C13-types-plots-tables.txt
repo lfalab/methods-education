@@ -1,0 +1,5 @@
+According to the video, which of the following combinations of variable types should be analysed using a scatterplot?
+
+- Numeric + Numeric
+- Nominal + Nominal
+- Nominal + Numeric

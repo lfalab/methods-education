@@ -1,0 +1,6 @@
+What does the slope coefficient in a regression model represent?
+
+- The change in the dependent variable associated with a one-unit increase in the independent variable
+- The average value of the dependent variable
+- The total number of observations
+- The proportion of variance explained

@@ -1,0 +1,6 @@
+According to the video, when one variable is nominal and the other is numeric, what is the appropriate way to analyse their relationship?
+
+- Compare means across the categories
+- Create a histogram of both variables
+- Create a scatter plot
+- Use a cross-tabulation

@@ -1,0 +1,7 @@
+"How did countries' health care systems affect their abilities to mitigate the impact of the Covid-19 pandemic?"
+
+What is the unit of analysis?
+
+- Country
+- Disease
+- Health care system

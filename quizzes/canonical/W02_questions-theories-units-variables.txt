@@ -1,0 +1,323 @@
+QUESTION: Would you classify the following question as a good empirical research question, and if not, why?
+
+"Should the United Nations intervene in countries that violate human rights?"
+
+A. Yes, this is a good empirical research question
+B. No, because it’s a hypothetical question
+C. No, because it’s a normative question
+D. No, because it’s a factual question
+
+ANSWER: C
+
+---
+
+QUESTION: Would you classify the following question as a good empirical research question, and if not, why?
+
+"Does China recognise Taiwan as an independent country?"
+
+A. Yes, this is a good empirical research question
+B. No, because it’s a hypothetical question
+C. No, because it’s a normative question
+D. No, because it’s a factual question
+
+ANSWER: D
+
+---
+
+QUESTION: Would you classify the following question as a good empirical research question, and if not, why?
+
+"If the UK became a dictatorship, how many people would protest?"
+
+A. Yes, this is a good empirical research question
+B. No, because it’s a hypothetical question
+C. No, because it’s a normative question
+D. No, because it’s a factual question
+
+ANSWER: B
+
+---
+
+QUESTION: Would you classify the following question as a good empirical research question, and if not, why?
+
+"Should the United States get rid of the Electoral College?"
+
+A. Yes, this is a good empirical research question
+B. No, because it’s a hypothetical question
+C. No, because it’s a normative question
+D. No, because it’s a factual question
+
+ANSWER: C
+
+---
+
+QUESTION: Would you classify the following question as a good empirical research question, and if not, why?
+
+"Is gun ownership for personal protection a fundamental human right?"
+
+A. Yes, this is a good empirical research question
+B. No, because it’s a hypothetical question
+C. No, because it’s a normative question
+D. No, because it’s a factual question
+
+ANSWER: C
+
+---
+
+QUESTION: Would you classify the following question as a good empirical research question, and if not, why?
+
+"Did the US-led invasion of Iraq in the early 2000s lead to Saddam Hussein losing power?"
+
+A. Yes, this is a good empirical research question
+B. No, because it’s a hypothetical question
+C. No, because it’s a normative question
+D. No, because it’s a factual question
+
+ANSWER: D
+
+---
+
+QUESTION: Would you classify the following question as a good empirical research question, and if not, why?
+
+"Are democratic institutions conducive to faster economic growth than autocratic institutions?"
+
+A. Yes, this is a good empirical research question
+B. No, because it’s a hypothetical question
+C. No, because it’s a normative question
+D. No, because it’s a factual question
+
+ANSWER: A
+
+---
+
+QUESTION: Would you classify the following question as a good empirical research question, and if not, why?
+
+"Do economic recessions make political polarisation more likely?"
+
+A. Yes, this is a good empirical research question
+B. No, because it’s a hypothetical question
+C. No, because it’s a normative question
+D. No, because it’s a factual question
+
+ANSWER: A
+
+---
+
+QUESTION: Please choose the statement that most accurately describes this research question:
+
+"How much of the UK's wealth is held by the top 1% income earners?"
+
+A. This is a descriptive question about a distribution
+B. This is a descriptive question about a trend
+C. This is a descriptive question about a correlation
+D. This is a causal question
+
+ANSWER: A
+
+---
+
+QUESTION: Please choose the statement that most accurately describes this research question:
+
+"Are voters in the UK becoming more right-leaning?"
+
+A. This is a descriptive question about a distribution
+B. This is a descriptive question about a trend
+C. This is a descriptive question about a correlation
+D. This is a causal question
+
+ANSWER: B
+
+---
+
+QUESTION: Please choose the statement that most accurately describes this research question:
+
+"Do married people report higher life satisfaction?"
+
+A. This is a descriptive question about a distribution
+B. This is a descriptive question about a trend
+C. This is a descriptive question about a correlation
+D. This is a causal question
+
+ANSWER: C
+
+---
+
+QUESTION: Please choose the statement that most accurately describes this research question:
+
+"Do anti-smoking laws lead to reductions in health care costs?"
+
+A. This is a descriptive question about a distribution
+B. This is a descriptive question about a trend
+C. This is a descriptive question about a correlation
+D. This is a causal question
+
+ANSWER: D
+
+---
+
+QUESTION: Please choose the statement that most accurately describes this research question:
+
+"How frequent were anti-war protests during the US-Vietnam War?"
+
+A. This is a descriptive question about a distribution
+B. This is a descriptive question about a trend
+C. This is a descriptive question about a correlation
+D. This is a causal question
+
+ANSWER: A
+
+---
+
+QUESTION: Please choose the statement that most accurately describes this research question:
+
+"Is international tax evasion increasing, decreasing, or staying the same?"
+
+A. This is a descriptive question about a distribution
+B. This is a descriptive question about a trend
+C. This is a descriptive question about a correlation
+D. This is a causal question
+
+ANSWER: B
+
+---
+
+QUESTION: Please choose the statement that most accurately describes this research question:
+
+"Are UK voters becoming more concerned with the costs of housing?"
+
+A. This is a descriptive question about a distribution
+B. This is a descriptive question about a trend
+C. This is a descriptive question about a correlation
+D. This is a causal question
+
+ANSWER: B
+
+---
+
+QUESTION: Please choose the statement that most accurately describes this research question:
+
+"Is alcohol abuse more frequent in rural communities than in urban centres?"
+
+A. This is a descriptive question about a distribution
+B. This is a descriptive question about a trend
+C. This is a descriptive question about a correlation
+D. This is a causal question
+
+ANSWER: C
+
+---
+
+QUESTION: Please choose the statement that most accurately describes this research question:
+
+"Does increasing teachers' salaries improve student performance?"
+
+A. This is a descriptive question about a distribution
+B. This is a descriptive question about a trend
+C. This is a descriptive question about a correlation
+D. This is a causal question
+
+ANSWER: D
+
+---
+
+QUESTION: Consider the following hypothesis:
+
+"Building larger railroad networks increases the volume of a country's exports."
+
+What is the unit of analysis? What is the independent variable? What is the dependent variable?
+
+A. Unit of analysis: country; Independent variable: size of the railroad network; Dependent variable: volume of exports
+B. Unit of analysis: railroad; Independent variable: trade; Dependent variable: the country
+C. Unit of analysis: trade; Independent variable: volume of exports; Dependent variable: the country
+D. Unit of analysis: country; Independent variable: trade; Dependent variable: railroad network
+
+ANSWER: A
+
+---
+
+QUESTION: Consider the following hypothesis:
+
+"Spending more time on social media makes people less happy."
+
+What is the unit of analysis? What is the independent variable? What is the dependent variable?
+
+A. Unit of analysis: person; Independent variable: time spent on social media; Dependent variable: happiness
+B. Unit of analysis: happiness; Independent variable: people; Dependent variable: social media
+C. Unit of analysis: Instagram; Independent variable: happiness; Dependent variable: well-being
+D. Unit of analysis: country; Independent variable: laws concerning social media use; Dependent variable: happiness
+
+ANSWER: A
+
+---
+
+QUESTION: Consider the following hypothesis:
+
+"Investing more in education leads to decreases in countries' levels of income inequality."
+
+What is the unit of analysis? What is the independent variable? What is the dependent variable?
+
+A. Unit of analysis: country; Independent variable: investment in education; Dependent variable: income inequality
+B. Unit of analysis: individual; Independent variable: income; Dependent variable: education
+C. Unit of analysis: inequality; Independent variable: education; Dependent variable: country
+D. Unit of analysis: school; Independent variable: public spending; Dependent variable: inequality
+
+ANSWER: A
+
+---
+
+QUESTION: Consider the following hypothesis:
+
+"Attending lectures regularly improves students' exam scores."
+
+What is the unit of analysis? What is the independent variable? What is the dependent variable?
+
+A. Unit of analysis: student; Independent variable: lecture attendance; Dependent variable: exam score
+B. Unit of analysis: lecture; Independent variable: teaching quality; Dependent variable: grades
+C. Unit of analysis: exam; Independent variable: student ability; Dependent variable: attendance
+D. Unit of analysis: university; Independent variable: attendance policy; Dependent variable: exam results
+
+ANSWER: A
+
+---
+
+QUESTION: Consider the following hypothesis:
+
+"Providing free school meals improves students’ academic performance."
+
+What is the unit of analysis? What is the independent variable? What is the dependent variable?
+
+A. Unit of analysis: student; Independent variable: access to free school meals; Dependent variable: academic performance
+B. Unit of analysis: school; Independent variable: student motivation; Dependent variable: school attendance
+C. Unit of analysis: student; Independent variable: education spending; Dependent variable: nutrition levels
+D. Unit of analysis: school; Independent variable: teachers’ quality; Dependent variable: exam difficulty
+
+ANSWER: A
+
+---
+
+QUESTION: Consider the following hypothesis:
+
+"Exposure to political misinformation on social media increases political polarisation."
+
+What is the independent variable? What is the dependent variable?
+
+A. Independent variable: exposure to political misinformation; Dependent variable: political polarisation
+B. Independent variable: political ideology; Dependent variable: social media use
+C. Independent variable: polarisation; Dependent variable: trust in media
+D. Independent variable: internet access; Dependent variable: political participation
+
+ANSWER: A
+
+---
+
+QUESTION: Consider the following hypothesis:
+
+"Receiving targeted job training increases workers’ earnings over time."
+
+What is the unit of analysis? What is the independent variable? What is the dependent variable?
+
+A. Unit of analysis: worker; Independent variable: participation in job training; Dependent variable: individual earnings
+B. Unit of analysis: school; Independent variable: income level; Dependent variable: education policy
+C. Unit of analysis: worker; Independent variable: labor market conditions; Dependent variable: employment rates
+D. Unit of analysis: school; Independent variable: years of experience; Dependent variable: training availability
+
+ANSWER: A

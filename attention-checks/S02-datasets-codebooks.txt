@@ -1,0 +1,21 @@
+What type of Variable is age?
+
+- Ratio
+- Nominal
+- Ordinal
+- Interval
+
+What type of Variable is ideology?
+
+- Interval
+- Ratio
+- Nominal
+- Ordinal
+
+What type of Variable is the level of education?
+
+- Ordinal
+- Interval
+- Ratio
+- Nominal
+

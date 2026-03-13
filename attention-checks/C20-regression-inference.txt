@@ -1,0 +1,6 @@
+When testing whether a regression coefficient equals zero, what should you check in the confidence interval?
+
+- Whether the interval includes 0
+- Whether the interval includes the mean of the dependent variable
+- Whether the interval is symmetric
+- Whether the interval is narrow

@@ -1,0 +1,217 @@
+QUESTION: If two datasets have the same mean but different standard deviations, what does this imply?
+
+A. They have the same number of observations
+B. They have the same maximum value
+C. They differ in how spread out the observations are
+D. They are identical distributions
+
+ANSWER: C
+
+---
+
+QUESTION: Which statement about variance is correct?
+
+A. It measures the centre of the distribution
+B. It is expressed in the same units as the original variable
+C. It increases when observations are more spread out
+D. It ignores the mean entirely
+
+ANSWER: C
+
+---
+
+QUESTION: Which measure of central tendency is most appropriate for describing an income distribution with extreme values?
+
+A. Mean
+B. Median
+C. Mode
+D. Variance
+
+ANSWER: B
+
+---
+
+QUESTION: What does the mean of a variable represent?
+
+A. The most frequent value
+B. The middle value when observations are ordered
+C. The arithmetic average of all values
+D. The spread of the distribution
+
+ANSWER: C
+
+---
+
+QUESTION: Which measure of central tendency is most sensitive to extreme values?
+
+A. Median
+B. Mode
+C. Mean
+D. They're all equally sensitive to extreme values
+
+ANSWER: C
+
+---
+
+QUESTION: What information does the median provide?
+
+A. The average distance between observations
+B. The most common value
+C. The value that divides the distribution into two equal halves
+D. The maximum value in the dataset
+
+ANSWER: C
+
+---
+
+QUESTION: Which measure describes the most frequent category or value in a dataset?
+
+A. Mean
+B. Median
+C. Variance
+D. Mode
+
+ANSWER: D
+
+---
+
+QUESTION: What does the variance measure?
+
+A. The centre of a distribution
+B. The average squared deviation from the mean
+C. The difference between the maximum and minimum values
+D. The minimum value
+
+ANSWER: B
+
+---
+
+QUESTION: What is the standard deviation?
+
+A. The square of the variance
+B. The median distance from the mean
+C. The square root of the variance
+D. The maximum deviation from the mean
+
+ANSWER: C
+
+---
+
+QUESTION: If all observations in a dataset are identical, what is the variance?
+
+A. 1
+B. Equal to the mean
+C. Undefined
+D. 0
+
+ANSWER: D
+
+---
+
+QUESTION: Which statistic summarises the overall spread of the data around the mean?
+
+A. Median
+B. Variance
+C. Mode
+D. Mean
+
+ANSWER: B
+
+---
+
+QUESTION: What does a larger standard deviation indicate?
+
+A. Observations are more tightly clustered around the mean
+B. Observations are more spread out around the mean
+C. The mean is larger
+D. The dataset is symmetric
+
+ANSWER: B
+
+---
+
+QUESTION: Which measure of central tendency is most appropriate for nominal variables?
+
+A. Mean
+B. Median
+C. Standard deviation
+D. Mode
+
+ANSWER: D
+
+---
+
+QUESTION: If the standard deviation is zero, what must be true about the data?
+
+A. The data are symmetric
+B. The mean equals the median
+C. All observations take the same value
+D. There are no outliers
+
+ANSWER: C
+
+---
+
+QUESTION: Which statement best describes what the standard deviation tells us?
+
+A. It tells us the most frequent value in the data
+B. It tells us how spread out the data are around the mean
+C. It tells us the minimum value in the dataset
+D. It tells us whether the data are ordered
+
+ANSWER: B
+
+---
+
+QUESTION: Knowing the mean and standard deviation of a distribution allows us to:
+
+A. Identify the most frequent observation
+B. Determine whether an observation is unusual relative to the rest of the data
+C. Rank observations from lowest to highest
+D. Eliminate extreme values from the dataset
+
+ANSWER: B
+
+---
+
+QUESTION: Which statement best captures the main difference between measures of central tendency (eg, mean and median) and measures of spread (eg, variance and standard deviation)?
+
+A. Central tendency describes categories, while spread describes numbers
+B. Central tendency describes the centre of a distribution, while spread describes variability
+C. Central tendency applies only to numerical data, while spread applies only to categorical data
+D. Central tendency ignores extreme values, while spread removes them
+
+ANSWER: B
+
+---
+
+QUESTION: Which statement best describes the purpose of a bar chart?
+
+A. To show the distribution of a continuous variable
+B. To compare frequencies or counts across categories
+C. To display the relationship between two numerical variables
+D. To show how a variable changes over time
+
+ANSWER: B
+
+---
+
+QUESTION: Which statement correctly distinguishes histograms from bar charts?
+
+A. Histograms display categories, while bar charts display time series
+B. Histograms show the distribution of numerical data, while bar charts compare categories
+C. Histograms are used for small datasets, while bar charts are used for large datasets
+D. Histograms require a codebook, while bar charts do not
+
+ANSWER: B
+
+---
+
+QUESTION: In a histogram, what does the height of each bar represent?
+
+A. The value of the variable
+B. The average of observations in the bin
+C. The number of observations within a range of values
+D. The order of categories
+
+ANSWER: C

@@ -1,0 +1,5 @@
+According to the video, which type of graph is appropriate for displaying the distribution of a ratio variable?
+
+- Histogram
+- Bar Chart
+- Line chart
