@@ -1,0 +1,61 @@
+---
+title: "PS2 Workshop 4: Writing Up and Reviewing the Do-File"
+subtitle: "Statistics for Political Science — Week 11"
+author: "Leonardo Falabella"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    theme: default
+---
+
+## Introduction
+
+This is the final PS2 workshop session (Week 11). Each workshop gives you one hour of structured work time to make progress on your Problem Set 2 submission, with support from your seminar leader.
+
+Today's goal is to assemble a complete first draft of your report and clean up your do-file for submission. If you have followed the scaffold through Weeks 8–10, you should arrive at this session with all the analytical work done and only the writing-up remaining.
+
+You will need the [PS2 instructions](https://emckclac-my.sharepoint.com/:w:/g/personal/k2588471_kcl_ac_uk/IQBi2GOzRRuhRZ_CuKGFQkxxAb9qYjIkeDR-dwKAfe-2Muo?e=dQPCaW), the [model answer](https://emckclac-my.sharepoint.com/:w:/g/personal/k2588471_kcl_ac_uk/IQAFECuB8PAkTY1SYwdKD5lYAU_4xlmM9elWyHYXMieTFu4?e=Da3UAy), and the [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE) (which contains the datasets, codebooks, and do-files).
+
+## Task 1: Set up the report structure
+
+Open a Word document and set up the five section headings from the PS2 instructions. Having the structure in place before you start writing makes it easier to draft each section without losing track of the overall shape.
+
+## Task 2: Write up each section
+
+Write up each section using the output, notes, and draft sentences you have produced in previous workshops. Refer to the model answer for the expected level of detail and tone.
+
+Work through the sections in order. If you get stuck on one section, move on to the next and come back to it.
+
+## Task 3: Insert tables and figures
+
+Insert your tables and figures into the report. Make sure that:
+
+- Figures have clear titles and axis labels.
+- Tables are formatted consistently.
+- Each figure or table is referenced in the text.
+
+## Task 4: Clean up your do-file
+
+Check that your do-file runs from top to bottom without errors and reproduces all the tables and figures in your report. Make sure your do-file includes:
+
+- A header comment block with your name, date, and a brief description of the analysis.
+- Comments explaining what each section of code does.
+- No extraneous commands left over from exploration.
+
+Run the do-file one final time from start to finish to confirm it works.
+
+## Task 5: Check the word count and submission details
+
+Check the word count. The limit is 1,500 words excluding tables, figures, and references. The model answer is well under this — aim for substance, not length.
+
+If working in a pair, confirm that your partner's name and candidate number appear on the title page of your report, and that your written interpretations are independently written.
+
+## By the end of today you should have
+
+- A complete first draft of the report with all five sections.
+- All tables and figures inserted.
+- A clean do-file with header and comments that runs without errors.
+
+Having a complete first draft a week before the deadline leaves time for revision outside class. If you are behind, use the remaining time to catch up with support from your seminar leader.

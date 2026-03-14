@@ -1,0 +1,66 @@
+---
+title: "PS2 Workshop 3: Interpretation and Discussion"
+subtitle: "Statistics for Political Science — Week 10"
+author: "Leonardo Falabella"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    theme: default
+---
+
+## Introduction
+
+This is the third of four PS2 workshop sessions (Weeks 8–11). Each workshop gives you one hour of structured work time to make progress on your Problem Set 2 submission, with support from your seminar leader.
+
+Today's goal is to draft your interpretation of the hypothesis test result and to write the Discussion and Limitations section of your report. By the end of this session, all the intellectual work for your report should be done — next week is about assembling it.
+
+You will need the [PS2 instructions](https://emckclac-my.sharepoint.com/:w:/g/personal/k2588471_kcl_ac_uk/IQBi2GOzRRuhRZ_CuKGFQkxxAb9qYjIkeDR-dwKAfe-2Muo?e=dQPCaW), the [model answer](https://emckclac-my.sharepoint.com/:w:/g/personal/k2588471_kcl_ac_uk/IQAFECuB8PAkTY1SYwdKD5lYAU_4xlmM9elWyHYXMieTFu4?e=Da3UAy), and the [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE) (which contains the datasets, codebooks, and do-files).
+
+## Task 1: Interpret your hypothesis test result
+
+Write a short paragraph interpreting your hypothesis test result in plain language. Your interpretation should:
+
+- State whether you reject or fail to reject the null hypothesis.
+- Explain what this means in substantive terms — what does the result tell us about the relationship between your two variables?
+- If you fail to reject the null, remember: this is not a problem. A null result is a valid finding.
+
+Refer to the model answer for the expected level of detail and tone.
+
+## Task 2: Think about causality
+
+Could the relationship between your two variables run in both directions? Write one or two sentences about the possible direction(s) of causality.
+
+For example, if you found a correlation between internet access and press freedom, could higher press freedom also lead to higher internet usage? Think about whether reverse causality is plausible for your specific variable pair.
+
+## Task 3: Think about confounding
+
+Is there a third variable that could partly explain the association you observe (or the lack of one)? Write one or two sentences identifying a plausible confounder and explaining how it could affect the relationship.
+
+A good confounder is a variable that is plausibly related to **both** your independent and dependent variables. Be specific — name the variable and explain the mechanism.
+
+## Task 4: Note limitations
+
+Note any limitations of your analysis. Consider:
+
+- **Sample size:** Is the number of observations small enough to affect the reliability of your estimates?
+- **Measurement:** Are the variables measured in a way that accurately captures the concept you are interested in?
+- **Observational design:** Your analysis is correlational, not experimental. What does this mean for causal claims?
+- **Missing data:** Are there many missing observations? Could the pattern of missingness introduce bias?
+
+If you are using the BES without survey weights, draft the brief acknowledgement sentence required by the PS2 instructions.
+
+## Task 5: Confirm your Stata work is complete
+
+Your do-file should now reproduce everything you need for the report. Run it from top to bottom and confirm that it executes without errors and produces all the tables and figures you plan to include.
+
+If anything is missing or broken, fix it now — next week's workshop assumes the Stata work is finished.
+
+## By the end of today you should have
+
+- A written interpretation of your test result (draft quality is fine).
+- Notes or draft sentences on causality, confounding, and limitations.
+- All Stata work complete: your do-file should now reproduce everything you need for the report.
+
+If you have reached these milestones, you are on track. Next week's workshop will focus on assembling the final report and cleaning up the do-file for submission.

@@ -48,13 +48,16 @@ These contain teaching material and are safe to edit.
 
 - `reference/` — reference material and project metadata
 
-Important file:
+Important files:
 
 - `reference/videos_metadata.csv`
+- `reference/activities_metadata.csv`
 
-This file is the **master metadata table for lecture videos and slide decks**.
+These files are the **master metadata tables** for lecture videos/slide decks and class activities respectively.
 
-Claude may **read this file** to retrieve titles or ordering information, but must **never modify it unless explicitly instructed**.
+Claude may **read these files** to retrieve titles or ordering information.
+
+Claude should **update `activities_metadata.csv`** when creating, modifying, or deleting activity files in `activities/`, to keep the metadata in sync with the content. Claude must **not modify `videos_metadata.csv`** unless explicitly instructed.
 
 Claude may create or edit `.qmd` files inside content directories.
 
@@ -95,6 +98,8 @@ Claude may read these files but must not modify them unless explicitly instructe
 - `about.qmd`
 - `methods-education.Rproj`
 - `reference/videos_metadata.csv`
+
+Note: `reference/activities_metadata.csv` is **not** a protected file. Claude should update it when creating or modifying activity files to keep metadata in sync.
 
 ---
 

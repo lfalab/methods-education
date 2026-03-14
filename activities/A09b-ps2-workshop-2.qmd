@@ -1,0 +1,67 @@
+---
+title: "PS2 Workshop 2: Bivariate Analysis and Hypothesis Test"
+subtitle: "Statistics for Political Science — Week 9"
+author: "Leonardo Falabella"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    theme: default
+---
+
+## Introduction
+
+This is the second of four PS2 workshop sessions (Weeks 8–11). Each workshop gives you one hour of structured work time to make progress on your Problem Set 2 submission, with support from your seminar leader.
+
+Today's goal is to produce the bivariate visualisation for your variable pair, run the hypothesis test, and record the key outputs. By the end of this session you should have all the Stata output you need for your report.
+
+You will need the [PS2 instructions](https://emckclac-my.sharepoint.com/:w:/g/personal/k2588471_kcl_ac_uk/IQBi2GOzRRuhRZ_CuKGFQkxxAb9qYjIkeDR-dwKAfe-2Muo?e=dQPCaW), the [model answer](https://emckclac-my.sharepoint.com/:w:/g/personal/k2588471_kcl_ac_uk/IQAFECuB8PAkTY1SYwdKD5lYAU_4xlmM9elWyHYXMieTFu4?e=Da3UAy), and the [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE) (which contains the datasets, codebooks, and do-files).
+
+## Task 1: Produce the bivariate visualisation
+
+Produce the appropriate bivariate visualisation for your variable pair, using the decision rule table in the PS2 instructions:
+
+- **Both nominal** → bivariate frequency chart
+- **One nominal, one numeric** → bar chart of means
+- **Both numeric** → scatterplot with regression line
+
+Make sure your chart has clear axis labels and a title. Compare your output with the model answer to check that the level of presentation is appropriate.
+
+## Task 2: Formulate your research question and hypotheses
+
+Write down the following in plain language — you will use these directly in your report:
+
+1. **Research question:** a clear question about the relationship between your two variables.
+2. **Directional hypothesis:** a statement predicting the direction of the relationship.
+3. **Null hypothesis:** a statement of no relationship or no difference.
+
+## Task 3: Run the hypothesis test
+
+Run the appropriate hypothesis test in Stata, based on the decision rule table:
+
+- **Both nominal** → difference in proportions (`prtest`)
+- **One nominal, one numeric** → difference in means (`ttest`)
+- **Both numeric** → bivariate regression (`regress`)
+
+Record the key outputs from the Stata results:
+
+- The estimated difference or coefficient
+- The 95% confidence interval
+- The p-value
+- Whether you reject or fail to reject the null hypothesis at the 95% confidence level
+
+## Task 4: Update your do-file
+
+Add all bivariate commands to your do-file, with comments explaining what each section does. Your do-file should now reproduce both the univariate output from last week and the bivariate output from today.
+
+Test the do-file by running it from top to bottom. It should execute without errors.
+
+## By the end of today you should have
+
+- A bivariate visualisation produced in Stata.
+- A hypothesis test run, with key outputs recorded.
+- A written statement of your research question, hypothesis, and null hypothesis.
+- A do-file that reproduces all univariate and bivariate output.
+
+If you have reached these milestones, your Stata work is largely complete. Next week's workshop will focus on interpreting your results and drafting the discussion section of your report.
