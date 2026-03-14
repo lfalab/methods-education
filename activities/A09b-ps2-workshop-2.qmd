@@ -18,7 +18,42 @@ Today's goal is to produce the bivariate visualisation for your variable pair, r
 
 You will need the [PS2 instructions](https://emckclac-my.sharepoint.com/:w:/g/personal/k2588471_kcl_ac_uk/IQBi2GOzRRuhRZ_CuKGFQkxxAb9qYjIkeDR-dwKAfe-2Muo?e=dQPCaW), the [model answer](https://emckclac-my.sharepoint.com/:w:/g/personal/k2588471_kcl_ac_uk/IQAFECuB8PAkTY1SYwdKD5lYAU_4xlmM9elWyHYXMieTFu4?e=Da3UAy), and the [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE) (which contains the datasets, codebooks, and do-files).
 
-## Task 1: Produce the bivariate visualisation
+## Task 1: Check whether your variables need preparation
+
+Before producing any bivariate output, check whether your variables need recoding or cleaning. Not every analysis requires data preparation, but some do — and running a test on unprepared data can produce incorrect results.
+
+Review the [Preparing Data in Stata](../slides/videos-stata/preparing-stata.html) page for a walkthrough of common preparation steps. The three operations most relevant to PS2 are:
+
+**Recoding invalid values to missing.** Some datasets encode missing responses as negative numbers. These must be recoded to missing (`.`) before analysis, otherwise Stata will treat them as real values. For example:
+
+```stata
+replace age = . if age < 0
+```
+
+**Dropping observations to restrict the sample.** If your analysis focuses on a specific subgroup, you may need to remove observations outside that group. For example, to keep only Mail and Telegraph readers:
+
+```stata
+keep if k03 == 7 | k03 == 13
+```
+
+**Generating a binary variable.** If you need to reclassify a variable with many categories into two groups, you can generate a new binary variable. For example, to create a variable that distinguishes Reform voters from all other voters:
+
+```stata
+gen voted_reform = (b02 == 8) if b02 != .
+label define reform_lbl 1 "Reform" 0 "Another Party"
+label values voted_reform reform_lbl
+```
+
+**Important:** If your analysis involves a difference in proportions test (`prtest`) or a difference in means test (`ttest`), the nominal variable used to define the two groups **must be binary** — it must have exactly two categories. If your nominal variable has more than two categories, you have two options:
+
+1. **Drop observations** to focus on the two groups you want to compare (using `drop if` or `keep if`).
+2. **Recode** the variable into a binary variable that groups categories together (using `generate` with a logical statement, as shown above).
+
+Decide which approach makes sense for your research question. If your variables are already clean and in the right format, you can skip this step — but make sure you have checked.
+
+------------------------------------------------------------------------
+
+## Task 2: Produce the bivariate visualisation
 
 Produce the appropriate bivariate visualisation for your variable pair, using the decision rule table in the PS2 instructions:
 
@@ -28,7 +63,7 @@ Produce the appropriate bivariate visualisation for your variable pair, using th
 
 Make sure your chart has clear axis labels and a title. Compare your output with the model answer to check that the level of presentation is appropriate.
 
-## Task 2: Formulate your research question and hypotheses
+## Task 3: Formulate your research question and hypotheses
 
 Write down the following in plain language — you will use these directly in your report:
 
@@ -36,7 +71,7 @@ Write down the following in plain language — you will use these directly in yo
 2. **Directional hypothesis:** a statement predicting the direction of the relationship.
 3. **Null hypothesis:** a statement of no relationship or no difference.
 
-## Task 3: Run the hypothesis test
+## Task 4: Run the hypothesis test
 
 Run the appropriate hypothesis test in Stata, based on the decision rule table:
 
@@ -51,9 +86,9 @@ Record the key outputs from the Stata results:
 - The p-value
 - Whether you reject or fail to reject the null hypothesis at the 95% confidence level
 
-## Task 4: Update your do-file
+## Task 5: Update your do-file
 
-Add all bivariate commands to your do-file, with comments explaining what each section does. Your do-file should now reproduce both the univariate output from last week and the bivariate output from today.
+Add all bivariate commands to your do-file, with comments explaining what each section does. If you added any data preparation commands in Task 1, make sure those appear in the do-file **before** the bivariate commands. Your do-file should now reproduce both the univariate output from last week and the bivariate output from today.
 
 Test the do-file by running it from top to bottom. It should execute without errors.
 

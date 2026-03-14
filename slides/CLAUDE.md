@@ -74,6 +74,62 @@ Stata video slides:
 
 ---
 
+# Slide Deck Preparation Guidelines
+
+These rules apply whenever Claude is asked to draft or revise a slide deck.
+
+## Slide Density Constraints
+
+These constraints are non-negotiable and apply to all slide families.
+
+- Maximum 3 bullet points per slide (4 only if absolutely necessary).
+- Maximum 10–12 words per bullet.
+- No paragraph-style prose.
+- No multi-sentence bullets.
+- If a slide feels crowded, split it into two slides.
+- Slides are scaffolding for spoken narration, not self-contained explanations.
+
+## C-prefix (Concept Video) Structure and Approach
+
+The standard slide sequence for concept videos is:
+
+1. Title slide
+2. "You will learn to…" slide
+3. Concept development slides
+4. Recap slide
+5. "Why This Matters" slide
+
+Pedagogical approach:
+
+- Emphasise intuition first, formalism second.
+- Avoid symbolic overload early in the deck.
+- Keep derivations minimal unless explicitly required.
+- Do not over-explain or anticipate every student confusion in slide text.
+- Err on the side of brevity rather than completeness.
+- Maintain continuity with previous weeks.
+
+## S-prefix (Stata Video) Approach
+
+- Procedural, step-by-step walkthrough.
+- Code blocks should be concise.
+- Interpretation delivered in short prompts, not paragraphs.
+- No statistical theory exposition — save that for C-videos.
+
+## Source Hierarchy for Drafting
+
+When preparing any slide deck:
+
+1. `.qmd` template files determine structure and formatting.
+2. Learning goals (from Excel metadata or explicit instructions) determine scope.
+3. Transcripts and prior slides are content references only — do not copy structure from them.
+
+## Language Notes
+
+- Do not describe randomised experiments as the "gold standard".
+- Empirical examples should remain consistent across related videos in a sequence.
+
+---
+
 # Video Embedding
 
 Lecture videos are embedded directly in slide pages using the full YouTube embed code copied from YouTube.
