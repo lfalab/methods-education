@@ -80,14 +80,19 @@ These rules apply whenever Claude is asked to draft or revise a slide deck.
 
 ## Slide Density Constraints
 
-These constraints are non-negotiable and apply to all slide families.
+**These are absolute rules. There are no exceptions, no mitigating circumstances, and no excuses.**
 
-- Maximum 3 bullet points per slide (4 only if absolutely necessary).
+- **NEVER more than 3 bullet points per slide.** Adding a fourth bullet point is embarrassing and will always be wrong. If content does not fit in 3 bullets, split it into two slides.
 - Maximum 10–12 words per bullet.
 - No paragraph-style prose.
 - No multi-sentence bullets.
-- If a slide feels crowded, split it into two slides.
 - Slides are scaffolding for spoken narration, not self-contained explanations.
+
+## Punctuation Rules
+
+**These are absolute rules. There are no exceptions.**
+
+- **NEVER use em dashes (—) in slide text.** Use a comma, semicolon, colon, or full stop instead. Em dashes are banned from all slide content without exception.
 
 ## C-prefix (Concept Video) Structure and Approach
 
@@ -113,7 +118,7 @@ Pedagogical approach:
 - Procedural, step-by-step walkthrough.
 - Code blocks should be concise.
 - Interpretation delivered in short prompts, not paragraphs.
-- No statistical theory exposition — save that for C-videos.
+- No statistical theory exposition; save that for C-videos.
 
 ## Source Hierarchy for Drafting
 
@@ -121,7 +126,7 @@ When preparing any slide deck:
 
 1. `.qmd` template files determine structure and formatting.
 2. Learning goals (from Excel metadata or explicit instructions) determine scope.
-3. Transcripts and prior slides are content references only — do not copy structure from them.
+3. Transcripts and prior slides are content references only; do not copy structure from them.
 
 ## Language Notes
 

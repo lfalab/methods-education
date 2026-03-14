@@ -84,6 +84,9 @@ website:
             - slides/videos-concepts/C23-reverse-causality.qmd
             - slides/videos-concepts/C24-random-assignment.qmd
             - slides/videos-stata/S10-preparing-stata.qmd
+            - slides/lectures/W09-confounding.qmd
+            - activities/A09a-confounding-reverse.qmd
+            - activities/A09b-ps2-workshop-2.qmd
 
 
 format:

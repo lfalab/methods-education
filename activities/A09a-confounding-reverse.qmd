@@ -1,0 +1,157 @@
+---
+title: "Seminar Activity: Confounding Variables and Reverse Causality"
+subtitle: "Statistics for Political Science — Week 9"
+author: "Leonardo Falabella"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    theme: default
+---
+
+## Introduction
+
+The concept videos for this week introduced two reasons why a correlation between X and Y may not reflect a causal relationship from X to Y.
+
+**Confounding variables.** A confounding variable Z affects both X and Y but is not caused by X. It creates a spurious correlation: X and Y move together not because one causes the other, but because both are driven by Z. In the videos, we used the positive correlation between healthcare spending per capita and CO₂ emissions as an example: national wealth drives both, so the correlation does not imply that healthcare spending causes emissions.
+
+We use three criteria to identify a confounding variable. Z is a confounder if it:
+
+1. Affects the dependent variable (Y).
+2. Affects the independent variable (X).
+3. Is not a result of the independent variable (X).
+
+**Reverse causality.** Reverse causality occurs when the assumed causal direction may be wrong. Even if X and Y are genuinely causally related, the data cannot tell us whether X causes Y, whether Y causes X, or whether causation runs in both directions. In the videos, we noted that higher CO₂ emissions may generate more pollution-related illness, increasing demand for healthcare — the opposite direction from what the original hypothesis assumed.
+
+In this activity, you will apply both concepts to six new hypotheses. For each, work through the three questions with your group before moving on.
+
+------------------------------------------------------------------------
+
+## The Six Hypotheses
+
+------------------------------------------------------------------------
+
+### Hypothesis A
+
+**People with a library membership are more likely to get vaccinated.**
+
+**A1.** What is the independent variable (X) and the dependent variable (Y)?
+
+**A2.** Identify one or more potential confounding variables. For each, explain how it satisfies the three criteria: (a) it affects vaccination uptake; (b) it affects library membership; (c) it is not caused by library membership.
+
+**A3.** Is there a plausible reverse causal story? If so, describe it: explain how vaccination behaviour might cause library membership, or how the two might influence each other.
+
+<!-- Instructor notes:
+A1. X = library membership; Y = vaccination uptake.
+A2. Health consciousness / socioeconomic status are the classic confounders. People with higher socioeconomic status are more likely to engage in civic and cultural institutions (libraries) AND more likely to follow health recommendations (vaccination). Neither library membership nor vaccination causes SES — SES is causally prior to both.
+A3. Reverse causality is relatively weak here: it is hard to argue that getting vaccinated causes someone to join a library. The relationship is probably better explained by confounding than by reverse causality. A discussion of why reverse causality is implausible here is pedagogically useful. -->
+
+------------------------------------------------------------------------
+
+### Hypothesis B
+
+**Famines are less likely in countries where there is press freedom.**
+
+**B1.** What is the independent variable (X) and the dependent variable (Y)?
+
+**B2.** Identify one or more potential confounding variables. For each, explain how it satisfies the three criteria.
+
+**B3.** Is there a plausible reverse causal story? If so, describe it.
+
+<!-- Instructor notes:
+B1. X = press freedom; Y = famine incidence (lower).
+B2. Democracy or level of economic development are strong confounders. Democratic, wealthier countries tend to have both greater press freedom and better food security. Neither press freedom nor famine avoidance causes a country to be a democracy or wealthy — the political and economic institutions are causally prior.
+B3. Reverse causality is plausible: chronic food insecurity and famines weaken state capacity and civil society, which in turn suppresses press freedom. Countries with worse famine outcomes may therefore also develop weaker press institutions. Causation may also run in both directions. This is related to Amartya Sen's argument about democracy and famines — a good entry point for class discussion. -->
+
+------------------------------------------------------------------------
+
+### Hypothesis C
+
+**Countries with fewer women in the national legislature tend to have more restrictive abortion policies.**
+
+**C1.** What is the independent variable (X) and the dependent variable (Y)?
+
+**C2.** Identify one or more potential confounding variables. For each, explain how it satisfies the three criteria.
+
+**C3.** Is there a plausible reverse causal story? If so, describe it.
+
+<!-- Instructor notes:
+C1. X = proportion of women in the national legislature; Y = restrictiveness of abortion policy.
+C2. Cultural conservatism / religiosity is a strong confounder. More socially conservative or religious societies tend to elect fewer women to legislatures AND to enact more restrictive abortion policies. Social conservatism is not caused by either variable — it is a broader cultural feature that shapes both.
+C3. Reverse causality is plausible: highly restrictive abortion policies may reflect and reinforce a broader political culture that is hostile to women's political participation, which in turn suppresses female representation in the legislature. The causal arrow could run from more restrictive policies → lower women's representation, rather than the reverse. -->
+
+------------------------------------------------------------------------
+
+### Hypothesis D
+
+**Companies whose employees are more satisfied report higher profits.**
+
+**D1.** What is the independent variable (X) and the dependent variable (Y)?
+
+**D2.** Identify one or more potential confounding variables. For each, explain how it satisfies the three criteria.
+
+**D3.** Is there a plausible reverse causal story? If so, describe it.
+
+<!-- Instructor notes:
+D1. X = employee satisfaction; Y = company profits.
+D2. Company quality / management quality is a confounder. Companies with better management tend to invest in employee wellbeing (higher satisfaction) AND to be better run strategically (higher profits). Management quality is not caused by employee satisfaction or profits — it is a feature of the organisation that shapes both outcomes.
+D3. Reverse causality is highly plausible: more profitable companies have more resources to invest in employee benefits, wages, and working conditions, which increases satisfaction. This is one of the most classic examples of reverse causality in management research. The most likely situation is that causation runs in both directions. -->
+
+------------------------------------------------------------------------
+
+### Hypothesis E
+
+**Firms with higher levels of employee turnover have lower productivity.**
+
+**E1.** What is the independent variable (X) and the dependent variable (Y)?
+
+**E2.** Identify one or more potential confounding variables. For each, explain how it satisfies the three criteria.
+
+**E3.** Is there a plausible reverse causal story? If so, describe it.
+
+<!-- Instructor notes:
+E1. X = employee turnover rate; Y = productivity.
+E2. Industry sector or management quality could confound this. Low-skill sectors or poorly managed firms tend to have both higher turnover (due to low wages and poor conditions) and lower productivity (due to inefficient processes or low-skilled work). The nature of the industry is causally prior to both turnover and productivity.
+E3. Reverse causality is plausible: low productivity may create a stressful or unrewarding work environment, which causes employees to leave — increasing turnover. So low productivity may cause high turnover, rather than high turnover causing low productivity. A discussion of how to break the cycle is useful here. -->
+
+------------------------------------------------------------------------
+
+### Hypothesis F
+
+**Children who spend more time using electronic devices at a young age develop worse social skills.**
+
+**F1.** What is the independent variable (X) and the dependent variable (Y)?
+
+**F2.** Identify one or more potential confounding variables. For each, explain how it satisfies the three criteria.
+
+**F3.** Is there a plausible reverse causal story? If so, describe it.
+
+<!-- Instructor notes:
+F1. X = screen time; Y = social skills (worse).
+F2. Parenting style or family environment is a strong confounder. Parents who engage less with their children may allow more screen time AND provide fewer social learning opportunities, producing weaker social skills. The parenting environment is not caused by the child's screen time or social skills — it shapes both.
+F3. Reverse causality is highly plausible: children who already have weaker social skills may find face-to-face interaction more difficult or less rewarding, and consequently spend more time on devices as an alternative. So poor social skills may cause higher screen time, rather than the reverse. This is an important point for evaluating policy claims in this space. -->
+
+------------------------------------------------------------------------
+
+## Synthesis
+
+Once your group has worked through all six hypotheses, discuss the following:
+
+**S1.** For which hypothesis was reverse causality hardest to rule out? What made it difficult — was it that both causal directions were equally plausible, or that the data could not distinguish between them?
+
+**S2.** For which hypothesis was a confounding variable easiest to identify? Was it the same hypothesis where reverse causality was most obvious, or a different one? What does this suggest about the relationship between the two threats to causal inference?
+
+**S3.** In the exam, you may be asked to reason about a causal claim — identify threats to its validity and explain them clearly. Based on this activity, what are the key questions you should ask yourself when evaluating whether a correlation reflects a causal relationship?
+
+------------------------------------------------------------------------
+
+## Summary
+
+In this activity, you have:
+
+- Applied the three-criteria framework to identify potential confounding variables for a range of research hypotheses.
+- Evaluated whether the assumed causal direction in each hypothesis is the only plausible one, or whether reverse causality is a credible alternative.
+- Distinguished between hypotheses where confounding is the primary concern, where reverse causality dominates, and where both are present simultaneously.
+
+These are the core reasoning skills tested in the causal inference component of the exam.

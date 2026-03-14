@@ -7,7 +7,9 @@ _freeze/
 .quarto/
 .quarto-cache/
 cards/
-legacy/
+
 
 .claude/
 **/*.quarto_ipynb
+
+/.quarto/

@@ -1,0 +1,101 @@
+---
+title: "Lecture 9: Confounding Variables"
+subtitle: "Statistics for Political Science"
+author: "Leonardo Falabella"
+class: lecture
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: confounding-lecture
+  revealjs:
+    output-file: confounding-lecture-slides
+---
+
+------------------------------------------------------------------------
+
+## From the concept videos to the lecture
+
+- The videos introduced **confounding variables** and **reverse causality**.
+- Today we apply confounding to a real policy debate.
+- The question: did **stop-and-frisk** reduce crime in New York City?
+
+------------------------------------------------------------------------
+
+## Stop-and-frisk
+
+- NYPD officers stopped, questioned, and frisked pedestrians on suspicion of crime.
+- At its peak in 2011: **685,724 recorded stops**.
+- 88% of those stopped were found innocent. 53% were Black; 34% were Latinx.
+
+Source: [NYCLU](https://www.nyclu.org/en/stop-and-frisk-data)
+
+------------------------------------------------------------------------
+
+## The claim
+
+- Between 2003 and 2012, police stops increased and violent crime declined.
+- Mayor Bloomberg and Police Commissioner Kelly argued stop-and-frisk **caused** the crime decline.
+- This was their justification for continuing and expanding the policy.
+
+------------------------------------------------------------------------
+
+## The correlation
+
+![](../../assets/stops-crime-nyc.png){fig-align="center" width="80%"}
+
+------------------------------------------------------------------------
+
+## Class activity
+
+- Stops rose sharply from 2003 to 2012, and crime fell over the same period.
+- **Does this mean stop-and-frisk caused the decline?**
+- What other variables might explain this pattern?
+
+------------------------------------------------------------------------
+
+## Class activity {visibility="uncounted"}
+
+![](../../assets/stops-crime-nyc.png){fig-align="center" width="80%"}
+
+------------------------------------------------------------------------
+
+## Police presence as a confounder
+
+- During the same period, the NYPD ran **Operation Impact**.
+- More police presence → more stops **and** less crime.
+- Police presence affects both the independent and dependent variable.
+
+------------------------------------------------------------------------
+
+## The confounding structure
+
+![](../../assets/police-confounding.png){fig-align="center" width="80%"}
+
+------------------------------------------------------------------------
+
+## MacDonald et al. (2016)
+
+- Used a **difference-in-differences** design.
+- Compared impact zones to similar nearby blocks **not** designated.
+- Police surges **reduced crime**; investigative stops did not.
+
+MacDonald, Fagan & Geller (2016), *PLOS ONE*
+
+------------------------------------------------------------------------
+
+## How do we know it was presence, not stops?
+
+- Bloomberg and Kelly used a simple before-and-after for the whole city.
+- This cannot rule out other changes over the same period.
+- MacDonald et al. compared impact zones to similar blocks with no extra officers.
+
+------------------------------------------------------------------------
+
+## Why this matters
+
+- 88% of stops were innocent; 87% of those stopped were Black or Latinx.
+- Omitted variable bias caused real harm, not just analytic error.
+- **Data literacy makes good citizens.**
+
