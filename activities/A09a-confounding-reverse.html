@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Leonardo Falabella">
+
+<title>Seminar Activity: Confounding Variables and Reverse Causality</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-30ae6b2e5328ac7375bd033934d6d19c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../slides/videos-concepts/confounding.html">Week 9: Confounding Variables and Reverse Causality</a></li><li class="breadcrumb-item"><a href="../activities/A09a-confounding-reverse.html">Seminar Activity: Confounding Variables and Reverse Causality</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Statistics for Political Science</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 1: Thinking with Data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/lectures/thinking-with-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 1: Thinking With Data</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 2: Research Questions, Theories, and Hypotheses</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-concepts/empirical-vs-normative.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Normative and Empirical Questions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-concepts/descriptive-vs-causal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Descriptive and Causal Questions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-concepts/units-theories-hypotheses.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Units of Analysis, Theories, and Hypotheses</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-concepts/dependent-independent-variables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dependent and Independent Variables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-stata/doing-reproducible-research.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Doing Reproducible Research</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/lectures/questions-theories-hypotheses.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 2: Research Questions, Theories, and Hypotheses</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 3: Measurement and Variable Types</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-concepts/measuring-variables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Measuring Variables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-concepts/types-of-variables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Types of Variables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-stata/datasets-codebooks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Datasets and Codebooks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-stata/stata-interface.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Stata Interface</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-stata/loading-browsing-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Loading and Browsing Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/lectures/measurement-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 3: Measurement and Types of Variables</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 4: Describing Distributions (Univariate Description)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-concepts/summarising-distribution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summarising a Distribution</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-concepts/variance-sd.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Variance and Standard Deviation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-concepts/bar-histograms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bar Charts and Histograms</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-stata/summary-stata.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summarising Distributions in Stata</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-stata/bar-hist-stata.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bar Charts and Histograms in Stata</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/lectures/distributions-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 4: Describing Distributions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/A04-distributions-activity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mock Exam Questions: Describing Distributions</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 5: Describing Correlations (Bivariate Description)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-concepts/correlations-nominal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Correlations Between Nominal Variables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-concepts/comparing-means.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Comparing Means by Category</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-concepts/scatter-reg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Scatterplots and Regression Lines</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-concepts/types-plots-tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">From Variable Types to Plots and Tables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-stata/corr-stata.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Describing Correlations in Stata</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/lectures/correlations-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 5: Describing Correlations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/A05-correlations-activity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Seminar Activity: Country-level Correlations</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Reading Week</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/A06-reading-week-catchup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Catch-Up Activity: From Data Handling to Bivariate Interpretation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 7: Estimation, Uncertainty, and Statistical Inference</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-concepts/sampling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Why Sampling Matters</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-concepts/moe-ci.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Confidence Intervals and Margins of Error</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-concepts/htests-cis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hypothesis Tests Using Confidence Intervals</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-concepts/p-values.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Interpreting P-values</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-stata/htests-stata.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hypothesis Testing in Stata</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/lectures/hypothesis-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 7: Hypothesis Testing</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/A07a-sampling-activity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Seminar Activity: Sampling and Bias</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/A07b-htests-weights.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Seminar Activity: Weights and Visual Inference</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 8: Regression Analysis</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-concepts/regression-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Regression Analysis: Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-concepts/regression-slope.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Regression Slope</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-concepts/regression-inference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inference in Regression: CIs and P-values</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-concepts/regression-rsquared.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R-squared</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-stata/regression-stata.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bivariate Regression in Stata</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/lectures/regression-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 8: Bivariate Regression</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/A08a-regression-activity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Seminar Activity: Bivariate Regression</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/A08b-ps2-workshop-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PS2 Workshop 1: Exploration and Univariate Description</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 9: Confounding Variables and Reverse Causality</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-concepts/confounding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Confounding Variables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-concepts/reverse-causality.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reverse Causality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-concepts/random-assignment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Random Assignment and Causal Inference</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/videos-stata/preparing-stata.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preparing Data in Stata</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/lectures/confounding-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 9: Confounding Variables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/A09a-confounding-reverse.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Seminar Activity: Confounding Variables and Reverse Causality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/A09b-ps2-workshop-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PS2 Workshop 2: Bivariate Analysis and Hypothesis Test</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#the-six-hypotheses" id="toc-the-six-hypotheses" class="nav-link" data-scroll-target="#the-six-hypotheses">The Six Hypotheses</a></li>
+  <li><a href="#synthesis" id="toc-synthesis" class="nav-link" data-scroll-target="#synthesis">Synthesis</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../slides/videos-concepts/confounding.html">Week 9: Confounding Variables and Reverse Causality</a></li><li class="breadcrumb-item"><a href="../activities/A09a-confounding-reverse.html">Seminar Activity: Confounding Variables and Reverse Causality</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Seminar Activity: Confounding Variables and Reverse Causality</h1>
+<p class="subtitle lead">Statistics for Political Science — Week 9</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Leonardo Falabella </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>The concept videos for this week introduced two reasons why a correlation between X and Y may not reflect a causal relationship from X to Y.</p>
+<p><strong>Confounding variables.</strong> A confounding variable Z affects both X and Y but is not caused by X. It creates a spurious correlation: X and Y move together not because one causes the other, but because both are driven by Z. In the videos, we used the positive correlation between healthcare spending per capita and CO₂ emissions as an example: national wealth drives both, so the correlation does not imply that healthcare spending causes emissions.</p>
+<p>We use three criteria to identify a confounding variable. Z is a confounder if it:</p>
+<ol type="1">
+<li>Affects the dependent variable (Y).</li>
+<li>Affects the independent variable (X).</li>
+<li>Is not a result of the independent variable (X).</li>
+</ol>
+<p><strong>Reverse causality.</strong> Reverse causality occurs when the assumed causal direction may be wrong. Even if X and Y are genuinely causally related, the data cannot tell us whether X causes Y, whether Y causes X, or whether causation runs in both directions. In the videos, we noted that higher CO₂ emissions may generate more pollution-related illness, increasing demand for healthcare — the opposite direction from what the original hypothesis assumed.</p>
+<p>In this activity, you will apply both concepts to six new hypotheses. For each, work through the three questions with your group before moving on.</p>
+<hr>
+</section>
+<section id="the-six-hypotheses" class="level2">
+<h2 class="anchored" data-anchor-id="the-six-hypotheses">The Six Hypotheses</h2>
+<hr>
+<section id="hypothesis-a" class="level3">
+<h3 class="anchored" data-anchor-id="hypothesis-a">Hypothesis A</h3>
+<p><strong>People with a library membership are more likely to get vaccinated.</strong></p>
+<p><strong>A1.</strong> What is the independent variable (X) and the dependent variable (Y)?</p>
+<p><strong>A2.</strong> Identify one or more potential confounding variables. For each, explain how it satisfies the three criteria: (a) it affects vaccination uptake; (b) it affects library membership; (c) it is not caused by library membership.</p>
+<p><strong>A3.</strong> Is there a plausible reverse causal story? If so, describe it: explain how vaccination behaviour might cause library membership, or how the two might influence each other.</p>
+<!-- Instructor notes:
+A1. X = library membership; Y = vaccination uptake.
+A2. Health consciousness / socioeconomic status are the classic confounders. People with higher socioeconomic status are more likely to engage in civic and cultural institutions (libraries) AND more likely to follow health recommendations (vaccination). Neither library membership nor vaccination causes SES — SES is causally prior to both.
+A3. Reverse causality is relatively weak here: it is hard to argue that getting vaccinated causes someone to join a library. The relationship is probably better explained by confounding than by reverse causality. A discussion of why reverse causality is implausible here is pedagogically useful. -->
+<hr>
+</section>
+<section id="hypothesis-b" class="level3">
+<h3 class="anchored" data-anchor-id="hypothesis-b">Hypothesis B</h3>
+<p><strong>Famines are less likely in countries where there is press freedom.</strong></p>
+<p><strong>B1.</strong> What is the independent variable (X) and the dependent variable (Y)?</p>
+<p><strong>B2.</strong> Identify one or more potential confounding variables. For each, explain how it satisfies the three criteria.</p>
+<p><strong>B3.</strong> Is there a plausible reverse causal story? If so, describe it.</p>
+<!-- Instructor notes:
+B1. X = press freedom; Y = famine incidence (lower).
+B2. Democracy or level of economic development are strong confounders. Democratic, wealthier countries tend to have both greater press freedom and better food security. Neither press freedom nor famine avoidance causes a country to be a democracy or wealthy — the political and economic institutions are causally prior.
+B3. Reverse causality is plausible: chronic food insecurity and famines weaken state capacity and civil society, which in turn suppresses press freedom. Countries with worse famine outcomes may therefore also develop weaker press institutions. Causation may also run in both directions. This is related to Amartya Sen's argument about democracy and famines — a good entry point for class discussion. -->
+<hr>
+</section>
+<section id="hypothesis-c" class="level3">
+<h3 class="anchored" data-anchor-id="hypothesis-c">Hypothesis C</h3>
+<p><strong>Countries with fewer women in the national legislature tend to have more restrictive abortion policies.</strong></p>
+<p><strong>C1.</strong> What is the independent variable (X) and the dependent variable (Y)?</p>
+<p><strong>C2.</strong> Identify one or more potential confounding variables. For each, explain how it satisfies the three criteria.</p>
+<p><strong>C3.</strong> Is there a plausible reverse causal story? If so, describe it.</p>
+<!-- Instructor notes:
+C1. X = proportion of women in the national legislature; Y = restrictiveness of abortion policy.
+C2. Cultural conservatism / religiosity is a strong confounder. More socially conservative or religious societies tend to elect fewer women to legislatures AND to enact more restrictive abortion policies. Social conservatism is not caused by either variable — it is a broader cultural feature that shapes both.
+C3. Reverse causality is plausible: highly restrictive abortion policies may reflect and reinforce a broader political culture that is hostile to women's political participation, which in turn suppresses female representation in the legislature. The causal arrow could run from more restrictive policies → lower women's representation, rather than the reverse. -->
+<hr>
+</section>
+<section id="hypothesis-d" class="level3">
+<h3 class="anchored" data-anchor-id="hypothesis-d">Hypothesis D</h3>
+<p><strong>Companies whose employees are more satisfied report higher profits.</strong></p>
+<p><strong>D1.</strong> What is the independent variable (X) and the dependent variable (Y)?</p>
+<p><strong>D2.</strong> Identify one or more potential confounding variables. For each, explain how it satisfies the three criteria.</p>
+<p><strong>D3.</strong> Is there a plausible reverse causal story? If so, describe it.</p>
+<!-- Instructor notes:
+D1. X = employee satisfaction; Y = company profits.
+D2. Company quality / management quality is a confounder. Companies with better management tend to invest in employee wellbeing (higher satisfaction) AND to be better run strategically (higher profits). Management quality is not caused by employee satisfaction or profits — it is a feature of the organisation that shapes both outcomes.
+D3. Reverse causality is highly plausible: more profitable companies have more resources to invest in employee benefits, wages, and working conditions, which increases satisfaction. This is one of the most classic examples of reverse causality in management research. The most likely situation is that causation runs in both directions. -->
+<hr>
+</section>
+<section id="hypothesis-e" class="level3">
+<h3 class="anchored" data-anchor-id="hypothesis-e">Hypothesis E</h3>
+<p><strong>Firms with higher levels of employee turnover have lower productivity.</strong></p>
+<p><strong>E1.</strong> What is the independent variable (X) and the dependent variable (Y)?</p>
+<p><strong>E2.</strong> Identify one or more potential confounding variables. For each, explain how it satisfies the three criteria.</p>
+<p><strong>E3.</strong> Is there a plausible reverse causal story? If so, describe it.</p>
+<!-- Instructor notes:
+E1. X = employee turnover rate; Y = productivity.
+E2. Industry sector or management quality could confound this. Low-skill sectors or poorly managed firms tend to have both higher turnover (due to low wages and poor conditions) and lower productivity (due to inefficient processes or low-skilled work). The nature of the industry is causally prior to both turnover and productivity.
+E3. Reverse causality is plausible: low productivity may create a stressful or unrewarding work environment, which causes employees to leave — increasing turnover. So low productivity may cause high turnover, rather than high turnover causing low productivity. A discussion of how to break the cycle is useful here. -->
+<hr>
+</section>
+<section id="hypothesis-f" class="level3">
+<h3 class="anchored" data-anchor-id="hypothesis-f">Hypothesis F</h3>
+<p><strong>Children who spend more time using electronic devices at a young age develop worse social skills.</strong></p>
+<p><strong>F1.</strong> What is the independent variable (X) and the dependent variable (Y)?</p>
+<p><strong>F2.</strong> Identify one or more potential confounding variables. For each, explain how it satisfies the three criteria.</p>
+<p><strong>F3.</strong> Is there a plausible reverse causal story? If so, describe it.</p>
+<!-- Instructor notes:
+F1. X = screen time; Y = social skills (worse).
+F2. Parenting style or family environment is a strong confounder. Parents who engage less with their children may allow more screen time AND provide fewer social learning opportunities, producing weaker social skills. The parenting environment is not caused by the child's screen time or social skills — it shapes both.
+F3. Reverse causality is highly plausible: children who already have weaker social skills may find face-to-face interaction more difficult or less rewarding, and consequently spend more time on devices as an alternative. So poor social skills may cause higher screen time, rather than the reverse. This is an important point for evaluating policy claims in this space. -->
+<hr>
+</section>
+</section>
+<section id="synthesis" class="level2">
+<h2 class="anchored" data-anchor-id="synthesis">Synthesis</h2>
+<p>Once your group has worked through all six hypotheses, discuss the following:</p>
+<p><strong>S1.</strong> For which hypothesis was reverse causality hardest to rule out? What made it difficult — was it that both causal directions were equally plausible, or that the data could not distinguish between them?</p>
+<p><strong>S2.</strong> For which hypothesis was a confounding variable easiest to identify? Was it the same hypothesis where reverse causality was most obvious, or a different one? What does this suggest about the relationship between the two threats to causal inference?</p>
+<p><strong>S3.</strong> In the exam, you may be asked to reason about a causal claim — identify threats to its validity and explain them clearly. Based on this activity, what are the key questions you should ask yourself when evaluating whether a correlation reflects a causal relationship?</p>
+<hr>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>In this activity, you have:</p>
+<ul>
+<li>Applied the three-criteria framework to identify potential confounding variables for a range of research hypotheses.</li>
+<li>Evaluated whether the assumed causal direction in each hypothesis is the only plausible one, or whether reverse causality is a credible alternative.</li>
+<li>Distinguished between hypotheses where confounding is the primary concern, where reverse causality dominates, and where both are present simultaneously.</li>
+</ul>
+<p>These are the core reasoning skills tested in the causal inference component of the exam.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/lfalab\.github\.io\/methods-education\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

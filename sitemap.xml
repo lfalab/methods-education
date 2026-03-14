@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/videos-stata/preparing-stata.html</loc>
-    <lastmod>2026-03-10T14:10:31.695Z</lastmod>
+    <lastmod>2026-03-13T19:59:51.000Z</lastmod>
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/videos-stata/preparing-stata-slides.html</loc>
-    <lastmod>2026-03-10T14:10:31.695Z</lastmod>
+    <lastmod>2026-03-13T19:59:51.000Z</lastmod>
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/videos-stata/htests-stata.html</loc>
@@ -26,19 +26,19 @@
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/videos-stata/loading-browsing-data.html</loc>
-    <lastmod>2026-02-23T17:49:37.988Z</lastmod>
+    <lastmod>2026-03-13T20:06:36.000Z</lastmod>
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/videos-stata/loading-browsing-data-slides.html</loc>
-    <lastmod>2026-02-23T17:49:37.988Z</lastmod>
+    <lastmod>2026-03-13T20:06:36.000Z</lastmod>
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/videos-stata/datasets-codebooks.html</loc>
-    <lastmod>2026-02-08T17:49:38.068Z</lastmod>
+    <lastmod>2026-03-13T19:57:48.000Z</lastmod>
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/videos-stata/datasets-codebooks-slides.html</loc>
-    <lastmod>2026-02-08T17:49:38.068Z</lastmod>
+    <lastmod>2026-03-13T19:57:48.000Z</lastmod>
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/videos-concepts/random-assignment.html</loc>
@@ -114,35 +114,51 @@
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/videos-concepts/types-of-variables.html</loc>
-    <lastmod>2026-02-23T17:58:50.784Z</lastmod>
+    <lastmod>2026-03-13T20:06:34.000Z</lastmod>
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/videos-concepts/types-of-variables-slides.html</loc>
-    <lastmod>2026-02-23T17:58:50.784Z</lastmod>
+    <lastmod>2026-03-13T20:06:34.000Z</lastmod>
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/videos-concepts/dependent-independent-variables.html</loc>
-    <lastmod>2026-02-08T17:46:28.525Z</lastmod>
+    <lastmod>2026-03-13T20:01:16.000Z</lastmod>
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/videos-concepts/dependent-independent-variables-slides.html</loc>
-    <lastmod>2026-02-08T17:46:28.525Z</lastmod>
+    <lastmod>2026-03-13T20:01:16.000Z</lastmod>
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/videos-concepts/descriptive-vs-causal.html</loc>
-    <lastmod>2026-02-08T17:45:36.004Z</lastmod>
+    <lastmod>2026-03-13T20:01:20.000Z</lastmod>
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/videos-concepts/descriptive-vs-causal-slides.html</loc>
-    <lastmod>2026-02-08T17:45:36.004Z</lastmod>
+    <lastmod>2026-03-13T20:01:20.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/slides/templates/stata-slug.html</loc>
+    <lastmod>2026-03-13T20:07:15.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/slides/templates/stata-slug-slides.html</loc>
+    <lastmod>2026-03-13T20:07:15.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/slides/templates/lecture-slug.html</loc>
+    <lastmod>2026-03-13T19:36:52.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/slides/templates/lecture-slug-slides.html</loc>
+    <lastmod>2026-03-13T19:36:52.000Z</lastmod>
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/lectures/regression-lecture.html</loc>
-    <lastmod>2026-03-10T18:44:01.636Z</lastmod>
+    <lastmod>2026-03-13T19:30:26.000Z</lastmod>
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/lectures/regression-lecture-slides.html</loc>
-    <lastmod>2026-03-10T18:44:01.636Z</lastmod>
+    <lastmod>2026-03-13T19:30:26.000Z</lastmod>
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/lectures/correlations-lecture.html</loc>
@@ -169,15 +185,39 @@
     <lastmod>2026-02-10T19:22:52.010Z</lastmod>
   </url>
   <url>
-    <loc>https://lfalab.github.io/methods-education/index.html</loc>
-    <lastmod>2026-02-08T17:41:37.484Z</lastmod>
+    <loc>https://lfalab.github.io/methods-education/slides/CLAUDE.html</loc>
+    <lastmod>2026-03-14T18:58:24.075Z</lastmod>
   </url>
   <url>
-    <loc>https://lfalab.github.io/methods-education/activities/A08-regression-activity.html</loc>
-    <lastmod>2026-03-03T19:32:09.669Z</lastmod>
+    <loc>https://lfalab.github.io/methods-education/quizzes/CLAUDE.html</loc>
+    <lastmod>2026-03-13T20:15:58.000Z</lastmod>
   </url>
   <url>
-    <loc>https://lfalab.github.io/methods-education/activities/A07-sampling-activity.html</loc>
+    <loc>https://lfalab.github.io/methods-education/logs/2026-03-14-session.html</loc>
+    <lastmod>2026-03-14T14:43:19.115Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/CLAUDE.html</loc>
+    <lastmod>2026-03-14T14:42:32.111Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/activities/CLAUDE.html</loc>
+    <lastmod>2026-03-13T20:19:53.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/activities/A10b-ps2-workshop-3.html</loc>
+    <lastmod>2026-03-14T14:41:10.558Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/activities/A09a-confounding-reverse.html</loc>
+    <lastmod>2026-03-14T17:41:39.509Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/activities/A08a-regression-activity.html</loc>
+    <lastmod>2026-03-13T19:11:24.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/activities/A07a-sampling-activity.html</loc>
     <lastmod>2026-02-28T15:32:49.302Z</lastmod>
   </url>
   <url>
@@ -197,16 +237,36 @@
     <lastmod>2026-02-24T18:53:10.940Z</lastmod>
   </url>
   <url>
-    <loc>https://lfalab.github.io/methods-education/activities/A08-ps2-workshop-1.html</loc>
+    <loc>https://lfalab.github.io/methods-education/activities/A07b-htests-weights.html</loc>
+    <lastmod>2026-03-13T19:11:09.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/activities/A08b-ps2-workshop-1.html</loc>
     <lastmod>2026-03-04T18:41:02.000Z</lastmod>
   </url>
   <url>
-    <loc>https://lfalab.github.io/methods-education/activities/htests-weights-slides.html</loc>
-    <lastmod>2026-03-04T13:56:45.000Z</lastmod>
+    <loc>https://lfalab.github.io/methods-education/activities/A09b-ps2-workshop-2.html</loc>
+    <lastmod>2026-03-14T14:57:19.647Z</lastmod>
   </url>
   <url>
-    <loc>https://lfalab.github.io/methods-education/activities/htests-weights-activity.html</loc>
-    <lastmod>2026-03-04T13:56:45.000Z</lastmod>
+    <loc>https://lfalab.github.io/methods-education/activities/A11-ps2-workshop-4.html</loc>
+    <lastmod>2026-03-14T14:41:24.650Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/attention-checks/CLAUDE.html</loc>
+    <lastmod>2026-03-13T20:25:57.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/index.html</loc>
+    <lastmod>2026-02-08T17:41:37.484Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/MEMORY.html</loc>
+    <lastmod>2026-03-13T20:23:03.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/reference/CLAUDE.html</loc>
+    <lastmod>2026-03-14T14:42:42.586Z</lastmod>
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/index.html</loc>
@@ -237,28 +297,44 @@
     <lastmod>2026-02-27T19:02:39.000Z</lastmod>
   </url>
   <url>
+    <loc>https://lfalab.github.io/methods-education/slides/lectures/confounding-lecture-slides.html</loc>
+    <lastmod>2026-03-14T19:01:09.492Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/slides/lectures/confounding-lecture.html</loc>
+    <lastmod>2026-03-14T19:01:09.492Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/slides/templates/concept-slug-slides.html</loc>
+    <lastmod>2026-03-13T19:28:21.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lfalab.github.io/methods-education/slides/templates/concept-slug.html</loc>
+    <lastmod>2026-03-13T19:28:21.000Z</lastmod>
+  </url>
+  <url>
     <loc>https://lfalab.github.io/methods-education/slides/videos-concepts/empirical-vs-normative-slides.html</loc>
-    <lastmod>2026-02-08T17:36:38.317Z</lastmod>
+    <lastmod>2026-03-13T20:01:22.000Z</lastmod>
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/videos-concepts/empirical-vs-normative.html</loc>
-    <lastmod>2026-02-08T17:36:38.317Z</lastmod>
+    <lastmod>2026-03-13T20:01:22.000Z</lastmod>
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/videos-concepts/units-theories-hypotheses-slides.html</loc>
-    <lastmod>2026-02-08T17:46:02.635Z</lastmod>
+    <lastmod>2026-03-13T20:01:18.000Z</lastmod>
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/videos-concepts/units-theories-hypotheses.html</loc>
-    <lastmod>2026-02-08T17:46:02.635Z</lastmod>
+    <lastmod>2026-03-13T20:01:18.000Z</lastmod>
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/videos-concepts/measuring-variables-slides.html</loc>
-    <lastmod>2026-02-08T17:47:09.773Z</lastmod>
+    <lastmod>2026-03-13T20:01:14.000Z</lastmod>
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/videos-concepts/measuring-variables.html</loc>
-    <lastmod>2026-02-08T17:47:09.773Z</lastmod>
+    <lastmod>2026-03-13T20:01:14.000Z</lastmod>
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/videos-concepts/summarising-distribution-slides.html</loc>
@@ -334,19 +410,19 @@
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/videos-stata/doing-reproducible-research-slides.html</loc>
-    <lastmod>2026-02-23T17:49:40.417Z</lastmod>
+    <lastmod>2026-03-13T19:56:33.000Z</lastmod>
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/videos-stata/doing-reproducible-research.html</loc>
-    <lastmod>2026-02-23T17:49:40.417Z</lastmod>
+    <lastmod>2026-03-13T19:56:33.000Z</lastmod>
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/videos-stata/stata-interface-slides.html</loc>
-    <lastmod>2026-02-23T17:52:30.932Z</lastmod>
+    <lastmod>2026-03-13T20:06:03.000Z</lastmod>
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/videos-stata/stata-interface.html</loc>
-    <lastmod>2026-02-23T17:52:30.932Z</lastmod>
+    <lastmod>2026-03-13T20:06:03.000Z</lastmod>
   </url>
   <url>
     <loc>https://lfalab.github.io/methods-education/slides/videos-stata/summary-stata-slides.html</loc>

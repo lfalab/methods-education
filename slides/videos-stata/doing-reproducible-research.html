@@ -392,13 +392,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/A07-sampling-activity.html" class="sidebar-item-text sidebar-link">
+  <a href="../../activities/A07a-sampling-activity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Seminar Activity: Sampling and Bias</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/htests-weights-activity.html" class="sidebar-item-text sidebar-link">
+  <a href="../../activities/A07b-htests-weights.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Seminar Activity: Weights and Visual Inference</span></a>
   </div>
 </li>
@@ -451,13 +451,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/A08-regression-activity.html" class="sidebar-item-text sidebar-link">
+  <a href="../../activities/A08a-regression-activity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Seminar Activity: Bivariate Regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/A08-ps2-workshop-1.html" class="sidebar-item-text sidebar-link">
+  <a href="../../activities/A08b-ps2-workshop-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PS2 Workshop 1: Exploration and Univariate Description</span></a>
   </div>
 </li>
@@ -496,6 +496,24 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Preparing Data in Stata</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../slides/lectures/confounding-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 9: Confounding Variables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../activities/A09a-confounding-reverse.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Seminar Activity: Confounding Variables and Reverse Causality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../activities/A09b-ps2-workshop-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PS2 Workshop 2: Bivariate Analysis and Hypothesis Test</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -532,65 +550,53 @@ ul.task-list li input[type="checkbox"] {
 <h1 class="title-left">Doing Reproducible Research</h1>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DVSg_RFjV-8?si=gFgHHBNKKhnqEEC1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
 </iframe>
-<!-- [Watch on YouTube](https://youtu.be/DVSg_RFjV-8) -->
 <hr>
 <section id="youll-learn-to" class="level2">
 <h2 class="anchored" data-anchor-id="youll-learn-to">You’ll learn to</h2>
-<div class="presenter-space">
 <ul>
 <li>Explain what <strong>reproducible research</strong> means and why it matters.</li>
 <li>Set up a project <strong>folder structure</strong> that supports reproducible work.</li>
 </ul>
-</div>
 <hr>
 </section>
 <section id="what-is-reproducible-research" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-reproducible-research">What is reproducible research?</h2>
-<div class="presenter-space">
 <ul>
 <li>Being able to obtain the <strong>same results</strong> using the same data and code.</li>
 <li>Anyone should be able to follow the steps of your analysis.</li>
 <li>This includes <strong>you</strong> in a few weeks’ time.</li>
 </ul>
-</div>
 <hr>
 </section>
 <section id="why-care-about-reproducibility" class="level2">
 <h2 class="anchored" data-anchor-id="why-care-about-reproducibility">Why care about reproducibility?</h2>
-<div class="presenter-space">
 <ul>
 <li>Small changes accumulate quickly, and we often forget what we do.</li>
 <li>Clear structures make mistakes easier for you (and others) to <strong>detect and fix</strong>.</li>
 <li>Important for <strong>transparency</strong> and <strong>credibility</strong>.</li>
 </ul>
-</div>
 <hr>
 </section>
 <section id="data-and-code" class="level2">
 <h2 class="anchored" data-anchor-id="data-and-code">Data and Code</h2>
-<div class="presenter-space">
 <ul>
 <li><p><strong>Data:</strong> the information you gather to begin your analysis.</p></li>
 <li><p><strong>Code:</strong> the instructions that transform and analyse the data.</p></li>
 <li><p>Reproducible research <strong>separates</strong> data from code.</p></li>
 </ul>
-</div>
 <hr>
 </section>
 <section id="what-this-looks-like-in-stata" class="level2">
 <h2 class="anchored" data-anchor-id="what-this-looks-like-in-stata">What this looks like in Stata</h2>
-<div class="presenter-space">
 <ul>
 <li>The dataset is treated as <strong>read-only</strong>.</li>
 <li>All changes happen in a <strong>do-file</strong>.</li>
 <li>The do-file records every step in your analysis.</li>
 </ul>
-</div>
 <hr>
 </section>
 <section id="a-simple-project-folder-structure" class="level2">
 <h2 class="anchored" data-anchor-id="a-simple-project-folder-structure">A simple project folder structure</h2>
-<div class="presenter-space">
 <ul>
 <li><p><code>my-research-project/</code></p>
 <ul>
@@ -600,12 +606,10 @@ ul.task-list li input[type="checkbox"] {
 <li><code>output</code></li>
 </ul></li>
 </ul>
-</div>
 <hr>
 </section>
 <section id="a-simple-project-folder-structure-1" class="level2">
 <h2 class="anchored" data-anchor-id="a-simple-project-folder-structure-1">A simple project folder structure</h2>
-<div class="presenter-space">
 <ul>
 <li><p><code>data-raw</code></p>
 <ul>
@@ -624,26 +628,21 @@ ul.task-list li input[type="checkbox"] {
 <li>Tables and figures.</li>
 </ul></li>
 </ul>
-</div>
 <hr>
 </section>
 <section id="recap" class="level2">
 <h2 class="anchored" data-anchor-id="recap">Recap</h2>
-<div class="presenter-space">
 <ul>
 <li><strong>Reproducibility</strong> means others can retrace your analysis.</li>
 <li><strong>Separating</strong> data and code is key.</li>
 <li>A clear folder structure is <strong>essential</strong> for good analysis.</li>
 </ul>
-</div>
 <hr>
-<div class="presenter-space">
 <p><strong>Why this matters:</strong></p>
 <ul>
 <li>Reproducible workflows make your analysis clearer and more reliable.</li>
 <li>Knowing how to set up a folder structure now will save you from headaches in the future!</li>
 </ul>
-</div>
 
 
 </section>
