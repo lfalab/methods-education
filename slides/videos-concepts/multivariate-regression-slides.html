@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-html/tabby.min.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <meta name="author" content="Leonardo Falabella">
-  <title>Seminar Activity: Weights and Visual Inference</title>
+  <title>Multivariate Regression</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -29,11 +28,11 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-f88d935cd01326925f73dc62b106448c.css">
-  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-7433acd2865db5fa81269247cd6920be.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -126,215 +125,136 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Seminar Activity: Weights and Visual Inference</h1>
-  <p class="subtitle">Statistics for Political Science — Week 7</p>
 
-<div class="quarto-title-authors">
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-Leonardo Falabella 
+<section>
+<section id="multivariate-regression" class="title-slide slide level1 title-left center">
+<h1>Multivariate Regression</h1>
+
+</section>
+<section id="youll-learn-to" class="slide level2">
+<h2>You’ll learn to</h2>
+<div class="presenter-space">
+<ul>
+<li class="fragment">Write a regression equation with <strong>multiple explanatory variables</strong>.</li>
+<li class="fragment">Interpret a slope “holding other variables constant.”</li>
+<li class="fragment">Compare <strong>bivariate</strong> and <strong>multivariate</strong> regression results.</li>
+</ul>
 </div>
+</section>
+<section id="recall-education-and-the-leave-vote" class="slide level2">
+<h2>Recall: Education and the Leave vote</h2>
+<div class="presenter-space">
+<ul>
+<li class="fragment">We previously regressed <strong>Leave vote share</strong> on <strong>higher education</strong>.</li>
+<li class="fragment">Slope: <span class="math inline">\(b = -1.13\)</span> per percentage point of graduates.</li>
+<li class="fragment"><span class="math inline">\(R^2 = 0.30\)</span>: education explains 30% of the variation.</li>
+</ul>
 </div>
+</section>
+<section id="another-predictor-immigration-and-the-leave-vote" class="slide level2">
+<h2>Another predictor: Immigration and the Leave vote</h2>
+<div class="presenter-space">
+<ul>
+<li class="fragment">We can also regress <strong>Leave vote share</strong> on <strong>immigrant share</strong>.</li>
+<li class="fragment">Slope: <span class="math inline">\(b = -0.41\)</span>, statistically significant (<span class="math inline">\(p &lt; 0.001\)</span>).</li>
+<li class="fragment">Regions with more foreign-born residents voted Leave less.</li>
+</ul>
+</div>
+</section>
+<section id="can-we-include-both-variables-at-once" class="slide level2">
+<h2>Can we include both variables at once?</h2>
+<div class="presenter-space">
+<ul>
+<li class="fragment">Both <strong>education</strong> and <strong>immigration</strong> predict Leave voting separately.</li>
+<li class="fragment">What happens if we put them in the same model?</li>
+<li class="fragment">This is what <strong>multivariate regression</strong> does.</li>
+</ul>
+</div>
+</section>
+<section id="the-multivariate-regression-equation" class="slide level2">
+<h2>The multivariate regression equation</h2>
+<div class="presenter-space">
+<p>A simple (bivariate) regression has one explanatory variable:</p>
+<p><span class="math display">\[\widehat{Y} = b_0 + b_1 X\]</span></p>
+<p>A multivariate regression has two or more:</p>
+<p><span class="math display">\[\widehat{Y} = b_0 + b_1 X_1 + b_2 X_2\]</span></p>
+</div>
+</section>
+<section id="our-multivariate-regression" class="slide level2">
+<h2>Our multivariate regression</h2>
+<div class="presenter-space">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>Coefficient</th>
+<th>P-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Education</strong></td>
+<td>-1.14</td>
+<td>&lt; 0.001</td>
+</tr>
+<tr class="even">
+<td><strong>Immigration</strong></td>
+<td>0.08</td>
+<td>0.449</td>
+</tr>
+<tr class="odd">
+<td><strong>Intercept</strong></td>
+<td>83.49</td>
+<td>&lt; 0.001</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">\(R^2 = 0.30\)</span>, <span class="math inline">\(N = 139\)</span>.</p>
+</div>
+</section>
+<section id="interpreting-holding-constant" class="slide level2">
+<h2>Interpreting “holding constant”</h2>
+<div class="presenter-space">
+<ul>
+<li class="fragment">Education slope (-1.14): expected change in Leave share per point of education, <strong>comparing regions with similar immigration</strong>.</li>
+<li class="fragment">“Holding constant” isolates one variable’s contribution.</li>
+<li class="fragment">Equivalent phrase: “all else equal.”</li>
+</ul>
+</div>
+</section>
+<section id="what-changed" class="slide level2">
+<h2>What changed?</h2>
+<div class="presenter-space">
+<ul>
+<li class="fragment">Bivariate education slope: -1.13. Multivariate: -1.14. Almost identical.</li>
+<li class="fragment">Immigration: significant alone (-0.41), not in the multivariate model (0.08).</li>
+<li class="fragment"><span class="math inline">\(R^2\)</span> barely changed.</li>
+</ul>
+</div>
+</section>
+<section id="recap" class="slide level2">
+<h2>Recap</h2>
+<div class="presenter-space">
+<ul>
+<li class="fragment">Multivariate regression includes more than one <strong>explanatory variable</strong>.</li>
+<li class="fragment">Each coefficient is interpreted “holding other variables constant.”</li>
+<li class="fragment">Coefficients can change when additional variables are included.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="presenter-space">
+<p><strong>Why this matters:</strong></p>
+<ul>
+<li class="fragment">Most outcomes in political science have multiple causes.</li>
+<li class="fragment">A single explanatory variable rarely tells the whole story.</li>
+<li class="fragment">Multivariate regression lets us examine each variable’s contribution.</li>
+</ul>
 </div>
 
-</section>
-<section id="two-ideas-for-today" class="slide level2">
-<h2>Two ideas for today</h2>
-<ul>
-<li>What are <strong>survey weights</strong>, and why do we use them?</li>
-<li>How can we use <strong>plots with confidence intervals</strong> to visually approximate a hypothesis test?</li>
-</ul>
-</section>
-<section id="what-is-a-survey" class="slide level2">
-<h2>What is a survey?</h2>
-<ul>
-<li>A survey samples people from a larger <strong>target population</strong>.</li>
-<li>We want our estimates to represent that population — not just who happened to respond.</li>
-<li>But some groups are harder to reach than others.</li>
-</ul>
-</section>
-<section id="the-problem-unequal-representation" class="slide level2">
-<h2>The problem: unequal representation</h2>
-<ul>
-<li>Young men, low-income households, and rural residents tend to respond less.</li>
-<li>This means the raw sample is not a mirror image of the population.</li>
-<li>Estimates from an unweighted sample can be <strong>systematically biased</strong>.</li>
-</ul>
-</section>
-<section id="what-weights-do" class="slide level2">
-<h2>What weights do</h2>
-<ul>
-<li>Each respondent is assigned a <strong>weight</strong> that corrects for their under- or over-representation.</li>
-<li>A weight above 1 means the respondent’s group is <strong>underrepresented</strong> in the sample.</li>
-<li>A weight below 1 means their group is <strong>overrepresented</strong>.</li>
-</ul>
-</section>
-<section id="weights-in-the-bes" class="slide level2">
-<h2>Weights in the BES</h2>
-<ul>
-<li>The BES uses a <strong>demographic post-stratification weight</strong> (<code>wt_demog</code>).</li>
-<li>It adjusts for age, sex, and region.</li>
-<li>Weighted estimates better reflect the <strong>voting-eligible population</strong>.</li>
-</ul>
-</section>
-<section id="from-tables-to-plots" class="slide level2">
-<h2>From tables to plots</h2>
-<ul>
-<li>So far, inference has meant reading a table: find <code>diff</code>, find the 95% CI, check if it includes 0.</li>
-<li>Plots with confidence intervals let us do the same thing <strong>visually</strong>.</li>
-<li>This is how results are typically presented in published research.</li>
-</ul>
-</section>
-<section id="the-visual-heuristic" class="slide level2">
-<h2>The visual heuristic</h2>
-<ul>
-<li>Each group gets a <strong>point estimate</strong> (dot) and a <strong>95% confidence interval</strong> (bar).</li>
-<li>Ask: does one group’s dot lie <strong>outside</strong> the other group’s interval?</li>
-</ul>
-</section>
-<section id="the-rule-of-thumb" class="slide level2">
-<h2>The rule of thumb</h2>
-<ul>
-<li>Point estimate <strong>clearly outside</strong> the other group’s CI → groups likely differ significantly.</li>
-<li>Point estimate <strong>inside</strong> the other group’s CI → difference likely not significant.</li>
-<li>This is a <strong>heuristic</strong>: it can be conservative in borderline cases.</li>
-</ul>
-</section>
-<section id="heuristic-vs-formal-test" class="slide level2">
-<h2>Heuristic vs formal test</h2>
-<ul>
-<li>The visual check gives intuition — it is not the definitive answer.</li>
-<li>The formal decision rule remains: <strong>does the CI for the difference include 0?</strong></li>
-<li>Use the plot to orient yourself; use the test output to confirm.</li>
-</ul>
-</section>
-<section id="todays-activity" class="slide level2">
-<h2>Today’s activity</h2>
-<ul>
-<li>Open <code>hypothesis-bes.do</code> and run it in two stages per test.</li>
-<li>Use the plots to apply the visual heuristic.</li>
-<li>Then verify against the formal inferential output.</li>
-</ul>
-</section>
-<section id="activity" class="slide level2">
-<h2>Activity</h2>
-<p>This activity uses the British Election Study (BES) 2024. You will run two hypothesis tests — each in an unweighted and a survey-weighted version — and use the visual heuristic introduced above to approximate each conclusion before checking the formal output.</p>
-<p>The companion do-file is <code>hypothesis-bes.do</code>. It contains all the commands you need.</p>
-</section>
-<section class="slide level2">
 
-<h3 id="setup">Setup</h3>
-<ol type="1">
-<li>Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a>.</li>
-<li>Click on <code>do</code> and download <code>hypothesis-bes.do</code>.</li>
-<li>Save it to your <code>do</code> folder and update the working directory.</li>
-<li>Read through the file from top to bottom before running anything.</li>
-</ol>
-</section>
-<section id="test-1-gender-and-reform-vote-share" class="slide level2">
-<h2>Test 1 — Gender and Reform vote share</h2>
-<ul>
-<li><strong>Research question:</strong> Are men more likely than women to have voted for Reform UK?</li>
-<li><strong>Alternative Hypothesis (H1):</strong> Men are more likely to vote Reform than women.</li>
-<li><strong>Null Hypothesis (H0):</strong> No difference between men and women in their likelihood of voting Reform.</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h3 id="stage-1-unweighted">Stage 1: Unweighted</h3>
-<p><strong>Execute:</strong> Run the descriptive tabulation and the <code>prtest</code> command.</p>
-<p><strong>Interpret:</strong></p>
-<ul>
-<li>What share of men voted Reform? What share of women?</li>
-<li>What is the estimated difference (<code>diff</code>)? Is it positive or negative?</li>
-<li>Does the 95% confidence interval for <code>diff</code> include zero?</li>
-<li>Do we reject or fail to reject H0?</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h3 id="stage-2-survey-weighted">Stage 2: Survey-weighted</h3>
-<p><strong>Execute:</strong> Run the <code>svyset</code> declaration, <code>svy: proportion</code>, <code>svy: regress</code>, and the <code>marginsplot</code> commands.</p>
-<p><strong>Visual heuristic — inspect the plot:</strong></p>
-<ul>
-<li>Locate the point estimate for men and the confidence interval for women.</li>
-<li>Does the men’s point estimate lie inside or outside the women’s confidence interval?</li>
-<li>Based on this visual check alone: would you reject or fail to reject H0?</li>
-</ul>
-<p><strong>Formal check — inspect the <code>svy: regress</code> table:</strong></p>
-<ul>
-<li>Find the coefficient for “Female”.</li>
-<li>Does the 95% CI for this coefficient include zero?</li>
-<li>Does the formal output agree with your visual judgment?</li>
-</ul>
-<blockquote>
-<p><strong>Note:</strong> The coefficient in <code>svy: regress</code> is Female − Male. A negative value means women are less likely than men to have voted Reform.</p>
-</blockquote>
-<p><strong>Compare Stage 1 and Stage 2:</strong></p>
-<ul>
-<li>Do the unweighted and weighted results lead to the same conclusion?</li>
-<li>If the estimates differ, which direction does the weighting move them?</li>
-</ul>
-</section>
-<section id="test-2-newspaper-readership-and-ideology" class="slide level2">
-<h2>Test 2 — Newspaper readership and ideology</h2>
-<ul>
-<li><strong>Research question:</strong> Are Telegraph readers more right-leaning than Daily Mail readers?</li>
-<li><strong>Alternative Hypothesis (H1):</strong> Telegraph readers are more right-leaning than Mail readers.</li>
-<li><strong>Null Hypothesis (H0):</strong> No difference in mean ideology between Mail and Telegraph readers.</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h3 id="stage-1-unweighted-1">Stage 1: Unweighted</h3>
-<p><strong>Execute:</strong> Run the descriptive summary and the <code>ttest</code> command.</p>
-<p><strong>Interpret:</strong></p>
-<ul>
-<li>What is the mean ideology score for Mail readers? For Telegraph readers?</li>
-<li>What is the estimated difference (<code>diff</code>)? Which group is further right?</li>
-<li>Does the 95% confidence interval for <code>diff</code> include zero?</li>
-<li>Do we reject or fail to reject H0?</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h3 id="stage-2-survey-weighted-1">Stage 2: Survey-weighted</h3>
-<p><strong>Execute:</strong> Run the <code>svyset</code> declaration, <code>svy: mean</code>, <code>svy: regress</code>, and the <code>marginsplot</code> commands.</p>
-<p><strong>Visual heuristic — inspect the plot:</strong></p>
-<ul>
-<li>Locate the point estimate for Daily Mail readers and the confidence interval for Telegraph readers.</li>
-<li>Does the Mail point estimate lie inside or outside the Telegraph confidence interval?</li>
-<li>Based on this visual check alone: would you reject or fail to reject H0?</li>
-</ul>
-<p><strong>Formal check — inspect the <code>svy: regress</code> table:</strong></p>
-<ul>
-<li>Find the coefficient for the Telegraph group.</li>
-<li>Does the 95% CI for this coefficient include zero?</li>
-<li>Does the formal output agree with your visual judgment?</li>
-</ul>
-<blockquote>
-<p><strong>Note:</strong> The coefficient in <code>svy: regress</code> is Telegraph − Mail. A positive value means Telegraph readers place themselves further right than Mail readers on average.</p>
-</blockquote>
-<p><strong>Compare Stage 1 and Stage 2:</strong></p>
-<ul>
-<li>Do the unweighted and weighted results lead to the same conclusion?</li>
-<li>This example is chosen deliberately: the result does not change dramatically. What does this tell us about when weights matter most?</li>
-</ul>
-</section>
-<section id="summary" class="slide level2">
-<h2>Summary</h2>
-<p>In this activity, you have:</p>
-<ul>
-<li>Applied survey weights using <code>svyset</code> and <code>svy:</code> commands to produce design-corrected estimates.</li>
-<li>Used a <code>marginsplot</code> to visually approximate whether two groups differ significantly.</li>
-<li>Practised the rule of thumb: a point estimate lying outside the other group’s CI is a signal of a likely significant difference.</li>
-<li>Verified visual judgments against the formal confidence interval for the difference.</li>
-</ul>
-<p>The visual heuristic is a practical skill for reading published research. The formal test remains the definitive check.</p>
-
-
-</section>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -343,19 +263,19 @@ Leonardo Falabella
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
-  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>

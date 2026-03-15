@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <title>Describing Correlations in Stata</title>
+  <title>The Standard Error</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -28,7 +28,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-f88d935cd01326925f73dc62b106448c.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-7433acd2865db5fa81269247cd6920be.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -127,127 +127,139 @@
 
 
 <section>
-<section id="describing-correlations-in-stata" class="title-slide slide level1 title-left center">
-<h1>Describing Correlations in Stata</h1>
+<section id="the-standard-error" class="title-slide slide level1 title-left center">
+<h1>The Standard Error</h1>
 
 </section>
 <section id="youll-learn-to" class="slide level2">
 <h2>You’ll learn to</h2>
+<div class="presenter-space">
 <ul>
-<li>Generate and interpret <strong>bivariate summaries</strong> in Stata.</li>
+<li class="fragment">Explain what the <strong>standard error</strong> of a slope measures.</li>
+<li class="fragment">Connect it to the idea of <strong>repeated sampling</strong>.</li>
+<li class="fragment">Distinguish the standard error from the <strong>standard deviation</strong>.</li>
 </ul>
+</div>
 </section>
-<section id="step-1-download-the-british-election-study-dataset-from-our-shared-folder" class="slide level2">
-<h2>Step 1: Download the British Election Study dataset from our shared folder</h2>
+<section id="starting-point-a-regression-from-a-sample" class="slide level2">
+<h2>Starting point: a regression from a sample</h2>
+<div class="presenter-space">
 <ul>
-<li>Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a></li>
-<li>Click on <code>data-raw</code></li>
-<li>Download <code>British_Election_Study_2024.dta</code></li>
-<li>Save it into the <code>data-raw</code> folder on your computer</li>
+<li class="fragment">We regress <strong>ideology</strong> (0–10 scale) on <strong>age</strong> using the British Election Study.</li>
+<li class="fragment">Slope: 0.017 per year of age. Older respondents lean slightly more right.</li>
+<li class="fragment">This estimate comes from one particular sample of 2,649 respondents.</li>
 </ul>
+</div>
 </section>
-<section id="step-2-download-the-companion-do-file-for-this-activity" class="slide level2">
-<h2>Step 2: Download the companion do-file for this activity</h2>
+<section id="this-estimate-depends-on-our-sample" class="slide level2">
+<h2>This estimate depends on our sample</h2>
+<div class="presenter-space">
 <ul>
-<li>Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a></li>
-<li>Click on <code>do</code></li>
-<li>Download <code>bivariate-bes.do</code></li>
-<li>Save it into the <code>do</code> folder on your computer</li>
+<li class="fragment">If the BES had surveyed different people, the slope would differ slightly.</li>
+<li class="fragment">Our estimate of 0.017 is <strong>one of many possible outcomes</strong>.</li>
+<li class="fragment">How much would the slope vary across different samples?</li>
 </ul>
+</div>
 </section>
-<section id="step-3-insert-the-path-to-your-folder-on-your-computer" class="slide level2">
-<h2>Step 3: Insert the path to your folder on your computer</h2>
+<section id="the-thought-experiment-many-samples" class="slide level2">
+<h2>The thought experiment: many samples</h2>
+<div class="presenter-space">
 <ul>
-<li>This line of <code>bivariate-bes.do</code> has an “address” that only works on my computer.</li>
-<li>Replace it with the “address” to your project folder on your computer.</li>
+<li class="fragment">Imagine drawing 10 new surveys of the same size.</li>
+<li class="fragment">Each yields a slightly different slope: 0.019, 0.015, 0.021, 0.014, 0.018…</li>
+<li class="fragment">The estimate varies from sample to sample.</li>
 </ul>
-
-<img data-src="../../assets/stata-replace-cd2.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-4-select-the-top-portion-of-the-do-file-and-click-execute-do" class="slide level2">
-<h2>Step 4: Select the top portion of the do file and click “execute (do)”</h2>
-
-<img data-src="../../assets/stata-select-execute3.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-5-check-if-it-has-worked-and-save-your-do-file" class="slide level2">
-<h2>Step 5: Check if it has worked and save your do-file</h2>
-<ul>
-<li>If you see this on the top-right pane of your Stata screen, it has worked!</li>
-<li>Be sure to <strong>save your do-file</strong> in your <code>do</code> folder.</li>
-</ul>
-
-<img data-src="../../assets/stata-bes-variables.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-6-read-through-the-do-file-comments-and-execute-the-commands" class="slide level2">
-<h2>Step 6: Read through the do-file comments and execute the commands</h2>
-<ul>
-<li>This do-file will serve as your companion for learning how to describe <strong>bivariate relationships</strong> in Stata.</li>
-<li>The do-file covers <strong>three types</strong> of bivariate analysis, depending on the variable types involved.</li>
-</ul>
+</div>
 </section>
-<section id="what-is-bivariate-analysis" class="slide level2">
-<h2>What is bivariate analysis?</h2>
+<section id="the-sampling-distribution-of-the-slope" class="slide level2">
+<h2>The sampling distribution of the slope</h2>
+<div class="presenter-space">
 <ul>
-<li><strong>Univariate</strong> analysis describes one variable at a time.</li>
-<li><strong>Bivariate</strong> analysis describes relationships between <strong>two variables</strong>.</li>
-<li>The appropriate tool depends on the <strong>types of variables</strong> being analysed.</li>
+<li class="fragment">If we drew thousands of samples, the slopes would form a <strong>distribution</strong>.</li>
+<li class="fragment">This is the <strong>sampling distribution</strong> of the slope.</li>
+<li class="fragment">It is centred on the true population slope.</li>
 </ul>
+</div>
 </section>
-<section id="case-1-nominal-nominal" class="slide level2">
-<h2>Case 1: Nominal + Nominal</h2>
+<section id="the-standard-error-is-the-sd-of-this-distribution" class="slide level2">
+<h2>The standard error is the SD of this distribution</h2>
+<div class="presenter-space">
 <ul>
-<li><strong>Example:</strong> Gender and vote choice.</li>
-<li><strong>Tools:</strong> Cross-tabulation (<code>tabulate</code>) and grouped bar chart (<code>graph hbar</code>).</li>
-<li>The video uses <code>catplot</code>; the do-files use <code>graph hbar</code> instead. Output is equivalent.</li>
+<li class="fragment">The <strong>standard deviation</strong> measures spread in observed data.</li>
+<li class="fragment">The <strong>standard error</strong> measures spread in estimated slopes across samples.</li>
+<li class="fragment">Same concept, different target: data vs.&nbsp;estimates.</li>
 </ul>
+</div>
 </section>
-<section id="case-2-nominal-numeric" class="slide level2">
-<h2>Case 2: Nominal + Numeric</h2>
+<section id="why-this-matters-for-inference" class="slide level2">
+<h2>Why this matters for inference</h2>
+<div class="presenter-space">
 <ul>
-<li><strong>Example:</strong> Newspaper readership and ideology.</li>
-<li><strong>Tools:</strong> Compare means and bar chart of means.</li>
-<li>Use <code>by</code>: <code>summarize</code> to calculate group means.</li>
-<li>Use <code>graph hbar</code> with <code>over()</code> to visualise differences.</li>
+<li class="fragment">A small SE means the slope is <strong>precisely estimated</strong> (similar across samples).</li>
+<li class="fragment">A large SE means the slope is <strong>imprecisely estimated</strong> (varies a lot).</li>
+<li class="fragment">The SE is what makes p-values and confidence intervals possible.</li>
 </ul>
+</div>
 </section>
-<section id="case-3-numeric-numeric" class="slide level2">
-<h2>Case 3: Numeric + Numeric</h2>
+<section id="reading-the-standard-error-in-regression-output" class="slide level2">
+<h2>Reading the standard error in regression output</h2>
+<div class="presenter-space">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>Coefficient</th>
+<th>Std. err.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Age</strong></td>
+<td>0.017</td>
+<td>0.002</td>
+</tr>
+<tr class="even">
+<td><strong>Intercept</strong></td>
+<td>3.84</td>
+<td>0.114</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li><strong>Example:</strong> Import shock and Brexit vote share.</li>
-<li><strong>Tools:</strong> Scatterplot and regression line.</li>
-<li>Use <code>twoway (scatter)</code> to plot individual observations.</li>
-<li>Add <code>(lfit)</code> to overlay the regression line.</li>
+<li class="fragment">Each coefficient has its own standard error.</li>
+<li class="fragment">The ratio coefficient/SE is the t-statistic.</li>
 </ul>
+</div>
 </section>
-<section id="interpreting-scatterplots-and-regression-lines" class="slide level2">
-<h2>Interpreting scatterplots and regression lines</h2>
+<section id="the-t-statistic-how-many-ses-from-zero" class="slide level2">
+<h2>The t-statistic: how many SEs from zero?</h2>
+<div class="presenter-space">
 <ul>
-<li>The <strong>scatterplot</strong> shows individual data points; the <strong>regression line</strong> summarises the pattern.</li>
-<li><strong>Direction:</strong> upward slope = positive; downward slope = negative.</li>
-<li><strong>Strength:</strong> points near the line = strong; widely scattered = weak.</li>
+<li class="fragment">The <strong>t-statistic</strong> is the slope divided by its standard error: <span class="math inline">\(t = b / SE\)</span>.</li>
+<li class="fragment">It asks: how far is the estimate from zero, measured in standard errors?</li>
+<li class="fragment">A large <span class="math inline">\(|t|\)</span> (roughly above 2) means the slope is unlikely to be zero by chance.</li>
 </ul>
-</section>
-<section id="your-turn-explore-bivariate-relationships" class="slide level2">
-<h2>Your turn: Explore bivariate relationships</h2>
-<ul>
-<li>Open <code>bivariate-bes.do</code> and work through all three cases.</li>
-<li>Download <code>bivariate-brexit.do</code> for additional scatterplot examples.</li>
-<li>Try modifying the commands to answer your own research questions.</li>
-</ul>
+</div>
 </section>
 <section id="recap" class="slide level2">
 <h2>Recap</h2>
+<div class="presenter-space">
 <ul>
-<li><strong>Cross-tabulations</strong> and <strong>grouped bar charts</strong> describe associations between nominal variables.</li>
-<li><strong>Bar charts of means</strong> summarise differences in a numeric variable across categories.</li>
-<li><strong>Scatterplots</strong> and <strong>regression lines</strong> summarise relationships between two numeric variables.</li>
+<li class="fragment">The <strong>standard error</strong> measures how much a slope would vary across repeated samples.</li>
+<li class="fragment">Smaller SE means a more precise estimate.</li>
 </ul>
+</div>
 </section>
 <section class="slide level2">
 
+<div class="presenter-space">
 <p><strong>Why this matters:</strong></p>
 <ul>
-<li>Describing relationships between variables is the foundation for asking why those relationships exist.</li>
-<li>Choosing the wrong tool for the wrong variable types produces meaningless or misleading output.</li>
-<li>These skills are essential for interpreting bivariate analyses in research papers, reports, and public debate.</li>
+<li class="fragment">Every regression estimate comes from a single sample.</li>
+<li class="fragment">The standard error quantifies the uncertainty in that estimate.</li>
+<li class="fragment">Understanding SE is essential for interpreting significance and confidence intervals.</li>
 </ul>
+</div>
 
 
 </section></section>

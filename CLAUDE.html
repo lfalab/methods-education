@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -516,6 +551,53 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 10: Multivariate Regression</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./slides/videos-concepts/multivariate-regression.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Multivariate Regression</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./slides/videos-concepts/controls-confounding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Controls and Confounding</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./slides/videos-concepts/standard-error.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Standard Error</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./slides/videos-concepts/regression-tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reading Regression Tables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./slides/videos-stata/multivariate-stata.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Multivariate Regression in Stata</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./activities/A10b-ps2-workshop-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PS2 Workshop 3: Interpretation and Discussion</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -585,6 +667,170 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 </section>
 </section>
+<section id="shared-project-folder" class="level1">
+<h1>Shared Project Folder</h1>
+<p><code>shared-project-folder/</code> is a student-facing teaching resource located at the root of the repository.</p>
+<p>It is shared with students via an OneDrive link. <strong>Students have view-only access</strong> — they cannot modify files.</p>
+<p>The folder uses a <strong>nested <code>.gitignore</code></strong> pattern: do-files (<code>shared-project-folder/do/*.do</code>) are git-tracked, while data files, output, and other binary content are ignored. This ensures do-files are referenceable with <code>@</code> in VSCode’s Claude Code extension.</p>
+<p>There is <strong>no <code>CLAUDE.md</code> inside this folder</strong> — this is intentional, since students can read all files in it.</p>
+<section id="subdirectories" class="level3">
+<h3 class="anchored" data-anchor-id="subdirectories">Subdirectories</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Directory</th>
+<th>Purpose</th>
+<th>Claude may edit?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>data-raw/</code></td>
+<td>Original datasets (<code>.dta</code>) and codebooks (<code>.pdf</code>, <code>.docx</code>)</td>
+<td>No</td>
+</tr>
+<tr class="even">
+<td><code>data-clean/</code></td>
+<td>Cleaned/processed datasets saved by do-files</td>
+<td>No</td>
+</tr>
+<tr class="odd">
+<td><code>do/</code></td>
+<td>Stata do-files used in teaching</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td><code>output/</code></td>
+<td>Generated graphs (<code>.jpg</code>) saved by do-files</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="do-file-conventions" class="level3">
+<h3 class="anchored" data-anchor-id="do-file-conventions">Do-file conventions</h3>
+<p>All do-files set the working directory with <code>cd</code> as the first command, then use <strong>relative paths</strong> for everything else (e.g., <code>"data-raw/British_Election_Study_2024.dta"</code>).</p>
+<p>The canonical working directory path is:</p>
+<pre><code>cd "C:\Users\leona\OneDrive - King's College London\methods-education\shared-project-folder"</code></pre>
+<p>When creating or editing do-files, always use this path.</p>
+<hr>
+</section>
+</section>
+<section id="running-stata-from-claude-code" class="level1">
+<h1>Running Stata from Claude Code</h1>
+<p>Claude Code can execute Stata do-files and read the output directly from the terminal. This enables Claude to verify statistical examples, debug do-files, create new analyses, and report regression results — all without the user switching to the Stata GUI.</p>
+<p>The teaching materials on the website (slides, activities) are tightly coupled to the Stata do-files and datasets in <code>shared-project-folder/</code>. Being able to run these do-files is essential for maintaining and developing the course.</p>
+<section id="how-it-works" class="level3">
+<h3 class="anchored" data-anchor-id="how-it-works">How it works</h3>
+<p>Stata is installed at <code>C:\Program Files\Stata19\StataSE-64.exe</code>.</p>
+<p>Running Stata from the Claude Code terminal requires working around three Windows issues:</p>
+<ol type="1">
+<li><strong>MSYS2 path mangling</strong> — Git Bash converts <code>/e</code> to <code>E:/</code>. Set <code>MSYS_NO_PATHCONV=1</code> to disable this.</li>
+<li><strong>GUI executable</strong> — <code>StataSE-64.exe</code> is a GUI app; <code>cmd</code> doesn’t wait for it. Use PowerShell <code>Start-Process -Wait</code> instead.</li>
+<li><strong>Output capture</strong> — Stata’s <code>/e</code> batch mode log is unreliable. Use Stata’s <code>log using</code> command inside the do-file for explicit output capture.</li>
+</ol>
+</section>
+<section id="step-1-write-a-wrapper-do-file-to-ctemp" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-write-a-wrapper-do-file-to-ctemp">Step 1: Write a wrapper do-file to <code>C:\temp\</code></h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span> <span class="kw">using</span> <span class="st">"C:</span><span class="ch">\t</span><span class="st">emp\stata-output.log"</span>, <span class="bn">text</span> <span class="kw">replace</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>cd <span class="st">"C:\Users\leona\OneDrive - King's College London\methods-education\shared-project-folder"</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="st">"data-raw/Brexit_Regional.dta"</span>, <span class="kw">clear</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="kw">regress</span> leave_share share_high_skill</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span> <span class="kw">close</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="kw">exit</span>, <span class="kw">clear</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The wrapper always follows this pattern: - <code>log using "C:\temp\stata-output.log", text replace</code> — open a text log at a known path - The actual Stata commands (loading data, analysis, etc.) - <code>log close</code> — flush the log - <code>exit, clear</code> — close Stata cleanly</p>
+<p>To run an existing do-file, the wrapper can call it with <code>do "do/filename.do"</code> after setting <code>cd</code>.</p>
+</section>
+<section id="step-2-execute-from-the-terminal" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-execute-from-the-terminal">Step 2: Execute from the terminal</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="va">MSYS_NO_PATHCONV</span><span class="op">=</span>1 <span class="ex">powershell</span> <span class="at">-Command</span> <span class="st">'$p = Start-Process -FilePath "C:\Program Files\Stata19\StataSE-64.exe" -ArgumentList "/e","do","C:\temp\&lt;wrapper&gt;.do" -Wait -PassThru; Write-Output "ExitCode: $($p.ExitCode)"'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Replace <code>&lt;wrapper&gt;</code> with the name of the wrapper do-file.</p>
+<p>An exit code of <code>0</code> means success.</p>
+</section>
+<section id="step-3-read-the-log" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-read-the-log">Step 3: Read the log</h3>
+<p>Read <code>C:\temp\stata-output.log</code> to retrieve the Stata output (regression tables, summary statistics, etc.).</p>
+</section>
+<section id="conventions" class="level3">
+<h3 class="anchored" data-anchor-id="conventions">Conventions</h3>
+<ul>
+<li>Wrapper do-files and logs go in <code>C:\temp\</code> (outside the repository).</li>
+<li>Never commit wrapper do-files or log files to the repository.</li>
+<li>Always include <code>exit, clear</code> at the end of wrapper do-files so Stata closes after running.</li>
+<li>When running an existing do-file from <code>shared-project-folder/do/</code>, wrap it rather than modifying it.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="running-r-from-claude-code" class="level1">
+<h1>Running R from Claude Code</h1>
+<p>Claude Code can execute R scripts from the terminal. This is useful for generating plots, running analyses with R-based datasets, and verifying R code in legacy materials.</p>
+<section id="how-it-works-1" class="level3">
+<h3 class="anchored" data-anchor-id="how-it-works-1">How it works</h3>
+<p>R 4.2.0 is installed at <code>C:\Program Files\R\R-4.2.0\bin\Rscript.exe</code>.</p>
+<p>R is <strong>not</strong> on the system PATH. Always use the full path to <code>Rscript.exe</code>.</p>
+</section>
+<section id="running-a-script" class="level3">
+<h3 class="anchored" data-anchor-id="running-a-script">Running a script</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="st">"C:\Program Files\R\R-4.2.0\bin\Rscript.exe"</span> <span class="st">"path/to/script.R"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="running-inline-r" class="level3">
+<h3 class="anchored" data-anchor-id="running-inline-r">Running inline R</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="st">"C:\Program Files\R\R-4.2.0\bin\Rscript.exe"</span> <span class="at">-e</span> <span class="st">'library(readxl); d &lt;- read_excel("file.xlsx"); str(d)'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Note: single quotes around the <code>-e</code> expression work in Git Bash. Escape internal single quotes with <code>'"'"'</code> if needed.</p>
+</section>
+<section id="available-packages" class="level3">
+<h3 class="anchored" data-anchor-id="available-packages">Available packages</h3>
+<p>The following packages are confirmed available: <code>tidyverse</code>, <code>readxl</code>, <code>ggplot2</code>, <code>dplyr</code>, <code>tidyr</code>.</p>
+</section>
+<section id="saving-plot-output" class="level3">
+<h3 class="anchored" data-anchor-id="saving-plot-output">Saving plot output</h3>
+<p>R scripts run from the terminal have no display device. To produce plots, use <code>ggsave()</code> or <code>pdf()</code>/<code>png()</code> to write to a file:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"C:/temp/plot.png"</span>, <span class="at">width =</span> <span class="dv">8</span>, <span class="at">height =</span> <span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="conventions-1" class="level3">
+<h3 class="anchored" data-anchor-id="conventions-1">Conventions</h3>
+<ul>
+<li>R is primarily used for legacy code and plot generation, not for the main teaching materials (which use Stata).</li>
+<li>Temporary R output files go in <code>C:\temp\</code> (outside the repository).</li>
+<li>Never commit R output files to the repository.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="legacy-materials-directory" class="level1">
+<h1>Legacy Materials Directory</h1>
+<p><code>legacy/</code> contains teaching materials from a previous version of this course taught at UCSD. These are <strong>read-only reference sources</strong> used as starting points when creating new slide decks and videos for the KCL course.</p>
+<p>The directory is gitignored (contents are not tracked, except <code>legacy/CLAUDE.md</code> and <code>legacy/.gitignore</code>).</p>
+<p>See <code>legacy/CLAUDE.md</code> for the full directory structure, file inventory, and mapping between legacy sources and current pages.</p>
+<section id="content-creation-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="content-creation-workflow">Content creation workflow</h3>
+<p>New slide decks and videos are created iteratively with Claude using legacy materials as springboards:</p>
+<ol type="1">
+<li>Read relevant legacy slides, transcripts, and reference pages on the topic</li>
+<li>Adapt the pedagogical structure and explanations for the KCL context</li>
+<li>Replace canonical examples (UCSD used California/Trump data; KCL uses Brexit, BES, QoG, NSS datasets)</li>
+<li>Produce new <code>.qmd</code> slide decks for the Quarto website</li>
+</ol>
+</section>
+<section id="rules" class="level3">
+<h3 class="anchored" data-anchor-id="rules">Rules</h3>
+<ul>
+<li>Claude may <strong>read</strong> files in <code>legacy/</code> for reference</li>
+<li>Claude must <strong>not modify</strong> files in <code>legacy/</code> (except <code>legacy/CLAUDE.md</code> if instructed)</li>
+<li>Legacy materials inform structure and pedagogy, not specific examples or data</li>
+<li>When asked to create new content, check <code>legacy/</code> for relevant source material</li>
+</ul>
+<hr>
+</section>
+</section>
 <section id="shared-resource-directories" class="level1">
 <h1>Shared Resource Directories</h1>
 <p>These directories contain reusable assets.</p>
@@ -610,7 +856,6 @@ ul.task-list li input[type="checkbox"] {
 <h1>Protected Configuration Files</h1>
 <p>Claude may read these files but must not modify them unless explicitly instructed.</p>
 <ul>
-<li><code>_quarto.yml</code></li>
 <li><code>styles.css</code></li>
 <li>files inside <code>theme/</code></li>
 <li><code>index.qmd</code></li>
@@ -649,8 +894,11 @@ ul.task-list li input[type="checkbox"] {
 <li>add teaching material</li>
 <li>embed YouTube videos when instructed</li>
 <li>make small layout improvements within individual pages</li>
+<li>create and edit Stata do-files in <code>shared-project-folder/do/</code></li>
+<li>run Stata do-files from the terminal and read the output (see “Running Stata from Claude Code”)</li>
+<li>report and interpret Stata output (regression tables, summary statistics, etc.)</li>
 </ul>
-<p>Claude should <strong>not modify site navigation</strong> unless explicitly asked.</p>
+<p>When creating new content pages, Claude <strong>must update <code>_quarto.yml</code></strong> to add the page to the sidebar so it appears on the site. Keeping the sidebar in sync with new content is part of the task, not a separate step requiring explicit instruction.</p>
 <hr>
 </section>
 <section id="path-and-link-safety" class="level1">
@@ -658,6 +906,23 @@ ul.task-list li input[type="checkbox"] {
 <p>This repository relies heavily on <strong>relative paths</strong>.</p>
 <p>Claude must not change relative paths unless explicitly instructed.</p>
 <p>Breaking paths can break the site.</p>
+<hr>
+</section>
+<section id="gitignore-convention-for-non-tracked-directories" class="level1">
+<h1>Gitignore Convention for Non-Tracked Directories</h1>
+<p>When a directory contains files that should not be committed (e.g., large datasets, binary output) but also contains files that Claude needs to reference or edit, <strong>never add the directory name to the root <code>.gitignore</code></strong>.</p>
+<p>A root-level directory ignore (e.g., <code>my-folder/</code>) prevents git from descending into the directory entirely. This means files inside it <strong>cannot be referenced with <code>@</code></strong> in VSCode’s Claude Code extension.</p>
+<p>Instead, use a <strong>nested <code>.gitignore</code></strong> inside the directory:</p>
+<pre><code># Ignore all contents by default
+*
+
+# Track this gitignore
+!.gitignore
+
+# Selectively un-ignore files that should be tracked
+!do/
+!do/*.do</code></pre>
+<p>This pattern is used by <code>legacy/.gitignore</code> and <code>shared-project-folder/.gitignore</code>. Any new directories added to the project that need selective tracking must follow the same convention.</p>
 <hr>
 </section>
 <section id="editing-workflow" class="level1">
@@ -687,24 +952,26 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="rendering-validation" class="level1">
 <h1>Rendering Validation</h1>
-<p>If structural files are edited:</p>
-<ol type="1">
-<li>Render the Quarto site locally</li>
-<li>Confirm the render succeeds</li>
-<li>Report warnings or errors</li>
-</ol>
+<p>A full site render is slow (71+ pages). <strong>Do not render after every change.</strong> Render only when explicitly asked by the user or at the very end of a multi-file task before committing.</p>
+<p>When rendering:</p>
+<ul>
+<li>Prefer <code>quarto render path/to/specific-file.qmd</code> for single-file checks (this only works after a full render has been run at least once in the session).</li>
+<li>Use a full <code>quarto render</code> only when structural files (<code>_quarto.yml</code>, theme, templates) have been edited or when the user requests it.</li>
+<li>Do not render speculatively to “check if it works.” Trust the <code>.qmd</code> syntax; render to verify only when there is a specific reason to doubt correctness.</li>
+</ul>
 <p>If rendering fails, stop and report the issue.</p>
 <hr>
 </section>
 <section id="deployment-rules" class="level1">
 <h1>Deployment Rules</h1>
-<p>Claude must never:</p>
+<p>Claude may publish the website <strong>when explicitly asked</strong> by the user using:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> publish gh-pages <span class="at">--no-browser</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Claude must <strong>never</strong> publish without explicit instruction. Each publish pushes to the <code>gh-pages</code> branch and updates the live site.</p>
+<p>Claude must not:</p>
 <ul>
-<li>publish the website</li>
-<li>push commits</li>
+<li>push commits to the main branch (deployment is separate from committing)</li>
 <li>modify GitHub Pages configuration</li>
 </ul>
-<p>Deployment is handled manually by the repository owner.</p>
 <hr>
 </section>
 <section id="project-memory-file" class="level1">
@@ -724,8 +991,7 @@ ul.task-list li input[type="checkbox"] {
 <li>delete files</li>
 <li>modify global configuration</li>
 <li>alter theme styling</li>
-<li>restructure navigation</li>
-<li>modify sidebar navigation in <code>_quarto.yml</code></li>
+<li>restructure navigation (beyond adding new pages to the sidebar)</li>
 </ul>
 
 

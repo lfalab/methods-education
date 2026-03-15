@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <title>Describing Correlations in Stata</title>
+  <title>Controls and Confounding</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -28,7 +28,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-f88d935cd01326925f73dc62b106448c.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-7433acd2865db5fa81269247cd6920be.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -127,127 +127,159 @@
 
 
 <section>
-<section id="describing-correlations-in-stata" class="title-slide slide level1 title-left center">
-<h1>Describing Correlations in Stata</h1>
+<section id="controls-and-confounding" class="title-slide slide level1 title-left center">
+<h1>Controls and Confounding</h1>
 
 </section>
 <section id="youll-learn-to" class="slide level2">
 <h2>You’ll learn to</h2>
+<div class="presenter-space">
 <ul>
-<li>Generate and interpret <strong>bivariate summaries</strong> in Stata.</li>
+<li class="fragment">Explain why multivariate regression helps address <strong>confounding</strong>.</li>
+<li class="fragment">Interpret what happens when a coefficient “goes away.”</li>
+<li class="fragment">Recognise the limits of <strong>controlling for confounders</strong>.</li>
 </ul>
+</div>
 </section>
-<section id="step-1-download-the-british-election-study-dataset-from-our-shared-folder" class="slide level2">
-<h2>Step 1: Download the British Election Study dataset from our shared folder</h2>
+<section id="recall-confounding-variables" class="slide level2">
+<h2>Recall: Confounding variables</h2>
+<div class="presenter-space">
 <ul>
-<li>Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a></li>
-<li>Click on <code>data-raw</code></li>
-<li>Download <code>British_Election_Study_2024.dta</code></li>
-<li>Save it into the <code>data-raw</code> folder on your computer</li>
+<li class="fragment">A <strong>confounding variable</strong> affects both X and Y, creating a spurious association.</li>
+<li class="fragment">We identified confounding as a threat to causal claims in Week 9.</li>
+<li class="fragment">Multivariate regression lets us <strong>control for</strong> potential confounders.</li>
 </ul>
+</div>
 </section>
-<section id="step-2-download-the-companion-do-file-for-this-activity" class="slide level2">
-<h2>Step 2: Download the companion do-file for this activity</h2>
+<section id="how-controlling-works" class="slide level2">
+<h2>How controlling works</h2>
+<div class="presenter-space">
 <ul>
-<li>Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a></li>
-<li>Click on <code>do</code></li>
-<li>Download <code>bivariate-bes.do</code></li>
-<li>Save it into the <code>do</code> folder on your computer</li>
+<li class="fragment">Include the suspected confounder as a variable in the regression.</li>
+<li class="fragment">The coefficient on X now compares units with <strong>similar values of the confounder</strong>.</li>
+<li class="fragment">If X’s coefficient shrinks or disappears, confounding was likely present.</li>
 </ul>
+</div>
 </section>
-<section id="step-3-insert-the-path-to-your-folder-on-your-computer" class="slide level2">
-<h2>Step 3: Insert the path to your folder on your computer</h2>
+<section id="example-1-immigration-and-the-leave-vote" class="slide level2">
+<h2>Example 1: Immigration and the Leave vote</h2>
+<div class="presenter-space">
 <ul>
-<li>This line of <code>bivariate-bes.do</code> has an “address” that only works on my computer.</li>
-<li>Replace it with the “address” to your project folder on your computer.</li>
+<li class="fragment">Bivariate regression: regions with more immigrants voted Leave less.</li>
+<li class="fragment">Slope: <span class="math inline">\(b = -0.41\)</span>, statistically significant (<span class="math inline">\(p &lt; 0.001\)</span>).</li>
+<li class="fragment">But could <strong>education</strong> be driving both immigration and Leave voting?</li>
 </ul>
-
-<img data-src="../../assets/stata-replace-cd2.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-4-select-the-top-portion-of-the-do-file-and-click-execute-do" class="slide level2">
-<h2>Step 4: Select the top portion of the do file and click “execute (do)”</h2>
-
-<img data-src="../../assets/stata-select-execute3.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-5-check-if-it-has-worked-and-save-your-do-file" class="slide level2">
-<h2>Step 5: Check if it has worked and save your do-file</h2>
-<ul>
-<li>If you see this on the top-right pane of your Stata screen, it has worked!</li>
-<li>Be sure to <strong>save your do-file</strong> in your <code>do</code> folder.</li>
-</ul>
-
-<img data-src="../../assets/stata-bes-variables.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-6-read-through-the-do-file-comments-and-execute-the-commands" class="slide level2">
-<h2>Step 6: Read through the do-file comments and execute the commands</h2>
-<ul>
-<li>This do-file will serve as your companion for learning how to describe <strong>bivariate relationships</strong> in Stata.</li>
-<li>The do-file covers <strong>three types</strong> of bivariate analysis, depending on the variable types involved.</li>
-</ul>
+</div>
 </section>
-<section id="what-is-bivariate-analysis" class="slide level2">
-<h2>What is bivariate analysis?</h2>
+<section id="education-as-a-confounder" class="slide level2">
+<h2>Education as a confounder</h2>
+<div class="presenter-space">
 <ul>
-<li><strong>Univariate</strong> analysis describes one variable at a time.</li>
-<li><strong>Bivariate</strong> analysis describes relationships between <strong>two variables</strong>.</li>
-<li>The appropriate tool depends on the <strong>types of variables</strong> being analysed.</li>
+<li class="fragment">Educated regions attract more immigrants (better economic opportunities).</li>
+<li class="fragment">Educated regions also voted Remain.</li>
+<li class="fragment">Education affects both the explanatory variable and the outcome.</li>
 </ul>
+</div>
 </section>
-<section id="case-1-nominal-nominal" class="slide level2">
-<h2>Case 1: Nominal + Nominal</h2>
+<section id="controlling-for-education" class="slide level2">
+<h2>Controlling for education</h2>
+<div class="presenter-space">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>Bivariate</th>
+<th>Multivariate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Immigration</strong></td>
+<td>-0.41</td>
+<td>0.08</td>
+</tr>
+<tr class="even">
+<td><strong>Education</strong></td>
+<td>—</td>
+<td>-1.14</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li><strong>Example:</strong> Gender and vote choice.</li>
-<li><strong>Tools:</strong> Cross-tabulation (<code>tabulate</code>) and grouped bar chart (<code>graph hbar</code>).</li>
-<li>The video uses <code>catplot</code>; the do-files use <code>graph hbar</code> instead. Output is equivalent.</li>
+<li class="fragment">Immigration’s effect disappears once education is held constant.</li>
 </ul>
+</div>
 </section>
-<section id="case-2-nominal-numeric" class="slide level2">
-<h2>Case 2: Nominal + Numeric</h2>
+<section id="example-2-health-spending-and-co2-emissions" class="slide level2">
+<h2>Example 2: Health spending and CO2 emissions</h2>
+<div class="presenter-space">
 <ul>
-<li><strong>Example:</strong> Newspaper readership and ideology.</li>
-<li><strong>Tools:</strong> Compare means and bar chart of means.</li>
-<li>Use <code>by</code>: <code>summarize</code> to calculate group means.</li>
-<li>Use <code>graph hbar</code> with <code>over()</code> to visualise differences.</li>
+<li class="fragment">Across countries, health expenditure strongly predicts CO2 emissions.</li>
+<li class="fragment">Slope: <span class="math inline">\(b = 0.73\)</span> (<span class="math inline">\(p &lt; 0.001\)</span>). Countries spending more on health pollute more.</li>
+<li class="fragment">Does healthcare cause pollution? Obviously not. What is going on?</li>
 </ul>
+</div>
 </section>
-<section id="case-3-numeric-numeric" class="slide level2">
-<h2>Case 3: Numeric + Numeric</h2>
+<section id="controlling-for-gdp-per-capita" class="slide level2">
+<h2>Controlling for GDP per capita</h2>
+<div class="presenter-space">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>Bivariate</th>
+<th>Multivariate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Health spending</strong></td>
+<td>0.73</td>
+<td>-0.04</td>
+</tr>
+<tr class="even">
+<td><strong>GDP per capita</strong></td>
+<td>—</td>
+<td>0.91</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li><strong>Example:</strong> Import shock and Brexit vote share.</li>
-<li><strong>Tools:</strong> Scatterplot and regression line.</li>
-<li>Use <code>twoway (scatter)</code> to plot individual observations.</li>
-<li>Add <code>(lfit)</code> to overlay the regression line.</li>
+<li class="fragment">The health-CO2 relationship vanishes.</li>
+<li class="fragment">National income drove both variables.</li>
 </ul>
+</div>
 </section>
-<section id="interpreting-scatterplots-and-regression-lines" class="slide level2">
-<h2>Interpreting scatterplots and regression lines</h2>
+<section id="does-controlling-for-confounders-prove-causation" class="slide level2">
+<h2>Does controlling for confounders prove causation?</h2>
+<div class="presenter-space">
 <ul>
-<li>The <strong>scatterplot</strong> shows individual data points; the <strong>regression line</strong> summarises the pattern.</li>
-<li><strong>Direction:</strong> upward slope = positive; downward slope = negative.</li>
-<li><strong>Strength:</strong> points near the line = strong; widely scattered = weak.</li>
+<li class="fragment">No.&nbsp;<strong>“Confounding variables are everywhere.”</strong></li>
+<li class="fragment">We can only control for variables we observe and think of.</li>
+<li class="fragment">Controls also do not address concerns about <strong>reverse causality</strong>.</li>
 </ul>
-</section>
-<section id="your-turn-explore-bivariate-relationships" class="slide level2">
-<h2>Your turn: Explore bivariate relationships</h2>
-<ul>
-<li>Open <code>bivariate-bes.do</code> and work through all three cases.</li>
-<li>Download <code>bivariate-brexit.do</code> for additional scatterplot examples.</li>
-<li>Try modifying the commands to answer your own research questions.</li>
-</ul>
+</div>
 </section>
 <section id="recap" class="slide level2">
 <h2>Recap</h2>
+<div class="presenter-space">
 <ul>
-<li><strong>Cross-tabulations</strong> and <strong>grouped bar charts</strong> describe associations between nominal variables.</li>
-<li><strong>Bar charts of means</strong> summarise differences in a numeric variable across categories.</li>
-<li><strong>Scatterplots</strong> and <strong>regression lines</strong> summarise relationships between two numeric variables.</li>
+<li class="fragment">Adding a confounder to a regression can reveal spurious relationships.</li>
+<li class="fragment">A coefficient that “goes away” suggests confounding was present.</li>
+<li class="fragment">Controls reduce confounding concerns but cannot establish causation.</li>
 </ul>
+</div>
 </section>
 <section class="slide level2">
 
+<div class="presenter-space">
 <p><strong>Why this matters:</strong></p>
 <ul>
-<li>Describing relationships between variables is the foundation for asking why those relationships exist.</li>
-<li>Choosing the wrong tool for the wrong variable types produces meaningless or misleading output.</li>
-<li>These skills are essential for interpreting bivariate analyses in research papers, reports, and public debate.</li>
+<li class="fragment">Most social science research uses observational data, not experiments.</li>
+<li class="fragment">Multivariate regression is the primary tool for addressing confounders.</li>
+<li class="fragment">Understanding its limits is essential for interpreting research critically.</li>
 </ul>
+</div>
 
 
 </section></section>

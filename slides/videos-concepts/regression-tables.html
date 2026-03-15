@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Preparing Data in Stata</title>
+<title>Reading Regression Tables</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,41 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -116,7 +81,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/confounding.html">Week 9: Confounding Variables and Reverse Causality</a></li><li class="breadcrumb-item"><a href="../../slides/videos-stata/transform-stata.html">Preparing Data in Stata</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/multivariate-regression.html">Week 10: Multivariate Regression</a></li><li class="breadcrumb-item"><a href="../../slides/videos-concepts/regression-tables.html">Reading Regression Tables</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -427,13 +392,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/A07-sampling-activity.html" class="sidebar-item-text sidebar-link">
+  <a href="../../activities/A07a-sampling-activity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Seminar Activity: Sampling and Bias</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/htests-weights-activity.html" class="sidebar-item-text sidebar-link">
+  <a href="../../activities/A07b-htests-weights.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Seminar Activity: Weights and Visual Inference</span></a>
   </div>
 </li>
@@ -486,13 +451,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/A08-regression-activity.html" class="sidebar-item-text sidebar-link">
+  <a href="../../activities/A08a-regression-activity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Seminar Activity: Bivariate Regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/A08-ps2-workshop-1.html" class="sidebar-item-text sidebar-link">
+  <a href="../../activities/A08b-ps2-workshop-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PS2 Workshop 1: Exploration and Univariate Description</span></a>
   </div>
 </li>
@@ -527,8 +492,73 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/transform-stata.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../slides/videos-stata/preparing-stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preparing Data in Stata</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../slides/lectures/confounding-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 9: Confounding Variables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../activities/A09a-confounding-reverse.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Seminar Activity: Confounding Variables and Reverse Causality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../activities/A09b-ps2-workshop-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PS2 Workshop 2: Bivariate Analysis and Hypothesis Test</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 10: Multivariate Regression</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../slides/videos-concepts/multivariate-regression.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Multivariate Regression</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../slides/videos-concepts/controls-confounding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Controls and Confounding</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../slides/videos-concepts/standard-error.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Standard Error</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../slides/videos-concepts/regression-tables.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Reading Regression Tables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../slides/videos-stata/multivariate-stata.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Multivariate Regression in Stata</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../activities/A10b-ps2-workshop-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PS2 Workshop 3: Interpretation and Discussion</span></a>
   </div>
 </li>
       </ul>
@@ -543,147 +573,179 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#preparing-data-in-stata" id="toc-preparing-data-in-stata" class="nav-link active" data-scroll-target="#preparing-data-in-stata">Preparing Data in Stata</a>
+  <li><a href="#reading-regression-tables" id="toc-reading-regression-tables" class="nav-link active" data-scroll-target="#reading-regression-tables">Reading Regression Tables</a>
   <ul class="collapse">
   <li><a href="#youll-learn-to" id="toc-youll-learn-to" class="nav-link" data-scroll-target="#youll-learn-to">You’ll learn to</a></li>
-  <li><a href="#why-data-preparation-matters" id="toc-why-data-preparation-matters" class="nav-link" data-scroll-target="#why-data-preparation-matters">Why data preparation matters</a></li>
-  <li><a href="#missing-values-in-stata" id="toc-missing-values-in-stata" class="nav-link" data-scroll-target="#missing-values-in-stata">Missing values in Stata</a></li>
-  <li><a href="#operation-1-recode-invalid-values-to-missing" id="toc-operation-1-recode-invalid-values-to-missing" class="nav-link" data-scroll-target="#operation-1-recode-invalid-values-to-missing">Operation 1: Recode invalid values to missing</a></li>
-  <li><a href="#operation-2-drop-observations-based-on-a-condition" id="toc-operation-2-drop-observations-based-on-a-condition" class="nav-link" data-scroll-target="#operation-2-drop-observations-based-on-a-condition">Operation 2: Drop observations based on a condition</a></li>
-  <li><a href="#the-equivalent-using-keep-if" id="toc-the-equivalent-using-keep-if" class="nav-link" data-scroll-target="#the-equivalent-using-keep-if">The equivalent using <code>keep if</code></a></li>
-  <li><a href="#operation-3-generate-a-binary-variable" id="toc-operation-3-generate-a-binary-variable" class="nav-link" data-scroll-target="#operation-3-generate-a-binary-variable">Operation 3: Generate a binary variable</a></li>
-  <li><a href="#labelling-the-new-variable" id="toc-labelling-the-new-variable" class="nav-link" data-scroll-target="#labelling-the-new-variable">Labelling the new variable</a></li>
-  <li><a href="#operation-4-save-the-cleaned-dataset" id="toc-operation-4-save-the-cleaned-dataset" class="nav-link" data-scroll-target="#operation-4-save-the-cleaned-dataset">Operation 4: Save the cleaned dataset</a></li>
-  <li><a href="#the-cleaning-workflow" id="toc-the-cleaning-workflow" class="nav-link" data-scroll-target="#the-cleaning-workflow">The cleaning workflow</a></li>
+  <li><a href="#regressions-in-the-wild" id="toc-regressions-in-the-wild" class="nav-link" data-scroll-target="#regressions-in-the-wild">Regressions “in the wild”</a></li>
+  <li><a href="#the-full-table" id="toc-the-full-table" class="nav-link" data-scroll-target="#the-full-table">The full table</a></li>
+  <li><a href="#each-column-is-a-model" id="toc-each-column-is-a-model" class="nav-link" data-scroll-target="#each-column-is-a-model">Each column is a model</a></li>
+  <li><a href="#the-dependent-variable" id="toc-the-dependent-variable" class="nav-link" data-scroll-target="#the-dependent-variable">The dependent variable</a></li>
+  <li><a href="#each-row-is-a-variable" id="toc-each-row-is-a-variable" class="nav-link" data-scroll-target="#each-row-is-a-variable">Each row is a variable</a></li>
+  <li><a href="#blank-cells" id="toc-blank-cells" class="nav-link" data-scroll-target="#blank-cells">Blank cells</a></li>
+  <li><a href="#stars-indicate-significance" id="toc-stars-indicate-significance" class="nav-link" data-scroll-target="#stars-indicate-significance">Stars indicate significance</a></li>
+  <li><a href="#standard-errors" id="toc-standard-errors" class="nav-link" data-scroll-target="#standard-errors">Standard errors</a></li>
+  <li><a href="#the-bottom-panel" id="toc-the-bottom-panel" class="nav-link" data-scroll-target="#the-bottom-panel">The bottom panel</a></li>
   <li><a href="#recap" id="toc-recap" class="nav-link" data-scroll-target="#recap">Recap</a></li>
   </ul></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="transform-stata-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="regression-tables-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/confounding.html">Week 9: Confounding Variables and Reverse Causality</a></li><li class="breadcrumb-item"><a href="../../slides/videos-stata/transform-stata.html">Preparing Data in Stata</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/multivariate-regression.html">Week 10: Multivariate Regression</a></li><li class="breadcrumb-item"><a href="../../slides/videos-concepts/regression-tables.html">Reading Regression Tables</a></li></ol></nav></header>
 
 
 
 
-<section id="preparing-data-in-stata" class="level1 title-left">
-<h1 class="title-left">Preparing Data in Stata</h1>
+<section id="reading-regression-tables" class="level1 title-left">
+<h1 class="title-left">Reading Regression Tables</h1>
 <hr>
 <section id="youll-learn-to" class="level2">
 <h2 class="anchored" data-anchor-id="youll-learn-to">You’ll learn to</h2>
 <div class="presenter-space">
 <ul>
-<li>Recode <strong>invalid values</strong> to missing using <code>replace</code>.</li>
-<li><strong>Drop observations</strong> based on a condition.</li>
-<li><strong>Generate a binary variable</strong> from a logical statement.</li>
-<li>Save a <strong>cleaned dataset</strong> as a separate file.</li>
+<li>Identify the parts of a <strong>publication-style regression table</strong>.</li>
+<li>Read <strong>coefficients, standard errors, and significance stars</strong>.</li>
+<li>Compare <strong>multiple models</strong> presented side by side.</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="why-data-preparation-matters" class="level2">
-<h2 class="anchored" data-anchor-id="why-data-preparation-matters">Why data preparation matters</h2>
+<section id="regressions-in-the-wild" class="level2">
+<h2 class="anchored" data-anchor-id="regressions-in-the-wild">Regressions “in the wild”</h2>
 <div class="presenter-space">
 <ul>
-<li>Raw survey data often contains <strong>invalid or missing value codes</strong>.</li>
-<li>Analysing uncleaned data can produce <strong>incorrect results</strong>.</li>
-<li>A short preparation step before analysis prevents these errors.</li>
+<li>Regression tables in publications look different from software output.</li>
+<li>They show multiple regressions in a single table.</li>
+<li>This video teaches you how to read them.</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="missing-values-in-stata" class="level2">
-<h2 class="anchored" data-anchor-id="missing-values-in-stata">Missing values in Stata</h2>
+<section id="the-full-table" class="level2">
+<h2 class="anchored" data-anchor-id="the-full-table">The full table</h2>
+<div class="nonincremental">
 <div class="presenter-space">
-<ul>
-<li>In Stata, <code>.</code> represents a <strong>missing value</strong>.</li>
-<li>Survey datasets often encode missing responses as <strong>negative numbers</strong>.</li>
-<li>These must be recoded to <code>.</code> before analysis.</li>
-</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/reg-table-brexit.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%" data-fig-cap=""></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="notes">
+<p>This table shows three regressions predicting Leave vote share. Each column is a separate model. We will walk through each element.</p>
 </div>
 <hr>
 </section>
-<section id="operation-1-recode-invalid-values-to-missing" class="level2">
-<h2 class="anchored" data-anchor-id="operation-1-recode-invalid-values-to-missing">Operation 1: Recode invalid values to missing</h2>
+<section id="each-column-is-a-model" class="level2">
+<h2 class="anchored" data-anchor-id="each-column-is-a-model">Each column is a model</h2>
+<div class="nonincremental">
 <div class="presenter-space">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">replace</span> age = . <span class="kw">if</span> age &lt; 0</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>Any observation where <code>age</code> is negative gets recoded to <strong>missing</strong>.</li>
-<li>Stata will then exclude these observations from calculations automatically.</li>
-<li>Repeat for each variable that uses negative codes for missing data.</li>
-</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/reg-table-brexit-columns.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%" data-fig-cap=""></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="notes">
+<p>Column (1) regresses Leave share on education alone. Column (2) on immigration alone. Column (3) includes both. Each column is a complete regression.</p>
 </div>
 <hr>
 </section>
-<section id="operation-2-drop-observations-based-on-a-condition" class="level2">
-<h2 class="anchored" data-anchor-id="operation-2-drop-observations-based-on-a-condition">Operation 2: Drop observations based on a condition</h2>
+<section id="the-dependent-variable" class="level2">
+<h2 class="anchored" data-anchor-id="the-dependent-variable">The dependent variable</h2>
+<div class="nonincremental">
 <div class="presenter-space">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">drop</span> <span class="kw">if</span> k03 != 7 &amp; k03 != 13</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>Removes all observations that are <strong>neither</strong> Mail nor Telegraph readers.</li>
-<li>Restricts the sample to the <strong>two groups</strong> being compared.</li>
-<li>Use <code>drop if</code> whenever analysis requires a specific subgroup only.</li>
-</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/reg-table-brexit-depvar.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%" data-fig-cap=""></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="notes">
+<p>The dependent variable is shown at the top. All three models share the same dependent variable: Leave Vote Share (%).</p>
 </div>
 <hr>
 </section>
-<section id="the-equivalent-using-keep-if" class="level2">
-<h2 class="anchored" data-anchor-id="the-equivalent-using-keep-if">The equivalent using <code>keep if</code></h2>
+<section id="each-row-is-a-variable" class="level2">
+<h2 class="anchored" data-anchor-id="each-row-is-a-variable">Each row is a variable</h2>
+<div class="nonincremental">
 <div class="presenter-space">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">keep</span> <span class="kw">if</span> k03 == 7 | k03 == 13</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>Keeps only Mail (<code>7</code>) or Telegraph (<code>13</code>) readers — <strong>same result</strong>.</li>
-<li><code>drop if</code> and <code>keep if</code> are logical <strong>mirror images</strong> of each other.</li>
-<li>Use whichever makes the intended restriction easier to read.</li>
-</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/reg-table-brexit-rows.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%" data-fig-cap=""></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="notes">
+<p>The left side lists the independent variables: Higher Education, Immigrant Share, and the Constant (intercept). Each row shows how that variable relates to the dependent variable.</p>
 </div>
 <hr>
 </section>
-<section id="operation-3-generate-a-binary-variable" class="level2">
-<h2 class="anchored" data-anchor-id="operation-3-generate-a-binary-variable">Operation 3: Generate a binary variable</h2>
+<section id="blank-cells" class="level2">
+<h2 class="anchored" data-anchor-id="blank-cells">Blank cells</h2>
+<div class="nonincremental">
 <div class="presenter-space">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">gen</span> voted_reform = (b02 == 8) <span class="kw">if</span> b02 != .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>The expression <code>(b02 == 8)</code> returns <strong>1 if true, 0 if false</strong>.</li>
-<li>The condition <code>if b02 != .</code> ensures missing values are <strong>not assigned a code</strong>.</li>
-<li>This is how <strong>dummy variables</strong> are created in Stata.</li>
-</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/reg-table-brexit-blanks.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%" data-fig-cap=""></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="notes">
+<p>Some cells are blank. Model (1) has no immigration row because it only includes education. Model (2) has no education row. A blank cell means that variable was not included in that model.</p>
 </div>
 <hr>
 </section>
-<section id="labelling-the-new-variable" class="level2">
-<h2 class="anchored" data-anchor-id="labelling-the-new-variable">Labelling the new variable</h2>
+<section id="stars-indicate-significance" class="level2">
+<h2 class="anchored" data-anchor-id="stars-indicate-significance">Stars indicate significance</h2>
+<div class="nonincremental">
 <div class="presenter-space">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">label</span> <span class="kw">define</span> reform_lbl 1 <span class="st">"Reform"</span> 0 <span class="st">"Another Party"</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">label</span> <span class="kw">values</span> voted_reform reform_lbl</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li><code>label define</code> creates a set of value labels.</li>
-<li><code>label values</code> attaches them to the variable.</li>
-<li>Labels make output <strong>easier to read</strong> without changing underlying values.</li>
-</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/reg-table-brexit-stars.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%" data-fig-cap=""></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="notes">
+<p>Stars are a shortcut for statistical significance. Three stars (***) means p &lt; 0.01. The note at the bottom of the table defines the thresholds. Notice that immigration in Model (3) has no stars: it is not statistically significant once education is controlled for.</p>
 </div>
 <hr>
 </section>
-<section id="operation-4-save-the-cleaned-dataset" class="level2">
-<h2 class="anchored" data-anchor-id="operation-4-save-the-cleaned-dataset">Operation 4: Save the cleaned dataset</h2>
+<section id="standard-errors" class="level2">
+<h2 class="anchored" data-anchor-id="standard-errors">Standard errors</h2>
+<div class="nonincremental">
 <div class="presenter-space">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">save</span> <span class="st">"data-clean/bes_clean.dta"</span>, <span class="kw">replace</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>Save the cleaned file to a <strong>separate folder</strong> from the raw data.</li>
-<li>Never overwrite raw data — keep it as originally downloaded.</li>
-<li>The <code>replace</code> option overwrites any previous version of the clean file.</li>
-</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/reg-table-brexit-se.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%" data-fig-cap=""></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="notes">
+<p>The numbers in parentheses below each coefficient are standard errors. They measure how precisely the coefficient is estimated. Smaller standard errors mean more precise estimates.</p>
 </div>
 <hr>
 </section>
-<section id="the-cleaning-workflow" class="level2">
-<h2 class="anchored" data-anchor-id="the-cleaning-workflow">The cleaning workflow</h2>
+<section id="the-bottom-panel" class="level2">
+<h2 class="anchored" data-anchor-id="the-bottom-panel">The bottom panel</h2>
+<div class="nonincremental">
 <div class="presenter-space">
-<ul>
-<li>Load raw data → recode invalids → drop if needed → generate new variables.</li>
-<li>Save the cleaned file → run analysis from the <strong>clean file</strong>.</li>
-<li>This makes your analysis reproducible and easier to review.</li>
-</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/reg-table-brexit-bottom.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%" data-fig-cap=""></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="notes">
+<p>The bottom of the table shows summary statistics for each model: the number of observations and R-squared. These help you assess sample size and how much variation the model explains.</p>
 </div>
 <hr>
 </section>
@@ -691,19 +753,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="recap">Recap</h2>
 <div class="presenter-space">
 <ul>
-<li><code>replace x = . if x &lt; 0</code> — recode invalid values to <strong>missing</strong>.</li>
-<li><code>drop if condition</code> — remove observations <strong>outside</strong> the subgroup of interest.</li>
-<li><code>generate</code> with a logical statement — create a <strong>binary variable</strong>.</li>
-<li>Save cleaned data to a separate folder; never overwrite raw data.</li>
+<li>Each <strong>column</strong> is a separate regression model.</li>
+<li><strong>Stars</strong> indicate significance; <strong>parentheses</strong> contain standard errors.</li>
+<li>Comparing columns reveals how coefficients change across models.</li>
 </ul>
 </div>
 <hr>
 <div class="presenter-space">
 <p><strong>Why this matters:</strong></p>
 <ul>
-<li>Uncleaned data produces unreliable results — even correct commands will fail if the inputs are wrong.</li>
-<li>These four operations appear in almost every real data analysis workflow.</li>
-<li>Good data preparation habits make your work transparent, reproducible, and easier to check.</li>
+<li>Published research presents results in this format, not as software output.</li>
+<li>Reading regression tables is essential for engaging with quantitative research.</li>
 </ul>
 </div>
 

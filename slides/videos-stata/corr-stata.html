@@ -516,6 +516,53 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 10: Multivariate Regression</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../slides/videos-concepts/multivariate-regression.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Multivariate Regression</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../slides/videos-concepts/controls-confounding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Controls and Confounding</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../slides/videos-concepts/standard-error.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Standard Error</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../slides/videos-concepts/regression-tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reading Regression Tables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../slides/videos-stata/multivariate-stata.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Multivariate Regression in Stata</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../activities/A10b-ps2-workshop-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PS2 Workshop 3: Interpretation and Discussion</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -536,6 +583,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#step-5-check-if-it-has-worked-and-save-your-do-file" id="toc-step-5-check-if-it-has-worked-and-save-your-do-file" class="nav-link" data-scroll-target="#step-5-check-if-it-has-worked-and-save-your-do-file">Step 5: Check if it has worked and save your do-file</a></li>
   <li><a href="#step-6-read-through-the-do-file-comments-and-execute-the-commands" id="toc-step-6-read-through-the-do-file-comments-and-execute-the-commands" class="nav-link" data-scroll-target="#step-6-read-through-the-do-file-comments-and-execute-the-commands">Step 6: Read through the do-file comments and execute the commands</a></li>
   <li><a href="#what-is-bivariate-analysis" id="toc-what-is-bivariate-analysis" class="nav-link" data-scroll-target="#what-is-bivariate-analysis">What is bivariate analysis?</a></li>
+  <li><a href="#case-1-nominal-nominal" id="toc-case-1-nominal-nominal" class="nav-link" data-scroll-target="#case-1-nominal-nominal">Case 1: Nominal + Nominal</a></li>
   <li><a href="#case-2-nominal-numeric" id="toc-case-2-nominal-numeric" class="nav-link" data-scroll-target="#case-2-nominal-numeric">Case 2: Nominal + Numeric</a></li>
   <li><a href="#case-3-numeric-numeric" id="toc-case-3-numeric-numeric" class="nav-link" data-scroll-target="#case-3-numeric-numeric">Case 3: Numeric + Numeric</a></li>
   <li><a href="#interpreting-scatterplots-and-regression-lines" id="toc-interpreting-scatterplots-and-regression-lines" class="nav-link" data-scroll-target="#interpreting-scatterplots-and-regression-lines">Interpreting scatterplots and regression lines</a></li>
@@ -645,31 +693,20 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Univariate</strong> analysis describes one variable at a time.</li>
 <li><strong>Bivariate</strong> analysis describes relationships between <strong>two variables</strong>.</li>
 <li>The appropriate tool depends on the <strong>types of variables</strong> being analysed.</li>
-<li>Open <code>bivariate-bes.do</code> to see examples of all three cases.</li>
 </ul>
 </div>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 100%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">## Case 1: Nominal + Nominal</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">::: nonincremental</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">- <strong>Example:</strong> Gender and vote choice. - <strong>Tools:</strong> Cross-tabulation and bivariate bar chart. - Use <code>tabulate</code> with <code>column</code> option for percentages. - Use <code>graph hbar (count)</code> with <code>over()</code> options for grouped bar charts.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><strong>Note:</strong> The video uses <code>catplot</code> for this chart. We have switched to <code>graph hbar</code> in the do files because <code>catplot</code> has changed since the video was recorded. The output is equivalent.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">:::</td>
-</tr>
-</tbody>
-</table>
+<hr>
+</section>
+<section id="case-1-nominal-nominal" class="level2">
+<h2 class="anchored" data-anchor-id="case-1-nominal-nominal">Case 1: Nominal + Nominal</h2>
+<div class="nonincremental">
+<ul>
+<li><strong>Example:</strong> Gender and vote choice.</li>
+<li><strong>Tools:</strong> Cross-tabulation (<code>tabulate</code>) and grouped bar chart (<code>graph hbar</code>).</li>
+<li>The video uses <code>catplot</code>; the do-files use <code>graph hbar</code> instead. Output is equivalent.</li>
+</ul>
+</div>
+<hr>
 </section>
 <section id="case-2-nominal-numeric" class="level2">
 <h2 class="anchored" data-anchor-id="case-2-nominal-numeric">Case 2: Nominal + Numeric</h2>
@@ -699,10 +736,9 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="interpreting-scatterplots-and-regression-lines">Interpreting scatterplots and regression lines</h2>
 <div class="nonincremental">
 <ul>
-<li>The <strong>scatterplot</strong> shows individual data points.</li>
-<li>The <strong>regression line</strong> summarises the overall pattern.</li>
-<li><strong>Direction:</strong> Upward slope = positive association; downward slope = negative association.</li>
-<li><strong>Strength:</strong> Points clustered near the line = strong; widely scattered = weak.</li>
+<li>The <strong>scatterplot</strong> shows individual data points; the <strong>regression line</strong> summarises the pattern.</li>
+<li><strong>Direction:</strong> upward slope = positive; downward slope = negative.</li>
+<li><strong>Strength:</strong> points near the line = strong; widely scattered = weak.</li>
 </ul>
 </div>
 <hr>
@@ -713,7 +749,6 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Open <code>bivariate-bes.do</code> and work through all three cases.</li>
 <li>Download <code>bivariate-brexit.do</code> for additional scatterplot examples.</li>
-<li>Use the BES and Brexit codebooks to explore other variables.</li>
 <li>Try modifying the commands to answer your own research questions.</li>
 </ul>
 </div>
@@ -721,18 +756,22 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="recap" class="level2">
 <h2 class="anchored" data-anchor-id="recap">Recap</h2>
+<div class="nonincremental">
 <ul>
 <li><strong>Cross-tabulations</strong> and <strong>grouped bar charts</strong> describe associations between nominal variables.</li>
 <li><strong>Bar charts of means</strong> summarise differences in a numeric variable across categories.</li>
 <li><strong>Scatterplots</strong> and <strong>regression lines</strong> summarise relationships between two numeric variables.</li>
 </ul>
+</div>
 <hr>
 <p><strong>Why this matters:</strong></p>
+<div class="nonincremental">
 <ul>
 <li>Describing relationships between variables is the foundation for asking why those relationships exist.</li>
 <li>Choosing the wrong tool for the wrong variable types produces meaningless or misleading output.</li>
 <li>These skills are essential for interpreting bivariate analyses in research papers, reports, and public debate.</li>
 </ul>
+</div>
 
 
 </section>

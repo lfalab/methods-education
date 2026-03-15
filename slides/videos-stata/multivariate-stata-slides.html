@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <title>Describing Correlations in Stata</title>
+  <title>Multivariate Regression in Stata</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -27,6 +27,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-f88d935cd01326925f73dc62b106448c.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -127,126 +193,130 @@
 
 
 <section>
-<section id="describing-correlations-in-stata" class="title-slide slide level1 title-left center">
-<h1>Describing Correlations in Stata</h1>
+<section id="multivariate-regression-in-stata" class="title-slide slide level1 title-left center">
+<h1>Multivariate Regression in Stata</h1>
 
 </section>
 <section id="youll-learn-to" class="slide level2">
 <h2>You’ll learn to</h2>
 <ul>
-<li>Generate and interpret <strong>bivariate summaries</strong> in Stata.</li>
+<li>Run a <strong>multivariate regression</strong> in Stata.</li>
+<li>Read the output with <strong>multiple explanatory variables</strong>.</li>
+<li>Compare <strong>bivariate</strong> and <strong>multivariate</strong> results side by side.</li>
 </ul>
 </section>
-<section id="step-1-download-the-british-election-study-dataset-from-our-shared-folder" class="slide level2">
-<h2>Step 1: Download the British Election Study dataset from our shared folder</h2>
-<ul>
-<li>Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a></li>
-<li>Click on <code>data-raw</code></li>
-<li>Download <code>British_Election_Study_2024.dta</code></li>
-<li>Save it into the <code>data-raw</code> folder on your computer</li>
-</ul>
-</section>
-<section id="step-2-download-the-companion-do-file-for-this-activity" class="slide level2">
-<h2>Step 2: Download the companion do-file for this activity</h2>
+<section id="download-the-companion-do-file-for-this-activity" class="slide level2">
+<h2>Download the companion do-file for this activity</h2>
 <ul>
 <li>Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a></li>
 <li>Click on <code>do</code></li>
-<li>Download <code>bivariate-bes.do</code></li>
+<li>Download <code>multivariate-brexit.do</code></li>
 <li>Save it into the <code>do</code> folder on your computer</li>
 </ul>
 </section>
-<section id="step-3-insert-the-path-to-your-folder-on-your-computer" class="slide level2">
-<h2>Step 3: Insert the path to your folder on your computer</h2>
+<section id="read-through-the-do-file-comments-and-execute-the-commands" class="slide level2">
+<h2>Read through the do-file comments and execute the commands</h2>
 <ul>
-<li>This line of <code>bivariate-bes.do</code> has an “address” that only works on my computer.</li>
-<li>Replace it with the “address” to your project folder on your computer.</li>
-</ul>
-
-<img data-src="../../assets/stata-replace-cd2.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-4-select-the-top-portion-of-the-do-file-and-click-execute-do" class="slide level2">
-<h2>Step 4: Select the top portion of the do file and click “execute (do)”</h2>
-
-<img data-src="../../assets/stata-select-execute3.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-5-check-if-it-has-worked-and-save-your-do-file" class="slide level2">
-<h2>Step 5: Check if it has worked and save your do-file</h2>
-<ul>
-<li>If you see this on the top-right pane of your Stata screen, it has worked!</li>
-<li>Be sure to <strong>save your do-file</strong> in your <code>do</code> folder.</li>
-</ul>
-
-<img data-src="../../assets/stata-bes-variables.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-6-read-through-the-do-file-comments-and-execute-the-commands" class="slide level2">
-<h2>Step 6: Read through the do-file comments and execute the commands</h2>
-<ul>
-<li>This do-file will serve as your companion for learning how to describe <strong>bivariate relationships</strong> in Stata.</li>
-<li>The do-file covers <strong>three types</strong> of bivariate analysis, depending on the variable types involved.</li>
+<li>This do-file runs <strong>three regressions</strong> on the Brexit Regional dataset.</li>
+<li>Two bivariate (education, immigration) and one multivariate (both).</li>
 </ul>
 </section>
-<section id="what-is-bivariate-analysis" class="slide level2">
-<h2>What is bivariate analysis?</h2>
+<section id="recall-bivariate-regression-syntax" class="slide level2">
+<h2>Recall: Bivariate regression syntax</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a></a><span class="kw">regress</span> leave_share share_high_skill</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li><strong>Univariate</strong> analysis describes one variable at a time.</li>
-<li><strong>Bivariate</strong> analysis describes relationships between <strong>two variables</strong>.</li>
-<li>The appropriate tool depends on the <strong>types of variables</strong> being analysed.</li>
+<li>One dependent variable, one explanatory variable.</li>
+<li>This is the familiar command from Week 8.</li>
 </ul>
 </section>
-<section id="case-1-nominal-nominal" class="slide level2">
-<h2>Case 1: Nominal + Nominal</h2>
+<section id="adding-a-second-variable" class="slide level2">
+<h2>Adding a second variable</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a></a><span class="kw">regress</span> leave_share share_high_skill immigrant_share</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li><strong>Example:</strong> Gender and vote choice.</li>
-<li><strong>Tools:</strong> Cross-tabulation (<code>tabulate</code>) and grouped bar chart (<code>graph hbar</code>).</li>
-<li>The video uses <code>catplot</code>; the do-files use <code>graph hbar</code> instead. Output is equivalent.</li>
+<li>Same <code>regress</code> command; add variable names after the first predictor.</li>
+<li>Each additional variable is separated by a space.</li>
 </ul>
 </section>
-<section id="case-2-nominal-numeric" class="slide level2">
-<h2>Case 2: Nominal + Numeric</h2>
+<section id="reading-the-output-coefficient-table" class="slide level2">
+<h2>Reading the output: coefficient table</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Element</th>
+<th>What it tells you</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>share_high_skill</code> row</td>
+<td>Slope, p-value, and CI for education</td>
+</tr>
+<tr class="even">
+<td><code>immigrant_share</code> row</td>
+<td>Slope, p-value, and CI for immigration</td>
+</tr>
+<tr class="odd">
+<td><code>_cons</code> row</td>
+<td>Intercept (same as bivariate output)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="interpreting-the-coefficients" class="slide level2">
+<h2>Interpreting the coefficients</h2>
 <ul>
-<li><strong>Example:</strong> Newspaper readership and ideology.</li>
-<li><strong>Tools:</strong> Compare means and bar chart of means.</li>
-<li>Use <code>by</code>: <code>summarize</code> to calculate group means.</li>
-<li>Use <code>graph hbar</code> with <code>over()</code> to visualise differences.</li>
+<li>Education slope (-1.14): expected change in Leave share per point of education, <strong>holding immigration constant</strong>.</li>
+<li>Immigration slope (0.08): p-value = 0.449, <strong>not statistically significant</strong>.</li>
+<li>Each coefficient is interpreted “all else equal.”</li>
 </ul>
 </section>
-<section id="case-3-numeric-numeric" class="slide level2">
-<h2>Case 3: Numeric + Numeric</h2>
-<ul>
-<li><strong>Example:</strong> Import shock and Brexit vote share.</li>
-<li><strong>Tools:</strong> Scatterplot and regression line.</li>
-<li>Use <code>twoway (scatter)</code> to plot individual observations.</li>
-<li>Add <code>(lfit)</code> to overlay the regression line.</li>
-</ul>
+<section id="comparing-bivariate-and-multivariate-results" class="slide level2">
+<h2>Comparing bivariate and multivariate results</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>Bivariate</th>
+<th>Multivariate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Immigration</strong></td>
+<td>-0.41</td>
+<td>0.08</td>
+</tr>
+<tr class="even">
+<td><strong>Education</strong></td>
+<td>—</td>
+<td>-1.14</td>
+</tr>
+</tbody>
+</table>
+<p>Immigration was significant alone but not after controlling for education.</p>
 </section>
-<section id="interpreting-scatterplots-and-regression-lines" class="slide level2">
-<h2>Interpreting scatterplots and regression lines</h2>
+<section id="r-squared-comparison" class="slide level2">
+<h2>R-squared comparison</h2>
 <ul>
-<li>The <strong>scatterplot</strong> shows individual data points; the <strong>regression line</strong> summarises the pattern.</li>
-<li><strong>Direction:</strong> upward slope = positive; downward slope = negative.</li>
-<li><strong>Strength:</strong> points near the line = strong; widely scattered = weak.</li>
-</ul>
-</section>
-<section id="your-turn-explore-bivariate-relationships" class="slide level2">
-<h2>Your turn: Explore bivariate relationships</h2>
-<ul>
-<li>Open <code>bivariate-bes.do</code> and work through all three cases.</li>
-<li>Download <code>bivariate-brexit.do</code> for additional scatterplot examples.</li>
-<li>Try modifying the commands to answer your own research questions.</li>
+<li>Bivariate (education only): R-squared = 0.30.</li>
+<li>Multivariate (both variables): R-squared = 0.30.</li>
+<li>Adding immigration barely improved explanatory power.</li>
 </ul>
 </section>
 <section id="recap" class="slide level2">
 <h2>Recap</h2>
 <ul>
-<li><strong>Cross-tabulations</strong> and <strong>grouped bar charts</strong> describe associations between nominal variables.</li>
-<li><strong>Bar charts of means</strong> summarise differences in a numeric variable across categories.</li>
-<li><strong>Scatterplots</strong> and <strong>regression lines</strong> summarise relationships between two numeric variables.</li>
+<li>Add variables to <code>regress</code> to run a multivariate regression.</li>
+<li>Each coefficient is interpreted holding other variables constant.</li>
+<li>Comparing models reveals whether variables contribute independently.</li>
 </ul>
 </section>
 <section class="slide level2">
 
 <p><strong>Why this matters:</strong></p>
 <ul>
-<li>Describing relationships between variables is the foundation for asking why those relationships exist.</li>
-<li>Choosing the wrong tool for the wrong variable types produces meaningless or misleading output.</li>
-<li>These skills are essential for interpreting bivariate analyses in research papers, reports, and public debate.</li>
+<li class="fragment">Multivariate regression is the workhorse of quantitative social science.</li>
+<li class="fragment">Stata makes it straightforward to add and compare variables.</li>
 </ul>
 
 
