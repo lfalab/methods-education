@@ -13,3 +13,4 @@ cards/
 **/*.quarto_ipynb
 
 /.quarto/
+shared-project-folder/

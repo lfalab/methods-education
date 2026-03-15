@@ -2,3 +2,4 @@
 # This keeps legacy/ out of git while leaving it accessible for VS Code @ references.
 *
 !.gitignore
+!CLAUDE.md

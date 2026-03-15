@@ -65,6 +65,125 @@ However, **the directory structure must not be modified**.
 
 ---
 
+# Shared Project Folder
+
+`shared-project-folder/` is a student-facing teaching resource located at the root of the repository.
+
+It is shared with students via an OneDrive link. **Students have view-only access** — they cannot modify files.
+
+This folder is **gitignored** (`shared-project-folder/` is in `.gitignore`). Git does not track its contents and it will never appear in `git status`.
+
+There is **no `CLAUDE.md` inside this folder** — this is intentional, since students can read all files in it.
+
+### Subdirectories
+
+| Directory | Purpose | Claude may edit? |
+|---|---|---|
+| `data-raw/` | Original datasets (`.dta`) and codebooks (`.pdf`, `.docx`) | No |
+| `data-clean/` | Cleaned/processed datasets saved by do-files | No |
+| `do/` | Stata do-files used in teaching | Yes |
+| `output/` | Generated graphs (`.jpg`) saved by do-files | No |
+
+### Do-file conventions
+
+All do-files set the working directory with `cd` as the first command, then use **relative paths** for everything else (e.g., `"data-raw/British_Election_Study_2024.dta"`).
+
+The canonical working directory path is:
+
+```
+cd "C:\Users\leona\OneDrive - King's College London\methods-education\shared-project-folder"
+```
+
+When creating or editing do-files, always use this path.
+
+---
+
+# Running Stata from Claude Code
+
+Claude Code can execute Stata do-files and read the output directly from the terminal. This enables Claude to verify statistical examples, debug do-files, create new analyses, and report regression results — all without the user switching to the Stata GUI.
+
+The teaching materials on the website (slides, activities) are tightly coupled to the Stata do-files and datasets in `shared-project-folder/`. Being able to run these do-files is essential for maintaining and developing the course.
+
+### How it works
+
+Stata is installed at `C:\Program Files\Stata19\StataSE-64.exe`.
+
+Running Stata from the Claude Code terminal requires working around three Windows issues:
+
+1. **MSYS2 path mangling** — Git Bash converts `/e` to `E:/`. Set `MSYS_NO_PATHCONV=1` to disable this.
+2. **GUI executable** — `StataSE-64.exe` is a GUI app; `cmd` doesn't wait for it. Use PowerShell `Start-Process -Wait` instead.
+3. **Output capture** — Stata's `/e` batch mode log is unreliable. Use Stata's `log using` command inside the do-file for explicit output capture.
+
+### Step 1: Write a wrapper do-file to `C:\temp\`
+
+```stata
+log using "C:\temp\stata-output.log", text replace
+
+cd "C:\Users\leona\OneDrive - King's College London\methods-education\shared-project-folder"
+use "data-raw/Brexit_Regional.dta", clear
+regress leave_share share_high_skill
+
+log close
+exit, clear
+```
+
+The wrapper always follows this pattern:
+- `log using "C:\temp\stata-output.log", text replace` — open a text log at a known path
+- The actual Stata commands (loading data, analysis, etc.)
+- `log close` — flush the log
+- `exit, clear` — close Stata cleanly
+
+To run an existing do-file, the wrapper can call it with `do "do/filename.do"` after setting `cd`.
+
+### Step 2: Execute from the terminal
+
+```bash
+MSYS_NO_PATHCONV=1 powershell -Command '$p = Start-Process -FilePath "C:\Program Files\Stata19\StataSE-64.exe" -ArgumentList "/e","do","C:\temp\<wrapper>.do" -Wait -PassThru; Write-Output "ExitCode: $($p.ExitCode)"'
+```
+
+Replace `<wrapper>` with the name of the wrapper do-file.
+
+An exit code of `0` means success.
+
+### Step 3: Read the log
+
+Read `C:\temp\stata-output.log` to retrieve the Stata output (regression tables, summary statistics, etc.).
+
+### Conventions
+
+- Wrapper do-files and logs go in `C:\temp\` (outside the repository).
+- Never commit wrapper do-files or log files to the repository.
+- Always include `exit, clear` at the end of wrapper do-files so Stata closes after running.
+- When running an existing do-file from `shared-project-folder/do/`, wrap it rather than modifying it.
+
+---
+
+# Legacy Materials Directory
+
+`legacy/` contains teaching materials from a previous version of this course taught at UCSD. These are **read-only reference sources** used as starting points when creating new slide decks and videos for the KCL course.
+
+The directory is gitignored (contents are not tracked, except `legacy/CLAUDE.md` and `legacy/.gitignore`).
+
+See `legacy/CLAUDE.md` for the full directory structure, file inventory, and mapping between legacy sources and current pages.
+
+### Content creation workflow
+
+New slide decks and videos are created iteratively with Claude using legacy materials as springboards:
+
+1. Read relevant legacy slides, transcripts, and reference pages on the topic
+2. Adapt the pedagogical structure and explanations for the KCL context
+3. Replace canonical examples (UCSD used California/Trump data; KCL uses Brexit, BES, QoG, NSS datasets)
+4. Produce new `.qmd` slide decks for the Quarto website
+
+### Rules
+
+- Claude may **read** files in `legacy/` for reference
+- Claude must **not modify** files in `legacy/` (except `legacy/CLAUDE.md` if instructed)
+- Legacy materials inform structure and pedagogy, not specific examples or data
+- When asked to create new content, check `legacy/` for relevant source material
+
+---
+
 # Shared Resource Directories
 
 These directories contain reusable assets.
@@ -136,6 +255,9 @@ Claude may freely:
 - add teaching material
 - embed YouTube videos when instructed
 - make small layout improvements within individual pages
+- create and edit Stata do-files in `shared-project-folder/do/`
+- run Stata do-files from the terminal and read the output (see "Running Stata from Claude Code")
+- report and interpret Stata output (regression tables, summary statistics, etc.)
 
 Claude should **not modify site navigation** unless explicitly asked.
 
