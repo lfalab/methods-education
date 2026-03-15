@@ -60,6 +60,7 @@ Concept video slides:
 - use class: video
 - use a manual title slide
 - use presenter-space blocks
+- **must be software-agnostic**: no references to Stata, R, or any specific software. Software-specific content belongs exclusively in S-indexed videos. This ensures concept videos remain usable if the module switches to a different statistical package.
 
 The presenter-space environment is required for this slide family.
 

@@ -1,0 +1,152 @@
+---
+pagetitle: "Multivariate Regression in Stata"
+class: lecture
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: multivariate-stata
+  revealjs:
+    output-file: multivariate-stata-slides
+---
+
+# Multivariate Regression in Stata {.title-left}
+
+------------------------------------------------------------------------
+
+## You'll learn to
+
+::: nonincremental
+
+-   Run a **multivariate regression** in Stata.
+-   Read the output with **multiple explanatory variables**.
+-   Compare **bivariate** and **multivariate** results side by side.
+
+:::
+
+------------------------------------------------------------------------
+
+## Download the companion do-file for this activity
+
+::: nonincremental
+
+-   Access our [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE)
+-   Click on ``do``
+-   Download ``multivariate-brexit.do``
+-   Save it into the ``do`` folder on your computer
+
+:::
+
+------------------------------------------------------------------------
+
+## Read through the do-file comments and execute the commands
+
+::: nonincremental
+
+- This do-file runs **three regressions** on the Brexit Regional dataset.
+- Two bivariate (education, immigration) and one multivariate (both).
+
+:::
+
+------------------------------------------------------------------------
+
+## Recall: Bivariate regression syntax
+
+::: nonincremental
+
+```stata
+regress leave_share share_high_skill
+```
+
+- One dependent variable, one explanatory variable.
+- This is the familiar command from Week 8.
+
+:::
+
+------------------------------------------------------------------------
+
+## Adding a second variable
+
+::: nonincremental
+
+```stata
+regress leave_share share_high_skill immigrant_share
+```
+
+- Same ``regress`` command; add variable names after the first predictor.
+- Each additional variable is separated by a space.
+
+:::
+
+------------------------------------------------------------------------
+
+## Reading the output: coefficient table
+
+::: nonincremental
+
+| Element | What it tells you |
+|---|---|
+| ``share_high_skill`` row | Slope, p-value, and CI for education |
+| ``immigrant_share`` row | Slope, p-value, and CI for immigration |
+| ``_cons`` row | Intercept (same as bivariate output) |
+
+:::
+
+------------------------------------------------------------------------
+
+## Interpreting the coefficients
+
+::: nonincremental
+
+- Education slope (-1.14): expected change in Leave share per point of education, **holding immigration constant**.
+- Immigration slope (0.08): p-value = 0.449, **not statistically significant**.
+- Each coefficient is interpreted "all else equal."
+
+:::
+
+------------------------------------------------------------------------
+
+## Comparing bivariate and multivariate results
+
+::: nonincremental
+
+|  | Bivariate | Multivariate |
+|---|---|---|
+| **Immigration** | -0.41 | 0.08 |
+| **Education** | — | -1.14 |
+
+Immigration was significant alone but not after controlling for education.
+
+:::
+
+------------------------------------------------------------------------
+
+## R-squared comparison
+
+::: nonincremental
+
+- Bivariate (education only): R-squared = 0.30.
+- Multivariate (both variables): R-squared = 0.30.
+- Adding immigration barely improved explanatory power.
+
+:::
+
+------------------------------------------------------------------------
+
+## Recap
+
+::: nonincremental
+
+-   Add variables to ``regress`` to run a multivariate regression.
+-   Each coefficient is interpreted holding other variables constant.
+-   Comparing models reveals whether variables contribute independently.
+
+:::
+
+------------------------------------------------------------------------
+
+**Why this matters:**
+
+- Multivariate regression is the workhorse of quantitative social science.
+- Stata makes it straightforward to add and compare variables.

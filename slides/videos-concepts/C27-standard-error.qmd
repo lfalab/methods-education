@@ -1,0 +1,127 @@
+---
+pagetitle: "The Standard Error"
+class: video
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: standard-error
+  revealjs:
+    output-file: standard-error-slides
+---
+
+# The Standard Error {.title-left}
+
+------------------------------------------------------------------------
+
+## You'll learn to
+
+::: presenter-space
+- Explain what the **standard error** of a slope measures.
+- Connect it to the idea of **repeated sampling**.
+- Distinguish the standard error from the **standard deviation**.
+:::
+
+------------------------------------------------------------------------
+
+## Starting point: a regression from a sample
+
+::: presenter-space
+- We regress **ideology** (0–10 scale) on **age** using the British Election Study.
+- Slope: 0.017 per year of age. Older respondents lean slightly more right.
+- This estimate comes from one particular sample of 2,649 respondents.
+:::
+
+------------------------------------------------------------------------
+
+## This estimate depends on our sample
+
+::: presenter-space
+- If the BES had surveyed different people, the slope would differ slightly.
+- Our estimate of 0.017 is **one of many possible outcomes**.
+- How much would the slope vary across different samples?
+:::
+
+------------------------------------------------------------------------
+
+## The thought experiment: many samples
+
+::: presenter-space
+- Imagine drawing 10 new surveys of the same size.
+- Each yields a slightly different slope: 0.019, 0.015, 0.021, 0.014, 0.018...
+- The estimate varies from sample to sample.
+:::
+
+------------------------------------------------------------------------
+
+## The sampling distribution of the slope
+
+::: presenter-space
+- If we drew thousands of samples, the slopes would form a **distribution**.
+- This is the **sampling distribution** of the slope.
+- It is centred on the true population slope.
+:::
+
+------------------------------------------------------------------------
+
+## The standard error is the SD of this distribution
+
+::: presenter-space
+- The **standard deviation** measures spread in observed data.
+- The **standard error** measures spread in estimated slopes across samples.
+- Same concept, different target: data vs. estimates.
+:::
+
+------------------------------------------------------------------------
+
+## Why this matters for inference
+
+::: presenter-space
+- A small SE means the slope is **precisely estimated** (similar across samples).
+- A large SE means the slope is **imprecisely estimated** (varies a lot).
+- The SE is what makes p-values and confidence intervals possible.
+:::
+
+------------------------------------------------------------------------
+
+## Reading the standard error in regression output
+
+::: presenter-space
+|  | Coefficient | Std. err. |
+|---|---|---|
+| **Age** | 0.017 | 0.002 |
+| **Intercept** | 3.84 | 0.114 |
+
+- Each coefficient has its own standard error. 
+- The ratio coefficient/SE is the t-statistic.
+:::
+
+------------------------------------------------------------------------
+
+## The t-statistic: how many SEs from zero?
+
+::: presenter-space
+- The **t-statistic** is the slope divided by its standard error: $t = b / SE$.
+- It asks: how far is the estimate from zero, measured in standard errors?
+- A large $|t|$ (roughly above 2) means the slope is unlikely to be zero by chance.
+:::
+
+------------------------------------------------------------------------
+
+## Recap
+
+::: presenter-space
+- The **standard error** measures how much a slope would vary across repeated samples.
+- Smaller SE means a more precise estimate.
+:::
+
+------------------------------------------------------------------------
+
+::: presenter-space
+**Why this matters:**
+
+- Every regression estimate comes from a single sample.
+- The standard error quantifies the uncertainty in that estimate.
+- Understanding SE is essential for interpreting significance and confidence intervals.
+:::

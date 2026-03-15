@@ -371,11 +371,13 @@ Logs should remain concise.
 
 # Rendering Validation
 
-If structural files are edited:
+A full site render is slow (71+ pages). **Do not render after every change.** Render only when explicitly asked by the user or at the very end of a multi-file task before committing.
 
-1. Render the Quarto site locally
-2. Confirm the render succeeds
-3. Report warnings or errors
+When rendering:
+
+- Prefer `quarto render path/to/specific-file.qmd` for single-file checks (this only works after a full render has been run at least once in the session).
+- Use a full `quarto render` only when structural files (`_quarto.yml`, theme, templates) have been edited or when the user requests it.
+- Do not render speculatively to "check if it works." Trust the `.qmd` syntax; render to verify only when there is a specific reason to doubt correctness.
 
 If rendering fails, stop and report the issue.
 
@@ -383,13 +385,18 @@ If rendering fails, stop and report the issue.
 
 # Deployment Rules
 
-Claude must never:
+Claude may publish the website **when explicitly asked** by the user using:
 
-- publish the website
-- push commits
+```bash
+quarto publish gh-pages --no-browser
+```
+
+Claude must **never** publish without explicit instruction. Each publish pushes to the `gh-pages` branch and updates the live site.
+
+Claude must not:
+
+- push commits to the main branch (deployment is separate from committing)
 - modify GitHub Pages configuration
-
-Deployment is handled manually by the repository owner.
 
 ---
 

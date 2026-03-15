@@ -73,7 +73,7 @@ format:
 | **Immigration** | -0.41 | 0.08 |
 | **Education** | — | -1.14 |
 
-Immigration's effect disappears once education is held constant.
+- Immigration's effect disappears once education is held constant.
 :::
 
 ------------------------------------------------------------------------
@@ -96,7 +96,8 @@ Immigration's effect disappears once education is held constant.
 | **Health spending** | 0.73 | -0.04 |
 | **GDP per capita** | — | 0.91 |
 
-The health-CO2 relationship vanishes. National income drove both variables.
+- The health-CO2 relationship vanishes. 
+- National income drove both variables.
 :::
 
 ------------------------------------------------------------------------

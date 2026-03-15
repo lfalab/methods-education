@@ -105,21 +105,18 @@ format:
 - **Univariate** analysis describes one variable at a time.
 - **Bivariate** analysis describes relationships between **two variables**.
 - The appropriate tool depends on the **types of variables** being analysed.
-- Open ``bivariate-bes.do`` to see examples of all three cases.
 
 :::
 
 ------------------------------------------------------------------------
+
 ## Case 1: Nominal + Nominal
 
 ::: nonincremental
 
 - **Example:** Gender and vote choice.
-- **Tools:** Cross-tabulation and bivariate bar chart.
-- Use ``tabulate`` with ``column`` option for percentages.
-- Use ``graph hbar (count)`` with ``over()`` options for grouped bar charts.
-
-**Note:** The video uses ``catplot`` for this chart. We have switched to ``graph hbar`` in the do files because ``catplot`` has changed since the video was recorded. The output is equivalent.
+- **Tools:** Cross-tabulation (``tabulate``) and grouped bar chart (``graph hbar``).
+- The video uses ``catplot``; the do-files use ``graph hbar`` instead. Output is equivalent.
   
 :::
 
@@ -155,10 +152,9 @@ format:
 
 ::: nonincremental
 
-- The **scatterplot** shows individual data points.
-- The **regression line** summarises the overall pattern.
-- **Direction:** Upward slope = positive association; downward slope = negative association.
-- **Strength:** Points clustered near the line = strong; widely scattered = weak.
+- The **scatterplot** shows individual data points; the **regression line** summarises the pattern.
+- **Direction:** upward slope = positive; downward slope = negative.
+- **Strength:** points near the line = strong; widely scattered = weak.
 
 :::
 
@@ -170,7 +166,6 @@ format:
 
 - Open ``bivariate-bes.do`` and work through all three cases.
 - Download ``bivariate-brexit.do`` for additional scatterplot examples.
-- Use the BES and Brexit codebooks to explore other variables.
 - Try modifying the commands to answer your own research questions.
 
 :::
@@ -179,15 +174,22 @@ format:
 
 ## Recap
 
+::: nonincremental
+
 - **Cross-tabulations** and **grouped bar charts** describe associations between nominal variables.
 - **Bar charts of means** summarise differences in a numeric variable across categories.
 - **Scatterplots** and **regression lines** summarise relationships between two numeric variables.
 
+:::
+
 ------------------------------------------------------------------------
 
-
 **Why this matters:**
+
+::: nonincremental
 
 - Describing relationships between variables is the foundation for asking why those relationships exist.
 - Choosing the wrong tool for the wrong variable types produces meaningless or misleading output.
 - These skills are essential for interpreting bivariate analyses in research papers, reports, and public debate.
+
+:::
