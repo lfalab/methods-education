@@ -1,0 +1,9 @@
+# Ignore all contents by default (data files, output, etc.)
+*
+
+# Track this gitignore
+!.gitignore
+
+# Track do-files
+!do/
+!do/*.do

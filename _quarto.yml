@@ -87,6 +87,11 @@ website:
             - slides/lectures/W09-confounding.qmd
             - activities/A09a-confounding-reverse.qmd
             - activities/A09b-ps2-workshop-2.qmd
+      - section: "Week 10: Multivariate Regression"
+        contents:
+            - slides/videos-concepts/C25-multivariate-regression.qmd
+            - slides/videos-concepts/C26-controls-confounding.qmd
+            - activities/A10b-ps2-workshop-3.qmd
 
 
 format:

@@ -1,0 +1,122 @@
+---
+pagetitle: "Multivariate Regression"
+class: video
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: multivariate-regression
+  revealjs:
+    output-file: multivariate-regression-slides
+---
+
+# Multivariate Regression {.title-left}
+
+------------------------------------------------------------------------
+
+## You'll learn to
+
+::: presenter-space
+- Write a regression equation with **multiple explanatory variables**.
+- Interpret a slope "holding other variables constant."
+- Compare **bivariate** and **multivariate** regression results.
+:::
+
+------------------------------------------------------------------------
+
+## Recall: Education and the Leave vote
+
+::: presenter-space
+- We previously regressed **Leave vote share** on **higher education**.
+- Slope: $b = -1.13$ per percentage point of graduates.
+- $R^2 = 0.30$: education explains 30% of the variation.
+:::
+
+------------------------------------------------------------------------
+
+## Another predictor: Immigration and the Leave vote
+
+::: presenter-space
+- We can also regress **Leave vote share** on **immigrant share**.
+- Slope: $b = -0.41$, statistically significant ($p < 0.001$).
+- Regions with more foreign-born residents voted Leave less.
+:::
+
+------------------------------------------------------------------------
+
+## Can we include both variables at once?
+
+::: presenter-space
+- Both **education** and **immigration** predict Leave voting separately.
+- What happens if we put them in the same model?
+- This is what **multivariate regression** does.
+:::
+
+------------------------------------------------------------------------
+
+## The multivariate regression equation
+
+::: presenter-space
+A simple (bivariate) regression has one explanatory variable:
+
+$$\widehat{Y} = b_0 + b_1 X$$
+
+A multivariate regression has two or more:
+
+$$\widehat{Y} = b_0 + b_1 X_1 + b_2 X_2$$
+:::
+
+------------------------------------------------------------------------
+
+## Our multivariate regression
+
+::: presenter-space
+|  | Coefficient | P-value |
+|---|---|---|
+| **Education** | -1.14 | < 0.001 |
+| **Immigration** | 0.08 | 0.449 |
+| **Intercept** | 83.49 | < 0.001 |
+
+$R^2 = 0.30$, $N = 139$.
+:::
+
+------------------------------------------------------------------------
+
+## Interpreting "holding constant"
+
+::: presenter-space
+- Education slope (-1.14): expected change in Leave share per point of education, **comparing regions with similar immigration**.
+- "Holding constant" isolates one variable's contribution.
+- Equivalent phrase: "all else equal."
+:::
+
+------------------------------------------------------------------------
+
+## What changed?
+
+::: presenter-space
+- Bivariate education slope: -1.13. Multivariate: -1.14. Almost identical.
+- Immigration: significant alone (-0.41), not in the multivariate model (0.08).
+- $R^2$ barely changed.
+:::
+
+------------------------------------------------------------------------
+
+## Recap
+
+::: presenter-space
+- Multivariate regression includes more than one **explanatory variable**.
+- Each coefficient is interpreted "holding other variables constant."
+- Coefficients can change when additional variables are included.
+:::
+
+------------------------------------------------------------------------
+
+::: presenter-space
+**Why this matters:**
+
+- Most outcomes in political science have multiple causes.
+- A single explanatory variable rarely tells the whole story.
+- Multivariate regression lets us examine each variable's contribution.
+:::

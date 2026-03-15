@@ -1,0 +1,130 @@
+---
+pagetitle: "Controls and Confounding"
+class: video
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: controls-confounding
+  revealjs:
+    output-file: controls-confounding-slides
+---
+
+# Controls and Confounding {.title-left}
+
+------------------------------------------------------------------------
+
+## You'll learn to
+
+::: presenter-space
+- Explain why multivariate regression helps address **confounding**.
+- Interpret what happens when a coefficient "goes away."
+- Recognise the limits of **controlling for confounders**.
+:::
+
+------------------------------------------------------------------------
+
+## Recall: Confounding variables
+
+::: presenter-space
+- A **confounding variable** affects both X and Y, creating a spurious association.
+- We identified confounding as a threat to causal claims in Week 9.
+- Multivariate regression lets us **control for** potential confounders.
+:::
+
+------------------------------------------------------------------------
+
+## How controlling works
+
+::: presenter-space
+- Include the suspected confounder as a variable in the regression.
+- The coefficient on X now compares units with **similar values of the confounder**.
+- If X's coefficient shrinks or disappears, confounding was likely present.
+:::
+
+------------------------------------------------------------------------
+
+## Example 1: Immigration and the Leave vote
+
+::: presenter-space
+- Bivariate regression: regions with more immigrants voted Leave less.
+- Slope: $b = -0.41$, statistically significant ($p < 0.001$).
+- But could **education** be driving both immigration and Leave voting?
+:::
+
+------------------------------------------------------------------------
+
+## Education as a confounder
+
+::: presenter-space
+- Educated regions attract more immigrants (better economic opportunities).
+- Educated regions also voted Remain.
+- Education affects both the explanatory variable and the outcome.
+:::
+
+------------------------------------------------------------------------
+
+## Controlling for education
+
+::: presenter-space
+|  | Bivariate | Multivariate |
+|---|---|---|
+| **Immigration** | -0.41 | 0.08 |
+| **Education** | — | -1.14 |
+
+Immigration's effect disappears once education is held constant.
+:::
+
+------------------------------------------------------------------------
+
+## Example 2: Health spending and CO2 emissions
+
+::: presenter-space
+- Across countries, health expenditure strongly predicts CO2 emissions.
+- Slope: $b = 0.73$ ($p < 0.001$). Countries spending more on health pollute more.
+- Does healthcare cause pollution? Obviously not. What is going on?
+:::
+
+------------------------------------------------------------------------
+
+## Controlling for GDP per capita
+
+::: presenter-space
+|  | Bivariate | Multivariate |
+|---|---|---|
+| **Health spending** | 0.73 | -0.04 |
+| **GDP per capita** | — | 0.91 |
+
+The health-CO2 relationship vanishes. National income drove both variables.
+:::
+
+------------------------------------------------------------------------
+
+## Does controlling for confounders prove causation?
+
+::: presenter-space
+- No. **"Confounding variables are everywhere."**
+- We can only control for variables we observe and think of.
+- Controls also do not address concerns about **reverse causality**.
+:::
+
+------------------------------------------------------------------------
+
+## Recap
+
+::: presenter-space
+- Adding a confounder to a regression can reveal spurious relationships.
+- A coefficient that "goes away" suggests confounding was present.
+- Controls reduce confounding concerns but cannot establish causation.
+:::
+
+------------------------------------------------------------------------
+
+::: presenter-space
+**Why this matters:**
+
+- Most social science research uses observational data, not experiments.
+- Multivariate regression is the primary tool for addressing confounders.
+- Understanding its limits is essential for interpreting research critically.
+:::
