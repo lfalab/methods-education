@@ -77,6 +77,7 @@ Based on existing quizzes:
 -   Questions test conceptual understanding, not rote memorisation.
 -   Distractors (incorrect options) should be plausible and address common misconceptions.
 -   Questions often present a scenario or hypothesis and ask students to identify, classify, or interpret.
+-   Quizzes cover concept video content only. Do not include questions about Stata syntax or Stata-specific content.
 -   No feedback text is included in the canonical format.
 
 ------------------------------------------------------------------------
@@ -102,7 +103,7 @@ Claude may generate Moodle XML from canonical files when instructed, following t
 
 # Week Coverage
 
-Quizzes exist for Weeks 2-5, 7-9. There is no W01 (introductory week) or W06 (reading week). Weeks 10+ do not yet have quizzes.
+Quizzes exist for Weeks 2-5, 7-10. There is no W01 (introductory week) or W06 (reading week).
 
 Claude must not create quizzes for missing weeks unless explicitly instructed.
 

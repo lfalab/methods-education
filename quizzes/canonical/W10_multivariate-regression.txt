@@ -1,0 +1,217 @@
+QUESTION: Which of the following equations represents a multivariate regression?
+
+A. Y = b0 + b1*X1 + b2*X2
+B. Y = b0 + b1*X
+C. Y = b0 * b1 * X1 * X2
+D. Y = b0 + b1*X1 * b2*X2
+
+ANSWER: A
+
+---
+
+QUESTION: In a multivariate regression, a researcher reports that the slope on education is -1.14, "holding income constant." What does "holding income constant" mean?
+
+A. The slope compares individuals (or units) with similar levels of income to isolate the relationship between education and the outcome
+B. Income was removed from the dataset before running the regression
+C. Income does not vary in the sample
+D. The researcher fixed income at its mean value and re-ran the analysis
+
+ANSWER: A
+
+---
+
+QUESTION: A multivariate regression equation is: Y = 10 + 3*X1 + 2*X2. What is the predicted value of Y when X1 = 4 and X2 = 5?
+
+A. 32
+B. 22
+C. 20
+D. 25
+
+ANSWER: A
+
+---
+
+QUESTION: A multivariate regression equation is: Y = 50 - 2*X1 + 0.5*X2. What does the coefficient on X1 tell us?
+
+A. For each one-unit increase in X1, Y is expected to decrease by 2 units, holding X2 constant
+B. For each one-unit increase in X1, Y is expected to increase by 2 units
+C. X1 and Y are unrelated
+D. For each one-unit increase in Y, X1 decreases by 2 units
+
+ANSWER: A
+
+---
+
+QUESTION: What is the main advantage of multivariate regression over bivariate regression?
+
+A. It allows us to examine the relationship between one variable and the outcome while accounting for other variables
+B. It always produces higher R-squared values
+C. It eliminates the need for a dependent variable
+D. It guarantees that the results are causal
+
+ANSWER: A
+
+---
+
+QUESTION: Researchers find that ice cream sales predict crime rates. When they add temperature to the model, the coefficient on ice cream sales drops to nearly zero. What role does temperature play in this example?
+
+A. Temperature is a confounding variable that affects both ice cream sales and crime rates
+B. Temperature is caused by ice cream sales
+C. Temperature is the dependent variable
+D. Temperature is a mediating variable on the pathway from ice cream sales to crime
+
+ANSWER: A
+
+---
+
+QUESTION: How does adding a control variable to a regression help address confounding?
+
+A. It compares units that are similar on the control variable, so the coefficient on X reflects its relationship with Y among comparable units
+B. It removes the control variable from the dataset entirely
+C. It guarantees that the remaining coefficients are causal
+D. It increases the sample size
+
+ANSWER: A
+
+---
+
+QUESTION: A study finds that owning a gym membership predicts better health outcomes. When income is added to the model, the coefficient on gym membership shrinks dramatically. What does this suggest?
+
+A. Income is likely a confounding variable: wealthier people are more likely to own gym memberships and also tend to be healthier
+B. Gym memberships cause higher income
+C. Income is unrelated to both gym memberships and health
+D. The original finding was due to measurement error
+
+ANSWER: A
+
+---
+
+QUESTION: A researcher adds several control variables to a regression and finds that the coefficient on the main explanatory variable remains statistically significant. Can the researcher conclude that the relationship is causal?
+
+A. No, because there may be unobserved confounders or reverse causality that controls cannot address
+B. Yes, because controlling for confounders eliminates all alternative explanations
+C. Yes, as long as R-squared is high enough
+D. No, because adding controls always makes coefficients insignificant
+
+ANSWER: A
+
+---
+
+QUESTION: What does an R-squared value of 0.60 mean?
+
+A. 60% of the variance in the dependent variable is explained by the independent variable(s)
+B. The slope equals 0.60
+C. 60% of observations lie exactly on the regression line
+D. The correlation between X and Y is 0.60
+
+ANSWER: A
+
+---
+
+QUESTION: What does the standard error of a slope coefficient measure?
+
+A. How much the estimated slope would vary if we drew repeated samples from the same population
+B. How spread out the observed values of the dependent variable are
+C. The difference between the largest and smallest values of the independent variable
+D. How far each observation is from the regression line
+
+ANSWER: A
+
+---
+
+QUESTION: A regression produces a slope of 3.5 with a standard error of 0.5. Another regression produces a slope of 3.5 with a standard error of 2.5. Which statement is correct?
+
+A. The first estimate is more precise because its standard error is smaller
+B. The second estimate is more precise because its standard error is larger
+C. Both estimates are equally precise because the slopes are the same
+D. Precision cannot be determined from the standard error
+
+ANSWER: A
+
+---
+
+QUESTION: What does the standard deviation measure?
+
+A. How spread out the observed values of a variable are
+B. How much a slope coefficient would vary across repeated samples
+C. Whether a coefficient is statistically significant
+D. The predicted value of the dependent variable
+
+ANSWER: A
+
+---
+
+QUESTION: A regression produces a coefficient of 4.0 with a standard error of 2.0. What is the t-statistic?
+
+A. 2.0
+B. 6.0
+C. 8.0
+D. 0.5
+
+ANSWER: A
+
+---
+
+QUESTION: A t-statistic with an absolute value greater than 2 generally suggests that:
+
+A. The slope is statistically significant: it is unlikely to be zero in the population
+B. The slope is equal to 2
+C. The model has a high R-squared
+D. The sample size is too small
+
+ANSWER: A
+
+---
+
+QUESTION: In a published regression table, what does each column typically represent?
+
+A. A separate regression model
+B. A different dependent variable
+C. A different sample of data
+D. A different time period
+
+ANSWER: A
+
+---
+
+QUESTION: In the regression equation Y = 15 + 4*X, what does the slope of 4 tell us?
+
+A. For each one-unit increase in X, Y is expected to increase by 4 units
+B. When X equals zero, Y equals 4
+C. X and Y have a correlation of 4
+D. There are 4 observations in the dataset
+
+ANSWER: A
+
+---
+
+QUESTION: In a regression table, a variable has a coefficient listed in Model 1 but a blank cell in Model 2. What does the blank cell mean?
+
+A. That variable was not included in Model 2
+B. The coefficient was exactly zero in Model 2
+C. The variable was statistically insignificant in Model 2
+D. The data for that variable was missing
+
+ANSWER: A
+
+---
+
+QUESTION: In a multivariate regression equation Y = 20 + 3*X1 - 1.5*X2, what does the intercept (20) represent?
+
+A. The predicted value of Y when both X1 and X2 are equal to zero
+B. The average value of Y in the sample
+C. The slope of X1 plus the slope of X2
+D. The minimum possible value of Y
+
+ANSWER: A
+
+---
+
+QUESTION: A regression produces a slope coefficient with a p-value of 0.03. What does this tell us?
+
+A. The slope is statistically significant at the 0.05 level: there is strong evidence that the slope is not zero in the population
+B. The slope is not statistically significant
+C. 3% of the variance in Y is explained by X
+D. The coefficient equals 0.03
+
+ANSWER: A
