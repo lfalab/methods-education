@@ -29,7 +29,7 @@ format:
 
 ::: presenter-space
 - A **confounding variable** affects both X and Y, creating a spurious association.
-- We identified confounding as a threat to causal claims in Week 9.
+- We identified confounding as a threat to causal claims.
 - Multivariate regression lets us **control for** potential confounders.
 :::
 

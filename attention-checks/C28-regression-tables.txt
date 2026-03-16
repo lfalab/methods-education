@@ -1,0 +1,5 @@
+In a standard regression table, what does each column represent?
+
+- A separate regression model
+- A different variable
+- A different sample of data

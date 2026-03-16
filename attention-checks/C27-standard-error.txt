@@ -1,0 +1,5 @@
+What does the standard error of a slope coefficient measure?
+
+- How much the estimated slope would vary across repeated samples
+- How spread out the observed data points are
+- How far each data point is from the regression line

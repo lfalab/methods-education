@@ -1,0 +1,5 @@
+How do you add a second explanatory variable to a regression in Stata?
+
+- Add the variable name after the first predictor in the regress command
+- Run a separate regress command for each variable
+- Use a special option like ", add(varname)"

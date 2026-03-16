@@ -60,7 +60,6 @@ regress leave_share share_high_skill
 ```
 
 - One dependent variable, one explanatory variable.
-- This is the familiar command from Week 8.
 
 :::
 

@@ -1,0 +1,5 @@
+# Ignore all contents by default
+*
+
+# Track this gitignore
+!.gitignore

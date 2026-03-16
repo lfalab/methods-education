@@ -75,8 +75,8 @@ What is reproducible research?
 
 Attention checks exist for:
 
-- All 24 concept videos (C01–C24)
-- Stata videos S01–S04, S09, S10
+- All 28 concept videos (C01–C28)
+- Stata videos S01–S04, S09–S11
 
 Stata videos S05–S08 do not yet have attention checks.
 

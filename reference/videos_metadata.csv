@@ -9,32 +9,32 @@
 3,S02-datasets-codebooks,Datasets and Codebooks,QFWFimlyhas,Lab,"Use a codebook to interpret variable meanings, coding schemes, and missing-value conventions."
 3,S03-stata-interface,The Stata Interface (Setting the Working Directory),rzjMrTdF9HE,Lab,Navigate Stata’s interface and locate key information needed to run and interpret commands.
 3,S04-loading-browsing-data,Loading and Browsing Data,nWJTyqIjYgE,Lab,Write and run a do-file to document an analysis so it can be reproduced.
-4,C07-summarising-distribution,Summarising a Distribution,,Concept,"Interpret the mean, median, and mode as summaries of a distribution’s central tendency."
-4,C08-variance-sd,Variance and Standard Deviation,,Concept,Interpret the variance and standard deviation as summaries of dispersion.
-4,C09-bar-histograms,Bar Charts and Histograms,,Concept,Choose and interpret bar charts and histograms for univariate data.
-4,S05-summary-stata,Summarising Distributions in Stata,,Lab,Produce summary statistics and frequency tables in Stata and interpret what they show.
-4,S06-bar-hist-stata,Bar Charts and Histograms in Stata,,Lab,Create bar charts and histograms in Stata and use them to describe distributions.
-5,C10-correlations-nominal,Correlations Between Nominal Variables,,Concept,Describe associations between two categorical variables using cross-tabulations and bivariate frequency charts.
-5,C11-comparing-means,Comparing Means by Category,,Concept,Summarise differences between groups by comparing group means
-5,C12-scatter-reg,Scatterplots and Regression Lines,,Concept,Interpret scatter plots and regression lines to analyse correlations between numeric variables.
-5,C13-types-plots-tables,From Variable Types to Plots and Tables,,Concept,"Choose appropriate tables, plots, and summary statistics based on the types of variables being analysed."
-5,S07-corr-stata,Describing Correlations in Stata,,Lab,Generate and interpret bivariate summaries in Stata.
-7,C14-sampling,Why Sampling Matters,,Concept,Explain how samples relate to populations and why unbiased sampling matters for inference.
-7,C15-moe-ci,Confidence Intervals and Margins of Error,,Concept,"Interpret confidence intervals and margins of error, and explain what makes them wider or narrower."
-7,C16-htests-cis,Hypothesis Tests Using Confidence Intervals,,Concept,Use confidence intervals to assess evidence against a null hypothesis in a transparent way.
-7,C17-p-values,Interpreting P-values,,Concept,Interpret a p-value and use it to evaluate a null hypothesis without conflating it with effect size.
-7,S08-htests-stata,Hypothesis Testing in Stata,,Lab,Run and interpret a difference-in-proportions test and a difference in means test in Stata using both CIs and p-values.
-8,C18-regression-intro,Regression Analysis: Introduction,,Concept,Interpret how a bivariate regression models the relationship between two variables
-8,C19-regression-slope,Regression Slope,,Concept,Explain what determines the regression slope and how changes in variation affect its magnitude.
-8,C20-regression-inference,Inference in Regression: CIs and P-values,,Concept,Use CIs and p-values in regression output to assess evidence about a coefficient.
-8,C21-regression-rsquared,R-squared,,Concept,Interpret R-squared as explained variation and describe factors that affect its value.
-8,S09-regression-stata,Bivariate Regression in Stata,,Lab,Fit a bivariate regression in Stata and extract the intercept and slope from the output.
-9,C22-confounding,Confounding Variables,,Concept,Define confounding and explain how it can create or mask relationships in observational data.
-9,C23-reverse-causality,Reverse Causality,,Concept,Explain how reverse causality can generate correlations that misrepresent direction of influence.
-9,C24-random-assignment,Random Assignment and Causal Inference,,Concept,Explain how random assignment helps isolate causal effects by breaking confounding links.
-9,S10-preparing-stata,Preparing Data in Stata,,Lab,Clean and recode data in Stata for analysis.
+4,C07-summarising-distribution,Summarising a Distribution,yoqs_KoxUQQ,Concept,"Interpret the mean, median, and mode as summaries of a distribution’s central tendency."
+4,C08-variance-sd,Variance and Standard Deviation,dFiVmoWvqwM,Concept,Interpret the variance and standard deviation as summaries of dispersion.
+4,C09-bar-histograms,Bar Charts and Histograms,rKMQZJYWNhQ,Concept,Choose and interpret bar charts and histograms for univariate data.
+4,S05-summary-stata,Summarising Distributions in Stata,GJt35E1ZmXI,Lab,Produce summary statistics and frequency tables in Stata and interpret what they show.
+4,S06-bar-hist-stata,Bar Charts and Histograms in Stata,_8Y4yUoniZM,Lab,Create bar charts and histograms in Stata and use them to describe distributions.
+5,C10-correlations-nominal,Correlations Between Nominal Variables,hlRTjcbp-4Q,Concept,Describe associations between two categorical variables using cross-tabulations and bivariate frequency charts.
+5,C11-comparing-means,Comparing Means by Category,PN5grU821ZI,Concept,Summarise differences between groups by comparing group means
+5,C12-scatter-reg,Scatterplots and Regression Lines,8nLsFD_rWcg,Concept,Interpret scatter plots and regression lines to analyse correlations between numeric variables.
+5,C13-types-plots-tables,From Variable Types to Plots and Tables,rW-OWCudl1I,Concept,"Choose appropriate tables, plots, and summary statistics based on the types of variables being analysed."
+5,S07-corr-stata,Describing Correlations in Stata,I8E_oqPSzOk,Lab,Generate and interpret bivariate summaries in Stata.
+7,C14-sampling,Why Sampling Matters,DBGC0nfQGe4,Concept,Explain how samples relate to populations and why unbiased sampling matters for inference.
+7,C15-moe-ci,Confidence Intervals and Margins of Error,aPJw_J8BFK8,Concept,"Interpret confidence intervals and margins of error, and explain what makes them wider or narrower."
+7,C16-htests-cis,Hypothesis Tests Using Confidence Intervals,JGyuulPB3T4,Concept,Use confidence intervals to assess evidence against a null hypothesis in a transparent way.
+7,C17-p-values,Interpreting P-values,sCBPyQDTn0I,Concept,Interpret a p-value and use it to evaluate a null hypothesis without conflating it with effect size.
+7,S08-htests-stata,Hypothesis Testing in Stata,tzJBlU44BfM,Lab,Run and interpret a difference-in-proportions test and a difference in means test in Stata using both CIs and p-values.
+8,C18-regression-intro,Regression Analysis: Introduction,rmYjip2KAsQ,Concept,Interpret how a bivariate regression models the relationship between two variables
+8,C19-regression-slope,Regression Slope,RFI3iYNm230,Concept,Explain what determines the regression slope and how changes in variation affect its magnitude.
+8,C20-regression-inference,Inference in Regression: CIs and P-values,PikA6zWptlY,Concept,Use CIs and p-values in regression output to assess evidence about a coefficient.
+8,C21-regression-rsquared,R-squared,hJJddg_VUOw,Concept,Interpret R-squared as explained variation and describe factors that affect its value.
+8,S09-regression-stata,Bivariate Regression in Stata,SzurQK5TQrY,Lab,Fit a bivariate regression in Stata and extract the intercept and slope from the output.
+9,C22-confounding,Confounding Variables,4aucVcaSScg,Concept,Define confounding and explain how it can create or mask relationships in observational data.
+9,C23-reverse-causality,Reverse Causality,oJgp-1esz00,Concept,Explain how reverse causality can generate correlations that misrepresent direction of influence.
+9,C24-random-assignment,Random Assignment and Causal Inference,rbTOPJZ-H9c,Concept,Explain how random assignment helps isolate causal effects by breaking confounding links.
+9,S10-preparing-stata,Preparing Data in Stata,A8S3x-S0-U0,Lab,Clean and recode data in Stata for analysis.
 10,C25-multivariate-regression,Multivariate regression: adding controls,,Concept,Describe how multivariate regression conditions on additional variables to summarise relationships.
 10,C26-controls-confounding,Controls and confounding in multivariate regression,,Concept,Explain how adding controls can mitigate some confounding concerns and what it cannot resolve.
-10,S11-multivariate-stata,Multivariate regression in Stata,,Lab,Fit and interpret a multivariate regression model in Stata.
 10,C27-standard-error,The Standard Error,,Concept,Explain the intuition of the standard error and its centrality for determining the statistical significance of estimates.
 10,C28-regression-tables,Reading regression tables for publication,,Concept,"Read a regression table and accurately interpret coefficients, uncertainty, and model specifications."
+10,S11-multivariate-stata,Multivariate regression in Stata,,Lab,Fit and interpret a multivariate regression model in Stata.

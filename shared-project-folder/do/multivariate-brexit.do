@@ -11,7 +11,6 @@ use "data-raw/Brexit_Regional.dta", clear
 
 * ----------------------------------------------------------------------
 * MODEL 1: Bivariate — Education and the Leave vote
-* (Familiar from Week 8)
 * ----------------------------------------------------------------------
 
 regress leave_share share_high_skill

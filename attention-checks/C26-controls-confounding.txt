@@ -1,0 +1,5 @@
+What is a confounding variable?
+
+- A variable that affects both the explanatory variable and the outcome variable
+- A variable that is caused by the outcome variable
+- A variable that has no relationship with anything in the model
