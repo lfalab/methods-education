@@ -4305,18 +4305,29 @@
     "href": "slides/lectures/confounding-lecture.html#macdonald-et-al.-2016",
     "title": "Lecture 9: Confounding Variables",
     "section": "MacDonald et al. (2016)",
-    "text": "MacDonald et al. (2016)\n\nUsed a difference-in-differences design.\nCompared impact zones to similar nearby blocks not designated.\nPolice surges reduced crime; investigative stops did not.\n\nMacDonald, Fagan & Geller (2016), PLOS ONE",
+    "text": "MacDonald et al. (2016)\n\nUsed a difference-in-differences design.\nCompared impact zones to similar nearby blocks not designated.\nPolice surges reduced crime, regardless of investigative stops.\n\nMacDonald, Fagan & Geller (2016), PLOS ONE",
     "crumbs": [
       "Week 9: Confounding Variables and Reverse Causality",
       "Lecture 9: Confounding Variables"
     ]
   },
   {
-    "objectID": "slides/lectures/confounding-lecture.html#how-do-we-know-it-was-presence-not-stops",
-    "href": "slides/lectures/confounding-lecture.html#how-do-we-know-it-was-presence-not-stops",
+    "objectID": "slides/lectures/confounding-lecture.html#how-do-we-know-it-was-presence",
+    "href": "slides/lectures/confounding-lecture.html#how-do-we-know-it-was-presence",
     "title": "Lecture 9: Confounding Variables",
-    "section": "How do we know it was presence, not stops?",
-    "text": "How do we know it was presence, not stops?\n\nBloomberg and Kelly used a simple before-and-after for the whole city.\nThis cannot rule out other changes over the same period.\nMacDonald et al. compared impact zones to similar blocks with no extra officers.",
+    "section": "How do we know it was presence?",
+    "text": "How do we know it was presence?\n\nBloomberg and Kelly used a simple before-and-after for the whole city.\nThis cannot rule out other changes over the same period.\nMacDonald et al. compared impact zones to similar blocks with no extra officers.",
+    "crumbs": [
+      "Week 9: Confounding Variables and Reverse Causality",
+      "Lecture 9: Confounding Variables"
+    ]
+  },
+  {
+    "objectID": "slides/lectures/confounding-lecture.html#presence-vs.-stops",
+    "href": "slides/lectures/confounding-lecture.html#presence-vs.-stops",
+    "title": "Lecture 9: Confounding Variables",
+    "section": "Presence vs. stops",
+    "text": "Presence vs. stops\n\nImpact zones with more officers saw less crime than comparable blocks.\nZones with more stops did not see additional crime reductions.\nThe effect came from officers being there, not from stopping people.",
     "crumbs": [
       "Week 9: Confounding Variables and Reverse Causality",
       "Lecture 9: Confounding Variables"
@@ -4394,14 +4405,21 @@
     "href": "slides/lectures/confounding-lecture-slides.html#macdonald-et-al.-2016",
     "title": "Lecture 9: Confounding Variables",
     "section": "MacDonald et al. (2016)",
-    "text": "MacDonald et al. (2016)\n\nUsed a difference-in-differences design.\nCompared impact zones to similar nearby blocks not designated.\nPolice surges reduced crime; investigative stops did not.\n\nMacDonald, Fagan & Geller (2016), PLOS ONE"
+    "text": "MacDonald et al. (2016)\n\nUsed a difference-in-differences design.\nCompared impact zones to similar nearby blocks not designated.\nPolice surges reduced crime, regardless of investigative stops.\n\nMacDonald, Fagan & Geller (2016), PLOS ONE"
   },
   {
-    "objectID": "slides/lectures/confounding-lecture-slides.html#how-do-we-know-it-was-presence-not-stops",
-    "href": "slides/lectures/confounding-lecture-slides.html#how-do-we-know-it-was-presence-not-stops",
+    "objectID": "slides/lectures/confounding-lecture-slides.html#how-do-we-know-it-was-presence",
+    "href": "slides/lectures/confounding-lecture-slides.html#how-do-we-know-it-was-presence",
     "title": "Lecture 9: Confounding Variables",
-    "section": "How do we know it was presence, not stops?",
-    "text": "How do we know it was presence, not stops?\n\nBloomberg and Kelly used a simple before-and-after for the whole city.\nThis cannot rule out other changes over the same period.\nMacDonald et al. compared impact zones to similar blocks with no extra officers."
+    "section": "How do we know it was presence?",
+    "text": "How do we know it was presence?\n\nBloomberg and Kelly used a simple before-and-after for the whole city.\nThis cannot rule out other changes over the same period.\nMacDonald et al. compared impact zones to similar blocks with no extra officers."
+  },
+  {
+    "objectID": "slides/lectures/confounding-lecture-slides.html#presence-vs.-stops",
+    "href": "slides/lectures/confounding-lecture-slides.html#presence-vs.-stops",
+    "title": "Lecture 9: Confounding Variables",
+    "section": "Presence vs. stops",
+    "text": "Presence vs. stops\n\nImpact zones with more officers saw less crime than comparable blocks.\nZones with more stops did not see additional crime reductions.\nThe effect came from officers being there, not from stopping people."
   },
   {
     "objectID": "slides/lectures/confounding-lecture-slides.html#why-this-matters",
