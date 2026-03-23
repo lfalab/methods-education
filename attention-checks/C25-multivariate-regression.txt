@@ -1,5 +1,5 @@
 In a multivariate regression, how should we interpret a slope coefficient?
 
 - As the effect of that variable holding all other variables in the model constant
-- As the total effect of that variable on the outcome
+- As the total effect of that variable on the outcome in combination with all other variables
 - As the average of all the slope coefficients in the model

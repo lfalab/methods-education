@@ -77,19 +77,27 @@ Source: [NYCLU](https://www.nyclu.org/en/stop-and-frisk-data)
 
 ## MacDonald et al. (2016)
 
-- Used a **difference-in-differences** design.
+- Used a **difference-in-differences** design (DiD).
 - Compared impact zones to similar nearby blocks **not** designated.
-- Police surges **reduced crime**; investigative stops did not.
+- Measured the **change** in crime in both groups, not absolute levels.
 
-MacDonald, Fagan & Geller (2016), *PLOS ONE*
+[MacDonald, Fagan & Geller (2016), *PLOS ONE*](https://doi.org/10.1371/journal.pone.0157223)
 
 ------------------------------------------------------------------------
 
-## How do we know it was presence, not stops?
+## How do we know it was presence?
 
-- Bloomberg and Kelly used a simple before-and-after for the whole city.
-- This cannot rule out other changes over the same period.
-- MacDonald et al. compared impact zones to similar blocks with no extra officers.
+- Bloomberg and Kelly compared crime **before and after** across the whole city.
+- City-wide trends (e.g. economic recovery) could explain the decline.
+- DiD asks: did crime **fall more** in impact zones than in similar blocks?
+
+------------------------------------------------------------------------
+
+## Presence vs. stops
+
+- Impact zones saw a **larger drop** in crime than comparable blocks.
+- Zones with more stops did **not** see additional crime reductions.
+- The effect came from officers being there, not from stopping people.
 
 ------------------------------------------------------------------------
 
