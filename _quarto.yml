@@ -94,6 +94,8 @@ website:
             - slides/videos-concepts/C27-standard-error.qmd
             - slides/videos-concepts/C28-regression-tables.qmd
             - slides/videos-stata/S11-multivariate-stata.qmd
+            - slides/lectures/W10-multivariate.qmd
+            - activities/A10a-regression-tables.qmd
             - activities/A10b-ps2-workshop-3.qmd
 
 

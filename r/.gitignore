@@ -1,0 +1,7 @@
+# Ignore all data files
+data/
+
+# Ignore R workspace files
+.RData
+.Rhistory
+*.Rproj.user

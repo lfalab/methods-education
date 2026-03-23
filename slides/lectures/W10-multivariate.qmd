@@ -1,0 +1,181 @@
+---
+title: "Lecture 10: Multivariate Regression"
+subtitle: "Statistics for Political Science"
+author: "Leonardo Falabella"
+class: lecture
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: multivariate-lecture
+  revealjs:
+    output-file: multivariate-lecture-slides
+---
+
+------------------------------------------------------------------------
+
+## From the concept videos to the lecture
+
+- The videos showed coefficients that **disappear** after adding controls.
+- Today we ask: what if the coefficient **shrinks but survives**?
+- We return to Stata to find out.
+
+------------------------------------------------------------------------
+
+## The do-file is your template
+
+- Everything we do today is in ``multivariate-lecture.do``.
+- Download it, update the working directory, and run along.
+
+------------------------------------------------------------------------
+
+## Download today's do-file
+
+::: nonincremental
+
+- Access our [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE)
+- Click on ``do``
+- Download ``multivariate-lecture.do``
+- Save it to your ``do`` folder and update the working directory
+
+:::
+
+------------------------------------------------------------------------
+
+## Today's question
+
+- In Week 8 we found: import shock predicts Leave voting (slope = 28.38).
+- Could **education** or **immigration** be confounding that result?
+- We add controls one at a time and see what happens.
+
+------------------------------------------------------------------------
+
+## Your Turn: Run the four models
+
+- Run the do-file and look at the **import shock coefficient** across all four models.
+- How does the coefficient change as you add controls? Does it stay significant?
+- Discuss with your neighbour: what does the pattern tell you about confounding?
+
+------------------------------------------------------------------------
+
+## Model 1: Import shock alone
+
+::: nonincremental
+
+```stata
+regress leave_share import_shock
+```
+
+- Slope = **28.38**: each unit of import shock predicts 28pp more Leave.
+- Significant (p < 0.001), R-squared = 0.14.
+
+:::
+
+------------------------------------------------------------------------
+
+## Model 2: Adding immigrant share
+
+::: nonincremental
+
+```stata
+regress leave_share import_shock immigrant_share
+```
+
+- Import shock drops from 28.38 to **23.13** (still significant).
+- R-squared rises from 0.14 to 0.29.
+
+:::
+
+------------------------------------------------------------------------
+
+## Model 3: Adding education instead
+
+::: nonincremental
+
+```stata
+regress leave_share import_shock share_high_skill
+```
+
+- Import shock drops from 28.38 to **12.85** (still significant, p = 0.006).
+- Education cuts the coefficient roughly **in half**.
+
+:::
+
+------------------------------------------------------------------------
+
+## Model 4: Both controls together
+
+::: nonincremental
+
+```stata
+regress leave_share import_shock immigrant_share share_high_skill
+```
+
+- Import shock: **12.61** (p = 0.008), barely changes from Model 3.
+- Immigration adds almost nothing once education is controlled.
+
+:::
+
+------------------------------------------------------------------------
+
+## Comparing the four models
+
+::: nonincremental
+
+| Model | import_shock | p-value | R-squared |
+|-------|-------------|---------|-----------|
+| 1: Bivariate | 28.38 | < 0.001 | 0.14 |
+| 2: + immigration | 23.13 | < 0.001 | 0.29 |
+| 3: + education | 12.85 | 0.006 | 0.34 |
+| 4: + both | 12.61 | 0.008 | 0.34 |
+
+:::
+
+------------------------------------------------------------------------
+
+## What does this tell us?
+
+- Education was a **confound**: it inflated import shock's apparent effect.
+- But import shock **survives** the controls; the relationship appears genuine.
+- Controls make us more confident, but alone cannot prove causation.
+
+------------------------------------------------------------------------
+
+## The limits of controls
+
+- We can only control for variables we **observe and include**.
+- Unobserved confounders could still bias the estimate.
+- How do researchers go further? One approach: **instrumental variables**.
+
+------------------------------------------------------------------------
+
+## Colantone and Stanig (2018)
+
+- Studied the same question: does trade exposure cause support for Leave?
+- Used the same import shock measure from our dataset.
+- Concern: maybe UK import patterns reflect UK conditions, not just China's rise.
+
+------------------------------------------------------------------------
+
+## The instrumental variable idea
+
+- Find a variable that predicts import shock but is unrelated to UK confounders.
+- Their instrument: **US import growth from China** (same global shock, independent of UK).
+- Use only the part of UK import shock explained by the global trend.
+
+------------------------------------------------------------------------
+
+## What did they find?
+
+- IV estimate was similar to the regression estimate with controls.
+- This suggests our regression is not badly biased by unobserved confounders.
+- IV gave them a stronger basis for a **causal** claim.
+
+------------------------------------------------------------------------
+
+## Why this matters
+
+- Multivariate regression refines estimates but cannot prove causation alone.
+- Researchers use methods like DiD and IV to push closer to causal claims.
+- **Data literacy means knowing what your tools can do and where they stop.**

@@ -196,9 +196,29 @@ ggsave("C:/temp/plot.png", width = 8, height = 5)
 
 ### Conventions
 
-- R is primarily used for legacy code and plot generation, not for the main teaching materials (which use Stata).
+- R is used for content generation (regression tables, plots), not for the main teaching materials (which use Stata).
 - Temporary R output files go in `C:\temp\` (outside the repository).
 - Never commit R output files to the repository.
+
+---
+
+# R Content Generation Directory
+
+`r/` contains R scripts and datasets used to generate content for the website (plots, regression table images, statistical output).
+
+### Structure
+
+| Path | Purpose | Claude may edit? |
+|------|---------|------------------|
+| `r/*.R` | R scripts that produce assets | Yes |
+| `r/data/` | Datasets used by R scripts | No (source data) |
+
+### Conventions
+
+- R scripts save output images to `assets/` (tracked in git).
+- Source data files (`.xlsx`, `.dta`) in `r/data/` should not be modified.
+- Generated/intermediate data files (`.csv`) in `r/data/` are gitignored.
+- When creating new R scripts, follow the pattern of existing scripts: set paths relative to the project root or use absolute OneDrive paths consistent with the project.
 
 ---
 
@@ -301,6 +321,7 @@ Claude may freely:
 - create and edit Stata do-files in `shared-project-folder/do/`
 - run Stata do-files from the terminal and read the output (see "Running Stata from Claude Code")
 - report and interpret Stata output (regression tables, summary statistics, etc.)
+- create and edit R scripts in `r/`
 
 When creating new content pages, Claude **must update `_quarto.yml`** to add the page to the sidebar so it appears on the site. Keeping the sidebar in sync with new content is part of the task, not a separate step requiring explicit instruction.
 

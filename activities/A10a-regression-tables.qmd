@@ -1,0 +1,110 @@
+---
+title: "Seminar Activity: Reading Regression Tables"
+subtitle: "Statistics for Political Science — Week 10"
+author: "Leonardo Falabella"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    theme: default
+---
+
+## Introduction
+
+In Week 8, you ran bivariate regressions on Quality of Government (QoG) variables and interpreted the raw Stata output. In research papers and exams, regression results are presented in a more compact format: a **regression table** showing multiple models side by side. This activity practises reading that format.
+
+The table below reports three regression models using the QoG dataset. The variables are:
+
+**Dependent variable:**
+
+- **Press Freedom Index** (`rsf_pfi`): measurement of press freedom for each country according to Reporters Without Borders. Higher scores indicate more press freedom.
+
+**Independent variables:**
+
+- **Internet Users (%)** (`wdi_internet`): percentage of the population with internet access. Source: World Development Indicators.
+- **Gini Index** (`wdi_gini`): a measure of income inequality within a country, ranging from 0 (perfect equality) to 100 (perfect inequality). Source: World Development Indicators.
+
+The researchers pose two research questions:
+
+1. Do countries with higher internet usage tend to have greater press freedom?
+2. Do more unequal countries tend to have less press freedom?
+
+------------------------------------------------------------------------
+
+## Regression Table
+
+Table 1 contains the results of three regression models. Models 1 and 2 are bivariate regression models, each including a single independent variable. Model 3 is a multivariate regression model that includes both independent variables simultaneously.
+
+|                    |   (1)     |   (2)     |   (3)     |
+|:-------------------|----------:|----------:|----------:|
+| Internet Users (%) | 0.247***  |           | 0.218***  |
+|                    | (0.053)   |           | (0.056)   |
+| Gini Index         |           | -0.632*** | -0.344    |
+|                    |           | (0.222)   | (0.222)   |
+| Constant           | 43.934*** | 83.520*** | 58.111*** |
+|                    | (3.970)   | (7.952)   | (9.952)   |
+| Observations       | 116       | 116       | 116       |
+| R²                 | 0.159     | 0.067     | 0.177     |
+
+: Table 1: Dependent variable: Press Freedom Index (higher = more press freedom) {.striped}
+
+*Note:* \*p<0.1; \*\*p<0.05; \*\*\*p<0.01. Standard errors in parentheses.
+
+------------------------------------------------------------------------
+
+## Questions
+
+Work through the following questions in your group. Refer to Table 1 for all answers.
+
+------------------------------------------------------------------------
+
+**Q1.** According to Model 1, what is the estimated slope for internet users? What is its standard error?
+
+------------------------------------------------------------------------
+
+**Q2.** According to Model 1, for each one percentage point increase in internet users, what is the predicted change in the Press Freedom Index? Is this change positive or negative, and what does it mean substantively?
+
+------------------------------------------------------------------------
+
+**Q3.** According to Model 2, what would be the predicted Press Freedom Index of a hypothetical country with a Gini index of zero (i.e., perfect equality)? Which number in the table gives you this prediction?
+
+------------------------------------------------------------------------
+
+**Q4.** Is the coefficient on the Gini index statistically significant at the 5% level in Model 2? What about in Model 3? How can you tell from the table?
+
+> **Hint:** Look at the stars next to each coefficient. The note at the bottom of the table tells you what each star level means. Remember that a coefficient is significant at the 5% level if its p-value is less than 0.05.
+
+------------------------------------------------------------------------
+
+**Q5.** Using Model 3, calculate the predicted Press Freedom Index for a country where 70% of the population uses the internet and the Gini index is 40. Show your calculation.
+
+> **Hint:** Write out the regression equation using the constant and the two slope coefficients from Model 3, then substitute the values.
+
+------------------------------------------------------------------------
+
+**Q6.** Compare the coefficient on the Gini index between Models 2 and 3. In which model is the coefficient larger in magnitude? Why do you think the coefficient changes when internet usage is added to the model?
+
+------------------------------------------------------------------------
+
+**Q7.** Which model has the highest R²? Does adding inequality to the internet model (comparing Models 1 and 3) substantially increase the proportion of variation explained?
+
+------------------------------------------------------------------------
+
+**Q8.** Can you think of a variable *not included* in these models that could be a confounding variable for the relationship between internet usage and press freedom? Explain how it meets the definition of a confounding variable: it must plausibly affect both the independent variable and the dependent variable.
+
+> **Hint:** Think about what characteristics of a country might simultaneously affect how many people use the internet and how free the press is.
+
+------------------------------------------------------------------------
+
+## Summary
+
+In this activity, you have:
+
+- Located coefficients, standard errors, and significance stars in a publication-style regression table.
+- Interpreted slopes substantively, paying attention to sign and scale.
+- Used the regression equation to calculate predicted values from a multivariate model.
+- Compared coefficients and significance across bivariate and multivariate models.
+- Identified potential confounding variables not included in the regression table.
+
+These are the core skills required for interpreting regression tables in Problem Set 2 and the exam.
