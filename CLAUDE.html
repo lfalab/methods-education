@@ -592,6 +592,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./slides/lectures/multivariate-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 10: Multivariate Regression</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./activities/A10a-regression-tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Seminar Activity: Reading Regression Tables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./activities/A10b-ps2-workshop-3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PS2 Workshop 3: Interpretation and Discussion</span></a>
   </div>
@@ -798,9 +810,47 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="conventions-1" class="level3">
 <h3 class="anchored" data-anchor-id="conventions-1">Conventions</h3>
 <ul>
-<li>R is primarily used for legacy code and plot generation, not for the main teaching materials (which use Stata).</li>
+<li>R is used for content generation (regression tables, plots), not for the main teaching materials (which use Stata).</li>
 <li>Temporary R output files go in <code>C:\temp\</code> (outside the repository).</li>
 <li>Never commit R output files to the repository.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="r-content-generation-directory" class="level1">
+<h1>R Content Generation Directory</h1>
+<p><code>r/</code> contains R scripts and datasets used to generate content for the website (plots, regression table images, statistical output).</p>
+<section id="structure" class="level3">
+<h3 class="anchored" data-anchor-id="structure">Structure</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Path</th>
+<th>Purpose</th>
+<th>Claude may edit?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>r/*.R</code></td>
+<td>R scripts that produce assets</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td><code>r/data/</code></td>
+<td>Datasets used by R scripts</td>
+<td>No (source data)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="conventions-2" class="level3">
+<h3 class="anchored" data-anchor-id="conventions-2">Conventions</h3>
+<ul>
+<li>R scripts save output images to <code>assets/</code> (tracked in git).</li>
+<li>Source data files (<code>.xlsx</code>, <code>.dta</code>) in <code>r/data/</code> should not be modified.</li>
+<li>Generated/intermediate data files (<code>.csv</code>) in <code>r/data/</code> are gitignored.</li>
+<li>When creating new R scripts, follow the pattern of existing scripts: set paths relative to the project root or use absolute OneDrive paths consistent with the project.</li>
 </ul>
 <hr>
 </section>
@@ -897,6 +947,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>create and edit Stata do-files in <code>shared-project-folder/do/</code></li>
 <li>run Stata do-files from the terminal and read the output (see “Running Stata from Claude Code”)</li>
 <li>report and interpret Stata output (regression tables, summary statistics, etc.)</li>
+<li>create and edit R scripts in <code>r/</code></li>
 </ul>
 <p>When creating new content pages, Claude <strong>must update <code>_quarto.yml</code></strong> to add the page to the sidebar so it appears on the site. Keeping the sidebar in sync with new content is part of the task, not a separate step requiring explicit instruction.</p>
 <hr>

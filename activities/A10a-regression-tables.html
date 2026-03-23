@@ -8,7 +8,7 @@
 
 <meta name="author" content="Leonardo Falabella">
 
-<title>PS2 Workshop 4: Writing Up and Reviewing the Do-File</title>
+<title>Seminar Activity: Reading Regression Tables</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">PS2 Workshop 4: Writing Up and Reviewing the Do-File</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../slides/videos-concepts/multivariate-regression.html">Week 10: Multivariate Regression</a></li><li class="breadcrumb-item"><a href="../activities/A10a-regression-tables.html">Seminar Activity: Reading Regression Tables</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -564,7 +564,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../activities/A10a-regression-tables.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/A10a-regression-tables.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Seminar Activity: Reading Regression Tables</span></a>
   </div>
 </li>
@@ -587,22 +587,19 @@ ul.task-list li input[type="checkbox"] {
    
   <ul class="collapse">
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#task-1-set-up-the-report-structure" id="toc-task-1-set-up-the-report-structure" class="nav-link" data-scroll-target="#task-1-set-up-the-report-structure">Task 1: Set up the report structure</a></li>
-  <li><a href="#task-2-write-up-each-section" id="toc-task-2-write-up-each-section" class="nav-link" data-scroll-target="#task-2-write-up-each-section">Task 2: Write up each section</a></li>
-  <li><a href="#task-3-insert-tables-and-figures" id="toc-task-3-insert-tables-and-figures" class="nav-link" data-scroll-target="#task-3-insert-tables-and-figures">Task 3: Insert tables and figures</a></li>
-  <li><a href="#task-4-clean-up-your-do-file" id="toc-task-4-clean-up-your-do-file" class="nav-link" data-scroll-target="#task-4-clean-up-your-do-file">Task 4: Clean up your do-file</a></li>
-  <li><a href="#task-5-check-the-word-count-and-submission-details" id="toc-task-5-check-the-word-count-and-submission-details" class="nav-link" data-scroll-target="#task-5-check-the-word-count-and-submission-details">Task 5: Check the word count and submission details</a></li>
-  <li><a href="#by-the-end-of-today-you-should-have" id="toc-by-the-end-of-today-you-should-have" class="nav-link" data-scroll-target="#by-the-end-of-today-you-should-have">By the end of today you should have</a></li>
+  <li><a href="#regression-table" id="toc-regression-table" class="nav-link" data-scroll-target="#regression-table">Regression Table</a></li>
+  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../slides/videos-concepts/multivariate-regression.html">Week 10: Multivariate Regression</a></li><li class="breadcrumb-item"><a href="../activities/A10a-regression-tables.html">Seminar Activity: Reading Regression Tables</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">PS2 Workshop 4: Writing Up and Reviewing the Do-File</h1>
-<p class="subtitle lead">Statistics for Political Science — Week 11</p>
+<h1 class="title">Seminar Activity: Reading Regression Tables</h1>
+<p class="subtitle lead">Statistics for Political Science — Week 10</p>
 </div>
 
 
@@ -627,51 +624,132 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>This is the final PS2 workshop session (Week 11). Each workshop gives you one hour of structured work time to make progress on your Problem Set 2 submission, with support from your seminar leader.</p>
-<p>Today’s goal is to assemble a complete first draft of your report and clean up your do-file for submission. If you have followed the scaffold through Weeks 8–10, you should arrive at this session with all the analytical work done and only the writing-up remaining.</p>
-<p>You will need the <a href="https://emckclac-my.sharepoint.com/:w:/g/personal/k2588471_kcl_ac_uk/IQBi2GOzRRuhRZ_CuKGFQkxxAb9qYjIkeDR-dwKAfe-2Muo?e=dQPCaW">PS2 instructions</a>, the <a href="https://emckclac-my.sharepoint.com/:w:/g/personal/k2588471_kcl_ac_uk/IQAFECuB8PAkTY1SYwdKD5lYAU_4xlmM9elWyHYXMieTFu4?e=Da3UAy">model answer</a>, and the <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a> (which contains the datasets, codebooks, and do-files).</p>
-</section>
-<section id="task-1-set-up-the-report-structure" class="level2">
-<h2 class="anchored" data-anchor-id="task-1-set-up-the-report-structure">Task 1: Set up the report structure</h2>
-<p>Open a Word document and set up the five section headings from the PS2 instructions. Having the structure in place before you start writing makes it easier to draft each section without losing track of the overall shape.</p>
-</section>
-<section id="task-2-write-up-each-section" class="level2">
-<h2 class="anchored" data-anchor-id="task-2-write-up-each-section">Task 2: Write up each section</h2>
-<p>Write up each section using the output, notes, and draft sentences you have produced in previous workshops. Refer to the model answer for the expected level of detail and tone.</p>
-<p>Work through the sections in order. If you get stuck on one section, move on to the next and come back to it.</p>
-</section>
-<section id="task-3-insert-tables-and-figures" class="level2">
-<h2 class="anchored" data-anchor-id="task-3-insert-tables-and-figures">Task 3: Insert tables and figures</h2>
-<p>Insert your tables and figures into the report. Make sure that:</p>
+<p>In Week 8, you ran bivariate regressions on Quality of Government (QoG) variables and interpreted the raw Stata output. In research papers and exams, regression results are presented in a more compact format: a <strong>regression table</strong> showing multiple models side by side. This activity practises reading that format.</p>
+<p>The table below reports three regression models using the QoG dataset. The variables are:</p>
+<p><strong>Dependent variable:</strong></p>
 <ul>
-<li>Figures have clear titles and axis labels.</li>
-<li>Tables are formatted consistently.</li>
-<li>Each figure or table is referenced in the text.</li>
+<li><strong>Press Freedom Index</strong> (<code>rsf_pfi</code>): measurement of press freedom for each country according to Reporters Without Borders. Higher scores indicate more press freedom.</li>
 </ul>
-</section>
-<section id="task-4-clean-up-your-do-file" class="level2">
-<h2 class="anchored" data-anchor-id="task-4-clean-up-your-do-file">Task 4: Clean up your do-file</h2>
-<p>Check that your do-file runs from top to bottom without errors and reproduces all the tables and figures in your report. Make sure your do-file includes:</p>
+<p><strong>Independent variables:</strong></p>
 <ul>
-<li>A header comment block with your name, date, and a brief description of the analysis.</li>
-<li>Comments explaining what each section of code does.</li>
-<li>No extraneous commands left over from exploration.</li>
+<li><strong>Internet Users (%)</strong> (<code>wdi_internet</code>): percentage of the population with internet access. Source: World Development Indicators.</li>
+<li><strong>Gini Index</strong> (<code>wdi_gini</code>): a measure of income inequality within a country, ranging from 0 (perfect equality) to 100 (perfect inequality). Source: World Development Indicators.</li>
 </ul>
-<p>Run the do-file one final time from start to finish to confirm it works.</p>
+<p>The researchers pose two research questions:</p>
+<ol type="1">
+<li>Do countries with higher internet usage tend to have greater press freedom?</li>
+<li>Do more unequal countries tend to have less press freedom?</li>
+</ol>
+<hr>
 </section>
-<section id="task-5-check-the-word-count-and-submission-details" class="level2">
-<h2 class="anchored" data-anchor-id="task-5-check-the-word-count-and-submission-details">Task 5: Check the word count and submission details</h2>
-<p>Check the word count. The limit is 1,500 words excluding tables, figures, and references. The model answer is well under this — aim for substance, not length.</p>
-<p>If working in a pair, confirm that your partner’s name and candidate number appear on the title page of your report, and that your written interpretations are independently written.</p>
+<section id="regression-table" class="level2">
+<h2 class="anchored" data-anchor-id="regression-table">Regression Table</h2>
+<p>Table 1 contains the results of three regression models. Models 1 and 2 are bivariate regression models, each including a single independent variable. Model 3 is a multivariate regression model that includes both independent variables simultaneously.</p>
+<table class="table-striped caption-top table">
+<caption>Table 1: Dependent variable: Press Freedom Index (higher = more press freedom)</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">(1)</th>
+<th style="text-align: right;">(2)</th>
+<th style="text-align: right;">(3)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Internet Users (%)</td>
+<td style="text-align: right;">0.247***</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">0.218***</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: right;">(0.053)</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">(0.056)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Gini Index</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">-0.632***</td>
+<td style="text-align: right;">-0.344</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">(0.222)</td>
+<td style="text-align: right;">(0.222)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Constant</td>
+<td style="text-align: right;">43.934***</td>
+<td style="text-align: right;">83.520***</td>
+<td style="text-align: right;">58.111***</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: right;">(3.970)</td>
+<td style="text-align: right;">(7.952)</td>
+<td style="text-align: right;">(9.952)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Observations</td>
+<td style="text-align: right;">116</td>
+<td style="text-align: right;">116</td>
+<td style="text-align: right;">116</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">R²</td>
+<td style="text-align: right;">0.159</td>
+<td style="text-align: right;">0.067</td>
+<td style="text-align: right;">0.177</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note:</em> *p&lt;0.1; **p&lt;0.05; ***p&lt;0.01. Standard errors in parentheses.</p>
+<hr>
 </section>
-<section id="by-the-end-of-today-you-should-have" class="level2">
-<h2 class="anchored" data-anchor-id="by-the-end-of-today-you-should-have">By the end of today you should have</h2>
+<section id="questions" class="level2">
+<h2 class="anchored" data-anchor-id="questions">Questions</h2>
+<p>Work through the following questions in your group. Refer to Table 1 for all answers.</p>
+<hr>
+<p><strong>Q1.</strong> According to Model 1, what is the estimated slope for internet users? What is its standard error?</p>
+<hr>
+<p><strong>Q2.</strong> According to Model 1, for each one percentage point increase in internet users, what is the predicted change in the Press Freedom Index? Is this change positive or negative, and what does it mean substantively?</p>
+<hr>
+<p><strong>Q3.</strong> According to Model 2, what would be the predicted Press Freedom Index of a hypothetical country with a Gini index of zero (i.e., perfect equality)? Which number in the table gives you this prediction?</p>
+<hr>
+<p><strong>Q4.</strong> Is the coefficient on the Gini index statistically significant at the 5% level in Model 2? What about in Model 3? How can you tell from the table?</p>
+<blockquote class="blockquote">
+<p><strong>Hint:</strong> Look at the stars next to each coefficient. The note at the bottom of the table tells you what each star level means. Remember that a coefficient is significant at the 5% level if its p-value is less than 0.05.</p>
+</blockquote>
+<hr>
+<p><strong>Q5.</strong> Using Model 3, calculate the predicted Press Freedom Index for a country where 70% of the population uses the internet and the Gini index is 40. Show your calculation.</p>
+<blockquote class="blockquote">
+<p><strong>Hint:</strong> Write out the regression equation using the constant and the two slope coefficients from Model 3, then substitute the values.</p>
+</blockquote>
+<hr>
+<p><strong>Q6.</strong> Compare the coefficient on the Gini index between Models 2 and 3. In which model is the coefficient larger in magnitude? Why do you think the coefficient changes when internet usage is added to the model?</p>
+<hr>
+<p><strong>Q7.</strong> Which model has the highest R²? Does adding inequality to the internet model (comparing Models 1 and 3) substantially increase the proportion of variation explained?</p>
+<hr>
+<p><strong>Q8.</strong> Can you think of a variable <em>not included</em> in these models that could be a confounding variable for the relationship between internet usage and press freedom? Explain how it meets the definition of a confounding variable: it must plausibly affect both the independent variable and the dependent variable.</p>
+<blockquote class="blockquote">
+<p><strong>Hint:</strong> Think about what characteristics of a country might simultaneously affect how many people use the internet and how free the press is.</p>
+</blockquote>
+<hr>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>In this activity, you have:</p>
 <ul>
-<li>A complete first draft of the report with all five sections.</li>
-<li>All tables and figures inserted.</li>
-<li>A clean do-file with header and comments that runs without errors.</li>
+<li>Located coefficients, standard errors, and significance stars in a publication-style regression table.</li>
+<li>Interpreted slopes substantively, paying attention to sign and scale.</li>
+<li>Used the regression equation to calculate predicted values from a multivariate model.</li>
+<li>Compared coefficients and significance across bivariate and multivariate models.</li>
+<li>Identified potential confounding variables not included in the regression table.</li>
 </ul>
-<p>Having a complete first draft a week before the deadline leaves time for revision outside class. If you are behind, use the remaining time to catch up with support from your seminar leader.</p>
+<p>These are the core skills required for interpreting regression tables in Problem Set 2 and the exam.</p>
 
 
 </section>
