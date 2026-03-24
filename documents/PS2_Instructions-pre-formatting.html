@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Leonardo Falabella">
 
-<title>Lecture 10: Multivariate Regression</title>
+<title>Problem Set 2: Bivariate Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,62 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-a35d343c8bdbcb87d3b82ed68e48a46c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-2512eaaf5e4f3cd2f96b145b23aaefd1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -108,7 +72,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="nav-sidebar docked quarto-light">
+<body class="nav-sidebar docked fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -117,7 +81,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/multivariate-regression.html">Week 10: Multivariate Regression</a></li><li class="breadcrumb-item"><a href="../../slides/lectures/multivariate-lecture.html">Lecture 10: Multivariate Regression</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Problem Set 2: Bivariate Analysis</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -131,7 +95,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="../../index.html" class="sidebar-logo-link">
+      <a href="../index.html" class="sidebar-logo-link">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -143,7 +107,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Statistics for Political Science</span></a>
   </div>
 </li>
@@ -158,7 +122,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/lectures/thinking-with-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/lectures/thinking-with-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 1: Thinking With Data</span></a>
   </div>
 </li>
@@ -175,37 +139,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/empirical-vs-normative.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/empirical-vs-normative.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Normative and Empirical Questions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/descriptive-vs-causal.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/descriptive-vs-causal.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Descriptive and Causal Questions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/units-theories-hypotheses.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/units-theories-hypotheses.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Units of Analysis, Theories, and Hypotheses</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/dependent-independent-variables.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/dependent-independent-variables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dependent and Independent Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/doing-reproducible-research.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/doing-reproducible-research.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Doing Reproducible Research</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/lectures/questions-theories-hypotheses.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/lectures/questions-theories-hypotheses.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 2: Research Questions, Theories, and Hypotheses</span></a>
   </div>
 </li>
@@ -222,37 +186,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/measuring-variables.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/measuring-variables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Measuring Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/types-of-variables.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/types-of-variables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Types of Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/datasets-codebooks.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/datasets-codebooks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Datasets and Codebooks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/stata-interface.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/stata-interface.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The Stata Interface</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/loading-browsing-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/loading-browsing-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Loading and Browsing Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/lectures/measurement-lecture.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/lectures/measurement-lecture.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 3: Measurement and Types of Variables</span></a>
   </div>
 </li>
@@ -269,43 +233,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/summarising-distribution.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/summarising-distribution.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Summarising a Distribution</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/variance-sd.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/variance-sd.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Variance and Standard Deviation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/bar-histograms.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/bar-histograms.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bar Charts and Histograms</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/summary-stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/summary-stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Summarising Distributions in Stata</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/bar-hist-stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/bar-hist-stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bar Charts and Histograms in Stata</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/lectures/distributions-lecture.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/lectures/distributions-lecture.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 4: Describing Distributions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/A04-distributions-activity.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/A04-distributions-activity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Mock Exam Questions: Describing Distributions</span></a>
   </div>
 </li>
@@ -322,43 +286,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/correlations-nominal.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/correlations-nominal.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Correlations Between Nominal Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/comparing-means.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/comparing-means.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Comparing Means by Category</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/scatter-reg.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/scatter-reg.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Scatterplots and Regression Lines</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/types-plots-tables.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/types-plots-tables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">From Variable Types to Plots and Tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/corr-stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/corr-stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Describing Correlations in Stata</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/lectures/correlations-lecture.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/lectures/correlations-lecture.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 5: Describing Correlations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/A05-correlations-activity.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/A05-correlations-activity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Seminar Activity: Country-level Correlations</span></a>
   </div>
 </li>
@@ -375,7 +339,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/A06-reading-week-catchup.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/A06-reading-week-catchup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Catch-Up Activity: From Data Handling to Bivariate Interpretation</span></a>
   </div>
 </li>
@@ -392,49 +356,49 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/sampling.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/sampling.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Why Sampling Matters</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/moe-ci.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/moe-ci.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Confidence Intervals and Margins of Error</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/htests-cis.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/htests-cis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hypothesis Tests Using Confidence Intervals</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/p-values.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/p-values.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Interpreting P-values</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/htests-stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/htests-stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hypothesis Testing in Stata</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/lectures/hypothesis-lecture.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/lectures/hypothesis-lecture.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 7: Hypothesis Testing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/A07a-sampling-activity.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/A07a-sampling-activity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Seminar Activity: Sampling and Bias</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/A07b-htests-weights.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/A07b-htests-weights.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Seminar Activity: Weights and Visual Inference</span></a>
   </div>
 </li>
@@ -451,49 +415,49 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/regression-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/regression-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Regression Analysis: Introduction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/regression-slope.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/regression-slope.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Regression Slope</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/regression-inference.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/regression-inference.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Inference in Regression: CIs and P-values</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/regression-rsquared.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/regression-rsquared.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">R-squared</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/regression-stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/regression-stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bivariate Regression in Stata</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/lectures/regression-lecture.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/lectures/regression-lecture.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 8: Bivariate Regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/A08a-regression-activity.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/A08a-regression-activity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Seminar Activity: Bivariate Regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/A08b-ps2-workshop-1.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/A08b-ps2-workshop-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PS2 Workshop 1: Exploration and Univariate Description</span></a>
   </div>
 </li>
@@ -510,43 +474,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/confounding.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/confounding.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Confounding Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/reverse-causality.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/reverse-causality.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Reverse Causality</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/random-assignment.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/random-assignment.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Random Assignment and Causal Inference</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/preparing-stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/preparing-stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preparing Data in Stata</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/lectures/confounding-lecture.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/lectures/confounding-lecture.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 9: Confounding Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/A09a-confounding-reverse.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/A09a-confounding-reverse.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Seminar Activity: Confounding Variables and Reverse Causality</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/A09b-ps2-workshop-2.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/A09b-ps2-workshop-2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PS2 Workshop 2: Bivariate Analysis and Hypothesis Test</span></a>
   </div>
 </li>
@@ -563,49 +527,49 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/multivariate-regression.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/multivariate-regression.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Multivariate Regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/controls-confounding.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/controls-confounding.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Controls and Confounding</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/standard-error.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/standard-error.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The Standard Error</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/regression-tables.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/regression-tables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Reading Regression Tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/multivariate-stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/multivariate-stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Multivariate Regression in Stata</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/lectures/multivariate-lecture.html" class="sidebar-item-text sidebar-link active">
+  <a href="../slides/lectures/multivariate-lecture.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 10: Multivariate Regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/A10a-regression-tables.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/A10a-regression-tables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Seminar Activity: Reading Regression Tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/A10b-ps2-workshop-3.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/A10b-ps2-workshop-3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PS2 Workshop 3: Interpretation and Discussion</span></a>
   </div>
 </li>
@@ -616,51 +580,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#ps2-warning-check-your-datasets" id="toc-ps2-warning-check-your-datasets" class="nav-link active" data-scroll-target="#ps2-warning-check-your-datasets">PS2 warning: check your datasets</a></li>
-  <li><a href="#what-to-do" id="toc-what-to-do" class="nav-link" data-scroll-target="#what-to-do">What to do</a></li>
-  <li><a href="#from-the-concept-videos-to-the-lecture" id="toc-from-the-concept-videos-to-the-lecture" class="nav-link" data-scroll-target="#from-the-concept-videos-to-the-lecture">From the concept videos to the lecture</a></li>
-  <li><a href="#the-do-file-is-your-template" id="toc-the-do-file-is-your-template" class="nav-link" data-scroll-target="#the-do-file-is-your-template">The do-file is your template</a></li>
-  <li><a href="#download-todays-do-file" id="toc-download-todays-do-file" class="nav-link" data-scroll-target="#download-todays-do-file">Download today’s do-file</a></li>
-  <li><a href="#todays-question" id="toc-todays-question" class="nav-link" data-scroll-target="#todays-question">Today’s question</a></li>
-  <li><a href="#your-turn-run-the-four-models" id="toc-your-turn-run-the-four-models" class="nav-link" data-scroll-target="#your-turn-run-the-four-models">Your Turn: Run the four models</a></li>
-  <li><a href="#model-1-import-shock-alone" id="toc-model-1-import-shock-alone" class="nav-link" data-scroll-target="#model-1-import-shock-alone">Model 1: Import shock alone</a></li>
-  <li><a href="#model-2-adding-immigrant-share" id="toc-model-2-adding-immigrant-share" class="nav-link" data-scroll-target="#model-2-adding-immigrant-share">Model 2: Adding immigrant share</a></li>
-  <li><a href="#model-3-adding-education-instead" id="toc-model-3-adding-education-instead" class="nav-link" data-scroll-target="#model-3-adding-education-instead">Model 3: Adding education instead</a></li>
-  <li><a href="#model-4-both-controls-together" id="toc-model-4-both-controls-together" class="nav-link" data-scroll-target="#model-4-both-controls-together">Model 4: Both controls together</a></li>
-  <li><a href="#comparing-the-four-models" id="toc-comparing-the-four-models" class="nav-link" data-scroll-target="#comparing-the-four-models">Comparing the four models</a></li>
-  <li><a href="#what-does-this-tell-us" id="toc-what-does-this-tell-us" class="nav-link" data-scroll-target="#what-does-this-tell-us">What does this tell us?</a></li>
-  <li><a href="#the-limits-of-controls" id="toc-the-limits-of-controls" class="nav-link" data-scroll-target="#the-limits-of-controls">The limits of controls</a></li>
-  <li><a href="#colantone-and-stanig-2018" id="toc-colantone-and-stanig-2018" class="nav-link" data-scroll-target="#colantone-and-stanig-2018">Colantone and Stanig (2018)</a></li>
-  <li><a href="#the-instrumental-variable-idea" id="toc-the-instrumental-variable-idea" class="nav-link" data-scroll-target="#the-instrumental-variable-idea">The instrumental variable idea</a></li>
-  <li><a href="#what-did-they-find" id="toc-what-did-they-find" class="nav-link" data-scroll-target="#what-did-they-find">What did they find?</a></li>
-  <li><a href="#why-this-matters" id="toc-why-this-matters" class="nav-link" data-scroll-target="#why-this-matters">Why this matters</a></li>
-  </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="multivariate-lecture-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/videos-concepts/multivariate-regression.html">Week 10: Multivariate Regression</a></li><li class="breadcrumb-item"><a href="../../slides/lectures/multivariate-lecture.html">Lecture 10: Multivariate Regression</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Lecture 10: Multivariate Regression</h1>
-<p class="subtitle lead">Statistics for Political Science</p>
+<h1 class="title">Problem Set 2: Bivariate Analysis</h1>
+<p class="subtitle lead">4SSPP111: Statistics for Political Science I – 2025-2026 Semester 2</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Leonardo Falabella </p>
-          </div>
-  </div>
     
   
     
@@ -671,217 +604,411 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<hr>
-<section id="ps2-warning-check-your-datasets" class="level2">
-<h2 class="anchored" data-anchor-id="ps2-warning-check-your-datasets">PS2 warning: check your datasets</h2>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>Problem Set 2 (PS2) is worth <strong>25%</strong> of your final module grade. You will conduct a single bivariate analysis using one of the datasets provided in the module’s Shared Project Folder. The assignment asks you to formulate a research question, describe your variables, produce an appropriate visualisation, carry out a hypothesis test, and reflect on what the results can and cannot tell us about causality.</p>
+<p>This is not a full research project. You are not expected to review literature, fit multiple models, or make policy recommendations. The goal is to demonstrate that you can apply the tools covered in this module — from formulating a hypothesis to interpreting a statistical test — in a clear, well-structured, and reproducible way.</p>
 <ul>
-<li>Some do-files filter the data (e.g.&nbsp;keep only Mail/Telegraph readers).</li>
-<li>If you clicked <strong>Save</strong> when closing Stata, the subset overwrote your original file.</li>
-<li>Your PS2 analyses may be running on a fraction of the data.</li>
+<li><strong>Released:</strong> Reading Week (Week 6)</li>
+<li><strong>Final submission deadline:</strong> 8 April 2026</li>
+<li><strong>Submission via:</strong> KEATS</li>
+<li><strong>Word limit:</strong> 1,500 words (excluding tables, figures, and references)</li>
 </ul>
-<hr>
 </section>
-<section id="what-to-do" class="level2">
-<h2 class="anchored" data-anchor-id="what-to-do">What to do</h2>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
+<p>You must use one of the datasets available in the module’s <code>data-raw</code> folder on the Shared Project Folder:</p>
 <ul>
-<li><strong>Re-download the datasets</strong> from the shared project folder into <code>data-raw/</code>.</li>
-<li>Keep the original filenames exactly as they are.</li>
-<li>From now on, always click <strong>Don’t save</strong> when closing Stata:</li>
+<li>British Election Study (BES)</li>
+<li>Quality of Government (QoG)</li>
+<li>Brexit Regional dataset</li>
+<li>National Student Survey (NSS)</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/dont-save.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-<hr>
+<p>You may <strong>not</strong> use external datasets. You should consult the relevant codebook when selecting and describing your variables.</p>
+<section id="note-on-the-british-election-study-bes-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="note-on-the-british-election-study-bes-dataset">Note on the British Election Study (BES) dataset</h3>
+<p>The British Election Study is a survey dataset that includes sampling weights and a complex survey design. In applied research, these features are often incorporated into statistical analysis in order to obtain estimates that reflect the survey design. If you choose to analyse the BES for this assignment, you may proceed in one of two ways:</p>
+<ol type="1">
+<li>Conduct your analysis using the standard Stata commands introduced in class (without setting the survey design or applying weights).</li>
+<li>Incorporate the survey design and weights, using the appropriate Stata commands demonstrated in class.</li>
+</ol>
+<p>Either approach is acceptable for this assignment and will not affect your grade. If you do not incorporate weights, you should briefly acknowledge in your Discussion and Limitations section that the BES is a weighted survey dataset and that ignoring weights may affect the precision of estimates.</p>
+<p>In both cases, the assessment focuses on the clarity of your research question, the appropriateness of your chosen statistical test, the correctness of your interpretation, and the quality of your reasoning. You are not assessed on whether you use weighted or unweighted estimation.</p>
 </section>
-<section id="from-the-concept-videos-to-the-lecture" class="level2">
-<h2 class="anchored" data-anchor-id="from-the-concept-videos-to-the-lecture">From the concept videos to the lecture</h2>
-<ul>
-<li>The videos showed coefficients that <strong>disappear</strong> after adding controls.</li>
-<li>Today we ask: what if the coefficient <strong>shrinks but survives</strong>?</li>
-<li>We return to Stata to find out.</li>
-</ul>
-<hr>
 </section>
-<section id="the-do-file-is-your-template" class="level2">
-<h2 class="anchored" data-anchor-id="the-do-file-is-your-template">The do-file is your template</h2>
-<ul>
-<li>Everything we do today is in <code>multivariate-lecture.do</code>.</li>
-<li>Download it, update the working directory, and run along.</li>
-</ul>
-<hr>
+<section id="structure" class="level2">
+<h2 class="anchored" data-anchor-id="structure">Structure</h2>
+<p>Your report should follow the five sections below:</p>
+<section id="research-question-and-hypothesis" class="level3">
+<h3 class="anchored" data-anchor-id="research-question-and-hypothesis">1. Research Question and Hypothesis</h3>
+<p>Formulate one clear, correlational research question involving exactly two variables from the same dataset. Your research question should be <strong>empirical</strong>, <strong>specific</strong>, and <strong>answerable</strong> with the data you have selected. It should not assume causality.</p>
+<p>State a hypothesis that specifies the expected relationship between the two variables. The hypothesis should be <strong>directional</strong>. For example, if the research question is about gender and vote choice, the hypothesis should specify whether men or women are more likely to support a given party (“Men are more likely to vote for Reform UK” instead of “Men and women have different levels of support for Reform UK.”)</p>
 </section>
-<section id="download-todays-do-file" class="level2">
-<h2 class="anchored" data-anchor-id="download-todays-do-file">Download today’s do-file</h2>
-<div class="nonincremental">
-<ul>
-<li>Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a></li>
-<li>Click on <code>do</code></li>
-<li>Download <code>multivariate-lecture.do</code></li>
-<li>Save it to your <code>do</code> folder and update the working directory</li>
-</ul>
-</div>
-<hr>
+<section id="data-and-variables" class="level3">
+<h3 class="anchored" data-anchor-id="data-and-variables">2. Data and Variables</h3>
+<p>For each of your two variables, you should describe what the variable measures, with reference to the codebook, and classify the variable as <strong>nominal</strong> or <strong>numeric</strong>. You are allowed to generate new variables using data transformation commands in Stata; if you do so, be sure to specify what variables in the original dataset were transformed to generate your new variable.</p>
 </section>
-<section id="todays-question" class="level2">
-<h2 class="anchored" data-anchor-id="todays-question">Today’s question</h2>
-<ul>
-<li>In Week 8 we found: import shock predicts Leave voting (slope = 28.38).</li>
-<li>Could <strong>education</strong> or <strong>immigration</strong> be confounding that result?</li>
-<li>We add controls one at a time and see what happens.</li>
-</ul>
-<hr>
+<section id="descriptive-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="descriptive-analysis">3. Descriptive Analysis</h3>
+<p>Produce appropriate univariate descriptive statistics for each variable. For nominal variables, you should produce a frequency table or bar chart showing the distribution of categories. For numeric variables, you should produce summary statistics (e.g.&nbsp;mean, median, standard deviation) and/or a histogram. Use the descriptive statistics to briefly characterise each variable before turning to the bivariate analysis.</p>
 </section>
-<section id="your-turn-run-the-four-models" class="level2">
-<h2 class="anchored" data-anchor-id="your-turn-run-the-four-models">Your Turn: Run the four models</h2>
-<ul>
-<li>Run the do-file and look at the <strong>import shock coefficient</strong> across all four models.</li>
-<li>How does the coefficient change as you add controls? Does it stay significant?</li>
-<li>Discuss with your neighbour: what does the pattern tell you about confounding?</li>
-</ul>
-<hr>
-</section>
-<section id="model-1-import-shock-alone" class="level2">
-<h2 class="anchored" data-anchor-id="model-1-import-shock-alone">Model 1: Import shock alone</h2>
-<div class="nonincremental">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">regress</span> leave_share import_shock</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>Slope = <strong>28.38</strong>: each unit of import shock predicts 28pp more Leave.</li>
-<li>Significant (p &lt; 0.001), R-squared = 0.14.</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="model-2-adding-immigrant-share" class="level2">
-<h2 class="anchored" data-anchor-id="model-2-adding-immigrant-share">Model 2: Adding immigrant share</h2>
-<div class="nonincremental">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">regress</span> leave_share import_shock immigrant_share</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>Import shock drops from 28.38 to <strong>23.13</strong> (still significant).</li>
-<li>R-squared rises from 0.14 to 0.29.</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="model-3-adding-education-instead" class="level2">
-<h2 class="anchored" data-anchor-id="model-3-adding-education-instead">Model 3: Adding education instead</h2>
-<div class="nonincremental">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">regress</span> leave_share import_shock share_high_skill</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>Import shock drops from 28.38 to <strong>12.85</strong> (still significant, p = 0.006).</li>
-<li>Education cuts the coefficient roughly <strong>in half</strong>.</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="model-4-both-controls-together" class="level2">
-<h2 class="anchored" data-anchor-id="model-4-both-controls-together">Model 4: Both controls together</h2>
-<div class="nonincremental">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">regress</span> leave_share import_shock immigrant_share share_high_skill</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>Import shock: <strong>12.61</strong> (p = 0.008), barely changes from Model 3.</li>
-<li>Immigration adds almost nothing once education is controlled.</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="comparing-the-four-models" class="level2">
-<h2 class="anchored" data-anchor-id="comparing-the-four-models">Comparing the four models</h2>
-<div class="nonincremental">
+<section id="bivariate-analysis-and-hypothesis-test" class="level3">
+<h3 class="anchored" data-anchor-id="bivariate-analysis-and-hypothesis-test">4. Bivariate Analysis and Hypothesis Test</h3>
+<p>Produce one appropriate bivariate visualisation (e.g.&nbsp;a bivariate frequency chart, a bar chart of means, or a scatterplot), chosen according to the types of variables in your analysis. Then conduct exactly <strong>one</strong> bivariate hypothesis test (difference in proportions test, difference in means test, bivariate regression analysis). The appropriate chart and test should be selected according to the following decision rule:</p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 37%">
+<col style="width: 35%">
+</colgroup>
 <thead>
 <tr class="header">
-<th>Model</th>
-<th>import_shock</th>
-<th>p-value</th>
-<th>R-squared</th>
+<th>Variable 1</th>
+<th>Variable 2</th>
+<th>Chart</th>
+<th>Test</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>1: Bivariate</td>
-<td>28.38</td>
-<td>&lt; 0.001</td>
-<td>0.14</td>
+<td>Nominal</td>
+<td>Nominal</td>
+<td>Bivariate frequency chart</td>
+<td>Difference in proportions test</td>
 </tr>
 <tr class="even">
-<td>2: + immigration</td>
-<td>23.13</td>
-<td>&lt; 0.001</td>
-<td>0.29</td>
+<td>Nominal</td>
+<td>Numeric</td>
+<td>Bar chart of means</td>
+<td>Difference in means test</td>
 </tr>
 <tr class="odd">
-<td>3: + education</td>
-<td>12.85</td>
-<td>0.006</td>
-<td>0.34</td>
-</tr>
-<tr class="even">
-<td>4: + both</td>
-<td>12.61</td>
-<td>0.008</td>
-<td>0.34</td>
+<td>Numeric</td>
+<td>Numeric</td>
+<td>Scatterplot and regression line</td>
+<td>Bivariate regression analysis</td>
 </tr>
 </tbody>
 </table>
-</div>
-<hr>
+<p>Your report should state your hypothesis, the null hypothesis, and report the relevant test outputs (e.g.&nbsp;estimated difference, confidence interval, p-value, regression coefficient). Interpret the result in plain language: Explicitly state whether the null hypothesis is rejected at the 95% confidence level.</p>
+<p><strong>It is not a problem if the result is that we fail to reject the null hypothesis.</strong> The goal of research is not to prove that your hypothesis is correct; it’s to conduct the hypothesis test appropriately.</p>
 </section>
-<section id="what-does-this-tell-us" class="level2">
-<h2 class="anchored" data-anchor-id="what-does-this-tell-us">What does this tell us?</h2>
-<ul>
-<li>Education was a <strong>confound</strong>: it inflated import shock’s apparent effect.</li>
-<li>But import shock <strong>survives</strong> the controls; the relationship appears genuine.</li>
-<li>Controls make us more confident, but alone cannot prove causation.</li>
-</ul>
-<hr>
+<section id="discussion-and-limitations" class="level3">
+<h3 class="anchored" data-anchor-id="discussion-and-limitations">5. Discussion and Limitations</h3>
+<p>Interpret your findings in relation to your research question and hypothesis. State clearly whether you reject or fail to reject the null hypothesis, and explain what this result implies in substantive terms. The goal is not to confirm your expectations, but to interpret the statistical evidence accurately.</p>
+<p>Next, reflect on the limits of causal inference in this design. Even if you observe a statistically significant association, this does not establish that one variable causes the other. Discuss the possible direction(s) of causality between the variables.</p>
+<p>You should also discuss potential confounding variables. When conducting bivariate analysis, the omission of confounding variables can either underestimate or overestimate the relationship between two variables. Your report should consider potential confounding variables in your analysis. You are not expected to conduct an additional analysis to control for potential confounders. Your theoretical reasoning about them is sufficient.</p>
+<p>Conclude the section with a brief paragraph that restates your research question and summarises what can and cannot be concluded from your analysis. Focus on what the statistical evidence suggests about the association between the two variables.</p>
 </section>
-<section id="the-limits-of-controls" class="level2">
-<h2 class="anchored" data-anchor-id="the-limits-of-controls">The limits of controls</h2>
-<ul>
-<li>We can only control for variables we <strong>observe and include</strong>.</li>
-<li>Unobserved confounders could still bias the estimate.</li>
-<li>How do researchers go further? One approach: <strong>instrumental variables</strong>.</li>
-</ul>
-<hr>
 </section>
-<section id="colantone-and-stanig-2018" class="level2">
-<h2 class="anchored" data-anchor-id="colantone-and-stanig-2018">Colantone and Stanig (2018)</h2>
-<ul>
-<li>Studied the same question: does trade exposure cause support for Leave?</li>
-<li>Used the same import shock measure from our dataset.</li>
-<li>Concern: maybe UK import patterns reflect UK conditions, not just China’s rise.</li>
-</ul>
-<hr>
+<section id="submission-requirements" class="level2">
+<h2 class="anchored" data-anchor-id="submission-requirements">Submission Requirements</h2>
+<p>You must submit <strong>two files</strong> via KEATS:</p>
+<ol type="1">
+<li><strong>A written report</strong> in Word (.docx) or PDF format, structured as described above.</li>
+<li><strong>A single Stata do-file</strong> (.do) that reproduces all tables and figures in your report.</li>
+</ol>
+<p>The do-file must run from top to bottom without errors; include a header comment block with your name, the date, and a brief description of the file; and include comments throughout that explain what each section of code does. Do not include Stata code in the body of your written report.</p>
 </section>
-<section id="the-instrumental-variable-idea" class="level2">
-<h2 class="anchored" data-anchor-id="the-instrumental-variable-idea">The instrumental variable idea</h2>
-<ul>
-<li>Find a variable that predicts import shock but is unrelated to UK confounders.</li>
-<li>Their instrument: <strong>US import growth from China</strong> (same global shock, independent of UK).</li>
-<li>Use only the part of UK import shock explained by the global trend.</li>
-</ul>
-<hr>
+<section id="collaboration-policy" class="level2">
+<h2 class="anchored" data-anchor-id="collaboration-policy">Collaboration Policy</h2>
+<p>You may work <strong>individually</strong> or <strong>in a pair</strong> (two students). If you choose to collaborate, you may work together on variable selection, hypothesis formulation, data preparation, visualisation, and statistical testing. Your Stata do-files may be identical, and you may use the same variables and the same statistical test.</p>
+<p>However, each student must submit an <strong>individual written report</strong>. Interpretation, reasoning, discussion of causality, and conclusions must be your own work. If you collaborate with someone, you must state in the title page of your submission who you collaborated with (candidate number). Submitting jointly written reports will be treated as an academic integrity violation.</p>
 </section>
-<section id="what-did-they-find" class="level2">
-<h2 class="anchored" data-anchor-id="what-did-they-find">What did they find?</h2>
+<section id="grading-criteria" class="level2">
+<h2 class="anchored" data-anchor-id="grading-criteria">Grading Criteria</h2>
+<section id="research-question-and-hypothesis-1" class="level3">
+<h3 class="anchored" data-anchor-id="research-question-and-hypothesis-1">Research Question and Hypothesis</h3>
 <ul>
-<li>IV estimate was similar to the regression estimate with controls.</li>
-<li>This suggests our regression is not badly biased by unobserved confounders.</li>
-<li>IV gave them a stronger basis for a <strong>causal</strong> claim.</li>
+<li>Is the research question clear, specific, and empirical?</li>
+<li>Is the hypothesis directional and testable with the chosen data?</li>
 </ul>
-<hr>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 65%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Level</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A (First) 70-100</td>
+<td style="text-align: left;">The question is specific and clearly motivated. The hypothesis is directional and precisely stated.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B (2.1) 60-69</td>
+<td style="text-align: left;">The question is specific and answerable. The hypothesis is directional, with minor imprecision.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C (2.2) 50-59</td>
+<td style="text-align: left;">The question is answerable but could be more specific. The hypothesis is present but vaguely stated.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">D (Third) 40-49</td>
+<td style="text-align: left;">The question is broad or unclear. The hypothesis is non-directional or only loosely connected to the question.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">F (Fail) 0-39</td>
+<td style="text-align: left;">No valid research question or hypothesis is presented.</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="why-this-matters" class="level2">
-<h2 class="anchored" data-anchor-id="why-this-matters">Why this matters</h2>
+<section id="variable-identification-and-test-selection" class="level3">
+<h3 class="anchored" data-anchor-id="variable-identification-and-test-selection">Variable Identification and Test Selection</h3>
 <ul>
-<li>Multivariate regression refines estimates but cannot prove causation alone.</li>
-<li>Researchers use methods like DiD and IV to push closer to causal claims.</li>
-<li><strong>Data literacy means knowing what your tools can do and where they stop.</strong></li>
+<li>Are both variables correctly classified by type?</li>
+<li>Is the chosen statistical test appropriate given the variable types?</li>
 </ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 65%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Level</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A (First) 70-100</td>
+<td style="text-align: left;">Both variables are correctly classified with clear codebook references. The test is correctly chosen and justified.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B (2.1) 60-69</td>
+<td style="text-align: left;">Variables are correctly classified. The test is appropriate, with minor omissions in justification.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C (2.2) 50-59</td>
+<td style="text-align: left;">Variables are classified correctly, but descriptions lack detail. The test is appropriate.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">D (Third) 40-49</td>
+<td style="text-align: left;">One variable is misclassified, or the test does not match the variable types.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">F (Fail) 0-39</td>
+<td style="text-align: left;">Variables are not classified, or the test is inappropriate.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="descriptive-analysis-1" class="level3">
+<h3 class="anchored" data-anchor-id="descriptive-analysis-1">Descriptive Analysis</h3>
+<ul>
+<li>Are appropriate univariate summaries provided for each variable?</li>
+<li>Do the descriptions help the reader understand the data before the bivariate analysis?</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 65%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Level</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A (First) 70-100</td>
+<td style="text-align: left;">Summaries are well chosen, clearly presented, and informatively discussed.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B (2.1) 60-69</td>
+<td style="text-align: left;">Summaries are appropriate and clearly presented, with minor gaps in discussion.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C (2.2) 50-59</td>
+<td style="text-align: left;">Summaries are present but underdeveloped or not clearly connected to the analysis.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">D (Third) 40-49</td>
+<td style="text-align: left;">Summaries are incomplete or partly inappropriate for the variable type.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">F (Fail) 0-39</td>
+<td style="text-align: left;">No adequate descriptive analysis is provided.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="bivariate-analysis-and-interpretation" class="level3">
+<h3 class="anchored" data-anchor-id="bivariate-analysis-and-interpretation">Bivariate Analysis and Interpretation</h3>
+<ul>
+<li>Is the visualisation appropriate and clearly labelled?</li>
+<li>Is the hypothesis test correctly executed?</li>
+<li>Is the result interpreted accurately in plain language?</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 65%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Level</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A (First) 70-100</td>
+<td style="text-align: left;">The visualisation is well chosen and clearly formatted. The test is correctly executed, and the interpretation is precise, accurate, and expressed in plain language.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B (2.1) 60-69</td>
+<td style="text-align: left;">The visualisation and test are appropriate. Interpretation is mostly accurate, with minor imprecision.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C (2.2) 50-59</td>
+<td style="text-align: left;">The visualisation and test are adequate. Interpretation contains minor errors or lacks clarity.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">D (Third) 40-49</td>
+<td style="text-align: left;">The visualisation or test is partly inappropriate. Interpretation contains notable errors.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">F (Fail) 0-39</td>
+<td style="text-align: left;">The analysis is largely incorrect or missing.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="discussion-and-limitations-1" class="level3">
+<h3 class="anchored" data-anchor-id="discussion-and-limitations-1">Discussion and Limitations</h3>
+<ul>
+<li>Does the report discuss possible directions of causality?</li>
+<li>Does the report discuss potential confounding variables?</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 65%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Level</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A (First) 70-100</td>
+<td style="text-align: left;">Causal reasoning is thoughtful and well articulated. Discusses whether confounding variables could be at stake. No overclaiming.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B (2.1) 60-69</td>
+<td style="text-align: left;">Causal reasoning is sound. Engages with the possibility of confounding variables, though the discussion could be more developed.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C (2.2) 50-59</td>
+<td style="text-align: left;">Causal reasoning is present but underdeveloped. Confounding is mentioned but weakly explained.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">D (Third) 40-49</td>
+<td style="text-align: left;">Causal reasoning is superficial or confused. Confounding is not addressed.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">F (Fail) 0-39</td>
+<td style="text-align: left;">No meaningful discussion of causality or confounding.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="code-quality-and-reproducibility" class="level3">
+<h3 class="anchored" data-anchor-id="code-quality-and-reproducibility">Code Quality and Reproducibility</h3>
+<ul>
+<li>Does the do-file run without errors and reproduce all outputs?</li>
+<li>Is the code clearly commented and logically organised?</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 65%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Level</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A (First) 70-100</td>
+<td style="text-align: left;">The do-file runs cleanly, reproduces all outputs, and is clearly commented throughout.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B (2.1) 60-69</td>
+<td style="text-align: left;">The do-file runs without errors and is mostly well commented. Minor organisational issues.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C (2.2) 50-59</td>
+<td style="text-align: left;">The do-file runs but has sparse comments or unclear structure.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">D (Third) 40-49</td>
+<td style="text-align: left;">The do-file has errors or does not fully reproduce the reported outputs.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">F (Fail) 0-39</td>
+<td style="text-align: left;">The do-file is missing, does not run, or is largely uncommented.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="structure-and-clarity-of-writing" class="level3">
+<h3 class="anchored" data-anchor-id="structure-and-clarity-of-writing">Structure and Clarity of Writing</h3>
+<ul>
+<li>Is the report well organised and clearly written?</li>
+<li>Does it follow the required structure?</li>
+<li>Is it within the word limit?</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 65%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Level</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A (First) 70-100</td>
+<td style="text-align: left;">The report is clearly written, logically structured, and concise. All sections are present and well developed.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B (2.1) 60-69</td>
+<td style="text-align: left;">The report is well structured and clearly written, with minor issues in flow or concision.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C (2.2) 50-59</td>
+<td style="text-align: left;">The report follows the required structure but could be clearer or more concise in places.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">D (Third) 40-49</td>
+<td style="text-align: left;">The report is poorly organised or difficult to follow. Some sections are underdeveloped.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">F (Fail) 0-39</td>
+<td style="text-align: left;">The report does not follow the required structure or is substantially unclear.</td>
+</tr>
+</tbody>
+</table>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
