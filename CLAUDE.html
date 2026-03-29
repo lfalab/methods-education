@@ -610,6 +610,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 11: Dummy Variables</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./slides/lectures/dummy-variables-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 11: Dummy Variables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./activities/A11-ps2-workshop-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PS2 Workshop 4: Writing Up and Reviewing the Do-File</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -999,6 +1022,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>important notes</li>
 </ul>
 <p>Logs should remain concise.</p>
+<hr>
+</section>
+<section id="session-handoff-for-cross-machine-work" class="level1">
+<h1>Session Handoff for Cross-Machine Work</h1>
+<p>The user works across two PCs. Claude Code conversations and plans are stored locally and do not sync between machines.</p>
+<p>When a session involves substantial design work or multi-step content creation, Claude should <strong>proactively offer to write a handoff document</strong> to <code>logs/</code> before the session ends.</p>
+<p>Handoff documents are stored as:</p>
+<p>logs/YYYY-MM-DD-handoff.md</p>
+<p>A handoff should contain:</p>
+<ul>
+<li>what was built and why (pedagogical or design rationale)</li>
+<li>key decisions made during the conversation</li>
+<li>any data or output that informed the work (e.g.&nbsp;regression coefficients)</li>
+<li>what remains to be done</li>
+<li>source materials referenced</li>
+</ul>
+<p>Handoff documents are more detailed than session logs. A session log records <em>what changed</em>; a handoff captures <em>the reasoning and context</em> needed to resume work in a new conversation on a different machine.</p>
+<p>Claude should also save a recommended resume prompt to <code>prompts/</code> so the user can copy-paste it to start the next session. The prompt should reference the handoff document and any key files using <code>@</code> syntax.</p>
 <hr>
 </section>
 <section id="rendering-validation" class="level1">

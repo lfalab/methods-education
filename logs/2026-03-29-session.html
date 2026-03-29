@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Problem Set 2: Bivariate Analysis</title>
+<title>session</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-2512eaaf5e4f3cd2f96b145b23aaefd1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-a35d343c8bdbcb87d3b82ed68e48a46c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Problem Set 2: Bivariate Analysis</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -575,6 +575,29 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 11: Dummy Variables</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/lectures/dummy-variables-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 11: Dummy Variables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/A11-ps2-workshop-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PS2 Workshop 4: Writing Up and Reviewing the Do-File</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -582,430 +605,42 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Problem Set 2: Bivariate Analysis</h1>
-<p class="subtitle lead">4SSPP111: Statistics for Political Science I – 2025-2026 Semester 2</p>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>Problem Set 2 (PS2) is worth <strong>25%</strong> of your final module grade. You will conduct a single bivariate analysis using one of the datasets provided in the module’s Shared Project Folder. The assignment asks you to formulate a research question, describe your variables, produce an appropriate visualisation, carry out a hypothesis test, and reflect on what the results can and cannot tell us about causality.</p>
-<p>This is not a full research project. You are not expected to review literature, fit multiple models, or make policy recommendations. The goal is to demonstrate that you can apply the tools covered in this module — from formulating a hypothesis to interpreting a statistical test — in a clear, well-structured, and reproducible way.</p>
+<section id="session-log-2026-03-29" class="level1">
+<h1>Session Log — 2026-03-29</h1>
+<section id="tasks-completed" class="level2">
+<h2 class="anchored" data-anchor-id="tasks-completed">Tasks completed</h2>
 <ul>
-<li><strong>Released:</strong> Reading Week (Week 6)</li>
-<li><strong>Final submission deadline:</strong> 8 April 2026</li>
-<li><strong>Submission via:</strong> KEATS</li>
-<li><strong>Word limit:</strong> 1,500 words (excluding tables, figures, and references)</li>
+<li>Created Week 11 lecture slide deck on dummy variables with integrated critical discussion</li>
+<li>Created Stata do-file for gender-ideology regression using BES 2024 data</li>
+<li>Added Week 11 section to sidebar navigation</li>
 </ul>
 </section>
-<section id="data" class="level2">
-<h2 class="anchored" data-anchor-id="data">Data</h2>
-<p>You must use one of the datasets available in the module’s <code>data-raw</code> folder on the Shared Project Folder:</p>
+<section id="files-created" class="level2">
+<h2 class="anchored" data-anchor-id="files-created">Files created</h2>
 <ul>
-<li>British Election Study (BES)</li>
-<li>Quality of Government (QoG)</li>
-<li>Brexit Regional dataset</li>
-<li>National Student Survey (NSS)</li>
+<li><code>slides/lectures/W11-dummy-variables.qmd</code> — lecture slides (27 slides)</li>
+<li><code>shared-project-folder/do/dummy-bes.do</code> — student-facing do-file</li>
 </ul>
-<p>You may <strong>not</strong> use external datasets. You should consult the relevant codebook when selecting and describing your variables.</p>
-<section id="note-on-the-british-election-study-bes-dataset" class="level3">
-<h3 class="anchored" data-anchor-id="note-on-the-british-election-study-bes-dataset">Note on the British Election Study (BES) dataset</h3>
-<p>The British Election Study is a survey dataset that includes sampling weights and a complex survey design. In applied research, these features are often incorporated into statistical analysis in order to obtain estimates that reflect the survey design. If you choose to analyse the BES for this assignment, you may proceed in one of two ways:</p>
-<ol type="1">
-<li>Conduct your analysis using the standard Stata commands introduced in class (without setting the survey design or applying weights).</li>
-<li>Incorporate the survey design and weights, using the appropriate Stata commands demonstrated in class.</li>
-</ol>
-<p>Either approach is acceptable for this assignment and will not affect your grade. If you do not incorporate weights, you should briefly acknowledge in your Discussion and Limitations section that the BES is a weighted survey dataset and that ignoring weights may affect the precision of estimates.</p>
-<p>In both cases, the assessment focuses on the clarity of your research question, the appropriateness of your chosen statistical test, the correctness of your interpretation, and the quality of your reasoning. You are not assessed on whether you use weighted or unweighted estimation.</p>
 </section>
-</section>
-<section id="structure" class="level2">
-<h2 class="anchored" data-anchor-id="structure">Structure</h2>
-<p>Your report should follow the five sections below:</p>
-<section id="research-question-and-hypothesis" class="level3">
-<h3 class="anchored" data-anchor-id="research-question-and-hypothesis">1. Research Question and Hypothesis</h3>
-<p>Formulate one clear, correlational research question involving exactly two variables from the same dataset. Your research question should be <strong>empirical</strong>, <strong>specific</strong>, and <strong>answerable</strong> with the data you have selected. It should not assume causality.</p>
-<p>State a hypothesis that specifies the expected relationship between the two variables. The hypothesis should be <strong>directional</strong>. For example, if the research question is about gender and vote choice, the hypothesis should specify whether men or women are more likely to support a given party (“Men are more likely to vote for Reform UK” instead of “Men and women have different levels of support for Reform UK.”)</p>
-</section>
-<section id="data-and-variables" class="level3">
-<h3 class="anchored" data-anchor-id="data-and-variables">2. Data and Variables</h3>
-<p>For each of your two variables, you should describe what the variable measures, with reference to the codebook, and classify the variable as <strong>nominal</strong> or <strong>numeric</strong>. You are allowed to generate new variables using data transformation commands in Stata; if you do so, be sure to specify what variables in the original dataset were transformed to generate your new variable.</p>
-</section>
-<section id="descriptive-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="descriptive-analysis">3. Descriptive Analysis</h3>
-<p>Produce appropriate univariate descriptive statistics for each variable. For nominal variables, you should produce a frequency table or bar chart showing the distribution of categories. For numeric variables, you should produce summary statistics (e.g.&nbsp;mean, median, standard deviation) and/or a histogram. Use the descriptive statistics to briefly characterise each variable before turning to the bivariate analysis.</p>
-</section>
-<section id="bivariate-analysis-and-hypothesis-test" class="level3">
-<h3 class="anchored" data-anchor-id="bivariate-analysis-and-hypothesis-test">4. Bivariate Analysis and Hypothesis Test</h3>
-<p>Produce one appropriate bivariate visualisation (e.g.&nbsp;a bivariate frequency chart, a bar chart of means, or a scatterplot), chosen according to the types of variables in your analysis. Then conduct exactly <strong>one</strong> bivariate hypothesis test (difference in proportions test, difference in means test, bivariate regression analysis). The appropriate chart and test should be selected according to the following decision rule:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 13%">
-<col style="width: 13%">
-<col style="width: 37%">
-<col style="width: 35%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Variable 1</th>
-<th>Variable 2</th>
-<th>Chart</th>
-<th>Test</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Nominal</td>
-<td>Nominal</td>
-<td>Bivariate frequency chart</td>
-<td>Difference in proportions test</td>
-</tr>
-<tr class="even">
-<td>Nominal</td>
-<td>Numeric</td>
-<td>Bar chart of means</td>
-<td>Difference in means test</td>
-</tr>
-<tr class="odd">
-<td>Numeric</td>
-<td>Numeric</td>
-<td>Scatterplot and regression line</td>
-<td>Bivariate regression analysis</td>
-</tr>
-</tbody>
-</table>
-<p>Your report should state your hypothesis, the null hypothesis, and report the relevant test outputs (e.g.&nbsp;estimated difference, confidence interval, p-value, regression coefficient). Interpret the result in plain language: Explicitly state whether the null hypothesis is rejected at the 95% confidence level.</p>
-<p><strong>It is not a problem if the result is that we fail to reject the null hypothesis.</strong> The goal of research is not to prove that your hypothesis is correct; it’s to conduct the hypothesis test appropriately.</p>
-</section>
-<section id="discussion-and-limitations" class="level3">
-<h3 class="anchored" data-anchor-id="discussion-and-limitations">5. Discussion and Limitations</h3>
-<p>Interpret your findings in relation to your research question and hypothesis. State clearly whether you reject or fail to reject the null hypothesis, and explain what this result implies in substantive terms. The goal is not to confirm your expectations, but to interpret the statistical evidence accurately.</p>
-<p>Next, reflect on the limits of causal inference in this design. Even if you observe a statistically significant association, this does not establish that one variable causes the other. Discuss the possible direction(s) of causality between the variables.</p>
-<p>You should also discuss potential confounding variables. When conducting bivariate analysis, the omission of confounding variables can either underestimate or overestimate the relationship between two variables. Your report should consider potential confounding variables in your analysis. You are not expected to conduct an additional analysis to control for potential confounders. Your theoretical reasoning about them is sufficient.</p>
-<p>Conclude the section with a brief paragraph that restates your research question and summarises what can and cannot be concluded from your analysis. Focus on what the statistical evidence suggests about the association between the two variables.</p>
-</section>
-</section>
-<section id="submission-requirements" class="level2">
-<h2 class="anchored" data-anchor-id="submission-requirements">Submission Requirements</h2>
-<p>You must submit <strong>two files</strong> via KEATS:</p>
-<ol type="1">
-<li><strong>A written report</strong> in Word (.docx) or PDF format, structured as described above.</li>
-<li><strong>A single Stata do-file</strong> (.do) that reproduces all tables and figures in your report.</li>
-</ol>
-<p>The do-file must run from top to bottom without errors; include a header comment block with your name, the date, and a brief description of the file; and include comments throughout that explain what each section of code does. Do not include Stata code in the body of your written report.</p>
-</section>
-<section id="collaboration-policy" class="level2">
-<h2 class="anchored" data-anchor-id="collaboration-policy">Collaboration Policy</h2>
-<p>You may work <strong>individually</strong> or <strong>in a pair</strong> (two students). If you choose to collaborate, you may work together on variable selection, hypothesis formulation, data preparation, visualisation, and statistical testing. Your Stata do-files may be identical, and you may use the same variables and the same statistical test.</p>
-<p>However, each student must submit an <strong>individual written report</strong>. Interpretation, reasoning, discussion of causality, and conclusions must be your own work. If you collaborate with someone, you must state in the title page of your submission who you collaborated with (candidate number). Submitting jointly written reports will be treated as an academic integrity violation.</p>
-</section>
-<section id="grading-criteria" class="level2">
-<h2 class="anchored" data-anchor-id="grading-criteria">Grading Criteria</h2>
-<section id="research-question-and-hypothesis-1" class="level3">
-<h3 class="anchored" data-anchor-id="research-question-and-hypothesis-1">Research Question and Hypothesis</h3>
+<section id="files-modified" class="level2">
+<h2 class="anchored" data-anchor-id="files-modified">Files modified</h2>
 <ul>
-<li>Is the research question clear, specific, and empirical?</li>
-<li>Is the hypothesis directional and testable with the chosen data?</li>
+<li><code>_quarto.yml</code> — added Week 11 sidebar section with lecture and existing PS2 workshop</li>
 </ul>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 35%">
-<col style="width: 65%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Level</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">A (First) 70-100</td>
-<td style="text-align: left;">The question is specific and clearly motivated. The hypothesis is directional and precisely stated.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">B (2.1) 60-69</td>
-<td style="text-align: left;">The question is specific and answerable. The hypothesis is directional, with minor imprecision.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">C (2.2) 50-59</td>
-<td style="text-align: left;">The question is answerable but could be more specific. The hypothesis is present but vaguely stated.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">D (Third) 40-49</td>
-<td style="text-align: left;">The question is broad or unclear. The hypothesis is non-directional or only loosely connected to the question.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">F (Fail) 0-39</td>
-<td style="text-align: left;">No valid research question or hypothesis is presented.</td>
-</tr>
-</tbody>
-</table>
 </section>
-<section id="variable-identification-and-test-selection" class="level3">
-<h3 class="anchored" data-anchor-id="variable-identification-and-test-selection">Variable Identification and Test Selection</h3>
+<section id="important-notes" class="level2">
+<h2 class="anchored" data-anchor-id="important-notes">Important notes</h2>
 <ul>
-<li>Are both variables correctly classified by type?</li>
-<li>Is the chosen statistical test appropriate given the variable types?</li>
+<li>Regression output uses real Stata results: women score 0.40 points lower on the 0-10 left-right scale (p &lt; 0.001, N = 2,652)</li>
+<li>The lecture integrates technical content (dummy variable mechanics) with critical discussion (counterfactual criterion, Pearson 1928 historical case)</li>
+<li>No new seminar activity was created; Week 11 seminar is fully dedicated to PS2 Workshop 4</li>
+<li>The existing <code>A11-ps2-workshop-4.qmd</code> was added to the sidebar (it was previously missing)</li>
 </ul>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 35%">
-<col style="width: 65%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Level</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">A (First) 70-100</td>
-<td style="text-align: left;">Both variables are correctly classified with clear codebook references. The test is correctly chosen and justified.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">B (2.1) 60-69</td>
-<td style="text-align: left;">Variables are correctly classified. The test is appropriate, with minor omissions in justification.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">C (2.2) 50-59</td>
-<td style="text-align: left;">Variables are classified correctly, but descriptions lack detail. The test is appropriate.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">D (Third) 40-49</td>
-<td style="text-align: left;">One variable is misclassified, or the test does not match the variable types.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">F (Fail) 0-39</td>
-<td style="text-align: left;">Variables are not classified, or the test is inappropriate.</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="descriptive-analysis-1" class="level3">
-<h3 class="anchored" data-anchor-id="descriptive-analysis-1">Descriptive Analysis</h3>
-<ul>
-<li>Are appropriate univariate summaries provided for each variable?</li>
-<li>Do the descriptions help the reader understand the data before the bivariate analysis?</li>
-</ul>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 35%">
-<col style="width: 65%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Level</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">A (First) 70-100</td>
-<td style="text-align: left;">Summaries are well chosen, clearly presented, and informatively discussed.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">B (2.1) 60-69</td>
-<td style="text-align: left;">Summaries are appropriate and clearly presented, with minor gaps in discussion.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">C (2.2) 50-59</td>
-<td style="text-align: left;">Summaries are present but underdeveloped or not clearly connected to the analysis.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">D (Third) 40-49</td>
-<td style="text-align: left;">Summaries are incomplete or partly inappropriate for the variable type.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">F (Fail) 0-39</td>
-<td style="text-align: left;">No adequate descriptive analysis is provided.</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="bivariate-analysis-and-interpretation" class="level3">
-<h3 class="anchored" data-anchor-id="bivariate-analysis-and-interpretation">Bivariate Analysis and Interpretation</h3>
-<ul>
-<li>Is the visualisation appropriate and clearly labelled?</li>
-<li>Is the hypothesis test correctly executed?</li>
-<li>Is the result interpreted accurately in plain language?</li>
-</ul>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 35%">
-<col style="width: 65%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Level</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">A (First) 70-100</td>
-<td style="text-align: left;">The visualisation is well chosen and clearly formatted. The test is correctly executed, and the interpretation is precise, accurate, and expressed in plain language.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">B (2.1) 60-69</td>
-<td style="text-align: left;">The visualisation and test are appropriate. Interpretation is mostly accurate, with minor imprecision.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">C (2.2) 50-59</td>
-<td style="text-align: left;">The visualisation and test are adequate. Interpretation contains minor errors or lacks clarity.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">D (Third) 40-49</td>
-<td style="text-align: left;">The visualisation or test is partly inappropriate. Interpretation contains notable errors.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">F (Fail) 0-39</td>
-<td style="text-align: left;">The analysis is largely incorrect or missing.</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="discussion-and-limitations-1" class="level3">
-<h3 class="anchored" data-anchor-id="discussion-and-limitations-1">Discussion and Limitations</h3>
-<ul>
-<li>Does the report discuss possible directions of causality?</li>
-<li>Does the report discuss potential confounding variables?</li>
-</ul>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 35%">
-<col style="width: 65%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Level</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">A (First) 70-100</td>
-<td style="text-align: left;">Causal reasoning is thoughtful and well articulated. Discusses whether confounding variables could be at stake. No overclaiming.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">B (2.1) 60-69</td>
-<td style="text-align: left;">Causal reasoning is sound. Engages with the possibility of confounding variables, though the discussion could be more developed.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">C (2.2) 50-59</td>
-<td style="text-align: left;">Causal reasoning is present but underdeveloped. Confounding is mentioned but weakly explained.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">D (Third) 40-49</td>
-<td style="text-align: left;">Causal reasoning is superficial or confused. Confounding is not addressed.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">F (Fail) 0-39</td>
-<td style="text-align: left;">No meaningful discussion of causality or confounding.</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="code-quality-and-reproducibility" class="level3">
-<h3 class="anchored" data-anchor-id="code-quality-and-reproducibility">Code Quality and Reproducibility</h3>
-<ul>
-<li>Does the do-file run without errors and reproduce all outputs?</li>
-<li>Is the code clearly commented and logically organised?</li>
-</ul>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 35%">
-<col style="width: 65%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Level</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">A (First) 70-100</td>
-<td style="text-align: left;">The do-file runs cleanly, reproduces all outputs, and is clearly commented throughout.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">B (2.1) 60-69</td>
-<td style="text-align: left;">The do-file runs without errors and is mostly well commented. Minor organisational issues.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">C (2.2) 50-59</td>
-<td style="text-align: left;">The do-file runs but has sparse comments or unclear structure.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">D (Third) 40-49</td>
-<td style="text-align: left;">The do-file has errors or does not fully reproduce the reported outputs.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">F (Fail) 0-39</td>
-<td style="text-align: left;">The do-file is missing, does not run, or is largely uncommented.</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="structure-and-clarity-of-writing" class="level3">
-<h3 class="anchored" data-anchor-id="structure-and-clarity-of-writing">Structure and Clarity of Writing</h3>
-<ul>
-<li>Is the report well organised and clearly written?</li>
-<li>Does it follow the required structure?</li>
-<li>Is it within the word limit?</li>
-</ul>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 35%">
-<col style="width: 65%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Level</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">A (First) 70-100</td>
-<td style="text-align: left;">The report is clearly written, logically structured, and concise. All sections are present and well developed.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">B (2.1) 60-69</td>
-<td style="text-align: left;">The report is well structured and clearly written, with minor issues in flow or concision.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">C (2.2) 50-59</td>
-<td style="text-align: left;">The report follows the required structure but could be clearer or more concise in places.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">D (Third) 40-49</td>
-<td style="text-align: left;">The report is poorly organised or difficult to follow. Some sections are underdeveloped.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">F (Fail) 0-39</td>
-<td style="text-align: left;">The report does not follow the required structure or is substantially unclear.</td>
-</tr>
-</tbody>
-</table>
 
 
 </section>
