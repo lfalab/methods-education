@@ -7036,7 +7036,7 @@
     "href": "activities/A11-ps2-workshop-4.html#task-4-clean-up-your-do-file",
     "title": "PS2 Workshop 4: Writing Up and Reviewing the Do-File",
     "section": "Task 4: Clean up your do-file",
-    "text": "Task 4: Clean up your do-file\nCheck that your do-file runs from top to bottom without errors and reproduces all the tables and figures in your report. Make sure your do-file includes:\n\nA header comment block with your name, date, and a brief description of the analysis.\nComments explaining what each section of code does.\nNo extraneous commands left over from exploration.\n\nRun the do-file one final time from start to finish to confirm it works.",
+    "text": "Task 4: Clean up your do-file\nCheck that your do-file runs from top to bottom without errors and reproduces all the tables and figures in your report. Run the do-file one final time from start to finish to confirm it works.",
     "crumbs": [
       "Week 11: Dummy Variables",
       "PS2 Workshop 4: Writing Up and Reviewing the Do-File"
@@ -7047,7 +7047,7 @@
     "href": "activities/A11-ps2-workshop-4.html#task-5-check-the-word-count-and-submission-details",
     "title": "PS2 Workshop 4: Writing Up and Reviewing the Do-File",
     "section": "Task 5: Check the word count and submission details",
-    "text": "Task 5: Check the word count and submission details\nCheck the word count. The limit is 1,500 words excluding tables, figures, and references. The model answer is well under this — aim for substance, not length.\nIf working in a pair, confirm that your partner’s name and candidate number appear on the title page of your report, and that your written interpretations are independently written.",
+    "text": "Task 5: Check the word count and submission details\nCheck the word count. The limit is 1,500 words excluding tables, figures, and references. The model answer is well under this — aim for substance, not length.\nIf working in a pair, confirm that your partner’s candidate number appear on the title page of your report, and that your written interpretations are independently written.",
     "crumbs": [
       "Week 11: Dummy Variables",
       "PS2 Workshop 4: Writing Up and Reviewing the Do-File"
