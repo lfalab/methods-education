@@ -1,0 +1,66 @@
+---
+title: "Activity: Proposing Measurement Strategies"
+subtitle: "Statistics for Political Science — Week 3"
+author: "Leonardo Falabella"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    theme: default
+---
+
+## What you'll practice
+
+Working in a small group to:
+
+- Identify types of variables.
+- Propose measurement strategies for variables.
+
+
+## Introduction
+
+**Hypothesis:** Countries with higher levels of education are more likely to be democratic than countries with lower levels of education.
+
+How should we measure the level of education? What information should we rely on to determine whether Mexico is more or less educated than Colombia?
+
+The answer depends on the definition: what do we mean when we say, "level of education"? The definition should be consistent with the theory that motivates the hypothesis. Why should we expect a country's level of education to affect whether it is democratic? What is it about education that we expect to translate into democratization?
+
+As discussed in the preparatory video, some possible definitions and measurements for the level of education are the following:
+
+| Definition | Measurement |
+|---|---|
+| Accessibility of basic education to citizens. | Literacy rate |
+| Proficiency of students in math, reading, and science. | Mean PISA score |
+
+Moreover, different approaches to measurement may generate variables of different types. Let's review the types of variables:
+
+| Type of Variable | Definition | Examples |
+|---|---|---|
+| Nominal | Values are categories that cannot be ranked. | Political party, place of birth, election winner. |
+| Ordinal | Values are categories that can be ranked. | Highest degree achieved, letter grade, military rank. |
+| Interval | Values are numeric quantities that let us calculate the differences between them. Does not have a true zero. | Year of birth, body temperature, credit score. |
+| Ratio | Values are numeric quantities that let us calculate the differences between them. Has a true zero. | Unemployment rate, annual income, percentage of votes for a candidate. |
+
+
+## Proposing Measurement Strategies
+
+Within your group, analyse each of the following hypotheses:
+
+1. Ruthless dictators are more likely to stay in power for longer.
+2. In religious countries, women participate less in politics than in secular countries.
+3. States with oil reserves are less likely to have strict environmental regulations than states without oil reserves.
+
+For each hypothesis:
+
+- Propose ways to measure each variable (dependent and independent).
+- Identify what type of variable your measurement strategy would generate.
+
+
+## Summary
+
+In this activity, you have:
+
+- Practised moving from abstract concepts to concrete measurement strategies.
+- Identified the type of variable (nominal, ordinal, interval, or ratio) that each measurement strategy produces.
+- Recognised that the same concept can be measured in different ways, and that the choice of measurement affects the type of variable and the analysis that follows.

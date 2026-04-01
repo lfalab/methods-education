@@ -1,5 +1,5 @@
 ---
-title: "PS2 Workshop 3: Interpretation and Discussion"
+title: "Activity: PS2 Workshop 3"
 subtitle: "Statistics for Political Science — Week 10"
 author: "Leonardo Falabella"
 format:
@@ -9,6 +9,12 @@ format:
     number-sections: false
     theme: default
 ---
+
+## What you'll practice
+
+- Interpreting your hypothesis test result in plain language.
+- Discussing causality, confounding, and reverse causality for your variable pair.
+- Noting limitations of your analysis.
 
 ## Introduction
 

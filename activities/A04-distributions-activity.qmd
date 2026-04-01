@@ -1,5 +1,5 @@
 ---
-title: "Mock Exam Questions: Describing Distributions"
+title: "Activity: Describing Distributions"
 subtitle: "Statistics for Political Science - Week 4"
 author: "Leonardo Falabella"
 format:
@@ -10,11 +10,16 @@ format:
     theme: default
 ---
 
+## What you'll practice
+
+- Interpreting histograms to identify shape, central tendency, and spread.
+- Understanding the relationship between distribution shape and summary statistics.
+- Performing manual calculations of key summary statistics.
+
 ## Introduction
 
 In this activity, you will practice interpreting histograms, understanding the relationship between distribution shape and summary statistics, and performing manual calculations. Work through the sections in order, discussing your answers with your group before moving on.
 
-------------------------------------------------------------------------
 
 ## Part 1: Interpreting Histograms
 
@@ -45,7 +50,6 @@ hist(data_a,
 2. Is this distribution symmetric, right-skewed, or left-skewed?
 3. Where is most of the mass concentrated?
 
-------------------------------------------------------------------------
 
 ### Distribution B
 
@@ -72,7 +76,6 @@ hist(data_b,
 2. Is this distribution symmetric, right-skewed, or left-skewed?
 3. Are there any extreme values? If so, in which direction?
 
-------------------------------------------------------------------------
 
 ## Part 2: Skewness and Mean vs Median
 
@@ -102,7 +105,6 @@ hist(income_data,
 1. In this distribution, would you expect the mean to be larger or smaller than the median?
 2. Why? Explain your reasoning in terms of the shape of the distribution and the location of extreme values.
 
-------------------------------------------------------------------------
 
 ### Left-Skewed Distribution
 
@@ -128,7 +130,6 @@ hist(exam_scores,
 1. In this distribution, would you expect the mean to be larger or smaller than the median?
 2. Why? Explain your reasoning in terms of the shape of the distribution and the location of extreme values.
 
-------------------------------------------------------------------------
 
 ## Part 3: Manual Calculation Exercise
 
@@ -147,7 +148,6 @@ Using these five observations, calculate the following by hand (you may use a ca
 
 **Show your work** for each calculation.
 
-------------------------------------------------------------------------
 
 ## Reflection Questions
 
@@ -157,7 +157,6 @@ After completing the activity, discuss the following questions with your group:
 2. Why is the standard deviation useful for understanding how unusual an observation is?
 3. In what types of real-world political or social data would you expect to see right-skewed distributions? Left-skewed distributions?
 
-------------------------------------------------------------------------
 
 ## Summary
 

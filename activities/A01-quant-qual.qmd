@@ -1,0 +1,81 @@
+---
+title: "Activity: Quantitative vs Qualitative Research"
+subtitle: "Statistics for Political Science — Week 1"
+author: "Leonardo Falabella"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    theme: default
+---
+
+## What you'll practice
+
+- Discussing the differences between quantitative and qualitative research in the social sciences.
+
+
+## Introduction
+
+Quantitative research shares certain norms and objectives that other approaches may not have. However, we do not want to convey the message that qualitative approaches are inferior. They are just not the focus of this module.
+
+
+## Overview
+
+The table below summarises a section of a widely read paper by Mahoney and Goertz (2006).^[Mahoney, James, and Gary Goertz. "A Tale of Two Cultures: Contrasting Quantitative and Qualitative Research." *Political Analysis* 14, no. 3 (2006): 227–49. <https://doi.org/10.1093/pan/mpj017>.]
+
+| Quantitative | Qualitative |
+|---|---|
+| Concerned with the average effect of one or more causes across cases. | Concerned with specific outcomes in particular cases. |
+| Interested in general, lawlike statements about causal effects. | Less concerned with generalisation. |
+| "What is the effect of economic development on democracy?" | "Did economic development contribute to Spain's transition to democracy?" |
+| "What effect does a given increase in foreign direct investment have on economic growth?" | "Were high levels of foreign investment a sufficient explanation for the economic miracle in South Korea?" |
+
+
+## Examples
+
+Suppose you are interested in studying the relationship between economic development and democratisation. You are conflicted between two approaches to your research topic:
+
+### Example of quantitative research
+
+- Assemble a dataset with as many countries as possible, with information on GDP per capita (independent variable), level of democracy (dependent variable), and other quantifiable variables that may relate to democratisation.
+- Conduct a statistical analysis of the data, analysing whether more developed countries are, on average, more democratic than less developed countries.
+
+### Example of qualitative research
+
+- Select one or more cases of transition to democracy (e.g., Spain 1975, Brazil 1985, Poland 1989.)
+- In each case, analyse historical archives (e.g., news articles, government memos, pamphlets, letters) and interview political elites involved in the democratization process.
+- Assess whether democratisation, in these cases, can be traced back to economic development.
+
+
+## Pros and Cons
+
+In your group, discuss: what are the pros and cons of each approach? What do we gain and what do we miss when we choose them?
+
+Work with your peers to fill out the two-by-two table below. Try to think of at least one advantage and one disadvantage for each approach:
+
+|                | Pros | Cons |
+|----------------|------|------|
+| Quantitative   |      |      |
+| Qualitative    |      |      |
+
+After the group discussion, we will reconvene and share our insights with the class.
+
+
+## Mixed Methods
+
+Quantitative and qualitative approaches have advantages and disadvantages in a way that they may complement each other. In fact, mixed-method approaches^[For a comprehensive review, see: Seawright, Jason. *Multi-Method Social Science: Combining Qualitative and Quantitative Tools.* Cambridge University Press, 2016.] are increasingly common in the social sciences. In this course, however, we will focus on quantitative research. It is important to reflect on what it can and cannot do.
+
+
+## Beyond Causation
+
+The goal of causation is shared by a lot of the research in social science, but it is not universal. Research can have other goals beyond studying if A causes B. For example, Schaffer (1998)^[Schaffer, Frederic Charles. *Democracy in Translation: Understanding Politics in an Unfamiliar Culture.* The Wilder House Series in Politics, History, and Culture. Ithaca, N.Y: Cornell University Press, 1998.] studies how people in Senegal understand democratic institutions and political concepts. What does democracy even mean for the Senegalese? Schaffer finds that people in Senegal see voting more as a matter of reinforcing community ties than of choosing leaders. This is an important study that used qualitative research methods.
+
+
+## Summary
+
+In this activity, you have:
+
+- Compared the goals and methods of quantitative and qualitative research.
+- Identified advantages and disadvantages of each approach.
+- Recognised that mixed-method approaches can combine the strengths of both traditions.

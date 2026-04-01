@@ -1,5 +1,5 @@
 ---
-title: "Seminar Activity: Bivariate Regression"
+title: "Activity: Bivariate Regression"
 subtitle: "Statistics for Political Science — Week 8"
 author: "Leonardo Falabella"
 format:
@@ -10,6 +10,12 @@ format:
     theme: default
 ---
 
+## What you'll practice
+
+- Fitting bivariate regression models in Stata and reading the full output.
+- Interpreting slopes in substantive terms, paying attention to scale direction.
+- Assessing statistical significance using p-values, confidence intervals, and R-squared.
+
 ## Introduction
 
 In Week 5, you described bivariate relationships between pairs of variables from the Quality of Government (QoG) dataset. For numeric–numeric pairs, you produced scatterplots with regression lines and described the direction and strength of the association visually.
@@ -18,7 +24,6 @@ This activity revisits three of those pairs. This time, you will move from descr
 
 Work through each pair in order using `regression-qog.do`. The dataset is the Quality of Government (QoG) dataset (available in our [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE)). Refer to the QoG codebook if you need more detail about any variable.
 
-------------------------------------------------------------------------
 
 ## Pair 1 — `wdi_gini` and `wdi_wip`
 
@@ -29,7 +34,6 @@ Work through each pair in order using `regression-qog.do`. The dataset is the Qu
 
 **Research question:** Do more unequal countries tend to have lower levels of women's representation in parliament?
 
-------------------------------------------------------------------------
 
 **Execute:** Produce the scatterplot with regression line and run the regression.
 
@@ -44,7 +48,6 @@ Work through each pair in order using `regression-qog.do`. The dataset is the Qu
 
 > **Hint:** Check the sign of the slope carefully. A negative slope would mean that higher inequality is associated with *fewer* women in parliament; a positive slope would mean the opposite. Make sure your substantive interpretation matches the sign.
 
-------------------------------------------------------------------------
 
 ## Pair 2 — `wdi_gini` and `ti_cpi`
 
@@ -55,7 +58,6 @@ Work through each pair in order using `regression-qog.do`. The dataset is the Qu
 
 **Research question:** Do more unequal countries tend to have higher levels of perceived corruption?
 
-------------------------------------------------------------------------
 
 **Execute:** Produce the scatterplot with regression line and run the regression.
 
@@ -70,7 +72,6 @@ Work through each pair in order using `regression-qog.do`. The dataset is the Qu
 
 > **Hint:** The CPI scale runs in the direction where higher = cleaner. A negative slope would mean that more unequal countries tend to score *lower* on the CPI — i.e., are perceived as *more* corrupt. Make sure your substantive interpretation accounts for the scale direction before drawing conclusions.
 
-------------------------------------------------------------------------
 
 ## Pair 3 — `wdi_internet` and `rsf_pfi`
 
@@ -81,7 +82,6 @@ Work through each pair in order using `regression-qog.do`. The dataset is the Qu
 
 **Research question:** Do countries with higher internet usage tend to have greater press freedom?
 
-------------------------------------------------------------------------
 
 **Execute:** Produce the scatterplot with regression line and run the regression.
 
@@ -96,7 +96,6 @@ Work through each pair in order using `regression-qog.do`. The dataset is the Qu
 
 > **Hint:** Remember that higher `rsf_pfi` scores mean *more* press freedom. A positive slope means that countries with more internet users tend to have greater press freedom. Think about why this relationship might exist — and whether you find it plausible.
 
-------------------------------------------------------------------------
 
 ## Comparing the Three Models
 
@@ -106,7 +105,6 @@ Once you have worked through all three pairs, discuss the following questions wi
 - Which relationship is most precisely estimated (i.e., has the narrowest confidence interval)? Does this correspond to the largest or smallest standard error?
 - All three slopes are estimated with uncertainty. For which pair, if any, would you be most cautious about drawing a strong substantive conclusion? Why?
 
-------------------------------------------------------------------------
 
 ## Summary
 

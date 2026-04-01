@@ -21,6 +21,7 @@ website:
       - section: "Week 1: Thinking with Data"
         contents:
             - slides/lectures/W01-thinking-with-data.qmd
+            - activities/A01-quant-qual.qmd
       - section: "Week 2: Research Questions, Theories, and Hypotheses"
         contents:
             - slides/videos-concepts/C01-empirical-vs-normative.qmd
@@ -29,6 +30,7 @@ website:
             - slides/videos-concepts/C04-dependent-independent-variables.qmd
             - slides/videos-stata/S01-doing-reproducible-research.qmd
             - slides/lectures/W02-questions-theories-hypotheses.qmd
+            - activities/A02-questions-theories-hypotheses.qmd
       - section: "Week 3: Measurement and Variable Types"
         contents:
             - slides/videos-concepts/C05-measuring-variables.qmd
@@ -37,6 +39,7 @@ website:
             - slides/videos-stata/S03-stata-interface.qmd
             - slides/videos-stata/S04-loading-browsing-data.qmd
             - slides/lectures/W03-measurement.qmd
+            - activities/A03-propose-measurement.qmd
       - section: "Week 4: Describing Distributions (Univariate Description)"
         contents:
             - slides/videos-concepts/C07-summarising-distribution.qmd

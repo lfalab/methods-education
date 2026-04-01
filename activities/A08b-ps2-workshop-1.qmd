@@ -1,5 +1,5 @@
 ---
-title: "PS2 Workshop 1: Exploration and Univariate Description"
+title: "Activity: PS2 Workshop 1"
 subtitle: "Statistics for Political Science — Week 8"
 author: "Leonardo Falabella"
 format:
@@ -9,6 +9,12 @@ format:
     number-sections: false
     theme: default
 ---
+
+## What you'll practice
+
+- Choosing a dataset, selecting two variables, and classifying them by type.
+- Producing univariate descriptive statistics in Stata.
+- Building a do-file that reproduces your descriptive output.
 
 ## Introduction
 

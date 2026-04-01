@@ -1,5 +1,5 @@
 ---
-title: "PS2 Workshop 2: Bivariate Analysis and Hypothesis Test"
+title: "Activity: PS2 Workshop 2"
 subtitle: "Statistics for Political Science — Week 9"
 author: "Leonardo Falabella"
 format:
@@ -9,6 +9,12 @@ format:
     number-sections: false
     theme: default
 ---
+
+## What you'll practice
+
+- Preparing variables for analysis (recoding, dropping, generating binary variables).
+- Producing the bivariate visualisation for your variable pair.
+- Running the appropriate hypothesis test and recording key outputs.
 
 ## Introduction
 
@@ -51,7 +57,6 @@ label values voted_reform reform_lbl
 
 Decide which approach makes sense for your research question. If your variables are already clean and in the right format, you can skip this step — but make sure you have checked.
 
-------------------------------------------------------------------------
 
 ## Task 2: Produce the bivariate visualisation
 

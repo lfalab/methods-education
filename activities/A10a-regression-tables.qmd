@@ -1,5 +1,5 @@
 ---
-title: "Seminar Activity: Reading Regression Tables"
+title: "Activity: Reading Regression Tables"
 subtitle: "Statistics for Political Science — Week 10"
 author: "Leonardo Falabella"
 format:
@@ -9,6 +9,12 @@ format:
     number-sections: false
     theme: default
 ---
+
+## What you'll practice
+
+- Reading a publication-style regression table to locate coefficients, standard errors, and significance stars.
+- Interpreting slopes and calculating predicted values from a multivariate model.
+- Comparing bivariate and multivariate estimates and identifying potential confounding variables.
 
 ## Introduction
 
@@ -30,7 +36,6 @@ The researchers pose two research questions:
 1. Do countries with higher internet usage tend to have greater press freedom?
 2. Do more unequal countries tend to have less press freedom?
 
-------------------------------------------------------------------------
 
 ## Regression Table
 
@@ -51,51 +56,41 @@ Table 1 contains the results of three regression models. Models 1 and 2 are biva
 
 *Note:* \*p<0.1; \*\*p<0.05; \*\*\*p<0.01. Standard errors in parentheses.
 
-------------------------------------------------------------------------
 
 ## Questions
 
 Work through the following questions in your group. Refer to Table 1 for all answers.
 
-------------------------------------------------------------------------
 
 **Q1.** According to Model 1, what is the estimated slope for internet users? What is its standard error?
 
-------------------------------------------------------------------------
 
 **Q2.** According to Model 1, for each one percentage point increase in internet users, what is the predicted change in the Press Freedom Index? Is this change positive or negative, and what does it mean substantively?
 
-------------------------------------------------------------------------
 
 **Q3.** According to Model 2, what would be the predicted Press Freedom Index of a hypothetical country with a Gini index of zero (i.e., perfect equality)? Which number in the table gives you this prediction?
 
-------------------------------------------------------------------------
 
 **Q4.** Is the coefficient on the Gini index statistically significant at the 5% level in Model 2? What about in Model 3? How can you tell from the table?
 
 > **Hint:** Look at the stars next to each coefficient. The note at the bottom of the table tells you what each star level means. Remember that a coefficient is significant at the 5% level if its p-value is less than 0.05.
 
-------------------------------------------------------------------------
 
 **Q5.** Using Model 3, calculate the predicted Press Freedom Index for a country where 70% of the population uses the internet and the Gini index is 40. Show your calculation.
 
 > **Hint:** Write out the regression equation using the constant and the two slope coefficients from Model 3, then substitute the values.
 
-------------------------------------------------------------------------
 
 **Q6.** Compare the coefficient on the Gini index between Models 2 and 3. In which model is the coefficient larger in magnitude? Why do you think the coefficient changes when internet usage is added to the model?
 
-------------------------------------------------------------------------
 
 **Q7.** Which model has the highest R²? Does adding inequality to the internet model (comparing Models 1 and 3) substantially increase the proportion of variation explained?
 
-------------------------------------------------------------------------
 
 **Q8.** Can you think of a variable *not included* in these models that could be a confounding variable for the relationship between internet usage and press freedom? Explain how it meets the definition of a confounding variable: it must plausibly affect both the independent variable and the dependent variable.
 
 > **Hint:** Think about what characteristics of a country might simultaneously affect how many people use the internet and how free the press is.
 
-------------------------------------------------------------------------
 
 ## Summary
 

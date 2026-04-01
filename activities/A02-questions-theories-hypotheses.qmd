@@ -1,0 +1,111 @@
+---
+title: "Activity: Research Questions, Theories, and Hypotheses"
+subtitle: "Statistics for Political Science — Week 2"
+author: "Leonardo Falabella"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    theme: default
+---
+
+## What you'll practice
+
+Working in a small group to:
+
+- Formulate one empirical research question
+- Classify the question as descriptive or causal
+- State one theory (a reasoned and precise speculation about the answer)
+- Derive one hypothesis (an empirically testable implication of the theory)
+
+
+## Introduction
+
+In research, it can be tempting to jump straight to "testing something" without being clear about what you are asking, what explanation you find plausible, and what you would expect to observe if that explanation were correct.
+
+This activity gives you a simple workflow that you will use repeatedly in this module:
+
+**research question → theory → hypothesis**
+
+
+## Overview
+
+- **Descriptive questions** ask what the world looks like. They describe distributions, trends, or correlations.
+- **Causal questions** ask what would happen if we intervened. They ask whether changing one thing would change another.
+- A **theory** is a reasoned and precise speculation about the answer to a research question.
+- A **hypothesis** is an empirically testable implication of a theory: given your theory, what should we observe in the world?
+
+
+## Examples
+
+### Descriptive vs causal
+
+Descriptive questions:
+
+- What percentage of countries are democratic?
+- Is there a global trend towards democratic backsliding?
+- Is democratic backsliding more prevalent in countries with higher political polarisation?
+
+Causal questions:
+
+- Does exposure to divisive content on social media make people more tolerant of political violence?
+- Does declining trust in political elites weaken commitment to democratic norms?
+- Do compulsory voting laws increase political participation?
+
+### From theory to hypothesis
+
+- **Research question:** How did countries' health care systems affect their abilities to mitigate the impact of the Covid-19 pandemic?
+- **Theory:** Countries with public health care systems took advantage of their centralised bureaucracies to implement more effective policy responses.
+- **Hypothesis:** Countries with public health care systems had lower Covid death rates than countries with private health care systems.
+
+
+## Tasks
+
+Work in groups of about three. Your goal is to produce **one coherent chain** consisting of a research question, a classification (descriptive/causal), one theory, and one hypothesis.
+
+### 1. Formulate a research question
+
+- Write one empirical research question about a social or political phenomenon.
+- Your question should be answerable in principle with data (even if you do not yet know what data you would use).
+
+### 2. Classify your question
+
+- Is your question descriptive or causal? Write one sentence explaining why.
+
+### 3. State one theory
+
+- Write one theory: a reasoned and precise speculation about the answer to your research question.
+- The theory should explain **why** (not just restate the question).
+
+### 4. Derive one hypothesis
+
+- Write one hypothesis implied by your theory.
+- The hypothesis should be empirically testable and should make clear what you would expect to observe in the world.
+
+
+## Quick Self-Check
+
+- Does the theory address the research question directly?
+- Does the hypothesis follow logically from the theory?
+- If the hypothesis were false, would that count against the theory (at least as stated)?
+
+
+## Share-Out
+
+Be ready to share your group's:
+
+1. Research question
+2. Descriptive vs causal classification
+3. Theory
+4. Hypothesis
+
+
+## Summary
+
+In this activity, you have:
+
+- Formulated an empirical research question and classified it as descriptive or causal.
+- Stated a theory that offers a reasoned explanation for the phenomenon in question.
+- Derived a testable hypothesis from the theory.
+- Practised the research question → theory → hypothesis workflow that underpins empirical research.

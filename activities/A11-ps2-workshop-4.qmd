@@ -1,5 +1,5 @@
 ---
-title: "PS2 Workshop 4: Writing Up and Reviewing the Do-File"
+title: "Activity: PS2 Workshop 4"
 subtitle: "Statistics for Political Science — Week 11"
 author: "Leonardo Falabella"
 format:
@@ -9,6 +9,12 @@ format:
     number-sections: false
     theme: default
 ---
+
+## What you'll practice
+
+- Assembling a complete first draft of your Problem Set 2 report.
+- Inserting tables and figures and checking presentation.
+- Cleaning up your do-file for submission.
 
 ## Introduction
 

@@ -1,5 +1,5 @@
 ---
-title: "Seminar Activity: Sampling and Bias"
+title: "Activity: Sampling and Bias"
 subtitle: "Statistics for Political Science — Week 7"
 author: "Leonardo Falabella"
 format:
@@ -9,6 +9,12 @@ format:
     number-sections: false
     theme: default
 ---
+
+## What you'll practice
+
+- Identifying the population of interest in a research scenario.
+- Distinguishing probability from non-probability sampling.
+- Diagnosing the source and direction of bias in sampling procedures.
 
 ## Introduction
 
@@ -112,7 +118,6 @@ Once your group has worked through all five scenarios, discuss the following:
 
 **S3.** The exam will present a single scenario and ask you to identify the population, classify the sampling procedure, and predict the direction of bias. Based on this activity, what are the key questions to ask yourself when working through a scenario like this?
 
-------------------------------------------------------------------------
 
 ## Summary
 

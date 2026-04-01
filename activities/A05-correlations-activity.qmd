@@ -1,5 +1,5 @@
 ---
-title: "Seminar Activity: Country-level Correlations"
+title: "Activity: Country-level Correlations"
 subtitle: "Statistics for Political Science — Week 5"
 author: "Leonardo Falabella"
 format:
@@ -10,6 +10,11 @@ format:
     theme: default
 ---
 
+## What you'll practice
+
+- Identifying variable types and choosing the appropriate bivariate analytical tool.
+- Producing and interpreting cross-tabulations, bar charts of means, and scatterplots with regression lines in Stata.
+
 ## Introduction
 
 This seminar has two parts. In the first hour, you will work through a set of variable pairs conceptually — identifying variable types, deciding which analytical case applies, and choosing the appropriate tool — without touching Stata. In the second hour, you will implement your choices in Stata and interpret the output.
@@ -18,13 +23,11 @@ Work through each part in order. Discuss your answers with your group before mov
 
 The dataset for all exercises is the Quality of Government (QoG) dataset (available in our [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE)). Refer to the QoG codebook if you need more detail about any variable.
 
-------------------------------------------------------------------------
 
 ## The Seven Variable Pairs
 
 Below are seven pairs of variables drawn from the QoG dataset. Each pair is accompanied by a brief description of how each variable is measured and a research question that motivates the analysis. Read through all seven pairs before beginning Hour 1.
 
-------------------------------------------------------------------------
 
 ### Pair 1
 
@@ -35,7 +38,6 @@ Below are seven pairs of variables drawn from the QoG dataset. Each pair is acco
 
 **Research question:** Do countries with different electoral systems differ in their average levels of voter turnout?
 
-------------------------------------------------------------------------
 
 ### Pair 2
 
@@ -46,7 +48,6 @@ Below are seven pairs of variables drawn from the QoG dataset. Each pair is acco
 
 **Research question:** Do more unequal countries tend to have higher levels of perceived corruption?
 
-------------------------------------------------------------------------
 
 ### Pair 3
 
@@ -57,7 +58,6 @@ Below are seven pairs of variables drawn from the QoG dataset. Each pair is acco
 
 **Research question:** Do countries with different colonial histories differ in their likelihood of being democratic today?
 
-------------------------------------------------------------------------
 
 ### Pair 4
 
@@ -68,7 +68,6 @@ Below are seven pairs of variables drawn from the QoG dataset. Each pair is acco
 
 **Research question:** Do countries with higher internet usage tend to have greater press freedom?
 
-------------------------------------------------------------------------
 
 ### Pair 5
 
@@ -79,7 +78,6 @@ Below are seven pairs of variables drawn from the QoG dataset. Each pair is acco
 
 **Research question:** Do countries with different colonial histories differ in their average levels of perceived corruption today?
 
-------------------------------------------------------------------------
 
 ### Pair 6
 
@@ -90,7 +88,6 @@ Below are seven pairs of variables drawn from the QoG dataset. Each pair is acco
 
 **Research question:** Do countries in different world regions tend to use different electoral systems?
 
-------------------------------------------------------------------------
 
 ### Pair 7
 
@@ -101,7 +98,6 @@ Below are seven pairs of variables drawn from the QoG dataset. Each pair is acco
 
 **Research question:** Do more unequal countries tend to have lower levels of women's representation in parliament?
 
-------------------------------------------------------------------------
 
 ## Hour 1: Conceptual Mapping
 
@@ -129,13 +125,11 @@ State the specific plot or table you would use.
 
 Once your group has worked through all seven pairs, be ready to discuss your answers. Pay particular attention to any pairs where you were uncertain — these are worth discussing carefully before moving to Hour 2.
 
-------------------------------------------------------------------------
 
 ## Hour 2: Stata Implementation
 
 In this hour, you will implement the tools you identified in Hour 1 and interpret the output. Work through the pairs in order, using `bivariate-lecture.do` as a reference for command syntax. For each pair, there are two steps: **execute** and **interpret**.
 
-------------------------------------------------------------------------
 
 ### Pair 1 — `gol_est` and `ideavt_legvt`
 
@@ -149,7 +143,6 @@ In this hour, you will implement the tools you identified in Hour 1 and interpre
 
 > **Hint:** A difference of a few percentage points in turnout can be politically significant at the national level, even if it looks modest in a chart.
 
-------------------------------------------------------------------------
 
 ### Pair 2 — `wdi_gini` and `ti_cpi`
 
@@ -162,7 +155,6 @@ In this hour, you will implement the tools you identified in Hour 1 and interpre
 
 > **Hint:** Getting the scale direction of `ti_cpi` right is essential for interpreting the slope correctly. Confirm which end of the scale represents more corruption before drawing conclusions.
 
-------------------------------------------------------------------------
 
 ### Pair 3 — `bmr_dem` and `ht_colonial`
 
@@ -175,7 +167,6 @@ In this hour, you will implement the tools you identified in Hour 1 and interpre
 
 > **Hint:** Row percentages show the distribution of one variable within each category of the other. Switching between row and column orientations reveals different aspects of the same association — think carefully about which question each answers.
 
-------------------------------------------------------------------------
 
 ### Pair 4 — `wdi_internet` and `rsf_pfi`
 
@@ -188,7 +179,6 @@ In this hour, you will implement the tools you identified in Hour 1 and interpre
 
 > **Hint:** Make sure you have the direction of the `rsf_pfi` scale clear before interpreting the slope. A positive slope here has a specific substantive meaning that depends on understanding what higher values represent.
 
-------------------------------------------------------------------------
 
 ### Pair 5 — `ht_colonial` and `ti_cpi`
 
@@ -202,7 +192,6 @@ In this hour, you will implement the tools you identified in Hour 1 and interpre
 
 > **Hint:** The bar chart of means lets you compare average corruption scores across colonial-origin categories at a glance. Look for categories with notably higher or lower means, and keep in mind that fewer countries in a category makes the average less reliable.
 
-------------------------------------------------------------------------
 
 ### Pair 6 — `gol_est` and `ht_region`
 
@@ -216,7 +205,6 @@ In this hour, you will implement the tools you identified in Hour 1 and interpre
 
 > **Hint:** A bivariate chart will make regional patterns easier to see than a table alone. Look for categories that are heavily concentrated in one region or largely absent from another.
 
-------------------------------------------------------------------------
 
 ### Pair 7 — `wdi_gini` and `wdi_wip`
 
@@ -230,7 +218,6 @@ In this hour, you will implement the tools you identified in Hour 1 and interpre
 
 > **Hint:** Pay attention to both the direction of the regression line and how tightly the points cluster around it. A flat or nearly flat line suggests little association, even if the slope is not exactly zero.
 
-------------------------------------------------------------------------
 
 ## Summary
 

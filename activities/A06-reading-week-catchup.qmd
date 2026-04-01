@@ -1,5 +1,5 @@
 ---
-title: "Catch-Up Activity: From Data Handling to Bivariate Interpretation"
+title: "Activity: Data Handling to Bivariate Interpretation"
 subtitle: "Statistics for Political Science — Reading Week"
 author: "Leonardo Falabella"
 format:
@@ -9,6 +9,12 @@ format:
     number-sections: false
     theme: default
 ---
+
+## What you'll practice
+
+- Setting up your Stata workflow: folder structure, working directory, and loading data.
+- Describing single variables with frequency tables and summary statistics.
+- Producing and interpreting bivariate output.
 
 ## Introduction
 
@@ -24,7 +30,6 @@ If you are comfortable with Parts 1 or 2, feel free to skip ahead. If you're in 
 
 Completing all three parts should take approximately 90 minutes. If you cannot complete this activity independently, book an appointment with me by [clicking here.](https://outlook.office.com/bookwithme/user/fbf0f18fe8b84b8bbe71922285fbf0e2@kcl.ac.uk?anonymous&ismsaljsauthenabled&ep=plink)
 
-------------------------------------------------------------------------
 
 ## Part 1: Setting Up Your Workflow
 
@@ -116,7 +121,6 @@ You should now have:
 
 If any of these steps did not work, [book an office hour](https://outlook.office.com/bookwithme/user/fbf0f18fe8b84b8bbe71922285fbf0e2@kcl.ac.uk?anonymous&ismsaljsauthenabled&ep=plink).
 
-------------------------------------------------------------------------
 
 ## Part 2: Describing Single Variables
 
@@ -187,7 +191,6 @@ You should now be able to:
 
 If you struggled with any of these tasks, revisit the relevant videos before moving to Part 3.
 
-------------------------------------------------------------------------
 
 ## Part 3: Describing Relationships Between Variables
 
@@ -289,7 +292,6 @@ You should now be able to:
 - Produce a scatterplot with a regression line for a numeric × numeric pair.
 - Interpret the output in substantive terms.
 
-------------------------------------------------------------------------
 
 ## What to Do If You Could Not Complete This Activity
 
