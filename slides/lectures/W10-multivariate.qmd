@@ -15,6 +15,24 @@ format:
 
 ------------------------------------------------------------------------
 
+## PS2 warning: check your datasets
+
+- Some do-files filter the data (e.g. keep only Mail/Telegraph readers).
+- If you clicked **Save** when closing Stata, the subset overwrote your original file.
+- Your PS2 analyses may be running on a fraction of the data.
+
+------------------------------------------------------------------------
+
+## What to do
+
+- **Re-download the datasets** from the shared project folder into `data-raw/`.
+- Keep the original filenames exactly as they are.
+- From now on, always click **Don't save** when closing Stata:
+
+![](../../assets/dont-save.png){fig-align="center"}
+
+------------------------------------------------------------------------
+
 ## From the concept videos to the lecture
 
 - The videos showed coefficients that **disappear** after adding controls.

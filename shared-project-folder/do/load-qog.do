@@ -6,3 +6,5 @@ use "data-raw/Quality_of_Government_2026.dta", clear
 
 
 
+
+

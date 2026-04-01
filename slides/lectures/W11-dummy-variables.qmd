@@ -1,0 +1,270 @@
+---
+title: "Lecture 11: Dummy Variables"
+subtitle: "Statistics for Political Science"
+author: "Leonardo Falabella"
+class: lecture
+format:
+  html:
+    toc: true
+    number-sections: false
+    format-links: true
+    output-file: dummy-variables-lecture
+  revealjs:
+    output-file: dummy-variables-lecture-slides
+---
+
+------------------------------------------------------------------------
+
+## The do-file is your template
+
+- Everything we do today is in ``dummy-bes.do``.
+- Download it, update the working directory, and run along.
+
+------------------------------------------------------------------------
+
+## Download today's do-file
+
+::: nonincremental
+
+- Access our [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE)
+- Click on ``do``
+- Download ``dummy-bes.do``
+- Save it to your ``do`` folder and update the working directory
+
+:::
+
+------------------------------------------------------------------------
+
+## What is a dummy variable?
+
+- A variable coded **0** or **1**.
+- Represents membership in a category.
+- The group coded 0 is the **reference category**.
+
+------------------------------------------------------------------------
+
+## Examples of dummy variables
+
+::: nonincremental
+
+| Dummy variable | Coded 1 if... | Reference group (0) |
+|----------------|---------------|---------------------|
+| *Woman* | respondent is a woman | men |
+| *Graduate* | respondent has a degree | non-graduates |
+| *Dictatorship* | country is a dictatorship | democracies |
+
+:::
+
+------------------------------------------------------------------------
+
+## What can you do with a dummy?
+
+- **Sum** gives the count of observations coded 1.
+- **Mean** gives the proportion coded 1.
+- Useful way to include nominal variables in regression.
+
+------------------------------------------------------------------------
+
+## Dummy as independent variable
+
+- The model: Y = B0 + B1(dummy)
+- B0 = predicted Y for the reference group (coded 0).
+- B1 = predicted difference for the group coded 1.
+
+------------------------------------------------------------------------
+
+## Interpretation example
+
+- Suppose you regress income on a *Graduate* dummy.
+- B0 = average income for non-graduates.
+- B1 = how much more (or less) graduates earn, on average.
+
+------------------------------------------------------------------------
+
+## Today's question
+
+- Are women more left-wing than men?
+- Data: British Election Study 2024.
+- Ideology: 0 (left) to 10 (right) self-placement scale.
+
+------------------------------------------------------------------------
+
+## Building the dummy in Stata
+
+::: nonincremental
+
+```stata
+replace y09 = . if y09 < 0
+replace e01 = . if e01 < 0
+keep if y09 == 1 | y09 == 2
+
+generate woman = (y09 == 2) if y09 != .
+```
+
+- ``y09``: gender variable (1 = male, 2 = female).
+- ``woman``: our dummy (1 = woman, 0 = man).
+
+:::
+
+------------------------------------------------------------------------
+
+## Your Turn: Run the regression
+
+- In the do-file, find and run the ``svy: regress`` command.
+- What is the coefficient on ``woman``?
+- How would you interpret it in plain language?
+
+------------------------------------------------------------------------
+
+## The result
+
+::: nonincremental
+
+```
+svy: regress e01 woman
+
+Survey: Linear regression            Number of obs = 2,652
+
+--------------------------------------------------------------
+         e01 | Coefficient  std. err.      t    P>|t|
+-------------+------------------------------------------------
+       woman |  -.3955786   .0853191    -4.64   0.000
+       _cons |   4.981491   .0634301    78.54   0.000
+--------------------------------------------------------------
+```
+
+:::
+
+------------------------------------------------------------------------
+
+## Interpreting the output
+
+- **Intercept (4.98):** men's predicted ideology score.
+- **Woman (-0.40):** women score 0.40 points lower (more left).
+- Statistically significant (p < 0.001).
+
+------------------------------------------------------------------------
+
+## Can we call this causal?
+
+- The coefficient is real and precisely estimated.
+- But does being a woman **cause** someone to be more left-wing?
+- This is a different question from "is there an association?"
+
+------------------------------------------------------------------------
+
+## What you already know
+
+- In Week 9, we discussed two threats to causal claims.
+- **Confounding:** a third variable drives both X and Y.
+- **Reverse causality:** Y might cause X instead.
+
+------------------------------------------------------------------------
+
+## A third consideration: the counterfactual
+
+- Causal claims require a meaningful "what if?"
+- "What if this person had not received the treatment?"
+- In an experiment, the counterfactual is clear.
+
+------------------------------------------------------------------------
+
+## The counterfactual problem
+
+- "What would this person's ideology be if they were not a woman?"
+- This question does not have a clear answer.
+- Gender is not a treatment we can assign or withhold.
+
+------------------------------------------------------------------------
+
+## Discussion
+
+::: nonincremental
+
+> "Empirical results may be a way to understand what is happening; however, these same data tell us very little about why it happens."
+>
+> -- Tukufu Zuberi and Eduardo Bonilla-Silva ([2008: p.9](https://www.amazon.co.uk/White-Logic-Methods-Racism-Methodology/dp/0742542815))
+
+- Does the gender coefficient tell us **why** men and women differ?
+
+:::
+
+------------------------------------------------------------------------
+
+## Your Turn: Why might they differ?
+
+- Brainstorm with your neighbour: what social processes could produce this gap?
+- If we controlled for those, would the coefficient survive?
+- What does this tell us about the coefficient's meaning?
+
+------------------------------------------------------------------------
+
+## What the coefficient tells us
+
+- Women are, on average, more left-leaning than men.
+- The difference is precisely estimated and significant.
+- This is useful for description and prediction.
+
+------------------------------------------------------------------------
+
+## What the coefficient does not tell us
+
+- Not what would happen if gender were "changed."
+- It conflates socialisation, experience, and structural factors.
+- Causal language requires assumptions we cannot test.
+
+------------------------------------------------------------------------
+
+## Dummy variables as dependent variables
+
+- What if the dummy is on the left-hand side of the equation?
+- Interpretation changes: coefficients become predicted probabilities.
+- This will be covered in **Stats 2** next year.
+
+------------------------------------------------------------------------
+
+## The inventors of your toolkit
+
+- Francis Galton, Karl Pearson, and Ronald Fisher built the tools you have learned.
+- Correlation, regression, significance testing: all from this group.
+- They worked at institutions explicitly dedicated to eugenics.
+
+------------------------------------------------------------------------
+
+## Their foundational error
+
+- They treated demographic group membership as a cause.
+- Group differences in health or intelligence were called innate.
+- This is the same interpretive mistake we discussed today.
+
+------------------------------------------------------------------------
+
+## Pearson's conclusion (1928)
+
+::: nonincremental
+
+> "No breeder of cattle, however, would purchase an entire herd because he anticipated finding one or two fine specimens included in it."
+>
+> -- Karl Pearson and Margaret Moul, *Annals of Eugenics*, 1928
+
+- Pearson studied Jewish immigrant children in London schools.
+- He concluded observed differences were innate racial traits.
+
+:::
+
+------------------------------------------------------------------------
+
+## His own data disagreed
+
+- His exams found Jewish children had healthier glands.
+- He suppressed every finding that contradicted his conclusion.
+- A public that cannot question data lets malpractice go unchallenged.
+
+
+------------------------------------------------------------------------
+
+## Why this matters
+
+- The tools are not the problem. Manipulation and poor interpretation are.
+- Knowing what your tools can and cannot do is just as important as statistical knowledge.
+- **Data literacy makes good citizens!**

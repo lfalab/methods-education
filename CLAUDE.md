@@ -94,7 +94,9 @@ The canonical working directory path is:
 cd "C:\Users\leona\OneDrive - King's College London\methods-education\shared-project-folder"
 ```
 
-When creating or editing do-files, always use this path.
+When creating or editing do-files that will be committed to the repository, always use this path. It is the path on the primary development machine.
+
+When writing **wrapper do-files** (temporary files in `C:\temp\` used to run Stata from Claude Code), use the `cd` path that matches the current machine. See the multi-machine reference table below.
 
 ---
 
@@ -104,14 +106,21 @@ Claude Code can execute Stata do-files and read the output directly from the ter
 
 The teaching materials on the website (slides, activities) are tightly coupled to the Stata do-files and datasets in `shared-project-folder/`. Being able to run these do-files is essential for maintaining and developing the course.
 
-### How it works
+### Multi-machine reference
 
-Stata is installed at `C:\Program Files\Stata19\StataSE-64.exe`.
+The user works on two PCs. At the start of a session, Claude should detect which machine it is on by checking which Stata executable exists.
+
+| | Home PC (`leona`) | Office PC (`k2588471`) |
+|---|---|---|
+| Stata executable | `C:\Program Files\Stata19\StataSE-64.exe` | `C:\Program Files\StataNow19\StataMP-64.exe` |
+| OneDrive `cd` path | `C:\Users\leona\OneDrive - King's College London\methods-education\shared-project-folder` | `C:\Users\k2588471\OneDrive - King's College London\methods-education\shared-project-folder` |
+
+### How it works
 
 Running Stata from the Claude Code terminal requires working around three Windows issues:
 
 1. **MSYS2 path mangling** — Git Bash converts `/e` to `E:/`. Set `MSYS_NO_PATHCONV=1` to disable this.
-2. **GUI executable** — `StataSE-64.exe` is a GUI app; `cmd` doesn't wait for it. Use PowerShell `Start-Process -Wait` instead.
+2. **GUI executable** — The Stata executable is a GUI app; `cmd` doesn't wait for it. Use PowerShell `Start-Process -Wait` instead.
 3. **Output capture** — Stata's `/e` batch mode log is unreliable. Use Stata's `log using` command inside the do-file for explicit output capture.
 
 ### Step 1: Write a wrapper do-file to `C:\temp\`
@@ -119,7 +128,7 @@ Running Stata from the Claude Code terminal requires working around three Window
 ```stata
 log using "C:\temp\stata-output.log", text replace
 
-cd "C:\Users\leona\OneDrive - King's College London\methods-education\shared-project-folder"
+cd "<OneDrive cd path for this machine>"
 use "data-raw/Brexit_Regional.dta", clear
 regress leave_share share_high_skill
 
@@ -129,6 +138,7 @@ exit, clear
 
 The wrapper always follows this pattern:
 - `log using "C:\temp\stata-output.log", text replace` — open a text log at a known path
+- `cd` using the OneDrive path for the current machine (see multi-machine reference table above)
 - The actual Stata commands (loading data, analysis, etc.)
 - `log close` — flush the log
 - `exit, clear` — close Stata cleanly
@@ -138,10 +148,10 @@ To run an existing do-file, the wrapper can call it with `do "do/filename.do"` a
 ### Step 2: Execute from the terminal
 
 ```bash
-MSYS_NO_PATHCONV=1 powershell -Command '$p = Start-Process -FilePath "C:\Program Files\Stata19\StataSE-64.exe" -ArgumentList "/e","do","C:\temp\<wrapper>.do" -Wait -PassThru; Write-Output "ExitCode: $($p.ExitCode)"'
+MSYS_NO_PATHCONV=1 powershell -Command '$p = Start-Process -FilePath "<Stata executable for this machine>" -ArgumentList "/e","do","C:\temp\<wrapper>.do" -Wait -PassThru; Write-Output "ExitCode: $($p.ExitCode)"'
 ```
 
-Replace `<wrapper>` with the name of the wrapper do-file.
+Replace `<Stata executable for this machine>` with the path from the multi-machine reference table. Replace `<wrapper>` with the name of the wrapper do-file.
 
 An exit code of `0` means success.
 
@@ -164,20 +174,24 @@ Claude Code can execute R scripts from the terminal. This is useful for generati
 
 ### How it works
 
-R 4.2.0 is installed at `C:\Program Files\R\R-4.2.0\bin\Rscript.exe`.
-
 R is **not** on the system PATH. Always use the full path to `Rscript.exe`.
+
+The R version differs by machine. At the start of a session, detect the installed version:
+
+| | Home PC (`leona`) | Office PC (`k2588471`) |
+|---|---|---|
+| Rscript path | `C:\Program Files\R\R-4.2.0\bin\Rscript.exe` | `C:\Program Files\R\R-4.5.3\bin\Rscript.exe` |
 
 ### Running a script
 
 ```bash
-"C:\Program Files\R\R-4.2.0\bin\Rscript.exe" "path/to/script.R"
+"<Rscript path for this machine>" "path/to/script.R"
 ```
 
 ### Running inline R
 
 ```bash
-"C:\Program Files\R\R-4.2.0\bin\Rscript.exe" -e 'library(readxl); d <- read_excel("file.xlsx"); str(d)'
+"<Rscript path for this machine>" -e 'library(readxl); d <- read_excel("file.xlsx"); str(d)'
 ```
 
 Note: single quotes around the `-e` expression work in Git Bash. Escape internal single quotes with `'"'"'` if needed.
@@ -387,6 +401,30 @@ Each log should contain:
 - important notes
 
 Logs should remain concise.
+
+---
+
+# Session Handoff for Cross-Machine Work
+
+The user works across two PCs. Claude Code conversations and plans are stored locally and do not sync between machines.
+
+When a session involves substantial design work or multi-step content creation, Claude should **proactively offer to write a handoff document** to `logs/` before the session ends.
+
+Handoff documents are stored as:
+
+logs/YYYY-MM-DD-handoff.md
+
+A handoff should contain:
+
+- what was built and why (pedagogical or design rationale)
+- key decisions made during the conversation
+- any data or output that informed the work (e.g. regression coefficients)
+- what remains to be done
+- source materials referenced
+
+Handoff documents are more detailed than session logs. A session log records *what changed*; a handoff captures *the reasoning and context* needed to resume work in a new conversation on a different machine.
+
+Claude should also save a recommended resume prompt to `prompts/` so the user can copy-paste it to start the next session. The prompt should reference the handoff document and any key files using `@` syntax.
 
 ---
 

@@ -38,19 +38,13 @@ Insert your tables and figures into the report. Make sure that:
 
 ## Task 4: Clean up your do-file
 
-Check that your do-file runs from top to bottom without errors and reproduces all the tables and figures in your report. Make sure your do-file includes:
-
-- A header comment block with your name, date, and a brief description of the analysis.
-- Comments explaining what each section of code does.
-- No extraneous commands left over from exploration.
-
-Run the do-file one final time from start to finish to confirm it works.
+Check that your do-file runs from top to bottom without errors and reproduces all the tables and figures in your report. Run the do-file one final time from start to finish to confirm it works.
 
 ## Task 5: Check the word count and submission details
 
 Check the word count. The limit is 1,500 words excluding tables, figures, and references. The model answer is well under this — aim for substance, not length.
 
-If working in a pair, confirm that your partner's name and candidate number appear on the title page of your report, and that your written interpretations are independently written.
+If working in a pair, confirm that your partner's candidate number appear on the title page of your report, and that your written interpretations are independently written.
 
 ## By the end of today you should have
 
