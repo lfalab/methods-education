@@ -4393,7 +4393,7 @@
     "href": "slides/lectures/dummy-variables-lecture.html#discussion",
     "title": "Lecture 11: Dummy Variables",
     "section": "Discussion",
-    "text": "Discussion\n\n\n“Empirical results may be a way to understand what is happening; however, these same data tell us very little about why it happens.”\n– Tukufu Zuberi and Eduardo Bonilla-Silva, White Logic, White Methods\n\n\nDoes the gender coefficient tell us why men and women differ?",
+    "text": "Discussion\n\n\n“Empirical results may be a way to understand what is happening; however, these same data tell us very little about why it happens.”\n– Tukufu Zuberi and Eduardo Bonilla-Silva (2008: p.9)\n\n\nDoes the gender coefficient tell us why men and women differ?",
     "crumbs": [
       "Week 11: Dummy Variables",
       "Lecture 11: Dummy Variables"
@@ -4444,55 +4444,44 @@
     ]
   },
   {
-    "objectID": "slides/lectures/dummy-variables-lecture.html#when-this-goes-wrong",
-    "href": "slides/lectures/dummy-variables-lecture.html#when-this-goes-wrong",
+    "objectID": "slides/lectures/dummy-variables-lecture.html#the-inventors-of-your-toolkit",
+    "href": "slides/lectures/dummy-variables-lecture.html#the-inventors-of-your-toolkit",
     "title": "Lecture 11: Dummy Variables",
-    "section": "When this goes wrong",
-    "text": "When this goes wrong\n\nKarl Pearson: one of the founders of modern statistics.\nIn 1928, he studied “alien Jewish children” in London schools.\nHe measured skull shapes, eyesight, and pigmentation.",
+    "section": "The inventors of your toolkit",
+    "text": "The inventors of your toolkit\n\nFrancis Galton, Karl Pearson, and Ronald Fisher built the tools you have learned.\nCorrelation, regression, significance testing: all from this group.\nThey worked at institutions explicitly dedicated to eugenics.",
     "crumbs": [
       "Week 11: Dummy Variables",
       "Lecture 11: Dummy Variables"
     ]
   },
   {
-    "objectID": "slides/lectures/dummy-variables-lecture.html#the-problem-of-alien-immigration-1928",
-    "href": "slides/lectures/dummy-variables-lecture.html#the-problem-of-alien-immigration-1928",
+    "objectID": "slides/lectures/dummy-variables-lecture.html#their-foundational-error",
+    "href": "slides/lectures/dummy-variables-lecture.html#their-foundational-error",
     "title": "Lecture 11: Dummy Variables",
-    "section": "“The Problem of Alien Immigration” (1928)",
-    "text": "“The Problem of Alien Immigration” (1928)\n\nPearson found group differences on physical measures.\nHe concluded these were innate racial traits.\n“Not the product of the immediate environment.”",
+    "section": "Their foundational error",
+    "text": "Their foundational error\n\nThey treated demographic group membership as a cause.\nGroup differences in health or intelligence were called innate.\nThis is the same interpretive mistake we discussed today.",
     "crumbs": [
       "Week 11: Dummy Variables",
       "Lecture 11: Dummy Variables"
     ]
   },
   {
-    "objectID": "slides/lectures/dummy-variables-lecture.html#pearsons-conclusion",
-    "href": "slides/lectures/dummy-variables-lecture.html#pearsons-conclusion",
+    "objectID": "slides/lectures/dummy-variables-lecture.html#pearsons-conclusion-1928",
+    "href": "slides/lectures/dummy-variables-lecture.html#pearsons-conclusion-1928",
     "title": "Lecture 11: Dummy Variables",
-    "section": "Pearson’s conclusion",
-    "text": "Pearson’s conclusion\n\n\n“[Poor sight] is not the product of the immediate environment, nor likely to be substantially influenced by a change in that environment; it is rather a racial character only to be modified by selective action through many generations.”\n– Karl Pearson and Margaret Moul, Annals of Eugenics, 1928",
+    "section": "Pearson’s conclusion (1928)",
+    "text": "Pearson’s conclusion (1928)\n\n\n“No breeder of cattle, however, would purchase an entire herd because he anticipated finding one or two fine specimens included in it.”\n– Karl Pearson and Margaret Moul, Annals of Eugenics, 1928\n\n\nPearson studied Jewish immigrant children in London schools.\nHe concluded observed differences were innate racial traits.",
     "crumbs": [
       "Week 11: Dummy Variables",
       "Lecture 11: Dummy Variables"
     ]
   },
   {
-    "objectID": "slides/lectures/dummy-variables-lecture.html#the-error",
-    "href": "slides/lectures/dummy-variables-lecture.html#the-error",
+    "objectID": "slides/lectures/dummy-variables-lecture.html#his-own-data-disagreed",
+    "href": "slides/lectures/dummy-variables-lecture.html#his-own-data-disagreed",
     "title": "Lecture 11: Dummy Variables",
-    "section": "The error",
-    "text": "The error\n\nPearson read demographic correlations as biological causation.\nHe ignored poverty, discrimination, and language barriers.\nHe used statistical authority to support immigration restriction.",
-    "crumbs": [
-      "Week 11: Dummy Variables",
-      "Lecture 11: Dummy Variables"
-    ]
-  },
-  {
-    "objectID": "slides/lectures/dummy-variables-lecture.html#what-you-have-learned-this-term",
-    "href": "slides/lectures/dummy-variables-lecture.html#what-you-have-learned-this-term",
-    "title": "Lecture 11: Dummy Variables",
-    "section": "What you have learned this term",
-    "text": "What you have learned this term\n\nDescribe distributions, correlations, and regressions.\nTest hypotheses with confidence intervals and p-values.\nEvaluate causal claims with confounders and counterfactuals.",
+    "section": "His own data disagreed",
+    "text": "His own data disagreed\n\nHis exams found Jewish children had healthier glands.\nHe suppressed every finding that contradicted his conclusion.\nA public that cannot question data lets malpractice go unchallenged.",
     "crumbs": [
       "Week 11: Dummy Variables",
       "Lecture 11: Dummy Variables"
@@ -4503,7 +4492,7 @@
     "href": "slides/lectures/dummy-variables-lecture.html#why-this-matters",
     "title": "Lecture 11: Dummy Variables",
     "section": "Why this matters",
-    "text": "Why this matters\n\nStatistics is a tool for careful thinking about evidence.\nKnowing what your tools cannot do is just as important.\nData literacy makes good citizens.",
+    "text": "Why this matters\n\nThe tools are not the problem. Manipulation and poor interpretation are.\nKnowing what your tools can and cannot do is just as important as statistical knowledge.\nData literacy makes good citizens!",
     "crumbs": [
       "Week 11: Dummy Variables",
       "Lecture 11: Dummy Variables"
@@ -4626,7 +4615,7 @@
     "href": "slides/lectures/dummy-variables-lecture-slides.html#discussion",
     "title": "Lecture 11: Dummy Variables",
     "section": "Discussion",
-    "text": "Discussion\n\n“Empirical results may be a way to understand what is happening; however, these same data tell us very little about why it happens.”\n– Tukufu Zuberi and Eduardo Bonilla-Silva, White Logic, White Methods\n\n\nDoes the gender coefficient tell us why men and women differ?"
+    "text": "Discussion\n\n“Empirical results may be a way to understand what is happening; however, these same data tell us very little about why it happens.”\n– Tukufu Zuberi and Eduardo Bonilla-Silva (2008: p.9)\n\n\nDoes the gender coefficient tell us why men and women differ?"
   },
   {
     "objectID": "slides/lectures/dummy-variables-lecture-slides.html#your-turn-why-might-they-differ",
@@ -4657,46 +4646,39 @@
     "text": "Dummy variables as dependent variables\n\nWhat if the dummy is on the left-hand side of the equation?\nInterpretation changes: coefficients become predicted probabilities.\nThis will be covered in Stats 2 next year."
   },
   {
-    "objectID": "slides/lectures/dummy-variables-lecture-slides.html#when-this-goes-wrong",
-    "href": "slides/lectures/dummy-variables-lecture-slides.html#when-this-goes-wrong",
+    "objectID": "slides/lectures/dummy-variables-lecture-slides.html#the-inventors-of-your-toolkit",
+    "href": "slides/lectures/dummy-variables-lecture-slides.html#the-inventors-of-your-toolkit",
     "title": "Lecture 11: Dummy Variables",
-    "section": "When this goes wrong",
-    "text": "When this goes wrong\n\nKarl Pearson: one of the founders of modern statistics.\nIn 1928, he studied “alien Jewish children” in London schools.\nHe measured skull shapes, eyesight, and pigmentation."
+    "section": "The inventors of your toolkit",
+    "text": "The inventors of your toolkit\n\nFrancis Galton, Karl Pearson, and Ronald Fisher built the tools you have learned.\nCorrelation, regression, significance testing: all from this group.\nThey worked at institutions explicitly dedicated to eugenics."
   },
   {
-    "objectID": "slides/lectures/dummy-variables-lecture-slides.html#the-problem-of-alien-immigration-1928",
-    "href": "slides/lectures/dummy-variables-lecture-slides.html#the-problem-of-alien-immigration-1928",
+    "objectID": "slides/lectures/dummy-variables-lecture-slides.html#their-foundational-error",
+    "href": "slides/lectures/dummy-variables-lecture-slides.html#their-foundational-error",
     "title": "Lecture 11: Dummy Variables",
-    "section": "“The Problem of Alien Immigration” (1928)",
-    "text": "“The Problem of Alien Immigration” (1928)\n\nPearson found group differences on physical measures.\nHe concluded these were innate racial traits.\n“Not the product of the immediate environment.”"
+    "section": "Their foundational error",
+    "text": "Their foundational error\n\nThey treated demographic group membership as a cause.\nGroup differences in health or intelligence were called innate.\nThis is the same interpretive mistake we discussed today."
   },
   {
-    "objectID": "slides/lectures/dummy-variables-lecture-slides.html#pearsons-conclusion",
-    "href": "slides/lectures/dummy-variables-lecture-slides.html#pearsons-conclusion",
+    "objectID": "slides/lectures/dummy-variables-lecture-slides.html#pearsons-conclusion-1928",
+    "href": "slides/lectures/dummy-variables-lecture-slides.html#pearsons-conclusion-1928",
     "title": "Lecture 11: Dummy Variables",
-    "section": "Pearson’s conclusion",
-    "text": "Pearson’s conclusion\n\n“[Poor sight] is not the product of the immediate environment, nor likely to be substantially influenced by a change in that environment; it is rather a racial character only to be modified by selective action through many generations.”\n– Karl Pearson and Margaret Moul, Annals of Eugenics, 1928"
+    "section": "Pearson’s conclusion (1928)",
+    "text": "Pearson’s conclusion (1928)\n\n“No breeder of cattle, however, would purchase an entire herd because he anticipated finding one or two fine specimens included in it.”\n– Karl Pearson and Margaret Moul, Annals of Eugenics, 1928\n\n\nPearson studied Jewish immigrant children in London schools.\nHe concluded observed differences were innate racial traits."
   },
   {
-    "objectID": "slides/lectures/dummy-variables-lecture-slides.html#the-error",
-    "href": "slides/lectures/dummy-variables-lecture-slides.html#the-error",
+    "objectID": "slides/lectures/dummy-variables-lecture-slides.html#his-own-data-disagreed",
+    "href": "slides/lectures/dummy-variables-lecture-slides.html#his-own-data-disagreed",
     "title": "Lecture 11: Dummy Variables",
-    "section": "The error",
-    "text": "The error\n\nPearson read demographic correlations as biological causation.\nHe ignored poverty, discrimination, and language barriers.\nHe used statistical authority to support immigration restriction."
-  },
-  {
-    "objectID": "slides/lectures/dummy-variables-lecture-slides.html#what-you-have-learned-this-term",
-    "href": "slides/lectures/dummy-variables-lecture-slides.html#what-you-have-learned-this-term",
-    "title": "Lecture 11: Dummy Variables",
-    "section": "What you have learned this term",
-    "text": "What you have learned this term\n\nDescribe distributions, correlations, and regressions.\nTest hypotheses with confidence intervals and p-values.\nEvaluate causal claims with confounders and counterfactuals."
+    "section": "His own data disagreed",
+    "text": "His own data disagreed\n\nHis exams found Jewish children had healthier glands.\nHe suppressed every finding that contradicted his conclusion.\nA public that cannot question data lets malpractice go unchallenged."
   },
   {
     "objectID": "slides/lectures/dummy-variables-lecture-slides.html#why-this-matters",
     "href": "slides/lectures/dummy-variables-lecture-slides.html#why-this-matters",
     "title": "Lecture 11: Dummy Variables",
     "section": "Why this matters",
-    "text": "Why this matters\n\nStatistics is a tool for careful thinking about evidence.\nKnowing what your tools cannot do is just as important.\nData literacy makes good citizens."
+    "text": "Why this matters\n\nThe tools are not the problem. Manipulation and poor interpretation are.\nKnowing what your tools can and cannot do is just as important as statistical knowledge.\nData literacy makes good citizens!"
   },
   {
     "objectID": "slides/lectures/confounding-lecture.html#from-the-concept-videos-to-the-lecture",

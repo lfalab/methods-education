@@ -8,7 +8,7 @@
 
 <meta name="author" content="Leonardo Falabella">
 
-<title>Lecture 11: Dummy Variables</title>
+<title>PS2 Workshop 4: Writing Up and Reviewing the Do-File</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,62 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-a35d343c8bdbcb87d3b82ed68e48a46c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-30ae6b2e5328ac7375bd033934d6d19c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -117,7 +82,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/lectures/dummy-variables-lecture.html">Week 11: Dummy Variables</a></li><li class="breadcrumb-item"><a href="../../slides/lectures/dummy-variables-lecture.html">Lecture 11: Dummy Variables</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../slides/lectures/dummy-variables-lecture.html">Week 11: Dummy Variables</a></li><li class="breadcrumb-item"><a href="../activities/A11-ps2-workshop-4.html">PS2 Workshop 4: Writing Up and Reviewing the Do-File</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -131,7 +96,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="../../index.html" class="sidebar-logo-link">
+      <a href="../index.html" class="sidebar-logo-link">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -143,7 +108,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Statistics for Political Science</span></a>
   </div>
 </li>
@@ -158,7 +123,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/lectures/thinking-with-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/lectures/thinking-with-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 1: Thinking With Data</span></a>
   </div>
 </li>
@@ -175,37 +140,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/empirical-vs-normative.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/empirical-vs-normative.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Normative and Empirical Questions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/descriptive-vs-causal.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/descriptive-vs-causal.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Descriptive and Causal Questions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/units-theories-hypotheses.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/units-theories-hypotheses.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Units of Analysis, Theories, and Hypotheses</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/dependent-independent-variables.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/dependent-independent-variables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dependent and Independent Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/doing-reproducible-research.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/doing-reproducible-research.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Doing Reproducible Research</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/lectures/questions-theories-hypotheses.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/lectures/questions-theories-hypotheses.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 2: Research Questions, Theories, and Hypotheses</span></a>
   </div>
 </li>
@@ -222,37 +187,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/measuring-variables.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/measuring-variables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Measuring Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/types-of-variables.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/types-of-variables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Types of Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/datasets-codebooks.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/datasets-codebooks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Datasets and Codebooks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/stata-interface.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/stata-interface.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The Stata Interface</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/loading-browsing-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/loading-browsing-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Loading and Browsing Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/lectures/measurement-lecture.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/lectures/measurement-lecture.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 3: Measurement and Types of Variables</span></a>
   </div>
 </li>
@@ -269,43 +234,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/summarising-distribution.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/summarising-distribution.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Summarising a Distribution</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/variance-sd.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/variance-sd.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Variance and Standard Deviation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/bar-histograms.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/bar-histograms.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bar Charts and Histograms</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/summary-stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/summary-stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Summarising Distributions in Stata</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/bar-hist-stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/bar-hist-stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bar Charts and Histograms in Stata</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/lectures/distributions-lecture.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/lectures/distributions-lecture.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 4: Describing Distributions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/A04-distributions-activity.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/A04-distributions-activity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Mock Exam Questions: Describing Distributions</span></a>
   </div>
 </li>
@@ -322,43 +287,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/correlations-nominal.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/correlations-nominal.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Correlations Between Nominal Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/comparing-means.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/comparing-means.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Comparing Means by Category</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/scatter-reg.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/scatter-reg.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Scatterplots and Regression Lines</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/types-plots-tables.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/types-plots-tables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">From Variable Types to Plots and Tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/corr-stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/corr-stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Describing Correlations in Stata</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/lectures/correlations-lecture.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/lectures/correlations-lecture.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 5: Describing Correlations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/A05-correlations-activity.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/A05-correlations-activity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Seminar Activity: Country-level Correlations</span></a>
   </div>
 </li>
@@ -375,7 +340,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/A06-reading-week-catchup.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/A06-reading-week-catchup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Catch-Up Activity: From Data Handling to Bivariate Interpretation</span></a>
   </div>
 </li>
@@ -392,49 +357,49 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/sampling.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/sampling.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Why Sampling Matters</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/moe-ci.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/moe-ci.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Confidence Intervals and Margins of Error</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/htests-cis.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/htests-cis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hypothesis Tests Using Confidence Intervals</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/p-values.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/p-values.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Interpreting P-values</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/htests-stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/htests-stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hypothesis Testing in Stata</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/lectures/hypothesis-lecture.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/lectures/hypothesis-lecture.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 7: Hypothesis Testing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/A07a-sampling-activity.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/A07a-sampling-activity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Seminar Activity: Sampling and Bias</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/A07b-htests-weights.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/A07b-htests-weights.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Seminar Activity: Weights and Visual Inference</span></a>
   </div>
 </li>
@@ -451,49 +416,49 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/regression-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/regression-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Regression Analysis: Introduction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/regression-slope.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/regression-slope.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Regression Slope</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/regression-inference.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/regression-inference.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Inference in Regression: CIs and P-values</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/regression-rsquared.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/regression-rsquared.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">R-squared</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/regression-stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/regression-stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bivariate Regression in Stata</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/lectures/regression-lecture.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/lectures/regression-lecture.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 8: Bivariate Regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/A08a-regression-activity.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/A08a-regression-activity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Seminar Activity: Bivariate Regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/A08b-ps2-workshop-1.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/A08b-ps2-workshop-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PS2 Workshop 1: Exploration and Univariate Description</span></a>
   </div>
 </li>
@@ -510,43 +475,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/confounding.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/confounding.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Confounding Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/reverse-causality.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/reverse-causality.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Reverse Causality</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/random-assignment.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/random-assignment.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Random Assignment and Causal Inference</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/preparing-stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/preparing-stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preparing Data in Stata</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/lectures/confounding-lecture.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/lectures/confounding-lecture.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 9: Confounding Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/A09a-confounding-reverse.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/A09a-confounding-reverse.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Seminar Activity: Confounding Variables and Reverse Causality</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/A09b-ps2-workshop-2.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/A09b-ps2-workshop-2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PS2 Workshop 2: Bivariate Analysis and Hypothesis Test</span></a>
   </div>
 </li>
@@ -563,49 +528,49 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/multivariate-regression.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/multivariate-regression.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Multivariate Regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/controls-confounding.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/controls-confounding.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Controls and Confounding</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/standard-error.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/standard-error.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The Standard Error</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-concepts/regression-tables.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-concepts/regression-tables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Reading Regression Tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/videos-stata/multivariate-stata.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/videos-stata/multivariate-stata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Multivariate Regression in Stata</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/lectures/multivariate-lecture.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/lectures/multivariate-lecture.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 10: Multivariate Regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/A10a-regression-tables.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/A10a-regression-tables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Seminar Activity: Reading Regression Tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/A10b-ps2-workshop-3.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/A10b-ps2-workshop-3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PS2 Workshop 3: Interpretation and Discussion</span></a>
   </div>
 </li>
@@ -622,13 +587,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../slides/lectures/dummy-variables-lecture.html" class="sidebar-item-text sidebar-link active">
+  <a href="../slides/lectures/dummy-variables-lecture.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 11: Dummy Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/A11-ps2-workshop-4.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/A11-ps2-workshop-4.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">PS2 Workshop 4: Writing Up and Reviewing the Do-File</span></a>
   </div>
 </li>
@@ -643,43 +608,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
-  <ul>
-  <li><a href="#the-do-file-is-your-template" id="toc-the-do-file-is-your-template" class="nav-link active" data-scroll-target="#the-do-file-is-your-template">The do-file is your template</a></li>
-  <li><a href="#download-todays-do-file" id="toc-download-todays-do-file" class="nav-link" data-scroll-target="#download-todays-do-file">Download today’s do-file</a></li>
-  <li><a href="#what-is-a-dummy-variable" id="toc-what-is-a-dummy-variable" class="nav-link" data-scroll-target="#what-is-a-dummy-variable">What is a dummy variable?</a></li>
-  <li><a href="#examples-of-dummy-variables" id="toc-examples-of-dummy-variables" class="nav-link" data-scroll-target="#examples-of-dummy-variables">Examples of dummy variables</a></li>
-  <li><a href="#what-can-you-do-with-a-dummy" id="toc-what-can-you-do-with-a-dummy" class="nav-link" data-scroll-target="#what-can-you-do-with-a-dummy">What can you do with a dummy?</a></li>
-  <li><a href="#dummy-as-independent-variable" id="toc-dummy-as-independent-variable" class="nav-link" data-scroll-target="#dummy-as-independent-variable">Dummy as independent variable</a></li>
-  <li><a href="#interpretation-example" id="toc-interpretation-example" class="nav-link" data-scroll-target="#interpretation-example">Interpretation example</a></li>
-  <li><a href="#todays-question" id="toc-todays-question" class="nav-link" data-scroll-target="#todays-question">Today’s question</a></li>
-  <li><a href="#building-the-dummy-in-stata" id="toc-building-the-dummy-in-stata" class="nav-link" data-scroll-target="#building-the-dummy-in-stata">Building the dummy in Stata</a></li>
-  <li><a href="#your-turn-run-the-regression" id="toc-your-turn-run-the-regression" class="nav-link" data-scroll-target="#your-turn-run-the-regression">Your Turn: Run the regression</a></li>
-  <li><a href="#the-result" id="toc-the-result" class="nav-link" data-scroll-target="#the-result">The result</a></li>
-  <li><a href="#interpreting-the-output" id="toc-interpreting-the-output" class="nav-link" data-scroll-target="#interpreting-the-output">Interpreting the output</a></li>
-  <li><a href="#can-we-call-this-causal" id="toc-can-we-call-this-causal" class="nav-link" data-scroll-target="#can-we-call-this-causal">Can we call this causal?</a></li>
-  <li><a href="#what-you-already-know" id="toc-what-you-already-know" class="nav-link" data-scroll-target="#what-you-already-know">What you already know</a></li>
-  <li><a href="#a-third-consideration-the-counterfactual" id="toc-a-third-consideration-the-counterfactual" class="nav-link" data-scroll-target="#a-third-consideration-the-counterfactual">A third consideration: the counterfactual</a></li>
-  <li><a href="#the-counterfactual-problem" id="toc-the-counterfactual-problem" class="nav-link" data-scroll-target="#the-counterfactual-problem">The counterfactual problem</a></li>
-  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
-  <li><a href="#your-turn-why-might-they-differ" id="toc-your-turn-why-might-they-differ" class="nav-link" data-scroll-target="#your-turn-why-might-they-differ">Your Turn: Why might they differ?</a></li>
-  <li><a href="#what-the-coefficient-tells-us" id="toc-what-the-coefficient-tells-us" class="nav-link" data-scroll-target="#what-the-coefficient-tells-us">What the coefficient tells us</a></li>
-  <li><a href="#what-the-coefficient-does-not-tell-us" id="toc-what-the-coefficient-does-not-tell-us" class="nav-link" data-scroll-target="#what-the-coefficient-does-not-tell-us">What the coefficient does not tell us</a></li>
-  <li><a href="#dummy-variables-as-dependent-variables" id="toc-dummy-variables-as-dependent-variables" class="nav-link" data-scroll-target="#dummy-variables-as-dependent-variables">Dummy variables as dependent variables</a></li>
-  <li><a href="#the-inventors-of-your-toolkit" id="toc-the-inventors-of-your-toolkit" class="nav-link" data-scroll-target="#the-inventors-of-your-toolkit">The inventors of your toolkit</a></li>
-  <li><a href="#their-foundational-error" id="toc-their-foundational-error" class="nav-link" data-scroll-target="#their-foundational-error">Their foundational error</a></li>
-  <li><a href="#pearsons-conclusion-1928" id="toc-pearsons-conclusion-1928" class="nav-link" data-scroll-target="#pearsons-conclusion-1928">Pearson’s conclusion (1928)</a></li>
-  <li><a href="#his-own-data-disagreed" id="toc-his-own-data-disagreed" class="nav-link" data-scroll-target="#his-own-data-disagreed">His own data disagreed</a></li>
-  <li><a href="#why-this-matters" id="toc-why-this-matters" class="nav-link" data-scroll-target="#why-this-matters">Why this matters</a></li>
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#task-1-set-up-the-report-structure" id="toc-task-1-set-up-the-report-structure" class="nav-link" data-scroll-target="#task-1-set-up-the-report-structure">Task 1: Set up the report structure</a></li>
+  <li><a href="#task-2-write-up-each-section" id="toc-task-2-write-up-each-section" class="nav-link" data-scroll-target="#task-2-write-up-each-section">Task 2: Write up each section</a></li>
+  <li><a href="#task-3-insert-tables-and-figures" id="toc-task-3-insert-tables-and-figures" class="nav-link" data-scroll-target="#task-3-insert-tables-and-figures">Task 3: Insert tables and figures</a></li>
+  <li><a href="#task-4-clean-up-your-do-file" id="toc-task-4-clean-up-your-do-file" class="nav-link" data-scroll-target="#task-4-clean-up-your-do-file">Task 4: Clean up your do-file</a></li>
+  <li><a href="#task-5-check-the-word-count-and-submission-details" id="toc-task-5-check-the-word-count-and-submission-details" class="nav-link" data-scroll-target="#task-5-check-the-word-count-and-submission-details">Task 5: Check the word count and submission details</a></li>
+  <li><a href="#by-the-end-of-today-you-should-have" id="toc-by-the-end-of-today-you-should-have" class="nav-link" data-scroll-target="#by-the-end-of-today-you-should-have">By the end of today you should have</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="dummy-variables-lecture-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/lectures/dummy-variables-lecture.html">Week 11: Dummy Variables</a></li><li class="breadcrumb-item"><a href="../../slides/lectures/dummy-variables-lecture.html">Lecture 11: Dummy Variables</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../slides/lectures/dummy-variables-lecture.html">Week 11: Dummy Variables</a></li><li class="breadcrumb-item"><a href="../activities/A11-ps2-workshop-4.html">PS2 Workshop 4: Writing Up and Reviewing the Do-File</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Lecture 11: Dummy Variables</h1>
-<p class="subtitle lead">Statistics for Political Science</p>
+<h1 class="title">PS2 Workshop 4: Writing Up and Reviewing the Do-File</h1>
+<p class="subtitle lead">Statistics for Political Science — Week 11</p>
 </div>
 
 
@@ -702,286 +648,53 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<hr>
-<section id="the-do-file-is-your-template" class="level2">
-<h2 class="anchored" data-anchor-id="the-do-file-is-your-template">The do-file is your template</h2>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>This is the final PS2 workshop session (Week 11). Each workshop gives you one hour of structured work time to make progress on your Problem Set 2 submission, with support from your seminar leader.</p>
+<p>Today’s goal is to assemble a complete first draft of your report and clean up your do-file for submission. If you have followed the scaffold through Weeks 8–10, you should arrive at this session with all the analytical work done and only the writing-up remaining.</p>
+<p>You will need the <a href="https://emckclac-my.sharepoint.com/:w:/g/personal/k2588471_kcl_ac_uk/IQBi2GOzRRuhRZ_CuKGFQkxxAb9qYjIkeDR-dwKAfe-2Muo?e=dQPCaW">PS2 instructions</a>, the <a href="https://emckclac-my.sharepoint.com/:w:/g/personal/k2588471_kcl_ac_uk/IQAFECuB8PAkTY1SYwdKD5lYAU_4xlmM9elWyHYXMieTFu4?e=Da3UAy">model answer</a>, and the <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a> (which contains the datasets, codebooks, and do-files).</p>
+</section>
+<section id="task-1-set-up-the-report-structure" class="level2">
+<h2 class="anchored" data-anchor-id="task-1-set-up-the-report-structure">Task 1: Set up the report structure</h2>
+<p>Open a Word document and set up the five section headings from the PS2 instructions. Having the structure in place before you start writing makes it easier to draft each section without losing track of the overall shape.</p>
+</section>
+<section id="task-2-write-up-each-section" class="level2">
+<h2 class="anchored" data-anchor-id="task-2-write-up-each-section">Task 2: Write up each section</h2>
+<p>Write up each section using the output, notes, and draft sentences you have produced in previous workshops. Refer to the model answer for the expected level of detail and tone.</p>
+<p>Work through the sections in order. If you get stuck on one section, move on to the next and come back to it.</p>
+</section>
+<section id="task-3-insert-tables-and-figures" class="level2">
+<h2 class="anchored" data-anchor-id="task-3-insert-tables-and-figures">Task 3: Insert tables and figures</h2>
+<p>Insert your tables and figures into the report. Make sure that:</p>
 <ul>
-<li>Everything we do today is in <code>dummy-bes.do</code>.</li>
-<li>Download it, update the working directory, and run along.</li>
+<li>Figures have clear titles and axis labels.</li>
+<li>Tables are formatted consistently.</li>
+<li>Each figure or table is referenced in the text.</li>
 </ul>
-<hr>
 </section>
-<section id="download-todays-do-file" class="level2">
-<h2 class="anchored" data-anchor-id="download-todays-do-file">Download today’s do-file</h2>
-<div class="nonincremental">
+<section id="task-4-clean-up-your-do-file" class="level2">
+<h2 class="anchored" data-anchor-id="task-4-clean-up-your-do-file">Task 4: Clean up your do-file</h2>
+<p>Check that your do-file runs from top to bottom without errors and reproduces all the tables and figures in your report. Make sure your do-file includes:</p>
 <ul>
-<li>Access our <a href="https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE">Shared Project Folder</a></li>
-<li>Click on <code>do</code></li>
-<li>Download <code>dummy-bes.do</code></li>
-<li>Save it to your <code>do</code> folder and update the working directory</li>
+<li>A header comment block with your name, date, and a brief description of the analysis.</li>
+<li>Comments explaining what each section of code does.</li>
+<li>No extraneous commands left over from exploration.</li>
 </ul>
-</div>
-<hr>
+<p>Run the do-file one final time from start to finish to confirm it works.</p>
 </section>
-<section id="what-is-a-dummy-variable" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-a-dummy-variable">What is a dummy variable?</h2>
+<section id="task-5-check-the-word-count-and-submission-details" class="level2">
+<h2 class="anchored" data-anchor-id="task-5-check-the-word-count-and-submission-details">Task 5: Check the word count and submission details</h2>
+<p>Check the word count. The limit is 1,500 words excluding tables, figures, and references. The model answer is well under this — aim for substance, not length.</p>
+<p>If working in a pair, confirm that your partner’s name and candidate number appear on the title page of your report, and that your written interpretations are independently written.</p>
+</section>
+<section id="by-the-end-of-today-you-should-have" class="level2">
+<h2 class="anchored" data-anchor-id="by-the-end-of-today-you-should-have">By the end of today you should have</h2>
 <ul>
-<li>A variable coded <strong>0</strong> or <strong>1</strong>.</li>
-<li>Represents membership in a category.</li>
-<li>The group coded 0 is the <strong>reference category</strong>.</li>
+<li>A complete first draft of the report with all five sections.</li>
+<li>All tables and figures inserted.</li>
+<li>A clean do-file with header and comments that runs without errors.</li>
 </ul>
-<hr>
-</section>
-<section id="examples-of-dummy-variables" class="level2">
-<h2 class="anchored" data-anchor-id="examples-of-dummy-variables">Examples of dummy variables</h2>
-<div class="nonincremental">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Dummy variable</th>
-<th>Coded 1 if…</th>
-<th>Reference group (0)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><em>Woman</em></td>
-<td>respondent is a woman</td>
-<td>men</td>
-</tr>
-<tr class="even">
-<td><em>Graduate</em></td>
-<td>respondent has a degree</td>
-<td>non-graduates</td>
-</tr>
-<tr class="odd">
-<td><em>Dictatorship</em></td>
-<td>country is a dictatorship</td>
-<td>democracies</td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr>
-</section>
-<section id="what-can-you-do-with-a-dummy" class="level2">
-<h2 class="anchored" data-anchor-id="what-can-you-do-with-a-dummy">What can you do with a dummy?</h2>
-<ul>
-<li><strong>Sum</strong> gives the count of observations coded 1.</li>
-<li><strong>Mean</strong> gives the proportion coded 1.</li>
-<li>Useful way to include nominal variables in regression.</li>
-</ul>
-<hr>
-</section>
-<section id="dummy-as-independent-variable" class="level2">
-<h2 class="anchored" data-anchor-id="dummy-as-independent-variable">Dummy as independent variable</h2>
-<ul>
-<li>The model: Y = B0 + B1(dummy)</li>
-<li>B0 = predicted Y for the reference group (coded 0).</li>
-<li>B1 = predicted difference for the group coded 1.</li>
-</ul>
-<hr>
-</section>
-<section id="interpretation-example" class="level2">
-<h2 class="anchored" data-anchor-id="interpretation-example">Interpretation example</h2>
-<ul>
-<li>Suppose you regress income on a <em>Graduate</em> dummy.</li>
-<li>B0 = average income for non-graduates.</li>
-<li>B1 = how much more (or less) graduates earn, on average.</li>
-</ul>
-<hr>
-</section>
-<section id="todays-question" class="level2">
-<h2 class="anchored" data-anchor-id="todays-question">Today’s question</h2>
-<ul>
-<li>Are women more left-wing than men?</li>
-<li>Data: British Election Study 2024.</li>
-<li>Ideology: 0 (left) to 10 (right) self-placement scale.</li>
-</ul>
-<hr>
-</section>
-<section id="building-the-dummy-in-stata" class="level2">
-<h2 class="anchored" data-anchor-id="building-the-dummy-in-stata">Building the dummy in Stata</h2>
-<div class="nonincremental">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">replace</span> y09 = . <span class="kw">if</span> y09 &lt; 0</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">replace</span> e01 = . <span class="kw">if</span> e01 &lt; 0</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">keep</span> <span class="kw">if</span> y09 == 1 | y09 == 2</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">generate</span> woman = (y09 == 2) <span class="kw">if</span> y09 != .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li><code>y09</code>: gender variable (1 = male, 2 = female).</li>
-<li><code>woman</code>: our dummy (1 = woman, 0 = man).</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="your-turn-run-the-regression" class="level2">
-<h2 class="anchored" data-anchor-id="your-turn-run-the-regression">Your Turn: Run the regression</h2>
-<ul>
-<li>In the do-file, find and run the <code>svy: regress</code> command.</li>
-<li>What is the coefficient on <code>woman</code>?</li>
-<li>How would you interpret it in plain language?</li>
-</ul>
-<hr>
-</section>
-<section id="the-result" class="level2">
-<h2 class="anchored" data-anchor-id="the-result">The result</h2>
-<div class="nonincremental">
-<pre><code>svy: regress e01 woman
-
-Survey: Linear regression            Number of obs = 2,652
-
---------------------------------------------------------------
-         e01 | Coefficient  std. err.      t    P&gt;|t|
--------------+------------------------------------------------
-       woman |  -.3955786   .0853191    -4.64   0.000
-       _cons |   4.981491   .0634301    78.54   0.000
---------------------------------------------------------------</code></pre>
-</div>
-<hr>
-</section>
-<section id="interpreting-the-output" class="level2">
-<h2 class="anchored" data-anchor-id="interpreting-the-output">Interpreting the output</h2>
-<ul>
-<li><strong>Intercept (4.98):</strong> men’s predicted ideology score.</li>
-<li><strong>Woman (-0.40):</strong> women score 0.40 points lower (more left).</li>
-<li>Statistically significant (p &lt; 0.001).</li>
-</ul>
-<hr>
-</section>
-<section id="can-we-call-this-causal" class="level2">
-<h2 class="anchored" data-anchor-id="can-we-call-this-causal">Can we call this causal?</h2>
-<ul>
-<li>The coefficient is real and precisely estimated.</li>
-<li>But does being a woman <strong>cause</strong> someone to be more left-wing?</li>
-<li>This is a different question from “is there an association?”</li>
-</ul>
-<hr>
-</section>
-<section id="what-you-already-know" class="level2">
-<h2 class="anchored" data-anchor-id="what-you-already-know">What you already know</h2>
-<ul>
-<li>In Week 9, we discussed two threats to causal claims.</li>
-<li><strong>Confounding:</strong> a third variable drives both X and Y.</li>
-<li><strong>Reverse causality:</strong> Y might cause X instead.</li>
-</ul>
-<hr>
-</section>
-<section id="a-third-consideration-the-counterfactual" class="level2">
-<h2 class="anchored" data-anchor-id="a-third-consideration-the-counterfactual">A third consideration: the counterfactual</h2>
-<ul>
-<li>Causal claims require a meaningful “what if?”</li>
-<li>“What if this person had not received the treatment?”</li>
-<li>In an experiment, the counterfactual is clear.</li>
-</ul>
-<hr>
-</section>
-<section id="the-counterfactual-problem" class="level2">
-<h2 class="anchored" data-anchor-id="the-counterfactual-problem">The counterfactual problem</h2>
-<ul>
-<li>“What would this person’s ideology be if they were not a woman?”</li>
-<li>This question does not have a clear answer.</li>
-<li>Gender is not a treatment we can assign or withhold.</li>
-</ul>
-<hr>
-</section>
-<section id="discussion" class="level2">
-<h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
-<div class="nonincremental">
-<blockquote class="blockquote">
-<p>“Empirical results may be a way to understand what is happening; however, these same data tell us very little about why it happens.”</p>
-<p>– Tukufu Zuberi and Eduardo Bonilla-Silva (<a href="https://www.amazon.co.uk/White-Logic-Methods-Racism-Methodology/dp/0742542815">2008: p.9</a>)</p>
-</blockquote>
-<ul>
-<li>Does the gender coefficient tell us <strong>why</strong> men and women differ?</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="your-turn-why-might-they-differ" class="level2">
-<h2 class="anchored" data-anchor-id="your-turn-why-might-they-differ">Your Turn: Why might they differ?</h2>
-<ul>
-<li>Brainstorm with your neighbour: what social processes could produce this gap?</li>
-<li>If we controlled for those, would the coefficient survive?</li>
-<li>What does this tell us about the coefficient’s meaning?</li>
-</ul>
-<hr>
-</section>
-<section id="what-the-coefficient-tells-us" class="level2">
-<h2 class="anchored" data-anchor-id="what-the-coefficient-tells-us">What the coefficient tells us</h2>
-<ul>
-<li>Women are, on average, more left-leaning than men.</li>
-<li>The difference is precisely estimated and significant.</li>
-<li>This is useful for description and prediction.</li>
-</ul>
-<hr>
-</section>
-<section id="what-the-coefficient-does-not-tell-us" class="level2">
-<h2 class="anchored" data-anchor-id="what-the-coefficient-does-not-tell-us">What the coefficient does not tell us</h2>
-<ul>
-<li>Not what would happen if gender were “changed.”</li>
-<li>It conflates socialisation, experience, and structural factors.</li>
-<li>Causal language requires assumptions we cannot test.</li>
-</ul>
-<hr>
-</section>
-<section id="dummy-variables-as-dependent-variables" class="level2">
-<h2 class="anchored" data-anchor-id="dummy-variables-as-dependent-variables">Dummy variables as dependent variables</h2>
-<ul>
-<li>What if the dummy is on the left-hand side of the equation?</li>
-<li>Interpretation changes: coefficients become predicted probabilities.</li>
-<li>This will be covered in <strong>Stats 2</strong> next year.</li>
-</ul>
-<hr>
-</section>
-<section id="the-inventors-of-your-toolkit" class="level2">
-<h2 class="anchored" data-anchor-id="the-inventors-of-your-toolkit">The inventors of your toolkit</h2>
-<ul>
-<li>Francis Galton, Karl Pearson, and Ronald Fisher built the tools you have learned.</li>
-<li>Correlation, regression, significance testing: all from this group.</li>
-<li>They worked at institutions explicitly dedicated to eugenics.</li>
-</ul>
-<hr>
-</section>
-<section id="their-foundational-error" class="level2">
-<h2 class="anchored" data-anchor-id="their-foundational-error">Their foundational error</h2>
-<ul>
-<li>They treated demographic group membership as a cause.</li>
-<li>Group differences in health or intelligence were called innate.</li>
-<li>This is the same interpretive mistake we discussed today.</li>
-</ul>
-<hr>
-</section>
-<section id="pearsons-conclusion-1928" class="level2">
-<h2 class="anchored" data-anchor-id="pearsons-conclusion-1928">Pearson’s conclusion (1928)</h2>
-<div class="nonincremental">
-<blockquote class="blockquote">
-<p>“No breeder of cattle, however, would purchase an entire herd because he anticipated finding one or two fine specimens included in it.”</p>
-<p>– Karl Pearson and Margaret Moul, <em>Annals of Eugenics</em>, 1928</p>
-</blockquote>
-<ul>
-<li>Pearson studied Jewish immigrant children in London schools.</li>
-<li>He concluded observed differences were innate racial traits.</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="his-own-data-disagreed" class="level2">
-<h2 class="anchored" data-anchor-id="his-own-data-disagreed">His own data disagreed</h2>
-<ul>
-<li>His exams found Jewish children had healthier glands.</li>
-<li>He suppressed every finding that contradicted his conclusion.</li>
-<li>A public that cannot question data lets malpractice go unchallenged.</li>
-</ul>
-<hr>
-</section>
-<section id="why-this-matters" class="level2">
-<h2 class="anchored" data-anchor-id="why-this-matters">Why this matters</h2>
-<ul>
-<li>The tools are not the problem. Manipulation and poor interpretation are.</li>
-<li>Knowing what your tools can and cannot do is just as important as statistical knowledge.</li>
-<li><strong>Data literacy makes good citizens!</strong></li>
-</ul>
+<p>Having a complete first draft a week before the deadline leaves time for revision outside class. If you are behind, use the remaining time to catch up with support from your seminar leader.</p>
 
 
 </section>
