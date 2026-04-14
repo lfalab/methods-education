@@ -59,7 +59,7 @@ If you cannot find this folder, you need to set it up now. Review the [Doing Rep
 
 We will use the Quality of Government (QoG) dataset for this activity.
 
-1. Go to our [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE).
+1. Go to our [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgC7Jh31fuDKQZCWFPMDyHegAXyh48OD-lIbeoHj73LmQHs?e=H4mk5p).
 2. Click on the `data-raw` folder.
 3. Download `Quality_of_Government_2026.dta`.
 4. Save it into your local `data-raw` folder.
@@ -139,7 +139,7 @@ The QoG dataset contains many variables. We will focus on three variables that y
 - `wdi_gini` — Gini index (a measure of income inequality, ranging from 0 to 100)
 - `ti_cpi` — Corruption Perceptions Index (ranging from 0 = highly corrupt to 100 = highly clean)
 
-**Before continuing:** Download the QoG Codebook from the [Shared Project Folder]((https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE)) and open it. Use the codebook to confirm the descriptions of these three variables.
+**Before continuing:** Download the QoG Codebook from the [Shared Project Folder]((https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgC7Jh31fuDKQZCWFPMDyHegAXyh48OD-lIbeoHj73LmQHs?e=H4mk5p)) and open it. Use the codebook to confirm the descriptions of these three variables.
 
 **Check:** Answer these questions before moving on:
 
@@ -196,7 +196,7 @@ If you struggled with any of these tasks, revisit the relevant videos before mov
 
 In this part, you will produce and interpret bivariate output. You will work through two variable pairs that represent two of the three analytical cases from Week 5.
 
-**Reference material:** You can download the `bivariate-qog.do` file from the [Shared Project Folder](https://emckclac-my.sharepoint.com/personal/k2588471_kcl_ac_uk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fk2588471%5Fkcl%5Fac%5Fuk%2FDocuments%2Fshared%2Dproject%2Dfolder&ga=1) (in the `do` subfolder) to see worked examples of all the commands used in this section. Open this file in Stata and inspect how the commands are structured.
+**Reference material:** You can download the `bivariate-qog.do` file from the [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgC7Jh31fuDKQZCWFPMDyHegAXyh48OD-lIbeoHj73LmQHs?e=H4mk5p) (in the `do` subfolder) to see worked examples of all the commands used in this section. Open this file in Stata and inspect how the commands are structured.
 
 **If you get stuck, review:**
 

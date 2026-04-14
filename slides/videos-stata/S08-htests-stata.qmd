@@ -31,7 +31,7 @@ format:
 
 ::: nonincremental
 
--   Access our [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE)
+-   Access our [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgC7Jh31fuDKQZCWFPMDyHegAXyh48OD-lIbeoHj73LmQHs?e=H4mk5p)
 -   Click on ``data-raw``
 -   Download ``Quality_of_Government_2026.dta``
 -   Save it into the ``data-raw`` folder on your computer
@@ -44,7 +44,7 @@ format:
 
 ::: nonincremental
 
--   Access our [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE)
+-   Access our [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgC7Jh31fuDKQZCWFPMDyHegAXyh48OD-lIbeoHj73LmQHs?e=H4mk5p)
 -   Click on ``do``
 -   Download ``hypothesis-qog.do``
 -   Save it into the ``do`` folder on your computer

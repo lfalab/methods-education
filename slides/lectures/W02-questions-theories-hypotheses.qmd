@@ -28,7 +28,7 @@ Today’s goals:
 ## Announcements
 
 -   [Website](https://lfalab.github.io/methods-education/) hosting all video and lecture slides
--   [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE) for the datasets and do-files we'll be using throughout the module
+-   [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgC7Jh31fuDKQZCWFPMDyHegAXyh48OD-lIbeoHj73LmQHs?e=H4mk5p) for the datasets and do-files we'll be using throughout the module
 -   Have a question about module content? Ask it on the KEATS [Discussion Forum](https://keats.kcl.ac.uk/mod/forum/view.php?id=8967500)!
 
 ------------------------------------------------------------------------

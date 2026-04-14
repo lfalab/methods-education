@@ -22,7 +22,7 @@ This is the second of four PS2 workshop sessions (Weeks 8–11). Each workshop g
 
 Today's goal is to produce the bivariate visualisation for your variable pair, run the hypothesis test, and record the key outputs. By the end of this session you should have all the Stata output you need for your report.
 
-You will need the [PS2 instructions](https://emckclac-my.sharepoint.com/:w:/g/personal/k2588471_kcl_ac_uk/IQBi2GOzRRuhRZ_CuKGFQkxxAb9qYjIkeDR-dwKAfe-2Muo?e=dQPCaW), the [model answer](https://emckclac-my.sharepoint.com/:w:/g/personal/k2588471_kcl_ac_uk/IQAFECuB8PAkTY1SYwdKD5lYAU_4xlmM9elWyHYXMieTFu4?e=Da3UAy), and the [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE) (which contains the datasets, codebooks, and do-files).
+You will need the [PS2 instructions](https://emckclac-my.sharepoint.com/:w:/g/personal/k2588471_kcl_ac_uk/IQBi2GOzRRuhRZ_CuKGFQkxxAb9qYjIkeDR-dwKAfe-2Muo?e=dQPCaW), the [model answer](https://emckclac-my.sharepoint.com/:w:/g/personal/k2588471_kcl_ac_uk/IQAFECuB8PAkTY1SYwdKD5lYAU_4xlmM9elWyHYXMieTFu4?e=Da3UAy), and the [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgC7Jh31fuDKQZCWFPMDyHegAXyh48OD-lIbeoHj73LmQHs?e=H4mk5p) (which contains the datasets, codebooks, and do-files).
 
 ## Task 1: Check whether your variables need preparation
 

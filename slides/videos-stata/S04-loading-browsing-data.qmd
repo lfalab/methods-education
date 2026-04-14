@@ -26,7 +26,7 @@ format:
 
 ## Step 1: Download the Brexit dataset from our shared folder
 
--   Access our [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgCj43BodyKITIiLw6bolCpYAU89x3IK0A2GlVY05aN29UE)
+-   Access our [Shared Project Folder](https://emckclac-my.sharepoint.com/:f:/g/personal/k2588471_kcl_ac_uk/IgC7Jh31fuDKQZCWFPMDyHegAXyh48OD-lIbeoHj73LmQHs?e=H4mk5p)
 -   Click on ``data-raw``
 -   Download ``Brexit_Regional.dta``
 -   Save it into the ``data-raw`` folder on your computer
@@ -102,7 +102,7 @@ format:
 ::: nonincremental
 
 - Click on this icon with magnifying glass. It will allow you to browse the data.
-- Explore it while swithing between your Stata screen and the [Codebook](https://emckclac-my.sharepoint.com/:w:/r/personal/k2588471_kcl_ac_uk/_layouts/15/Doc.aspx?sourcedoc=%7BEA160DB5-B57C-4CAC-A10F-5C2B3FC18FB2%7D&file=Brexit_Regional_Codebook.docx&action=default&mobileredirect=true)
+- Explore it while swithing between your Stata screen and the Codebook
 
 ![](../../assets/stata-browse.png){fig-align="center"}
 
