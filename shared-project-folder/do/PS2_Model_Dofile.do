@@ -1,5 +1,7 @@
-cd "C:\Users\leona\OneDrive - King's College London\methods-education\shared-project-folder"
+* PS2 MODEL DO-FILE
 
+* Do not include the path to your working directory in your do-file;
+* Your do-file should start with the command that reads the dataset.
 use "data-raw/Quality_of_Government_2026.dta", clear
 
 * Research question: Is turnout higher in countries with proportional systems than in countries with majoritarian systems?
