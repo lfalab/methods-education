@@ -1,5 +1,117 @@
 [
   {
+    "objectID": "topics/univariate-description.html",
+    "href": "topics/univariate-description.html",
+    "title": "Describing Data — Univariate",
+    "section": "",
+    "text": "Summarising a single variable: central tendency, dispersion, and visualisation. These materials cover the mean, median, and mode; variance and standard deviation; and the use of bar charts and histograms to describe distributions."
+  },
+  {
+    "objectID": "topics/univariate-description.html#concept-videos",
+    "href": "topics/univariate-description.html#concept-videos",
+    "title": "Describing Data — Univariate",
+    "section": "Concept videos",
+    "text": "Concept videos\n\nSummarising a Distribution\nVariance and Standard Deviation\nBar Charts and Histograms"
+  },
+  {
+    "objectID": "topics/univariate-description.html#applied-stata",
+    "href": "topics/univariate-description.html#applied-stata",
+    "title": "Describing Data — Univariate",
+    "section": "Applied (Stata)",
+    "text": "Applied (Stata)\n\nSummarising Distributions in Stata\nBar Charts and Histograms in Stata"
+  },
+  {
+    "objectID": "topics/univariate-description.html#class-activity",
+    "href": "topics/univariate-description.html#class-activity",
+    "title": "Describing Data — Univariate",
+    "section": "Class activity",
+    "text": "Class activity\n\nDescribing Distributions"
+  },
+  {
+    "objectID": "topics/regression.html",
+    "href": "topics/regression.html",
+    "title": "Regression",
+    "section": "",
+    "text": "Bivariate regression as a tool for summarising and reasoning about the relationship between two variables. These materials cover the slope, inference on regression coefficients, and R-squared, alongside fitting and reading regression output in Stata."
+  },
+  {
+    "objectID": "topics/regression.html#concept-videos",
+    "href": "topics/regression.html#concept-videos",
+    "title": "Regression",
+    "section": "Concept videos",
+    "text": "Concept videos\n\nRegression Analysis: Introduction\nRegression Slope\nInference in Regression: CIs and P-values\nR-squared"
+  },
+  {
+    "objectID": "topics/regression.html#applied-stata",
+    "href": "topics/regression.html#applied-stata",
+    "title": "Regression",
+    "section": "Applied (Stata)",
+    "text": "Applied (Stata)\n\nBivariate Regression in Stata"
+  },
+  {
+    "objectID": "topics/regression.html#class-activity",
+    "href": "topics/regression.html#class-activity",
+    "title": "Regression",
+    "section": "Class activity",
+    "text": "Class activity\n\nBivariate Regression"
+  },
+  {
+    "objectID": "topics/measurement.html",
+    "href": "topics/measurement.html",
+    "title": "Measurement",
+    "section": "",
+    "text": "How concepts become variables. These materials introduce measurement strategies and variable types, alongside the practical work of reading codebooks and loading datasets for analysis."
+  },
+  {
+    "objectID": "topics/measurement.html#concept-videos",
+    "href": "topics/measurement.html#concept-videos",
+    "title": "Measurement",
+    "section": "Concept videos",
+    "text": "Concept videos\n\nMeasuring Variables\nTypes of Variables"
+  },
+  {
+    "objectID": "topics/measurement.html#applied-stata",
+    "href": "topics/measurement.html#applied-stata",
+    "title": "Measurement",
+    "section": "Applied (Stata)",
+    "text": "Applied (Stata)\n\nDatasets and Codebooks\nThe Stata Interface\nLoading and Browsing Data"
+  },
+  {
+    "objectID": "topics/measurement.html#class-activity",
+    "href": "topics/measurement.html#class-activity",
+    "title": "Measurement",
+    "section": "Class activity",
+    "text": "Class activity\n\nProposing Measurement Strategies"
+  },
+  {
+    "objectID": "topics/causal-inference.html",
+    "href": "topics/causal-inference.html",
+    "title": "Causal Inference",
+    "section": "",
+    "text": "What it takes to move from correlation to a causal claim. These materials introduce confounding variables, reverse causality, and the role of random assignment in isolating causal effects, alongside the practical work of preparing data for analysis."
+  },
+  {
+    "objectID": "topics/causal-inference.html#concept-videos",
+    "href": "topics/causal-inference.html#concept-videos",
+    "title": "Causal Inference",
+    "section": "Concept videos",
+    "text": "Concept videos\n\nConfounding Variables\nReverse Causality\nRandom Assignment and Causal Inference"
+  },
+  {
+    "objectID": "topics/causal-inference.html#applied-stata",
+    "href": "topics/causal-inference.html#applied-stata",
+    "title": "Causal Inference",
+    "section": "Applied (Stata)",
+    "text": "Applied (Stata)\n\nPreparing Data in Stata"
+  },
+  {
+    "objectID": "topics/causal-inference.html#class-activity",
+    "href": "topics/causal-inference.html#class-activity",
+    "title": "Causal Inference",
+    "section": "Class activity",
+    "text": "Class activity\n\nConfounding and Reverse Causality"
+  },
+  {
     "objectID": "slides/videos-stata/multivariate-stata.html",
     "href": "slides/videos-stata/multivariate-stata.html",
     "title": "Multivariate Regression in Stata",
@@ -5976,130 +6088,53 @@
     "text": "Week 4: Describing Distributions (Univariate Description)\n\nVideos\n\nSummarising a Distribution\nVariance and Standard Deviation\nBar Charts and Histograms\nSummarising Distributions in Stata\nBar Charts and Histograms in Stata"
   },
   {
-    "objectID": "reference/CLAUDE.html",
-    "href": "reference/CLAUDE.html",
-    "title": "reference/CLAUDE.md — Reference Directory Guide",
-    "section": "",
-    "text": "This directory contains metadata files that document the teaching materials in this repository.\nThese files are used as authoritative references when creating or updating content pages.\n\n\n\n\n\nMaster metadata table for lecture videos and slide decks.\nColumns:\n\n\n\n\n\n\n\nColumn\nDescription\n\n\n\n\nWeek\nTeaching week in which the material is covered\n\n\nFile name\nBase filename of the corresponding .qmd slide page (no extension)\n\n\nFinal Title\nDisplay title of the video / slide deck\n\n\nYouTube ID\nYouTube video ID (used to construct the embed URL)\n\n\nBadge\nContent type: Concept (conceptual lecture) or Lab (Stata lab session)\n\n\nKey Learning Goal\nOne-sentence description of what students should be able to do after engaging with the material\n\n\n\nUsage rules:\n\nClaude may read this file to retrieve titles or ordering information.\nClaude must not modify this file unless explicitly instructed.\n\n\n\n\n\nMetadata table for seminar and workshop activities in the activities/ directory.\nColumns:\n\n\n\n\n\n\n\nColumn\nDescription\n\n\n\n\nWeek\nTeaching week in which the activity is used (or Reading Week)\n\n\nFile name\nBase filename of the corresponding .qmd activity page (no extension)\n\n\nTitle\nDisplay title of the activity (from the YAML front matter)\n\n\nActivity Type\nType of activity: Seminar Activity, Catch-Up Activity, or PS2 Workshop\n\n\nDataset\nDataset(s) used in the activity, if any\n\n\nKey Learning Goal\nOne-sentence description of what students should be able to do after completing the activity\n\n\n\nActivity types:\n\nSeminar Activity — a structured group exercise run in the seminar session\nCatch-Up Activity — a self-directed activity for students who missed or need to consolidate earlier material\nPS2 Workshop — a structured work session supporting the Problem Set 2 submission\n\nUsage rules:\n\nClaude may read this file to retrieve activity titles, types, or ordering information.\nClaude should update this file when creating, modifying, or deleting activity files in activities/, to keep the metadata in sync with the content.\n\n\n\n\n\n\nIf a new metadata file is added to this directory, update this CLAUDE.md to document its columns and usage rules."
-  },
-  {
-    "objectID": "reference/CLAUDE.html#files-in-this-directory",
-    "href": "reference/CLAUDE.html#files-in-this-directory",
-    "title": "reference/CLAUDE.md — Reference Directory Guide",
-    "section": "",
-    "text": "Master metadata table for lecture videos and slide decks.\nColumns:\n\n\n\n\n\n\n\nColumn\nDescription\n\n\n\n\nWeek\nTeaching week in which the material is covered\n\n\nFile name\nBase filename of the corresponding .qmd slide page (no extension)\n\n\nFinal Title\nDisplay title of the video / slide deck\n\n\nYouTube ID\nYouTube video ID (used to construct the embed URL)\n\n\nBadge\nContent type: Concept (conceptual lecture) or Lab (Stata lab session)\n\n\nKey Learning Goal\nOne-sentence description of what students should be able to do after engaging with the material\n\n\n\nUsage rules:\n\nClaude may read this file to retrieve titles or ordering information.\nClaude must not modify this file unless explicitly instructed.\n\n\n\n\n\nMetadata table for seminar and workshop activities in the activities/ directory.\nColumns:\n\n\n\n\n\n\n\nColumn\nDescription\n\n\n\n\nWeek\nTeaching week in which the activity is used (or Reading Week)\n\n\nFile name\nBase filename of the corresponding .qmd activity page (no extension)\n\n\nTitle\nDisplay title of the activity (from the YAML front matter)\n\n\nActivity Type\nType of activity: Seminar Activity, Catch-Up Activity, or PS2 Workshop\n\n\nDataset\nDataset(s) used in the activity, if any\n\n\nKey Learning Goal\nOne-sentence description of what students should be able to do after completing the activity\n\n\n\nActivity types:\n\nSeminar Activity — a structured group exercise run in the seminar session\nCatch-Up Activity — a self-directed activity for students who missed or need to consolidate earlier material\nPS2 Workshop — a structured work session supporting the Problem Set 2 submission\n\nUsage rules:\n\nClaude may read this file to retrieve activity titles, types, or ordering information.\nClaude should update this file when creating, modifying, or deleting activity files in activities/, to keep the metadata in sync with the content."
-  },
-  {
-    "objectID": "reference/CLAUDE.html#adding-new-reference-files",
-    "href": "reference/CLAUDE.html#adding-new-reference-files",
-    "title": "reference/CLAUDE.md — Reference Directory Guide",
-    "section": "",
-    "text": "If a new metadata file is added to this directory, update this CLAUDE.md to document its columns and usage rules."
-  },
-  {
-    "objectID": "prompts/resume-w11-lecture.html",
-    "href": "prompts/resume-w11-lecture.html",
+    "objectID": "prompts/resume-mock-exam.html",
+    "href": "prompts/resume-mock-exam.html",
     "title": "",
     "section": "",
-    "text": "I’m resuming work on the Week 11 dummy variables lecture that was drafted in a previous session on another machine. Please read the handoff document at @logs/2026-03-29-handoff.md to understand the full pedagogical design and current state.\nThen read the slide deck at @slides/lectures/W11-dummy-variables.qmd and the do-file at @shared-project-folder/do/dummy-bes.do.\nI’d like to review the slides and make adjustments before rendering. I’ll tell you what I want to change after you’ve read everything."
+    "text": "I’m resuming work on the mock exam that was created in a previous session on another machine. Please read the handoff document at @logs/2026-04-01-handoff.md to understand what was built, the design decisions, and what remains to be done.\nThe mock exam Word document is at @documents/4SSPP111_Mock_Exam.docx. The expected answers for all 13 questions are in the plan file at @.claude/plans/spicy-stirring-pie.md (look for the “Expected answer” lines under each question).\nI’d like to review the mock exam and discuss next steps. I’ll tell you what I want to adjust after you’ve read everything."
   },
   {
-    "objectID": "MEMORY.html",
-    "href": "MEMORY.html",
-    "title": "MEMORY.md — Methods Education Website",
+    "objectID": "logs/2026-04-28-session.html",
+    "href": "logs/2026-04-28-session.html",
+    "title": "Session log — 2026-04-28",
     "section": "",
-    "text": "This repository contains a Quarto website used to host teaching materials for a university module on research methods and statistics.\nThe site publishes lecture slides, concept explanations, activities, quizzes, and reference pages.\nAll materials are written in Quarto (.qmd) and rendered as a static website hosted on GitHub Pages.\nThe goal of the project is to provide students with structured teaching materials combining slide explanations and lecture videos.\n\n\n\n\nThe site uses HTML pages as the primary navigation format.\nEach slide deck has two formats:\n\nHTML page view (default navigation format)\nRevealJS slide presentation\n\nStudents normally read the HTML page view.\nRevealJS is available through the “Other Formats → RevealJS” link and is mainly used for presenting slides in class.\n\n\n\n\nMost slide pages follow this structure:\n\nYouTube lecture video embed (when available)\nStructured headings explaining concepts\nOptional link to the RevealJS slide format\n\nVideos are embedded directly inside the .qmd page using the full YouTube embed code.\nThere is currently no reusable embed template.\n\n\n\n\nVideo integration is still in progress.\n\nSome lecture videos have been uploaded to YouTube.\nOnly some of those videos are currently embedded on the site.\nMany pages still do not contain embedded videos.\n\nAt a later stage the embedding process may be completed programmatically using Claude Code.\n\n\n\n\nContent directories:\nslides/ — lecture and concept slide decks\nactivities/ — interactive exercises\nquizzes/ — quiz material attention-checks/ — classroom attention checks reference/ — project reference material\nShared resources:\nassets/ — images and media cards/ — thumbnail images for YouTube video uploads theme/ — SCSS theme files controlling slide styling\n\n\n\n\nreference/videos_metadata.csv\nThis file contains structured metadata about lecture videos.\nIt may be used to guide the creation or updating of slide pages.\nThe file is read-only for Claude unless explicitly instructed.\n\n\n\n\nThese directories are generated automatically by Quarto and must not be edited.\n.quarto/\n_freeze/\n_site/\n\n\n\n\n_quarto.yml — defines site navigation and rendering\nstyles.css — site-level styling\ntheme/ — RevealJS styling\n\n\n\n\nThe site uses a left sidebar navigation panel.\nSidebar items link to HTML page versions of slide decks and activities.\nRevealJS slides are accessed through the “Other Formats” menu.\n\n\n\n\nThe site is rendered locally with Quarto and deployed to GitHub Pages.\nTypical workflow:\n\nedit .qmd files\npreview locally with quarto preview\nrender the site\npublish changes\n\nClaude Code must never perform deployment actions.\n\n\n\n\nshared-project-folder/ is a student-facing teaching resource shared via OneDrive (view-only for students). It is gitignored.\nIt contains:\n\ndata-raw/ — original datasets (.dta) and codebooks\ndata-clean/ — cleaned datasets produced by do-files\ndo/ — Stata do-files used in teaching\noutput/ — graphs generated by do-files\n\nThe do-files in this folder are the actual statistical code that the course teaching materials walk students through. Lecture slides, seminar activities, and problem sets on the website all reference analyses performed by these do-files with these datasets.\nThis tight coupling means that Claude Code’s ability to read, edit, and execute these do-files is central to maintaining and developing the course.\n\n\n\n\nClaude Code can execute Stata do-files from the terminal and read the output.\nThis was established on 2026-03-15 after resolving three layered Windows compatibility issues (MSYS2 path mangling, GUI process control, and output capture).\nThe full invocation recipe is documented in CLAUDE.md under “Running Stata from Claude Code”.\nHigh-level approach:\n\nWrite a wrapper do-file to C:\\temp\\ with log using / log close / exit, clear\nExecute via MSYS_NO_PATHCONV=1 powershell -Command 'Start-Process ... -Wait'\nRead C:\\temp\\stata-output.log for the output\n\nStata executable: C:\\Program Files\\Stata19\\StataSE-64.exe\n\n\n\n\nlegacy/ contains UCSD-era teaching materials (slides, transcripts, reference pages, activities, planning prompts). These are gitignored and read-only.\nNew slide decks and videos for the KCL course are created using legacy materials as starting points. The process involves reading the legacy source, adapting the pedagogical structure, and replacing examples with UK datasets (Brexit, BES, QoG, NSS).\nThe UCSD materials used California county / Trump vote data as the running example. The KCL materials use Brexit Regional data (education, import shock, unemployment predicting Leave vote share) as the primary regression example.\nSee legacy/CLAUDE.md for the full file inventory and the mapping between legacy sources and current pages."
+    "text": "Restructured the site to support a colleague-facing “modular methods resources” framing, in addition to the existing student-facing weekly module sequence.\nDecided on a homepage-cards approach (modelled on Claude Blattman’s site) rather than a sidebar reorganisation. Sidebar left untouched to preserve student revision habits and existing URLs.\nAdded a scoped exception to the root CLAUDE.md (“Site Restructuring: Modular Topic Navigation, April 2026”) permitting edits to index.qmd, _quarto.yml (sidebar — ultimately not used), and topic pages.\nCreated eight topic landing pages under topics/, each listing concept videos, applied (Stata) videos, and the relevant class activity for that topic.\nRewrote index.qmd with an 8-card grid and preserved student-facing module-convener / seminar-leader / module-outcomes content at the bottom.\n\n\n\n\n\nCLAUDE.md — three edits: protected-files exception pointers, forbidden-tasks exception pointer, new “Site Restructuring” section appended.\nindex.qmd — full rewrite as topic-cards landing page.\n\n\n\n\n\ntopics/research-design.qmd\ntopics/measurement.qmd\ntopics/univariate-description.qmd\ntopics/bivariate-description.qmd\ntopics/inference.qmd\ntopics/regression.qmd\ntopics/causal-inference.qmd\ntopics/multivariate-regression.qmd\n\n\n\n\n\nLectures (W-files) and PS2 workshops (A08b/A09b/A10b/A11) deliberately excluded from topic pages. They remain in the sidebar module sequence only.\nA01 and A06 also excluded from topic pages (opening framing and reading-week catch-up; not topic-bound).\nNo file paths, slide content, YouTube embeds, or relative links were modified. All existing URLs preserved.\nSite not rendered yet. Render before the meeting tomorrow to verify card grid styling.\n\n\n\n\n\n\n\nDiscovered that all 39 published videos have a 120 ms audio-ahead offset, caused by editing while wearing a Bluetooth headset that delayed playback. Considered three paths (fix only the unreleased; fix + re-upload all 34 to YouTube; fix locally and defer re-upload). Chose Path C — fix all 39 locally now, defer YouTube re-upload to a future session.\n\nInstalled ffmpeg via winget (Gyan.FFmpeg).\nGenerated videos/fixed/*.mp4 for all 39 videos using ffmpeg -i in.mp4 -itsoffset 0.12 -i in.mp4 -map 0:v -map 1:a -c:v copy -c:a aac -b:a 192k out.mp4 (audio delayed by 120 ms; video stream copied without re-encode).\nOriginal (out-of-sync) MP4s remain in videos/. Fixed copies in videos/fixed/. Both directories gitignored.\n\n\n\n\nGenerated the 24 missing cards (C10–C28, S07–S11) via a new R script r/make_thumbnail_cards.R using the magick package. Cards imitate the existing screenshot style (1920×1080, light grey bg, blue left-aligned title, hamburger icon and slide counter at the bottom). Existing 15 cards left untouched (idempotent: skips files that already exist).\nNote: titles for C25–C28 and S11 in videos_metadata.csv are sentence case (“Multivariate regression: adding controls”); older entries are title case. Thumbnails reflect the CSV — visual inconsistency on the YouTube channel until the CSV is harmonised.\n\n\n\nUploaded C25, C26, C27, C28, S11 from videos/fixed/ with thumbnails from cards/. New IDs written to reference/videos_metadata.csv:\n\nC25 → 1CZPuvAfN28\nC26 → bXzb_2lepEk\nC27 → -5vY2jwCuAI\nC28 → 5OQBgRVk4P8\nS11 → wZLC9tDBm7Q\n\nOAuth refresh token had expired (Testing-mode 7-day limit); resolved by deleting .claude/token.json and re-running with browser consent.\n\n\n\nWrote r/add_video_embeds.R to insert iframe embeds into each video page. Inserted 35 embeds, skipped 4 (already present from earlier sessions: S01, S03, S04, C06). Every video page now has exactly one embed.\n\n\n\n.claude/yt_upload.py: - PROJECT_ROOT now auto-detects between home (leona) and office (k2588471) paths. - Added find_video_path() that prefers videos/fixed/&lt;name&gt;.mp4 over videos/&lt;name&gt;.mp4. - Added --set-thumbnails-only flag for retroactive thumbnail backfill.\n\n\n\n\nNew: r/make_thumbnail_cards.R\nNew: r/add_video_embeds.R\nNew: 24 JPGs in cards/ (gitignored, but local)\nNew: 39 fixed MP4s in videos/fixed/ (gitignored)\nModified: .claude/yt_upload.py\nModified: reference/videos_metadata.csv (5 new YouTube IDs)\nModified: 35 .qmd files in slides/videos-concepts/ and slides/videos-stata/ (iframe inserted)\nModified: .claude/memory/project_youtube_upload.md (status update + new sections)\n\n\n\n\nAdded --max N and --skip &lt;comma-list&gt; flags to the --set-thumbnails-only mode of yt_upload.py. Ran with --max 30 --skip &lt;today's 5 uploads&gt; to stay within the remaining ~1,750-unit quota budget. 30 thumbnails set successfully (C01–C21, S01–S09 in CSV order). The remaining 4 — C22, C23, C24, S10 — were left for manual upload in YouTube Studio (cards available at cards/C22-confounding.jpg, cards/C23-reverse-causality.jpg, cards/C24-random-assignment.jpg, cards/S10-preparing-stata.jpg). Quota note: alternatively, python .claude/yt_upload.py --set-thumbnails-only could be re-run after midnight Pacific to finish the remaining 4 via the API.\n\n\n\n\nRe-upload of the 34 older videos with corrected audio sync. Open question. Costs ~6 days of quota plus updating every KEATS / H5P link. Local fixed copies are ready in videos/fixed/ whenever you decide to do it.\nCSV title harmonisation. Sentence case vs title case for Final Title. If harmonised, re-run r/make_thumbnail_cards.R (after deleting the affected JPGs from cards/ so they regenerate)."
   },
   {
-    "objectID": "MEMORY.html#project-overview",
-    "href": "MEMORY.html#project-overview",
-    "title": "MEMORY.md — Methods Education Website",
+    "objectID": "logs/2026-04-28-session.html#tasks-completed",
+    "href": "logs/2026-04-28-session.html#tasks-completed",
+    "title": "Session log — 2026-04-28",
     "section": "",
-    "text": "This repository contains a Quarto website used to host teaching materials for a university module on research methods and statistics.\nThe site publishes lecture slides, concept explanations, activities, quizzes, and reference pages.\nAll materials are written in Quarto (.qmd) and rendered as a static website hosted on GitHub Pages.\nThe goal of the project is to provide students with structured teaching materials combining slide explanations and lecture videos."
+    "text": "Restructured the site to support a colleague-facing “modular methods resources” framing, in addition to the existing student-facing weekly module sequence.\nDecided on a homepage-cards approach (modelled on Claude Blattman’s site) rather than a sidebar reorganisation. Sidebar left untouched to preserve student revision habits and existing URLs.\nAdded a scoped exception to the root CLAUDE.md (“Site Restructuring: Modular Topic Navigation, April 2026”) permitting edits to index.qmd, _quarto.yml (sidebar — ultimately not used), and topic pages.\nCreated eight topic landing pages under topics/, each listing concept videos, applied (Stata) videos, and the relevant class activity for that topic.\nRewrote index.qmd with an 8-card grid and preserved student-facing module-convener / seminar-leader / module-outcomes content at the bottom."
   },
   {
-    "objectID": "MEMORY.html#core-design-decisions",
-    "href": "MEMORY.html#core-design-decisions",
-    "title": "MEMORY.md — Methods Education Website",
+    "objectID": "logs/2026-04-28-session.html#files-modified",
+    "href": "logs/2026-04-28-session.html#files-modified",
+    "title": "Session log — 2026-04-28",
     "section": "",
-    "text": "The site uses HTML pages as the primary navigation format.\nEach slide deck has two formats:\n\nHTML page view (default navigation format)\nRevealJS slide presentation\n\nStudents normally read the HTML page view.\nRevealJS is available through the “Other Formats → RevealJS” link and is mainly used for presenting slides in class."
+    "text": "CLAUDE.md — three edits: protected-files exception pointers, forbidden-tasks exception pointer, new “Site Restructuring” section appended.\nindex.qmd — full rewrite as topic-cards landing page."
   },
   {
-    "objectID": "MEMORY.html#slide-page-structure",
-    "href": "MEMORY.html#slide-page-structure",
-    "title": "MEMORY.md — Methods Education Website",
+    "objectID": "logs/2026-04-28-session.html#files-created",
+    "href": "logs/2026-04-28-session.html#files-created",
+    "title": "Session log — 2026-04-28",
     "section": "",
-    "text": "Most slide pages follow this structure:\n\nYouTube lecture video embed (when available)\nStructured headings explaining concepts\nOptional link to the RevealJS slide format\n\nVideos are embedded directly inside the .qmd page using the full YouTube embed code.\nThere is currently no reusable embed template."
+    "text": "topics/research-design.qmd\ntopics/measurement.qmd\ntopics/univariate-description.qmd\ntopics/bivariate-description.qmd\ntopics/inference.qmd\ntopics/regression.qmd\ntopics/causal-inference.qmd\ntopics/multivariate-regression.qmd"
   },
   {
-    "objectID": "MEMORY.html#current-state-of-video-integration",
-    "href": "MEMORY.html#current-state-of-video-integration",
-    "title": "MEMORY.md — Methods Education Website",
+    "objectID": "logs/2026-04-28-session.html#important-notes",
+    "href": "logs/2026-04-28-session.html#important-notes",
+    "title": "Session log — 2026-04-28",
     "section": "",
-    "text": "Video integration is still in progress.\n\nSome lecture videos have been uploaded to YouTube.\nOnly some of those videos are currently embedded on the site.\nMany pages still do not contain embedded videos.\n\nAt a later stage the embedding process may be completed programmatically using Claude Code."
+    "text": "Lectures (W-files) and PS2 workshops (A08b/A09b/A10b/A11) deliberately excluded from topic pages. They remain in the sidebar module sequence only.\nA01 and A06 also excluded from topic pages (opening framing and reading-week catch-up; not topic-bound).\nNo file paths, slide content, YouTube embeds, or relative links were modified. All existing URLs preserved.\nSite not rendered yet. Render before the meeting tomorrow to verify card grid styling."
   },
   {
-    "objectID": "MEMORY.html#site-architecture",
-    "href": "MEMORY.html#site-architecture",
-    "title": "MEMORY.md — Methods Education Website",
+    "objectID": "logs/2026-04-28-session.html#second-part-of-the-session-videos-thumbnails-and-embeds",
+    "href": "logs/2026-04-28-session.html#second-part-of-the-session-videos-thumbnails-and-embeds",
+    "title": "Session log — 2026-04-28",
     "section": "",
-    "text": "Content directories:\nslides/ — lecture and concept slide decks\nactivities/ — interactive exercises\nquizzes/ — quiz material attention-checks/ — classroom attention checks reference/ — project reference material\nShared resources:\nassets/ — images and media cards/ — thumbnail images for YouTube video uploads theme/ — SCSS theme files controlling slide styling"
-  },
-  {
-    "objectID": "MEMORY.html#key-reference-file",
-    "href": "MEMORY.html#key-reference-file",
-    "title": "MEMORY.md — Methods Education Website",
-    "section": "",
-    "text": "reference/videos_metadata.csv\nThis file contains structured metadata about lecture videos.\nIt may be used to guide the creation or updating of slide pages.\nThe file is read-only for Claude unless explicitly instructed."
-  },
-  {
-    "objectID": "MEMORY.html#quarto-build-directories",
-    "href": "MEMORY.html#quarto-build-directories",
-    "title": "MEMORY.md — Methods Education Website",
-    "section": "",
-    "text": "These directories are generated automatically by Quarto and must not be edited.\n.quarto/\n_freeze/\n_site/"
-  },
-  {
-    "objectID": "MEMORY.html#configuration-files",
-    "href": "MEMORY.html#configuration-files",
-    "title": "MEMORY.md — Methods Education Website",
-    "section": "",
-    "text": "_quarto.yml — defines site navigation and rendering\nstyles.css — site-level styling\ntheme/ — RevealJS styling"
-  },
-  {
-    "objectID": "MEMORY.html#navigation-model",
-    "href": "MEMORY.html#navigation-model",
-    "title": "MEMORY.md — Methods Education Website",
-    "section": "",
-    "text": "The site uses a left sidebar navigation panel.\nSidebar items link to HTML page versions of slide decks and activities.\nRevealJS slides are accessed through the “Other Formats” menu."
-  },
-  {
-    "objectID": "MEMORY.html#deployment",
-    "href": "MEMORY.html#deployment",
-    "title": "MEMORY.md — Methods Education Website",
-    "section": "",
-    "text": "The site is rendered locally with Quarto and deployed to GitHub Pages.\nTypical workflow:\n\nedit .qmd files\npreview locally with quarto preview\nrender the site\npublish changes\n\nClaude Code must never perform deployment actions."
-  },
-  {
-    "objectID": "MEMORY.html#shared-project-folder",
-    "href": "MEMORY.html#shared-project-folder",
-    "title": "MEMORY.md — Methods Education Website",
-    "section": "",
-    "text": "shared-project-folder/ is a student-facing teaching resource shared via OneDrive (view-only for students). It is gitignored.\nIt contains:\n\ndata-raw/ — original datasets (.dta) and codebooks\ndata-clean/ — cleaned datasets produced by do-files\ndo/ — Stata do-files used in teaching\noutput/ — graphs generated by do-files\n\nThe do-files in this folder are the actual statistical code that the course teaching materials walk students through. Lecture slides, seminar activities, and problem sets on the website all reference analyses performed by these do-files with these datasets.\nThis tight coupling means that Claude Code’s ability to read, edit, and execute these do-files is central to maintaining and developing the course."
-  },
-  {
-    "objectID": "MEMORY.html#stata-integration",
-    "href": "MEMORY.html#stata-integration",
-    "title": "MEMORY.md — Methods Education Website",
-    "section": "",
-    "text": "Claude Code can execute Stata do-files from the terminal and read the output.\nThis was established on 2026-03-15 after resolving three layered Windows compatibility issues (MSYS2 path mangling, GUI process control, and output capture).\nThe full invocation recipe is documented in CLAUDE.md under “Running Stata from Claude Code”.\nHigh-level approach:\n\nWrite a wrapper do-file to C:\\temp\\ with log using / log close / exit, clear\nExecute via MSYS_NO_PATHCONV=1 powershell -Command 'Start-Process ... -Wait'\nRead C:\\temp\\stata-output.log for the output\n\nStata executable: C:\\Program Files\\Stata19\\StataSE-64.exe"
-  },
-  {
-    "objectID": "MEMORY.html#legacy-materials-and-content-creation",
-    "href": "MEMORY.html#legacy-materials-and-content-creation",
-    "title": "MEMORY.md — Methods Education Website",
-    "section": "",
-    "text": "legacy/ contains UCSD-era teaching materials (slides, transcripts, reference pages, activities, planning prompts). These are gitignored and read-only.\nNew slide decks and videos for the KCL course are created using legacy materials as starting points. The process involves reading the legacy source, adapting the pedagogical structure, and replacing examples with UK datasets (Brexit, BES, QoG, NSS).\nThe UCSD materials used California county / Trump vote data as the running example. The KCL materials use Brexit Regional data (education, import shock, unemployment predicting Leave vote share) as the primary regression example.\nSee legacy/CLAUDE.md for the full file inventory and the mapping between legacy sources and current pages."
+    "text": "Discovered that all 39 published videos have a 120 ms audio-ahead offset, caused by editing while wearing a Bluetooth headset that delayed playback. Considered three paths (fix only the unreleased; fix + re-upload all 34 to YouTube; fix locally and defer re-upload). Chose Path C — fix all 39 locally now, defer YouTube re-upload to a future session.\n\nInstalled ffmpeg via winget (Gyan.FFmpeg).\nGenerated videos/fixed/*.mp4 for all 39 videos using ffmpeg -i in.mp4 -itsoffset 0.12 -i in.mp4 -map 0:v -map 1:a -c:v copy -c:a aac -b:a 192k out.mp4 (audio delayed by 120 ms; video stream copied without re-encode).\nOriginal (out-of-sync) MP4s remain in videos/. Fixed copies in videos/fixed/. Both directories gitignored.\n\n\n\n\nGenerated the 24 missing cards (C10–C28, S07–S11) via a new R script r/make_thumbnail_cards.R using the magick package. Cards imitate the existing screenshot style (1920×1080, light grey bg, blue left-aligned title, hamburger icon and slide counter at the bottom). Existing 15 cards left untouched (idempotent: skips files that already exist).\nNote: titles for C25–C28 and S11 in videos_metadata.csv are sentence case (“Multivariate regression: adding controls”); older entries are title case. Thumbnails reflect the CSV — visual inconsistency on the YouTube channel until the CSV is harmonised.\n\n\n\nUploaded C25, C26, C27, C28, S11 from videos/fixed/ with thumbnails from cards/. New IDs written to reference/videos_metadata.csv:\n\nC25 → 1CZPuvAfN28\nC26 → bXzb_2lepEk\nC27 → -5vY2jwCuAI\nC28 → 5OQBgRVk4P8\nS11 → wZLC9tDBm7Q\n\nOAuth refresh token had expired (Testing-mode 7-day limit); resolved by deleting .claude/token.json and re-running with browser consent.\n\n\n\nWrote r/add_video_embeds.R to insert iframe embeds into each video page. Inserted 35 embeds, skipped 4 (already present from earlier sessions: S01, S03, S04, C06). Every video page now has exactly one embed.\n\n\n\n.claude/yt_upload.py: - PROJECT_ROOT now auto-detects between home (leona) and office (k2588471) paths. - Added find_video_path() that prefers videos/fixed/&lt;name&gt;.mp4 over videos/&lt;name&gt;.mp4. - Added --set-thumbnails-only flag for retroactive thumbnail backfill.\n\n\n\n\nNew: r/make_thumbnail_cards.R\nNew: r/add_video_embeds.R\nNew: 24 JPGs in cards/ (gitignored, but local)\nNew: 39 fixed MP4s in videos/fixed/ (gitignored)\nModified: .claude/yt_upload.py\nModified: reference/videos_metadata.csv (5 new YouTube IDs)\nModified: 35 .qmd files in slides/videos-concepts/ and slides/videos-stata/ (iframe inserted)\nModified: .claude/memory/project_youtube_upload.md (status update + new sections)\n\n\n\n\nAdded --max N and --skip &lt;comma-list&gt; flags to the --set-thumbnails-only mode of yt_upload.py. Ran with --max 30 --skip &lt;today's 5 uploads&gt; to stay within the remaining ~1,750-unit quota budget. 30 thumbnails set successfully (C01–C21, S01–S09 in CSV order). The remaining 4 — C22, C23, C24, S10 — were left for manual upload in YouTube Studio (cards available at cards/C22-confounding.jpg, cards/C23-reverse-causality.jpg, cards/C24-random-assignment.jpg, cards/S10-preparing-stata.jpg). Quota note: alternatively, python .claude/yt_upload.py --set-thumbnails-only could be re-run after midnight Pacific to finish the remaining 4 via the API.\n\n\n\n\nRe-upload of the 34 older videos with corrected audio sync. Open question. Costs ~6 days of quota plus updating every KEATS / H5P link. Local fixed copies are ready in videos/fixed/ whenever you decide to do it.\nCSV title harmonisation. Sentence case vs title case for Final Title. If harmonised, re-run r/make_thumbnail_cards.R (after deleting the affected JPGs from cards/ so they regenerate)."
   },
   {
     "objectID": "logs/2026-03-29-session.html",
@@ -6158,38 +6193,88 @@
     "text": "Created three new PS2 Workshop activity pages based on provided outlines:\n\nactivities/A09b-ps2-workshop-2.qmd — Week 9: Bivariate Analysis and Hypothesis Test\nactivities/A10b-ps2-workshop-3.qmd — Week 10: Interpretation and Discussion\nactivities/A11-ps2-workshop-4.qmd — Week 11: Writing Up and Reviewing the Do-File\n\nUpdated reference/activities_metadata.csv with titles, types, datasets, and learning goals for the three new activities.\nUpdated CLAUDE.md (root) to:\n\nAdd reference/activities_metadata.csv to the documented metadata files.\nGrant Claude permission to update activities_metadata.csv when creating or modifying activity files.\nNote that activities_metadata.csv is not a protected file (unlike videos_metadata.csv).\n\nUpdated reference/CLAUDE.md to change the usage rule for activities_metadata.csv from read-only to update-on-content-change.\n\n\n\n\n\nactivities/A09b-ps2-workshop-2.qmd\nactivities/A10b-ps2-workshop-3.qmd\nactivities/A11-ps2-workshop-4.qmd\n\n\n\n\n\nreference/activities_metadata.csv — added rows for Weeks 9–11 workshops\nCLAUDE.md (root) — added metadata sync rule and noted activities_metadata.csv is not protected\nreference/CLAUDE.md — updated usage rules for activities_metadata.csv\n\n\n\n\nAll three new workshop pages follow the same template structure as A08b-ps2-workshop-1.qmd: YAML front matter, introduction, numbered tasks, and a milestone checklist. Each links to the same PS2 instructions, model answer, and Shared Project Folder."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Statistics for Political Science",
+    "objectID": "documents/S03-propose-measurement.html",
+    "href": "documents/S03-propose-measurement.html",
+    "title": "Proposing Measurement Strategies",
     "section": "",
-    "text": "This module provides students with analytical tools to analyse political phenomena, with a focus on research design, statistical reasoning, and the logic of regression analysis. The module is organised around weekly preparatory activities (short videos and quizzes) that enable lectures and seminars to focus on active learning, including mock exam questions and hands-on work in Stata. By the end of the module, students should be able to formulate and evaluate hypotheses, interpret descriptive and inferential statistics, and implement basic statistical analyses in Stata to answer political science research questions.\nModule convener: Leonardo Falabella (leonardo.falabella@kcl.ac.uk)\nSeminar leader: Mechelle Viernes (mechelle.viernes@kcl.ac.uk)",
-    "crumbs": [
-      "Statistics for Political Science"
-    ]
+    "text": "Working in a small group to:\n\nIdentify types of variables.\nPropose measurement strategies for variables."
   },
   {
-    "objectID": "index.html#module-outcomes",
-    "href": "index.html#module-outcomes",
-    "title": "Statistics for Political Science",
-    "section": "Module Outcomes",
-    "text": "Module Outcomes\nBy the end of this module, students will be able to:\n\nKnow how to describe data\nUnderstand how data is produced and managed\nUse different statistical inference techniques\nLearn how to test the relationship between two different variables\nConduct basic statistical analyses with Stata",
-    "crumbs": [
-      "Statistics for Political Science"
-    ]
+    "objectID": "documents/S03-propose-measurement.html#what-youll-practice",
+    "href": "documents/S03-propose-measurement.html#what-youll-practice",
+    "title": "Proposing Measurement Strategies",
+    "section": "",
+    "text": "Working in a small group to:\n\nIdentify types of variables.\nPropose measurement strategies for variables."
   },
   {
-    "objectID": "CLAUDE.html",
-    "href": "CLAUDE.html",
-    "title": "CLAUDE.md — Operating Rules for the Methods Education Website",
-    "section": "",
-    "text": "CLAUDE.md — Operating Rules for the Methods Education Website\nThis repository contains a Quarto website used to host teaching materials for a university module.\nThe site includes lecture slides, activities, quizzes, reference pages, and embedded videos.\nClaude Code may assist with content creation and small improvements, but must avoid modifying the structural architecture of the site.\nAll changes should be conservative, minimal, and easy to review.\n\n\n\nCore Principles\n\nMake the smallest possible change required to complete the task.\nPrefer creating new content pages over modifying shared configuration.\nDo not refactor or reorganize the repository.\nDo not rename, move, or delete files unless explicitly instructed.\nIf a task requires editing multiple files, explain why before making changes.\nWhen multiple approaches are possible, prefer the one that modifies fewer files.\n\n\n\n\nSession Initialization\nAt the start of each session Claude must:\n\nRead MEMORY.md to understand the architecture and conventions of the project.\nCheck the logs/ directory and read the most recent log entry if it exists.\nUse this information to maintain consistency with previous changes.\n\nClaude should never ignore information contained in MEMORY.md.\n\n\n\nRepository Structure\nThe repository follows a stable Quarto website structure.\n\nContent directories\nThese contain teaching material and are safe to edit.\n\nslides/ — lecture slide decks written in .qmd\nactivities/ — interactive learning activities\nquizzes/ — quiz materials\nattention-checks/ — classroom attention checks\nreference/ — reference material and project metadata\n\nImportant files:\n\nreference/videos_metadata.csv\nreference/activities_metadata.csv\n\nThese files are the master metadata tables for lecture videos/slide decks and class activities respectively.\nClaude may read these files to retrieve titles or ordering information.\nClaude should update activities_metadata.csv when creating, modifying, or deleting activity files in activities/, to keep the metadata in sync with the content. Claude must not modify videos_metadata.csv unless explicitly instructed.\nClaude may create or edit .qmd files inside content directories.\nHowever, the directory structure must not be modified.\n\n\n\n\nShared Project Folder\nshared-project-folder/ is a student-facing teaching resource located at the root of the repository.\nIt is shared with students via an OneDrive link. Students have view-only access — they cannot modify files.\nThe folder uses a nested .gitignore pattern: do-files (shared-project-folder/do/*.do) are git-tracked, while data files, output, and other binary content are ignored. This ensures do-files are referenceable with @ in VSCode’s Claude Code extension.\nThere is no CLAUDE.md inside this folder — this is intentional, since students can read all files in it.\n\nSubdirectories\n\n\n\n\n\n\n\n\nDirectory\nPurpose\nClaude may edit?\n\n\n\n\ndata-raw/\nOriginal datasets (.dta) and codebooks (.pdf, .docx)\nNo\n\n\ndata-clean/\nCleaned/processed datasets saved by do-files\nNo\n\n\ndo/\nStata do-files used in teaching\nYes\n\n\noutput/\nGenerated graphs (.jpg) saved by do-files\nNo\n\n\n\n\n\nDo-file conventions\nAll do-files set the working directory with cd as the first command, then use relative paths for everything else (e.g., \"data-raw/British_Election_Study_2024.dta\").\nThe canonical working directory path is:\ncd \"C:\\Users\\leona\\OneDrive - King's College London\\methods-education\\shared-project-folder\"\nWhen creating or editing do-files that will be committed to the repository, always use this path. It is the path on the primary development machine.\nWhen writing wrapper do-files (temporary files in C:\\temp\\ used to run Stata from Claude Code), use the cd path that matches the current machine. See the multi-machine reference table below.\n\n\n\n\nRunning Stata from Claude Code\nClaude Code can execute Stata do-files and read the output directly from the terminal. This enables Claude to verify statistical examples, debug do-files, create new analyses, and report regression results — all without the user switching to the Stata GUI.\nThe teaching materials on the website (slides, activities) are tightly coupled to the Stata do-files and datasets in shared-project-folder/. Being able to run these do-files is essential for maintaining and developing the course.\n\nMulti-machine reference\nThe user works on two PCs. At the start of a session, Claude should detect which machine it is on by checking which Stata executable exists.\n\n\n\n\n\n\n\n\n\nHome PC (leona)\nOffice PC (k2588471)\n\n\n\n\nStata executable\nC:\\Program Files\\Stata19\\StataSE-64.exe\nC:\\Program Files\\StataNow19\\StataMP-64.exe\n\n\nOneDrive cd path\nC:\\Users\\leona\\OneDrive - King's College London\\methods-education\\shared-project-folder\nC:\\Users\\k2588471\\OneDrive - King's College London\\methods-education\\shared-project-folder\n\n\n\n\n\nHow it works\nRunning Stata from the Claude Code terminal requires working around three Windows issues:\n\nMSYS2 path mangling — Git Bash converts /e to E:/. Set MSYS_NO_PATHCONV=1 to disable this.\nGUI executable — The Stata executable is a GUI app; cmd doesn’t wait for it. Use PowerShell Start-Process -Wait instead.\nOutput capture — Stata’s /e batch mode log is unreliable. Use Stata’s log using command inside the do-file for explicit output capture.\n\n\n\nStep 1: Write a wrapper do-file to C:\\temp\\\nlog using \"C:\\temp\\stata-output.log\", text replace\n\ncd \"&lt;OneDrive cd path for this machine&gt;\"\nuse \"data-raw/Brexit_Regional.dta\", clear\nregress leave_share share_high_skill\n\nlog close\nexit, clear\nThe wrapper always follows this pattern: - log using \"C:\\temp\\stata-output.log\", text replace — open a text log at a known path - cd using the OneDrive path for the current machine (see multi-machine reference table above) - The actual Stata commands (loading data, analysis, etc.) - log close — flush the log - exit, clear — close Stata cleanly\nTo run an existing do-file, the wrapper can call it with do \"do/filename.do\" after setting cd.\n\n\nStep 2: Execute from the terminal\nMSYS_NO_PATHCONV=1 powershell -Command '$p = Start-Process -FilePath \"&lt;Stata executable for this machine&gt;\" -ArgumentList \"/e\",\"do\",\"C:\\temp\\&lt;wrapper&gt;.do\" -Wait -PassThru; Write-Output \"ExitCode: $($p.ExitCode)\"'\nReplace &lt;Stata executable for this machine&gt; with the path from the multi-machine reference table. Replace &lt;wrapper&gt; with the name of the wrapper do-file.\nAn exit code of 0 means success.\n\n\nStep 3: Read the log\nRead C:\\temp\\stata-output.log to retrieve the Stata output (regression tables, summary statistics, etc.).\n\n\nConventions\n\nWrapper do-files and logs go in C:\\temp\\ (outside the repository).\nNever commit wrapper do-files or log files to the repository.\nAlways include exit, clear at the end of wrapper do-files so Stata closes after running.\nWhen running an existing do-file from shared-project-folder/do/, wrap it rather than modifying it.\n\n\n\n\n\nRunning R from Claude Code\nClaude Code can execute R scripts from the terminal. This is useful for generating plots, running analyses with R-based datasets, and verifying R code in legacy materials.\n\nHow it works\nR is not on the system PATH. Always use the full path to Rscript.exe.\nThe R version differs by machine. At the start of a session, detect the installed version:\n\n\n\n\n\n\n\n\n\nHome PC (leona)\nOffice PC (k2588471)\n\n\n\n\nRscript path\nC:\\Program Files\\R\\R-4.2.0\\bin\\Rscript.exe\nC:\\Program Files\\R\\R-4.5.3\\bin\\Rscript.exe\n\n\n\n\n\nRunning a script\n\"&lt;Rscript path for this machine&gt;\" \"path/to/script.R\"\n\n\nRunning inline R\n\"&lt;Rscript path for this machine&gt;\" -e 'library(readxl); d &lt;- read_excel(\"file.xlsx\"); str(d)'\nNote: single quotes around the -e expression work in Git Bash. Escape internal single quotes with '\"'\"' if needed.\n\n\nAvailable packages\nThe following packages are confirmed available: tidyverse, readxl, ggplot2, dplyr, tidyr.\n\n\nSaving plot output\nR scripts run from the terminal have no display device. To produce plots, use ggsave() or pdf()/png() to write to a file:\nggsave(\"C:/temp/plot.png\", width = 8, height = 5)\n\n\nConventions\n\nR is used for content generation (regression tables, plots), not for the main teaching materials (which use Stata).\nTemporary R output files go in C:\\temp\\ (outside the repository).\nNever commit R output files to the repository.\n\n\n\n\n\nR Content Generation Directory\nr/ contains R scripts and datasets used to generate content for the website (plots, regression table images, statistical output).\n\nStructure\n\n\n\nPath\nPurpose\nClaude may edit?\n\n\n\n\nr/*.R\nR scripts that produce assets\nYes\n\n\nr/data/\nDatasets used by R scripts\nNo (source data)\n\n\n\n\n\nConventions\n\nR scripts save output images to assets/ (tracked in git).\nSource data files (.xlsx, .dta) in r/data/ should not be modified.\nGenerated/intermediate data files (.csv) in r/data/ are gitignored.\nWhen creating new R scripts, follow the pattern of existing scripts: set paths relative to the project root or use absolute OneDrive paths consistent with the project.\n\n\n\n\n\nLegacy Materials Directory\nlegacy/ contains teaching materials from a previous version of this course taught at UCSD. These are read-only reference sources used as starting points when creating new slide decks and videos for the KCL course.\nThe directory is gitignored (contents are not tracked, except legacy/CLAUDE.md and legacy/.gitignore).\nSee legacy/CLAUDE.md for the full directory structure, file inventory, and mapping between legacy sources and current pages.\n\nContent creation workflow\nNew slide decks and videos are created iteratively with Claude using legacy materials as springboards:\n\nRead relevant legacy slides, transcripts, and reference pages on the topic\nAdapt the pedagogical structure and explanations for the KCL context\nReplace canonical examples (UCSD used California/Trump data; KCL uses Brexit, BES, QoG, NSS datasets)\nProduce new .qmd slide decks for the Quarto website\n\n\n\nRules\n\nClaude may read files in legacy/ for reference\nClaude must not modify files in legacy/ (except legacy/CLAUDE.md if instructed)\nLegacy materials inform structure and pedagogy, not specific examples or data\nWhen asked to create new content, check legacy/ for relevant source material\n\n\n\n\n\nShared Resource Directories\nThese directories contain reusable assets.\n\nassets/ — images and static media\ncards/ — thumbnail images used for YouTube video uploads\ntheme/ — SCSS theme files controlling slide styling\n\nClaude may read these files but must not modify them unless explicitly instructed.\n\n\n\nQuarto Build Directories (Do Not Modify)\nThese directories are automatically generated by Quarto and must never be edited.\n\n.quarto/\n_freeze/\n_site/\n\n\n\n\nProtected Configuration Files\nClaude may read these files but must not modify them unless explicitly instructed.\n\nstyles.css\nfiles inside theme/\nindex.qmd\nabout.qmd\nmethods-education.Rproj\nreference/videos_metadata.csv\n\nNote: reference/activities_metadata.csv is not a protected file. Claude should update it when creating or modifying activity files to keep metadata in sync.\n\n\n\nVideo Embedding Convention\nLecture videos are embedded directly inside slide pages using the full YouTube embed code copied from YouTube.\nEmbeds should typically appear at the top of the page before the first heading.\nThere is currently no reusable include template for video embeds.\nWhen creating or editing pages, Claude should follow the embed pattern used in existing .qmd files.\n\n\n\nCurrent State of Video Embedding\nThe video integration is in progress.\n\nSome lecture videos have been uploaded to YouTube.\nOnly a subset of those videos are currently embedded in the slide pages.\nMany slide pages still do not contain embedded videos.\n\nClaude should not attempt to automatically embed missing videos unless explicitly asked to perform that task.\n\n\n\nSafe Editing Areas\nClaude may freely:\n\ncreate new .qmd pages\nimprove clarity of text\nadd teaching material\nembed YouTube videos when instructed\nmake small layout improvements within individual pages\ncreate and edit Stata do-files in shared-project-folder/do/\nrun Stata do-files from the terminal and read the output (see “Running Stata from Claude Code”)\nreport and interpret Stata output (regression tables, summary statistics, etc.)\ncreate and edit R scripts in r/\n\nWhen creating new content pages, Claude must update _quarto.yml to add the page to the sidebar so it appears on the site. Keeping the sidebar in sync with new content is part of the task, not a separate step requiring explicit instruction.\n\n\n\nPath and Link Safety\nThis repository relies heavily on relative paths.\nClaude must not change relative paths unless explicitly instructed.\nBreaking paths can break the site.\n\n\n\nGitignore Convention for Non-Tracked Directories\nWhen a directory contains files that should not be committed (e.g., large datasets, binary output) but also contains files that Claude needs to reference or edit, never add the directory name to the root .gitignore.\nA root-level directory ignore (e.g., my-folder/) prevents git from descending into the directory entirely. This means files inside it cannot be referenced with @ in VSCode’s Claude Code extension.\nInstead, use a nested .gitignore inside the directory:\n# Ignore all contents by default\n*\n\n# Track this gitignore\n!.gitignore\n\n# Selectively un-ignore files that should be tracked\n!do/\n!do/*.do\nThis pattern is used by legacy/.gitignore and shared-project-folder/.gitignore. Any new directories added to the project that need selective tracking must follow the same convention.\n\n\n\nEditing Workflow\nBefore making changes:\n\nIdentify which files will be edited.\nExplain why each file must change.\nConfirm that no protected files are being modified.\n\n\n\n\nChange Logging\nWhen Claude performs structural or multi-file changes it should create a short session log.\nLogs are stored in:\nlogs/YYYY-MM-DD-session.md\nEach log should contain:\n\nsession date\ntasks completed\nfiles modified\nimportant notes\n\nLogs should remain concise.\n\n\n\nSession Handoff for Cross-Machine Work\nThe user works across two PCs. Claude Code conversations and plans are stored locally and do not sync between machines.\nWhen a session involves substantial design work or multi-step content creation, Claude should proactively offer to write a handoff document to logs/ before the session ends.\nHandoff documents are stored as:\nlogs/YYYY-MM-DD-handoff.md\nA handoff should contain:\n\nwhat was built and why (pedagogical or design rationale)\nkey decisions made during the conversation\nany data or output that informed the work (e.g. regression coefficients)\nwhat remains to be done\nsource materials referenced\n\nHandoff documents are more detailed than session logs. A session log records what changed; a handoff captures the reasoning and context needed to resume work in a new conversation on a different machine.\nClaude should also save a recommended resume prompt to prompts/ so the user can copy-paste it to start the next session. The prompt should reference the handoff document and any key files using @ syntax.\n\n\n\nRendering Validation\nA full site render is slow (71+ pages). Do not render after every change. Render only when explicitly asked by the user or at the very end of a multi-file task before committing.\nWhen rendering:\n\nPrefer quarto render path/to/specific-file.qmd for single-file checks (this only works after a full render has been run at least once in the session).\nUse a full quarto render only when structural files (_quarto.yml, theme, templates) have been edited or when the user requests it.\nDo not render speculatively to “check if it works.” Trust the .qmd syntax; render to verify only when there is a specific reason to doubt correctness.\n\nIf rendering fails, stop and report the issue.\n\n\n\nDeployment Rules\nClaude may publish the website when explicitly asked by the user using:\nquarto publish gh-pages --no-browser\nClaude must never publish without explicit instruction. Each publish pushes to the gh-pages branch and updates the live site.\nClaude must not:\n\npush commits to the main branch (deployment is separate from committing)\nmodify GitHub Pages configuration\n\n\n\n\nProject Memory File\nMEMORY.md contains stable project knowledge.\nClaude must treat it as authoritative documentation of project architecture and conventions.\nClaude must not modify it unless instructed.\n\n\n\nForbidden Tasks Without Explicit Instruction\nClaude must not:\n\nrefactor the repository\nrename directories\nmove files between folders\ndelete files\nmodify global configuration\nalter theme styling\nrestructure navigation (beyond adding new pages to the sidebar)"
+    "objectID": "documents/S03-propose-measurement.html#introduction",
+    "href": "documents/S03-propose-measurement.html#introduction",
+    "title": "Proposing Measurement Strategies",
+    "section": "Introduction",
+    "text": "Introduction\nHypothesis: Countries with higher levels of education are more likely to be democratic than countries with lower levels of education.\nHow should we measure the level of education? What information should we rely on to determine whether Mexico is more or less educated than Colombia?\nThe answer depends on the definition: what do we mean when we say, “level of education”? The definition should be consistent with the theory that motivates the hypothesis. Why should we expect a country’s level of education to affect whether it is democratic? What is it about education that we expect to translate into democratization?\nAs discussed in the preparatory video, some possible definitions and measurements for the level of education are the following:\n\n\n\n\n\n\n\nDefinition\nMeasurement\n\n\n\n\nAccessibility of basic education to citizens.\nLiteracy rate\n\n\nProficiency of students in math, reading, and science.\nMean PISA score\n\n\n\nMoreover, different approaches to measurement may generate variables of different types. Let’s review the types of variables:\n\n\n\n\n\n\n\n\nType of Variable\nDefinition\nExamples\n\n\n\n\nNominal\nValues are categories that cannot be ranked.\nPolitical party, place of birth, election winner.\n\n\nOrdinal\nValues are categories that can be ranked.\nHighest degree achieved, letter grade, military rank.\n\n\nInterval\nValues are numeric quantities that let us calculate the differences between them. Does not have a true zero.\nYear of birth, body temperature, credit score.\n\n\nRatio\nValues are numeric quantities that let us calculate the differences between them. Has a true zero.\nUnemployment rate, annual income, percentage of votes for a candidate."
   },
   {
-    "objectID": "activities/CLAUDE.html",
-    "href": "activities/CLAUDE.html",
-    "title": "CLAUDE.md — Rules for the activities/ directory",
+    "objectID": "documents/S03-propose-measurement.html#proposing-measurement-strategies",
+    "href": "documents/S03-propose-measurement.html#proposing-measurement-strategies",
+    "title": "Proposing Measurement Strategies",
+    "section": "Proposing measurement strategies",
+    "text": "Proposing measurement strategies\nWithin your group, analyze each of the following hypotheses:\n\nRuthless dictators are more likely to stay in power for longer.\nIn religious countries, women participate less in politics than in secular countries.\nStates with oil reserves are less likely to have strict environmental regulations than states without oil reserves.\n\nFor each hypothesis:\n\nPropose ways to measure each variable (dependent and independent).\nIdentify what type of variable your measurement strategy would generate."
+  },
+  {
+    "objectID": "documents/L02-questions-theories-hypotheses.html",
+    "href": "documents/L02-questions-theories-hypotheses.html",
+    "title": "Research Questions, Theories, and Hypotheses",
     "section": "",
-    "text": "CLAUDE.md — Rules for the activities/ directory\nThis file defines rules specific to the activities directory.\nThese rules supplement the repository-wide rules defined in the root CLAUDE.md.\nClaude must follow both.\n\n\n\nActivities Directory Structure\nThis directory contains seminar and workshop activities written as .qmd pages.\nActivities are designed for in-class use during weekly seminars.\nThere are no subdirectories. All activity files live directly in activities/.\n\n\n\nFile Naming Convention\nFiles are named using the pattern:\nA{nn}-{topic-slug}.qmd\nWhere {nn} is a two-digit week number matching the lecture week.\nWhen a week has more than one activity, a lowercase letter suffix is added:\nA{nn}a-{topic-slug}.qmd A{nn}b-{topic-slug}.qmd\nExamples:\n\nA04-distributions-activity.qmd — single activity for Week 4\nA07a-sampling-activity.qmd — first activity for Week 7\nA07b-htests-weights.qmd — second activity for Week 7\n\n\n\n\nActivity Types\nActivities fall into several types, but all share the same YAML structure:\n\nSeminar activities — structured exercises for in-class group work (e.g. A05, A07a)\nMock exam activities — practice questions in exam format (e.g. A04)\nCatch-up activities — self-guided review for students who fell behind (e.g. A06)\nPS2 workshops — structured work sessions for Problem Set 2 (e.g. A08b)\n\n\n\n\nYAML Header Format\nAll activity files use this YAML structure:\n---\ntitle: \"Activity Title\"\nsubtitle: \"Statistics for Political Science — Week N\"\nauthor: \"Leonardo Falabella\"\nformat:\n  html:\n    toc: true\n    toc-depth: 2\n    number-sections: false\n    theme: default\n---\nKey conventions:\n\nActivities use title: (not pagetitle:).\nThe subtitle: always includes the week identifier.\nActivities render as HTML only — there is no RevealJS format.\nThere is no class: field.\n\n\n\n\nContent Conventions\nActivities typically follow this structure:\n\nIntroduction section explaining the activity’s purpose\nNumbered parts or scenario-based tasks\nInterpretation or reflection questions\nSummary section listing skills practised\n\nAdditional conventions:\n\nSections are separated by horizontal rules (------------------------------------------------------------------------).\nQuestions are bolded using the format **Q1.** or **Question A:**.\nHints to students are placed in blockquotes (&gt;).\nInstructor-only hints are placed in HTML comments (&lt;!-- ... --&gt;).\nLinks to the Shared Project Folder and video pages are used where relevant.\nOne activity (A04) contains R code chunks for generating plots. Most activities do not contain executable code.\n\n\n\n\nWeek Coverage\nActivities currently exist for Weeks 4-8. Earlier weeks and later weeks will be added over time.\nSome weeks have two activities; some have one. This is intentional and varies by week.\nClaude must not create activities for missing weeks unless explicitly instructed.\n\n\n\nAllowed Tasks in activities/\nClaude may:\n\nCreate new activity files when instructed\nImprove text clarity within existing activities\nAdd questions or sections to existing activities\nFix formatting issues\n\nClaude must not:\n\nChange the YAML header format\nRename or move existing files\nConvert activities to RevealJS slide format\nModify links to external resources (Shared Project Folder, KEATS) without instruction"
+    "text": "Working in a small group to:\n\nFormulate one empirical research question\n\nClassify the question as descriptive or causal\n\nState one theory (a reasoned and precise speculation about the answer)\n\nDerive one hypothesis (an empirically testable implication of the theory)"
+  },
+  {
+    "objectID": "documents/L02-questions-theories-hypotheses.html#what-youll-practice",
+    "href": "documents/L02-questions-theories-hypotheses.html#what-youll-practice",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "",
+    "text": "Working in a small group to:\n\nFormulate one empirical research question\n\nClassify the question as descriptive or causal\n\nState one theory (a reasoned and precise speculation about the answer)\n\nDerive one hypothesis (an empirically testable implication of the theory)"
+  },
+  {
+    "objectID": "documents/L02-questions-theories-hypotheses.html#introduction",
+    "href": "documents/L02-questions-theories-hypotheses.html#introduction",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Introduction",
+    "text": "Introduction\nIn research, it can be tempting to jump straight to “testing something” without being clear about what you are asking, what explanation you find plausible, and what you would expect to observe if that explanation were correct.\nThis activity gives you a simple workflow that you will use repeatedly in this module:\nresearch question → theory → hypothesis"
+  },
+  {
+    "objectID": "documents/L02-questions-theories-hypotheses.html#overview",
+    "href": "documents/L02-questions-theories-hypotheses.html#overview",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Overview",
+    "text": "Overview\n\nDescriptive questions ask what the world looks like. They describe distributions, trends, or correlations.\nCausal questions ask what would happen if we intervened. They ask whether changing one thing would change another.\nA theory is a reasoned and precise speculation about the answer to a research question.\nA hypothesis is an empirically testable implication of a theory: given your theory, what should we observe in the world?"
+  },
+  {
+    "objectID": "documents/L02-questions-theories-hypotheses.html#examples",
+    "href": "documents/L02-questions-theories-hypotheses.html#examples",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Examples",
+    "text": "Examples\n\nDescriptive vs causal\nDescriptive questions:\n\nWhat percentage of countries are democratic?\nIs there a global trend towards democratic backsliding?\nIs democratic backsliding more prevalent in countries with higher political polarisation?\n\nCausal questions:\n\nDoes exposure to divisive content on social media make people more tolerant of political violence?\nDoes declining trust in political elites weaken commitment to democratic norms?\nDo compulsory voting laws increase political participation?\n\n\n\nFrom theory to hypothesis\n\nResearch question: How did countries’ health care systems affect their abilities to mitigate the impact of the Covid-19 pandemic?\nTheory: Countries with public health care systems took advantage of their centralised bureaucracies to implement more effective policy responses.\nHypothesis: Countries with public health care systems had lower Covid death rates than countries with private health care systems."
+  },
+  {
+    "objectID": "documents/L02-questions-theories-hypotheses.html#tasks",
+    "href": "documents/L02-questions-theories-hypotheses.html#tasks",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Tasks",
+    "text": "Tasks\nWork in groups of about three. Your goal is to produce one coherent chain consisting of a research question, a classification (descriptive/causal), one theory, and one hypothesis.\n\n1. Formulate a research question\n\nWrite one empirical research question about a social or political phenomenon.\nYour question should be answerable in principle with data (even if you do not yet know what data you would use).\n\n\n\n2. Classify your question\n\nIs your question descriptive or causal? Write one sentence explaining why.\n\n\n\n3. State one theory\n\nWrite one theory: a reasoned and precise speculation about the answer to your research question.\nThe theory should explain why (not just restate the question).\n\n\n\n4. Derive one hypothesis\n\nWrite one hypothesis implied by your theory.\nThe hypothesis should be empirically testable and should make clear what you would expect to observe in the world."
+  },
+  {
+    "objectID": "documents/L02-questions-theories-hypotheses.html#quick-self-check",
+    "href": "documents/L02-questions-theories-hypotheses.html#quick-self-check",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Quick self-check",
+    "text": "Quick self-check\n\nDoes the theory address the research question directly?\n\nDoes the hypothesis follow logically from the theory?\n\nIf the hypothesis were false, would that count against the theory (at least as stated)?"
+  },
+  {
+    "objectID": "documents/L02-questions-theories-hypotheses.html#share-out",
+    "href": "documents/L02-questions-theories-hypotheses.html#share-out",
+    "title": "Research Questions, Theories, and Hypotheses",
+    "section": "Share-out",
+    "text": "Share-out\nBe ready to share your group’s:\n\nResearch question\n\nDescriptive vs causal classification\n\nTheory\n\nHypothesis"
   },
   {
     "objectID": "activities/A10b-ps2-workshop-3.html",
@@ -7552,137 +7637,24 @@
     ]
   },
   {
-    "objectID": "attention-checks/CLAUDE.html",
-    "href": "attention-checks/CLAUDE.html",
-    "title": "CLAUDE.md — Rules for the attention-checks/ directory",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Methods Teaching Resources",
     "section": "",
-    "text": "CLAUDE.md — Rules for the attention-checks/ directory\nThis file defines rules specific to the attention-checks directory.\nThese rules supplement the repository-wide rules defined in the root CLAUDE.md.\nClaude must follow both.\n\n\n\nPurpose\nAttention checks are short quiz questions embedded in the H5P interactive videos on KEATS (Moodle).\nEach video should have at least one attention check. The questions appear during playback to verify that students are engaging with the material.\n\n\n\nFile Naming Convention\nFiles use the same prefix and slug as the corresponding slide page:\n{prefix}{nn}-{topic-slug}.txt\nWhere the prefix matches the slide family:\n\nC for concept videos (matching slides/videos-concepts/)\nS for Stata videos (matching slides/videos-stata/)\n\nExamples:\n\nC01-empirical-vs-normative.txt corresponds to slides/videos-concepts/C01-empirical-vs-normative.qmd\nS01-doing-reproducible-research.txt corresponds to slides/videos-stata/S01-doing-reproducible-research.qmd\n\n\n\n\nFile Format\nAttention check files are plain .txt files with a simple structure.\nEach file contains one or more questions. Each question consists of:\n\nA question stem (one or more lines of text)\nA blank line\nAnswer options, each on its own line, prefixed with -\nThe first option listed is always the correct answer\n\nQuestions within the same file are separated by a blank line after the last option of the preceding question.\nExample:\nWhat is reproducible research?\n\n- Being able to obtain the same results using the same data and code\n- Being able to prove that your hypothesis is correct\n- Being able to formulate a good theory for a research question\n\n\n\nQuestion Design Conventions\n\nQuestions are short and test a single concept from the video.\nMost questions have three options; some have four. Two options is the minimum.\nThe correct answer is always listed first in the file. H5P shuffles the options when displaying them to students.\nDistractors should be plausible but clearly wrong to a student who watched the video.\nSome questions include a quoted scenario or hypothesis before the question stem.\nThe tone is informal and accessible. Occasional humour in distractors is acceptable.\nA file may contain one question or several, depending on the length of the video.\n\n\n\n\nCoverage\nAttention checks exist for:\n\nAll 28 concept videos (C01–C28)\nStata videos S01–S04, S09–S11\n\nStata videos S05–S08 do not yet have attention checks.\nThere are no attention checks for lecture slides (the W-series), since lectures are not delivered as H5P interactive videos.\nClaude must not create attention checks for missing videos unless explicitly instructed.\n\n\n\nAllowed Tasks in attention-checks/\nClaude may:\n\nCreate new attention check files when instructed\nAdd questions to existing files\nImprove question clarity\nFix formatting issues\n\nClaude must not:\n\nChange the file format (plain .txt, first option = correct answer)\nRename or move existing files\nCreate attention checks for videos that do not exist"
+    "text": "A collection of short videos, slide decks, and class activities for teaching introductory research methods and quantitative analysis in the social sciences. The materials were developed for an undergraduate Statistics module in Politics at King’s College London, and are designed to be modular: individual videos, slides, or activities can be reused or adapted for related courses without adopting the full module structure.\nEach topic combines short concept videos, slide decks, and a class activity. Concept videos focus on intuition and pedagogy, and are designed to be software-agnostic. Applied videos illustrate how each idea translates into practical data work in Stata. The intent is to support flipped and blended teaching: students prepare with the videos before class, and in-person time is used for active work on activities and applications.\nThe materials are intended to be adaptable for colleagues teaching research design, introductory quantitative methods, and applied data analysis. Individual pieces can be picked up without committing to the full sequence.\nMaterials developed by Leonardo Falabella (leonardo.falabella@kcl.ac.uk).",
+    "crumbs": [
+      "Methods Teaching Resources"
+    ]
   },
   {
-    "objectID": "documents/L02-questions-theories-hypotheses.html",
-    "href": "documents/L02-questions-theories-hypotheses.html",
-    "title": "Research Questions, Theories, and Hypotheses",
-    "section": "",
-    "text": "Working in a small group to:\n\nFormulate one empirical research question\n\nClassify the question as descriptive or causal\n\nState one theory (a reasoned and precise speculation about the answer)\n\nDerive one hypothesis (an empirically testable implication of the theory)"
-  },
-  {
-    "objectID": "documents/L02-questions-theories-hypotheses.html#what-youll-practice",
-    "href": "documents/L02-questions-theories-hypotheses.html#what-youll-practice",
-    "title": "Research Questions, Theories, and Hypotheses",
-    "section": "",
-    "text": "Working in a small group to:\n\nFormulate one empirical research question\n\nClassify the question as descriptive or causal\n\nState one theory (a reasoned and precise speculation about the answer)\n\nDerive one hypothesis (an empirically testable implication of the theory)"
-  },
-  {
-    "objectID": "documents/L02-questions-theories-hypotheses.html#introduction",
-    "href": "documents/L02-questions-theories-hypotheses.html#introduction",
-    "title": "Research Questions, Theories, and Hypotheses",
-    "section": "Introduction",
-    "text": "Introduction\nIn research, it can be tempting to jump straight to “testing something” without being clear about what you are asking, what explanation you find plausible, and what you would expect to observe if that explanation were correct.\nThis activity gives you a simple workflow that you will use repeatedly in this module:\nresearch question → theory → hypothesis"
-  },
-  {
-    "objectID": "documents/L02-questions-theories-hypotheses.html#overview",
-    "href": "documents/L02-questions-theories-hypotheses.html#overview",
-    "title": "Research Questions, Theories, and Hypotheses",
-    "section": "Overview",
-    "text": "Overview\n\nDescriptive questions ask what the world looks like. They describe distributions, trends, or correlations.\nCausal questions ask what would happen if we intervened. They ask whether changing one thing would change another.\nA theory is a reasoned and precise speculation about the answer to a research question.\nA hypothesis is an empirically testable implication of a theory: given your theory, what should we observe in the world?"
-  },
-  {
-    "objectID": "documents/L02-questions-theories-hypotheses.html#examples",
-    "href": "documents/L02-questions-theories-hypotheses.html#examples",
-    "title": "Research Questions, Theories, and Hypotheses",
-    "section": "Examples",
-    "text": "Examples\n\nDescriptive vs causal\nDescriptive questions:\n\nWhat percentage of countries are democratic?\nIs there a global trend towards democratic backsliding?\nIs democratic backsliding more prevalent in countries with higher political polarisation?\n\nCausal questions:\n\nDoes exposure to divisive content on social media make people more tolerant of political violence?\nDoes declining trust in political elites weaken commitment to democratic norms?\nDo compulsory voting laws increase political participation?\n\n\n\nFrom theory to hypothesis\n\nResearch question: How did countries’ health care systems affect their abilities to mitigate the impact of the Covid-19 pandemic?\nTheory: Countries with public health care systems took advantage of their centralised bureaucracies to implement more effective policy responses.\nHypothesis: Countries with public health care systems had lower Covid death rates than countries with private health care systems."
-  },
-  {
-    "objectID": "documents/L02-questions-theories-hypotheses.html#tasks",
-    "href": "documents/L02-questions-theories-hypotheses.html#tasks",
-    "title": "Research Questions, Theories, and Hypotheses",
-    "section": "Tasks",
-    "text": "Tasks\nWork in groups of about three. Your goal is to produce one coherent chain consisting of a research question, a classification (descriptive/causal), one theory, and one hypothesis.\n\n1. Formulate a research question\n\nWrite one empirical research question about a social or political phenomenon.\nYour question should be answerable in principle with data (even if you do not yet know what data you would use).\n\n\n\n2. Classify your question\n\nIs your question descriptive or causal? Write one sentence explaining why.\n\n\n\n3. State one theory\n\nWrite one theory: a reasoned and precise speculation about the answer to your research question.\nThe theory should explain why (not just restate the question).\n\n\n\n4. Derive one hypothesis\n\nWrite one hypothesis implied by your theory.\nThe hypothesis should be empirically testable and should make clear what you would expect to observe in the world."
-  },
-  {
-    "objectID": "documents/L02-questions-theories-hypotheses.html#quick-self-check",
-    "href": "documents/L02-questions-theories-hypotheses.html#quick-self-check",
-    "title": "Research Questions, Theories, and Hypotheses",
-    "section": "Quick self-check",
-    "text": "Quick self-check\n\nDoes the theory address the research question directly?\n\nDoes the hypothesis follow logically from the theory?\n\nIf the hypothesis were false, would that count against the theory (at least as stated)?"
-  },
-  {
-    "objectID": "documents/L02-questions-theories-hypotheses.html#share-out",
-    "href": "documents/L02-questions-theories-hypotheses.html#share-out",
-    "title": "Research Questions, Theories, and Hypotheses",
-    "section": "Share-out",
-    "text": "Share-out\nBe ready to share your group’s:\n\nResearch question\n\nDescriptive vs causal classification\n\nTheory\n\nHypothesis"
-  },
-  {
-    "objectID": "documents/S03-propose-measurement.html",
-    "href": "documents/S03-propose-measurement.html",
-    "title": "Proposing Measurement Strategies",
-    "section": "",
-    "text": "Working in a small group to:\n\nIdentify types of variables.\nPropose measurement strategies for variables."
-  },
-  {
-    "objectID": "documents/S03-propose-measurement.html#what-youll-practice",
-    "href": "documents/S03-propose-measurement.html#what-youll-practice",
-    "title": "Proposing Measurement Strategies",
-    "section": "",
-    "text": "Working in a small group to:\n\nIdentify types of variables.\nPropose measurement strategies for variables."
-  },
-  {
-    "objectID": "documents/S03-propose-measurement.html#introduction",
-    "href": "documents/S03-propose-measurement.html#introduction",
-    "title": "Proposing Measurement Strategies",
-    "section": "Introduction",
-    "text": "Introduction\nHypothesis: Countries with higher levels of education are more likely to be democratic than countries with lower levels of education.\nHow should we measure the level of education? What information should we rely on to determine whether Mexico is more or less educated than Colombia?\nThe answer depends on the definition: what do we mean when we say, “level of education”? The definition should be consistent with the theory that motivates the hypothesis. Why should we expect a country’s level of education to affect whether it is democratic? What is it about education that we expect to translate into democratization?\nAs discussed in the preparatory video, some possible definitions and measurements for the level of education are the following:\n\n\n\n\n\n\n\nDefinition\nMeasurement\n\n\n\n\nAccessibility of basic education to citizens.\nLiteracy rate\n\n\nProficiency of students in math, reading, and science.\nMean PISA score\n\n\n\nMoreover, different approaches to measurement may generate variables of different types. Let’s review the types of variables:\n\n\n\n\n\n\n\n\nType of Variable\nDefinition\nExamples\n\n\n\n\nNominal\nValues are categories that cannot be ranked.\nPolitical party, place of birth, election winner.\n\n\nOrdinal\nValues are categories that can be ranked.\nHighest degree achieved, letter grade, military rank.\n\n\nInterval\nValues are numeric quantities that let us calculate the differences between them. Does not have a true zero.\nYear of birth, body temperature, credit score.\n\n\nRatio\nValues are numeric quantities that let us calculate the differences between them. Has a true zero.\nUnemployment rate, annual income, percentage of votes for a candidate."
-  },
-  {
-    "objectID": "documents/S03-propose-measurement.html#proposing-measurement-strategies",
-    "href": "documents/S03-propose-measurement.html#proposing-measurement-strategies",
-    "title": "Proposing Measurement Strategies",
-    "section": "Proposing measurement strategies",
-    "text": "Proposing measurement strategies\nWithin your group, analyze each of the following hypotheses:\n\nRuthless dictators are more likely to stay in power for longer.\nIn religious countries, women participate less in politics than in secular countries.\nStates with oil reserves are less likely to have strict environmental regulations than states without oil reserves.\n\nFor each hypothesis:\n\nPropose ways to measure each variable (dependent and independent).\nIdentify what type of variable your measurement strategy would generate."
-  },
-  {
-    "objectID": "legacy/CLAUDE.html",
-    "href": "legacy/CLAUDE.html",
-    "title": "CLAUDE.md — Legacy Materials Directory",
-    "section": "",
-    "text": "This directory contains teaching materials from a previous version of this course taught at UCSD. These materials are read-only reference sources used as starting points when creating new content for the current KCL course.\nClaude must never modify files in this directory (except this CLAUDE.md file, if instructed).\n\n\n\nThe slide decks, activities, and videos on the Quarto website are created iteratively with Claude. The typical workflow is:\n\nRead relevant legacy materials (slides, transcripts, reference pages) on a topic\nUse them as springboards for new .qmd content — adapting the pedagogical structure, explanations, and teaching sequence\nChange the canonical example to use KCL-era datasets\n\nLegacy materials capture the pedagogical reasoning and teaching sequence developed over previous iterations of the course. They are valuable for their structure and explanations, not for their specific examples or data.\n\n\n\n\nThe UCSD materials used California county-level data as the running example (e.g., Trump vote share predicted by percent white population, income changes).\nThe KCL materials use UK datasets:\n\n\n\n\n\n\n\nDataset\nExample\n\n\n\n\nBrexit Regional\nLeave vote share predicted by education, import shock, unemployment, immigration\n\n\nBritish Election Study (BES) 2024\nVote choice, ideology, newspaper readership, gender\n\n\nQuality of Government (QoG) 2026\nCross-national comparisons: democracy, corruption, turnout, inequality\n\n\nNational Student Survey (NSS) 2025\nStudent satisfaction distributions\n\n\n\nWhen creating new content from legacy materials, always adapt examples to use these datasets. The datasets are in shared-project-folder/data-raw/.\n\n\n\n\n\n\nPDF exports of UCSD lecture slide decks, numbered L01–L19:\n\n\n\nFile\nTopic\n\n\n\n\nL01_Quant_Qual.pdf\nQuantitative vs qualitative methods\n\n\nL02_Hypotheses.pdf\nHypotheses\n\n\nL03_Measurement.pdf\nMeasurement\n\n\nL05_Data_Frames.pdf\nData frames\n\n\nL06_Descriptive.pdf\nDescriptive statistics\n\n\nL07_Datasets.pdf\nDatasets\n\n\nL08_Samples.pdf\nSamples and sampling\n\n\nL09_Hypothesis_Tests.pdf\nHypothesis tests\n\n\nL10_Confounding.pdf\nConfounding variables\n\n\nL12_P-values.pdf\nP-values\n\n\nL13_Regression.pdf\nBivariate regression\n\n\nL14_Dummy.pdf\nDummy variables\n\n\nL15_Nominal.pdf\nNominal variables\n\n\nL16_Multivariate.pdf\nMultivariate regression\n\n\nL17_Reg_Tables.pdf\nReading regression tables\n\n\nL18_Reg_Advanced.pdf\nAdvanced regression topics\n\n\nL19_Critical.pdf\nCritical interpretation\n\n\n\n\n\n\nPDF reference pages — longer-form conceptual explanations used as the basis for video slide decks:\n\n\n\n\n\n\n\nFile\nTopic\n\n\n\n\nRegression-Analysis-Introduction.pdf\nLinear functions, bivariate regression basics\n\n\nRegression-R-squared.pdf\nR-squared, residual and total sum of squares\n\n\nMultivariate-Regression-Introduction.pdf\nMultiple predictors, “holding constant” interpretation, confounding\n\n\nStandard-Error.pdf\nStandard error vs standard deviation, significance testing\n\n\n\n\n\n\nText transcripts of UCSD-era lecture videos. These capture the spoken explanations and are especially useful for understanding how concepts were presented verbally:\n\n\n\n\n\n\n\nFile\nTopic\n\n\n\n\nRegression-Analysis-Introduction.txt\nRegression equation, slope, intercept\n\n\nRegression-Slope.txt\nCovariance/variance formula, OLS, residuals\n\n\nRegression R-Squared.txt\nVariance explained, reading regression output\n\n\nRegression-Inference.txt\nP-values, confidence intervals, factors affecting significance\n\n\nMultivariate-confounding.txt\nConfounding definition, multivariate regression as control\n\n\nReading-regression-tables.txt\nMultiple models, star notation, standard errors\n\n\n\n\n\n\nClassroom activity documents from UCSD:\n\n\n\nFile\nTopic\n\n\n\n\nCA08_Sampling.docx\nSampling activity\n\n\nCA10_Confounding.docx\nConfounding variables activity\n\n\n\n\n\n\nPlanning documents that record the pedagogical reasoning behind how specific weeks were structured:\n\n\n\n\n\n\n\nFile\nTopic\n\n\n\n\nWeek-9-structure.txt\nWeek 9 structure: confounding as central topic, stop-and-frisk activity\n\n\n\nThese are particularly valuable because they capture the why behind content decisions — not just what was taught, but the reasoning for the teaching sequence.\n\n\n\n\n\nThe following table shows how legacy sources were used to create the current Week 8–9 materials (as an example of the workflow):\n\n\n\n\n\n\n\nLegacy source\nCurrent page\n\n\n\n\npages/Regression-Analysis-Introduction.pdf\nslides/videos-concepts/C18-regression-intro.qmd\n\n\ntranscripts/Regression-Slope.txt\nslides/videos-concepts/C19-regression-slope.qmd\n\n\ntranscripts/Regression-Inference.txt\nslides/videos-concepts/C20-regression-inference.qmd\n\n\npages/Regression-R-squared.pdf + transcripts/Regression R-Squared.txt\nslides/videos-concepts/C21-regression-rsquared.qmd\n\n\ntranscripts/Multivariate-confounding.txt\nslides/videos-concepts/C22-confounding.qmd\n\n\nslides/L13_Regression.pdf\nslides/lectures/W08-regression.qmd\n\n\nprompts/Week-9-structure.txt\nStructure of slides/lectures/W09-confounding.qmd + activities/A09a-confounding-reverse.qmd\n\n\nactivities/CA10_Confounding.docx\nactivities/A09a-confounding-reverse.qmd\n\n\n\n\n\n\n\nWhen creating new content from legacy materials:\n\nRead legacy files for pedagogical structure, flow, and explanations\nAdapt examples to use KCL datasets (Brexit, BES, QoG, NSS)\nPreserve the teaching progression and conceptual scaffolding\nDo not copy text verbatim — rewrite for the new context\nDo not modify any legacy files\nDo not assume legacy structure maps 1:1 to current weeks — the KCL course reorganised topics"
-  },
-  {
-    "objectID": "legacy/CLAUDE.html#purpose",
-    "href": "legacy/CLAUDE.html#purpose",
-    "title": "CLAUDE.md — Legacy Materials Directory",
-    "section": "",
-    "text": "The slide decks, activities, and videos on the Quarto website are created iteratively with Claude. The typical workflow is:\n\nRead relevant legacy materials (slides, transcripts, reference pages) on a topic\nUse them as springboards for new .qmd content — adapting the pedagogical structure, explanations, and teaching sequence\nChange the canonical example to use KCL-era datasets\n\nLegacy materials capture the pedagogical reasoning and teaching sequence developed over previous iterations of the course. They are valuable for their structure and explanations, not for their specific examples or data."
-  },
-  {
-    "objectID": "legacy/CLAUDE.html#canonical-example-shift",
-    "href": "legacy/CLAUDE.html#canonical-example-shift",
-    "title": "CLAUDE.md — Legacy Materials Directory",
-    "section": "",
-    "text": "The UCSD materials used California county-level data as the running example (e.g., Trump vote share predicted by percent white population, income changes).\nThe KCL materials use UK datasets:\n\n\n\n\n\n\n\nDataset\nExample\n\n\n\n\nBrexit Regional\nLeave vote share predicted by education, import shock, unemployment, immigration\n\n\nBritish Election Study (BES) 2024\nVote choice, ideology, newspaper readership, gender\n\n\nQuality of Government (QoG) 2026\nCross-national comparisons: democracy, corruption, turnout, inequality\n\n\nNational Student Survey (NSS) 2025\nStudent satisfaction distributions\n\n\n\nWhen creating new content from legacy materials, always adapt examples to use these datasets. The datasets are in shared-project-folder/data-raw/."
-  },
-  {
-    "objectID": "legacy/CLAUDE.html#directory-structure",
-    "href": "legacy/CLAUDE.html#directory-structure",
-    "title": "CLAUDE.md — Legacy Materials Directory",
-    "section": "",
-    "text": "PDF exports of UCSD lecture slide decks, numbered L01–L19:\n\n\n\nFile\nTopic\n\n\n\n\nL01_Quant_Qual.pdf\nQuantitative vs qualitative methods\n\n\nL02_Hypotheses.pdf\nHypotheses\n\n\nL03_Measurement.pdf\nMeasurement\n\n\nL05_Data_Frames.pdf\nData frames\n\n\nL06_Descriptive.pdf\nDescriptive statistics\n\n\nL07_Datasets.pdf\nDatasets\n\n\nL08_Samples.pdf\nSamples and sampling\n\n\nL09_Hypothesis_Tests.pdf\nHypothesis tests\n\n\nL10_Confounding.pdf\nConfounding variables\n\n\nL12_P-values.pdf\nP-values\n\n\nL13_Regression.pdf\nBivariate regression\n\n\nL14_Dummy.pdf\nDummy variables\n\n\nL15_Nominal.pdf\nNominal variables\n\n\nL16_Multivariate.pdf\nMultivariate regression\n\n\nL17_Reg_Tables.pdf\nReading regression tables\n\n\nL18_Reg_Advanced.pdf\nAdvanced regression topics\n\n\nL19_Critical.pdf\nCritical interpretation\n\n\n\n\n\n\nPDF reference pages — longer-form conceptual explanations used as the basis for video slide decks:\n\n\n\n\n\n\n\nFile\nTopic\n\n\n\n\nRegression-Analysis-Introduction.pdf\nLinear functions, bivariate regression basics\n\n\nRegression-R-squared.pdf\nR-squared, residual and total sum of squares\n\n\nMultivariate-Regression-Introduction.pdf\nMultiple predictors, “holding constant” interpretation, confounding\n\n\nStandard-Error.pdf\nStandard error vs standard deviation, significance testing\n\n\n\n\n\n\nText transcripts of UCSD-era lecture videos. These capture the spoken explanations and are especially useful for understanding how concepts were presented verbally:\n\n\n\n\n\n\n\nFile\nTopic\n\n\n\n\nRegression-Analysis-Introduction.txt\nRegression equation, slope, intercept\n\n\nRegression-Slope.txt\nCovariance/variance formula, OLS, residuals\n\n\nRegression R-Squared.txt\nVariance explained, reading regression output\n\n\nRegression-Inference.txt\nP-values, confidence intervals, factors affecting significance\n\n\nMultivariate-confounding.txt\nConfounding definition, multivariate regression as control\n\n\nReading-regression-tables.txt\nMultiple models, star notation, standard errors\n\n\n\n\n\n\nClassroom activity documents from UCSD:\n\n\n\nFile\nTopic\n\n\n\n\nCA08_Sampling.docx\nSampling activity\n\n\nCA10_Confounding.docx\nConfounding variables activity\n\n\n\n\n\n\nPlanning documents that record the pedagogical reasoning behind how specific weeks were structured:\n\n\n\n\n\n\n\nFile\nTopic\n\n\n\n\nWeek-9-structure.txt\nWeek 9 structure: confounding as central topic, stop-and-frisk activity\n\n\n\nThese are particularly valuable because they capture the why behind content decisions — not just what was taught, but the reasoning for the teaching sequence."
-  },
-  {
-    "objectID": "legacy/CLAUDE.html#how-legacy-materials-map-to-current-content",
-    "href": "legacy/CLAUDE.html#how-legacy-materials-map-to-current-content",
-    "title": "CLAUDE.md — Legacy Materials Directory",
-    "section": "",
-    "text": "The following table shows how legacy sources were used to create the current Week 8–9 materials (as an example of the workflow):\n\n\n\n\n\n\n\nLegacy source\nCurrent page\n\n\n\n\npages/Regression-Analysis-Introduction.pdf\nslides/videos-concepts/C18-regression-intro.qmd\n\n\ntranscripts/Regression-Slope.txt\nslides/videos-concepts/C19-regression-slope.qmd\n\n\ntranscripts/Regression-Inference.txt\nslides/videos-concepts/C20-regression-inference.qmd\n\n\npages/Regression-R-squared.pdf + transcripts/Regression R-Squared.txt\nslides/videos-concepts/C21-regression-rsquared.qmd\n\n\ntranscripts/Multivariate-confounding.txt\nslides/videos-concepts/C22-confounding.qmd\n\n\nslides/L13_Regression.pdf\nslides/lectures/W08-regression.qmd\n\n\nprompts/Week-9-structure.txt\nStructure of slides/lectures/W09-confounding.qmd + activities/A09a-confounding-reverse.qmd\n\n\nactivities/CA10_Confounding.docx\nactivities/A09a-confounding-reverse.qmd"
-  },
-  {
-    "objectID": "legacy/CLAUDE.html#guidelines-for-claude",
-    "href": "legacy/CLAUDE.html#guidelines-for-claude",
-    "title": "CLAUDE.md — Legacy Materials Directory",
-    "section": "",
-    "text": "When creating new content from legacy materials:\n\nRead legacy files for pedagogical structure, flow, and explanations\nAdapt examples to use KCL datasets (Brexit, BES, QoG, NSS)\nPreserve the teaching progression and conceptual scaffolding\nDo not copy text verbatim — rewrite for the new context\nDo not modify any legacy files\nDo not assume legacy structure maps 1:1 to current weeks — the KCL course reorganised topics"
+    "objectID": "index.html#browse-by-topic",
+    "href": "index.html#browse-by-topic",
+    "title": "Methods Teaching Resources",
+    "section": "Browse by topic",
+    "text": "Browse by topic\n\n\n\n\nResearch Design\nEmpirical vs normative questions, descriptive vs causal claims, units, theories, and hypotheses.\n\n\n\n\n\n\nMeasurement\nOperationalising concepts, variable types, and reading codebooks.\n\n\n\n\n\n\nDescribing Data — Univariate\nCentral tendency, dispersion, bar charts, and histograms.\n\n\n\n\n\n\nDescribing Relationships — Bivariate\nCorrelations, comparing means, scatter plots, and choosing summaries by variable type.\n\n\n\n\n\n\nInference and Uncertainty\nSampling, confidence intervals, hypothesis tests, and p-values.\n\n\n\n\n\n\nRegression\nBivariate regression: slope, inference, and R-squared.\n\n\n\n\n\n\nCausal Inference\nConfounding, reverse causality, and random assignment.\n\n\n\n\n\n\nMultivariate Regression\nControls, standard errors, and reading regression tables.",
+    "crumbs": [
+      "Methods Teaching Resources"
+    ]
   },
   {
     "objectID": "logs/2026-03-29-handoff.html",
@@ -7769,67 +7741,109 @@
     "text": "activities/A01-quant-qual.qmd\nactivities/A02-questions-theories-hypotheses.qmd\nactivities/A03-propose-measurement.qmd\ndocuments/4SSPP111_Mock_Exam.qmd\ndocuments/4SSPP111_Mock_Exam.docx\ndocuments/mock_exam_reg_table.html\nr/mock_exam_reg_table.R\n\n\n\n\n\n_quarto.yml (added A01, A02, A03 to sidebar)\nreference/activities_metadata.csv (added 3 rows, updated 12 titles)\nAll 15 activities/*.qmd files (title, horizontal rules, “What you’ll practice”)"
   },
   {
-    "objectID": "prompts/resume-mock-exam.html",
-    "href": "prompts/resume-mock-exam.html",
+    "objectID": "MEMORY.html",
+    "href": "MEMORY.html",
+    "title": "MEMORY.md — Methods Education Website",
+    "section": "",
+    "text": "This repository contains a Quarto website used to host teaching materials for a university module on research methods and statistics.\nThe site publishes lecture slides, concept explanations, activities, quizzes, and reference pages.\nAll materials are written in Quarto (.qmd) and rendered as a static website hosted on GitHub Pages.\nThe goal of the project is to provide students with structured teaching materials combining slide explanations and lecture videos.\n\n\n\n\nThe site uses HTML pages as the primary navigation format.\nEach slide deck has two formats:\n\nHTML page view (default navigation format)\nRevealJS slide presentation\n\nStudents normally read the HTML page view.\nRevealJS is available through the “Other Formats → RevealJS” link and is mainly used for presenting slides in class.\n\n\n\n\nMost slide pages follow this structure:\n\nYouTube lecture video embed (when available)\nStructured headings explaining concepts\nOptional link to the RevealJS slide format\n\nVideos are embedded directly inside the .qmd page using the full YouTube embed code.\nThere is currently no reusable embed template.\n\n\n\n\nVideo integration is still in progress.\n\nSome lecture videos have been uploaded to YouTube.\nOnly some of those videos are currently embedded on the site.\nMany pages still do not contain embedded videos.\n\nAt a later stage the embedding process may be completed programmatically using Claude Code.\n\n\n\n\nContent directories:\nslides/ — lecture and concept slide decks\nactivities/ — interactive exercises\nquizzes/ — quiz material attention-checks/ — classroom attention checks reference/ — project reference material\nShared resources:\nassets/ — images and media cards/ — thumbnail images for YouTube video uploads theme/ — SCSS theme files controlling slide styling\n\n\n\n\nreference/videos_metadata.csv\nThis file contains structured metadata about lecture videos.\nIt may be used to guide the creation or updating of slide pages.\nThe file is read-only for Claude unless explicitly instructed.\n\n\n\n\nThese directories are generated automatically by Quarto and must not be edited.\n.quarto/\n_freeze/\n_site/\n\n\n\n\n_quarto.yml — defines site navigation and rendering\nstyles.css — site-level styling\ntheme/ — RevealJS styling\n\n\n\n\nThe site uses a left sidebar navigation panel.\nSidebar items link to HTML page versions of slide decks and activities.\nRevealJS slides are accessed through the “Other Formats” menu.\n\n\n\n\nThe site is rendered locally with Quarto and deployed to GitHub Pages.\nTypical workflow:\n\nedit .qmd files\npreview locally with quarto preview\nrender the site\npublish changes\n\nClaude Code must never perform deployment actions.\n\n\n\n\nshared-project-folder/ is a student-facing teaching resource shared via OneDrive (view-only for students). It is gitignored.\nIt contains:\n\ndata-raw/ — original datasets (.dta) and codebooks\ndata-clean/ — cleaned datasets produced by do-files\ndo/ — Stata do-files used in teaching\noutput/ — graphs generated by do-files\n\nThe do-files in this folder are the actual statistical code that the course teaching materials walk students through. Lecture slides, seminar activities, and problem sets on the website all reference analyses performed by these do-files with these datasets.\nThis tight coupling means that Claude Code’s ability to read, edit, and execute these do-files is central to maintaining and developing the course.\n\n\n\n\nClaude Code can execute Stata do-files from the terminal and read the output.\nThis was established on 2026-03-15 after resolving three layered Windows compatibility issues (MSYS2 path mangling, GUI process control, and output capture).\nThe full invocation recipe is documented in CLAUDE.md under “Running Stata from Claude Code”.\nHigh-level approach:\n\nWrite a wrapper do-file to C:\\temp\\ with log using / log close / exit, clear\nExecute via MSYS_NO_PATHCONV=1 powershell -Command 'Start-Process ... -Wait'\nRead C:\\temp\\stata-output.log for the output\n\nStata executable: C:\\Program Files\\Stata19\\StataSE-64.exe\n\n\n\n\nlegacy/ contains UCSD-era teaching materials (slides, transcripts, reference pages, activities, planning prompts). These are gitignored and read-only.\nNew slide decks and videos for the KCL course are created using legacy materials as starting points. The process involves reading the legacy source, adapting the pedagogical structure, and replacing examples with UK datasets (Brexit, BES, QoG, NSS).\nThe UCSD materials used California county / Trump vote data as the running example. The KCL materials use Brexit Regional data (education, import shock, unemployment predicting Leave vote share) as the primary regression example.\nSee legacy/CLAUDE.md for the full file inventory and the mapping between legacy sources and current pages."
+  },
+  {
+    "objectID": "MEMORY.html#project-overview",
+    "href": "MEMORY.html#project-overview",
+    "title": "MEMORY.md — Methods Education Website",
+    "section": "",
+    "text": "This repository contains a Quarto website used to host teaching materials for a university module on research methods and statistics.\nThe site publishes lecture slides, concept explanations, activities, quizzes, and reference pages.\nAll materials are written in Quarto (.qmd) and rendered as a static website hosted on GitHub Pages.\nThe goal of the project is to provide students with structured teaching materials combining slide explanations and lecture videos."
+  },
+  {
+    "objectID": "MEMORY.html#core-design-decisions",
+    "href": "MEMORY.html#core-design-decisions",
+    "title": "MEMORY.md — Methods Education Website",
+    "section": "",
+    "text": "The site uses HTML pages as the primary navigation format.\nEach slide deck has two formats:\n\nHTML page view (default navigation format)\nRevealJS slide presentation\n\nStudents normally read the HTML page view.\nRevealJS is available through the “Other Formats → RevealJS” link and is mainly used for presenting slides in class."
+  },
+  {
+    "objectID": "MEMORY.html#slide-page-structure",
+    "href": "MEMORY.html#slide-page-structure",
+    "title": "MEMORY.md — Methods Education Website",
+    "section": "",
+    "text": "Most slide pages follow this structure:\n\nYouTube lecture video embed (when available)\nStructured headings explaining concepts\nOptional link to the RevealJS slide format\n\nVideos are embedded directly inside the .qmd page using the full YouTube embed code.\nThere is currently no reusable embed template."
+  },
+  {
+    "objectID": "MEMORY.html#current-state-of-video-integration",
+    "href": "MEMORY.html#current-state-of-video-integration",
+    "title": "MEMORY.md — Methods Education Website",
+    "section": "",
+    "text": "Video integration is still in progress.\n\nSome lecture videos have been uploaded to YouTube.\nOnly some of those videos are currently embedded on the site.\nMany pages still do not contain embedded videos.\n\nAt a later stage the embedding process may be completed programmatically using Claude Code."
+  },
+  {
+    "objectID": "MEMORY.html#site-architecture",
+    "href": "MEMORY.html#site-architecture",
+    "title": "MEMORY.md — Methods Education Website",
+    "section": "",
+    "text": "Content directories:\nslides/ — lecture and concept slide decks\nactivities/ — interactive exercises\nquizzes/ — quiz material attention-checks/ — classroom attention checks reference/ — project reference material\nShared resources:\nassets/ — images and media cards/ — thumbnail images for YouTube video uploads theme/ — SCSS theme files controlling slide styling"
+  },
+  {
+    "objectID": "MEMORY.html#key-reference-file",
+    "href": "MEMORY.html#key-reference-file",
+    "title": "MEMORY.md — Methods Education Website",
+    "section": "",
+    "text": "reference/videos_metadata.csv\nThis file contains structured metadata about lecture videos.\nIt may be used to guide the creation or updating of slide pages.\nThe file is read-only for Claude unless explicitly instructed."
+  },
+  {
+    "objectID": "MEMORY.html#quarto-build-directories",
+    "href": "MEMORY.html#quarto-build-directories",
+    "title": "MEMORY.md — Methods Education Website",
+    "section": "",
+    "text": "These directories are generated automatically by Quarto and must not be edited.\n.quarto/\n_freeze/\n_site/"
+  },
+  {
+    "objectID": "MEMORY.html#configuration-files",
+    "href": "MEMORY.html#configuration-files",
+    "title": "MEMORY.md — Methods Education Website",
+    "section": "",
+    "text": "_quarto.yml — defines site navigation and rendering\nstyles.css — site-level styling\ntheme/ — RevealJS styling"
+  },
+  {
+    "objectID": "MEMORY.html#navigation-model",
+    "href": "MEMORY.html#navigation-model",
+    "title": "MEMORY.md — Methods Education Website",
+    "section": "",
+    "text": "The site uses a left sidebar navigation panel.\nSidebar items link to HTML page versions of slide decks and activities.\nRevealJS slides are accessed through the “Other Formats” menu."
+  },
+  {
+    "objectID": "MEMORY.html#deployment",
+    "href": "MEMORY.html#deployment",
+    "title": "MEMORY.md — Methods Education Website",
+    "section": "",
+    "text": "The site is rendered locally with Quarto and deployed to GitHub Pages.\nTypical workflow:\n\nedit .qmd files\npreview locally with quarto preview\nrender the site\npublish changes\n\nClaude Code must never perform deployment actions."
+  },
+  {
+    "objectID": "MEMORY.html#shared-project-folder",
+    "href": "MEMORY.html#shared-project-folder",
+    "title": "MEMORY.md — Methods Education Website",
+    "section": "",
+    "text": "shared-project-folder/ is a student-facing teaching resource shared via OneDrive (view-only for students). It is gitignored.\nIt contains:\n\ndata-raw/ — original datasets (.dta) and codebooks\ndata-clean/ — cleaned datasets produced by do-files\ndo/ — Stata do-files used in teaching\noutput/ — graphs generated by do-files\n\nThe do-files in this folder are the actual statistical code that the course teaching materials walk students through. Lecture slides, seminar activities, and problem sets on the website all reference analyses performed by these do-files with these datasets.\nThis tight coupling means that Claude Code’s ability to read, edit, and execute these do-files is central to maintaining and developing the course."
+  },
+  {
+    "objectID": "MEMORY.html#stata-integration",
+    "href": "MEMORY.html#stata-integration",
+    "title": "MEMORY.md — Methods Education Website",
+    "section": "",
+    "text": "Claude Code can execute Stata do-files from the terminal and read the output.\nThis was established on 2026-03-15 after resolving three layered Windows compatibility issues (MSYS2 path mangling, GUI process control, and output capture).\nThe full invocation recipe is documented in CLAUDE.md under “Running Stata from Claude Code”.\nHigh-level approach:\n\nWrite a wrapper do-file to C:\\temp\\ with log using / log close / exit, clear\nExecute via MSYS_NO_PATHCONV=1 powershell -Command 'Start-Process ... -Wait'\nRead C:\\temp\\stata-output.log for the output\n\nStata executable: C:\\Program Files\\Stata19\\StataSE-64.exe"
+  },
+  {
+    "objectID": "MEMORY.html#legacy-materials-and-content-creation",
+    "href": "MEMORY.html#legacy-materials-and-content-creation",
+    "title": "MEMORY.md — Methods Education Website",
+    "section": "",
+    "text": "legacy/ contains UCSD-era teaching materials (slides, transcripts, reference pages, activities, planning prompts). These are gitignored and read-only.\nNew slide decks and videos for the KCL course are created using legacy materials as starting points. The process involves reading the legacy source, adapting the pedagogical structure, and replacing examples with UK datasets (Brexit, BES, QoG, NSS).\nThe UCSD materials used California county / Trump vote data as the running example. The KCL materials use Brexit Regional data (education, import shock, unemployment predicting Leave vote share) as the primary regression example.\nSee legacy/CLAUDE.md for the full file inventory and the mapping between legacy sources and current pages."
+  },
+  {
+    "objectID": "prompts/resume-w11-lecture.html",
+    "href": "prompts/resume-w11-lecture.html",
     "title": "",
     "section": "",
-    "text": "I’m resuming work on the mock exam that was created in a previous session on another machine. Please read the handoff document at @logs/2026-04-01-handoff.md to understand what was built, the design decisions, and what remains to be done.\nThe mock exam Word document is at @documents/4SSPP111_Mock_Exam.docx. The expected answers for all 13 questions are in the plan file at @.claude/plans/spicy-stirring-pie.md (look for the “Expected answer” lines under each question).\nI’d like to review the mock exam and discuss next steps. I’ll tell you what I want to adjust after you’ve read everything."
-  },
-  {
-    "objectID": "quizzes/CLAUDE.html",
-    "href": "quizzes/CLAUDE.html",
-    "title": "CLAUDE.md — Rules for the quizzes/ directory",
-    "section": "",
-    "text": "CLAUDE.md — Rules for the quizzes/ directory\nThis file defines rules specific to the quizzes directory.\nThese rules supplement the repository-wide rules defined in the root CLAUDE.md.\nClaude must follow both.\n\n\n\nQuizzes Directory Structure\nThe quizzes directory uses a two-stage workflow:\n\nQuizzes are authored in a canonical plain-text format stored in canonical/.\nThe canonical files are converted to Moodle XML for import into KEATS (Moodle). The XML files are stored in moodle-xml/.\n\nThe conversion prompt used for generating Moodle XML is stored in:\nquizzes/moodle_xml_conversion_prompt.txt\nClaude must not modify the conversion prompt unless explicitly instructed.\n\n\n\nFile Naming Convention\nAll quiz files are named by week and topic:\ncanonical/W{nn}{topic-slug}.txt moodle-xml/W{nn}{topic-slug}.xml\nExamples:\n\nW02_questions-theories-units-variables.txt\nW05_correlations.txt\n\nThe canonical .txt and Moodle .xml filenames must match exactly (same prefix and slug).\nClaude must not add _moodle or other suffixes to filenames.\n\n\n\nCanonical Text Format\nEach canonical quiz file contains multiple-choice questions in this exact format:\nQUESTION: &lt;question text, possibly spanning multiple lines&gt;\n\nA. &lt;option text&gt;\nB. &lt;option text&gt;\nC. &lt;option text&gt;\nD. &lt;option text&gt;\n\nANSWER: &lt;single capital letter&gt;\n\n---\nRules:\n\nQuestion text may span multiple lines.\nOption text may wrap onto the next line; wrapped lines belong to the preceding option.\nOnly lines beginning with A. B. C. D. define options.\nEvery question has exactly ONE correct answer.\nQuestions are separated by a line containing only ---.\nThere is no --- after the final question.\nMost questions have four options (A through D).\n\n\n\n\nQuestion Design Conventions\nBased on existing quizzes:\n\nQuestions are multiple-choice with one correct answer.\nQuestions test conceptual understanding, not rote memorisation.\nDistractors (incorrect options) should be plausible and address common misconceptions.\nQuestions often present a scenario or hypothesis and ask students to identify, classify, or interpret.\nQuizzes cover concept video content only. Do not include questions about Stata syntax or Stata-specific content.\nNo feedback text is included in the canonical format.\n\n\n\n\nMoodle XML Conversion\nMoodle XML files are generated from canonical files using the rules in moodle_xml_conversion_prompt.txt.\nKey conversion rules:\n\nQuestion type: multichoice\nsingle = true (one correct answer)\nshuffleanswers = true\nanswernumbering = abc\nCorrect answer: fraction=\"100\"; all others: fraction=\"0\"\nQuestion names follow the pattern W{nn}_Q{nn} (e.g. W02_Q01)\nQuestion text uses &lt;p&gt; tags for paragraphs\nNo stray HTML, numbering, or option letters in the question stem\n\nClaude may generate Moodle XML from canonical files when instructed, following these rules.\n\n\n\nWeek Coverage\nQuizzes exist for Weeks 2-5, 7-10. There is no W01 (introductory week) or W06 (reading week).\nClaude must not create quizzes for missing weeks unless explicitly instructed.\n\n\n\nAllowed Tasks in quizzes/\nClaude may:\n\nCreate new canonical quiz files when instructed\nAdd questions to existing canonical files\nGenerate Moodle XML from canonical files\nFix formatting issues in canonical files\n\nClaude must not:\n\nModify moodle_xml_conversion_prompt.txt without instruction\nChange the canonical text format\nRename existing files\nCreate quizzes for weeks without explicit instruction"
-  },
-  {
-    "objectID": "slides/CLAUDE.html",
-    "href": "slides/CLAUDE.html",
-    "title": "CLAUDE.md — Rules for the slides/ directory",
-    "section": "",
-    "text": "This file defines rules specific to the slides directory.\nThese rules supplement the repository-wide rules defined in the root CLAUDE.md.\nClaude must follow both."
-  },
-  {
-    "objectID": "slides/CLAUDE.html#slide-density-constraints",
-    "href": "slides/CLAUDE.html#slide-density-constraints",
-    "title": "CLAUDE.md — Rules for the slides/ directory",
-    "section": "Slide Density Constraints",
-    "text": "Slide Density Constraints\nThese are absolute rules. There are no exceptions, no mitigating circumstances, and no excuses.\n\nNEVER more than 3 bullet points per slide. Adding a fourth bullet point is embarrassing and will always be wrong. If content does not fit in 3 bullets, split it into two slides.\nMaximum 10–12 words per bullet.\nNo paragraph-style prose.\nNo multi-sentence bullets.\nSlides are scaffolding for spoken narration, not self-contained explanations."
-  },
-  {
-    "objectID": "slides/CLAUDE.html#punctuation-rules",
-    "href": "slides/CLAUDE.html#punctuation-rules",
-    "title": "CLAUDE.md — Rules for the slides/ directory",
-    "section": "Punctuation Rules",
-    "text": "Punctuation Rules\nThese are absolute rules. There are no exceptions.\n\nNEVER use em dashes (—) in slide text. Use a comma, semicolon, colon, or full stop instead. Em dashes are banned from all slide content without exception."
-  },
-  {
-    "objectID": "slides/CLAUDE.html#c-prefix-concept-video-structure-and-approach",
-    "href": "slides/CLAUDE.html#c-prefix-concept-video-structure-and-approach",
-    "title": "CLAUDE.md — Rules for the slides/ directory",
-    "section": "C-prefix (Concept Video) Structure and Approach",
-    "text": "C-prefix (Concept Video) Structure and Approach\nThe standard slide sequence for concept videos is:\n\nTitle slide\n“You will learn to…” slide\nConcept development slides\nRecap slide\n“Why This Matters” slide\n\nPedagogical approach:\n\nEmphasise intuition first, formalism second.\nAvoid symbolic overload early in the deck.\nKeep derivations minimal unless explicitly required.\nDo not over-explain or anticipate every student confusion in slide text.\nErr on the side of brevity rather than completeness.\nMaintain continuity with previous weeks."
-  },
-  {
-    "objectID": "slides/CLAUDE.html#s-prefix-stata-video-approach",
-    "href": "slides/CLAUDE.html#s-prefix-stata-video-approach",
-    "title": "CLAUDE.md — Rules for the slides/ directory",
-    "section": "S-prefix (Stata Video) Approach",
-    "text": "S-prefix (Stata Video) Approach\n\nProcedural, step-by-step walkthrough.\nCode blocks should be concise.\nInterpretation delivered in short prompts, not paragraphs.\nNo statistical theory exposition; save that for C-videos."
-  },
-  {
-    "objectID": "slides/CLAUDE.html#source-hierarchy-for-drafting",
-    "href": "slides/CLAUDE.html#source-hierarchy-for-drafting",
-    "title": "CLAUDE.md — Rules for the slides/ directory",
-    "section": "Source Hierarchy for Drafting",
-    "text": "Source Hierarchy for Drafting\nWhen preparing any slide deck:\n\n.qmd template files determine structure and formatting.\nLearning goals (from Excel metadata or explicit instructions) determine scope.\nTranscripts and prior slides are content references only; do not copy structure from them."
-  },
-  {
-    "objectID": "slides/CLAUDE.html#language-notes",
-    "href": "slides/CLAUDE.html#language-notes",
-    "title": "CLAUDE.md — Rules for the slides/ directory",
-    "section": "Language Notes",
-    "text": "Language Notes\n\nDo not describe randomised experiments as the “gold standard”.\nEmpirical examples should remain consistent across related videos in a sequence."
+    "text": "I’m resuming work on the Week 11 dummy variables lecture that was drafted in a previous session on another machine. Please read the handoff document at @logs/2026-03-29-handoff.md to understand the full pedagogical design and current state.\nThen read the slide deck at @slides/lectures/W11-dummy-variables.qmd and the do-file at @shared-project-folder/do/dummy-bes.do.\nI’d like to review the slides and make adjustments before rendering. I’ll tell you what I want to change after you’ve read everything."
   },
   {
     "objectID": "slides/lectures/thinking-with-data-slides.html#welcome",
@@ -13573,5 +13587,117 @@
       "Week 9: Confounding Variables and Reverse Causality",
       "Preparing Data in Stata"
     ]
+  },
+  {
+    "objectID": "topics/bivariate-description.html",
+    "href": "topics/bivariate-description.html",
+    "title": "Describing Relationships — Bivariate",
+    "section": "",
+    "text": "Summarising the relationship between two variables. These materials cover associations between categorical variables, comparisons of group means, scatter plots and regression lines, and how to choose between different plots and tables based on variable types."
+  },
+  {
+    "objectID": "topics/bivariate-description.html#concept-videos",
+    "href": "topics/bivariate-description.html#concept-videos",
+    "title": "Describing Relationships — Bivariate",
+    "section": "Concept videos",
+    "text": "Concept videos\n\nCorrelations Between Nominal Variables\nComparing Means by Category\nScatterplots and Regression Lines\nFrom Variable Types to Plots and Tables"
+  },
+  {
+    "objectID": "topics/bivariate-description.html#applied-stata",
+    "href": "topics/bivariate-description.html#applied-stata",
+    "title": "Describing Relationships — Bivariate",
+    "section": "Applied (Stata)",
+    "text": "Applied (Stata)\n\nDescribing Correlations in Stata"
+  },
+  {
+    "objectID": "topics/bivariate-description.html#class-activity",
+    "href": "topics/bivariate-description.html#class-activity",
+    "title": "Describing Relationships — Bivariate",
+    "section": "Class activity",
+    "text": "Class activity\n\nCountry-level Correlations"
+  },
+  {
+    "objectID": "topics/inference.html",
+    "href": "topics/inference.html",
+    "title": "Inference and Uncertainty",
+    "section": "",
+    "text": "Reasoning from samples to populations. These materials introduce sampling, margins of error, confidence intervals, hypothesis tests, and p-values, with attention to how each is interpreted and how they connect to one another."
+  },
+  {
+    "objectID": "topics/inference.html#concept-videos",
+    "href": "topics/inference.html#concept-videos",
+    "title": "Inference and Uncertainty",
+    "section": "Concept videos",
+    "text": "Concept videos\n\nWhy Sampling Matters\nConfidence Intervals and Margins of Error\nHypothesis Tests Using Confidence Intervals\nInterpreting P-values"
+  },
+  {
+    "objectID": "topics/inference.html#applied-stata",
+    "href": "topics/inference.html#applied-stata",
+    "title": "Inference and Uncertainty",
+    "section": "Applied (Stata)",
+    "text": "Applied (Stata)\n\nHypothesis Testing in Stata"
+  },
+  {
+    "objectID": "topics/inference.html#class-activities",
+    "href": "topics/inference.html#class-activities",
+    "title": "Inference and Uncertainty",
+    "section": "Class activities",
+    "text": "Class activities\n\nSampling and Bias\nWeights and Visual Inference"
+  },
+  {
+    "objectID": "topics/multivariate-regression.html",
+    "href": "topics/multivariate-regression.html",
+    "title": "Multivariate Regression",
+    "section": "",
+    "text": "Adding controls to a regression model. These materials cover the logic of conditioning on additional variables, the interpretation of standard errors, and the conventions of reading regression tables, alongside fitting multivariate models in Stata."
+  },
+  {
+    "objectID": "topics/multivariate-regression.html#concept-videos",
+    "href": "topics/multivariate-regression.html#concept-videos",
+    "title": "Multivariate Regression",
+    "section": "Concept videos",
+    "text": "Concept videos\n\nMultivariate Regression: Adding Controls\nControls and Confounding in Multivariate Regression\nThe Standard Error\nReading Regression Tables for Publication"
+  },
+  {
+    "objectID": "topics/multivariate-regression.html#applied-stata",
+    "href": "topics/multivariate-regression.html#applied-stata",
+    "title": "Multivariate Regression",
+    "section": "Applied (Stata)",
+    "text": "Applied (Stata)\n\nMultivariate Regression in Stata"
+  },
+  {
+    "objectID": "topics/multivariate-regression.html#class-activity",
+    "href": "topics/multivariate-regression.html#class-activity",
+    "title": "Multivariate Regression",
+    "section": "Class activity",
+    "text": "Class activity\n\nReading Regression Tables"
+  },
+  {
+    "objectID": "topics/research-design.html",
+    "href": "topics/research-design.html",
+    "title": "Research Design",
+    "section": "",
+    "text": "Empirical reasoning begins with framing questions and defining what is being studied. These materials cover the distinction between empirical and normative claims, between descriptive and causal questions, and the basic vocabulary of units, theories, hypotheses, and variables."
+  },
+  {
+    "objectID": "topics/research-design.html#concept-videos",
+    "href": "topics/research-design.html#concept-videos",
+    "title": "Research Design",
+    "section": "Concept videos",
+    "text": "Concept videos\n\nNormative and Empirical Questions\nDescriptive and Causal Questions\nUnits of Analysis, Theories, and Hypotheses\nDependent and Independent Variables"
+  },
+  {
+    "objectID": "topics/research-design.html#applied-stata",
+    "href": "topics/research-design.html#applied-stata",
+    "title": "Research Design",
+    "section": "Applied (Stata)",
+    "text": "Applied (Stata)\n\nDoing Reproducible Research"
+  },
+  {
+    "objectID": "topics/research-design.html#class-activity",
+    "href": "topics/research-design.html#class-activity",
+    "title": "Research Design",
+    "section": "Class activity",
+    "text": "Class activity\n\nResearch Questions, Theories, and Hypotheses"
   }
 ]
