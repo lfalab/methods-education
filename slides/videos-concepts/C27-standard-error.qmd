@@ -13,6 +13,8 @@ format:
 
 # The Standard Error {.title-left}
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-5vY2jwCuAI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ------------------------------------------------------------------------
 
 ## You'll learn to

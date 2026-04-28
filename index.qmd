@@ -1,19 +1,91 @@
 ---
-title: "Statistics for Political Science"
+title: "Methods Teaching Resources"
+toc: false
 ---
 
-This module provides students with analytical tools to analyse political phenomena, with a focus on research design, statistical reasoning, and the logic of regression analysis. The module is organised around weekly preparatory activities (short videos and quizzes) that enable lectures and seminars to focus on active learning, including mock exam questions and hands-on work in Stata. By the end of the module, students should be able to formulate and evaluate hypotheses, interpret descriptive and inferential statistics, and implement basic statistical analyses in Stata to answer political science research questions.
+A collection of short videos, slide decks, and class activities for teaching introductory research methods and quantitative analysis in the social sciences. The materials were developed for an undergraduate Statistics module in Politics at King's College London, and are designed to be modular: individual videos, slides, or activities can be reused or adapted for related courses without adopting the full module structure.
 
-__Module convener:__ [Leonardo Falabella](https://falabella.quarto.pub/) (leonardo.falabella@kcl.ac.uk)
+Each topic combines short concept videos, slide decks, and a class activity. Concept videos focus on intuition and pedagogy, and are designed to be software-agnostic. Applied videos illustrate how each idea translates into practical data work in Stata. The intent is to support flipped and blended teaching: students prepare with the videos before class, and in-person time is used for active work on activities and applications.
 
-__Seminar leader:__ Mechelle Viernes (mechelle.viernes@kcl.ac.uk)
+The materials are intended to be adaptable for colleagues teaching research design, introductory quantitative methods, and applied data analysis. Individual pieces can be picked up without committing to the full sequence.
 
-## Module Outcomes
+Materials developed by [Leonardo Falabella](https://falabella.quarto.pub/) (leonardo.falabella@kcl.ac.uk).
 
-By the end of this module, students will be able to:
+## Browse by topic
 
-- Know how to describe data
-- Understand how data is produced and managed
-- Use different statistical inference techniques
-- Learn how to test the relationship between two different variables
-- Conduct basic statistical analyses with Stata
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-3}
+::: {.card .h-100}
+::: {.card-body}
+#### [Research Design](topics/research-design.qmd)
+Empirical vs normative questions, descriptive vs causal claims, units, theories, and hypotheses.
+:::
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-3}
+::: {.card .h-100}
+::: {.card-body}
+#### [Measurement](topics/measurement.qmd)
+Operationalising concepts, variable types, and reading codebooks.
+:::
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-3}
+::: {.card .h-100}
+::: {.card-body}
+#### [Describing Data — Univariate](topics/univariate-description.qmd)
+Central tendency, dispersion, bar charts, and histograms.
+:::
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-3}
+::: {.card .h-100}
+::: {.card-body}
+#### [Describing Relationships — Bivariate](topics/bivariate-description.qmd)
+Correlations, comparing means, scatter plots, and choosing summaries by variable type.
+:::
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-3}
+::: {.card .h-100}
+::: {.card-body}
+#### [Inference and Uncertainty](topics/inference.qmd)
+Sampling, confidence intervals, hypothesis tests, and p-values.
+:::
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-3}
+::: {.card .h-100}
+::: {.card-body}
+#### [Regression](topics/regression.qmd)
+Bivariate regression: slope, inference, and R-squared.
+:::
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-3}
+::: {.card .h-100}
+::: {.card-body}
+#### [Causal Inference](topics/causal-inference.qmd)
+Confounding, reverse causality, and random assignment.
+:::
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-3}
+::: {.card .h-100}
+::: {.card-body}
+#### [Multivariate Regression](topics/multivariate-regression.qmd)
+Controls, standard errors, and reading regression tables.
+:::
+:::
+:::
+
+:::
+

@@ -1,0 +1,19 @@
+---
+title: "Causal Inference"
+---
+
+What it takes to move from correlation to a causal claim. These materials introduce confounding variables, reverse causality, and the role of random assignment in isolating causal effects, alongside the practical work of preparing data for analysis.
+
+## Concept videos
+
+- [Confounding Variables](../slides/videos-concepts/C22-confounding.qmd)
+- [Reverse Causality](../slides/videos-concepts/C23-reverse-causality.qmd)
+- [Random Assignment and Causal Inference](../slides/videos-concepts/C24-random-assignment.qmd)
+
+## Applied (Stata)
+
+- [Preparing Data in Stata](../slides/videos-stata/S10-preparing-stata.qmd)
+
+## Class activity
+
+- [Confounding and Reverse Causality](../activities/A09a-confounding-reverse.qmd)

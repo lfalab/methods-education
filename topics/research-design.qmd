@@ -1,0 +1,20 @@
+---
+title: "Research Design"
+---
+
+Empirical reasoning begins with framing questions and defining what is being studied. These materials cover the distinction between empirical and normative claims, between descriptive and causal questions, and the basic vocabulary of units, theories, hypotheses, and variables.
+
+## Concept videos
+
+- [Normative and Empirical Questions](../slides/videos-concepts/C01-empirical-vs-normative.qmd)
+- [Descriptive and Causal Questions](../slides/videos-concepts/C02-descriptive-vs-causal.qmd)
+- [Units of Analysis, Theories, and Hypotheses](../slides/videos-concepts/C03-units-theories-hypotheses.qmd)
+- [Dependent and Independent Variables](../slides/videos-concepts/C04-dependent-independent-variables.qmd)
+
+## Applied (Stata)
+
+- [Doing Reproducible Research](../slides/videos-stata/S01-doing-reproducible-research.qmd)
+
+## Class activity
+
+- [Research Questions, Theories, and Hypotheses](../activities/A02-questions-theories-hypotheses.qmd)

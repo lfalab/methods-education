@@ -1,0 +1,20 @@
+---
+title: "Describing Data — Univariate"
+---
+
+Summarising a single variable: central tendency, dispersion, and visualisation. These materials cover the mean, median, and mode; variance and standard deviation; and the use of bar charts and histograms to describe distributions.
+
+## Concept videos
+
+- [Summarising a Distribution](../slides/videos-concepts/C07-summarising-distribution.qmd)
+- [Variance and Standard Deviation](../slides/videos-concepts/C08-variance-sd.qmd)
+- [Bar Charts and Histograms](../slides/videos-concepts/C09-bar-histograms.qmd)
+
+## Applied (Stata)
+
+- [Summarising Distributions in Stata](../slides/videos-stata/S05-summary-stata.qmd)
+- [Bar Charts and Histograms in Stata](../slides/videos-stata/S06-bar-hist-stata.qmd)
+
+## Class activity
+
+- [Describing Distributions](../activities/A04-distributions-activity.qmd)

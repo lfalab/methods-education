@@ -1,0 +1,20 @@
+---
+title: "Measurement"
+---
+
+How concepts become variables. These materials introduce measurement strategies and variable types, alongside the practical work of reading codebooks and loading datasets for analysis.
+
+## Concept videos
+
+- [Measuring Variables](../slides/videos-concepts/C05-measuring-variables.qmd)
+- [Types of Variables](../slides/videos-concepts/C06-types-of-variables.qmd)
+
+## Applied (Stata)
+
+- [Datasets and Codebooks](../slides/videos-stata/S02-datasets-codebooks.qmd)
+- [The Stata Interface](../slides/videos-stata/S03-stata-interface.qmd)
+- [Loading and Browsing Data](../slides/videos-stata/S04-loading-browsing-data.qmd)
+
+## Class activity
+
+- [Proposing Measurement Strategies](../activities/A03-propose-measurement.qmd)

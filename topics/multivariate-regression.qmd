@@ -1,0 +1,20 @@
+---
+title: "Multivariate Regression"
+---
+
+Adding controls to a regression model. These materials cover the logic of conditioning on additional variables, the interpretation of standard errors, and the conventions of reading regression tables, alongside fitting multivariate models in Stata.
+
+## Concept videos
+
+- [Multivariate Regression: Adding Controls](../slides/videos-concepts/C25-multivariate-regression.qmd)
+- [Controls and Confounding in Multivariate Regression](../slides/videos-concepts/C26-controls-confounding.qmd)
+- [The Standard Error](../slides/videos-concepts/C27-standard-error.qmd)
+- [Reading Regression Tables for Publication](../slides/videos-concepts/C28-regression-tables.qmd)
+
+## Applied (Stata)
+
+- [Multivariate Regression in Stata](../slides/videos-stata/S11-multivariate-stata.qmd)
+
+## Class activity
+
+- [Reading Regression Tables](../activities/A10a-regression-tables.qmd)

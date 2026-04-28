@@ -1,0 +1,20 @@
+---
+title: "Regression"
+---
+
+Bivariate regression as a tool for summarising and reasoning about the relationship between two variables. These materials cover the slope, inference on regression coefficients, and R-squared, alongside fitting and reading regression output in Stata.
+
+## Concept videos
+
+- [Regression Analysis: Introduction](../slides/videos-concepts/C18-regression-intro.qmd)
+- [Regression Slope](../slides/videos-concepts/C19-regression-slope.qmd)
+- [Inference in Regression: CIs and P-values](../slides/videos-concepts/C20-regression-inference.qmd)
+- [R-squared](../slides/videos-concepts/C21-regression-rsquared.qmd)
+
+## Applied (Stata)
+
+- [Bivariate Regression in Stata](../slides/videos-stata/S09-regression-stata.qmd)
+
+## Class activity
+
+- [Bivariate Regression](../activities/A08a-regression-activity.qmd)

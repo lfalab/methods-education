@@ -290,8 +290,8 @@ Claude may read these files but must not modify them unless explicitly instructe
 
 - `styles.css`
 - files inside `theme/`
-- `index.qmd`
-- `about.qmd`
+- `index.qmd` (except during the site restructuring task — see "Site Restructuring" section)
+- `about.qmd` (except during the site restructuring task — see "Site Restructuring" section)
 - `methods-education.Rproj`
 - `reference/videos_metadata.csv`
 
@@ -479,4 +479,43 @@ Claude must not:
 - delete files
 - modify global configuration
 - alter theme styling
-- restructure navigation (beyond adding new pages to the sidebar)
+- restructure navigation (beyond adding new pages to the sidebar), except under the scoped "Site Restructuring" exception
+
+---
+
+# Site Restructuring: Modular Topic Navigation (April 2026)
+
+The site is being restructured to present materials as a modular collection of methods teaching resources, not only as a Stats I module sequence. This is a scoped exception to the rules above on navigation, `index.qmd`, and global configuration. The exception applies only to the tasks listed in this section.
+
+## Goals
+
+- Add a topic-organised primary view of the materials (e.g. research design, measurement, descriptive statistics, inference, regression, applied data work).
+- Keep the original Stats I weekly sequence available as a secondary section in the same sidebar, so existing student navigation and revision habits are preserved.
+- Rewrite `index.qmd` as a landing page that explains what the resource is, who it is for, and how to browse it, in plain academic language.
+- Optionally add a short "About / design logic" page.
+
+## Hard constraints (do not violate)
+
+- **Preserve every existing URL.** No renaming, moving, or deleting any `.qmd` file under `slides/`, `activities/`, `quizzes/`, `attention-checks/`, or `reference/`. The restructuring is a sidebar and landing-page change only.
+- **Preserve all existing content.** No edits to slide decks, activity pages, YouTube embeds, or relative paths inside content pages, except where the user explicitly asks for it.
+- **No institutional branding.** No King's logos, no Methods Centre branding, no claims of official affiliation or adoption.
+- **No marketing tone.** Avoid words like "innovative," "transformative," "world-class," "sector-leading," "cutting-edge." Use plain academic language.
+- **No career-narrative framing.** The site stays student- and colleague-facing. It is a resource hub, not a promotion document.
+
+## Permitted edits under this exception
+
+- Edit `_quarto.yml` to replace the current week-only sidebar with a dual structure: topic sections first, original "Stats I module sequence" section preserved at the bottom.
+- Rewrite `index.qmd` as the new landing page.
+- Create a new `about.qmd` or similar page describing the design logic of short videos + slides + activities for flipped/blended teaching, if useful.
+- Make small textual tweaks to landing and about pages to maintain tone.
+
+## Out of scope under this exception
+
+- Theme or SCSS changes (`theme/`, `styles.css`).
+- Editing `videos_metadata.csv`.
+- Restructuring directories or file paths.
+- Editing content pages themselves (slide decks, activities) beyond what the user explicitly requests.
+
+## Topic taxonomy
+
+The topic categories used in the new sidebar should be agreed with the user before `_quarto.yml` is edited. Files appearing in topic sections also remain listed in the preserved module-sequence section — duplication in the sidebar is intentional and acceptable, since both are views over the same files.

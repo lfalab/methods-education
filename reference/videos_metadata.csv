@@ -33,8 +33,8 @@
 9,C23-reverse-causality,Reverse Causality,oJgp-1esz00,Concept,Explain how reverse causality can generate correlations that misrepresent direction of influence.
 9,C24-random-assignment,Random Assignment and Causal Inference,rbTOPJZ-H9c,Concept,Explain how random assignment helps isolate causal effects by breaking confounding links.
 9,S10-preparing-stata,Preparing Data in Stata,A8S3x-S0-U0,Lab,Clean and recode data in Stata for analysis.
-10,C25-multivariate-regression,Multivariate regression: adding controls,,Concept,Describe how multivariate regression conditions on additional variables to summarise relationships.
-10,C26-controls-confounding,Controls and confounding in multivariate regression,,Concept,Explain how adding controls can mitigate some confounding concerns and what it cannot resolve.
-10,C27-standard-error,The Standard Error,,Concept,Explain the intuition of the standard error and its centrality for determining the statistical significance of estimates.
-10,C28-regression-tables,Reading regression tables for publication,,Concept,"Read a regression table and accurately interpret coefficients, uncertainty, and model specifications."
-10,S11-multivariate-stata,Multivariate regression in Stata,,Lab,Fit and interpret a multivariate regression model in Stata.
+10,C25-multivariate-regression,Multivariate regression: adding controls,1CZPuvAfN28,Concept,Describe how multivariate regression conditions on additional variables to summarise relationships.
+10,C26-controls-confounding,Controls and confounding in multivariate regression,bXzb_2lepEk,Concept,Explain how adding controls can mitigate some confounding concerns and what it cannot resolve.
+10,C27-standard-error,The Standard Error,-5vY2jwCuAI,Concept,Explain the intuition of the standard error and its centrality for determining the statistical significance of estimates.
+10,C28-regression-tables,Reading regression tables for publication,5OQBgRVk4P8,Concept,"Read a regression table and accurately interpret coefficients, uncertainty, and model specifications."
+10,S11-multivariate-stata,Multivariate regression in Stata,wZLC9tDBm7Q,Lab,Fit and interpret a multivariate regression model in Stata.

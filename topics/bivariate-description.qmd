@@ -1,0 +1,20 @@
+---
+title: "Describing Relationships — Bivariate"
+---
+
+Summarising the relationship between two variables. These materials cover associations between categorical variables, comparisons of group means, scatter plots and regression lines, and how to choose between different plots and tables based on variable types.
+
+## Concept videos
+
+- [Correlations Between Nominal Variables](../slides/videos-concepts/C10-correlations-nominal.qmd)
+- [Comparing Means by Category](../slides/videos-concepts/C11-comparing-means.qmd)
+- [Scatterplots and Regression Lines](../slides/videos-concepts/C12-scatter-reg.qmd)
+- [From Variable Types to Plots and Tables](../slides/videos-concepts/C13-types-plots-tables.qmd)
+
+## Applied (Stata)
+
+- [Describing Correlations in Stata](../slides/videos-stata/S07-corr-stata.qmd)
+
+## Class activity
+
+- [Country-level Correlations](../activities/A05-correlations-activity.qmd)
