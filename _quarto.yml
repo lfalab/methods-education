@@ -104,6 +104,7 @@ website:
         contents:
             - slides/lectures/W11-dummy-variables.qmd
             - activities/A11-ps2-workshop-4.qmd
+            - slides/exam-review-guide.qmd
 
 
 format:

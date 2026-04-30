@@ -1,0 +1,179 @@
+---
+title: "Exam Review Guide"
+format:
+  html:
+    toc: true
+    toc-location: right
+    toc-depth: 3
+---
+
+This page is a topic-by-topic guide for revising for the 4SSPP111 final exam. Topics are grouped by the resources that prepare you for them: each block lists what you should be able to do, then the videos, slides, and activity that cover the whole block.
+
+## Practical exam information
+
+- **Duration:** 2 hours.
+- **Total marks:** 100, across 12 questions in three parts.
+- **Calculator:** Casio Fx83 or Fx85 only.
+- **Notes allowed:** one sheet of A4 paper with handwritten notes on both sides.
+- **No Stata commands are tested.** The exam assesses reasoning and interpretation, not Stata syntax.
+- **Answer all questions.**
+
+## How to use this guide
+
+For each topic block:
+
+1. Watch the linked concept videos.
+2. Review the corresponding lecture slides.
+3. Redo the seminar activity from memory, then check your answers.
+
+When you have worked through the blocks, attempt the **Mock Exam** (available on KEATS) under timed conditions, then compare your answers against the **Mock Exam Answer Key** (also on KEATS). The mock does not cover every possible exam topic, so do not treat it as an exhaustive list.
+
+## Part 1 — Descriptive analysis
+
+### Research questions, theories, and hypotheses
+
+- Distinguish empirical from normative questions.
+- Identify dependent and independent variables in a quantitative claim.
+- Recognise the role of theory and hypothesis in framing a quantitative claim.
+
+Resources:
+
+- Concept video: [Normative and Empirical Questions](videos-concepts/C01-empirical-vs-normative.qmd)
+- Concept video: [Units of Analysis, Theories, and Hypotheses](videos-concepts/C03-units-theories-hypotheses.qmd)
+- Concept video: [Dependent and Independent Variables](videos-concepts/C04-dependent-independent-variables.qmd)
+- Lecture: [Week 2: Research Questions, Theories, and Hypotheses](lectures/W02-questions-theories-hypotheses.qmd)
+- Activity: [Research Questions, Theories and Hypotheses](../activities/A02-questions-theories-hypotheses.qmd)
+
+### Measuring variables
+
+- Evaluate how a chosen measurement strategy shapes the conclusions a piece of research can support.
+
+Resources:
+
+- Concept video: [Measuring Variables](videos-concepts/C05-measuring-variables.qmd)
+- Lecture: [Week 3: Measurement and Variable Types](lectures/W03-measurement.qmd)
+- Activity: [Proposing Measurement Strategies](../activities/A03-propose-measurement.qmd)
+
+### Variable types
+
+- Classify a variable as nominal, ordinal, interval, or ratio.
+- Justify the classification by reference to its measurement properties (categories, ordering, equal intervals, true zero).
+
+Resources:
+
+- Concept video: [Types of Variables](videos-concepts/C06-types-of-variables.qmd)
+- Concept video: [Measuring Variables](videos-concepts/C05-measuring-variables.qmd)
+- Lecture: [Week 3: Measurement and Variable Types](lectures/W03-measurement.qmd)
+- Activity: [Proposing Measurement Strategies](../activities/A03-propose-measurement.qmd)
+
+### Distributions: histograms, shape, and central tendency
+
+- Read approximate counts from histogram bars and compare counts across ranges.
+- Identify whether a distribution is symmetric, left-skewed, or right-skewed.
+- Predict whether the mean is greater than, less than, or approximately equal to the median based on the shape of the distribution, and explain why.
+
+Resources:
+
+- Concept video: [Summarising a Distribution](videos-concepts/C07-summarising-distribution.qmd)
+- Concept video: [Variance and Standard Deviation](videos-concepts/C08-variance-sd.qmd)
+- Concept video: [Bar Charts and Histograms](videos-concepts/C09-bar-histograms.qmd)
+- Lab video: [Bar Charts and Histograms in Stata](videos-stata/S06-bar-hist-stata.qmd)
+- Lecture: [Week 4: Describing Distributions](lectures/W04-distributions.qmd)
+- Activity: [Describing Distributions](../activities/A04-distributions-activity.qmd)
+
+### Descriptive vs causal claims
+
+- Identify whether a claim is descriptive or causal.
+- Explain the wording or reasoning that makes it one or the other.
+
+Resources:
+
+- Concept video: [Descriptive and Causal Questions](videos-concepts/C02-descriptive-vs-causal.qmd)
+- Lecture: [Week 2: Research Questions, Theories, and Hypotheses](lectures/W02-questions-theories-hypotheses.qmd)
+- Activity: [Research Questions, Theories and Hypotheses](../activities/A02-questions-theories-hypotheses.qmd)
+
+## Part 2 — Sampling, estimation, and uncertainty
+
+### Population, sampling, and bias
+
+- Identify the population of interest in a research scenario.
+- Classify a sampling procedure as probability or non-probability, and justify the classification by reference to whether every member of the population has a known, non-zero chance of selection.
+- Assess whether a sampling procedure is likely to produce a biased estimate, predict the direction of the bias, and explain the mechanism that produces it.
+
+Resources:
+
+- Concept video: [Why Sampling Matters](videos-concepts/C14-sampling.qmd)
+- Lecture: [Week 7: Estimation, Uncertainty, and Statistical Inference](lectures/W07-hypothesis.qmd)
+- Activity: [Sampling and Bias](../activities/A07a-sampling-activity.qmd)
+
+## Part 3 — Regression and causal inference
+
+### Bivariate regression: slope and intercept
+
+- State the predicted change in the dependent variable associated with a one-unit change in the independent variable, including units and direction.
+- State the predicted value of the dependent variable when the independent variable equals zero (the intercept).
+
+Resources:
+
+- Concept video: [Regression Analysis: Introduction](videos-concepts/C18-regression-intro.qmd)
+- Concept video: [Regression Slope](videos-concepts/C19-regression-slope.qmd)
+- Lecture: [Week 8: Regression Analysis](lectures/W08-regression.qmd)
+- Activity: [Bivariate Regression](../activities/A08a-regression-activity.qmd)
+
+### Multivariate regression and predicted values
+
+- Read a multivariate regression table.
+- Compute a predicted value of the dependent variable given values for each independent variable, using the regression equation. Show your calculations.
+
+Resources:
+
+- Concept video: [Multivariate Regression: Adding Controls](videos-concepts/C25-multivariate-regression.qmd)
+- Concept video: [Reading Regression Tables for Publication](videos-concepts/C28-regression-tables.qmd)
+- Lecture: [Week 10: Multivariate Regression](lectures/W10-multivariate.qmd)
+- Activity: [Reading Regression Tables](../activities/A10a-regression-tables.qmd)
+
+### Statistical significance
+
+- Read significance stars in a regression table and identify which coefficients are statistically significant.
+- Explain what non-significance means in terms of the null hypothesis.
+- Relate the size of a coefficient to its standard error.
+
+Resources:
+
+- Concept video: [Interpreting P-values](videos-concepts/C17-p-values.qmd)
+- Concept video: [Inference in Regression: CIs and P-values](videos-concepts/C20-regression-inference.qmd)
+- Concept video: [The Standard Error](videos-concepts/C27-standard-error.qmd)
+- Lecture: [Week 7: Estimation, Uncertainty, and Statistical Inference](lectures/W07-hypothesis.qmd)
+- Lecture: [Week 8: Regression Analysis](lectures/W08-regression.qmd)
+- Lecture: [Week 10: Multivariate Regression](lectures/W10-multivariate.qmd)
+- Activity: [Bivariate Regression](../activities/A08a-regression-activity.qmd)
+
+### Confounding, reverse causality, and random assignment
+
+- Define a confounding variable, propose a plausible confounder for a given regression, and justify the proposal by explaining how the confounder relates to both the independent and dependent variables.
+- Assess whether a causal claim can plausibly be challenged on grounds of reverse causality, and explain the direction of the alternative causal pathway.
+- Explain how random assignment supports causal inference, and why observational regressions cannot, on their own, support the same kind of causal claim.
+
+Resources:
+
+- Concept video: [Confounding Variables](videos-concepts/C22-confounding.qmd)
+- Concept video: [Reverse Causality](videos-concepts/C23-reverse-causality.qmd)
+- Concept video: [Random Assignment and Causal Inference](videos-concepts/C24-random-assignment.qmd)
+- Concept video: [Controls and Confounding in Multivariate Regression](videos-concepts/C26-controls-confounding.qmd)
+- Lecture: [Week 9: Confounding Variables and Reverse Causality](lectures/W09-confounding.qmd)
+- Lecture: [Week 10: Multivariate Regression](lectures/W10-multivariate.qmd)
+- Activity: [Confounding and Reverse Causality](../activities/A09a-confounding-reverse.qmd)
+- Activity: [Reading Regression Tables](../activities/A10a-regression-tables.qmd)
+
+### Dummy variables and counterfactual reasoning
+
+- Interpret the intercept and slope of a regression that includes a dummy variable as the independent variable.
+- Assess whether a counterfactual implied by a regression specification is plausible, and explain why the plausibility of the counterfactual matters for the interpretation of an estimate.
+
+Resources:
+
+- Lecture: [Week 11: Dummy Variables](lectures/W11-dummy-variables.qmd)
+
+## Final preparation
+
+Once you have worked through the blocks above, attempt the **Mock Exam** (available on KEATS) under timed conditions: two hours, calculator, one A4 sheet of handwritten notes. After completing it, compare your answers against the **Mock Exam Answer Key** (also on KEATS). Use any gaps you find as a steer for further revision.
